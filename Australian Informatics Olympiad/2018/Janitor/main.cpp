@@ -1,116 +1,61 @@
-#include <bits/stdc++.h>
-#include <fstream>
+#include <iostream>
 using namespace std;
+int r, c, q, s[11][100010], Next[4][2] = {{1,0},{-1,0},{0,1},{0,-1}}, sum, cx, cy, ch;
 
-int R, C, Q;
-int t[10][100000]; // [y][x]
-bool flowed[10][100000];
-bool finalFlowed[10][100000];
-int dir[4][2] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
+//Whether location has been filled with water
+bool filled[11][100010];
 
-int flow = 0;
-void dfs(int x, int y, bool mode){
-    if (flowed[y][x] || finalFlowed[y][x])return;
-    flowed[y][x] = true;
+void checkTile(int x, int y){
+    int nx, ny; //Neighbouring coordinates
     
-    if(mode)finalFlowed[y][x] = true;
-    
-    flow++;
-    //cout<<"["<<mode<<"("<<x<<","<<y<<":"<<t[y][x]<<")"<<endl;
-    for (int i=0; i<4; i++){
-        int x1 = x + dir[i][0];
-        int y1 = y + dir[i][1];
-        if (x1 < 0 || x1 > C-1 || y1 < 0 || y1 > R-1){continue;}
-        if (t[y1][x1] < t[y][x]){dfs(x1,y1,mode);} // If lower height
+    //Assume is higher, should put water on it
+    bool flag = true;
+    //For neighbours
+    for(int i = 0; i <= 3; i++){
+        //Set next coordinates
+        nx = x + Next[i][0], ny = y + Next[i][1];
+        //Ignore if out of range
+        if(nx < 1 || nx > r || ny < 1 || ny > c)continue;
+        //If neighbour is higher, 
+        if(s[nx][ny] > s[x][y]){flag = false; break;}
+    }
+    //Set pos to appropriate val
+    if(filled[x][y] != flag){
+        filled[x][y] = flag;
+        //If its to be filled,  
+        if(flag) sum++;
+        //If its not to be filled
+        else sum--;
     }
 }
-void reset(bool mode){
-    flow = 0;
-    for (int j=0; j<R; j++){//y value
-        for (int i=0; i<C; i++){//x value
-            flowed[j][i] = false;
-            if (mode)finalFlowed[j][i] = false;
-        }
-    }
-}
-
-void mostFlow(){
-    int maxX = 0;
-    int maxY = 0;
-    int maxFlow = 0;
-    for (int i=0; i<C; i++){
-        for (int j=0; j<R; j++){
-            reset(0);
-            dfs(i,j, false);
-            if (flow > maxFlow){maxFlow = flow;maxX = i;maxY = j;}
-        }
-    }
-    reset(0);
-    dfs(maxX,maxY, true);
-    cout<<maxX<<","<<maxY<<endl;
-}
-bool allFilled(){
-    for (int i=0; i<C; i++){
-        for (int j=0; j<R; j++){
-            if (!finalFlowed[j][i]){//cout<<i<<"<"<<j<<" ";
-                return false;}
-        }
-    }
-    return true;
-}
-void show(){
-    cout<<endl;
-    for (int i=0; i<R; i++){
-        for (int j=0; j<C; j++){
-            cout<<finalFlowed[i][j];
-        }
-        cout<<endl;
-    }
-    cout<<endl;
-}
-
-int check(){
-    int tile = 0;
-    reset(1);
-    for (;tile<R*C;tile++){
-        //show();
-        mostFlow();
-        if (allFilled())break;
-    }
-    cout<<tile+1;
-    return tile+1;
-}
-
-
 int main(){
-    ifstream infile; 
-    infile.open("janitorin.txt"); 
-    ofstream outfile;
-    outfile.open("janitorout.txt");
-
-    //INPUT
-    infile >> R >> C >> Q; 
-    //int t[R][C];// heights
-    for (int j=0; j<R; j++){//y value
-        for (int i=0; i<C; i++){//x value
-            infile >> t[j][i];
-            flowed[j][i] = false;
-            finalFlowed[j][i] = false;
-        }
-    }
+    freopen("janitorin.txt", "r", stdin);
+    freopen("janitorout.txt", "w", stdout);
+    scanf("%d%d%d", &r, &c, &q);
     
-    outfile << check()<<endl;
-        
-    //Replacements
-    int r[Q], c[Q], h[Q];
-    for (int i=0; i<Q; i++){
-        infile >> r[i] >> c[i] >> h[i];
-        t[r[i]-1][c[i]-1] = h[i];
-        outfile<<check()<<endl;
+    //Get Layout of map
+    for(int i = 1; i <= r; i++)
+        for(int j = 1; j <= c; j++)
+            scanf("%d", &s[i][j]);
+
+    //In map
+    for(int i = 1; i <= r; i++)
+        for(int j = 1; j <= c; j++)
+            checkTile(i, j);
+    //Number of tiles filled
+    printf("%d\n", sum);
+
+    for(int l = 1; l <= q; l++){
+        scanf("%d%d%d", &cx, &cy, &ch);
+        s[cx][cy] = ch;
+        checkTile(cx, cy);
+        int nx, ny;
+        for(int i = 0; i <= 3; i++){
+            nx = cx + Next[i][0], ny = cy + Next[i][1];
+            if(nx < 1 || nx > r || ny < 1 || ny > c)continue;
+            checkTile(nx, ny);
+        }
+        printf("%d\n", sum);
     }
-    //cout<<flow;
-        
-    infile.close();
-    outfile.close();
     return 0;
 }
