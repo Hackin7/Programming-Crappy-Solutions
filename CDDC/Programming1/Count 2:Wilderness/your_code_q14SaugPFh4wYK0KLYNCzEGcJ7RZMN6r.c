@@ -1,1 +1,0 @@
-main(i){for(;;){printf("%d,",i);(2e4/2-i)&&++i;}}
