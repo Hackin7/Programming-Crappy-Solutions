@@ -2,7 +2,7 @@
 using namespace std;
 
 char m[1000][1000];
-
+//0%
 bool gotRock(int x,int y,int width,int height){
     if (x > width)return false;
     if (x < 0)return false;

@@ -2,7 +2,7 @@
 using namespace std;
 ///*dijkstra*/
 
-vector<pair<int,int>> adjlist[1000];
+vector<pair<int,int>> adjlist[10000];
 
 int dijkstra(int N, int node, int end){ 
     //int node=1;
@@ -32,15 +32,6 @@ int dijkstra(int N, int node, int end){
     for (int i=1;i<N+1;i++){
         cout<<dist[i]<<" ";
     }*/
-    int prevNode = end;
-    int Node = dist[end];
-    int length = 1;
-    while (Node != -1){
-        prevNode = Node;
-        Node = dist[Node];
-        length++;
-    }
-    return length;
 }
 
 int main(){
@@ -51,9 +42,8 @@ int main(){
         adjlist[n1].push_back(make_pair(n2,w));
         adjlist[n2].push_back(make_pair(n1,w));
     }    
-    cout<<dijkstra(N, H, T);
-    //int cost2 = dijkstra(N, T, H);
+    int cost1 = dijkstra(N, H, T);
+    int cost2 = 0;//dijkstra(N, T, H);
     //if (cost1 < 0 || cost2 < 0)cout << -1;
-    //else cout<<cost1+cost2; 
+    cout<<cost1+cost2; 
 }
-
