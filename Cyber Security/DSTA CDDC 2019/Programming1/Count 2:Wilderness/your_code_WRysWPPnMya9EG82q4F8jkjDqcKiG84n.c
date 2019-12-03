@@ -1,1 +1,0 @@
-main(i){if(9999/i)printf("%d,",i),main(++i)}
