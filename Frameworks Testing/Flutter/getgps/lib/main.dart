@@ -31,10 +31,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   var location = new Location();
-  LocationData currentLocation;// = new LocationData;
+  LocationData currentLocation;
   
    void initState() {
-	   forceGet();
+	   //forceGet();
 	   //Update as moving around
 	   location.onLocationChanged().listen((LocationData cl) async {
 		  print(cl.latitude);
@@ -60,6 +60,13 @@ class _MyHomePageState extends State<MyHomePage> {
   
   @override
   Widget build(BuildContext context) {
+	String latitude = "Retrieving";
+	String longitude = "Retrieving";
+	try{
+		if (currentLocation != null){
+			latitude = "${currentLocation.latitude}°";longitude = "${currentLocation.longitude}°";
+		}
+	}on Exception{}
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -69,11 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Latitude:\n${currentLocation.latitude}°\n",
+              "Latitude:\n"+latitude+"\n",
 			  style: Theme.of(context).textTheme.display1,
             ),
 			Text(
-              "Longitude:\n${currentLocation.longitude}°",
+              "Longitude:\n"+longitude+"",
 			  style: Theme.of(context).textTheme.display1,
             ),
           ],
