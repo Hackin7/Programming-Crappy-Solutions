@@ -3,18 +3,18 @@
 using namespace std;
 
 int INF = INT_MAX;
-int adjM[1000][1000];
+int adjM[1000000][10000000];
 int dijkstra(int N, int start, int end){
     int parents[N+1];
     int costs[N+1];//Overall Costs
     bool visited[N+1];
-    
+
     for (int i=0; i<N; i++){
         visited[i] = false;
         parents[i] = -1; //Null
         costs[i] = INF;
     }
-    
+
     costs[start] = 0;
     deque<int> nodes;
     nodes.push_back(start);
@@ -28,12 +28,12 @@ int dijkstra(int N, int start, int end){
         for (int i=0; i<N; i++){
             int neighbour = i;
             int cost = adjM[node][i];
-            
+
             //To Skip
             if (cost == -1){continue;} // Null cost
             if (visited[neighbour]){continue;}
             if (neighbour == start){continue;}
-            
+
             //Set Parent
             visited[neighbour] = true;
             if (costs[neighbour] > costs[node]+cost){
@@ -73,7 +73,7 @@ int main(){
         adjM[A][B] = F;
         adjM[B][A] = F;
     }
-    
+
     int K; cin>>K;
     for (int i=0; i<K; i++){
         int X,Y;cin>>X>>Y;
