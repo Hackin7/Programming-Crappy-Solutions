@@ -1,49 +1,119 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Nope should use segment tree
-struct node {  
-    int s, e, m, v;  
-    node *l, *r;  
+struct node { 
+    int start, end, mid, val, lazyadd;
+    node *left, *right;  
     
-    node(int N) {  
-        s = 0; e = N-1; m = (s+e)/2;  
-        v = 0;  
-        if (s!=e) {
-            l = new node(s,m); r = new node(m+1,e);  
-        }  
-    }
     node(int _s, int _e) {  
-        s = _s; e = _e; m = (s+e)/2;  
-        v = 0;  
-        if (s!=e) {
-            l = new node(s,m); r = new node(m+1,e);  
+        //Range of values stored
+        start = _s; end = _e; mid = (start+end)/2;  
+        //Min value stored
+        val = 0;  lazyadd = 0;
+        if (start!=end) {
+            left = new node(start,mid);
+            right = new node(mid+1,end);  
         }  
     }
-    //Update
-    void update(int x, int nv) { //position x to new value
-        if (s==e) { v=nv; return; }  
-        if (x>m) r->update(x, nv);  
-        if (x<=m) l->update(x, nv);
-        v = min(l->v, r->v);  
-    } 
-    //Range Query
-    int query(int x, int y) {
-        if (s==x && e==y) return v;
-        if (x>m) return r->query(x, y);
-        if (y<=m) return l->query(x, y);
-        return min(l->query(x, m), r->query(m+1, y));
+    
+    int value(){
+        if (start==end){
+            val += lazyadd;lazyadd = 0;return val;
+        }else{
+            val += lazyadd;
+            // Propagate Lazyadd
+            right->lazyadd += lazyadd; 
+            left->lazyadd += lazyadd;
+            lazyadd = 0;
+            return val;
+        }
     }
+            
+    void addRange(int lower_bound, int upper_bound, int val_to_add){
+        if (start == lower_bound && end == upper_bound){
+            lazyadd += val_to_add;
+        }else{ 
+            if (lower_bound > mid){
+                right->addRange(lower_bound, upper_bound, val_to_add);
+            }else if (upper_bound <= mid){
+                left->addRange(lower_bound, upper_bound, val_to_add);
+            }else{
+                left->addRange(lower_bound, mid, val_to_add);
+                right->addRange(mid+1, upper_bound, val_to_add);
+            }
+            val = min(left->value(), right->value());
+        }
+    }
+    
+    // Update position to new_value // O(log N)
+    void update(int pos, int new_val) { //position x to new value
+        if (start==end) { val=new_val; return; }  
+        if (pos>mid) right->update(pos, new_val);  
+        if (pos<=mid) left->update(pos, new_val);
+        val = min(left->val, right->val);  
+    } 
+    
+    // Range Minimum Query // O(log N)
+    int rangeMinimumQuery(int lower_bound, int upper_bound) {
+        //cout<<"Node:"<<start<<" "<<end<<" "<<mid<<" "<<val<<endl;
+        //If Query Range Corresponds////////////////
+        if (start==lower_bound && end==upper_bound){
+            return value();
+        }
+        //Query Right Tree if range only lies there
+        else if (lower_bound > mid){
+            return right->rangeMinimumQuery(lower_bound, upper_bound);
+        }
+        //Query Left Tree if range only lies there
+        else if (upper_bound <= mid){
+            return left->rangeMinimumQuery(lower_bound, upper_bound);
+        }
+        //Query both ranges as range spans both trees
+        else{
+            return min(left->rangeMinimumQuery(lower_bound, mid),right->rangeMinimumQuery(mid+1, upper_bound));
+        }
+        //End//////////////////////////////////////////
+    }
+    
 } *root;
 
-
 void init(int N){
-    node n;
+    root = new node(0, N-1); // creates seg tree of size n
+}    
+void update(int P, int V){
+    root->update(P,V);
 }
-void update(int x, int nv){}
-int query(){}
-
+int query(int A, int B){
+    int val = root->rangeMinimumQuery(A,B);
+    return val;
+}
+//Driver Code//
+/*
 int main(){
-    
+    int n,q; cin>>n>>q;
+    int a[n];for (int i=0;i<n;i++){cin>>a[i];}
+    init(n);
+    for (int i=0;i<n;i++){
+        root->update(i,a[i]);
+    }
+    bool newlineFlag = false;
+    for (int i=0;i<q;i++){
+        //cout<<"Query "<<i<<endl;
+        char cq; cin>>cq;
+        if (cq == 'q'){
+            int l,r; cin>>l>>r;
+            int val = query(l-1,r-1);
+            if (newlineFlag){cout<<endl;}
+            else{newlineFlag = true;}
+            cout<<val;
+        }else if (cq == 'u'){
+            int x,y; cin>>x>>y;
+            update(x-1,y);
+        }
+        else if (cq == 'a'){
+            int x,y,z; cin>>x>>y>>z;
+            root->addRange(x-1,y-1,z);
+        }
+    }
 }
-
+*/
