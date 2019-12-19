@@ -1,0 +1,321 @@
+<!-- Creator     : groff version 1.20.1 -->
+<!-- CreationDate: Thu Aug  4 23:14:51 2011 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>NPIET</title>
+
+</head>
+<body>
+
+<h1 align="center">NPIET</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+<a href="#BUGS">BUGS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">npiet &minus;
+an interpreter for the piet programming language</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npiet</b> [
+<b>&minus;v</b> | <b>&minus;q</b> | <b>&minus;d</b> |
+<b>&minus;dpbug</b> | <b>&minus;v11</b> | <b>&minus;t</b> ]
+[ <b>-e</b> <i>&lt;n&gt;</i> ] [ <b>&minus;tpic</b> ] [
+<b>-tpf</b> <i>&lt;n&gt;</i> ] [ <b>&minus;tps</b> ] [
+<b>&minus;ts</b> <i>&lt;n&gt;</i> ] [ <b>&minus;te</b>
+<i>&lt;n&gt;</i> ] <i>inputfile</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>npiet</b></i>
+is an interpreter for the piet programming language. In this
+language the programs are pictures, build out of 18 colors
+and black and white, where changes in the color are
+stack-based commands. <br>
+If the input (supported is ppm and optional gif and png
+format) includes unknown colors, they are substituted per
+default by white (optional by black or leading to an error).
+<br>
+The input picture is per default examined, if it is zoomed
+(for better &rsquo;readability&rsquo;) and the zoomfactor
+(the codelsize) is automatically guessed (if this failes,
+please specify the codelsize by the -cs option). <br>
+Special fun gives the optional output of a trace picture. If
+the GD library is compiled in, the npiet interpreter can
+paint the trace of the program run to a png file, named
+npiet-trace.png. Different zoom factors and additional
+options lead to varying detail and readability.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>&minus;h</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p style="margin-top: 1em">print usage help and exit.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;v</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>be somewhat verbose.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;q</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>be more quiet.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;d</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>print debug output (lot&rsquo;s of more or less cryptic
+and mostly useless blurb).</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;dpbug</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>changes the execution mode of the perl piet interpreter.
+This changes the behavior when crossing white blocks (wrong
+interpretation of blocking after white).</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;v11</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>changes the execution mode to the npiet version 1.1
+interpreter. This changes to the first fixed version of
+corrected behavior when crossing white blocks.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;t</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>print trace details. For every step the interpreter
+print some details:</p></td></tr>
+</table>
+
+<p style="margin-left:22%;">trace: step 0 (0,0/r,l nB -&gt;
+3,0/r,l dB): <br>
+action: push, value 9 <br>
+trace: stack (1 values): 9 <br>
+The trace step with the codel x,y coordinates and the dp,cc
+values and the codel color (here: normal Blue to dark Blue).
+<br>
+The action describes the command executed and the stack with
+its values is shown.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>&minus;e &lt;n&gt;</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p style="margin-top: 1em">Sets the number of execution
+steps. This allows to abort a erroneous program, but the
+default is unlimited, ie. run until program end (or forever
+;-).</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;tpic</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>Create a trace picture. The file is name
+<i>npiet-trace.png .</i> The picture is written on program
+exit, or if the normal trace options is specified too, after
+every step (makes execution notably slower, because this is
+quite expensive, but maybe helpful). (only avail if compiled
+with gd support).</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;tpf &lt;n&gt;</b></p>
+
+<p style="margin-left:22%;">Sets the size of the pixel in
+the trace picture. For small input files, eg. 20x20 codels,
+the resulting trace picture is 640x640 pixel with a pizel
+zoom of 32. Just try different values, to get useable
+readability versus picture size. There are some internal
+values, where different information is written by different
+zoom factors. (only avail if compiled with gd support).</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>&minus;tps</b></p></td>
+<td width="5%"></td>
+<td width="78%">
+
+
+<p>Do not include the dp/cc tries in the trace picture.
+This can increase readability with smaller pixel zoom
+factors. Additional there are some internal values too,
+where different information is written depending of the zoom
+factor. (only avail if compiled with gd support).</p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>&minus;ts &lt;n&gt;</b></p>
+
+<p style="margin-left:22%;">Please look at -te &lt;n&gt;
+just below:</p>
+
+<p style="margin-left:11%;"><b>&minus;te &lt;n&gt;</b></p>
+
+<p style="margin-left:22%;">Values where to start and end
+when painting a trace picture. To avoid clobbered output
+when running in loops, for better readability a start and an
+end step can be specified. <br>
+Note: this does not stop or change the program execution or
+the textual trace output. It affects only the saved image.
+<br>
+Note: this enables now tracing, so specifying -tpic is no
+longer necessary. <br>
+Note: if you specify -te 0 you can easily get an bigger
+picture of the input saved ;-)</p>
+
+<p style="margin-left:11%;"><b>inputfile</b></p>
+
+<p style="margin-left:22%;">The picture to read. For
+ppm-formatted pictures this may be a - to read from
+&lt;stdin&gt;.</p>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npiet -tpic
+hello.gif</b> - run the hello.gif program and create a trace
+file named <i>npiet-trace.png .</i></p>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>npiet-trace.png</b></i>
+- name of the trace picture file. It is overwritten if it
+exists.</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Erik
+Schoenfelder &lt;schoenfr@web.de&gt;. <br>
+-dpbug option by Bertram Felgenhauer
+&lt;int-e@gmx.de&gt;.</p>
+
+<h2>BUGS
+<a name="BUGS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">None seen -
+they are hidden in the oil painting ;-)</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npietedit</b>(1)
+<b><br>
+http://www.bertnase.de/npiet/ <br>
+ http://www.dangermouse.net/esoteric/piet.html</b></p>
+<hr>
+</body>
+</html>

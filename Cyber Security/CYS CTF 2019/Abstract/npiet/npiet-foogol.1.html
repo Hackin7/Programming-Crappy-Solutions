@@ -1,0 +1,219 @@
+<!-- Creator     : groff version 1.20.1 -->
+<!-- CreationDate: Fri Aug  5 23:26:57 2011 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>NPIET-FOOGOL</title>
+
+</head>
+<body>
+
+<h1 align="center">NPIET-FOOGOL</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+<a href="#BUGS">BUGS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">npiet-foogol
+&minus; a foogol to piet compiler</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npiet-foogol</b>
+[ <b>&minus;v</b> | <b>&minus;d</b> ] [ <b>-w</b>
+<i>&lt;n&gt;</i> ] [ <b>-b</b> <i>&lt;n&gt;</i> ] [
+<b>-cs</b> <i>&lt;n&gt;</i> ] <i>inputfile</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><b>npiet-foogol</b></i>
+translates foogol input to a piet program. So npiet-foogol
+creates a picture from foogol source. The picture is, well
+should be, a valid piet program and can be executed, eg. by
+the npiet interpreter.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>&minus;h</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p style="margin-top: 1em">print usage help and exit.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;v</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>be somewhat verbose.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;d</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>print debug output (lot&rsquo;s of more or less cryptic
+and mostly useless blurb).</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>&minus;w &lt;n&gt;</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p>Sets a wrap-width in pixel. This gives the compiler a
+hint about a block width to use when generating expressions
+or statements.</p></td></tr>
+</table>
+
+<p style="margin-left:22%;">Usually code is generated left
+to right until the wrap-width is reached and then to the
+left. To avoid codel overlaps in loops and conditionals,
+code is generated with a virtual left border, but this
+wrap-width too. Here is lot of optimisation possible.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>&minus;b &lt;n&gt;</b></p></td>
+<td width="2%"></td>
+<td width="78%">
+
+
+<p style="margin-top: 1em">Sets the base used by generating
+a number. The default is 7 and a value greater or equal of 2
+is acceptable.</p></td></tr>
+</table>
+
+<p style="margin-left:22%;">In a piet program the number of
+codels (here pixels) of a color block represents a number.
+To be able to push a large number on the stack without
+wasting a lot of ink, the number is calculated and the given
+base is used to do so.</p>
+
+<p style="margin-left:11%;"><b>&minus;cs &lt;n&gt;</b></p>
+
+<p style="margin-left:22%;">Sets the output codel size to n
+pixels. The default is 1. Use a higher value to get a larger
+output picture.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="6%">
+
+
+<p><b>&minus;rnd</b></p></td>
+<td width="5%"></td>
+<td width="78%">
+
+
+<p>Experimental feature to set the start codel not always
+to red, but to a somewhat more random value. This does not
+work reliable - please avoid if running in trouble...</p></td></tr>
+</table>
+
+<p style="margin-left:22%; margin-top: 1em"><b>&minus;o
+&lt;filename&gt;</b> Sets the output filename. Default is
+npiet-foogol.png.</p>
+
+<p style="margin-left:11%;"><b>inputfile</b></p>
+
+<p style="margin-left:22%;">The foogol program to read. Use
+a - to read from &lt;stdin&gt;.</p>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npiet-foogol.png</b>
+- default name of the piet program file to write. It is
+overwritten if it exists.</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Erik
+Schoenfelder &lt;schoenfr@web.de&gt;.</p>
+
+<h2>BUGS
+<a name="BUGS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Surely
+lots.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>npiet(1),
+npietedit(1) <br>
+ http://www.bertnase.de/npiet/</b></p>
+<hr>
+</body>
+</html>
