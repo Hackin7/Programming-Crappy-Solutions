@@ -29,7 +29,8 @@ long long fenwick_query(int pos) {
         pos -= pos&-pos;
     }
     return sum;
-}////RUPQ//////////////////////////////////////////////////////
+}
+////RUPQ//////////////////////////////////////////////////////
 void fenwick_range_update(int pos_a, int pos_b, int val){
     //TLE way
     //for (int i=pos_a;i<=pos_b;i++){fenwick_update(i, val);}

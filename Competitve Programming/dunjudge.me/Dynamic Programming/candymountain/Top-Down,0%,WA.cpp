@@ -14,11 +14,9 @@ int f(int i){
     //Memoization
     //cout<<k<<":"<<i<<"["<<fmem[i]<<"]"<<endl;;
     if (fmem[i]!= INT_MAX){return fmem[i];}
-    
-    //Base Case
-    if (i==0){fmem[0]=pebble[0];}
-    //Recursive cases
-    else{
+
+    if (i==0){fmem[0]=pebble[0];} //Base Case
+    else{ //Recursive cases
         int prev=f(i-1);
         for (int j=i-1-1; j>=max(i-k,0);j--){//Origin stones
             prev = min(prev,f(j));
@@ -31,7 +29,7 @@ int main(){
     fill(fmem, fmem+n,INT_MAX);
     cin>>n>>k;
     for(int i=0;i<n;i++){cin>>pebble[i];}pebble[n]=0;
-    
+
     if (k==1){cout<<*max_element(pebble,pebble+n);return 0;}
     //for (int i=0;i<n;i++){f(i);}
     cout<<f(n);

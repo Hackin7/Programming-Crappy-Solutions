@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 struct node { 
     int start, end, mid, val, lazyadd;
     node *left, *right;  
