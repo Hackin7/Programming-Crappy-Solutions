@@ -51,6 +51,7 @@ const updatePartStore = function(parts){
 };
 
 store.dispatch(updateStore({name:"", password:"", id:""}));
+//alert("ID"+store.getState().id);
 ////////////////////////////////////////////////////////////////////////
 //https://www.tutorialspoint.com/redux/redux_react_example.htm
 console.log(store.getState());
@@ -159,10 +160,11 @@ function useForceUpdate(){
 function Top(props){
     const forceUpdate = useForceUpdate();
     var loginAuth = cookie.load('loginAuth');
+    //alert(loginAuth);
     //alert(window.loggedin);
-    if (loginAuth != null && store.getState().id != ""){
+    if (loginAuth != null && store.getState().id == ""){
         //let loginAuthData = JSON.parse(loginAuth);
-        //alert(loginAuth);
+        //alert(loginAuth.name);
         POSTRequest({id:loginAuth.id, name:loginAuth.name},
         '/authid',
         (responseJson) => {
@@ -174,9 +176,10 @@ function Top(props){
               //alert();
             }
             else{
+                cookie.remove("loginAuth", {path: "/"});
                 alert("Session Expired");
             }
-            forceUpdate();
+            //forceUpdate();
         });
         props.update({id:loginAuth.id, name:loginAuth.name});
     }
