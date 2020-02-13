@@ -10,7 +10,7 @@ check_first:
    cmp   ecx, [num2] 
    jg    check_third_num ;If value of ecx > num2: jump to check_third_num
    
-   mov   ecx, [num2]
+   mov   ecx, [num2] ;Make the second number the new maximum
 
 check_third_num:
    cmp   ecx, [num3]
@@ -25,6 +25,7 @@ _exit: ;Output of message
    mov   eax,4  ;system call number (sys_write)
    int   0x80   ;call kernel
     
+   add   byte [largest], '0';Convert to ASCII
     
    mov   ecx,largest
    mov   edx, 2
@@ -39,9 +40,9 @@ section .data
    
    msg db "The largest digit is: " ;,0xA ;Newline Character
    len equ $- msg 
-   num1 dd '47'
-   num2 dd '22'
-   num3 dd '31'
+   num1 dd 1
+   num2 dd 2
+   num3 dd 3
 
 segment .bss
    largest resb 2  

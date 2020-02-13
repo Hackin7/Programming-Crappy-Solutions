@@ -1,70 +1,43 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
-//80%
-int r, c;
-int mapval(int x, int y){return y*r + x;}
-
-void BFS(bool* visited, string map, int s) 
-{ 
-    list<int> queue; 
-    queue.push_back(s); 
-  
-    list<int>::iterator i; 
-    list<int> neighbours;
-    while(!queue.empty()) 
-    { 
-        // Dequeue a vertex from queue and print it 
-        s = queue.front(); 
-        //cout << s << " "; 
-        queue.pop_front(); 
-        
-        neighbours.clear();
-        int x = s%r, y = s/r;
-        //cout<<"("<<x<<","<<y<<")";
-        
-        if (x-1 >= 0){neighbours.push_back(mapval(x-1,y));}
-        if (x+1 < c){neighbours.push_back(mapval(x+1,y));}
-        if (y-1 >= 0){neighbours.push_back(mapval(x,y-1));}
-        if (y+1 < c){neighbours.push_back(mapval(x,y+1));}
-        
-        //cout<<"[";
-        for (i = neighbours.begin(); i != neighbours.end(); ++i) 
-        { 
-            //cout<<*i<<",";
-            if (!visited[*i] && map[*i] == 'H') 
-            { 
-                visited[*i] = true; 
-                queue.push_back(*i); 
-            } 
-        } 
-        //cout<<"]";
-    } 
-    //cout<<endl;
-} 
-int main() {
-    cin >> r >> c;
-    string map;
-    for (int i=0; i < r; i++){
-        string h;cin >> h;map+=h;}
-    
-    
-    bool visited[r*c]; fill(visited, visited+r*c, false);
-    int h = 0;
-    for (int i=0; i<r*c; i++){
-        if (visited[i] == true){continue;}
-        visited[i] = true;
-        
-        if (map[i] == '.'){continue;}
-        if (map[i] == 'H'){
-            BFS(visited, map, i);
-            h++;
-        }
-        
+int visited[100][100]; // x,y
+char m[100][100]; //x, y
+int h=100, w=100, t = 0;
+void mout(){
+    for (int i=0; i<h; i++){if (i>0){cout<<endl;}
+        for (int j=0; j<w; j++){cout<<visited[j][i];}}
+}
+//int v(int x, int y){return y*h+x;}
+bool cmp(int x1, int y1){
+    return m[x1][y1] == 'H';
+}
+int ans = 0;
+void dfs(int x, int y, bool start){
+    if (visited[x][y] == 1){return;}
+    else{
+        if (start)ans++;
+        visited[x][y] = 1;
+        //mout();cout<<endl<<endl;
+        if (x-1 >= 0 && cmp(x-1,y) ){dfs(x-1,y, false);}
+        if (x+1 < w && cmp(x+1,y) ){dfs(x+1,y, false);}
+        if (y-1 >= 0 && cmp(x,y-1) ){dfs(x,y-1, false);}
+        if (y+1 < h && cmp(x,y+1)){dfs(x,y+1, false);}
     }
-    
-    cout << "Oh, bother. There are "<<h<<" pools of hunny.";
-    return 0;
 }
 
+int main(){
+    cin>>h>>w;
+    for (int i=0; i<h; i++){for (int j=0; j<w; j++){cin>>m[j][i];visited[j][i] = 0;}}
+    /*
+    int x=-1,y=-1;
+    for (int i=0; i<h; i++){if (i>0){cout<<endl;}for (int j=0; j<w; j++){if (i==y-1&&j==x-1){cout<<"*";}else{cout<<m[j][i];}}}
+    cout<<endl<<endl;
+    */
+    
+    for (int i=0; i<h; i++){for (int j=0; j<w; j++){
+        if (cmp(j,i)){dfs(j,i,true);}
+    }}
+    
+    cout << "Oh, bother. There are "<<ans<<" pools of hunny.";
+}

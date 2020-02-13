@@ -1,8 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int INF = 1100000000;
+typedef long long ll;
+const int INF = 1100000000;
 
+bool ispalindrome(int l,string word){
+    for (int i=0; i<l/2; i++){
+        cout<<word[i]<<word[l-i-1];
+        if(word[i]!=word[l-1-i]){return false;}
+    }
+    return true;
+}
 int main(){
     //Input//////////////////////////////////
     int l, n; cin>>l>>n;
@@ -16,20 +24,20 @@ int main(){
             letters[index] = true;nodes++;}
     }
     
-    int M[128][128]; //2D map of cost
-    bool cn[128][128];
-    for (int i=0; i<128; i++){
-        for (int j=0; j<128; j++){
-            M[i][j] = INF;cn[i][j] = false;
-        }} //Empty cost
+    //Initialisation
+    const int V=128;
+    ll M[V][V]; //2D map of cost
+    //bool cn[V][V];
+    memset(M,INF,sizeof(M));//Empty cost
             
     for (int i=0;i<n;i++){
-        char x,y; int c; cin>>x>>y>>c;
+        char x,y; int c;cin>>x>>y>>c;
         //Cost setting
         M[int(x)][int(y)] = c;
+        //M[int(y)][int(x)] = c;
         
-        cn[int(x)][int(y)] = true;
-        cn[int(y)][int(x)] = true;
+        //cn[int(x)][int(y)] = true;
+        //cn[int(y)][int(x)] = true;
     }
     
     //cout << nodes;
@@ -45,30 +53,26 @@ int main(){
         }        
     }
 
-    /*
-    cout<<endl<<endl;;
-    //Output
-    for (int i=0; i<n; i++){
-        for (int j=0; j<n; j++){
-            cout<<adjM[i][j]<<",";//Null value
-        }
-        cout<<endl;
-    }
-    */
-
-    
     int cost = 0;
-    //Loop through Word/////////////////////////
-    for (int i=0; i<l/2; i++){
-        cout<<word[i]<<word[l-i-1];
-        int a = int(word[i]), b = int(word[l-i-1]);
-        cout << a <<","<< b <<":"<< M[a][b] <<endl;
-        if (M[a][b] != INF)cost += M[a][b];
+    ll totalchoices = 67108864;//2^26
+    //Loop through choices/////////////////////////
+    for (ll choice=0;choice<totalchoices;choice++){
+        ll currchoice=choice;
+        for(int i=0;i<26;i++){
+            int isletter = currchoice%2;
+            if (isletter){}
+            currchoice/=2;
+        }
     }
     
-    //cout<<M[int('r')][int('t')];
+    cout<<M[int('c')][int('t')]<<":";
     
-    //Check if ends are linked
-    //Add to cost
     cout << cost;
 }
+/*
+3 3
+cat
+c r 10
+t r 12
+r t 14
+*/

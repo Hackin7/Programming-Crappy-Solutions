@@ -9,7 +9,7 @@ ways (i,v) = { if (v<Ci): ways(i-1,v) + 0 //Dont use coin
              { else: ways(i-1,v) + ways(i,v-Ci)
 */
 
-//Copied from notes lol, 70%
+//Copied from notes lol, 100%
 int main(){
     int N,V; cin >> N>>V;
     int coins[N+1];for (int i=1;i<=N;i++){cin>>coins[i];}
@@ -19,7 +19,7 @@ int main(){
     for (int i = 1; i <= N; ++i)// note order of loops!
         for (int v = 1; v <= V; ++v)
             if (v >= coins[i])
-                ways[v] += ways[v - coins[i]];
+                ways[v] += ways[v - coins[i]]%13371337;
 
     cout<<ways[V]%13371337;
 }
