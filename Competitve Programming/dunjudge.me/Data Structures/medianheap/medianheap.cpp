@@ -1,9 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-//NOT WORKING
+
+void output(multiset<int> pq){
+    bool first = true;
+    for(auto it=pq.begin();it!=pq.end();it++){
+        if (!first){cout<<" ";}else{first=false;}
+        cout<<(*it);
+    }
+}
 int main() {
-  int N; cin>>N;
-    multiset<int, greater<int> > pq;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int N; cin>>N;
+    multiset<int> pq;
     for (auto i=0; i<N;i++){
         string cmd; cin>>cmd;
         if (cmd == "PUSH"){
@@ -11,24 +20,37 @@ int main() {
             pq.insert(x);
         }
         else if (cmd == "POP"){
-            auto it = pq.begin(); for (int i=0; i<(int)pq.size()/2;i++){it++;}
-            if (pq.size()%2==1){
-                it++;
-            }
-            if (it != pq.begin() || it != pq.end()){pq.erase(it);}
+            //auto it = pq.begin();
+            //for (int i=0; i<(int)pq.size()/2-1;i++){it++;}
+            auto it = next(pq.begin(),(int)pq.size()/2-1);
+            if (pq.size()%2==1 && pq.size()>0){it++;}
+            //cout<<":"<<distance(pq.begin(),it)<<" "<<(it==pq.end())<<" "<<(it==pq.begin());
+            if(it!=pq.end())pq.erase(it);
+            else{pq.erase(--it);}
         }
+        //cout<<endl;output(pq);
     }
-
-    bool first = true;
-    stack<int> s;
-    for(auto it = pq.begin(); it != pq.end(); it++){
-        s.push(*it);
-        //if (!first){cout<<" ";}else{first = false;}
-        //cout << *it;
-    }
-    while (!s.empty()){
-        if (!first){cout<<" ";}else{first = false;}
-        cout << s.top();
-        s.pop();
-    }
+    output(pq);
+    
 }
+/*
+10
+PUSH 5
+PUSH 2
+PUSH 4
+POP
+PUSH 3
+PUSH 9
+POP
+POP
+POP
+POP
+
+5
+PUSH 5
+PUSH 2
+POP
+PUSH 3
+PUSH 9
+
+*/

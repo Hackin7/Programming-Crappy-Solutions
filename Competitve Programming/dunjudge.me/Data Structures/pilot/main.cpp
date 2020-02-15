@@ -12,7 +12,7 @@ int main(){
     if (t6){
         //cout<<"6 ";
         for (ll j=0;j<q;j++){
-            int ans = min(y[j],n);//index where it exceeds
+            int ans = min(y[j]-1,n);//index where it exceeds
             //out<<ans<<" ";
             ans = ans*(ans+1)/2;
             if (j!=0){cout<<endl;}cout<<ans;
@@ -50,3 +50,9 @@ int main(){
         }
     }
 }
+/*
+Test Data for Subtask 6
+6 1
+1 2 3 4 5 6
+6
+*/

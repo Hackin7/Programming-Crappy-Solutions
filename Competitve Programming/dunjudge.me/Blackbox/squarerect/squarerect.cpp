@@ -89,21 +89,25 @@ bool am_i_square(int N, int Q) {
         if (!q1 || (q1&&q2)){return true;}
         else{return false;}
     }else{
-        int side=0;
+        int side=0,found=0;
         //Find Edges
         for(i=0;i<4;i++){
             if (inside_shape(check[i],100)){
                 side=1;
+                found++;
                 break;};
         }
-        if (!side&&inside_shape(100,100)){
-            side=2;}
-        if (!side){for(i=0;i<4;i++){
+        if (inside_shape(100,100)){
+            side=2;found++;
+        }
+        for(i=0;i<4;i++){
             if (inside_shape(100,check[i])){
-                side=3;
-                break;};
-        }}
+                side=3;found++;
+                break;
+            }
+        }
         
+        if (found>1 || found==0){return false;}
         if (!checkbool){return false;}
         else if (side<=2){ //Lying on y
             //Binary Search for x
@@ -131,5 +135,5 @@ bool am_i_square(int N, int Q) {
             else{return false;}
         }
     }
-    return inside_shape(1, 1);
+    return false;
 }

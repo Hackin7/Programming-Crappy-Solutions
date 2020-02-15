@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int visited[100][100]; // x,y
-char m[100][100]; //x, y
+const int V=100;
+int visited[V][V]; // x,y
+char m[V][V]; //x, y
 int h=100, w=100, t = 0;
 void mout(){
     for (int i=0; i<h; i++){if (i>0){cout<<endl;}
@@ -29,9 +30,9 @@ void bfs(int x1, int y1, int startDepth){
         int x = get<0>(square), y = get<1>(square), depth = get<2>(square);
         int newdepth = depth+1;
         stuff.pop_front();
-        //cout<<x<<","<<y<<" "<<depth<<endl;
         
-        //mout();cout<<endl<<depth<<endl;
+        //cout<<endl<<x<<","<<y<<" "<<depth<<endl;
+        //mout();cout<<endl;
         if (x-1 >= 0 && cmp(x-1,y,newdepth) ){stuff.push_back(make_tuple(x-1,y, newdepth));}
         if (x+1 < w && cmp(x+1,y,newdepth) ){stuff.push_back(make_tuple(x+1,y, newdepth));}
         if (y-1 >= 0 && cmp(x,y-1,newdepth) ){stuff.push_back(make_tuple(x,y-1, newdepth));}
