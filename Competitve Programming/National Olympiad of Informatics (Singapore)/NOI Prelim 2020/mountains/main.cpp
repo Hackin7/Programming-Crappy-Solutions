@@ -2,64 +2,65 @@
 using namespace std;
 
 typedef long long ll;
-int rise[1000000];
-int countRise(ll H[],ll xx,ll y, ll threshold){
-    //cout<<y<<endl;
-    if (y==0){rise[y]=0;}//Nothing before it
-    else if (rise[y]==-1){
-        int localcount=0;
-        
-        for(int x=y-1;x>=xx;x--){
-            if (H[x]<H[y] &&  threshold > H[x]){
-                //Dont do anything
-            }else if(H[x]<H[y] && threshold <= H[x]){
-                localcount++;
-            }else if(H[x]<H[y] && threshold <= H[x]){
-                //cout<<y<<"["<<H[y]<<"] count "<<threshold<<"<="<<x<<"["<<H[x]<<endl;
-                localcount += countRise(H,xx,x,threshold)+1;
-                threshold = H[x];
-            }
-        }
-        rise[y]=localcount;
+//Reference: https://github.com/ranaldmiao/sg_noi_archive/blob/master/2020_prelim/tasks/mountains/solutions/mountains.cpp
+ll N = 300001;
+////PUPQ//////////////////////////////////////////////////////
+int ft[300001], cnt=1;//indexed by height order
+void fenwick_update(int pos, int value) {
+    while (pos <= cnt) {
+        //cout<<"Fenwick Updating: "<<pos<<","<<value<<endl;
+        ft[pos] += value;
+
+        pos += pos&-pos;
     }
-    return rise[y];
 }
+int fenwick_query(int pos) {
+    ll sum = 0;
+    while (pos) { // while p > 0
+        sum += ft[pos];
+        pos -= pos&-pos;
+    }
+    return sum;
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
-    int n;cin>>n;
-    ll H[n];for(int i=0;i<n;i++){cin>>H[i];}
-    
-    memset(rise,-1,sizeof(rise));//index by y value
-    
-    ll count=0;
-    
-    if (*max_element(H,H+n)==1){
-        for(int i=0;i<n;i++){
-        }
+
+    int n;cin>>n;N=n;
+    ll H[n+1];for(int i=1;i<=n;i++){cin>>H[i];}
+
+
+    pair<ll,int> order[n+1];
+    for(int i=1;i<=n;i++){order[i]={H[i],i};}
+    sort(order+1,order+n+1);
+    //Order the heights, Excluding duplicates
+    //Also count the items
+    for(int i = 1; i <= n; i++){
+		if (i > 1 && order[i].first != order[i-1].first) cnt++;
+		H[order[i].second] = cnt;
+	}
+
+    //for(auto i:H){cout<<i<<" ";}
+
+    ll left[n+1],right[n+1];//Smaller heights on left and on right when y==i
+    memset(ft,0,sizeof(ft));
+    for (int i=1;i<=n;i++){
+        //Get number of heights smaller than current height at position
+        left[i]=fenwick_query(H[i]-1);
+        fenwick_update(H[i],1);
     }
-    for(int z=2;z<n;z++){//Count backwards
-        int localcount = 0, prevZ=0;
-        /*
-        if (memo.count(H[z])>0){
-            prevZ=spaces[H[z]].back()+1;
-            localcount+=memo[H[z]];
-        }*/
-        
-        //Find remaining in range
-        for(int y=z-1;y>prevZ;y--){
-            if (H[y]>H[z]){
-                //Overlapping subproblem here
-                localcount+=countRise(H,prevZ,y,0);
-            }
-        }
-        
-        memo[H[z]]=localcount;
-        spaces[H[z]].push_back(z);
-        count+=memo[H[z]];
+    memset(ft,0,sizeof(ft));
+    for (int i=n;i>=1;i--){
+        //Get number of heights smaller than current height at position
+        right[i]=fenwick_query(H[i]-1);
+        fenwick_update(H[i],1);
     }
-    cout<<count;
+    long long total = 0;
+	for(int i = 1; i <= n; i++){
+		total += left[i] * right[i];
+	}
+    cout<<total;
     return 0;
 }
 /*
@@ -73,5 +74,5 @@ int main(){
 
 8
 500 10 20 20 900 0 900 70
-* 
+*
 */
