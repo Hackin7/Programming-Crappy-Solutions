@@ -1,54 +1,53 @@
+//With reference to https://github.com/ranaldmiao/sg_noi_archive/tree/master/2018_prelim/solution_writeup
+
 #include <bits/stdc++.h>
 using namespace std;
 
-//TLE
+#define INF 1012345678012345678LL
+#define BIG 1000000000000LL
 typedef long long ll;
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
-    ll H,N;cin>>H>>N;
-    ll P[N];for(ll i=0;i<N;i++){cin>>P[i];}
-    
-    ll local=0, lmin=INT_MAX,lmax=-INT_MAX;
-    
-    bool subtask2=true;
-    for(ll i=0;i<N;i++){
-        local+=P[i];
-        lmin=min(lmin,local);
-        lmax=max(lmax,local);
-        if (i>0 && P[i]!=P[i-1]){
-            subtask2=false;}
-    }
-    
-    ll h=0,d=-1,p=-1;
-    if (N==1 && local > 0){
-        d=H/local;p=0;
-        if (d*local==H){d--;}
-    }else if (subtask2 && local > 0){
-        ll turns = H/P[0];
-        d=turns/N;p=turns%N;
-        if (turns*P[0]>=H && p>0){p--;}
-        else if (turns*P[0]>=H){d--;p=N-1;}
-    }
-    else if (local > 0){//Cannot Make it past first day
-        ll turns=0;
-        for (;;turns++){
-            //Speed Up 
-            if (turns%N==0 && h+lmax<H){
-                h+=local;turns+=N-1;continue;}
-            h+=P[turns%N];
-            if (h>=H)break;
+
+// height, number of phases, phase
+ll H;int N; ll P[10010];
+ll simulate[20010];
+bool printed = 0;
+int main(void) {
+    cin>>H>>N;
+    for (int i=0;i<N;i++){cin>>P[i];}
+
+    //Simulate for the first 2 days
+    simulate[0] = 0; // height at start of each phase
+    for (int i=0;i<2*N;i++) { // people may forget this
+        simulate[i+1] = max(simulate[i]+P[i%N], 0LL); // people may leave out max
+        //If it exceeds the time
+        if (simulate[i+1] >= H){
+            cout<<i/N<<" "<<i%N<<"\n";return 0;
         }
-        d=turns/N;p=turns%N;
-    }else if (lmax>0&&h+lmax>=H){
-        ll turns=0;
-        for(;turns<N;turns++){
-            h+=P[turns];
-            if (h>=H)break;
-        }
-        d=0;p=turns;
     }
-    cout<<d<<" "<<p;
-    return 0;
+    ll increment = 0; // The Total Increment each cycle
+    for (int i=0;i<N;i++) {
+        increment += P[i]; // should not overflow, but can underflow
+        // oh no what if it underflows?
+        if (increment <= -H) { // if it ever goes back above 0, then it must be possible within first 2N phases
+            cout<<"-1 -1\n";return 0;
+        }
+    }
+    ///////////////////////////////////////////////////////////
+    // check if it goes negative anywhere
+    if (increment <= 0) {
+        // not possible anymore
+        cout<<"-1 -1\n";return 0;
+    } else {
+        ll bestDays = INF;
+        int phase = 0;
+        for (int i=0;i<N;i++) { //For each possible phase, what is the possible day
+            //Find the days from the height
+            ll days = 1+(H-simulate[N+i+1]+increment-1)/increment;
+            if (bestDays > days) {
+                bestDays = days;
+                phase = i;
+            }
+        }
+        cout<<bestDays<<" "<<phase<<"\n";return 0;
+    }
 }

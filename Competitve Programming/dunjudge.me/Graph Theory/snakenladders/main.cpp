@@ -32,7 +32,7 @@ int main() {
         }
         if (g[v].size()==0){for(int i=1;i<=6;i++){
             int next=v+i;
-            if (next>N){break;next -= next-N;}//bounce back
+            if (next>N){next = N-(next-N);}//bounce back
             q.push(make_pair(next,d+1));
         }}
     }

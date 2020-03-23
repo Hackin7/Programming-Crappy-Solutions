@@ -1,38 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef int ll;
-typedef pair<ll,ll> ipair;
-ll bfs(ll N,vector<ipair> *adjlist,ll start, ll end){
-    bool visited[N*2];memset(visited,false,sizeof(visited));
-    deque<tuple<ll,ll> > nodes;
-    nodes.push_back(make_tuple(start,0));
+
+typedef pair<int,int> ipair;
+
+int bfs(int N,vector<ipair> *adjlist,int start, int end){
+    
+    int dist[N*2];memset(dist,-1,sizeof(dist));
+    deque<int> nodes;
+    nodes.push_back(start);dist[start]=0;
+    
     while (!nodes.empty()){
-        auto curr=nodes.front();
+        int curr=nodes.front();
         nodes.pop_front();
-        ll a=get<0>(curr);
-        ll d=get<1>(curr);
-        //cout<<"Node:"<<a%N<<","<<d<<":"<<a/N<<endl;
-        if (a%N==end){return d;}
+        //cout<<"Node:"<<curr%N<<","<<dist[curr]<<":"<<curr/N<<endl;
         //cout<<":";
-        visited[a]=true;
+        if (curr%N==end){return dist[curr];}
         
-        for(auto next:adjlist[a]){
-            ll y=next.first;//,w=next.second;
-            if (!visited[y]){
-                //cout<<" "<<y%N<<","<<!(y/N)<<endl;
-                visited[y]=true;
-                nodes.push_back(make_tuple(y,d+1));
+        for(auto next:adjlist[curr]){
+            int y=next.first;
+            //cout<<" "<<y%N<<","<<!(y/N)<<endl;
+            if (dist[y]==-1 || dist[y]>dist[curr]+1){
+                
+                dist[y]=dist[curr]+1;
+                nodes.push_back(y);
             }
         }
     }
-    return -1;
+    return INT_MAX;
 }
 int main() {
-    ll N,E;cin>>N>>E;
-    //if (N==0||E==0){cout<<-1;return 0;}
+    int N,E;cin>>N>>E;
+    
     vector<ipair> adjlist[N*2]; //Next N nodes for nodes coming from edges of 1
-    for(ll i=0;i<E;i++){
-        ll a,b,w;cin>>a>>b>>w;
+    for(int i=0;i<E;i++){
+        int a,b,w;cin>>a>>b>>w;
         if (w==0){//From 0 edges to 1
             adjlist[b].push_back(make_pair(N+a,w));
             adjlist[a].push_back(make_pair(N+b,w));
@@ -45,9 +46,8 @@ int main() {
         //adjlist[b].push_back(make_pair(a,w));
     }
     
-    ll dist=bfs(N,adjlist,0,N-1);
-    if (dist==-1){dist=INT_MAX;}
-    dist=min(dist,bfs(N,adjlist,N,N-1));
+    int dist=min(bfs(N,adjlist,0,N-1),bfs(N,adjlist,N,N-1));
+    if (dist==INT_MAX){dist=-1;}
     cout<<dist;
     return 0;
 }
@@ -71,4 +71,8 @@ int main() {
 3 1 0
 3 2 1
 1 4 1
+ 
+3 2
+0 1 1
+0 1 0
 */

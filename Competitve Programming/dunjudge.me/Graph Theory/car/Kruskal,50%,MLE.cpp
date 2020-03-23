@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define V 1000010
+#define V 1000000
 
 //UFDS
 int parent[V];
@@ -23,7 +23,7 @@ vector<pair<int, int> > adjlist[V];
 bool vis[V];
 int ans=0;
 int dfs(int N,int node,int maxcost) {
-    if (vis[node]){return 0;}vis[node] = true;
+    if (vis[node]){return 0;} vis[node] = true;
     //cout<<node<<endl;
     if (node==N){
         ans=maxcost;return 0;
@@ -45,6 +45,7 @@ int main(){
     vector <tuple<int,int,int> > edges ; // weight,node A,node B
     for (int i=0;i<E;i++) {
         cin >> A >> B >> C;
+
         edges.push_back(make_tuple(C,A,B));
     }
     

@@ -18,36 +18,40 @@ void connect(int x, int y) {
     if(rootX != rootY)
         parent[rootX] = rootY;
 }
-vector<pair<int, int> > adjlist[V];
 
-bool vis[V];
-int ans=0;
-int dfs(int N,int node,int maxcost) {
-    if (vis[node]){return 0;}vis[node] = true;
-    //cout<<node<<endl;
-    if (node==N){
-        ans=maxcost;return 0;
-    }
-    for (auto a: adjlist[node]){
-        maxcost=max(maxcost,a.first);
-        dfs(N,a.second,maxcost);
-    }
-    return maxcost;
+int priority[V];
+bool cmp(tuple<int,int,int> a,tuple<int,int,int> b){
+    return priority[get<2>(a)]>priority[get<2>(b)];
 }
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int N, E, A, B, C;
+    int N, E, A, B;
     cin >> N >> E;
 
     memset(parent,-1,sizeof(parent));
     vector <tuple<int,int,int> > edges ; // weight,node A,node B
     for (int i=0;i<E;i++) {
-        cin >> A >> B >> C;
-        edges.push_back(make_tuple(C,A,B));
+        cin >> A >> B;//connections
+        edges.push_back(make_tuple(A,B,i));//order
     }
     
+    int R;for(int i=0;i<N-1;i++){
+        cin>>R;priority[R-1]=1;
+    }
+    sort(edges.begin(),edges.end(),cmp);
+    int matchup[E];
+    int i=0;for(auto e:edges){
+        //cout<<get<2>(e)<<endl;
+        i++;matchup[get<2>(e)]=i;
+    }
+    for(int i=0;i<E;i++){
+        if (i!=0){cout<<" ";}
+        cout<<matchup[i];
+    }
+    
+    /*
     //Kruskal
     sort(edges.begin(),edges.end()); //Sort by ascending weights
     for (auto e : edges) {
@@ -61,17 +65,6 @@ int main(){
         connect(a,b); // connect them in the UFDS
     }
     dfs(N,1,0);
-    cout<<ans;
+    cout<<ans;*/
     return 0;
 }
-
-/*
-5 7
-1 2 10
-1 5 10
-2 3 10
-3 4 2
-4 5 10
-1 4 1
-3 5 1
-*/

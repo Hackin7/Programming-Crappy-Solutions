@@ -55,7 +55,7 @@ int main(){
     */
     
     bfs(x-1,h-y,1);
-    
+    //Bug here
     int maxval = 0;for (int i=0; i<w; i++){for (int j=0; j<w; j++){
         maxval = max(visited[i][j], maxval);
     }}

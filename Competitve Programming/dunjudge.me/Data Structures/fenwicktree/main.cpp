@@ -103,7 +103,7 @@ int main(){
             cout<<val;
         }else if (query == '1'){
             ll a,b,c; cin>>a>>b>>c;
-            for (ll j=a;j<=b; j++){arr[j]+=c;}
+            //for (ll j=a;j<=b; j++){arr[j]+=c;}
             rurq_range_update(a+1,b+1,c);
         }
     }

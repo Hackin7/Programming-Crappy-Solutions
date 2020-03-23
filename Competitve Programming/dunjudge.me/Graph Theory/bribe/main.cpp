@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//0%
 #define V 1000000
 vector<int> adjlist[V];
 bool visited[V];
