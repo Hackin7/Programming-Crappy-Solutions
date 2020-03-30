@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//100%
 int main(){
     int N; cin>>N;
     string S; cin>>S;
@@ -15,6 +15,7 @@ int main(){
         //Transition
         memo[i] = max(memo[i-1]+val[i],val[i]);
     }
-    cout<<*max_element(memo,memo+N)<<endl;
+    //You can choose to have none
+    cout<<max(0,*max_element(memo,memo+N))<<endl;
     return 0;
 }
