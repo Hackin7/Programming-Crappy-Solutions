@@ -1,0 +1,98 @@
+<rant> Catch No Ball, Kopi Right 2019 </rant>
+<rant> Written in KekLang v3.1.4 </rant>
+<rant> Courtesy of Alt Tab Labs LLP, Troll Department </rant>
+
+
+disnotflag <<- $0x64, 0x6c, 0x30, 0x62, 0x34, 0x5f, 0x5f, 0x33, 0x6c, 0x6d, 0x6e, 0x34, 0x62, 0x31, 0x5f, 0x33, 0x74, 0x64, 0x6e, 0x62, 0x6d, 0x30, 0x7a, 0x33$
+
+teluwhut decode... I take <<something>>
+then
+    result <<- ''
+    count <<- haolung(something)
+    counter <<- $$
+
+    until count issit 0
+        then
+            count >>> counter
+            count = count - 1
+        fin
+
+    final <<- $$
+
+    thing ~ $counter$
+    then
+        ? ((thing mod 2) issit 0)
+            -then
+                <rant> x.pop(1) means remove item at index 1 of x and return it </rant>
+                <rant> example, x <<- $123, 234, 345$ </rant>
+                <rant> After running y <<- x.pop(1), x is now $123, 345$ and y is now 234 </rant>
+
+                disnotflag.pop(0) <<< final
+            -fin
+            +then
+                disnotflag.pop(haolung(disnotflag)-1) <<< final
+            +fin
+    fin
+
+    final <<- sdrawkcab(final)
+    thing ~ $final$
+    then
+        result <<< ascii(thing)
+    fin
+
+    okcan result
+fin
+
+teluwhut samesame... I take <<disone, datone, checker>>
+then
+    okcan checker(disone) issit checker(datone)
+fin
+
+teluwhut sdrawkcab... I take <<something>>
+then
+    dis <<- $$
+
+    thing ~ $something$
+    then
+        thing >>> dis <rant> append thing to front of dis </rant>
+    fin
+
+    okcan dis
+fin
+
+teluwhut testflag... I take <<whatutype>>
+then
+    ? samesame(whatutype, disnotflag, haolung)
+        -then
+            okcan -
+        -fin
+        +then
+            okcan decode(disnotflag) issit whatutype
+        +fin
+fin
+
+teluwhut haolung... I take <<something>>
+then
+    haomehnee <<- 0
+
+    thing ~ $something$
+    then
+        haomehnee <<- haomehnee + 1
+    fin
+
+    okcan haomehnee
+fin
+
+
+input <<- ''
+
+ask input
+
+? input issit testflag(input)
+    -then
+        tellu 'You keyed in wrong flag'
+    -fin
+
+    +then
+        tellu 'The flag is correct!'
+    +fin

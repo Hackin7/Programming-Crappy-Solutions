@@ -1,65 +1,42 @@
 #include <bits/stdc++.h>
-#include <fstream>
 using namespace std;
 
-//12%,TLE
-//Weight, Value, item, K
-typedef tuple<int,int,int,int> group;
 
-const int v = 100001;
-int valMemo[v];
+//From https://github.com/ranaldmiao/sg_noi_archive/blob/master/2018_prelim/solution_writeup/NOI2018_Prelim_SolutionPackage.zip
 
-int limit(int a,int b){return a>b?b:a;}
+vector <pair<int, int>> A[200100];
+long long dp[1000000], answer;
 int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int S,N; cin>>S>>N;
-    int V[N],W[N],K[N];
-    for(int i=0;i<N;i++){
-        cin>>V[i]>>W[i]>>K[i];
-    }
-    /////////////////////////////////
-    
-    int ans = 0;
-    //Start with N=1
-    if (N==1){
-        /*Choices
-        if S<sum(w) take
-        else Don't take*/
-        ans=V[0]*limit(S/W[0],K[0]);
-        cout<<ans;return 0;
+
+    int noItems=5;
+    int v[noItems],s[noItems];
+    for(int i=0;i<noItems;i++){
+        if (i%noItems==0){v[i]=2; s[i]=1;} //Salmon Sashimi
+        else if (i%noItems==1){v[i]=7; s[i]=2;} //Salmon Maki
+        else if (i%noItems==2){v[i]=60; s[i]=6*s[1]+5;} //Premium Bento
+        else if (i%noItems==3){v[i]=588; s[i]=179*s[0];} //Yu Sheng
+        else if (i%noItems==4){
+            v[i]=2888;
+            s[i]=s[3] + s[2]*24 + 67*s[1] + 88*s[0];
+        } //CNY Gift Box
+        A[s[i]].push_back(make_pair(v[i], 1023));
     }
     
-    deque<group> choices;
-    choices.push_back(make_tuple(0,0,0,K[0]));
-    while (!choices.empty()){
-        group curr = choices.front();
-        choices.pop_front();
-        
-        int weight=get<0>(curr);
-        int val=get<1>(curr);
-        int i=get<2>(curr);
-        int qty=get<3>(curr);
-        
-        if (weight > S){continue;}//Ignore Choice
-        else{ans=max(ans,val);}
-        //Choices: 
-        //1.Take more of curr item(if available)
-        //2.Go to next item
-        
-        if (qty>0){
-            choices.push_back(
-                make_tuple(weight+W[i],val+V[i],i,qty-1)
-            );
+    int N;cin>>N;
+    for(int i = 1; i <= N; i++){
+        sort(A[i].begin(), A[i].end(), greater<pair<int, int>>());
+        int index = 0;
+        for(int j = 0; j < N / i; j++){
+            if(index >= A[i].size()) break;
+            for(int k = N; k >= i; k--){
+                dp[k] = max(dp[k], dp[k - i] + A[i][index].first);
+                answer = max(answer, dp[k]);
+            }
+            A[i][index].second--;
+            if(A[i][index].second == 0) index++;
         }
-        if(i+1<N){
-            choices.push_back(
-                make_tuple(weight,val,i+1,K[i+1])
-            );
-        }
-            
     }
-    cout<<ans;
-    
+    cout << answer << endl;
     return 0;
-}
+} 
+

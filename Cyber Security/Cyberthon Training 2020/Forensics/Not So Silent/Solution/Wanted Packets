@@ -1,0 +1,48 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    192.168.0.142         192.168.0.150         HTTP     220    GET /storage/classified HTTP/1.1 
+
+Frame 1: 220 bytes on wire (1760 bits), 220 bytes captured (1760 bits) on interface 0
+Linux cooked capture
+Internet Protocol Version 4, Src: 192.168.0.142, Dst: 192.168.0.150
+Transmission Control Protocol, Src Port: 47392, Dst Port: 80, Seq: 1, Ack: 1, Len: 152
+Hypertext Transfer Protocol
+    GET /storage/classified HTTP/1.1\r\n
+    Host: 192.168.0.150\r\n
+    Connection: close\r\n
+    Authorization: Basic YWRtaW46Y2F0aGVyaW5l\r\n
+    User-Agent: Mozilla/4.0 (Hydra)\r\n
+    \r\n
+    [Full request URI: http://192.168.0.150/storage/classified]
+    [HTTP request 1/1]
+    [Response in frame: 2]
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.000577442    192.168.0.150         192.168.0.142         HTTP     390    HTTP/1.1 200 OK 
+
+Frame 2: 390 bytes on wire (3120 bits), 390 bytes captured (3120 bits) on interface 0
+Linux cooked capture
+Internet Protocol Version 4, Src: 192.168.0.150, Dst: 192.168.0.142
+Transmission Control Protocol, Src Port: 80, Dst Port: 47392, Seq: 1, Ack: 153, Len: 322
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+    Server: nginx/1.14.0 (Ubuntu)\r\n
+    Date: Sun, 29 Mar 2020 17:40:52 GMT\r\n
+    Content-Type: application/octet-stream\r\n
+    Content-Length: 67\r\n
+    Last-Modified: Sun, 29 Mar 2020 17:02:18 GMT\r\n
+    Connection: close\r\n
+    ETag: "5e80d49a-43"\r\n
+    Accept-Ranges: bytes\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.000577442 seconds]
+    [Request in frame: 1]
+    [Request URI: http://192.168.0.150/storage/classified]
+    File Data: 67 bytes
+Data (67 bytes)
+
+0000  54 68 69 73 20 69 73 20 6e 6f 74 20 74 68 65 20   This is not the 
+0010  66 6c 61 67 2e 20 54 68 65 20 66 6c 61 67 20 66   flag. The flag f
+0020  6f 72 6d 61 74 20 69 73 20 43 54 46 53 47 7b 3c   ormat is CTFSG{<
+0030  61 64 6d 69 6e 73 5f 70 61 73 73 77 6f 72 64 3e   admins_password>
+0040  7d 2e 0a                                          }..

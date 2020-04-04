@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class JavaVeryMocha {
+   public static void main(String[] var0) {
+      int[] var1 = new int[]{116, 104, 105, 115, 32, 105, 115, 32, 110, 111, 116, 32, 116, 104, 101, 32, 102, 108, 97, 103};
+      System.out.print("[+] Enter Passphrase => ");
+      Scanner var2 = new Scanner(System.in);
+      String var3 = var2.nextLine();
+      if (var3.length() == var1.length) {
+         int var4 = 0;
+
+         for(int var5 = var1.length - 1; var5 >= 0; --var5) {
+            if (var3.charAt(var4++) != (char)var1[var5] + 1) {
+               System.exit(0);
+            }
+         }
+
+         System.out.print("The flag is CTFSG{" + var3 + "}");
+      }
+
+   }
+}
+    
