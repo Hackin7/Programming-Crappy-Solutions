@@ -3,7 +3,7 @@
 WEB
 151 SOLVES
 
-# Description
+## Description
 This challenge is very simple. Connect to the network service at challenges.csdc20t.ctf.sg:20000 and say I WANT FREE FLAG PLZ. We recommend using netcat to connect.
 
 # Solution
