@@ -19,8 +19,8 @@ int happiness(int s, int t){
     else if(H[s][t]!=-1){return H[s][t];}
     // Recursion
     else{
-        int match2 = happiness(s-1,t)-B;
-        int match3 = happiness(s,t-1)-B;
+        int match2 = happiness(s-1,t);
+        int match3 = happiness(s,t-1);
         //cout<<s<<","<<t<<endl;
         //printf("%d %d %d\n",match1,match2, match3);
         H[s][t] = max(match2, match3);
@@ -28,10 +28,10 @@ int happiness(int s, int t){
         int match1=happiness(s-1,t-1);
         if (S[s]==T[t]){
             match1+=V[T[t]];
+            H[s][t]=max(H[s][t],match1);
         }else{
-            match1=INT_MIN; //loss
+            match1+=0;//loss
         }
-        H[s][t]=max(H[s][t],match1);
     }
     return H[s][t];
 }
@@ -50,8 +50,8 @@ int main(){
         int reduction = (A + (m-n)*B);
         cout<< (V[1]*n + reduction);
     }
-    //Subtask 5: A == 0
-    else {
+    //Subtask 3: A == B == 0
+    else if (A==0&&B==0){
        //DP state
        memset(H,-1,sizeof(H));
        cout<<happiness(n-1,m-1);
@@ -85,9 +85,4 @@ int main(){
 1 2 3 4 5 6
 3 1 5 2 6 1 5 1 1 4
 1 2 3 4 5 6
-* 
-4 8 4 0 -3
-1 2 3 4
-3 1 2 1 1 4 1 1
-1 2 3 4
 */
