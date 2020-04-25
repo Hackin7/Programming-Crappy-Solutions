@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Apr 25 20:36:58 2020
+Invocation: foremost usb.img ls 
+Output directory: /tmp/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: usb.img
+Start: Sat Apr 25 20:36:58 2020
+Length: 128 MB (134217728 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00010242.pdf 	       1 MB 	    5243904 	 
+Finish: Sat Apr 25 20:37:03 2020
+
+1 FILES EXTRACTED
+	
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Apr 25 20:37:03 2020
