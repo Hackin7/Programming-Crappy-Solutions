@@ -49,7 +49,7 @@ checkFlag: ;;Looks like a c++ function to check the flag
         push    ebp
         mov     ebp, esp
         sub     esp, 64 ;64 bytes allocated to variables
-        ;;Let this be  A[0-7]: a char array
+        ;;Let this be  A[0-8]: a char array of length 9
         mov     DWORD PTR [ebp-13], 1264792680 ;4B633468
         mov     DWORD PTR [ebp-9], 1097691699 ;416D7233
         mov     BYTE PTR [ebp-5], 110 ;6E
@@ -80,10 +80,10 @@ checkFlag: ;;Looks like a c++ function to check the flag
         ;;;;;;Check array A[i];;;;;;;;;;;;;;;;;;;;;;
         lea     ecx, [ebp-13] ;Pointer
         mov     edx, DWORD PTR [ebp-4] ;Move the counter inside
-        add     edx, ecx ;Check A[0-7]
-        movzx   edx, BYTE PTR [edx] ;Get actual value?
+        add     edx, ecx ;Get A+i
+        movzx   edx, BYTE PTR [edx] ;Get actual value *(A+i) = A[i]?
         
-        add     edx, 5 ;;A[0-7] + 5
+        add     edx, 5 ;;A[i] + 5
         
         ;for (int i=0;i<=8;i++) if C[B[i]] == A[i]?
         cmp     al, dl  ;Compare eax and edx last 8 bits?

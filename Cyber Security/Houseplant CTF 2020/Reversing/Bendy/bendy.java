@@ -22,6 +22,12 @@ public class bendy
         if(input.length() != flag.length()){
             return false;
         }
+        if(!input.substring(0,2).equals("h0")){
+            return false;
+        }
+        if(input.charAt(7) != 'u'){
+            return false;
+        }
         for(i = 0; i < flag.length()-14; i++){
             theflag += (char)((int)(flag.charAt(i)) + (int)(input.charAt(i+8)));
         }
@@ -43,3 +49,4 @@ public class bendy
         return theflag.equals("ÄÑÓ¿ÂÒêáøz§è§ñy÷¦");
     }
 }
+ 

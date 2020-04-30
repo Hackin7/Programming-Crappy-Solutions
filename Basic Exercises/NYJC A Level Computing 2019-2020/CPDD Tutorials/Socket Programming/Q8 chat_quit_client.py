@@ -13,7 +13,7 @@ while True:
         data += chat_socket.recv(1024)
     
     ### Quit by Server#####################
-    if 'quit' in data.decode():
+    if 'quit\n' == data.decode():
         print("SERVER CLOSED CONNECTION")
         break
     #######################################
@@ -23,7 +23,7 @@ while True:
     chat_socket.sendall(data+b'\n')
     
     ### Quit by Client ####################
-    if 'quit' in data.decode():
+    if 'quit' == data.decode():
         print("CLIENT CLOSED CONNECTION")
         break
     #######################################
