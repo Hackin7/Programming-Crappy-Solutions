@@ -1,0 +1,2 @@
+GET \/myorders\.php\?orderID=\d* HTTP\/1\.1\nHost: www.sh0ppingbaba.com\nUser-Agent: Mozilla\/5.0 \(Windows NT 6.1; Win64; x64; rv:50.0\) Gecko\/20100101 Firefox\/50.0\nAccept-Encoding: gzip, deflate\nAccept: \*\/\*\nConnection: keep-alive\nContent-Type: application\/octet-stream\nAccept-Language: en-us\nContent-Length: \d*\n\n
+

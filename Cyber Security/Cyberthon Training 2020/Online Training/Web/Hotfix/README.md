@@ -30,7 +30,7 @@ Fun things researched upon (may be a sidetrack)
 Unicode Smuggling (Using `ʼ` instead of `'`) doesn't work
 
 By the way, sqlmap fails
-![sqlmap fail](sqlmap fail.png)
+![sqlmap_fail](sqlmap_fail.png)
 
 ## robots.txt
 After spending so much time trying to find vulnerabilities in the PHP and SQL, I decided to just try checking `robots.txt`

@@ -1,1 +1,0 @@
-i;main(){for(;+i-1e4;)printf("%d,",i);}

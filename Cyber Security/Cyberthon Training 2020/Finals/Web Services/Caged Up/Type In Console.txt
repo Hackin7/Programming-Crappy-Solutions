@@ -1,0 +1,14 @@
+escape_v.children = []
+
+newstuff = [];
+for (var i in escape_v.children){
+    if (escape_v.children[i].key!="guard_red"){
+        newstuff.append(escape_v.children[i]);
+    }
+}
+escape_v.children = newstuff;
+
+//only this line important
+escape_v.hash = []
+
+Cyberthon{client_side_javascript_cant_cage_me_up}

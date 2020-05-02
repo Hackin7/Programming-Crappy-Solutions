@@ -1,4 +1,4 @@
-#Free Flags
+# Free Flags
  100
 WEB
 151 SOLVES
@@ -16,5 +16,5 @@ I WANT FREE FLAG PLZ
 CTFSG{ASK&U-SHALL_RECIEVE_1a18d7}
 ```
 
-#Flag 
+# Flag 
 `CTFSG{ASK&U-SHALL_RECIEVE_1a18d7}`

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="cyberthon.cat" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="29"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/paws" android:allowBackup="false" android:supportsRtl="true" android:roundIcon="@drawable/paws" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="cyberthon.cat.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

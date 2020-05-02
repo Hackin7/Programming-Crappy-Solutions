@@ -13,7 +13,7 @@ flag.docx
 
 Use [dtrx](https://www.tecmint.com/dtrx-an-intelligent-archive-extraction-tar-zip-cpio-rpm-deb-rar-tool-for-linux/) to extract.
 
-##Alternative Solution
+## Alternative Solution
 
 You can use the `file` command to figure out it is a .bzip file and extract it
 
