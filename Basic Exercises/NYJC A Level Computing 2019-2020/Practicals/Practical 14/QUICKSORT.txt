@@ -1,41 +1,0 @@
-﻿FUNCTION QuickSort(Scores)   
-  QuickSortHelper(Scores, 0, LENGTH(Scores) - 1)
-  RETURN Scores  
-ENDFUNCTION
-
-FUNCTION QuickSortHelper(Scores, First, Last)   
-  IF First < Last 
-    THEN       
-      SplitPoint ← Partition(Scores, First, Last)       
-      QuickSortHelper(Scores, First, SplitPoint - 1)       
-      QuickSortHelper(Scores, SplitPoint + 1, Last)   
-  ENDIF
-  RETURN Scores  
-ENDFUNCTION
-
-FUNCTION Partition(Scores, First, Last)   
-  PivotValue ← Scores[First]   
-  LeftMark ← First + 1   
-  RightMark ← Last   
-  Done ← FALSE   
-  WHILE (Done = FALSE)       
-    WHILE LeftMark <= RightMark AND Scores[LeftMark] <= PivotValue           
-      LeftMark ← LeftMark + 1
-    ENDWHILE      
-    WHILE Scores[RightMark] >= PivotValue AND RightMark >= LeftMark
-      RightMark ← RightMark - 1    
-    ENDWHILE    
-    IF RightMark < LeftMark 
-      THEN
-        Done ← TRUE
-    ELSE
-      Temp ← Scores[LeftMark]
-      Scores[LeftMark] ← Scores[RightMark]
-      Scores[RightMark] ← Temp
-    ENDIF
-  ENDWHILE  
-
-  <swap Scores[First] with Scores[RightMark]>
-
-  RETURN RightMark
-ENDFUNCTION
