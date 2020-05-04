@@ -1,0 +1,14 @@
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+.expanded{
+    font-size:24px;
+    text-decoration: underline;
+}
