@@ -1,0 +1,121 @@
+<!--https://codepen.io/michaelsboost/pen/cnCAL-->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML5 Canvas Drawing Board</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	height: 100%;
+}
+
+#myCanvas {
+	cursor: crosshair;
+    position: fixed;
+}
+</style>
+
+</head>
+<body>
+	<button onclick="console.log(ctx.getImageData(0, 0, myCanvas.width, myCanvas.height));">data</button>
+	<canvas id="myCanvas">
+		Sorry, your browser does not support HTML5 canvas technology.
+	</canvas>
+	<hr/>
+	
+	
+	
+	<script>
+	var myCanvas = null;
+	var ctx = null;
+	
+	window.onload = function() {
+	myCanvas = document.getElementById("myCanvas");
+	ctx = myCanvas.getContext("2d");
+    
+    // Fill Window Width and Height
+    myCanvas.width = window.innerWidth;
+	myCanvas.height = window.innerHeight/2;
+	
+	// Set Background Color
+    ctx.fillStyle="#fff";
+    ctx.fillRect(0,0,myCanvas.width,myCanvas.height);
+	
+    // Mouse Event Handlers
+	if(myCanvas){
+		var isDown = false;
+		var canvasX, canvasY;
+		ctx.lineWidth = 5;
+		
+		myCanvas.addEventListener('mousedown',function(e){
+			isDown = true;
+			ctx.beginPath();
+			canvasX = e.pageX - myCanvas.offsetLeft;
+			canvasY = e.pageY - myCanvas.offsetTop;
+			ctx.moveTo(canvasX, canvasY);
+		});
+		myCanvas.addEventListener('mousemove',function(e){
+			if(isDown !== false) {
+				canvasX = e.pageX - myCanvas.offsetLeft;
+				canvasY = e.pageY - myCanvas.offsetTop;
+				ctx.lineTo(canvasX, canvasY);
+				ctx.strokeStyle = "#000";
+				ctx.stroke();
+			}
+		});
+		myCanvas.addEventListener('mouseup',function(e){
+			isDown = false;
+			ctx.closePath();
+		});
+	}
+	
+	// Touch Events Handlers
+	draw = {
+		started: false,
+		start: function(evt) {
+
+			ctx.beginPath();
+			ctx.moveTo(
+				evt.touches[0].pageX,
+				evt.touches[0].pageY
+			);
+
+			this.started = true;
+
+		},
+		move: function(evt) {
+
+			if (this.started) {
+				ctx.lineTo(
+					evt.touches[0].pageX,
+					evt.touches[0].pageY
+				);
+
+				ctx.strokeStyle = "#000";
+				ctx.lineWidth = 5;
+				ctx.stroke();
+			}
+
+		},
+		end: function(evt) {
+			this.started = false;
+		}
+	};
+	
+	// Touch Events
+	myCanvas.addEventListener('touchstart', draw.start, false);
+	myCanvas.addEventListener('touchend', draw.end, false);
+	myCanvas.addEventListener('touchmove', draw.move, false);
+	
+	// Disable Page Move
+	document.body.addEventListener('touchmove',function(evt){
+		evt.preventDefault();
+	},false);
+};
+	</script>
+</body>
+</html>
