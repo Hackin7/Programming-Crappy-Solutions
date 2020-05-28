@@ -11,7 +11,7 @@ Through this competition, students will gain a deeper understanding of real-life
 Due to Covid 19, the event was held online on 2/5/2020, 10am to 4.30pm. There also was a Youtube Livestream.
 
 I participated in a team as `nyjc-1`, with these people
-1. [Codekrodile]([https://github.com/Codekrodile](https://github.com/Codekrodile))
+1. [Codekrodile](https://github.com/Codekrodile)
 2. [bobjohnjones](https://github.com/bobjohnjones)
 3. [undefined-func](https://github.com/undefined-func)
 
