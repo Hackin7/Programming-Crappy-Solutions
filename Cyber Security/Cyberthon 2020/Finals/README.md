@@ -11,14 +11,15 @@ Through this competition, students will gain a deeper understanding of real-life
 Due to Covid 19, the event was held online on 2/5/2020, 10am to 4.30pm. There also was a Youtube Livestream.
 
 I participated in a team as `nyjc-1`, with these people
-1. [Codekrodile]([https://github.com/Codekrodile](https://github.com/Codekrodile))
+1. [Codekrodile](https://github.com/Codekrodile)
 2. [bobjohnjones](https://github.com/bobjohnjones)
 3. [undefined-func](https://github.com/undefined-func)
 
 During the competition, I basically only solved 2 tasks, 
-4. Network security: Baba Suppliers' Chat
+
+1. Network security: Baba Suppliers' Chat
 	- I solved it quite early into the thing, around 11am, taking 10min or so
-5. Web Services: Caged Up
+2. Web Services: Caged Up
 
 I tried to do several various challenges like Treasure Hunt, Meow, Loosen That Ratcher, but I was stuck and didn't know what to do. Also my Windows computer like just hung midway while extracting the VM (over 20 minutes to extract the 15GB VM).
 
