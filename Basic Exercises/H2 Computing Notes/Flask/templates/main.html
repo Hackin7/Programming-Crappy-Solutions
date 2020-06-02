@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>Flask Demo</title>
+</head>
+<body>
+	<h1>Flask Demo</h1>
+	
+	<h2>HTTP Requests and Routing</h2>
+	<ol>
+		<li><a href="{{url_for('simple')}}">Simple Routing</a></li>
+		<li><a href="{{url_for('simple_data', data=1.2)}}">Passing in Value as Path</a></li>
+		<li><a href="{{url_for('simple_integer', integer=1)}}">Passing in Value of <b>Specific Data Type</b> as Path</a></li>
+		<li><a href="{{url_for('func_name_paths')}}">Get Paths By Function name</a></li>
+	</ol>
+	
+	<h2>HTTP Responses and Status Code</h2>
+	<ol>
+		<li><a href="{{url_for('get_500')}}">Give Status Code 500</a></li>
+		<li><a href="{{url_for('header')}}">Modifying header to show <code>text/plain</code> </a></li>
+		<li><a href="{{url_for('redirect')}}">Redirect back here lol</a></li>
+	</ol>
+	
+	<h2>Templating and Rendering</h2>
+	<ol>
+		<li><a href="{{url_for('templating')}}">Templating sample</a></li>
+	</ol>
+	
+	<h2>Form</h2>
+	<h3>GET Request Form</h3>
+	<form method="GET" action="/form">
+		<input type="text" name="data">
+		<input type="submit">
+	</form>
+	
+	<h3>POST Request Form</h3>
+	<form method="POST" action="/form">
+		<input type="text" name="data">
+		<input type="submit">
+	</form>
+
+	<h3>Upload Photos</h3>
+	<form method="post" enctype="multipart/form-data" action="/upload">
+		<input type="file" name="file">
+		<input type="submit">
+	</form>
+	
+	<h3>Download Source Code</h3>
+	<a href="{{url_for('download')}}">Download app.py</a>
+</body>
+</html>

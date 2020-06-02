@@ -1,20 +1,21 @@
-import ___  # Importing cv2 library
-import _____ as np # Importing numpy library
+import cv2 # Importing cv2 library
+import numpy as np # Importing numpy library
+from time import sleep
 
-cap = cv2.VideoCapture(___) #Choose to capture laptopcam or external webcam
+cap = cv2.VideoCapture(0) #Choose to capture laptopcam or external webcam
 
-while ____: #continues forever
+while True: #continues forever
     retrieveval, frame = cap.read()
-    hsv_frame = cv2.cvtColor(______________) #convert BGR to HSV
+    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) #convert BGR to HSV
 
     #range for red color
-    ______________________________ #setting of lower boundaries
-    _______________________________#setting of higher boundaries
+    low_red = np.array([161,155,84]) #setting of lower boundaries
+    high_red = np.array([179,255,255])#setting of higher boundaries
 
-    red_mask = cv2.inRange(hsv_frame, _________, __________) #input lower and higher boundaries
+    red_mask = cv2.inRange(hsv_frame, low_red, high_red) #input lower and higher boundaries
 
     #finding the contours 
-    contours, retrieveval = cv2.findContours(red_mask, _________, ___________)
+    contours, retrieveval = cv2.findContours(red_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     '''RETR_EXTERNAL --> retrieves only the extreme outer contours, concentric circles
     only outermost circle is taken
@@ -41,26 +42,32 @@ while ____: #continues forever
     flavors of the Teh-Chin chain approximation algorithm. 
     
     '''
+
     #sorting of the contours in descending order
     #lambda + opencv sort function
-    contours = sorted(contours, key = lambda ____________, reverse=True)
+    contours = sorted(contours, key = lambda x:cv2.contourArea(x), reverse=True)
 
+    
 
     #if there are contours in the sorted array
-    if len(contours)>________:
+    if len(contours)>0:
 
         #getting the dimensions of the rectangle
-        (x,y,w,h) = cv2.boundingRect(___________) #get the largest contour
+        (x,y,w,h) = cv2.boundingRect(contours[0]) #get the largest contour
+        #print("X_mid:",x+w/2,"Y_mid:",y+h/2)
 
-        cv2.rectangle(frame,(x,y),(x+w,y+h), _________,2) #color of rectangle
+        #draw rectangle
+        cv2.rectangle(frame,(x,y),(x+w,y+h), (0,255,0),2) #color of rectangle
+
+        #cv2.line(frame, (int(x+w/2), 0), (int(x+w/2), 480), (0, 255, 0), 2)
+
 
     #Showing the frame and masks
     cv2.imshow("Tracking", frame)
     cv2.imshow("Mask over", red_mask)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF ==ord('q'):
         break
 
-
-___.release() #release resources
-cv2.________________ #get rid of all live windows
+cap.release() #release resources
+cv2.destroyAllWindows() #get rid of all live windows

@@ -1,3 +1,6 @@
+# The program given in the tutorial
+# NOT an answer
+
 import socket
 
 EOL = b'\r\n'

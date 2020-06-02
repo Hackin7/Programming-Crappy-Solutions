@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Jinja Template</title>
+	<!-- Getting static files -->
+	<link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"></link>
+</head>
+<body>
+	<h1>Jinja Templating</h1>
+	
+	<h2>Passing in Values</h2>
+	Values: {{value}}<br/>
+	Length: {{value|length}}<br/>
+	Safe HTML: {{safe_html|safe}}
+	
+	<h2>Jinja Statements</h2>
+	
+	<b>if-else statement</b>
+	Current Choice value: {{choice}} <br/>
+	{% if choice == 1 %}
+		<span>1st class honors that no one cares about</span>
+	{% elif choice == 2 %}
+		<span>2nd class honors that you feel bad because it isn't 1st</span>
+	{% else %}
+		<span>Useless choice value here</span>
+	{% endif%}
+	<br><br>
+	
+	<b>for-in statement</b>
+	Given Dictionary: {{dictionary}} <br/>
+	<table>
+	<tr><th>Key</th><th>Value</th></tr>
+	{% for key, value in dictionary.items() %}
+		<tr><td>{{key}}</td><td>{{value}}</td></tr>
+	{% endfor %}
+	</table>
+	
+</body>
+</html>
