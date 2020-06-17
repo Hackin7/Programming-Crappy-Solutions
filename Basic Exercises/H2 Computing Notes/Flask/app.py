@@ -67,9 +67,10 @@ def templating():
 @app.route('/form', methods=['GET','POST'])
 def form():
     if flask.request.method == "GET":
-        return f" The data is given in <code>flask.request.args</code> like this: {flask.request.args}"
+        return f" The data is given in <code>flask.request.args</code> like this: <code>{flask.request.args}</code>"
     elif flask.request.method == "POST":
-        return f"The data is given in <code>flask.request.form</code> like this: {flask.request.form}"
+        print(flask.request.form)
+        return f"The data is given in <code>flask.request.form</code> like this: <code>{flask.request.form}</code>"
 
 from werkzeug.utils import secure_filename
 import os
