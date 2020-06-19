@@ -12,7 +12,7 @@ NAMES = [
 def home():
     return 'Home'
 
-@app.route('/<int:month>')
+@app.route('/<int:month>/')
 def name_month(month):
     if month in range(1, 13):
         return 'Month {}: {}'.format(month, NAMES[month - 1])
