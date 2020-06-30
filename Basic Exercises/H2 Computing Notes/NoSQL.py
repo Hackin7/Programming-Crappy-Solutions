@@ -9,8 +9,6 @@ db_name = "database"
 coll_name = "collection"
 
 db = client.get_database(db_name) # Creates if doesn't exist
-
-
 coll = db.get_collection(coll_name)
 
 sample_data = [
@@ -170,15 +168,15 @@ https://docs.mongodb.com/manual/reference/operator/update-array/
 '''
 ### Delete items #######################################################
 print("#"*100)
-print("Deleting first item that matches query")
+print('Deleting first item that matches query {"number":3}')
 coll.delete_one({"number":3})
 nice_show_in_query()
 
-print("Deleting many items")
+print('Deleting many items with query {"document":{"$exists":True}}')
 coll.delete_many({"document":{"$exists":True}})
 nice_show_in_query()
 
-print("Deleting rest of table")
+print("Deleting rest of collection")
 db.drop_collection(coll_name)
 client.drop_database(db_name)
 
