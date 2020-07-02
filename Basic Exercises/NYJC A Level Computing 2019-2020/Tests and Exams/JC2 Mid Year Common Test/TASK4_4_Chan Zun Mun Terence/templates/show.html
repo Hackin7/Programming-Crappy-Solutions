@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<table>
+<tr><th>SerialNumber</th><th>Type</th></tr>
+{% for SerialNumber, Type in data %}
+<tr><td>{{SerialNumber}}</td><td>{{Type}}</td></tr>
+{% endfor %}
+</table>
+
+</body>
+
+</html>

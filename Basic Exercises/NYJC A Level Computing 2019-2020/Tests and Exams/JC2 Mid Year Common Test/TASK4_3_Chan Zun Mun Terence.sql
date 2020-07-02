@@ -1,0 +1,1 @@
+SELECT Device.SerialNumber, Device.Model, Device.Location, Monitor.DateCleaned FROM Monitor LEFT OUTER JOIN Device;
