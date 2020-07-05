@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemata.jklnet.org/Reko/v5">
+  <arch>x86-protected-32</arch>
+  <platform>win32</platform>
+  <input>
+    <filename>CheatMe.exe</filename>
+    <asmDir>CheatMe.reko</asmDir>
+    <srcDir>CheatMe.reko</srcDir>
+    <includeDir>CheatMe.reko</includeDir>
+    <resources>CheatMe.reko\resources</resources>
+    <user>
+      <processor />
+      <registerValues />
+    </user>
+  </input>
+</project>

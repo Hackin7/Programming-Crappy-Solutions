@@ -1,2 +1,0 @@
-.\npiet.exe abstract.png
-CYS{p3r5p3c71v3_m4773r5}

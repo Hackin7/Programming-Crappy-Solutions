@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	<meta name="description" content="Struts2 Showcase for Apache Struts Project">
+	<meta name="author" content="The Apache Software Foundation">
+
+	<title>Struts2 Showcase</title>
+
+	<link href="/struts2-showcase-2.3.14/styles/bootstrap.css" rel="stylesheet"
+	      type="text/css" media="all">
+	<link href="/struts2-showcase-2.3.14/styles/bootstrap-responsive.css" rel="stylesheet"
+	      type="text/css" media="all">
+	<link href="/struts2-showcase-2.3.14/styles/main.css" rel="stylesheet" type="text/css"
+	      media="all"/>
+
+	<script src="/struts2-showcase-2.3.14/js/jquery-1.8.2.min.js"></script>
+	<script src="/struts2-showcase-2.3.14/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.dropdown-toggle').dropdown();
+			var alerts = $('ul.alert').wrap('<div />');
+			alerts.prepend('<a class="close" data-dismiss="alert" href="#">&times;</a>');
+			alerts.alert();
+		});
+	</script>
+
+	<!-- Prettify -->
+	<link href="/struts2-showcase-2.3.14/styles/prettify.css" rel="stylesheet">
+	<script src="/struts2-showcase-2.3.14/js/prettify.js"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="/struts2-showcase-2.3.14/struts/utils.js" type="text/javascript"></script>
+</head>
+
+<body id="page-home" onload="prettyPrint();">
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a href="/struts2-showcase-2.3.14/showcase.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6" class="brand">Struts2 Showcase</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="/struts2-showcase-2.3.14/showcase.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6"><i class="icon-home"></i> Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuration<b
+								class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/struts2-showcase-2.3.14/actionchaining/actionChain1!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Action Chaining</a></li>
+							<li><a href="/struts2-showcase-2.3.14/config-browser/index.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Config Browser</a></li>
+							<li><a href="/struts2-showcase-2.3.14/conversion/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Conversion</a></li>
+							<li><a href="/struts2-showcase-2.3.14/person/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Person Manager ( by Conventions )</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Non UI Tags</a>
+								<ul class="dropdown-menu">
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/actionTag/showActionTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Action Tag</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/date.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Date Tag</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/debugTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Debug Tag</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/iteratorGeneratorTag/showGeneratorTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Iterator Generator Tag</a></li>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/non-ui/appendIteratorTag/showAppendTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Append Iterator Tag</a>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/non-ui/mergeIteratorTag/showMergeTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Merge Iterator Demo</a>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/non-ui/subsetIteratorTag/showSubsetTagDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Subset Tag</a>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/actionPrefix/actionPrefixExampleUsingFreemarker.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Action Prefix Example (Freemarker)</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/ifTag/testIfTagJsp.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">If Tag (JSP)</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/non-ui/ifTag/testIfTagFreemarker.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">If Tag (Freemarker)</a></li>
+								</ul>
+
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">UI Tags</a>
+								<ul class="dropdown-menu">
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/example!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">UI Example</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/exampleVelocity!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">UI Example (Velocity)</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/lotsOfOptiontransferselect!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Option Transfer Select UI Example</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/moreSelects!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">More Select Box UI Examples</a></li>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/ui/treeExampleStatic.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Tree Example (static)</a>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/ui/showDynamicTreeAction.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Tree Example (dynamic)</a>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/ui/showDynamicAjaxTreeAction.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Tree Example (dynamic ajax loading)</a>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/tags/ui/componentTagExample.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Component Tag Example</a>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/actionTagExample!input.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Action Tag Example</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/datepicker/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">DateTime picker tag - Pick a date</a></li>
+									<li><a href="/struts2-showcase-2.3.14/tags/ui/timepicker/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">DateTime picker tag - Pick a time</a></li>
+									
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/struts2-showcase-2.3.14/filedownload/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">File Download</a></li>
+							<li class="dropdown-submenu">
+								<a href="#">File Upload</a>
+								<ul class="dropdown-menu">
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/fileupload/upload.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Single File Upload</a>
+									</li>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/fileupload/multipleUploadUsingList.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Multiple File Upload (List)</a>
+
+									</li>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/fileupload/multipleUploadUsingArray.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Multiple File Upload (Array)</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Hangman</a>
+								<ul class="dropdown-menu">
+									<li><a href="/struts2-showcase-2.3.14/hangman/hangmanNonAjax.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Hangman (Non Ajax)</a></li>
+									<li><a href="/struts2-showcase-2.3.14/hangman/hangmanAjax.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Hangman (Ajax - Experimental)</a></li>
+								</ul>
+							</li>
+							<li><a href="/struts2-showcase-2.3.14/person/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Person Manager</a></li>
+							<li><a href="/struts2-showcase-2.3.14/empmanager/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">CRUD</a></li>
+							<li><a href="/struts2-showcase-2.3.14/wait/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Execute &amp; Wait</a></li>
+							<li><a href="/struts2-showcase-2.3.14/token/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Token</a></li>
+							<li><a href="/struts2-showcase-2.3.14/validation/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Validation</a></li>
+							<li><a href="/struts2-showcase-2.3.14/modelDriven/modelDriven.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Model Driven</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Integration<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Freemarker</a>
+								<ul class="dropdown-menu">
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/freemarker/customFreemarkerManagerDemo.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Demo of usage of a Custom Freemarker Manager</a>
+									</li>
+									<li>
+										
+										<a href="/struts2-showcase-2.3.14/freemarker/standardTags.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Demo of Standard Struts Freemarker Tags</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="/struts2-showcase-2.3.14/jsf/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">JavaServer Faces</a></li>
+							<li><a href="/struts2-showcase-2.3.14/integration/editGangster;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Struts 1 Integration</a></li>
+							<li><a href="/struts2-showcase-2.3.14/tiles/index.action;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Tiles</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">AJAX<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/struts2-showcase-2.3.14/ajax/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Ajax plugin</a></li>
+							<li><a href="/struts2-showcase-2.3.14/chat/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Ajax Chat</a></li>
+						</ul>
+					</li>
+					<li><a href="/struts2-showcase-2.3.14/interactive/index.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Interactive Demo</a></li>
+				</ul>
+
+				<ul class="nav pull-right">
+					<li class="dropdown last">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-flag"></i> Help<b
+								class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/struts2-showcase-2.3.14/help.jsp;jsessionid=5E5F1A7BCC1A3914550E51BA00EEBED6">Help</a></li>
+							<li><a href="http://struts.apache.org/mail.html"><i class="icon-share"></i> User Mailing
+								List</a></li>
+							<li><a href="http://struts.apache.org/2.x/"><i class="icon-share"></i> Struts2 Website</a>
+							</li>
+							<li><a href="http://struts.apache.org/2.x/docs/home.html"><i class="icon-share"></i>
+								Documentation</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+
+				<div class="hero-unit">
+					<h1>Welcome!</h1>
+					<p>The Struts Showcase demonstrates a variety of use cases and tag usages. Essentially, the application exercises various framework features in isolation. The Showcase is not meant as a "best practices" example.</p>
+					<p>For more "by example" solutions, see the <a class="btn btn-primary btn-large">Struts Cookbook &raquo;</a> pages.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+<hr>
+
+<footer id="footer" class="footer">
+	<div>
+		<p style="text-align: center;">
+			<a href="/struts2-showcase-2.3.14/viewSource.action?config=&className=com.opensymphony.xwork2.ActionSupport&page=//showcase.jsp" class="btn btn-info">View Sources</a>
+		</p>
+	</div>
+
+
+	<div class="pull-right">
+		<div>
+			
+2020/06/25 10:13:29
+
+		</div>
+		<!-- end branding -->
+
+		<div>
+			<a href="http://struts.apache.org/2.x/">
+				<img src="/struts2-showcase-2.3.14/img/struts-power.gif"
+				     alt="Powered by Struts"/>
+			</a>
+		</div>
+		<!-- end search -->
+	</div>
+
+	<div class="pull-left">
+		Copyright &copy; 2003-2020
+		<a href="http://www.apache.org">
+			The Apache Software Foundation.
+		</a>
+	</div>
+</footer>
+</body>
+</html>
