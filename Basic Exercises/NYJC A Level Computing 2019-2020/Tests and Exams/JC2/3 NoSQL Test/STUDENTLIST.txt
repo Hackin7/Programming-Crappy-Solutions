@@ -1,0 +1,12 @@
+20S01,1,Alan
+20S01,2,Bala
+20S01,3,Charlie
+20S01,4,Da Ming
+20S01,5,Elaine
+20S02,1,Faris
+20S02,2,Ginny
+20S02,3,Haresh
+20S02,4,Ika
+20S02,5,Janet
+20S02,6,Kalai
+20S02,7,Lai Ying
