@@ -12,7 +12,7 @@ I participated and led the team `AndWhyHackers` (get it? because NY for Nanyang?
 1. [Codekrodile](https://github.com/Codekrodile)
 2. [undefined-func](https://github.com/undefined-func)
 
-I did a good number of challeges which were interesting. The challenges were quite interesting. A few were very beginner friendly like `gdbtutor` and ``
+I did a good number of challeges which were interesting. The challenges were quite interesting. A few were very beginner friendly and nice like `gdbtutor` and `BofSchool`
 
 I tried to do several various Reverse Engineering challenges , but I was stuck and didn't know what to do. 
 
