@@ -6,7 +6,7 @@ https://sis.smu.edu.sg/newsletter/35096
 
 ## Event Details
 
-Due to Covid 19, the event was held online on 2/8/2020, 9.10am to 5.10pm. There also was a Zoom Livestream of the scoreboard (Good to know no annoying hidden scoreboards near the end of the event).
+Due to Covid 19, the event was held online on 2/8/2020, 9.10am to 5.10pm, on https://play.whitehacks.ctf.sg. There also was a Zoom Livestream of the scoreboard (Good to know no annoying hidden scoreboards near the end of the event).
 
 I participated and led the team `AndWhyHackers` (get it? because NY for Nanyang?), with these people
 1. [Codekrodile](https://github.com/Codekrodile)
