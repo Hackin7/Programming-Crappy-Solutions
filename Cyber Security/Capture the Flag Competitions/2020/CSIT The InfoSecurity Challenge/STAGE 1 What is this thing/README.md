@@ -39,9 +39,9 @@ Use fcrackzip to bruteforce the password of the zip file and extract out `temp.m
 
 Make a python program that can identify if a file is `gzip`/`xz`/`bzip`/`zlib` compressed, Base64,  a regular hexdump, a list of integers. Then either extract it out (for `gzip`/`xz`/`bzip`/`zlib`), convert into raw data (Base64, hexdump), or convert each integer in the list of integers to a character and write all of the characters to a raw file.
 
-Repeat this process recursively on `temp.mess` and you will get a 
+Run this program recursively on `temp.mess` and you will get the flag 
 
-# My Thought Process (Because It's way too long to read through) 
+# My Thought Process 
 
 ## Cracking Zip
 

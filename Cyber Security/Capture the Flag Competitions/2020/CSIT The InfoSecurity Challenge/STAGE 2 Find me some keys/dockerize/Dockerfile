@@ -23,5 +23,12 @@ RUN apt-get install -y ca-certificates
 COPY ./encrypted /root
 COPY ./anorocware /root
 
+# Edited this section for easier debugging
+RUN apt-get install -y build-essential
+RUN apt-get install -y ltrace
+RUN apt-get install -y strace
+#CMD /bin/bash
+COPY ./anorocware-unpacked /root
+
 WORKDIR /root
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
