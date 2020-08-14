@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Form</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<head>
+	<body>
+		<table>
+			<tr>
+				<th>School</th><th>Name</th><th>Department</th><th>Contact</th><th>Address</th>
+			</tr>
+			{% for record in data %}
+				<tr>
+					<td>{{record[0]}}</td><td>{{record[1]}}</td><td>{{record[2]}}</td><td>{{record[3]}}</td><td>{{record[4]}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+table,th,td{
+	border:0.5px solid gainsboro;
+	border-collapse: collapse;
+	font-weight: normal;
+	font-family: Arial;
+}

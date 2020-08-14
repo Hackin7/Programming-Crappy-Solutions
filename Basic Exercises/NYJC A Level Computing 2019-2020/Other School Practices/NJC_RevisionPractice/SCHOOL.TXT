@@ -1,0 +1,4 @@
+SchoolCode, Name, Address
+7001,NTU High School, 12 Nanyang Ave
+7010,Queens High School, 2 Queenstown
+8005,Lakeshore Institute, 67 Lake Rd
