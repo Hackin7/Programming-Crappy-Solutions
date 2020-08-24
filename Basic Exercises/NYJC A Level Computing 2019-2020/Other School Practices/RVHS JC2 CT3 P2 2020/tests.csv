@@ -1,0 +1,25 @@
+TestID,Subject,Level,MaxScore,Year,Term,Percentage
+1,Mathematics,JC1,20,2020,1,10
+2,Mathematics,JC1,50,2020,2,20
+3,Mathematics,JC1,80,2020,3,25
+4,Mathematics,JC1,50,2020,4,55
+5,Computing,JC1,30,2020,1,15
+6,Computing,JC1,60,2020,2,10
+7,Computing,JC1,120,2020,3,25
+8,Computing,JC1,150,2020,4,55
+9,General Paper,JC1,20,2020,1,10
+10,General Paper,JC1,20,2020,2,20
+11,General Paper,JC1,120,2020,3,20
+12,General Paper,JC1,180,2020,4,55
+13,Chemistry,JC1,30,2020,1,10
+14,Chemistry,JC1,50,2020,2,20
+15,Chemistry,JC1,100,2020,3,20
+16,Chemistry,JC1,50,2020,4,55
+17,Physics,JC1,20,2020,1,10
+18,Physics,JC1,40,2020,2,20
+19,Physics,JC1,80,2020,3,20
+20,Physics,JC1,50,2020,4,55
+21,Economics,JC1,30,2020,1,10
+22,Economics,JC1,40,2020,2,20
+23,Economics,JC1,80,2020,3,20
+24,Economics,JC1,150,2020,4,50

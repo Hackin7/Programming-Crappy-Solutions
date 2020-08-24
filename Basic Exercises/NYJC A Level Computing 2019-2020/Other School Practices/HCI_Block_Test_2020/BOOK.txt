@@ -1,0 +1,5 @@
+{"book_id": 234, "title": "Father Night", "author": "Kurt", "publisher": "APress", "page_count": 433, "year": "2018"}
+{"book_id": 134, "title": "Mother Night", "author": ["Kurt", "Dan"], "publisher": "APress", "year": "2015"}
+{"book_id": 334, "title": "Programming C## 6.0", "author": ["Andrew", "Dan"], "page_count": 300, "year": "2000"}
+{"book_id": 534, "title": "Introduction to Python", "publisher": "MPH", "year": "1999"}
+{"book_id": 434, "title": "Travel with Dogs", "author": "Andy", "publisher": "APress", "page_count": 100, "year": "2017"}

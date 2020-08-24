@@ -1,0 +1,120 @@
+##id, county, region, EX, EW, CR, EN, VU, NT, LRCD, DD, LC
+1,Algeria,North Africa,2,1,17,38,72,58,0,139,921
+2,Egypt,North Africa,1,1,14,28,122,136,2,180,1729
+3,Libya,North Africa,0,1,10,16,41,28,0,68,684
+4,Morocco,North Africa,2,0,29,59,89,81,0,182,1440
+5,Tunisia,North Africa,11,0,15,24,56,48,0,99,846
+6,Western Sahara,North Africa,0,1,6,18,34,32,0,108,921
+7,Angola,Sub-Saharan Africa,0,0,15,36,77,61,0,235,2498
+8,Benin,Sub-Saharan Africa,0,0,15,19,51,49,0,111,1689
+9,Botswana,Sub-Saharan Africa,0,0,4,7,19,29,0,10,1031
+10,Burkina Faso,Sub-Saharan Africa,0,1,7,6,18,22,0,3,790
+11,Burundi,Sub-Saharan Africa,0,0,6,15,33,39,0,36,1063
+12,Cabo Verde,Sub-Saharan Africa,1,0,9,21,38,31,0,99,897
+13,Cameroon,Sub-Saharan Africa,0,0,64,107,127,82,0,214,2640
+14,Central African Republic,Sub-Saharan Africa,0,0,9,9,26,27,0,48,1379
+15,Chad,Sub-Saharan Africa,0,1,11,5,26,21,0,12,837
+16,Comoros,Sub-Saharan Africa,0,0,7,27,84,109,0,80,1331
+17,Congo,Sub-Saharan Africa,0,0,10,22,67,46,0,151,2011
+18,Congo The Democratic Republic of the Congo,Sub-Saharan Africa,0,0,31,75,151,93,0,434,3599
+19,Côte d'Ivoire,Sub-Saharan Africa,0,0,20,38,89,91,0,145,2010
+20,Djibouti,Sub-Saharan Africa,0,0,11,14,82,124,0,111,1444
+21,Equatorial Guinea,Sub-Saharan Africa,0,0,15,30,53,41,0,117,1589
+22,Eritrea,Sub-Saharan Africa,0,0,16,21,100,138,0,117,1588
+23,Eswatini,Sub-Saharan Africa,0,0,4,6,18,22,0,6,793
+24,Ethiopia,Sub-Saharan Africa,0,0,17,38,61,45,0,63,1364
+25,Gabon,Sub-Saharan Africa,0,0,12,33,69,47,0,172,2046
+26,Gambia,Sub-Saharan Africa,0,0,15,16,49,46,0,115,1512
+27,Ghana,Sub-Saharan Africa,0,0,22,28,83,78,0,140,2099
+28,Guinea,Sub-Saharan Africa,0,0,20,57,99,88,0,164,2001
+29,Guinea-Bissau,Sub-Saharan Africa,0,0,12,18,52,49,0,116,1500
+30,Kenya,Sub-Saharan Africa,2,0,52,63,157,184,2,248,3277
+31,Lesotho,Sub-Saharan Africa,0,0,0,6,9,19,0,3,408
+32,Liberia,Sub-Saharan Africa,0,0,20,42,70,79,0,134,1764
+33,Madagascar,Sub-Saharan Africa,13,0,138,309,304,276,2,424,2344
+34,Malawi,Sub-Saharan Africa,1,0,28,25,35,65,0,58,1472
+35,Mali,Sub-Saharan Africa,0,1,6,6,25,24,0,8,964
+36,Mauritania,Sub-Saharan Africa,0,1,14,22,58,50,0,127,1429
+37,Mauritius,Sub-Saharan Africa,44,0,18,41,121,116,2,141,1467
+38,Mayotte,Sub-Saharan Africa,5,0,2,16,80,108,0,62,1197
+39,Mozambique,Sub-Saharan Africa,1,0,22,52,144,186,2,231,3200
+40,Namibia,Sub-Saharan Africa,1,0,9,26,54,48,0,109,1764
+41,Niger,Sub-Saharan Africa,0,1,6,5,22,22,0,5,724
+42,Nigeria,Sub-Saharan Africa,0,1,24,42,103,76,0,153,2428
+43,Réunion,Sub-Saharan Africa,20,0,10,24,90,101,0,96,1286
+44,Rwanda,Sub-Saharan Africa,1,0,11,13,32,33,0,19,1005
+45,Saint Helena Ascension and Tristan da Cunha,Sub-Saharan Africa,28,0,39,52,37,13,0,56,595
+46,Sao Tome and Principe,Sub-Saharan Africa,0,0,9,19,31,17,0,101,737
+47,Senegal,Sub-Saharan Africa,0,1,17,31,74,63,0,158,1838
+48,Seychelles,Sub-Saharan Africa,20,0,87,154,148,123,2,115,1605
+49,Sierra Leone,Sub-Saharan Africa,0,0,16,36,67,75,0,147,1820
+50,Somalia,Sub-Saharan Africa,0,0,15,26,105,145,0,188,2270
+51,South Africa,Sub-Saharan Africa,6,0,70,149,224,188,2,351,3511
+52,South Sudan,Sub-Saharan Africa,0,0,6,13,24,21,0,22,1103
+53,Sudan,Sub-Saharan Africa,0,1,18,23,98,132,0,134,2123
+54,Tanzania United Republic of,Sub-Saharan Africa,2,1,127,148,258,222,0,353,3871
+55,Togo,Sub-Saharan Africa,0,0,17,13,51,46,0,110,1736
+56,Uganda,Sub-Saharan Africa,0,0,49,35,75,58,0,125,1793
+57,Zambia,Sub-Saharan Africa,0,0,10,23,42,42,0,71,1764
+58,Zimbabwe,Sub-Saharan Africa,0,0,9,13,29,33,0,26,1307
+59,Antarctica,Antarctic,0,0,0,1,5,6,0,37,158
+60,Bouvet Island,Antarctic,0,0,0,0,2,0,0,3,94
+61,French Southern Territories,Antarctic,1,0,3,10,15,8,0,53,960
+62,Heard Island and McDonald Islands,Antarctic,0,0,0,4,8,2,0,8,121
+63,China,East Asia,4,1,89,161,285,243,1,1085,4232
+64,Hong Kong,East Asia,0,0,12,23,37,30,1,96,922
+65,Japan,East Asia,13,1,40,127,238,263,3,545,3324
+66,Korea Democratic People's Republic of Congo,East Asia,1,0,7,19,43,37,0,89,699
+67,Korea Republic of,East Asia,1,0,11,32,55,48,0,127,1225
+68,Macao,East Asia,0,0,5,10,11,5,0,28,389
+69,Mongolia,East Asia,0,0,5,11,24,29,0,7,522
+70,Taiwan Province of China,East Asia,0,0,19,53,201,211,2,340,2955
+71,Belarus,North Asia,0,0,2,2,21,39,0,8,467
+72,Moldova,North Asia,1,0,5,4,22,35,0,6,438
+73,Russian Federation,North Asia,3,1,26,48,105,115,0,226,1649
+74,Ukraine,North Asia,2,0,11,25,55,68,0,76,872
+75,Bangladesh,South & Southeast Asia,0,1,29,42,69,79,0,106,1604
+76,Bhutan,South & Southeast Asia,0,0,7,15,34,41,0,6,709
+77,British Indian Ocean Territory,South & Southeast Asia,0,0,3,12,75,104,2,48,1055
+78,Brunei Darussalam,South & Southeast Asia,0,0,13,29,73,126,0,84,1549
+79,Cambodia,South & Southeast Asia,0,0,33,51,155,170,0,189,2135
+80,Disputed Territory,South & Southeast Asia,0,0,1,3,9,3,0,33,1072
+81,India,South & Southeast Asia,0,0,90,212,386,327,2,870,4291
+82,Indonesia,South & Southeast Asia,3,0,152,270,605,607,4,1370,6005
+83,Lao People's Democratic Republic,South & Southeast Asia,1,0,33,52,102,94,0,223,1524
+84,Malaysia,South & Southeast Asia,1,0,91,158,416,424,3,497,4047
+85,Maldives,South & Southeast Asia,0,0,6,16,58,92,2,75,1337
+86,Myanmar,South & Southeast Asia,0,0,38,71,168,262,3,437,3209
+87,Nepal,South & Southeast Asia,0,0,13,23,53,67,0,65,1270
+88,Philippines,South & Southeast Asia,0,0,58,164,394,343,5,609,3618
+89,Singapore,South & Southeast Asia,1,0,21,38,201,230,3,155,1830
+90,Sri Lanka,South & Southeast Asia,20,0,81,120,142,174,2,174,2021
+91,Thailand,South & Southeast Asia,2,0,57,104,331,367,2,538,3941
+92,Timor-Leste,South & Southeast Asia,0,0,8,13,15,34,0,58,1377
+93,Viet Nam,South & Southeast Asia,1,0,70,136,272,253,2,652,3356
+94,Afghanistan,West & Central Asia,0,0,4,8,23,27,0,17,573
+95,Armenia,West & Central Asia,0,0,6,9,28,38,0,16,462
+96,Azerbaijan,West & Central Asia,0,1,13,10,33,41,0,41,562
+97,Bahrain,West & Central Asia,0,0,10,9,28,53,0,29,633
+98,Cyprus,West & Central Asia,0,0,9,19,32,38,0,64,651
+99,Georgia,West & Central Asia,0,0,7,10,40,46,0,21,593
+100,Iran Islamic Republic of,West & Central Asia,0,1,23,35,91,100,0,153,1664
+101,Iraq,West & Central Asia,0,0,12,14,50,69,0,42,925
+102,Israel,West & Central Asia,3,0,22,40,117,136,0,150,1575
+103,Jordan,West & Central Asia,0,0,4,23,86,117,0,93,1233
+104,Kazakhstan,West & Central Asia,0,1,14,13,39,38,0,55,697
+105,Kuwait,West & Central Asia,1,0,8,12,37,56,0,34,742
+106,Kyrgyzstan,West & Central Asia,0,0,1,7,22,24,0,12,422
+107,Lebanon,West & Central Asia,0,0,8,25,47,41,0,69,718
+108,Oman,West & Central Asia,0,0,12,28,66,92,0,126,1556
+109,Pakistan,West & Central Asia,0,0,20,38,84,97,0,92,1631
+110,Palestine State of,West & Central Asia,0,0,3,11,15,23,0,20,361
+111,Qatar,West & Central Asia,0,0,11,7,32,55,0,23,656
+112,Saudi Arabia,West & Central Asia,1,0,13,27,100,141,2,149,1572
+113,Syrian Arab Republic,West & Central Asia,1,0,17,34,64,52,0,88,847
+114,Tajikistan,West & Central Asia,0,0,3,7,25,20,0,21,429
+115,Turkey,West & Central Asia,4,0,68,104,125,104,0,191,1284
+116,Turkmenistan,West & Central Asia,0,1,11,12,32,28,0,38,550
+117,United Arab Emirates,West & Central Asia,0,0,10,19,40,59,0,56,1055
+118,Uzbekistan,West & Central Asia,0,0,9,8,29,27,0,20,473
+119,Yemen,West & Central Asia,2,0,11,28,111,154,0,183,1881
