@@ -54,7 +54,9 @@ For `GovTech SecTech (1/6) - LFI`:
 
 ## Other's Writeups
 Obviously I'm not very good at cybersecurity, so check out other write ups for the challenges!
-1. https://github.com/IRS-Cybersec/ctfdump/blob/master/Whitehacks%202020/Crypto/Whos%20My%20Waifu/whos_my_waifu.md
-2. https://github.com/IRS-Cybersec/ctfdump/blob/master/Whitehacks%202020/web/Baby0Day/README.md
+1. https://github.com/IRS-Cybersec/ctfdump/tree/master/Whitehacks%202020
+2. https://github.com/PotatoStealer/Archives/tree/master/WhiteHacks2020
+3. https://github.com/BunchOfBytes/CTF-Writeups/tree/master/Whitehacks2020
+4. https://github.com/jadenong/whitehacks20
 
 Alternatively, if you actually participated in the competition, check out the discord server for writeups under `#writeups`
