@@ -1,0 +1,1 @@
+SELECT COUNT(Race) FROM Registration INNER JOIN Cultural ON Registration.StudentID == Cultural.StudentID;

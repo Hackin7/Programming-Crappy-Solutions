@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	
+	<body>
+		<form action='/submit' method='post'>
+			<table>
+				<tr><td>StudentID:</td><td><input type='text' name='studentid'></td><tr>
+				<tr><td>Type ('A','C' or 'S'):</td><td><input type='text' name='type'></td></tr>
+				<tr><td>Venue</td><td><input type='text' name='venue'></td></tr>
+				<tr><td>Session</td><td><input type='text' name='session'></td></tr>
+			</table>
+			<div>Fill in the extra detail(s) for the chosen type of activity:</div>
+			
+			<table>
+				<tr>
+					<td><b>Arts</b><br>Performance(True) or Visual Arts (False): </td>
+					<td><input type='text' name='performance'></td>
+				</tr>
+				<tr>
+					<td><b>Cultural</b><br>Race: </td>
+					<td><input type='text' name='race'></td>
+				</tr>
+				<tr>
+					<td><b>Sports</b><br>Contact (C or NC): </td>
+					<td>
+						<input type='text' name='contact'>
+						<input type='submit' name='submit' value='Generate Report'>
+					</td>
+				</tr>
+				<tr>
+					<td>Cost</td>
+					<td>
+						<input type='text' name='cost'>
+						<input type='submit' name='submit' value='Submit'>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

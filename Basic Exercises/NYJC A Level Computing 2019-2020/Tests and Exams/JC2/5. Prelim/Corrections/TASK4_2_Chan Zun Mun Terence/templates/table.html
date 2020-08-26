@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Report</title>
+	</head>
+	<body>
+		<h1>Registrations for Morning Session</h1>
+		<table>
+			<tr>
+				<th>StudentID</th>
+				<th>Type</th>
+			</tr>
+			{% for record in data %}
+			<tr>
+				{% for value in record %}
+				<td>{{value}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
