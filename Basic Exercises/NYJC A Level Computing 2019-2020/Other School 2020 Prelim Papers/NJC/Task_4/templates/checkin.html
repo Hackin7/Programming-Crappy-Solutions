@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div style="text-align:center"><b>{{locationid}}</b></div>
+		<form method="GET" action="/checkin/{{locationid}}">
+			<table>
+				<tr>
+					<th>Name</th>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<th>NRIC</th>
+					<td><input type="text" name="nric"></td>
+				</tr>
+				<tr>
+					<th>Contact Number</th>
+					<td><input type="text" name="contact-no"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Check In"></td>
+					<td><input type="submit" value="Cancel"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
