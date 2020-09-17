@@ -1,0 +1,10 @@
+L01,Banana Walnut Loaf,North,4.00,400
+L02,Five Grain Toast,North,5.00,400
+L03,Raisin Loaf,South,4.50,350
+L04,Banana Chocolate,South,4.00,400
+L05,Cranberry Loaf,North,4.00,350
+L06,Matcha Red Bean Loaf,West,5.20,350
+L07,Prune Loaf,West,7.50,350
+L08,Raisin Walnut Loaf,East,5.80,350
+L09,Wholemeal Toast,East,5.20,300
+L10,White Toast,North,3.10,300

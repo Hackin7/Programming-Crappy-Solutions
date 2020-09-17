@@ -1,0 +1,10 @@
+B01,Ham Buns,North,1.20,6
+B02,Hot Dog Buns,North,1.20,6
+B03,Cheese Sugar Buns,East,1.20,6
+B04,Coffee Buns,East,1.80,6
+B05,Custard Buns,West,1.50,6
+B06,Earl Grey Cranberry Buns,West,1.80,4
+B07,Garlic Bread,West,1.20,4
+B08,Hot Cross Buns,South,5.00,6
+B09,Matcha Red Bean Buns,South,1.80,4
+B10,Oreo Cheese Buns,South,1.50,4

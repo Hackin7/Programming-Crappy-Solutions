@@ -1,0 +1,7 @@
+C01,Banana Cake,South,1.80,6,Circle
+C02,American Cheesecake,North,30.00,6,Circle
+C03,Red Velvet Swiss Roll,East,9.00,4,Roll
+C04,Classic Carrot Cake,West,48.00,8,Circle
+C05,Strawberry Shortcake,North,48.00,8,Square
+C06,Black Forest,East,44.00,8,Circle
+C08,Triple Chocolate Cake,South,46.00,8,Square
