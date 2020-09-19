@@ -1,0 +1,25 @@
+    else
+      // the new item is not at the self.Start of the list . . .
+      Previous = 0
+      Current = self.Start
+      Found = False
+
+      REPEAT
+        IF NewItem <= self.Node[Current].DataValue:
+          
+            self.Node[Previous].PointerValue = self.NextFree
+            self.Node[self.NextFree].PointerValue = Current
+            self.NextFree = Temp
+            Found = True
+          else:
+            // move on to the next self.Node
+            Previous = Current
+            Current = self.Node[Current].PointerValue
+        
+      UNTIL Found = True OR Current = 0
+
+      if Current == 0
+        
+          self.Node[Previous].PointerValue = self.NextFree
+          self.Node[self.NextFree].PointerValue = 0
+          self.NextFree = Temp
