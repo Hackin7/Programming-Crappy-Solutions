@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Main</h1>
+        <form method="POST" action="{{url_for('form')}}" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>TeacherUsername</td>
+                    <td><input type="text" name="TeacherUsername"></td>
+                </tr>
+                <tr>
+                    <td>TeacherPassword</td>
+                    <td><input type="text" name="TeacherPassword"></td>
+                </tr>
+                <tr>
+                    <td>StudentIndex</td>
+                    <td><input type="text" name="StudentIndex"></td>
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td><input type="text" name="Class"></td>
+                </tr>
+                <tr>
+                    <td>PresentationDate</td>
+                    <td><input type="text" name="PresentationDate"></td>
+                </tr>
+                <tr>
+                    <td>Marks</td>
+                    <td><input type="text" name="Marks"></td>
+                </tr>
+            </table>
+            
+            <input type="submit" name='submit' value="Insert">
+            <!--<input type="submit" name='submit' value="View For Student">-->
+            <input type="submit" name='submit' value="Show Total Marks for your classes">
+            
+        </form>
+    </body>
+</html>

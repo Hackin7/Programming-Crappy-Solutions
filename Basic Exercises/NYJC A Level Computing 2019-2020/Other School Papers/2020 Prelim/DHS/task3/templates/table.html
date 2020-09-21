@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                {% for header in headers %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for record in data %}
+            <tr>
+                {% for header in record %}
+                <td>{{header}}</td>
+                {% endfor %}
+            {% endfor %}
+        </table>
+            
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Total</th>
+            </tr>
+            {% for class in data %}
+            <tr>
+                <td>{{class[0]}}</td>
+                <td>{{class[2]}}</td>
+            {% endfor %}
+        </table>
+    </body>
+</html>
