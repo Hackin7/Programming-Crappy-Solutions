@@ -1,0 +1,7 @@
+2,Sheldon,12-12-12,True,209
+5,Leonard,16-12-12,True,305
+6,Howard,17-12-12,True,107
+8,Raj,2-1-13,False,96
+9,Amy,3-1-13,True,156
+12,Stuart,25-2-13,False,1
+13,Leslie,27-2-13,True,95

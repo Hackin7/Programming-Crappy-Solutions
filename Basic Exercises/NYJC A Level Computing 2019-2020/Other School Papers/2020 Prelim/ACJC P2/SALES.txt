@@ -1,0 +1,6 @@
+1,John,12-12-12,True,1456000
+3,Peter,13-12-12,True,2340000
+4,Kristal,14-12-12,True,3675899
+7,Penny,30-12-12,False,2847777
+10,Bernardette,4-1-13,True,2003990
+11,Elton,20-2-13,True,1993390

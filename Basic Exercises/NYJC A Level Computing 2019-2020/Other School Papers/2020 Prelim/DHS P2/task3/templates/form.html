@@ -6,6 +6,7 @@
     <body>
         <h1>Main</h1>
         <form method="POST" action="{{url_for('form')}}" enctype="multipart/form-data">
+            <b>Input your credentials</b>
             <table>
                 <tr>
                     <td>TeacherUsername</td>
@@ -14,6 +15,9 @@
                 <tr>
                     <td>TeacherPassword</td>
                     <td><input type="text" name="TeacherPassword"></td>
+                </tr>
+                <tr>
+                    <th>Fill in bottom if you need to insert</th>
                 </tr>
                 <tr>
                     <td>StudentIndex</td>
@@ -34,7 +38,7 @@
             </table>
             
             <input type="submit" name='submit' value="Insert">
-            <!--<input type="submit" name='submit' value="View For Student">-->
+            <input type="submit" name='submit' value="View For Your Students">
             <input type="submit" name='submit' value="Show Total Marks for your classes">
             
         </form>

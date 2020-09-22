@@ -23,14 +23,30 @@ def insertStudentScore(StudentIndex, Class, PresentationDate, Marks):
     conn.commit()
     conn.close()
 
-def totalByTeacher(TeacherUsername):
+def teachersStudents(TeacherUsername):
     total = {}
     conn = sqlite3.connect(DBNAME)
     cursor = conn.execute("SELECT Lesson.Class, Lesson.PresentationDate, (Marks) FROM StudentScore INNER JOIN Lesson"
                           " ON StudentScore.PresentationDate == Lesson.PresentationDate"
                           " AND StudentScore.Class == Lesson.Class"
-                          " WHERE Lesson.TeacherUsername == ? ;", 
+                          " WHERE Lesson.TeacherUsername == ?;", 
                           (TeacherUsername,))
+    # Other method
+    data = []
+    for record in cursor:
+        data.append(record)
+    conn.close()
+    return data
+
+def totalByTeacher(TeacherUsername):
+    total = {}
+    conn = sqlite3.connect(DBNAME)
+    cursor = conn.execute("SELECT Lesson.Class, Lesson.PresentationDate, SUM(Marks) FROM StudentScore INNER JOIN Lesson"
+                          " ON StudentScore.PresentationDate == Lesson.PresentationDate"
+                          " AND StudentScore.Class == Lesson.Class"
+                          " WHERE Lesson.TeacherUsername == ?  GROUP BY Lesson.Class, Lesson.PresentationDate", 
+                          (TeacherUsername,))
+    # Other method
     data = []
     for record in cursor:
         data.append(record)
@@ -65,8 +81,10 @@ def form():
             if submit == "Insert":
                 insertStudentScore(StudentIndex, Class, PresentationDate, Marks)
                 return "Inserted"
-            elif submit == 'View For Student':
-                return "" # Tell me what you want idk what to do DHS paper nlmao
+            elif submit == 'View For Your Students':
+                data = teachersStudents(TeacherUsername)
+                headers = ['Class', 'PresentationDate', 'Total Marks']
+                return flask.render_template('table.html', headers=headers, data=data)
             elif submit == 'Show Total Marks for your classes': # Task 3.5
                 data, total = totalByTeacher(TeacherUsername)
                 headers = ['Class', 'PresentationDate', 'Total Marks']

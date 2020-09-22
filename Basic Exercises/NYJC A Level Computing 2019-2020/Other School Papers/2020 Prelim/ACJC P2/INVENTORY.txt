@@ -1,0 +1,17 @@
+Bapple 8	Phone	745.55	1200.00	20
+Bapple 9	Phone	825.35	1348.00	20
+Bapple 10	Phone	848.22	1399.95	15
+Bapple 11	Phone	836.12	1488.95	18
+Bapple 12	Phone	736.00	1588.85	15
+Elink1 200	Router	48.00	199.95	15
+Elink1 300	Router	58.00	218.95	16
+Dnetwork 500	Router	28.00	99.95	19
+Dnetwork 750	Router	38.00	129.95	21
+ThinkerpadX 13	Laptop	648.65	1200.95	5
+ThinkerpadX 15	Laptop	799.15	1399.95	8
+Surface Elite 5	Laptop	499.00	999.95	8
+Surface Elite 5	Laptop	699.00	1399.95	9
+Surface Elite 7	Laptop	698.90	1511.95	9
+Universe Tab A	Tablet	399.90	699.95	12
+Universe Tab B	Tablet	449.00	799.95	14
+Universe Tab C	Tablet	432.00	799.95	15
