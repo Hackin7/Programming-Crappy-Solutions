@@ -1,4 +1,6 @@
 import flask
+from werkzeug.utils import secure_filename
+
 app = flask.Flask(__name__)
 
 @app.route("/", methods=["GET"])
@@ -15,7 +17,8 @@ def upload():
     if flask.request.files:
         print(flask.request.files)
         file = flask.request.files['file']
-        file.save('./'+file.filename)
+        filename = secure_filename(file.filename)
+        file.save('./'+filename)
         return "Uploaded "+file.filename
     else:
         return "Notthing to upload"

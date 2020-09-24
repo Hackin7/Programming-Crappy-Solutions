@@ -1,0 +1,10 @@
+201701|Sarbine|D|Diploma|10|A
+201804|J. Clark|D|Diploma|7|
+201801|James May|D|Diploma|5|B
+201901|Jim Simon|S|Business|0|M
+201703|Victor|D|Diploma|6|
+201704|George Goh|D|Diploma|7|
+201702|Lorraine Loh|D|Diploma|10|
+201802|George Soros|S|IT|0|
+201803|Alvin Low|D|Diploma|9|
+201902|Jimmy Kong|S|Accountancy|0|

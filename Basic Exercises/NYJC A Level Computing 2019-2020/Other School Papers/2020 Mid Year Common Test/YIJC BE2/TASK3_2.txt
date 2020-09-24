@@ -1,0 +1,5 @@
+Food("Apple", "Fruits", "6 Sweet Pink, bought on 23 May")
+Food("Milk", "Diary", "Low fat, 1 litre")
+Food("Carrot", "Vegetables", "medium sized, Australian")
+Food("Chicken meat", "Protein", "thigh meat, 200g")
+Food("Cabbage", "Vegetables", "300g")

@@ -1,0 +1,7 @@
+Food("Apple", "Fruits", "6 Sweet Pink, bought on 23 May")
+DatedFood("Milk", "Diary", "Low fat, 1 litre", "2020-06-17")
+Food("Carrot", "Vegetables", "medium sized, Australian")
+DatedFood("Chicken meat", "Protein", "thigh meat, 200g", "2020-06-15")
+DatedFood("Egg", "Protein", "1 dozen", "2020-07-10")
+DatedFood("Yogurt", "Diary", "Greek, 1 tub", "2020-06-17")
+Food("Cabbage", "Vegetables", "300g")
