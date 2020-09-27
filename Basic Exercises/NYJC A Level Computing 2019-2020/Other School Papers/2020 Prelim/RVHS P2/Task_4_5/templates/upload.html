@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Upload</title>
+    </head>
+    <body>
+        <h2>{{message}}</h2>
+        
+        <table border="1">
+            <tr>
+                {% for col in header %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            
+            {% for record in data %}
+            <tr>
+                {% for col in record %}
+                <td>{{col|safe}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            
+        </table>
+        
+    </body>
+</html>

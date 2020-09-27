@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Particulars Form</title>
+    </head>
+    <body>
+        <h1>Particulars Form</h1>
+        <form action='{{url_for("form")}}' method='POST' enctype='multipart/form-data'>
+            <fieldset>
+                <legend>Enter your Matriculation number to retrieve your school information</legend>
+                <label for='MatricNo'>Matriculation number: </label><input type='number' min='0' name='MatricNo'>
+            </fieldset>
+            <br>
+            <input type='submit'>
+        </form>
+    </body>
+</html>

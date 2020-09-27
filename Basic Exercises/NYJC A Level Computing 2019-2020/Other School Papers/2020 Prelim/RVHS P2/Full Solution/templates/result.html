@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Search Result</h1>
+    <table border="1px" width="60%">
+        <tr>
+            <th align="left">Candidate Number</th>
+            <th align="left">Name</th>
+        </tr>
+        {% for candidate in result %}
+        <tr>
+            <td align="left">{{ candidate[0] }}</td>
+            <td align="left">{{ candidate[1] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>

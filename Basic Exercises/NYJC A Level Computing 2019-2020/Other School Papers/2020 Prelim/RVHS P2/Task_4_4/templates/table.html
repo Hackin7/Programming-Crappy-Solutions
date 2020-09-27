@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        
+        <h1>{{title}}</h1>
+        
+        <table>
+            <tr>
+                {% for col in header %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            
+            {% for record in data %}
+            <tr>
+                {% for col in record %}
+                <td>{{col}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            
+        </table>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Student's Info</title>
+    </head>
+    <body>
+        <h1>Student's Info</h1>
+        <div>Matric No. : {{matricno}}</div>
+        <div>Name : {{name}}</div>
+        <div>Gender : {{gender}}</div>
+        <div>Civics Class : {{civicsclass}}</div>
+        <div>Civics Tutor : {{tutor}}</div>
+        <div>Home Room : {{homeroom}}</div>
+        <div>CCA/CCA Teacher IC : {{ccaname}}/{{teacherIC}}</div>
+        
+        <br>
+        <form action='{{url_for("cca")}}' method='POST' enctype='multipart/form-data'>
+            <div>Would you like to change your CCA?</div> 
+            <input hidden name="MatricNo" value='{{matricno}}'>
+            <input type="radio" name="change" value="Y"><span>Yes</span>
+            <input type="radio" name="change" value="N"><span>No</span>
+            <br><input type='submit'>
+        </form>
+            
+    </body>
+</html>

@@ -1,0 +1,68 @@
+﻿PROCEDURE insert(new_word, new_category) 
+	//check if Linked List is full
+	IF nextfree = -1 THEN        
+		RETURN 'Linked List is Full'       	
+	ENDIF
+
+	//linked list is not full, safe to insert new word
+	sentence[nextfree].word ← new_word
+	sentence[nextfree].category ← new_category
+	
+	IF start = -1 THEN     //inserting into empty list
+		start ← nextfree
+		temp ← sentence[start].next
+		sentence[start].next ← -1    
+		nextfree ← temp                    
+     		 
+		    
+	ELSE      // traverse down the linked list to search for position to insert
+		current ← start  //pointer of current node
+		previous ← -1	//pointer of previous node
+		inserted ← FALSE //flag to check for insertion
+
+		WHILE current > -1 AND inserted = FALSE
+			IF sentence[current].category > new_category THEN	  
+			//position found, insert before current node   
+				IF current = start THEN
+					//check if current equals to start
+				  	start ← nextfree
+				ELSE
+					sentence[previous].next ← nextfree 
+				ENDIF
+
+				temp ← sentence[nextfree].next
+				sentence[nextfree].next ← current    
+				nextfree ← temp 
+				inserted ← TRUE 
+				
+                 
+			ELIF sentence[current].category < new_category THEN
+				previous ← current
+				current ← sentence[current].next
+
+	      		ELSE THEN
+				IF new_category = 'N' THEN
+					new_category ← 'Z'
+				ENDIF
+				IF new_category = ‘D’ THEN
+					new_category ← 'X'
+				ENDIF
+				IF new_category = 'J' THEN
+					new_category ← 'Y'
+				ENDIF
+
+				previous ← current
+				current ← sentence[current].next
+				sentence[nextfree].category  ← new_category
+			ENDIF
+
+		ENDWHILE
+
+		IF inserted = False THEN
+			sentence[previous].next ← nextfree
+			temp ← sentence[nextfree].next
+			sentence[nextfree].next ← -1    
+			nextfree ← temp 		
+		ENDIF   		
+	ENDIF       
+ENDPROCEDURE 

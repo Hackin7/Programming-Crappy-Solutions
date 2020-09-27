@@ -1,0 +1,66 @@
+﻿def insert(self, new_word, new_category) 
+	# check if Linked List is full
+	if self.nextfree == -1:
+		return 'Linked List is Full'       	
+	
+
+	# linked list is not full, safe to insert new word
+	self.sentence[self.nextfree].word = new_word
+	self.sentence[self.nextfree].category = new_category
+	
+	if self.start == -1      # inserting into empty list
+		self.start = self.nextfree
+		temp = self.sentence[self.start].get_next()
+		self.sentence[self.start].next = -1    
+		self.nextfree = temp                    
+     		 
+		    
+	else:      #  traverse down the linked list to search for position to insert
+		current = self.start  # pointer of current node
+		previous = -1	# pointer of previous node
+		inserted = False # flag to check for insertion
+
+		while current > -1 and inserted == False
+			if self.sentence[current].category > new_category: 	  
+			# position found, insert before current node   
+				if current == self.start 
+					# check if current equals to self.start
+				  	self.start = self.nextfree
+				else:
+					self.sentence[previous].next = self.nextfree 
+				
+
+				temp = self.sentence[self.nextfree].get_next()
+				self.sentence[self.nextfree].next = current    
+				self.nextfree = temp 
+				inserted = True 
+				
+                 
+			elif self.sentence[current].category < new_category: 
+				previous = current
+				current = self.sentence[current].get_next()
+
+	      		else: 
+				if new_category == 'N':
+					new_category = 'Z'
+				
+				if new_category == 'D':
+					new_category = 'X'
+				
+				if new_category == 'J': 
+					new_category = 'Y'
+				
+
+				previous = current
+				current = self.sentence[current].get_next()
+				self.sentence[self.nextfree].category  = new_category
+			
+
+		
+
+		if inserted == False:
+			self.sentence[previous].next = self.nextfree
+			temp = self.sentence[self.nextfree].get_next()
+			self.sentence[self.nextfree].next = -1    
+			self.nextfree = temp 		
+		   		

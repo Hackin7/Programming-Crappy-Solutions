@@ -1,0 +1,20 @@
+<html>
+<b>Top Performers in {{month}} {{year}}</b>
+<br>
+<br>
+	<table border = "1">
+		<tr>
+		<th width = "50%" align = "center">Office ID</th>
+		<th width = "25%">Salesperson</th>
+		<th width = "25%">Total Amount S$</th>
+		</tr>		
+		{% for item in lst_results %}
+		<tr>
+		<th width = "50%" align = "center">{{item[0]}}</th>
+		<th width = "25%">{{item[2]}}</th>
+		<th width = "25%">{{item[1]}}</th>
+		</tr>
+		{% endfor %}
+		
+	</table>
+</html>

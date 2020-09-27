@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Find Names of candidates voted by Student based on Student Matriculation number</h1>
+        <form action="{{url_for('table')}}" method="POST" enctype="multipart/form-data">
+            <span>Matric No: </span><input type='text' name='matricno'>
+            <input type='submit'>
+        </form>
+    </body>
+</html>

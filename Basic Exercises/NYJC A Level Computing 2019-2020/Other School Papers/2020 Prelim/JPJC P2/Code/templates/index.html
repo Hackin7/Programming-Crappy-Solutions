@@ -1,0 +1,25 @@
+<html>
+<h1>Computer Company</h1>
+<p>
+<! posts the data to app route with query in the decorator>
+<form action = "{{ url_for('query') }}" method="POST">
+	<table>
+			<tr>
+				<th><p align = "left">Month(1-12)</p></th>
+				<th><p align = "left">Year (XXXX)</p></th>			
+			</tr>
+			<tr>
+				<td>
+					<input name = "month">
+				</td>
+				<td>
+					<input name = "year">
+				</td>				
+			</tr>
+
+	</table>
+	<br>
+	<input type = "submit" value = "SUBMIT">
+
+</form>
+</html>

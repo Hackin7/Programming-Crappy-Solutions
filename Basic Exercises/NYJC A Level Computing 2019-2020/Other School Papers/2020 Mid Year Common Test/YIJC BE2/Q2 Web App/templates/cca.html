@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Select CCA</title>
+    </head>
+    <body>
+        <h1>Select CCA</h1>
+        <form action='{{url_for("update")}}' method='POST' enctype='multipart/form-data'>
+            <input hidden name='MatricNo' value="{{matricno}}">
+            <select name='cca'>
+                {% for value in data %}
+                <option value='{{value}}'>{{value}}</option>
+                {% endfor %}
+            </select>
+            <input type='submit'>
+        </form>
+    </body>
+</html>

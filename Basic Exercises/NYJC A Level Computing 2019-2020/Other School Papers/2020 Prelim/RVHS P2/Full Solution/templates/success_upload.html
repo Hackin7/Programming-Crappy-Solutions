@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Upload Successful!</h1>
+    <table border="1px" width="60%">
+        <tr>
+            <th align="left">
+                Candidate No:
+            </th>
+            <td align="left">
+                {{candidate_info[0]}}
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Name:
+            </th>
+            <td align="left">
+                {{candidate_info[1]}}
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Slogan:
+            </th>
+            <td align="left">
+                {{candidate_info[2]}}
+            </td>
+        </tr>
+        <tr>
+            <th align="left">
+                Portrait Image:
+            </th>
+            <td align="left">
+                <img src="{{candidate_info[3]}}">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

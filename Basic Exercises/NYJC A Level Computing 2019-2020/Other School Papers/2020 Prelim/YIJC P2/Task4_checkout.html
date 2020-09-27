@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Check Out</title>
+        <style>
+            #total{
+                margin:auto;
+                width: 50%;
+            }
+            
+            form{
+                padding: 1em;
+                border: 1px solid lightblue;
+            }
+            img{
+                margin-left:35%;
+                width: 30%;
+            }
+            input{
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id='total'>
+            <img src='{{url_for("static", filename="OUT.JPG")}}' alt='SafeEnter'>
+            
+            <form method='POST' action='{{url_for("checkOut")}}' enctype='multipart/form-data'>
+                <span>
+                    <label for='postalCode'>Postal Code: </label>
+                    <input type='text' name='postalCode'>
+                    <br><br>
+                </span>
+                
+                <span>
+                    <label for='date'>Date (yyyymmdd): </label>
+                    <input type='number' name='date'>
+                    <br><br>
+                </span>
+                
+                <span>
+                    <label for='time'>Check-in Time (hh:mm): </label>
+                    <input type='text' name='time'>
+                    <br><br>
+                </span>
+                
+                <span>
+                    <label for='nric'>NRIC: </label>
+                    <input type='text' name='nric'>
+                    <br><br>
+                </span>
+                
+                <span>
+                    <label for='phoneno'>Handphone No: </label>
+                    <input type='number' name='phoneno'>
+                    <br><br>
+                </span>
+                
+                <span>
+                    <input type='submit'>
+                </span>
+            </form>
+            
+        </div>
+    </body>
+</html>
