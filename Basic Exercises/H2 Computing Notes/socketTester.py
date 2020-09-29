@@ -19,6 +19,7 @@ class Connection:
         
         self.conn, self.conn_addr = self.socket.accept()
         print('Accepted connection from', self.conn_addr)
+        self.socket.close()
 
     def set_client(self):
         print("Connecting to",self.net)
