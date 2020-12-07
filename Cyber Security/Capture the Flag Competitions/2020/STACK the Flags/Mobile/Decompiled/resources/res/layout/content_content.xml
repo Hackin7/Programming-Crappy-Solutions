@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="25dp">
+    <TextView android:textSize="18dp" android:textColor="@color/color_grey_dark" android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apple" android:fontFamily="@font/lato"/>
+</androidx.cardview.widget.CardView>

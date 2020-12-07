@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="160.0dip" android:layout_height="280.0dip" android:layout_margin="10.0dip" app:cardCornerRadius="2.0dip" app:cardElevation="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/news_image" android:layout_width="fill_parent" android:layout_height="140.0dip" android:src="@drawable/android" android:scaleType="centerCrop" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/korovax_black" android:id="@id/news_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Android Version 8.0" android:fontFamily="@font/lato_bold" />
+        <TextView android:id="@id/news_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oreo is needed due to some functions having minimum API level requirements." />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

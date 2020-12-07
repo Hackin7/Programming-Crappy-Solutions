@@ -12,10 +12,10 @@ from astparser import Parser
 text = '''
 PROGRAM hello;
 VAR
-  hi : INTEGER
+  hi : INTEGER 
   
 BEGIN
- a := 1 + 1; b := a
+ a := 1 + 1; {this is a comment} b := a
 END.
 '''
 if __name__ == '__main__':

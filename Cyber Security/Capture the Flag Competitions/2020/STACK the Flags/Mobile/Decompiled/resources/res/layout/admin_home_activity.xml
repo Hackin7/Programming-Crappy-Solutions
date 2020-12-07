@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/korovax_black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="24sp" android:textColor="@color/korovax_light_grey" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="WELCOME ADMIN!" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="40dp" android:layout_marginTop="20dp" android:layout_marginRight="40dp" android:layout_marginBottom="20dp" android:layout_below="@+id/title" android:elevation="15dp">
+                    <EditText android:id="@+id/editText_enteredFlag" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:hint="SEARCH..." android:layout_centerVertical="true" android:fontFamily="@font/lato"/>
+                    <ImageButton android:id="@+id/button_submit" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="15dp" android:src="@drawable/search" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:backgroundTint="@color/white"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CalendarView android:layout_gravity="center" android:id="@+id/calendar_view" android:background="@drawable/calendar_bg" android:layout_width="wrap_content" android:layout_height="300dp"/>
+            <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginLeft="40dp" android:layout_marginTop="20dp" android:layout_marginRight="40dp" android:layout_marginBottom="20dp" android:layout_below="@+id/calendar_view" android:elevation="15dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15sp" android:textColor="@color/korovax_wheat" android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="10/10/2020" android:fontFamily="@font/lato_bolditalic"/>
+                        <TextView android:textSize="20sp" android:textColor="@color/color_blue_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="30dp" android:text="TASK" android:layout_alignParentRight="true" android:fontFamily="@font/lato_bold"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp">
+                        <TextView android:textColor="@color/korovax_black" android:id="@+id/task_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NO TASK FOR TODAY" android:fontFamily="@font/lato"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="70dp" android:layout_marginRight="70dp">
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100dp" android:layout_height="100dp">
+                        <ImageButton android:id="@+id/network" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/network_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100dp" android:layout_height="100dp" android:layout_alignParentEnd="true">
+                        <ImageButton android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/group_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="70dp" android:layout_marginTop="20dp" android:layout_marginRight="70dp" android:layout_marginBottom="20dp">
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100dp" android:layout_height="100dp">
+                        <ImageButton android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/line_chart_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100dp" android:layout_height="100dp" android:layout_alignParentEnd="true">
+                        <ImageButton android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/inbox_mail_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

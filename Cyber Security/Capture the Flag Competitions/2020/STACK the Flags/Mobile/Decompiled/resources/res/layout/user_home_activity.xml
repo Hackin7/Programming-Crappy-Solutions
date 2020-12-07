@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/korovax_wheat" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/menu"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="24sp" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WELCOME USER!" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="40dp" android:layout_marginTop="20dp" android:layout_marginRight="40dp" android:layout_marginBottom="20dp" android:layout_below="@+id/title" android:elevation="15dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="Search..." android:layout_centerVertical="true"/>
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/search" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:background="@color/color_blue_normal" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="10dp" android:elevation="8dp">
+                        <ImageButton android:id="@+id/image_button_shared" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/star_wars_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_grey"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:background="@color/color_light_blue_2" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="10dp" android:elevation="8dp">
+                        <ImageButton android:id="@+id/image_button_text_editor" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/text_editor" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_grey"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:background="@color/color_grey_darkest" android:layout_width="60dp" android:layout_height="60dp" android:layout_margin="10dp" android:elevation="8dp">
+                        <ImageButton android:id="@+id/image_button_rome" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/rome_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_grey"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp">
+                <LinearLayout android:orientation="vertical" android:id="@+id/updates" android:background="@color/color_grey_dark" android:layout_width="170dp" android:layout_height="280dp" android:layout_margin="10dp">
+                    <TextView android:textSize="25sp" android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="BLOG" android:textAllCaps="true" android:fontFamily="@font/lato" android:layout_marginStart="10dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Some of our top blog posts!"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/updates_recycler" android:background="@color/color_grey_darkest" android:layout_width="match_parent" android:layout_height="280dp" android:layout_toRightOf="@+id/updates"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ABOUT COVID" android:textAllCaps="true" android:fontFamily="@font/lato_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*Disclaimer: Not facts!" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/prizes_recycler" android:background="@color/color_grey" android:layout_width="match_parent" android:layout_height="150dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ABOUT US" android:textAllCaps="true" android:fontFamily="@font/lato_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View All" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/about_us_recycler" android:layout_width="match_parent" android:layout_height="180dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

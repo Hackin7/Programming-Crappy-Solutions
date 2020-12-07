@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/korovax_pale_red" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/korovax_wheat" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="50dp">
+                <TextView android:textSize="24sp" android:textColor="@color/korovax_light_grey" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="SET TASK" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <CalendarView android:layout_gravity="center" android:id="@+id/calendar_view" android:background="@drawable/calendar_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="20sp" android:textColor="@color/korovax_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CREATE TASK" android:layout_centerInParent="true" android:fontFamily="@font/lato"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <TextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Date:" android:fontFamily="@font/lato_bold"/>
+                <TextView android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="10/10/1010" android:layout_centerInParent="true" android:layout_centerVertical="true" android:fontFamily="@font/lato"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <TextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Name:" android:fontFamily="@font/lato_bold"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_marginTop="25dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp" android:elevation="15dp">
+                    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_centerVertical="true" android:fontFamily="@font/lato"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <TextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task:" android:fontFamily="@font/lato_bold"/>
+                <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginLeft="10dp" android:layout_marginTop="25dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp" android:elevation="15dp">
+                    <EditText android:id="@+id/editText_enteredFlag" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_alignParentTop="true" android:fontFamily="@font/lato"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <Button android:layout_gravity="center" android:id="@+id/button_submit" android:background="@drawable/round_button_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Submit" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

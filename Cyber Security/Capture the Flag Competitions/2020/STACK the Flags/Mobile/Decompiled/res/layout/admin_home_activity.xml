@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/korovax_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="24.0sp" android:textColor="@color/korovax_light_grey" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="WELCOME ADMIN!" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold" />
+                <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/title" android:elevation="15.0dip">
+                    <EditText android:id="@id/editText_enteredFlag" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:hint="SEARCH..." android:layout_centerVertical="true" android:fontFamily="@font/lato" />
+                    <ImageButton android:id="@id/button_submit" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/search" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:backgroundTint="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CalendarView android:layout_gravity="center" android:id="@id/calendar_view" android:background="@drawable/calendar_bg" android:layout_width="wrap_content" android:layout_height="300.0dip" />
+            <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/calendar_view" android:elevation="15.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/korovax_wheat" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:text="10/10/2020" android:fontFamily="@font/lato_bolditalic" />
+                        <TextView android:textSize="20.0sp" android:textColor="@color/color_blue_dark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="30.0dip" android:text="TASK" android:layout_alignParentRight="true" android:fontFamily="@font/lato_bold" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip">
+                        <TextView android:textColor="@color/korovax_black" android:id="@id/task_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NO TASK FOR TODAY" android:fontFamily="@font/lato" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginRight="70.0dip">
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100.0dip" android:layout_height="100.0dip">
+                        <ImageButton android:id="@id/network" android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/network_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat" />
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_alignParentEnd="true">
+                        <ImageButton android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/group_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="70.0dip" android:layout_marginBottom="20.0dip">
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100.0dip" android:layout_height="100.0dip">
+                        <ImageButton android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/line_chart_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat" />
+                    </RelativeLayout>
+                    <RelativeLayout android:background="@drawable/round_button_wheat" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_alignParentEnd="true">
+                        <ImageButton android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/inbox_mail_freepik" android:scaleType="centerCrop" android:layout_centerInParent="true" android:backgroundTint="@color/korovax_wheat" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

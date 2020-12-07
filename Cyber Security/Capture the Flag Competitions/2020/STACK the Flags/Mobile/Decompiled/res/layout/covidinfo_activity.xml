@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/korovax_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="10.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="24.0sp" android:textColor="@color/korovax_wheat" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="PROTECTING YOURSELF" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="15.0dip" android:textColor="@color/korovax_black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="The KOROVAX way to protect yourself from COVID" android:fontFamily="@font/lato_bold" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/no_sick_people_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Avoid close contact!" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="Good time to be alone. Save you the trouble from getting into awkward situations!" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/liquid_soap_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Wash your hands often!" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="If you have time to read this, you have the time to wash your hands! With soap, obviously!" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/medical_mask_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Wear a mask!" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="Troublesome if you need to pick your nose, but at least you don't have to worry about bad breath!" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/loupe_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Got a clue to why this is here yet?" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="HINT: Having looked closely, you can see a cleverly hidden clue. The order matters :)" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/tissue_box_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Cover coughs and sneezes!" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="Use your tissue for the right things!" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/healthcare_freepik" />
+                <TextView android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:text="Monitor your health!" android:fontFamily="@font/lato_bold" />
+                <TextView android:textColor="@color/korovax_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="20.0dip" android:text="Be alert about the symptoms! If you are not feeling well, you shouldn't be looking at this!" android:fontFamily="@font/lato_bolditalic" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_gravity="center" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <EditText android:layout_gravity="center" android:id="@id/editText_enteredFlag" android:layout_width="300.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="" android:ems="10" android:singleLine="true" android:maxLength="64" android:inputType="textVisiblePassword|textNoSuggestions" android:layout_alignParentStart="true" />
+            </RelativeLayout>
+            <Button android:layout_gravity="center" android:id="@id/button_submit" android:background="@drawable/round_button_wheat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="Submit" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:elevation="10.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

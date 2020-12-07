@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/color_grey_darkest2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/relativeLayout" android:background="@color/color_grey_darkest" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0">
+        <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/menu" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:textColor="@color/color_grey" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SECRET VAULT" android:fontFamily="@font/lato_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/relativeLayout" app:layout_constraintVertical_bias="0.1" />
+    <Button android:id="@id/submit" android:background="@drawable/round_button_grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:text="CLICK ME" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textView" app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

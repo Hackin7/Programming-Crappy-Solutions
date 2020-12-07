@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="25sp" android:id="@+id/modal_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Title"/>
+    <EditText android:id="@+id/modal_editText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="5dp" android:layout_marginRight="20dp" android:text="Selected info details"/>
+    <Button android:layout_gravity="center" android:id="@+id/submit_btn" android:background="@drawable/round_button_grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Submit" android:fontFamily="@font/lato_bold"/>
+</LinearLayout>

@@ -1,0 +1,14 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "mariadb"
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "mariadb"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "mariadb"
+  }
+}

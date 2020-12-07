@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="900.0dip" android:src="@mipmap/black_bg" android:scaleType="centerCrop" android:elevation="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" />
+    <ImageView android:id="@id/ctf_logo" android:layout_width="wrap_content" android:layout_height="400.0dip" android:src="@drawable/ourobos" android:elevation="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" />
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="200.0dip" android:elevation="2.0dip" app:layout_constraintBottom_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ctf_logo" app:layout_constraintVertical_bias="0.0" app:lottie_autoPlay="true" app:lottie_loop="false" app:lottie_rawRes="@raw/loading" />
+    <com.cuberto.liquid_swipe.LiquidPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

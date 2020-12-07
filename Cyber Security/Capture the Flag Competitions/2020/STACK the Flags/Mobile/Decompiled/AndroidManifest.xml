@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="sg.gov.tech.ctf.mobile" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/icon" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Introduction">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.MainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Admin.TaskActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Admin.AdminHome"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Admin.AdminAuthenticationActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Admin.NetworkActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Info.CovidInfoActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Info.AtoZCovid"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.AuthenticationActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.UserHomeActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.TextEditorActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="sg.gov.tech.ctf.mobile.User.ViewActivity">
+            <intent-filter android:label="flag_view">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="ctf" android:pathPrefix="/howtogetthisflag" android:scheme="gov.tech.sg"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.Stats"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.update0Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.update1Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.update2Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.update3Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.about0Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.about1Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.User.about2Activity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Rome"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="sg.gov.tech.ctf.mobile.Contact.ContactForm"/>
+    </application>
+</manifest>

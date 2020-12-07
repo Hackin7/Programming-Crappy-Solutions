@@ -1,4 +1,4 @@
-from token import *
+from tokenisation import *
 
 class Lexer(object):
     def __init__(self, text):
@@ -23,7 +23,13 @@ class Lexer(object):
     def skip_whitespace(self):
         while self.current_char is not None and self.current_char.isspace():
             self.advance()
-
+            
+    def skip_comments(self):
+        while self.current_char is not None and self.current_char != '}':
+            self.advance()
+        if self.current_char == '}':
+            self.advance()
+                    
     def integer(self):
         """Return a (multidigit) integer consumed from the input."""
         result = ''
@@ -60,6 +66,10 @@ class Lexer(object):
             if self.current_char.isspace():
                 self.skip_whitespace()
                 continue
+            if self.current_char == '{':
+                self.skip_comments()
+                continue
+                      
             if self.current_char.isdigit():
                 return self.integer()
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/korovax_grey" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <ImageButton android:id="@id/back_btn" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/back" android:scaleType="centerCrop" android:backgroundTint="@color/korovax_grey" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CoviD-19 STATS" android:layout_centerHorizontal="true" android:fontFamily="@font/starjedi" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/title" android:elevation="15.0dip">
+        <EditText android:textSize="15.0sp" android:id="@id/user_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_centerVertical="true" android:fontFamily="@font/lato" />
+        <ImageButton android:id="@id/submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/search" android:layout_alignParentRight="true" android:backgroundTint="@color/white" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.github.mikephil.charting.charts.PieChart android:id="@id/pie_chart" android:layout_width="fill_parent" android:layout_height="500.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

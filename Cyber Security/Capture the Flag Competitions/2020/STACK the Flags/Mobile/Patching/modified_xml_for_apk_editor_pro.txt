@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1"
+	android:versionName="1.0"
+	android:compileSdkVersion="29"
+	android:compileSdkVersionCodename="10"
+	package="sg.gov.tech.ctf.mobile"
+	platformBuildVersionCode="29"
+	platformBuildVersionName="10"
+	>
+	<uses-sdk
+		android:minSdkVersion="21"
+		android:targetSdkVersion="29"
+		>
+	</uses-sdk>
+	<uses-permission
+		android:name="android.permission.BLUETOOTH"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.BLUETOOTH_ADMIN"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.INTERNET"
+		>
+	</uses-permission>
+	<application
+		android:theme="@7F100006"
+		android:label="@7F0F001B"
+		android:icon="@7F0D0004"
+		android:debuggable="true"
+		android:supportsRtl="true"
+		android:usesCleartextTraffic="true"
+		android:networkSecurityConfig="@7F120000"
+		android:roundIcon="@7F0D0004"
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+		>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Introduction"
+			android:configChanges="0x000004A0"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="android.intent.action.MAIN"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.LAUNCHER"
+					>
+				</category>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.MainActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Admin.TaskActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Admin.AdminHome"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Admin.AdminAuthenticationActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Admin.NetworkActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Info.CovidInfoActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Info.AtoZCovid"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.AuthenticationActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.UserHomeActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.TextEditorActivity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.ViewActivity"
+			android:exported="true"
+			android:configChanges="0x000004A0"
+			>
+			<intent-filter
+				android:label="flag_view"
+				>
+				<action
+					android:name="android.intent.action.VIEW"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+				<category
+					android:name="android.intent.category.BROWSABLE"
+					>
+				</category>
+				<data
+					android:scheme="gov.tech.sg"
+					android:host="ctf"
+					android:pathPrefix="/howtogetthisflag"
+					>
+				</data>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.Stats"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.update0Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.update1Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.update2Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.update3Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.about0Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.about1Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.User.about2Activity"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Rome"
+			android:configChanges="0x000004A0" android:exported="true" 
+			> 
+		</activity>
+		<activity
+			android:name="sg.gov.tech.ctf.mobile.Contact.ContactForm"
+			android:configChanges="0x000004A0" android:exported="true" 
+			>
+		</activity>
+	</application>
+</manifest>

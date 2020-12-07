@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/color_grey" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/menu" />
+        <TextView android:textSize="30.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Text Editor?" android:layout_centerHorizontal="true" android:fontFamily="@font/lato_bold" />
+        <ImageButton android:id="@id/button_submit" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/check" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:backgroundTint="@color/color_grey" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:orientation="vertical" android:id="@id/scrollView3" android:layout_width="fill_parent" android:layout_height="300.0dip">
+            <EditText android:gravity="top" android:id="@id/text_editor" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ScrollView>
+        <ScrollView android:orientation="vertical" android:id="@id/scrollView2" android:layout_width="fill_parent" android:layout_height="400.0dip">
+            <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="400.0dip" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

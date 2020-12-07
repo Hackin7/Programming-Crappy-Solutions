@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_grey" android:layout_width="300dp" android:layout_height="160dp" android:layout_margin="10dp" app:cardCornerRadius="2dp" app:cardElevation="8dp">
+    <RelativeLayout android:padding="10dp" android:layout_width="300dp" android:layout_height="150dp" android:elevation="10dp">
+        <ImageView android:id="@+id/prizes_image" android:layout_width="100dp" android:layout_height="150dp" android:src="@drawable/stomachache_freepik" android:scaleType="centerInside"/>
+        <TextView android:textSize="20sp" android:id="@+id/prizes_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="1st Prize" android:layout_toRightOf="@+id/prizes_image" android:fontFamily="@font/lato_bold"/>
+        <TextView android:id="@+id/prizes_detail" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Open Category: $15,000 \10 Uni &amp; Poly: $8,000 \10 JC, IP &amp; ITE: $8,000" android:layout_toRightOf="@+id/prizes_image" android:layout_below="@+id/prizes_text"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

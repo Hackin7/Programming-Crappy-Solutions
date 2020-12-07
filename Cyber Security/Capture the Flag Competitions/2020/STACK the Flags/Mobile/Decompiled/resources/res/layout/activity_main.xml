@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/korovax_black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:textSize="12sp" android:textColor="@color/korovax_light_grey" android:id="@+id/version" android:background="@color/korovax_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="version 1.0.0" app:layout_constraintBottom_toBottomOf="@+id/linearLayout" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0.05" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.01"/>
+    <TextView android:textSize="22dp" android:textColor="@color/korovax_light_grey" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Discover" android:fontFamily="@font/lato_bold" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.07"/>
+    <com.airbnb.lottie.LottieAnimationView android:gravity="center" android:id="@+id/dashboard_animation" android:layout_width="250dp" android:layout_height="250dp" android:fontFamily="@font/lato_bold" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/title" app:layout_constraintVertical_bias="0.05" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/dashboard"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:background="@drawable/dashboard_bg" android:layout_width="414dp" android:layout_height="402dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="40dp" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="20dp" android:src="@drawable/flag" android:translationZ="10dp"/>
+                    <Button android:textSize="20sp" android:textColor="@color/korovax_light_grey" android:id="@+id/path1" android:background="@drawable/dashboard_path1_bg" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="20dp" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="Admin LOGIN" android:fontFamily="@font/lato_bolditalic"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="40dp" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="20dp" android:src="@drawable/flag" android:translationZ="10dp"/>
+                    <Button android:textSize="20sp" android:textColor="@color/korovax_light_grey" android:id="@+id/path2" android:background="@drawable/dashboard_path1_bg" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="20dp" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:text="INFO PAGE" android:fontFamily="@font/lato_bolditalic"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="2">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="40dp" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="20dp" android:src="@drawable/flag" android:translationZ="10dp"/>
+                    <Button android:textSize="20sp" android:textColor="@color/korovax_light_grey" android:id="@+id/path3" android:background="@drawable/dashboard_path1_bg" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="20dp" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="User Login" android:fontFamily="@font/lato_bolditalic"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="40dp" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="20dp" android:src="@drawable/flag" android:translationZ="10dp"/>
+                    <Button android:textSize="20sp" android:textColor="@color/korovax_light_grey" android:id="@+id/path4" android:background="@drawable/dashboard_path1_bg" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="20dp" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:text="CONTACT US" android:fontFamily="@font/lato_bolditalic"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
