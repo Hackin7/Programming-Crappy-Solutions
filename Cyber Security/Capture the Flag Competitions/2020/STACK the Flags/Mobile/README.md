@@ -250,7 +250,6 @@ govtech-csg{It5_N0T_Ez_2_L0G_1n_S_AdM1n}
 
 ###  Exported Activities (All about Korovax!)
 
-
 I did some research on how to dynamic analysis of Android App, such as using Android Studio.jdwp (which didn't work since I can't connect), adb backups. 
 Eventually I learnt how to use adb to directly access some Activities. The only activities which are accessible are `ViewActivity` and `Introduction`. 
 * Since I wanted to be able to access all activities, I used APK Editor Pro (just google) to edit the AndroidManifest, and set `android:exported="true"` for all activities. The modified manifest and apk file is in the folder `Patched` on my Github.

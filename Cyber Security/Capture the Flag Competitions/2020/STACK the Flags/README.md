@@ -1,4 +1,4 @@
-# Stack the Flags
+# STACK the Flags 2020
 
 STACK the Flags 2020 is an online, jeopardy style Capture-the-Flag competition organised by the folks in GovTech’s Cyber Security Group (CSG). As part of ongoing efforts to engage the technology community, this CTF is open to everyone! At the end of the competition, attractive prizes will be awarded to the top teams.
 
@@ -41,6 +41,16 @@ Here are the main challenges I did (or helped out with in order). Just traverse 
 1. `Miscellaneous/Beep Boop`
 1. `Mobile` including `Contact Us!`, `Subscribe!`, `Welcome to Korovax Mobile!`, `True or false?`, `What's with the Search!`, `All about Korovax!`
 1. `Forensics/Walking down a colourful memory lane`
+
+Here are the challenges I solved only after the CTF (insert sad face here)
+1. `Forensics/Voices in the head`
+1. `Cloud/Find the leaking bucket`
+
+Here are the writeups that my teammates did
+
+undefined-func: [https://github.com/undefined-func/stack-the-flags-2020-writeups]
+1. [`OSINT/Only Time will Tell`](https://github.com/undefined-func/stack-the-flags-2020-writeups/tree/main/osint/Only%20time%20will%20tell!)
+
 
 ## Others' Writeups
 
