@@ -15,6 +15,8 @@ This challenge:
 
 ## Solution
 
+### Inspecting
+
 Inspecting the page reveals nothing much, other that the client webpage makes POST/GET requests to the server to request for the credentials
 
 ![](inspect_1.png)
@@ -32,6 +34,8 @@ I extracted out a sample token `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmF
 
 Furthermore for the GET request, you had to put "Bearer", and so I did research. Looking at here https://swagger.io/docs/specification/authentication/bearer-authentication/, you can infer that this data is JSON Web Tokens
 
+### JSON Web Tokens
+
 I googled on similar CTF challenges, and found some writeups about JSON Web tokens
 1. https://gist.github.com/bayotop/37bd7605148df096332ed0451db91051 
 1. https://nandynarwhals.org/hitbgsec2017-pasty/
@@ -45,6 +49,14 @@ My friend then suggested downgrading from RS256 to HS256 based on the informatio
 1. ⚠️ This behavior is fixed in the python library and will return this error jwt.exceptions.InvalidKeyError: The specified key is an asymmetric key or x509 certificate and should not be used as an HMAC secret.. You need to install the following version: pip install pyjwt==0.4.3.
 
 `{"flag":"govtech-csg{5!gN_0F_+h3_T!m3S}"}`
+
+#### Why it works
+
+This works as (thanks to https://github.com/IRS-Cybersec/ctfdump/tree/stack-mitsuha/STACK%20the%20Flags%202020/Mitsuha/Web/1.%20Unlock%20Me)
+1. RS256 is an asymmetric algorithm, which means that it uses a private key to sign the signature, and a public key to verify the signature (for authentication).
+HS256 is a symmetric algorithm, which means that it uses the same secret/key to sign and verify the signature
+1. If the backend accepts both HS256 AND RS256 as the algorithms accepted, when we change the algorithm from RS256 to HS256, the backend treats the known public key as the secret/key for HS256.
+1. Hence, we can modify the token and sign it using the public key for the backend to accept the token using the HS256 algorithm.
 
 ## Flag
 
