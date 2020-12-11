@@ -179,6 +179,8 @@ module.exports = function () {
 
 Ok after looking at the code, it looks like my payload works because it finds a user. I'm still not sure why it works, maybe it screws with the function because it is async, or maybe bcrypt screws up when comparing with an empty string.
 
+In the end I didn't have time to complete this, but checking https://github.com/IRS-Cybersec/ctfdump/tree/stack-mitsuha/STACK%20the%20Flags%202020/Mitsuha/Web/2.%20Logged%20In may give a more in depth explanation.
+
 After the challenge I also know that an empty username also works.
 
 ## Flag
