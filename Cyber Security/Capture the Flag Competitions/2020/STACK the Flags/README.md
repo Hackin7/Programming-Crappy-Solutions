@@ -48,11 +48,14 @@ Here are the challenges I solved only after the CTF (insert sad face here)
 
 Here are the writeups that my teammates did
 
-undefined-func: [https://github.com/undefined-func/stack-the-flags-2020-writeups]
-1. [`OSINT/Only Time will Tell`](https://github.com/undefined-func/stack-the-flags-2020-writeups/tree/main/osint/Only%20time%20will%20tell!)
-
+1. undefined-func: [https://github.com/undefined-func/stack-the-flags-2020-writeups]
+2. Codekrodile: [https://docs.google.com/document/d/1Ei3uYbYmOxZwo0zRVe-I864p-H4JN7ys7zU059vJh5A/edit]
 
 ## Others' Writeups
 
 Obviously I'm not very good in cybersecurity, so check out other write ups for the challenges! 
-I'll put up links here if I remember to and when writeups are ready.
+1. https://blog.justins.in/stack-the-flags-2020/
+1. https://dev.to/k0p1/stacks-2020-ctf-voices-in-the-head-forensic-1bea
+1. https://nandynarwhals.org/stack-2020-competition/
+1. https://github.com/4yn/slashbadctf/tree/master/govtech20
+1. https://github.com/IRS-Cybersec/ctfdump/tree/stack-mitsuha/STACK%20the%20Flags%202020/Mitsuha
