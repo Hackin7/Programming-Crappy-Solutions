@@ -9,9 +9,11 @@ Useful Links
 1. [Main Site](https://ctf.tech.gov.sg/)
 1. [Opening Ceremony](https://www.youtube.com/watch?v=gNaZ9T3Erro), [Opening Ceremony Slides](https://drive.google.com/file/d/1PW8M1nAPIt_WZsSsrkDmWdxN0MsOh4Ro/view), [Closing Ceremony](https://youtu.be/MWmlIuzdXr4)
 1. [CTF Platform](https://play.cat3.stf-2020.alttablabs.sg/)
-1. [Challenge Dependencies](https://docs.google.com/document/d/1tty0Yv9K35lrxNDHqaXKq-ocmUR3Fmo-8zuPVHP_IKU/edit)
-1. [Known Issues](https://docs.google.com/document/d/1GwcJPdV6O0A9jnY6kGJVPMb2RGNazOfbmvZLlCDhQqc/edit)
-1. [Category 3 Download Instructions](https://docs.google.com/document/d/1jdGOn98yRZlYOxywxS___i71_gkmqiMJuyCE8TZKTpI/edit)
+    1. [Challenge Dependencies](https://docs.google.com/document/d/1tty0Yv9K35lrxNDHqaXKq-ocmUR3Fmo-8zuPVHP_IKU/edit)
+    1. [Known Issues](https://docs.google.com/document/d/1GwcJPdV6O0A9jnY6kGJVPMb2RGNazOfbmvZLlCDhQqc/edit)
+    1. [Category 3 Download Instructions](https://docs.google.com/document/d/1jdGOn98yRZlYOxywxS___i71_gkmqiMJuyCE8TZKTpI/edit)
+1. [Combined Prize Ceremony](https://www.youtube.com/watch?v=Y3zbBQranRo)
+1. [Awesome Writeups](https://docs.google.com/spreadsheets/d/1EMgqFpcc_InJZy264AIe1QpvUDFs1-24iTrnKbdoOUo/edit#gid=0)
 
 ## Event Details
 
@@ -33,6 +35,9 @@ Our team got the same numerical ranking (slightly worse compared to others actua
 
 After ~~the disaster that is~~ my A Level Examinations, this was a great refresher. ~~Time to suffer in NS soon~~
 
+Also nani? Our team won a cash bounty for Awesome Write-Ups (of estimated S$50) for `Forensics/Walking down a colourful memory lane`? Impossible!
+
+![nani.png](nani.jpg)
 
 ## My Stuff
 
@@ -59,3 +64,7 @@ Obviously I'm not very good in cybersecurity, so check out other write ups for t
 1. https://nandynarwhals.org/stack-2020-competition/
 1. https://github.com/4yn/slashbadctf/tree/master/govtech20
 1. https://github.com/IRS-Cybersec/ctfdump/tree/stack-mitsuha/STACK%20the%20Flags%202020/Mitsuha
+1. https://team.nullsecsig.com/
+1. https://dame-dango.github.io/STACKtheFlags2020/
+1. https://github.com/redfl4g/StackTheFlags/tree/main/Web/
+1. https://github.com/IRS-Cybersec/ctfdump/tree/stack-chomusuke
