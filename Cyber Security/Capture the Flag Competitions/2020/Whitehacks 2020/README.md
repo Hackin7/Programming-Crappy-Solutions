@@ -1,6 +1,7 @@
 # SMU Whitehacks
 
 ![](https://sis.smu.edu.sg/sites/sis.smu.edu.sg/files/sis/emailer/2020/whitehacks2020.jpg)
+![](https://github.com/Whitehat-Society/whitehacks-challenges-2020-public)
 
 https://sis.smu.edu.sg/newsletter/35096
 
