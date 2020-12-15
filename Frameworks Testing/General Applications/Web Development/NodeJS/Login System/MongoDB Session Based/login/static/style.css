@@ -1,0 +1,16 @@
+.content{
+	//justify-content:center;
+	//align-items:center;
+	margin-left: auto;
+	margin-right: auto;
+	width:60%;
+	//white-space:pre-wrap;
+}
+
+@media screen and (max-width: 800px){
+	.content{width: 80%;}
+
+.icon{
+	height:50px;
+	width:50px;
+}
