@@ -14,6 +14,7 @@ Useful Links
     1. [Category 3 Download Instructions](https://docs.google.com/document/d/1jdGOn98yRZlYOxywxS___i71_gkmqiMJuyCE8TZKTpI/edit)
 1. [Combined Prize Ceremony](https://www.youtube.com/watch?v=Y3zbBQranRo)
 1. [Awesome Writeups](https://docs.google.com/spreadsheets/d/1EMgqFpcc_InJZy264AIe1QpvUDFs1-24iTrnKbdoOUo/edit#gid=0)
+1. [Github Repo](https://github.com/GovTech-CSG/stack-the-flags-2020)
 
 ## Event Details
 
