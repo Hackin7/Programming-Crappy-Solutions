@@ -62,4 +62,7 @@ I also downloaded the screenshot of the PHP code
 
 ![his_interesting_php_code.jpg](his_interesting_php_code.jpg)
 
-### Raw Testing
+### Testing of the Regex
+
+Checkin
+The payload cannot have alphabetical charaters, Caps or no caps, as well as `"` and `_`
