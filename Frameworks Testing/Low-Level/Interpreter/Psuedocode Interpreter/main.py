@@ -13,13 +13,18 @@ from lexer import Lexer
 from astparser import Parser
 from interpreter import Interpreter
 
-text = '''a <- a * 2 + 2 * 32 * 3
+text = '''
 /*
 hello
 */
+DECLARE integer : INTEGER
+DECLARE declared_array : ARRAY[2,8] OF STRING
 text <- 'hello'
+INPUT declared_array[1][2]
+OUTPUT declared_array[1][2]
+
+a <- 1 * 2 + 2 * 32 * 3
 b <-  3 
-INPUT a
 c <- b + a
 OUTPUT b
 FOR i <- 1 TO 10 
@@ -43,6 +48,7 @@ FUNCTION hellofunc(a, b, c)
     OUTPUT "Hello"
     RETURN "hello"
 ENDFUNCTION
+OUTPUT int(1)
 '''
 
 if __name__ == '__main__':
@@ -54,3 +60,5 @@ if __name__ == '__main__':
     i = Interpreter(p.program())
     print()
     print(i.visit())
+    with open("test.py", "w") as file:file.write(i.visit())
+    import test

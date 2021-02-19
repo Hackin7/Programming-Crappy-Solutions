@@ -65,10 +65,25 @@ class Parser:
         self.eat(STRING)
         return NodeData(token)
 
-    def variable(self):
+    def identifier(self):
         token = self.current_token
         self.eat(ID)
         return NodeIdentifier(token)
+    
+    def datatype(self):
+        return self.identifier()
+
+    def variable(self):
+        identifier = self.identifier()
+        current_array_call = identifier
+        while self.current_token.type == LSQPAREN:
+            self.eat(LSQPAREN)
+            index = self.factor()
+            current_array_call = NodeArrayCall(current_array_call, index)
+            self.eat(RSQPAREN)
+        
+        return current_array_call
+
     ###### Non-Terminals ########################################################
     
     ### Data ######################################
@@ -92,7 +107,26 @@ class Parser:
             self.eat(RPAREN)
             return result
         elif token.type == ID: # Variable
-            return self.variable()
+            #return self.variable()
+            identifier = self.identifier()
+            current_call = identifier
+            while self.current_token.type in [LSQPAREN, LPAREN]:
+                if self.current_token.type == LSQPAREN:
+                    self.eat(LSQPAREN)
+                    index = self.factor()
+                    current_call = NodeArrayCall(current_call, index)
+                    self.eat(RSQPAREN)
+                elif self.current_token.type == LPAREN:
+                    self.eat(LPAREN)
+                    arguments = []
+                    while self.current_token.type != RPAREN:
+                        arguments.append(self.factor())
+                        if self.current_token.type == COMMA:
+                            self.eat(COMMA)
+                    current_call = NodeFunctionCall(current_call, arguments)
+                    self.eat(RPAREN)
+            
+            return current_call
         
     ### Arithmetic #################################
     def term(self):
@@ -134,7 +168,9 @@ class Parser:
         
     def statement(self):
         self.skip_newline()
-        if self.current_token.type == ID:
+        if self.current_token.type == DECLARE:
+            return self.var_declaration()
+        elif self.current_token.type == ID:
             return self.assignment_statement()
         elif self.current_token.type == IF:
             return self.if_statement()
@@ -157,6 +193,29 @@ class Parser:
             return None
 
     ### Assignments #############################
+    def var_declaration(self):
+        self.eat(DECLARE)
+        identifier = self.identifier()
+        self.eat(COLON)
+        given_type = self.datatype()
+        if given_type.name == "ARRAY":
+            self.eat(LSQPAREN)
+            size1 = self.factor()
+            if self.current_token.type == COMMA:
+                self.eat(COMMA)
+                size2 = self.factor()
+            else:
+                size2 = None
+            self.eat(RSQPAREN)
+            self.eat(OF)
+            array_type = self.datatype()
+        else:
+            size1 = None
+            size2 = None
+            array_type = None
+        
+        return NodeVariableDeclaration(identifier, given_type, size1, size2, array_type)
+        
     def assignment_statement(self):
         var = self.variable()
         self.eat(ASSIGN)
@@ -209,7 +268,7 @@ class Parser:
     ### Loops ###################################
     def for_loop(self):
         self.eat(FOR)
-        var = self.variable()
+        var = self.identifier()
         self.eat(ASSIGN)
         start_expr = self.expr()
         self.eat(TO)
@@ -226,7 +285,7 @@ class Parser:
             self.eat(ENDFOR)
         elif self.current_token.type == NEXT:
             self.eat(NEXT)
-            endvar = self.variable()
+            endvar = self.identifier()
             if endvar.name != var.name:
                 raise Exception("The NEXT variable does not match")
                 self.error()
@@ -248,7 +307,7 @@ class Parser:
         paramlist = []
         self.eat(LPAREN)
         while self.current_token.type != RPAREN:
-            var = self.variable()
+            var = self.identifier()
             datatype = None
             if self.current_token.type == COLON:
                 self.eat(COLON)
@@ -264,7 +323,7 @@ class Parser:
 
     def procedure_def(self):
         self.eat(PROCEDURE)
-        name = self.variable()
+        name = self.identifier()
         if self.current_token.type == LPAREN:
             param = self.parameters()
         else:
@@ -275,7 +334,7 @@ class Parser:
         
     def function_def(self):
         self.eat(FUNCTION)
-        name = self.variable()
+        name = self.identifier()
         if self.current_token.type == LPAREN:
             param = self.parameters()
         else:

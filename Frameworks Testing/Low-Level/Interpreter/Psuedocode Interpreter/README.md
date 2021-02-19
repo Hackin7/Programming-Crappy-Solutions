@@ -9,7 +9,7 @@ Partially based on https://github.com/rspivak/lsbasi/blob/master/part19/spi.py
 empty : ""
 
 # Arithmetic
-variable: ID
+variable: ID (LSQPAREN factor RSQPAREN) *
 factor : PLUS factor
         | MINUS factor
         | INTEGER 
@@ -17,6 +17,7 @@ factor : PLUS factor
         | STRING
         | LPAREN expr RPAREN
         | variable
+        | factor(LPAREN (factor). (COMMA factor) * RPAREN)*
 term : factor ((MUL | DIV | MOD | FLOOR) factor)*
 expr : term ((PLUS | MINUS) term )* 
 
@@ -33,6 +34,9 @@ statement : assignment_statement
             | return_profunc
 
 # Declarations and Assignments
+var_declaration: DECLARE identifier COLON TYPE
+               | DECLARE identifier COLON ARRAY[INT:INT] OF TYPE
+
 ASSIGN : "<-" | "="
 assignment_statement: variable ASSIGN expr
 

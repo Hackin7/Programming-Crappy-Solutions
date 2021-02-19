@@ -25,13 +25,27 @@ class Interpreter:
             return f'{node.value} {self.visit(node.right)}'
         elif type(node) == NodeBinOp:
             return f'({self.visit(node.left)} {node.value} {self.visit(node.right)})'
+        elif type(node) == NodeArrayCall:
+            return f'{self.visit(node.var)}[{self.visit(node.index)}]'
+        elif type(node) == NodeFunctionCall:
+            arguments = ""
+            for factor in node.arguments:
+                arguments += f"{self.visit(factor)}," 
+            return f'{self.visit(node.var)}({arguments[:-1]})'
         # Program
         elif type(node) == NodeStatementList:
             output = ''
             for statement in node.statements:
                 output += f'{self.visit(statement)}\n'
             return output[:-1]
-        # Assignment
+        # Declaration & Assignment
+        elif type(node) == NodeVariableDeclaration:
+            if node.given_type.name == "ARRAY":
+                if node.size2 != None:
+                    return f'{self.visit(node.identifier)} = [ [ None for j in range({self.visit(node.size2)}) ] for i in range({self.visit(node.size1)}) ]'
+                else:
+                    return f'{self.visit(node.identifier)} = [ None for i in range({self.visit(node.size1)}) ]'
+            return f'{self.visit(node.identifier)} = None'
         elif type(node) == NodeAssignment:
             return f'{self.visit(node.left)} = {self.visit(node.right)}'
         # If-Else Statement

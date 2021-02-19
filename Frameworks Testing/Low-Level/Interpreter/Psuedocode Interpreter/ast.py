@@ -26,6 +26,14 @@ class NodeStatementList(Node):
         return f"{self.statements}"
 
 # Assignments
+class NodeVariableDeclaration(Node):
+    def __init__(self, identifier, given_type, size1=None, size2=None, array_type=None):
+        self.identifier = identifier
+        self.given_type = given_type
+        self.size1 = size1
+        self.size2 = size2
+        self.array_type = array_type
+    
 class NodeAssignment(Node):
     def __init__(self, identifier, expr):
         self.left = identifier
@@ -88,3 +96,13 @@ class NodeReturnProFunc(Node):
 class NodeIdentifier(Node):
     def __init__(self, token):
         self.name = token.value
+
+class NodeArrayCall(Node):
+    def __init__(self, var, index):
+        self.var = var
+        self.index = index
+
+class NodeFunctionCall(Node):
+    def __init__(self, var, arguments=[]):
+        self.var = var
+        self.arguments = arguments

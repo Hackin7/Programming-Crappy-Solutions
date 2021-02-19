@@ -16,16 +16,19 @@ NOT_EQUAL = "NOT_EQUAL"
 GTE = "GTE"
 GT = "GT"
 
-
 # Symbols
 LPAREN = '('
 RPAREN = ')'
+LSQPAREN = '['
+RSQPAREN = ']'
 SEMI = ';'
 COLON = ':'
 COMMA = ','
 DOT = '.'
 
-# Assignment
+# Declaration & Assignment
+DECLARE = "DECLARE"
+OF = "OF"
 ASSIGN = "ASSIGN"
 # If-Else
 IF = "IF"
@@ -98,10 +101,11 @@ symbols = {
     '>': Token(GT, '>'),
     # Assignment
     '=': Token(ASSIGN, '='),
-    
     # Symbols
     '(': Token(LPAREN, '('),
     ')': Token(RPAREN, ')'),
+    '[': Token(LSQPAREN, '['),
+    ']': Token(RSQPAREN, ']'),
     ';': Token(SEMI, ';'),
     '.': Token(DOT, '.'),
     ':': Token(COLON, ':'),
@@ -109,6 +113,9 @@ symbols = {
 }
 
 reserved_words = {
+    # Declaration & Assignment
+    "DECLARE": Token(DECLARE, "DECLARE"),
+    "OF": Token(OF, "OF"),
     # If-Else
     "IF": Token(IF, 'IF'),
     "THEN": Token(THEN, 'THEN'), 
