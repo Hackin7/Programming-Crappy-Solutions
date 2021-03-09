@@ -14,11 +14,20 @@ This will require a bit more knowledge about programming than Piggy Bank. Give i
 revenge
 revenge.c
 
-## Solution
+## Team
+NYCP
+
+## Category
+Pwn
+
+## Flag
+`WH2021{(Don't)Try_th1s_0n_youR_B4nk!}`
+
+## Steps
 
 ### Integer overflow
 
-Since the deposit/withdraw value is stored as an integer, I started thinking about Integer overflows
+We are given the code. Since the deposit/withdraw value is stored as an integer, I started thinking about Integer overflows
 
 We know the maximum value a C integer can hold is 2147483647
 
@@ -146,5 +155,3 @@ WH2021{(Don't)Try_th1s_0n_youR_B4nk!}
 $           
 ```
 
-# Flag
-`WH2021{(Don't)Try_th1s_0n_youR_B4nk!}`

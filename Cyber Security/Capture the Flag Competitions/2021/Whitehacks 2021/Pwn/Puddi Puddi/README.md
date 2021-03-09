@@ -11,9 +11,20 @@ Interact with the service using nc chals.whitehacks.ctf.sg 20301 to get started!
 exploit-template.py
 puddi
 
-## Solution
+## Team
+NYCP
+
+## Category
+Pwn
+
+
+## Flag
+`WH2021{3880fba0faf0_g1g4_pudd1}`
+
+## Steps
 
 ### Strategy
+
 $ checksec puddi
 [*] '/mnt/c/Users/zunmu/Documents/Stuff/Github/Solutions/Cyber Security/Capture the Flag Competitions/2021/Whitehacks 2021/Pwn/Puddi Puddi/puddi'
     Arch:     amd64-64-little
@@ -55,6 +66,3 @@ WH2021{3880fba0faf0_g1g4_pudd1}
 [*] Got EOF while reading in interactive
 $                
 ```
-
-## Flag
-`WH2021{3880fba0faf0_g1g4_pudd1}`
