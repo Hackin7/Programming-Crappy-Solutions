@@ -17,7 +17,7 @@ In the end our result felt shit though, being at 33rd place. ~~Is this what NS d
 List the challenges I have completed. Example:
 
 Here are the main challenges I did (or helped out with in order). Just traverse the directories to find them
-1. `Pwn/Piggy Bank` (Just look at the image, you basically give a negative value)
+1. `Pwn/Piggy Bank` (Just look at the image, you basically netcat into the server and give a negative value)
 2. `Pwn/Piggy_Bank_Revenge`
 3. `Pwn/Puddi Puddi`
 
