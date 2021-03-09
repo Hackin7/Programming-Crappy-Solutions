@@ -8,7 +8,7 @@ I participated it over the weekend (6 to 7 March 2021) for fun, with [undefined_
 
 In the competition I basically only did Pwn. The Pwn challenges were quite fun. `Piggy Bank` and `Piggy_Bank_Revenge` were basic. `Puddi Puddi` was a good challenge to get people interested in binary exploitation and buffer overflows. I almost solved Hopscotch (Overcome the Bad Canary and put shellcode on the stack but just could not run it for some reason and spent 2.5h). For some reason though I ended up learning to use Cutter (The reverse engineering program) to modify the binaries, which was fun but totally useless
 
-In the end our result felt shit though, being at 33rd place. ~~Is this what NS does to your brain?~~
+In the end our result felt shit though, being at 33rd place. ~~Is this what NS does to your brain?~~ I also totally didn't read the CSIT Challenges, which were about Android Apps (Fun) and seemed doable. I guess you should read all the challenges instead of focusing on only one topic.
 
 ![Scoreboard](Scoreboard/main.png)
 
@@ -31,3 +31,4 @@ Here are some much better writeups
 1. https://github.com/IRS-Cybersec/ctfdump/tree/master/Whitehacks%202021/crypto/LENcrypt, https://github.com/IRS-Cybersec/ctfdump/tree/master/Whitehacks%202021/pwn/Hopscotch, https://github.com/IRS-Cybersec/ctfdump/tree/master/Whitehacks%202021/pwn/Padoru%20Padoru
 2. https://ariana1729.github.io/writeups.html
 3. https://github.com/caprinux/WhiteHacks-2021-Writeups
+4. https://github.com/JavierLimZH/Whitehacks2021-Writeups
