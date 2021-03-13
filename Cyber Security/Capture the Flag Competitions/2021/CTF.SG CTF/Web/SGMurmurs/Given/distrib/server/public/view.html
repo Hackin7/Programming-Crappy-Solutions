@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="/popper.min.js">
+    </script>
+    <script src="/bootstrap.min.js">
+    </script>
+    <title>SGMurmurs</title>
+
+</head>
+
+<body>
+     <div class="container">
+        <img src='profile.png'/>
+        <h1 id="uuid">Confession #</h1>
+        <h2 id="confession">How do couples who are dating split bills for meals?From cheap meals in hawker to anniversary or Valentine’s Day dinner at restaurant? Do your take turns or split equally for every meal?</h2>
+
+        <p>Having a problem with your profile? Click <a id="report-uri" href="/report">here</a> to inform the admin!</p>
+    </div>
+</body>
+
+
+<script>
+    $.get( "/view", function( data ) {
+        let uuid = $( "#uuid" ).html() + data.uuid;
+        $( "#uuid" ).html(uuid);
+        $( "#confession" ).html(data.confession);
+    });
+</script>
+</html>

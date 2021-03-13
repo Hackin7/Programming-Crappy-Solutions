@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web-sgmurmurs:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      - FLAG=CTFSG{TEST_FLAG_NOT_REAL}
+    ports:
+      - 13337:8080
+    extra_hosts:
+      sgmurmurs-admin.ctf.sg: 127.0.0.1

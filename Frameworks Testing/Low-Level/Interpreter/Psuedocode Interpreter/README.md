@@ -1,6 +1,6 @@
 # A Level UK Psuedocode Interpreter
 
-A hobby project
+A psersonal hobby project
 Partially based on https://github.com/rspivak/lsbasi/blob/master/part19/spi.py
 
 ## Grammar
