@@ -161,36 +161,56 @@ class Parser:
             ll.statements.append(curr_statement)
             if self.current_token.type in (SEMI, NEWLINE):
                 self.eat(self.current_token.type)
+
+            
             curr_statement = self.statement()
             
-        print(self.current_token)
+        #print(self.current_token)
         return ll
         
     def statement(self):
         self.skip_newline()
-        if self.current_token.type == DECLARE:
-            return self.var_declaration()
-        elif self.current_token.type == ID:
-            return self.assignment_statement()
-        elif self.current_token.type == IF:
-            return self.if_statement()
-        elif self.current_token.type == FOR:
-            return self.for_loop()
-        elif self.current_token.type == WHILE:
-            return self.while_loop()
-        elif self.current_token.type == PROCEDURE:
-            return self.procedure_def()
-        elif self.current_token.type == FUNCTION:
-            return self.function_def()
-        elif self.current_token.type == RETURN:
-            return self.return_profunc()
-        elif self.current_token.type == INPUT:
-            return self.input()
-        elif self.current_token.type == OUTPUT:
-            return self.output()
-        else:
-            print("Invalid", self.current_token)
-            return None
+        try:
+            if self.current_token.type == DECLARE:
+                return self.var_declaration()
+            elif self.current_token.type == ID:
+                # Could either be a function call or an assignment. But implement another day
+                return self.assignment_statement()
+            elif self.current_token.type == CALL:
+                self.eat(CALL)
+                return self.factor()
+            elif self.current_token.type == IF:
+                return self.if_statement()
+            elif self.current_token.type == FOR:
+                return self.for_loop()
+            elif self.current_token.type == WHILE:
+                return self.while_loop()
+            elif self.current_token.type == PROCEDURE:
+                return self.procedure_def()
+            elif self.current_token.type == FUNCTION:
+                return self.function_def()
+            elif self.current_token.type == RETURN:
+                return self.return_profunc()
+            elif self.current_token.type == INPUT:
+                return self.input()
+            elif self.current_token.type == OUTPUT:
+                return self.output()
+            else:
+                #return self.expr()
+                #print("Invalid", self.current_token)
+                return self.expr()
+        except Exception as e:
+            print("### EXCEPTION ########################################")
+            print(e)
+            print("######################################################")
+            # Reset
+            self.lexer.reset(startPos)
+            self.current_token = self.lexer.get_next_token()
+            
+            print(self.current_token)
+            data = self.expr()
+            print(data)
+            return data
 
     ### Assignments #############################
     def var_declaration(self):
@@ -353,8 +373,8 @@ class Parser:
     ### Standard Library #########################
     def input(self):
         self.eat(INPUT)
-        var = self.variable()
-        return NodeInput(var)
+        idf = self.variable()
+        return NodeInput(idf)
 
     def output(self):
         self.eat(OUTPUT)

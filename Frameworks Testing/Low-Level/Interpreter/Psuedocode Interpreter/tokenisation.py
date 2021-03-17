@@ -50,6 +50,7 @@ ENDPROCEDURE = "ENDPROCEDURE"
 FUNCTION = "FUNCTION"
 ENDFUNCTION = "ENDFUNCTION"
 RETURN = "RETURN"
+CALL = "CALL"
 # Standard Library
 INPUT = "INPUT"
 OUTPUT = "OUTPUT"
@@ -140,6 +141,7 @@ reserved_words = {
     "INPUT": Token(INPUT, "INPUT"),
     "OUTPUT": Token(OUTPUT, "OUTPUT"), 
     'DIV': Token(DIV, '//'),
+    "CALL": Token(CALL, "CALL"),
 }
 
 def ordersort(lis):

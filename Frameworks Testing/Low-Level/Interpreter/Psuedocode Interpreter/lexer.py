@@ -28,6 +28,11 @@ class Lexer(object):
             curr += 1
         return result
     
+    def reset(self, pos):
+        print("Lexer Reset", self.pos, pos)
+        self.pos = pos
+        self.current_char = self.text[self.pos]
+        
     ### Skip Unnecessary #####################################################
     def skip_whitespace(self):
         while self.current_char is not None and \

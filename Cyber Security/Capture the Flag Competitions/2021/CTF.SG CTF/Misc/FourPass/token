@@ -1,0 +1,2 @@
+#!/usr/bin/python3.8
+a, b, c, d = list(map(int, input().split()));print(sum(filter(lambda x: x==1, map(lambda x: (lambda f: (lambda x: x(x))(lambda x: f(lambda *y: x(x)(*y))))(lambda f: lambda x, y: x if not y else f(y, x%y))(*x), [(f, x) for f in range(a, b) for x in range(c, d)]))))

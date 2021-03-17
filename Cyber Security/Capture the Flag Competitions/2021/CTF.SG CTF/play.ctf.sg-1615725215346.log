@@ -1,0 +1,47 @@
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+(async () => {
+	let challs = {};
+	const challElems = document.getElementsByClassName('challenge-card');
+	for (const challElem of challElems) {
+		let chall = {};
+		chall.name = challElem.getElementsByClassName('challenge-name')[0].innerText;
+		console.log(`Processing ${chall.name}`);
+		challElem.click();
+		await sleep(700);
+		chall.points = parseInt(document.getElementsByClassName('pill-points')[0].innerText);
+		chall.solves = parseInt(document.getElementsByClassName('solves')[0].innerText.split(' ')[0]);
+		chall.desc = document.getElementsByClassName('challenge-information')[0].innerText;
+		const challCat = document.getElementsByClassName('pill-category')[0].innerText;
+		if (challCat in challs) challs[challCat].push(chall);
+		else challs[challCat] = [chall];
+		document.getElementsByClassName('modal-close')[0].click();
+	}
+	console.log(challs)
+})();
+VM31:9 Processing Insanity Check
+Promise {<pending>}
+VM31:9 Processing Smartest Nation
+VM31:9 Processing 11B, Please
+VM31:9 Processing Which Lee?
+VM31:9 Processing FourPass
+VM31:9 Processing What do the numbas mean?
+VM31:9 Processing Haachama Cooking
+VM31:9 Processing Fries and Ice Cream
+VM31:9 Processing Circuit Breaker
+VM31:9 Processing Long Long Encrypt
+VM31:9 Processing GRIC
+VM31:9 Processing Live From Serangoon Road
+VM31:9 Processing TOTOTT
+VM31:9 Processing Wildest Dream
+VM31:9 Processing Take Note of This
+VM31:9 Processing SGMurmurs
+VM31:9 Processing Tangerine Stan
+VM31:9 Processing Touch Of The Paranoid
+VM31:9 Processing Warm Cockles
+VM31:9 Processing XMM
+VM31:9 Processing Pwn Overflow More Often
+VM31:9 Processing Your Door Got Problem!
+VM31:9 Processing Job Opportunities Portal
+VM31:9 Processing Watson's Funhouse
+VM31:20 {MISCELLANEOUS: Array(5), REVERSE ENGINEERING: Array(4), CRYPTO: Array(4), WEB: Array(6), PWN: Array(5)}CRYPTO: Array(4)0: {name: "Long Long Encrypt", points: 980, solves: 10, desc: "DESCRIPTION↵↵My encryption algorithm can encrypt paragraphs of text!↵↵Author: prokarius"}1: {name: "GRIC", points: 985, solves: 8, desc: "DESCRIPTION↵↵↵↵NRIC goes Global!↵↵nc chals.ctf.sg 10101↵↵Author: prokarius"}2: {name: "Live From Serangoon Road", points: 989, solves: 5, desc: "DESCRIPTION↵↵Damnit, this telco is down again. It'… be able to help us decode it?↵↵Author: prokarius"}3: {name: "TOTOTT", points: 991, solves: 4, desc: "DESCRIPTION↵↵We at Singapore Sloop just got 4 more… kiddo.↵↵nc chals.ctf.sg 10201↵↵Author: prokarius"}length: 4__proto__: Array(0)MISCELLANEOUS: (5) [{…}, {…}, {…}, {…}, {…}]PWN: (5) [{…}, {…}, {…}, {…}, {…}]REVERSE ENGINEERING: (4) [{…}, {…}, {…}, {…}]WEB: (6) [{…}, {…}, {…}, {…}, {…}, {…}]__proto__: Object
