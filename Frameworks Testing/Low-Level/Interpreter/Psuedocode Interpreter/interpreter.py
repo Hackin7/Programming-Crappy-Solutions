@@ -134,6 +134,8 @@ class Interpreter:
             
             
             ## Save Procedure Arguments ################################
+            if len(node.arguments) != len(function_node.params.paramslist):
+                raise Exception("Arguments doesn't line up with Parameters!!!")
             for index in range(len(node.arguments)):
                 factor = node.arguments[index]
                 param = function_node.params.paramslist[index][0]

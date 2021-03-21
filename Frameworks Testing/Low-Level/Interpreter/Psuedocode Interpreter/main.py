@@ -11,6 +11,8 @@ sys.setrecursionlimit(50)
 
 from lexer import Lexer
 from astparser import Parser
+
+from semantic_analyser import *
 from interpreter import Interpreter
 from convert_to_python import Interpreter as ToPythonInterpreter
 
@@ -55,7 +57,7 @@ PROCEDURE hello(a, b, c)
     OUTPUT "## Hello is called ########"
     OUTPUT a
     OUTPUT b
-    RETURN
+    RETURN 
     OUTPUT c
 ENDPROCEDURE
 
@@ -69,6 +71,7 @@ ENDFUNCTION
 
 CALL hello(1, 2, 3)
 OUTPUT hellofunc(1, 2, 3)
+
 '''
 
 if __name__ == '__main__':
@@ -76,13 +79,14 @@ if __name__ == '__main__':
 
     l = Lexer(text)
     p = Parser(l)
-
-    if True:
-        i = ToPythonInterpreter(p.program())
+    ast = p.program()
+    if False:
+        i = ToPythonInterpreter(ast)
         print()
         code = i.visit() 
         print(code)
     else:
-        ii = Interpreter(p.program())
+        SemanticAnalyzer(ast, False).visit()
+        ii = Interpreter(ast)
         ii.visit()
         print(ii.call_stack._records[0].members)
