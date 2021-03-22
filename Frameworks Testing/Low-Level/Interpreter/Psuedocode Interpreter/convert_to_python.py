@@ -1,6 +1,6 @@
 from ast import *
 
-class Interpreter:
+class ToPythonInterpreter:
     def __init__(self, tree):
         self.tree = tree
 
@@ -10,11 +10,11 @@ class Interpreter:
         for line in lines:
             result += indent + line + '\n'
         return result[:-1]
-    
+
     def visit(self, node=None):
         if node == None:
             node = self.tree
-            
+
         # Data and Arithmetic
         if type(node) == NodeData:
             if type(node.value) == str:
@@ -30,7 +30,7 @@ class Interpreter:
         elif type(node) == NodeFunctionCall:
             arguments = ""
             for factor in node.arguments:
-                arguments += f"{self.visit(factor)}," 
+                arguments += f"{self.visit(factor)},"
             return f'{self.visit(node.var)}({arguments[:-1]})'
         # Program
         elif type(node) == NodeStatementList:
@@ -57,24 +57,24 @@ class Interpreter:
         elif type(node) == NodeIfElse:
             result = ''
             result += f'if {self.visit(node.booleans[0])}:\n'
-            result += Interpreter.indentText(self.visit(node.statement_lists[0])) + '\n'
-            
+            result += ToPythonInterpreter.indentText(self.visit(node.statement_lists[0])) + '\n'
+
             for index in range(1, len(node.booleans)):
                 result += f'elif {self.visit(node.booleans[index])}:\n'
-                #result += Interpreter.indentText(self.visit(node.statement_lists[index])) + '\n'
+                #result += ToPythonInterpreter.indentText(self.visit(node.statement_lists[index])) + '\n'
             if len(node.booleans) < len(node.statement_lists):
-                 result += f'else:\n' 
-                 result += Interpreter.indentText(self.visit(node.statement_lists[-1])) + '\n'
-            
+                 result += f'else:\n'
+                 result += ToPythonInterpreter.indentText(self.visit(node.statement_lists[-1])) + '\n'
+
             return result[:-1]
         # Loops
         elif type(node) == NodeForLoop:
             result = f'for {self.visit(node.var)} in range({self.visit(node.start_expr)}, {self.visit(node.end_expr)} + 1):\n'
-            result += Interpreter.indentText(self.visit(node.statement_list))
+            result += ToPythonInterpreter.indentText(self.visit(node.statement_list))
             return result
         elif type(node) == NodeWhileLoop:
             result = f'while {self.visit(node.boolean)}:\n'
-            result += Interpreter.indentText(self.visit(node.statement_list))
+            result += ToPythonInterpreter.indentText(self.visit(node.statement_list))
             return result
         # Procedures and Functions
         elif type(node) == NodeParams:
@@ -87,7 +87,7 @@ class Interpreter:
             return result[:-2]
         elif type(node) in [NodeProcedure, NodeFunction]:
             result = f'def {self.visit(node.name)}({self.visit(node.params)}):\n'
-            result += Interpreter.indentText(self.visit(node.statement_list))
+            result += ToPythonInterpreter.indentText(self.visit(node.statement_list))
             return result
         elif type(node) == NodeReturnProFunc:
             if node.expr == None:
@@ -105,5 +105,3 @@ class Interpreter:
             return f'{node.name}'
         else:
             print(type(node))
-
-        

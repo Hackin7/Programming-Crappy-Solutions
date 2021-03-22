@@ -14,7 +14,7 @@ from astparser import Parser
 
 from semantic_analyser import *
 from interpreter import Interpreter
-from convert_to_python import Interpreter as ToPythonInterpreter
+from convert_to_python import ToPythonInterpreter
 
 text = '''
 /*
@@ -29,13 +29,13 @@ INPUT declared_array[1][2]
 OUTPUT declared_array[1][2]
 
 a <- 1 * 2 + 2 * 32 * 3
-b <-  3 
+b <-  3
 c <- b + a
 OUTPUT b
 
 OUTPUT '### Loops Testing #########################'
 d <- 0
-FOR i <- 1 TO 10 
+FOR i <- 1 TO 10
     d <- d + 1
 ENDFOR
 OUTPUT d
@@ -57,7 +57,7 @@ PROCEDURE hello(a, b, c)
     OUTPUT "## Hello is called ########"
     OUTPUT a
     OUTPUT b
-    RETURN 
+    RETURN
     OUTPUT c
 ENDPROCEDURE
 
@@ -73,6 +73,20 @@ CALL hello(1, 2, 3)
 OUTPUT hellofunc(1, 2, 3)
 
 '''
+def compile(code):
+    l = Lexer(code)
+    p = Parser(l)
+    ast = p.program()
+    SemanticAnalyzer(ast, False).visit()
+    code = ToPythonInterpreter(ast).visit()
+    print(code)
+
+def runPseudocode(code):
+    l = Lexer(text)
+    p = Parser(l)
+    ast = p.program()
+    SemanticAnalyzer(ast, False).visit()
+    code = Interpreter(ast).visit()
 
 if __name__ == '__main__':
     #text = input('parse> ')
@@ -83,7 +97,7 @@ if __name__ == '__main__':
     if False:
         i = ToPythonInterpreter(ast)
         print()
-        code = i.visit() 
+        code = i.visit()
         print(code)
     else:
         SemanticAnalyzer(ast, False).visit()

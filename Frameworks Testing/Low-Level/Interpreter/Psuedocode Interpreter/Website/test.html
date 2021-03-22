@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>index.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <script type="text/javascript">
+        window.languagePluginUrl = 'https://cdn.jsdelivr.net/pyodide/v0.17.0a2/full/';
+    </script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0a2/full/pyodide.js"></script>
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/index.html">Pseudocode Interpreter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+        <!--
+          <li class="nav-item active">
+            <a class="nav-link" href="/about.html">About</a></li>
+           <li><a class="nav-link" href="/achievements.html">Achievements</a></li>
+            <li><a class="nav-link" href="/links.html">CTF Writeups</a></li>
+        -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <br>
+    <div  style="margin-left:auto;margin-right:auto;width:80%;">
+        <p>Enter UK style Pseudocode, and it compiles to Python</p>
+          <textarea id='code' style="width:100%;">
+a <- 1
+OUTPUT a
+          </textarea><br>
+        <button onclick='convertToPython()'>Compile to Python</button>
+        <button onclick='runPseudocode()'>Run</button>
+        <!--<button onclick='evaluatePython()'>Run</button>-->
+
+          <br>
+          <br>
+          <div>
+            Output:
+          </div>
+          <textarea id='output' style='width: 100%;' rows='6' disabled></textarea>
+    </div>
+
+    <!-- Python Script -->
+    <script src="code.js"></script>
+    <script>
+    const output = document.getElementById("output");
+    const code = document.getElementById("code");
+
+    function addToOutput(s) {
+      output.value += '>>> ' + code.value + '\n' + s + '\n';
+    }
+
+    output.value = 'Initializing...\n';
+    languagePluginLoader.then(() => {
+        loadInterpreter();//output.value += 'Ready!\n'
+     });
+     function loadInterpreter(){
+         output.value += 'Loading Interpreter!\n';
+         pyodide.runPythonAsync(InterpreterCode)
+         .then(
+             s => {
+                 loadDiyIo();
+                 output.value += s + '\n';}
+         )
+         .catch(
+             (err) => { addToOutput(err) }
+         );
+     }
+    function loadDiyIo(){
+        pyodide.globals.print =  s => {
+            output.value += s + '\n';
+        };
+        pyodide.globals.input = s => {
+            let value = prompt(s);
+            return value;
+        }
+        /*pyodide.globals.set('print') = s => {
+            output.value += s + '\n';
+        };
+        */
+        /*
+        pyodide.globals.set('input') = s => {
+            let value = prompt(s);
+            return value;
+        }*/
+     }
+    function evaluatePython() {
+      pyodide.runPythonAsync(code.value)
+        .then(output => addToOutput(output))
+        .catch((err) => { addToOutput(err) });
+    }
+    function convertToPython(){
+        output.value = "";
+        let result = pyodide.globals.get('compile')(code.value);
+        output.value = result;
+    }
+
+    function runPseudocode(){
+        output.value = "";
+        let result = pyodide.globals.get('runPseudocode')(code.value);
+        //output.value = result;
+    }
+
+
+    </script>
+
+  </body>
+</html>
