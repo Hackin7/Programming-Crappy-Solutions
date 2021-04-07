@@ -1,0 +1,1318 @@
+# r2 rdb project file
+# eval
+"e anal.a2f = false"
+"e anal.arch = x86"
+"e anal.armthumb = false"
+"e anal.autoname = false"
+"e anal.bb.maxsize = 512K"
+"e anal.brokenrefs = false"
+"e anal.calls = false"
+"e anal.cpp.abi = itanium"
+"e anal.cpu = x86"
+"e anal.datarefs = false"
+"e anal.delay = true"
+"e anal.depth = 64"
+"e anal.endsize = true"
+"e anal.esil = false"
+"e anal.fcnprefix = fcn"
+"e anal.from = 0xffffffffffffffff"
+"e anal.gp = 0"
+"e anal.gpfixed = true"
+"e anal.graph_depth = 256"
+"e anal.hasnext = false"
+"e anal.hpskip = false"
+"e anal.ignbithints = false"
+"e anal.in = io.maps.x"
+"e anal.jmp.above = true"
+"e anal.jmp.after = true"
+"e anal.jmp.cref = false"
+"e anal.jmp.indir = false"
+"e anal.jmp.mid = true"
+"e anal.jmp.ref = true"
+"e anal.jmp.retpoline = true"
+"e anal.jmp.tailcall = 0"
+"e anal.jmp.tbl = true"
+"e anal.limits = false"
+"e anal.loads = false"
+"e anal.nonull = 0"
+"e anal.nopskip = true"
+"e anal.norevisit = false"
+"e anal.prelude = "
+"e anal.ptrdepth = 3"
+"e anal.pushret = false"
+"e anal.recont = false"
+"e anal.refstr = false"
+"e anal.rnr = false"
+"e anal.roregs = gp,zero"
+"e anal.sleep = 0"
+"e anal.strings = false"
+"e anal.timeout = 0"
+"e anal.to = 0xffffffffffffffff"
+"e anal.trycatch = false"
+"e anal.types.constraint = false"
+"e anal.types.spec = gcc"
+"e anal.types.verbose = false"
+"e anal.vars = true"
+"e anal.vars.stackname = false"
+"e anal.verbose = false"
+"e anal.vinfun = true"
+"e anal.vinfunrange = false"
+"e asm.anal = false"
+"e asm.arch = x86"
+"e asm.assembler = "
+"e asm.bb.line = false"
+"e asm.bb.middle = true"
+"e asm.bits = 64"
+"e asm.bytes = false"
+"e asm.bytes.right = false"
+"e asm.bytes.space = false"
+"e asm.calls = true"
+"e asm.capitalize = false"
+"e asm.cmt.col = 35"
+"e asm.cmt.esil = false"
+"e asm.cmt.flgrefs = true"
+"e asm.cmt.fold = false"
+"e asm.cmt.off = nodup"
+"e asm.cmt.patch = false"
+"e asm.cmt.refs = false"
+"e asm.cmt.right = true"
+"e asm.comments = true"
+"e asm.cpu = x86"
+"e asm.cycles = false"
+"e asm.cyclespace = false"
+"e asm.decode = false"
+"e asm.decoff = false"
+"e asm.demangle = true"
+"e asm.describe = false"
+"e asm.dwarf = true"
+"e asm.dwarf.abspath = false"
+"e asm.dwarf.file = true"
+"e asm.emu = false"
+"e asm.esil = false"
+"e asm.family = false"
+"e asm.fcnsig = true"
+"e asm.features = "
+"e asm.filter = true"
+"e asm.flags = true"
+"e asm.flags.inbytes = false"
+"e asm.flags.inline = false"
+"e asm.flags.limit = 0"
+"e asm.flags.maxname = 0"
+"e asm.flags.middle = 2"
+"e asm.flags.offset = false"
+"e asm.flags.real = 1"
+"e asm.functions = true"
+"e asm.highlight = "
+"e asm.hint.call = true"
+"e asm.hint.cdiv = false"
+"e asm.hint.emu = false"
+"e asm.hint.jmp = false"
+"e asm.hint.lea = false"
+"e asm.hint.pos = 1"
+"e asm.hints = true"
+"e asm.imm.arm = 0"
+"e asm.imm.str = true"
+"e asm.imm.trim = false"
+"e asm.indent = false"
+"e asm.indentspace = 2"
+"e asm.instr = true"
+"e asm.invhex = false"
+"e asm.lbytes = true"
+"e asm.lines = true"
+"e asm.lines.bb = true"
+"e asm.lines.call = false"
+"e asm.lines.fcn = true"
+"e asm.lines.maxref = 0"
+"e asm.lines.out = true"
+"e asm.lines.ret = false"
+"e asm.lines.right = false"
+"e asm.lines.wide = false"
+"e asm.lines.width = 7"
+"e asm.marks = false"
+"e asm.meta = true"
+"e asm.midcursor = false"
+"e asm.middle = false"
+"e asm.minicols = false"
+"e asm.nbytes = 10"
+"e asm.nodup = false"
+"e asm.noisy = true"
+"e asm.offset = true"
+"e asm.optype = false"
+"e asm.os = linux"
+"e asm.parser = x86.pseudo"
+"e asm.payloads = false"
+"e asm.pcalign = 0"
+"e asm.pseudo = 0"
+"e asm.refptr = false"
+"e asm.reloff = false"
+"e asm.reloff.flags = false"
+"e asm.section = false"
+"e asm.section.col = 20"
+"e asm.section.name = true"
+"e asm.section.perm = false"
+"e asm.seggrn = 4"
+"e asm.segoff = false"
+"e asm.size = false"
+"e asm.slow = true"
+"e asm.stackptr = false"
+"e asm.strip = "
+"e asm.sub.jmp = true"
+"e asm.sub.reg = false"
+"e asm.sub.rel = true"
+"e asm.sub.section = false"
+"e asm.sub.tail = false"
+"e asm.sub.varmin = 256"
+"e asm.sub.varonly = true"
+"e asm.symbol = false"
+"e asm.symbol.col = 40"
+"e asm.syntax = intel"
+"e asm.tabs = 1"
+"e asm.tabs.off = 5"
+"e asm.tabs.once = true"
+"e asm.trace = false"
+"e asm.tracespace = false"
+"e asm.types = 1"
+"e asm.ucase = false"
+"e asm.usercomments = false"
+"e asm.var = true"
+"e asm.var.access = false"
+"e asm.var.sub = true"
+"e asm.var.summary = 0"
+"e asm.xrefs = false"
+"e asm.xrefs.code = true"
+"e asm.xrefs.fold = 5"
+"e asm.xrefs.max = 20"
+"e bin.at = false"
+"e bin.b64str = false"
+"e bin.baddr = 0"
+"e bin.classes = true"
+"e bin.dbginfo = true"
+"e bin.debase64 = false"
+"e bin.demangle = true"
+"e bin.demangle.libs = false"
+"e bin.demanglecmd = false"
+"e bin.filter = true"
+"e bin.force = "
+"e bin.hashlimit = 10M"
+"e bin.laddr = 0"
+"e bin.lang = c"
+"e bin.libs = false"
+"e bin.maxstr = 0"
+"e bin.maxstrbuf = 0x00a00000"
+"e bin.minstr = 0"
+"e bin.prefix = "
+"e bin.rawstr = false"
+"e bin.relocs = true"
+"e bin.str.enc = guess"
+"e bin.str.filter = "
+"e bin.str.purge = "
+"e bin.strings = true"
+"e bin.useldr = true"
+"e bin.usextr = true"
+"e bin.verbose = false"
+"e cfg.bigendian = false"
+"e cfg.corelog = false"
+"e cfg.cpuaffinity = 0"
+"e cfg.debug = false"
+"e cfg.editor = vi"
+"e cfg.fortunes = true"
+"e cfg.fortunes.clippy = false"
+"e cfg.fortunes.tts = false"
+"e cfg.fortunes.type = tips,fun"
+"e cfg.newshell = false"
+"e cfg.newtab = false"
+"e cfg.plugins = true"
+"e cfg.prefixdump = dump"
+"e cfg.r2wars = false"
+"e cfg.sandbox = false"
+"e cfg.user = pid48493"
+"e cfg.wseek = false"
+"e cmd.bp = "
+"e cmd.cprompt = "
+"e cmd.depth = 10"
+"e cmd.esil.intr = "
+"e cmd.esil.ioer = "
+"e cmd.esil.mdev = "
+"e cmd.esil.step = "
+"e cmd.esil.stepout = "
+"e cmd.esil.todo = "
+"e cmd.esil.trap = "
+"e cmd.fcn.delete = "
+"e cmd.fcn.new = "
+"e cmd.fcn.rename = "
+"e cmd.gprompt = "
+"e cmd.hexcursor = "
+"e cmd.hit = "
+"e cmd.hitinfo = 1"
+"e cmd.load = "
+"e cmd.log = "
+"e cmd.onsyscall = "
+"e cmd.open = "
+"e cmd.pdc = "
+"e cmd.prompt = "
+"e cmd.repeat = false"
+"e cmd.stack = "
+"e cmd.times = "
+"e cmd.visual = "
+"e cmd.vprompt = "
+"e cmd.xterm = xterm -bg black -fg gray -e"
+"e dbg.aftersyscall = true"
+"e dbg.args = "
+"e dbg.backend = native"
+"e dbg.bep = loader"
+"e dbg.bpinmaps = true"
+"e dbg.bpsize = 1"
+"e dbg.bpsysign = false"
+"e dbg.btalgo = fuzzy"
+"e dbg.btdepth = 128"
+"e dbg.clone = false"
+"e dbg.consbreak = false"
+"e dbg.exe.path = "
+"e dbg.execs = false"
+"e dbg.exitkills = true"
+"e dbg.follow = 32"
+"e dbg.follow.child = false"
+"e dbg.forks = false"
+"e dbg.funcarg = false"
+"e dbg.gdb.page_size = 0x00001000"
+"e dbg.gdb.retries = 10"
+"e dbg.glibc.fc_offset = 640"
+"e dbg.glibc.ma_offset = 0"
+"e dbg.glibc.tcache = false"
+"e dbg.hwbp = 0"
+"e dbg.libc.dbglib = "
+"e dbg.libs = "
+"e dbg.malloc = glibc"
+"e dbg.profile = "
+"e dbg.rebase = true"
+"e dbg.skipover = false"
+"e dbg.slow = false"
+"e dbg.status = false"
+"e dbg.swstep = false"
+"e dbg.threads = false"
+"e dbg.trace = 0"
+"e dbg.trace.inrange = false"
+"e dbg.trace.libs = true"
+"e dbg.trace.tag = 0"
+"e dbg.unlibs = "
+"e dbg.verbose = true"
+"e diff.bare = false"
+"e diff.from = 0"
+"e diff.levenstein = false"
+"e diff.sort = addr"
+"e diff.to = 0"
+"e dir.dbgsnap = ."
+"e dir.depth = 10"
+"e dir.home = /home/hacker"
+"e dir.libs = "
+"e dir.magic = /usr/share/radare2/4.5.1/magic"
+"e dir.plugins = /tmp/.mount_CutterE4Kzz3/usr/share/radare2/plugins"
+"e dir.prefix = /tmp/.mount_CutterE4Kzz3/usr"
+"e dir.projects = /run/media/hacker/Windows/Users/zunmu/Documents/Stuff/Github/Solutions/Cyber Security"
+"e dir.source = "
+"e dir.tmp = "
+"e dir.types = /usr/include"
+"e dir.zigns = ~/.local/share/radare2/zigns"
+"e emu.lazy = false"
+"e emu.pre = false"
+"e emu.skip = ds"
+"e emu.ssa = false"
+"e emu.stack = false"
+"e emu.str = 0"
+"e emu.str.flag = true"
+"e emu.str.inv = true"
+"e emu.str.lea = true"
+"e emu.str.off = false"
+"e emu.write = false"
+"e esil.addr.size = 64"
+"e esil.breakoninvalid = true"
+"e esil.exectrap = false"
+"e esil.fillstack = "
+"e esil.gotolimit = 0x00001000"
+"e esil.iotrap = true"
+"e esil.mdev.range = "
+"e esil.nonull = false"
+"e esil.prestep = true"
+"e esil.romem = false"
+"e esil.stack.addr = 0x00100000"
+"e esil.stack.depth = 32"
+"e esil.stack.pattern = 0"
+"e esil.stack.size = 0x000f0000"
+"e esil.stats = false"
+"e esil.timeout = 0"
+"e esil.verbose = 0"
+"e file.desc = "
+"e file.info = true"
+"e file.lastpath = /run/media/hacker/Windows/Users/zunmu/Documents/Stuff/Github/Solutions/Cyber Security/Capture the Flag Competitions/2021/ångstromCTF/REV/Infinity Gauntlet/infinity_gauntlet"
+"e file.loadalign = 0x00000400"
+"e file.location = "
+"e file.md5 = "
+"e file.offset = "
+"e file.openmany = 1"
+"e file.path = /run/media/hacker/Windows/Users/zunmu/Documents/Stuff/Github/Solutions/Cyber Security/Capture the Flag Competitions/2021/ångstromCTF/REV/Infinity Gauntlet/infinity_gauntlet"
+"e file.type = elf"
+"e fs.view = normal"
+"e graph.aeab = false"
+"e graph.body = true"
+"e graph.bubble = false"
+"e graph.bytes = false"
+"e graph.cmtright = false"
+"e graph.comments = true"
+"e graph.dotted = false"
+"e graph.dummy = true"
+"e graph.edges = 2"
+"e graph.few = false"
+"e graph.font = Courier"
+"e graph.from = 0xffffffffffffffff"
+"e graph.gv.current = false"
+"e graph.gv.edge = "
+"e graph.gv.format = gif"
+"e graph.gv.graph = "
+"e graph.gv.node = "
+"e graph.gv.spline = "
+"e graph.hints = true"
+"e graph.invscroll = false"
+"e graph.json.usenames = true"
+"e graph.layout = 0"
+"e graph.linemode = 1"
+"e graph.nodejmps = true"
+"e graph.ntitles = true"
+"e graph.offset = false"
+"e graph.refs = false"
+"e graph.scroll = 5"
+"e graph.title = "
+"e graph.to = 0xffffffffffffffff"
+"e graph.trace = false"
+"e graph.web = false"
+"e hex.align = false"
+"e hex.ascii = true"
+"e hex.bytes = true"
+"e hex.cols = 16"
+"e hex.comments = true"
+"e hex.compact = false"
+"e hex.depth = 5"
+"e hex.flagsz = 0"
+"e hex.hdroff = false"
+"e hex.header = true"
+"e hex.offset = true"
+"e hex.onechar = false"
+"e hex.pairs = 0"
+"e hex.section = false"
+"e hex.stride = 0"
+"e hex.style = false"
+"e http.allow = "
+"e http.auth = false"
+"e http.authfile = "
+"e http.authtok = r2admin:r2admin"
+"e http.bind = localhost"
+"e http.browser = xdg-open"
+"e http.colon = false"
+"e http.cors = false"
+"e http.dietime = 0"
+"e http.dirlist = false"
+"e http.homeroot = ~/.local/share/radare2/www"
+"e http.index = index.html"
+"e http.log = true"
+"e http.logfile = "
+"e http.maxport = 9999"
+"e http.maxsize = 0"
+"e http.port = 9090"
+"e http.referer = "
+"e http.root = /usr/share/radare2/4.5.1/www"
+"e http.sandbox = true"
+"e http.sync = "
+"e http.timeout = 3"
+"e http.ui = m"
+"e http.upget = false"
+"e http.upload = false"
+"e http.uproot = /tmp"
+"e http.uri = "
+"e http.verbose = false"
+"e hud.path = "
+"e io.0xff = 255"
+"e io.aslr = false"
+"e io.autofd = true"
+"e io.cache = 0"
+"e io.cache.auto = false"
+"e io.cache.read = false"
+"e io.cache.write = false"
+"e io.exec = true"
+"e io.ff = true"
+"e io.pava = false"
+"e io.pcache = 0"
+"e io.pcache.read = 0"
+"e io.pcache.write = 0"
+"e io.unalloc = false"
+"e io.unalloc.ch = ."
+"e io.va = 1"
+"e key.S = "
+"e key.f1 = "
+"e key.f10 = "
+"e key.f11 = "
+"e key.f12 = "
+"e key.f2 = "
+"e key.f3 = "
+"e key.f4 = "
+"e key.f5 = "
+"e key.f6 = "
+"e key.f7 = "
+"e key.f8 = "
+"e key.f9 = "
+"e key.s = "
+"e lines.abs = false"
+"e lines.from = 0"
+"e lines.to = $s"
+"e log.colors = false"
+"e log.events = false"
+"e log.file = "
+"e log.level = 4"
+"e log.srcinfo = false"
+"e log.traplevel = 6"
+"e magic.depth = 100"
+"e pdb.autoload = 0"
+"e pdb.extract = 1"
+"e pdb.server = https://msdl.microsoft.com/download/symbols"
+"e pdb.symstore = /home/hacker/.local/share/radare2/pdb"
+"e pdb.useragent = Microsoft-Symbol-Server/6.11.0001.402"
+"e prj.files = true"
+"e prj.git = false"
+"e prj.gpg = false"
+"e prj.name = infinity_gauntlet"
+"e prj.simple = true"
+"e prj.zip = false"
+"e r2dec.asm = false"
+"e r2dec.blocks = false"
+"e r2dec.casts = false"
+"e r2dec.debug = false"
+"e r2dec.highlight = default"
+"e r2dec.paddr = false"
+"e r2dec.slow = false"
+"e r2dec.theme = default"
+"e r2dec.xrefs = false"
+"e r2ghidra.cmt.cpp = true"
+"e r2ghidra.cmt.indent = 4"
+"e r2ghidra.indent = 4"
+"e r2ghidra.lang = "
+"e r2ghidra.linelen = 120"
+"e r2ghidra.nl.brace = false"
+"e r2ghidra.nl.else = false"
+"e r2ghidra.rawptr = true"
+"e r2ghidra.sleighhome = /tmp/.mount_CutterE4Kzz3/usr/share/radare2/plugins/r2ghidra_sleigh"
+"e r2ghidra.verbose = true"
+"e rap.loop = true"
+"e rop.comments = false"
+"e rop.conditional = false"
+"e rop.db = true"
+"e rop.len = 5"
+"e rop.sdb = false"
+"e rop.subchains = false"
+"e scr.bgfill = false"
+"e scr.breaklines = false"
+"e scr.breakword = "
+"e scr.color = 0"
+"e scr.color.args = true"
+"e scr.color.bytes = true"
+"e scr.color.grep = false"
+"e scr.color.ops = true"
+"e scr.color.pipe = false"
+"e scr.columns = 0"
+"e scr.confirmquit = false"
+"e scr.demo = false"
+"e scr.dumpcols = false"
+"e scr.echo = false"
+"e scr.feedback = 1"
+"e scr.fgets = false"
+"e scr.fix.columns = 0"
+"e scr.fix.rows = 0"
+"e scr.flush = false"
+"e scr.fps = false"
+"e scr.gadgets = true"
+"e scr.highlight = "
+"e scr.highlight.grep = false"
+"e scr.hist.block = true"
+"e scr.histsave = true"
+"e scr.html = 0"
+"e scr.interactive = 0"
+"e scr.last = true"
+"e scr.layout = "
+"e scr.linesleep = 0"
+"e scr.maxtab = 0x00001000"
+"e scr.nkey = flag"
+"e scr.null = false"
+"e scr.pager = "
+"e scr.pagesize = 1"
+"e scr.panelborder = false"
+"e scr.prompt = true"
+"e scr.prompt.file = false"
+"e scr.prompt.flag = false"
+"e scr.prompt.mode = false"
+"e scr.prompt.popup = false"
+"e scr.prompt.sect = false"
+"e scr.prompt.vi = false"
+"e scr.rainbow = false"
+"e scr.randpal = false"
+"e scr.responsive = false"
+"e scr.rows = 0"
+"e scr.scrollbar = 0"
+"e scr.seek = "
+"e scr.slow = true"
+"e scr.square = true"
+"e scr.strconv = asciiesc"
+"e scr.tee = "
+"e scr.tts = false"
+"e scr.utf8 = true"
+"e scr.utf8.curvy = false"
+"e scr.wheel = true"
+"e scr.wheel.nkey = false"
+"e scr.wheel.speed = 4"
+"e scr.wideoff = false"
+"e search.align = 0"
+"e search.chunk = 0"
+"e search.contiguous = true"
+"e search.distance = 0"
+"e search.esilcombo = 8"
+"e search.flags = false"
+"e search.from = 0xffffffffffffffff"
+"e search.in = bin.section"
+"e search.kwidx = 0"
+"e search.maxhits = 0"
+"e search.overlap = false"
+"e search.prefix = hit"
+"e search.show = true"
+"e search.to = 0xffffffffffffffff"
+"e stack.anotated = false"
+"e stack.bytes = true"
+"e stack.delta = 0"
+"e stack.reg = SP"
+"e stack.size = 64"
+"e str.escbslash = false"
+"e tcp.islocal = false"
+"e time.fmt = %Y-%m-%d %H:%M:%S %z"
+"e time.zone = 0"
+"e zign.autoload = false"
+"e zign.bytes = true"
+"e zign.diff.bthresh = 1.0"
+"e zign.diff.gthresh = 1.0"
+"e zign.graph = true"
+"e zign.hash = true"
+"e zign.maxsz = 500"
+"e zign.mincc = 10"
+"e zign.minsz = 16"
+"e zign.offset = true"
+"e zign.prefix = sign"
+"e zign.refs = true"
+"e zign.types = true"
+"e zoom.byte = h"
+"e zoom.from = 0"
+"e zoom.in = io.map"
+"e zoom.maxsz = 512"
+"e zoom.to = 0"
+# functions
+fs functions
+"f entry0 46 0x00001520"
+"af+ 0x00001520 entry0 f n"
+afb+ 0x00001520 0x00001520 46 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001520
+afc amd64 @ 0x00001520
+afvr rdx arg3 int64_t @ 0x1520
+axd 0x16b0 0x1533
+axd 0x1640 0x153a
+axd 0x10f0 0x1541
+axC 0x3fe0 0x1548
+afS 8 @ 0x1520
+"f deregister_tm_clones 41 0x00001550"
+"af+ 0x00001550 deregister_tm_clones f n"
+afb+ 0x00001550 0x00001550 19 0x00001578 0x00001563
+afb+ 0x00001550 0x00001563 12 0x00001578 0x0000156f
+afb+ 0x00001550 0x0000156f 2 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0x00001550 0x00001578 1 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001550
+afc amd64 @ 0x00001550
+axd 0x4088 0x1550
+axd 0x4088 0x1557
+axc 0x1578 0x1561
+axd 0x3fd8 0x1563
+axc 0x1578 0x156d
+afS 0 @ 0x1550
+"f register_tm_clones 57 0x00001580"
+"af+ 0x00001580 register_tm_clones f n"
+afb+ 0x00001580 0x00001580 36 0x000015b8 0x000015a4
+afb+ 0x00001580 0x000015a4 12 0x000015b8 0x000015b0
+afb+ 0x00001580 0x000015b0 2 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0x00001580 0x000015b8 1 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001580
+afc amd64 @ 0x00001580
+axd 0x4088 0x1580
+axd 0x4088 0x1587
+axc 0x15b8 0x15a2
+axd 0x3ff0 0x15a4
+axc 0x15b8 0x15ae
+afS 0 @ 0x1580
+"f sym.__do_global_dtors_aux 65 0x000015c0"
+"af+ 0x000015c0 sym.__do_global_dtors_aux s n"
+afb+ 0x000015c0 0x000015c0 13 0x00001600 0x000015cd
+afb+ 0x000015c0 0x000015cd 14 0x000015e8 0x000015db
+afb+ 0x000015c0 0x000015db 13 0x000015e8 0xffffffffffffffff
+afb+ 0x000015c0 0x000015e8 14 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0x000015c0 0x00001600 1 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000015c0
+afc amd64 @ 0x000015c0
+axd 0x4090 0x15c4
+axc 0x1600 0x15cb
+axd 0x3ff8 0x15ce
+axc 0x15e8 0x15d9
+axd 0x4080 0x15db
+axC 0x3ff8 0x15e2
+axC 0x1550 0x15e8
+axd 0x4090 0x15ed
+afS 8 @ 0x15c0
+"f entry.init0 9 0x00001610"
+"af+ 0x00001610 entry.init0 f n"
+afb+ 0x00001610 0x00001610 9 0x00001580 0xffffffffffffffff
+afB 64 @ 0x00001610
+afc amd64 @ 0x00001610
+axc 0x1580 0x1614
+afS 0 @ 0x1610
+"f sym._init 27 0x00001000"
+"af+ 0x00001000 sym._init s n"
+afb+ 0x00001000 0x00001000 20 0x00001016 0x00001014
+afb+ 0x00001000 0x00001014 2 0x00001016 0xffffffffffffffff
+afb+ 0x00001000 0x00001016 5 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001000
+afc amd64 @ 0x00001000
+axd 0x3fe8 0x1008
+axc 0x1016 0x1012
+afS 8 @ 0x1000
+"f sym.__libc_csu_fini 5 0x000016b0"
+"af+ 0x000016b0 sym.__libc_csu_fini s n"
+afb+ 0x000016b0 0x000016b0 5 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000016b0
+afc amd64 @ 0x000016b0
+afS 0 @ 0x16b0
+"f sym.bar 9 0x00001630"
+"af+ 0x00001630 sym.bar s n"
+afb+ 0x00001630 0x00001630 9 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001630
+afc amd64 @ 0x00001630
+afvr rdi arg1 int64_t @ 0x1630
+afvr rdx arg3 int64_t @ 0x1630
+afS 0 @ 0x1630
+"f sym._fini 13 0x000016b8"
+"af+ 0x000016b8 sym._fini s n"
+afb+ 0x000016b8 0x000016b8 13 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000016b8
+afc amd64 @ 0x000016b8
+afS 8 @ 0x16b8
+"f sym.__libc_csu_init 101 0x00001640"
+"af+ 0x00001640 sym.__libc_csu_init s n"
+afb+ 0x00001640 0x00001640 55 0x00001696 0x00001677
+afb+ 0x00001640 0x00001677 9 0x00001680 0xffffffffffffffff
+afb+ 0x00001640 0x00001680 22 0x00001680 0x00001696
+afb+ 0x00001640 0x00001696 15 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001640
+afc amd64 @ 0x00001640
+afvr rdi arg1 int64_t @ 0x1640
+afvr rsi arg2 int64_t @ 0x1640
+afvr rdx arg3 int64_t @ 0x1640
+axd 0x3de8 0x1646
+axd 0x3df0 0x165d
+axC 0x1000 0x166c
+axc 0x1696 0x1675
+axC 0x0 0x1689
+axc 0x1680 0x1694
+afS 56 @ 0x1640
+"f sym.foo 11 0x00001620"
+"af+ 0x00001620 sym.foo s n"
+afb+ 0x00001620 0x00001620 11 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001620
+afc amd64 @ 0x00001620
+afvr rdi arg1 int64_t @ 0x1620
+afvr rsi arg2 int64_t @ 0x1620
+axd 0x539 0x1625
+afS 0 @ 0x1620
+"f main 1072 0x000010f0"
+"af+ 0x000010f0 main s n"
+afb+ 0x000010f0 0x000010f0 85 0x000014e9 0x00001145
+afb+ 0x000010f0 0x00001145 62 0x0000119d 0x00001183
+afb+ 0x000010f0 0x00001183 13 0x00001190 0xffffffffffffffff
+afb+ 0x000010f0 0x00001190 13 0x00001190 0x0000119d
+afb+ 0x000010f0 0x0000119d 60 0x0000127c 0xffffffffffffffff
+afb+ 0x000010f0 0x000011e0 40 0x00001338 0x00001208
+afb+ 0x000010f0 0x00001208 9 0x000013f0 0x00001211
+afb+ 0x000010f0 0x00001211 61 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x0000124e 27 0x00001430 0x00001269
+afb+ 0x000010f0 0x00001269 19 0x0000127c 0xffffffffffffffff
+afb+ 0x000010f0 0x0000127c 30 0x00001504 0x0000129a
+afb+ 0x000010f0 0x0000129a 17 0x000012ab 0xffffffffffffffff
+afb+ 0x000010f0 0x000012ab 13 0x000011e0 0x000012b8
+afb+ 0x000010f0 0x000012b8 13 0x00001380 0x000012c5
+afb+ 0x000010f0 0x000012c5 20 0x00001481 0x000012d9
+afb+ 0x000010f0 0x000012d9 9 0x000014b5 0x000012e2
+afb+ 0x000010f0 0x000012e2 12 0x00001470 0x000012ee
+afb+ 0x000010f0 0x000012ee 35 0x00001311 0xffffffffffffffff
+afb+ 0x000010f0 0x00001311 34 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x00001338 62 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x00001380 102 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x000013f0 62 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x00001430 14 0x0000143e 0xffffffffffffffff
+afb+ 0x000010f0 0x0000143e 23 0x000014ff 0x00001455
+afb+ 0x000010f0 0x00001455 18 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0x000010f0 0x00001470 17 0x00001311 0xffffffffffffffff
+afb+ 0x000010f0 0x00001481 52 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x000014b5 52 0x0000124e 0xffffffffffffffff
+afb+ 0x000010f0 0x000014e9 22 0x0000143e 0xffffffffffffffff
+afb+ 0x000010f0 0x000014ff 5 0xffffffffffffffff 0xffffffffffffffff
+afb+ 0x000010f0 0x00001504 28 0x000012ab 0xffffffffffffffff
+afB 64 @ 0x000010f0
+afc amd64 @ 0x000010f0
+afvs -332 var_ch uint32_t @ 0x10f0
+afvs -328 s char * @ 0x10f0
+afvs -64 var_118h int64_t @ 0x10f0
+axd 0x128 0x1103
+axd 0x4088 0x110a
+axC 0x10b0 0x1124
+axd 0x2004 0x1129
+axd 0x2006 0x1130
+axC 0x10c0 0x1137
+axc 0x14e9 0x113f
+axd 0x100 0x114d
+axC 0x1090 0x1158
+axC 0x1040 0x1160
+axd 0x203a 0x1165
+axC 0x1070 0x116f
+axc 0x119d 0x1181
+axd 0x11 0x1183
+axd 0x11 0x1192
+axc 0x1190 0x119b
+axd 0x539 0x11a9
+axC 0x10a0 0x11af
+axC 0x1080 0x11b7
+axd 0x20d0 0x11bc
+axC 0x1030 0x11c3
+axd 0x20f8 0x11c8
+axC 0x1030 0x11cf
+axc 0x127c 0x11d4
+axC 0x10e0 0x11e0
+axc 0x1338 0x1202
+axd 0x1 0x1208
+axc 0x13f0 0x120b
+axC 0x10e0 0x1211
+axd 0x205e 0x1216
+axd 0x539 0x1243
+axC 0x1060 0x1249
+axd 0x20c3 0x1253
+axC 0x10d0 0x125a
+axc 0x1430 0x1263
+axd 0x2130 0x126c
+axC 0x1060 0x1277
+axd 0x202a 0x127e
+axC 0x1060 0x1287
+axC 0x10e0 0x128c
+axd 0x31 0x1291
+axc 0x1504 0x1294
+axC 0x10e0 0x129a
+axC 0x10e0 0x12ab
+axd 0x1 0x12b0
+axc 0x11e0 0x12b2
+axC 0x10e0 0x12b8
+axd 0x3 0x12bd
+axc 0x1380 0x12bf
+axd 0x1 0x12d0
+axc 0x1481 0x12d3
+axd 0x2 0x12d9
+axc 0x14b5 0x12dc
+axd 0x539 0x12e2
+axc 0x1470 0x12e8
+axC 0x10e0 0x12ee
+axd 0x20ae 0x1315
+axC 0x1060 0x1329
+axc 0x124e 0x132e
+axC 0x10e0 0x1338
+axd 0x203c 0x133d
+axd 0x539 0x1366
+axC 0x1060 0x136c
+axc 0x124e 0x1371
+axC 0x10e0 0x1380
+axC 0x10e0 0x13a3
+axd 0x206f 0x13ab
+axC 0x1060 0x13dc
+axc 0x124e 0x13e1
+axC 0x10e0 0x13f0
+axd 0x204d 0x13f5
+axd 0x539 0x141e
+axC 0x1060 0x1424
+axc 0x124e 0x1429
+axd 0x20c6 0x1430
+axC 0x1030 0x1437
+axc 0x14ff 0x144f
+axd 0x128 0x1455
+axC 0x10e0 0x1470
+axc 0x1311 0x147c
+axC 0x10e0 0x1481
+axC 0x10e0 0x148d
+axd 0x2084 0x1495
+axC 0x1060 0x14ab
+axc 0x124e 0x14b0
+axC 0x10e0 0x14b5
+axC 0x10e0 0x14c1
+axd 0x2099 0x14cc
+axC 0x1060 0x14df
+axc 0x124e 0x14e4
+axd 0x200f 0x14e9
+axC 0x1030 0x14f0
+axc 0x143e 0x14fa
+axC 0x1050 0x14ff
+axc 0x12ab 0x151b
+afS 344 @ 0x10f0
+"f sym.imp.puts 6 0x00001030"
+"af+ 0x00001030 sym.imp.puts s n"
+afb+ 0x00001030 0x00001030 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001030
+afc amd64 @ 0x00001030
+axc 0x4018 0x1030
+afS 0 @ 0x1030
+"f sym.imp.fclose 6 0x00001040"
+"af+ 0x00001040 sym.imp.fclose s n"
+afb+ 0x00001040 0x00001040 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001040
+afc amd64 @ 0x00001040
+axc 0x4020 0x1040
+afS 0 @ 0x1040
+"f sym.imp.__stack_chk_fail 6 0x00001050"
+"af+ 0x00001050 sym.imp.__stack_chk_fail s n"
+afb+ 0x00001050 0x00001050 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001050
+afc amd64 @ 0x00001050
+axc 0x4028 0x1050
+afS 0 @ 0x1050
+"f sym.imp.printf 6 0x00001060"
+"af+ 0x00001060 sym.imp.printf s n"
+afb+ 0x00001060 0x00001060 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001060
+afc amd64 @ 0x00001060
+axc 0x4030 0x1060
+afS 0 @ 0x1060
+"f sym.imp.strcspn 6 0x00001070"
+"af+ 0x00001070 sym.imp.strcspn s n"
+afb+ 0x00001070 0x00001070 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001070
+afc amd64 @ 0x00001070
+axc 0x4038 0x1070
+afS 0 @ 0x1070
+"f sym.imp.srand 6 0x00001080"
+"af+ 0x00001080 sym.imp.srand s n"
+afb+ 0x00001080 0x00001080 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001080
+afc amd64 @ 0x00001080
+axc 0x4040 0x1080
+afS 0 @ 0x1080
+"f sym.imp.fgets 6 0x00001090"
+"af+ 0x00001090 sym.imp.fgets s n"
+afb+ 0x00001090 0x00001090 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x00001090
+afc amd64 @ 0x00001090
+axc 0x4048 0x1090
+afS 0 @ 0x1090
+"f sym.imp.time 6 0x000010a0"
+"af+ 0x000010a0 sym.imp.time s n"
+afb+ 0x000010a0 0x000010a0 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000010a0
+afc amd64 @ 0x000010a0
+axc 0x4050 0x10a0
+afS 0 @ 0x10a0
+"f sym.imp.setvbuf 6 0x000010b0"
+"af+ 0x000010b0 sym.imp.setvbuf s n"
+afb+ 0x000010b0 0x000010b0 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000010b0
+afc amd64 @ 0x000010b0
+axc 0x4058 0x10b0
+afS 0 @ 0x10b0
+"f sym.imp.fopen 6 0x000010c0"
+"af+ 0x000010c0 sym.imp.fopen s n"
+afb+ 0x000010c0 0x000010c0 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000010c0
+afc amd64 @ 0x000010c0
+axc 0x4060 0x10c0
+afS 0 @ 0x10c0
+"f sym.imp.__isoc99_scanf 6 0x000010d0"
+"af+ 0x000010d0 sym.imp.__isoc99_scanf s n"
+afb+ 0x000010d0 0x000010d0 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000010d0
+afc amd64 @ 0x000010d0
+axc 0x4068 0x10d0
+afS 0 @ 0x10d0
+"f sym.imp.rand 6 0x000010e0"
+"af+ 0x000010e0 sym.imp.rand s n"
+afb+ 0x000010e0 0x000010e0 6 0xffffffffffffffff 0xffffffffffffffff
+afB 64 @ 0x000010e0
+afc amd64 @ 0x000010e0
+axc 0x4070 0x10e0
+afS 0 @ 0x10e0
+
+# flags
+# meta
+CCu base64:WzI5XSAtLS0tIHNlY3Rpb24gc2l6ZSAyNzggbmFtZWQgLnNoc3RydGFi @ 0x00000000
+CCu base64:WzAxXSAtci0tIHNlY3Rpb24gc2l6ZSAyOCBuYW1lZCAuaW50ZXJw @ 0x00000318
+CCu base64:WzAyXSAtci0tIHNlY3Rpb24gc2l6ZSA2NCBuYW1lZCAubm90ZS5nbnUucHJvcGVydHk= @ 0x00000338
+CCu base64:WzAzXSAtci0tIHNlY3Rpb24gc2l6ZSAzNiBuYW1lZCAubm90ZS5nbnUuYnVpbGRfaWQ= @ 0x00000378
+CCu base64:WzA0XSAtci0tIHNlY3Rpb24gc2l6ZSAzMiBuYW1lZCAubm90ZS5BQklfdGFn @ 0x0000039c
+CCu base64:WzA1XSAtci0tIHNlY3Rpb24gc2l6ZSAzNiBuYW1lZCAuZ251Lmhhc2g= @ 0x000003c0
+CCu base64:WzA2XSAtci0tIHNlY3Rpb24gc2l6ZSA0NTYgbmFtZWQgLmR5bnN5bQ== @ 0x000003e8
+CCu base64:WzA3XSAtci0tIHNlY3Rpb24gc2l6ZSAyNDIgbmFtZWQgLmR5bnN0cg== @ 0x000005b0
+CCu base64:WzA4XSAtci0tIHNlY3Rpb24gc2l6ZSAzOCBuYW1lZCAuZ251LnZlcnNpb24= @ 0x000006a2
+CCu base64:WzA5XSAtci0tIHNlY3Rpb24gc2l6ZSA2NCBuYW1lZCAuZ251LnZlcnNpb25fcg== @ 0x000006c8
+Cd 8 @ 0x00000708
+CCu base64:WzEwXSAtci0tIHNlY3Rpb24gc2l6ZSAyMTYgbmFtZWQgLnJlbGEuZHlu @ 0x00000708
+Cd 8 @ 0x00000710
+Cd 8 @ 0x00000718
+Cd 8 @ 0x00000720
+Cd 8 @ 0x00000728
+Cd 8 @ 0x00000730
+Cd 8 @ 0x00000738
+Cd 8 @ 0x00000740
+Cd 8 @ 0x00000748
+Cd 8 @ 0x00000750
+Cd 8 @ 0x00000758
+Cd 8 @ 0x00000760
+Cd 8 @ 0x00000768
+Cd 8 @ 0x00000770
+Cd 8 @ 0x00000778
+Cd 8 @ 0x00000780
+Cd 8 @ 0x00000788
+Cd 8 @ 0x00000790
+Cd 8 @ 0x00000798
+Cd 8 @ 0x000007a0
+Cd 8 @ 0x000007a8
+Cd 8 @ 0x000007b0
+Cd 8 @ 0x000007b8
+Cd 8 @ 0x000007c0
+Cd 8 @ 0x000007c8
+Cd 8 @ 0x000007d0
+Cd 8 @ 0x000007d8
+Cd 8 @ 0x000007e0
+CCu base64:WzExXSAtci0tIHNlY3Rpb24gc2l6ZSAyODggbmFtZWQgLnJlbGEucGx0 @ 0x000007e0
+Cd 8 @ 0x000007e8
+Cd 8 @ 0x000007f0
+Cd 8 @ 0x000007f8
+Cd 8 @ 0x00000800
+Cd 8 @ 0x00000808
+Cd 8 @ 0x00000810
+Cd 8 @ 0x00000818
+Cd 8 @ 0x00000820
+Cd 8 @ 0x00000828
+Cd 8 @ 0x00000830
+Cd 8 @ 0x00000838
+Cd 8 @ 0x00000840
+Cd 8 @ 0x00000848
+Cd 8 @ 0x00000850
+Cd 8 @ 0x00000858
+Cd 8 @ 0x00000860
+Cd 8 @ 0x00000868
+Cd 8 @ 0x00000870
+Cd 8 @ 0x00000878
+Cd 8 @ 0x00000880
+Cd 8 @ 0x00000888
+Cd 8 @ 0x00000890
+Cd 8 @ 0x00000898
+Cd 8 @ 0x000008a0
+Cd 8 @ 0x000008a8
+Cd 8 @ 0x000008b0
+Cd 8 @ 0x000008b8
+Cd 8 @ 0x000008c0
+Cd 8 @ 0x000008c8
+Cd 8 @ 0x000008d0
+Cd 8 @ 0x000008d8
+Cd 8 @ 0x000008e0
+Cd 8 @ 0x000008e8
+Cd 8 @ 0x000008f0
+Cd 8 @ 0x000008f8
+CCu base64:WzEyXSAtci14IHNlY3Rpb24gc2l6ZSAyNyBuYW1lZCAuaW5pdA== @ 0x00001000
+CCu base64:WzEzXSAtci14IHNlY3Rpb24gc2l6ZSAyMDggbmFtZWQgLnBsdA== @ 0x00001020
+CCu base64:WzE0XSAtci14IHNlY3Rpb24gc2l6ZSAxNDc3IG5hbWVkIC50ZXh0 @ 0x000010f0
+Ct char *buf @ 0x000010f2
+Ct size_t size @ 0x000010f4
+Ct int mode @ 0x000010f6
+Ct FILE*stream @ 0x0000110a
+Ct const char *mode @ 0x00001129
+Ct const char *filename @ 0x00001130
+Ct FILE *stream @ 0x0000114a
+Ct int size @ 0x0000114d
+Ct char *s @ 0x00001155
+Ct FILE *stream @ 0x0000115d
+Ct const char *s2 @ 0x00001165
+Ct const char *s1 @ 0x0000116c
+Ct time_t *timer @ 0x0000119d
+Ct int seed @ 0x000011b4
+Ct const char *s @ 0x000011bc
+Ct const char *s @ 0x000011c8
+Ct const char *format @ 0x00001216
+Ct const char *format @ 0x00001253
+Ct const char *format @ 0x0000126c
+Ct const char *format @ 0x0000127e
+Ct const char *format @ 0x00001315
+Ct const char *format @ 0x0000133d
+Ct const char *format @ 0x000013ab
+Ct const char *format @ 0x000013f5
+Ct const char *s @ 0x00001430
+Ct const char *format @ 0x00001495
+Ct const char *format @ 0x000014cc
+Ct const char *s @ 0x000014e9
+Ct arg3 @ 0x00001526
+Ct arg2 @ 0x00001620
+Ct arg1 @ 0x00001623
+Ct arg3 @ 0x00001630
+Ct arg1 @ 0x00001636
+Ct arg3 @ 0x0000164f
+Ct arg2 @ 0x00001654
+Ct arg1 @ 0x00001659
+CCu base64:WzE1XSAtci14IHNlY3Rpb24gc2l6ZSAxMyBuYW1lZCAuZmluaQ== @ 0x000016b8
+CCu base64:WzE2XSAtci0tIHNlY3Rpb24gc2l6ZSAzNTQgbmFtZWQgLnJvZGF0YQ== @ 0x00002000
+Cs 9 @ 0x00002006 # flag.txt
+Cs 27 @ 0x0000200f # Couldn't find a flag file.
+Cs 18 @ 0x0000202a # === ROUND %d ===\n
+Cs 17 @ 0x0000203c # foo(?, %u) = %u\n
+Cs 17 @ 0x0000204d # foo(%u, ?) = %u\n
+Cs 17 @ 0x0000205e # foo(%u, %u) = ?\n
+Cs 21 @ 0x0000206f # bar(?, %u, %u) = %u\n
+Cs 21 @ 0x00002084 # bar(%u, ?, %u) = %u\n
+Cs 21 @ 0x00002099 # bar(%u, %u, ?) = %u\n
+Cs 21 @ 0x000020ae # bar(%u, %u, %u) = ?\n
+Cs 7 @ 0x000020c6 # Wrong!
+Cs 34 @ 0x000020d0 # Welcome to the infinity gauntlet!
+Cs 51 @ 0x000020f8 # If you complete the gauntlet, you'll get the flag!
+Cs 50 @ 0x00002130 # Correct! Maybe round %d will get you the flag ;)\n
+CCu base64:WzE3XSAtci0tIHNlY3Rpb24gc2l6ZSA2OCBuYW1lZCAuZWhfZnJhbWVfaGRy @ 0x00002164
+CCu base64:WzE4XSAtci0tIHNlY3Rpb24gc2l6ZSAzMDQgbmFtZWQgLmVoX2ZyYW1l @ 0x000021a8
+Cd 8 @ 0x00003de8
+CCu base64:WzE5XSAtcnctIHNlY3Rpb24gc2l6ZSA4IG5hbWVkIC5pbml0X2FycmF5 @ 0x00003de8
+Cd 8 @ 0x00003df0
+CCu base64:WzIwXSAtcnctIHNlY3Rpb24gc2l6ZSA4IG5hbWVkIC5maW5pX2FycmF5 @ 0x00003df0
+CCu base64:WzIxXSAtcnctIHNlY3Rpb24gc2l6ZSA0ODAgbmFtZWQgLmR5bmFtaWM= @ 0x00003df8
+Cd 8 @ 0x00003fd8
+CCu base64:WzIyXSAtcnctIHNlY3Rpb24gc2l6ZSA0MCBuYW1lZCAuZ290 @ 0x00003fd8
+Cd 8 @ 0x00003fe0
+Cd 8 @ 0x00003fe8
+Cd 8 @ 0x00003ff0
+Cd 8 @ 0x00003ff8
+Cd 8 @ 0x00004000
+CCu base64:WzIzXSAtcnctIHNlY3Rpb24gc2l6ZSAxMjAgbmFtZWQgLmdvdC5wbHQ= @ 0x00004000
+Cd 8 @ 0x00004008
+Cd 8 @ 0x00004010
+Cd 8 @ 0x00004018
+Cd 8 @ 0x00004020
+Cd 8 @ 0x00004028
+Cd 8 @ 0x00004030
+Cd 8 @ 0x00004038
+Cd 8 @ 0x00004040
+Cd 8 @ 0x00004048
+Cd 8 @ 0x00004050
+Cd 8 @ 0x00004058
+Cd 8 @ 0x00004060
+Cd 8 @ 0x00004068
+Cd 8 @ 0x00004070
+CCu base64:WzI0XSAtcnctIHNlY3Rpb24gc2l6ZSAxNiBuYW1lZCAuZGF0YQ== @ 0x00004078
+Cd 8 @ 0x00004080
+CCu base64:WzI1XSAtcnctIHNlY3Rpb24gc2l6ZSAxNiBuYW1lZCAuYnNz @ 0x00004088
+Cd 8 @ 0x00004088
+# xrefs
+axd 0x3fe8 0x1008
+axc 0x1016 0x1012
+axc 0x4010 0x1026
+axc 0x4018 0x1030
+axc 0x1020 0x103b
+axc 0x4020 0x1040
+axd 0x1 0x1046
+axc 0x1020 0x104b
+axc 0x4028 0x1050
+axd 0x2 0x1056
+axc 0x1020 0x105b
+axc 0x4030 0x1060
+axd 0x3 0x1066
+axc 0x1020 0x106b
+axc 0x4038 0x1070
+axd 0x4 0x1076
+axc 0x1020 0x107b
+axc 0x4040 0x1080
+axd 0x5 0x1086
+axc 0x1020 0x108b
+axc 0x4048 0x1090
+axd 0x6 0x1096
+axc 0x1020 0x109b
+axc 0x4050 0x10a0
+axd 0x7 0x10a6
+axc 0x1020 0x10ab
+axc 0x4058 0x10b0
+axd 0x8 0x10b6
+axc 0x1020 0x10bb
+axc 0x4060 0x10c0
+axd 0x9 0x10c6
+axc 0x1020 0x10cb
+axc 0x4068 0x10d0
+axd 0xa 0x10d6
+axc 0x1020 0x10db
+axc 0x4070 0x10e0
+axd 0xb 0x10e6
+axc 0x1020 0x10eb
+axd 0x128 0x1103
+axd 0x4088 0x110a
+axC 0x10b0 0x1124
+axd 0x2004 0x1129
+axd 0x2006 0x1130
+axC 0x10c0 0x1137
+axc 0x14e9 0x113f
+axd 0x100 0x114d
+axC 0x1090 0x1158
+axC 0x1040 0x1160
+axd 0x203a 0x1165
+axC 0x1070 0x116f
+axc 0x119d 0x1181
+axd 0x11 0x1183
+axd 0x11 0x1192
+axc 0x1190 0x119b
+axd 0x539 0x11a9
+axC 0x10a0 0x11af
+axC 0x1080 0x11b7
+axd 0x20d0 0x11bc
+axC 0x1030 0x11c3
+axd 0x20f8 0x11c8
+axC 0x1030 0x11cf
+axc 0x127c 0x11d4
+axC 0x10e0 0x11e0
+axc 0x1338 0x1202
+axd 0x1 0x1208
+axc 0x13f0 0x120b
+axC 0x10e0 0x1211
+axd 0x205e 0x1216
+axd 0x539 0x1243
+axC 0x1060 0x1249
+axd 0x20c3 0x1253
+axC 0x10d0 0x125a
+axc 0x1430 0x1263
+axd 0x2130 0x126c
+axC 0x1060 0x1277
+axd 0x202a 0x127e
+axC 0x1060 0x1287
+axC 0x10e0 0x128c
+axd 0x31 0x1291
+axc 0x1504 0x1294
+axC 0x10e0 0x129a
+axC 0x10e0 0x12ab
+axd 0x1 0x12b0
+axc 0x11e0 0x12b2
+axC 0x10e0 0x12b8
+axd 0x3 0x12bd
+axc 0x1380 0x12bf
+axd 0x1 0x12d0
+axc 0x1481 0x12d3
+axd 0x2 0x12d9
+axc 0x14b5 0x12dc
+axd 0x539 0x12e2
+axc 0x1470 0x12e8
+axC 0x10e0 0x12ee
+axd 0x20ae 0x1315
+axC 0x1060 0x1329
+axc 0x124e 0x132e
+axC 0x10e0 0x1338
+axd 0x203c 0x133d
+axd 0x539 0x1366
+axC 0x1060 0x136c
+axc 0x124e 0x1371
+axC 0x10e0 0x1380
+axC 0x10e0 0x13a3
+axd 0x206f 0x13ab
+axC 0x1060 0x13dc
+axc 0x124e 0x13e1
+axC 0x10e0 0x13f0
+axd 0x204d 0x13f5
+axd 0x539 0x141e
+axC 0x1060 0x1424
+axc 0x124e 0x1429
+axd 0x20c6 0x1430
+axC 0x1030 0x1437
+axc 0x14ff 0x144f
+axd 0x128 0x1455
+axC 0x10e0 0x1470
+axc 0x1311 0x147c
+axC 0x10e0 0x1481
+axC 0x10e0 0x148d
+axd 0x2084 0x1495
+axC 0x1060 0x14ab
+axc 0x124e 0x14b0
+axC 0x10e0 0x14b5
+axC 0x10e0 0x14c1
+axd 0x2099 0x14cc
+axC 0x1060 0x14df
+axc 0x124e 0x14e4
+axd 0x200f 0x14e9
+axC 0x1030 0x14f0
+axc 0x143e 0x14fa
+axC 0x1050 0x14ff
+axc 0x12ab 0x151b
+axd 0x16b0 0x1533
+axd 0x1640 0x153a
+axd 0x10f0 0x1541
+axC 0x3fe0 0x1548
+axd 0x4088 0x1550
+axd 0x4088 0x1557
+axc 0x1578 0x1561
+axd 0x3fd8 0x1563
+axc 0x1578 0x156d
+axd 0x4088 0x1580
+axd 0x4088 0x1587
+axc 0x15b8 0x15a2
+axd 0x3ff0 0x15a4
+axc 0x15b8 0x15ae
+axd 0x4090 0x15c4
+axc 0x1600 0x15cb
+axd 0x3ff8 0x15ce
+axc 0x15e8 0x15d9
+axd 0x4080 0x15db
+axC 0x3ff8 0x15e2
+axC 0x1550 0x15e8
+axd 0x4090 0x15ed
+axc 0x1580 0x1614
+axd 0x539 0x1625
+axd 0x3de8 0x1646
+axd 0x3df0 0x165d
+axC 0x1000 0x166c
+axc 0x1696 0x1675
+axC 0x0 0x1689
+axc 0x1680 0x1694
+axc 0x2085 0x2009
+axc 0x200f 0x200d
+axc 0x207f 0x2011
+axc 0x2038 0x2016
+axd 0x20 0x2041
+axc 0x2092 0x2067
+axc 0x209b 0x2071
+axd 0x20 0x2074
+axc 0x20a6 0x207b
+axc 0x20b0 0x2086
+axd 0x20 0x208d
+axc 0x20c5 0x209b
+axc 0x20d0 0x20a2
+axc 0x20da 0x20b0
+axc 0x20e5 0x20b7
+axc 0x2145 0x20db
+axc 0x215a 0x20ea
+axc 0x215a 0x20ec
+axc 0x2112 0x20ee
+axc 0x211f 0x20fd
+axc 0x2170 0x2102
+axc 0x216c 0x2104
+axc 0x217e 0x210e
+axc 0x217e 0x2110
+axc 0x2141 0x2112
+axc 0x2141 0x2118
+axc 0x2141 0x211f
+axc 0x218b 0x2121
+axc 0x21a6 0x2132
+axc 0x219f 0x213b
+axc 0x21b1 0x2141
+axc 0x2171 0x214f
+axc 0x21c2 0x2151
+axc 0x2175 0x2153
+axc 0x21bf 0x2155
+axc 0x21c7 0x21b5
+axd 0x3f 0x21f3
+axd 0x22 0x21fa
