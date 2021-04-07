@@ -22,8 +22,9 @@ Here are the main challenges I did (or helped out with in order). Just traverse 
 1. `Misc/Float On`
 2. `Rev/FREE FLAGS!!1!!`
 3. `Binary/Secure Login`, `Binary/tranquil`, `Binary/Sanity Checks`
+4. `Crypto/Home Rolled Crypto`
 
-Here are some challenges I had writeups to (but I didn't really solve on my own)
+Here are some challenges I had writeups/ solutions to (but actually my teammate solved it)
 1. `Web/Jar`
 
 ## Others' Writeups
