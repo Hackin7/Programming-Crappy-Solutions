@@ -9,6 +9,8 @@ I learnt how to use z3 and learnt something new so thats a win. However, I was t
 
 I participated in it on 3rd to 7th April 2021 with [undefined_func](https://github.com/undefined-func)
 
+We did a decent number of challenges and scored decent I think.
+![1230 points](Rank.png)
 
 ## Challenges
 
@@ -26,6 +28,9 @@ Here are the main challenges I did (or helped out with in order). Just traverse 
 
 Here are some challenges I had writeups/ solutions to (but actually my teammate solved it)
 1. `Web/Jar`
+
+Here are challenges I solved AFTER the CTF (sad noises)
+1. `Binary/stickystacks`
 
 ## Others' Writeups
 
