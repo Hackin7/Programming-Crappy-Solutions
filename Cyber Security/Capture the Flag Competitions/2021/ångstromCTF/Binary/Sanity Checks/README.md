@@ -57,7 +57,7 @@ After the first part of the payload with the padding we can then add the variabl
 The variables are added in reverse order compared to how they are stored in the code, 
 mainly because they are stored in reverse order on the stack according to the binary
 
-![Visualisation of the stack and payload if any](StackVis.png)
+![Visualisation of the stack and payload if any](StackVis.jpg)
 
 ## Flag
 `actf{if_you_aint_bout_flags_then_i_dont_mess_with_yall}`
