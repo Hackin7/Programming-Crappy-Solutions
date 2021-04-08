@@ -38,5 +38,26 @@ Some interesting tricks
 
 Took me 24:06 min Man am I slow.
 
+### Further Explanation of the Payload
+
+The first part of the payload is payload = password.encode() + NULL_BYTE + (b"A" * (64-len(password)-1 + 0x60-0x14-64)) 
+
+Initially 
+1. I put in the password in the payload
+2. After that I put a null byte. This signifies the end of the string, such that when the program accesses the password variable, it only gets that value we gave in step 1
+3."A" characters are padded to reach the next location
+
+The amount of padding is required can be calculated like this
+1. The first 64-len(password)-1 characters of "A" fills up the remaining of the password char array
+2.  We are padding from the end of the password array to the start of the next variable (which is when_i_learned_the_truth) 
+ - The password is stored from [rbp-0x60] while the next variable is stored in [rbp-0x14] (check the disassembly if you are not sure) , hence the offset from the start of the password to the start of the next variable is 0x60-0x14
+- However, from step 1, we already filled up 64 characters from the start of the char array. Hence from the end of the password array to the start of the next variable is just 0x60-0x14-64
+
+After the first part of the payload with the padding we can then add the variables
+The variables are added in reverse order compared to how they are stored in the code, 
+mainly because they are stored in reverse order on the stack according to the binary
+
+![Visualisation of the stack and payload if any](StackVis.jpg)
+
 ## Flag
 `actf{if_you_aint_bout_flags_then_i_dont_mess_with_yall}`
