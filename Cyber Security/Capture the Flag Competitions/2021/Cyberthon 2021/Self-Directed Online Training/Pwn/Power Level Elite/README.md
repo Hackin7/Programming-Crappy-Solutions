@@ -1,11 +1,16 @@
-# Challenge Name
+# Power Level Elite
 
 ### Description
 
+![](Description1.png)
+
+![](Description2.png)
+
 ## Solution
 
-In short take the max value of unit minus 313371337 get the value
-for a uint, 0 - this value underflows to 313371337
+In short take the max value of unit 429496729, add one (to overflow to 0), minus 313371337. This value is 1161235959.
+
+For an unsigned integer (with no negative numbers), 0 - 1161235959 underflows (loops around) to 313371337.
 
 ```
 base) [hacker@hackerbook ~]$ nc 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg 30501
@@ -54,5 +59,6 @@ powerlevelelite
 cat flag.txt
 CTFSG{why_st0p_4t_9000_wh3n_y0u_c4n_d0_3133731337}
 ```
+
 ## Flag
-``
+`CTFSG{why_st0p_4t_9000_wh3n_y0u_c4n_d0_3133731337}`

