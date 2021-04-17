@@ -237,7 +237,7 @@ Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Unauthorized.
 ```
 
-### Passing in the parameter
+### How to pass in the parameter
 
 Looking at the disassembly of the `shell` function, the value of `0xdeadbeef` should be stored in `rbp-0x14`.
 ```
@@ -357,7 +357,7 @@ You can get the instruction pointer to the functions/ gadgets by
 1. Disassemble the binary using objdump, and then find the address of the function OR
 2. Running [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
 
-### Using ROP
+### Using ROP to pass in the parameter
 
 Looking at the ROP gadgets, there may be an interesting gadget `0x0000000000400873`. On reading some writeups like [this](https://gist.github.com/winstonho90/8309a63c1b5bc71244dfefd4a2dda734), I realised that we can use this gadget to insert a value to rdi.
 
