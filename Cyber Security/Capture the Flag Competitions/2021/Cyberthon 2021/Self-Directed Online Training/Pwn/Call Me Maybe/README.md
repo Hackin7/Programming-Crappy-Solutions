@@ -20,7 +20,7 @@ Observations
 
 ### Dynamic Analysis
 
-### Running normally
+#### Running normally
 
 I set a breakpoint before the input, ran the binary in gdb (and input in 64 characters of `A`), and checked the initial values of the stack and registers.
 After the 64 `A`s, we start writing from memory location `0x7fffffffe4a0`, so that we can control the stack.
@@ -119,7 +119,7 @@ warning: Unable to access 16000 bytes of target memory at 0x7ffff7fa5fee, haltin
 1 pattern found.
 ```
 
-### Figuring out when it crashes
+#### Figuring out when it crashes
 
 I bruteforced (by that I mean manually input) the amount of padding before the program crashes. which is (64+8) characters
 ```
@@ -160,7 +160,7 @@ Program received signal SIGSEGV, Segmentation fault.
 ```
 You know from 64+9 characters onwards the input overflows into the return address because you see `41` in the instruction pointer storing the value `0x00007ffff7df0041`.
 
-### Figuring out what values you can control
+#### Figuring out what values you can control
 
 I tried figuring out which parts of the payload correspond to which registers. Using the Buffer Overflow pattern generator found [here](https://wiremask.eu/tools/buffer-overflow-pattern-generator/), I figured out the `rbp` is right after the `contact` variable (at offset 64).
 
@@ -217,7 +217,7 @@ gs             0x0                 0
 
 The aim is to call the function `shell` while passing in `0xDEADBEEF` as a parameter.
 
-### Calling the `shell` function
+#### Calling the `shell` function
 
 Since we overflow to the instruction pointer, we can just insert the address of the `shell function` after the padding. However, the source code shows that we need to pass in a parameter into the function first.
 
@@ -237,7 +237,7 @@ Enter Contact => Calling AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Unauthorized.
 ```
 
-### How to pass in the parameter
+#### How to pass in the parameter
 
 Looking at the disassembly of the `shell` function, the value of `0xdeadbeef` should be stored in `rbp-0x14`.
 ```
@@ -331,7 +331,7 @@ Program received signal SIGSEGV, Segmentation fault.
 
 It doesn;t look like we can just overflow to the needed location on the stack, since the location is overwritten with `0xf7f9b4d0` for some reason. Looking at the disassembly again, this value is actually the register `rdi/edi`. Checking [here](https://web.stanford.edu/class/cs107/guide/x86-64.html), this is the register where the argument is located.
 
-### Research and My basic understanding of ROP
+#### Research and My basic understanding of ROP
 
 There are many guides on return oriented progamming out there. A very good source of understanding the concept is through the Liveoverflow Binary Exploitation video series. More specifically [this](https://www.youtube.com/watch?v=8Dcj19KGKWM) and [this](https://www.youtube.com/watch?v=zaQVNM3or7k&t=88s).
 
@@ -357,7 +357,7 @@ You can get the instruction pointer to the functions/ gadgets by
 1. Disassemble the binary using objdump, and then find the address of the function OR
 2. Running [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
 
-### Using ROP to pass in the parameter
+#### Using ROP to pass in the parameter
 
 Looking at the ROP gadgets, there may be an interesting gadget `0x0000000000400873`. On reading some writeups like [this](https://gist.github.com/winstonho90/8309a63c1b5bc71244dfefd4a2dda734), I realised that we can use this gadget to insert a value to rdi.
 
@@ -410,7 +410,7 @@ hacker
 cat: /home/callmemaybe/flag.txt: No such file or directory
 ```
 
-## Running on server
+### Running on server
 
 Running this on the remote server does not get me a shell though so maybe there is something wrong? I am not even sure if there is a segmentation fault since the error messages are not sent over netcat (I tried).
 
