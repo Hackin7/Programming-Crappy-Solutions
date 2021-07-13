@@ -1,0 +1,74 @@
+/* jsdec pseudo code output */
+/* D:\Competitions\Computing\2021 @ 0x4015e8 */
+#include <stdint.h>
+ 
+uint32_t crypto_std::_cxx11::basic_string_char_std::char_traits_char_std::allocator_char_const (int32_t arg_8h, char * arg_ch) {
+    int32_t var_4ch;
+    int32_t var_48h;
+    int32_t var_41h;
+    int32_t var_40h;
+    int32_t var_28h;
+    int32_t var_dh;
+    char * var_ch;
+    int32_t var_bp_4h;
+    int32_t var_4h_2;
+    int32_t var_8h;
+    int32_t var_4h;
+    /* crypto(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) */
+    eax = &var_41h;
+    ecx = eax;
+    std::allocator<char>::allocator() (ebx);
+    eax = &var_41h;
+    ecx = arg_8h;
+    std::basic_string<char (0x409048, eax);
+    eax = &var_41h;
+    ecx = eax;
+    std::allocator<char>::~allocator() ();
+    eax = arg_ch;
+    var_ch = arg_ch;
+    eax = arg_ch;
+    ecx = arg_ch;
+    eax = std::basic_string<char ();
+    var_48h = eax;
+    eax = var_ch;
+    ecx = var_ch;
+    eax = std::basic_string<char ();
+    var_4ch = eax;
+    do {
+        eax = &var_4ch;
+        eax = &var_48h;
+        al = bool_gnu_cxx::operator!=<char const*,std::string >(_gnu_cxx::_normal_iterator<char const*,std::string >const&,_gnu_cxx::_normal_iterator<char const*,std::string >const&) (eax, eax);
+        if (al == 0) {
+            goto label_0;
+        }
+        eax = &var_48h;
+        ecx = eax;
+        eax = _gnu_cxx::_normal_iterator<char const*,std::string >::operator*()const ();
+        eax = *(eax);
+        var_dh = al;
+        eax = (int32_t) var_dh;
+        eax <<= 4;
+        edx = eax;
+        eax = &var_28h;
+        std::to_string(int) (eax, edx);
+        eax = &var_40h;
+        edx = &var_28h;
+        std::string std::operator+ (std::string &&,char const*) (eax, 0x409049, edx);
+        eax = &var_40h;
+        ecx = arg_8h;
+        std::basic_string<char (eax);
+        eax = &var_40h;
+        ecx = eax;
+        std::~string () ();
+        eax = &var_28h;
+        ecx = eax;
+        std::~string () ();
+        eax = &var_48h;
+        ecx = eax;
+        _gnu_cxx::_normal_iterator<char const*,std::string >::operator++() ();
+    } while (1);
+label_0:
+    eax = arg_8h;
+    ebx = var_bp_4h;
+    return eax;
+}

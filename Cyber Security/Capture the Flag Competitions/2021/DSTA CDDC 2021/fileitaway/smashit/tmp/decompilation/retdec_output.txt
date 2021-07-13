@@ -1,0 +1,146 @@
+##### Checking if file is a Mach-O Universal static library...
+
+##### Checking if file is an archive...
+RUN: /root/retdec/bin/retdec-ar-extractor /tmp/decompilation/gdc_evidence_01 --arch-magic
+Not an archive, going to the next step.
+
+##### Gathering file information...
+RUN: /root/retdec/bin/retdec-fileinfo -c /tmp/decompilation/gdc_evidence_01.config.json --similarity /tmp/decompilation/gdc_evidence_01 --no-hashes=all --crypto /root/retdec/bin/../share/retdec/support/generic/yara_patterns/signsrch/signsrch.yara --crypto /root/retdec/bin/../share/retdec/support/generic/yara_patterns/signsrch/signsrch.yarac --max-memory-half-ram
+Input file               : /tmp/decompilation/gdc_evidence_01
+File format              : ELF
+File class               : 32-bit
+File type                : Executable file
+Architecture             : x86 (or later and compatible)
+Endianness               : Little endian
+Entry point address      : 0x8049100
+Entry point offset       : 0x1100
+Entry point section name : .text
+Entry point section index: 15
+Bytes on entry point     : f30f1efb31ed5e89e183e4f0505452e82300000081c3ec2e00008d8330d3ffff508d83c0d2ffff505156c7c01692040850e8
+Detected tool            : GCC (10.3.0) (compiler), .comment section heuristic
+Detected tool            : p7zip SFX (installer), 31 from 172 significant nibbles (18.0233%)
+
+##### Trying to unpack /tmp/decompilation/gdc_evidence_01 into /tmp/decompilation/gdc_evidence_01-unpacked.tmp by using generic unpacker...
+RUN: /root/retdec/bin/retdec-unpacker /tmp/decompilation/gdc_evidence_01 -o /tmp/decompilation/gdc_evidence_01-unpacked.tmp --max-memory-half-ram
+No matching plugins found for 'GCC 10.3.0'
+No matching plugins found for 'p7zip SFX'
+##### Unpacking by using generic unpacker: nothing to do
+
+##### Trying to unpack /tmp/decompilation/gdc_evidence_01 into /tmp/decompilation/gdc_evidence_01-unpacked.tmp by using UPX...
+RUN: upx -d /tmp/decompilation/gdc_evidence_01 -o /tmp/decompilation/gdc_evidence_01-unpacked.tmp
+upx: /tmp/decompilation/gdc_evidence_01: NotPackedException: not packed by UPX
+##### Unpacking by using UPX: nothing to do
+
+##### Decompiling /tmp/decompilation/gdc_evidence_01 into /tmp/decompilation/gdc_evidence_01.bc...
+RUN: /root/retdec/bin/retdec-bin2llvmir -provider-init -decoder -verify -x86-addr-spaces -x87-fpu -main-detection -idioms-libgcc -inst-opt -cond-branch-opt -syscalls -stack -constants -param-return -inst-opt-rda -inst-opt -simple-types -generate-dsm -remove-asm-instrs -class-hierarchy -select-fncs -unreachable-funcs -inst-opt -register-localization -value-protect -instcombine -tbaa -basicaa -simplifycfg -early-cse -tbaa -basicaa -globalopt -mem2reg -instcombine -simplifycfg -early-cse -lazy-value-info -jump-threading -correlated-propagation -simplifycfg -instcombine -simplifycfg -reassociate -loops -loop-simplify -lcssa -loop-rotate -licm -lcssa -instcombine -loop-simplifycfg -loop-simplify -aa -loop-accesses -loop-load-elim -lcssa -indvars -loop-idiom -loop-deletion -gvn -sccp -instcombine -lazy-value-info -jump-threading -correlated-propagation -dse -bdce -adce -simplifycfg -instcombine -strip-dead-prototypes -globaldce -constmerge -constprop -instcombine -instcombine -tbaa -basicaa -simplifycfg -early-cse -tbaa -basicaa -globalopt -mem2reg -instcombine -simplifycfg -early-cse -lazy-value-info -jump-threading -correlated-propagation -simplifycfg -instcombine -simplifycfg -reassociate -loops -loop-simplify -lcssa -loop-rotate -licm -lcssa -instcombine -loop-simplifycfg -loop-simplify -aa -loop-accesses -loop-load-elim -lcssa -indvars -loop-idiom -loop-deletion -gvn -sccp -instcombine -lazy-value-info -jump-threading -correlated-propagation -dse -bdce -adce -simplifycfg -instcombine -strip-dead-prototypes -globaldce -constmerge -constprop -instcombine -inst-opt -simple-types -stack-ptr-op-remove -idioms -instcombine -inst-opt -idioms -remove-phi -value-protect -sink -config-path /tmp/decompilation/gdc_evidence_01.config.json -max-memory-half-ram -o /tmp/decompilation/gdc_evidence_01.bc
+[0;1;33mRunning phase: Initialization ( 0.01s )[0m
+[0;1;33mRunning phase: LLVM ( 0.02s )[0m
+[0;1;33mRunning phase: Providers initialization ( 0.02s )[0m
+[0;1;33mRunning phase: Input binary to LLVM IR decoding ( 0.05s )[0m
+[0;1;33mRunning phase: LLVM ( 0.06s )[0m
+[0;1;33mRunning phase: x86 address spaces optimization ( 0.06s )[0m
+[0;1;33mRunning phase: x87 fpu register analysis ( 0.06s )[0m
+[0;1;33mRunning phase: Main function identification optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Libgcc idioms optimization ( 0.06s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Conditional branch optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Syscalls optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Stack optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Constants optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Function parameters and returns optimization ( 0.06s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization using RDA ( 0.06s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Simple types recovery optimization ( 0.06s )[0m
+[0;1;33mRunning phase: Disassembly generation ( 0.06s )[0m
+[0;1;33mRunning phase: Assembly mapping instruction removal ( 0.07s )[0m
+[0;1;33mRunning phase: C++ class hierarchy optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Selected functions optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Unreachable functions optimization ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Make all registers local ( 0.07s )[0m
+[0;1;33mRunning phase: Value protection optimization ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Simple types recovery optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Stack pointer operations optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Instruction idioms optimization ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Instruction idioms optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Phi removal ( 0.07s )[0m
+[0;1;33mRunning phase: Value protection optimization ( 0.07s )[0m
+[0;1;33mRunning phase: Code sinking ( 0.07s )[0m
+[0;1;33mRunning phase: LLVM ( 0.07s )[0m
+[0;1;33mRunning phase: Bitcode Writer ( 0.07s )[0m
+[0;1;33mRunning phase: Assembly Writer ( 0.07s )[0m
+[0;1;33mRunning phase: Cleanup ( 0.07s )[0m
+
+##### Decompiling /tmp/decompilation/gdc_evidence_01.bc into /tmp/decompilation/gdc_evidence_01.c...
+RUN: /root/retdec/bin/retdec-llvmir2hll -target-hll=c -output-format=plain -var-renamer=readable -var-name-gen=fruit -var-name-gen-prefix= -call-info-obtainer=optim -arithm-expr-evaluator=c -validate-module -o /tmp/decompilation/gdc_evidence_01.c /tmp/decompilation/gdc_evidence_01.bc -enable-debug -emit-debug-comments -config-path=/tmp/decompilation/gdc_evidence_01.config.json -max-memory-half-ram
+[0;1;33mRunning phase: initialization ( 0.02s )[0m
+[0;1;33m -> creating the used HLL writer [c] ( 0.02s )[0m
+[0;1;33m -> creating the used alias analysis [simple] ( 0.02s )[0m
+[0;1;33m -> creating the used call info obtainer [optim] ( 0.02s )[0m
+[0;1;33m -> creating the used evaluator of arithmetical expressions [c] ( 0.02s )[0m
+[0;1;33m -> creating the used variable names generator [fruit] ( 0.02s )[0m
+[0;1;33m -> creating the used variable renamer [readable] ( 0.02s )[0m
+[0;1;33m -> creating the used semantics [libc,gcc-general,win-api] ( 0.02s )[0m
+[0;1;33m -> loading the input config ( 0.02s )[0m
+[0;1;33mRunning phase: conversion of LLVM IR into BIR ( 0.02s )[0m
+[0;1;33m -> converting global variables ( 0.02s )[0m
+[0;1;33m -> converting function main ( 0.02s )[0m
+[0;1;33mRunning phase: removing functions prefixed with [__decompiler_undefined_function_] ( 0.02s )[0m
+[0;1;33mRunning phase: removing functions from standard libraries ( 0.02s )[0m
+[0;1;33mRunning phase: removing code that is not reachable in a CFG ( 0.02s )[0m
+[0;1;33mRunning phase: signed/unsigned types fixing ( 0.02s )[0m
+[0;1;33mRunning phase: converting LLVM intrinsic functions to standard functions ( 0.02s )[0m
+[0;1;33mRunning phase: obtaining debug information ( 0.02s )[0m
+[0;1;33mRunning phase: alias analysis [simple] ( 0.02s )[0m
+[0;1;33mRunning phase: optimizations [normal] ( 0.02s )[0m
+[0;1;33m -> running GotoStmtOptimizer ( 0.02s )[0m
+[0;1;33m -> running RemoveUselessCastsOptimizer ( 0.02s )[0m
+[0;1;33m -> running UnusedGlobalVarOptimizer ( 0.02s )[0m
+[0;1;33m -> running DeadLocalAssignOptimizer ( 0.02s )[0m
+[0;1;33m -> running SimpleCopyPropagationOptimizer ( 0.02s )[0m
+[0;1;33m -> running CopyPropagationOptimizer ( 0.02s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.02s )[0m
+[0;1;33m -> running IfStructureOptimizer ( 0.02s )[0m
+[0;1;33m -> running LoopLastContinueOptimizer ( 0.02s )[0m
+[0;1;33m -> running PreWhileTrueLoopConvOptimizer ( 0.02s )[0m
+[0;1;33m -> running WhileTrueToForLoopOptimizer ( 0.02s )[0m
+[0;1;33m -> running WhileTrueToWhileCondOptimizer ( 0.02s )[0m
+[0;1;33m -> running IfBeforeLoopOptimizer ( 0.02s )[0m
+[0;1;33m -> running LLVMIntrinsicsOptimizer ( 0.02s )[0m
+[0;1;33m -> running VoidReturnOptimizer ( 0.02s )[0m
+[0;1;33m -> running BreakContinueReturnOptimizer ( 0.02s )[0m
+[0;1;33m -> running BitShiftOptimizer ( 0.02s )[0m
+[0;1;33m -> running DerefAddressOptimizer ( 0.02s )[0m
+[0;1;33m -> running EmptyArrayToStringOptimizer ( 0.02s )[0m
+[0;1;33m -> running BitOpToLogOpOptimizer ( 0.02s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.02s )[0m
+[0;1;33m -> running UnusedGlobalVarOptimizer ( 0.02s )[0m
+[0;1;33m -> running DeadLocalAssignOptimizer ( 0.02s )[0m
+[0;1;33m -> running SimpleCopyPropagationOptimizer ( 0.02s )[0m
+[0;1;33m -> running CopyPropagationOptimizer ( 0.02s )[0m
+[0;1;33m -> running SelfAssignOptimizer ( 0.02s )[0m
+[0;1;33m -> running VarDefForLoopOptimizer ( 0.02s )[0m
+[0;1;33m -> running VarDefStmtOptimizer ( 0.02s )[0m
+[0;1;33m -> running EmptyStmtOptimizer ( 0.02s )[0m
+[0;1;33m -> running GotoStmtOptimizer ( 0.02s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.02s )[0m
+[0;1;33m -> running DeadCodeOptimizer ( 0.02s )[0m
+[0;1;33m -> running DerefToArrayIndexOptimizer ( 0.02s )[0m
+[0;1;33m -> running IfToSwitchOptimizer ( 0.02s )[0m
+[0;1;33m -> running CCastOptimizer ( 0.02s )[0m
+[0;1;33m -> running CArrayArgOptimizer ( 0.02s )[0m
+[0;1;33mRunning phase: variable renaming [readable] ( 0.02s )[0m
+[0;1;33mRunning phase: converting constants to symbolic names ( 0.02s )[0m
+[0;1;33mRunning phase: module validation ( 0.02s )[0m
+[0;1;33m -> running BreakOutsideLoopValidator ( 0.02s )[0m
+[0;1;33m -> running NoGlobalVarDefValidator ( 0.02s )[0m
+[0;1;33m -> running ReturnValidator ( 0.02s )[0m
+[0;1;33mRunning phase: emission of the target code [c] ( 0.02s )[0m
+[0;1;33mRunning phase: finalization ( 0.02s )[0m
+[0;1;33mRunning phase: cleanup ( 0.02s )[0m
+
+##### Done!

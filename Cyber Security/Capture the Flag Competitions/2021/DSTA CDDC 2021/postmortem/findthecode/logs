@@ -1,0 +1,27 @@
+PORT 172,18,0,12,155,219
+200 PORT command successful. Consider using PASV.
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.
+TYPE I
+200 Switching to Binary mode.
+PORT 172,18,0,12,170,141
+200 PORT command successful. Consider using PASV.
+RETR install.isoo
+550 Failed to open file.
+PORT 172,18,0,12,180,91
+200 PORT command successful. Consider using PASV.
+RETR install.iso
+150 Opening BINARY mode data connection for install.iso (974846 bytes).
+226 Transfer complete.
+CWD ..
+250 Directory successfully changed.
+TYPE A
+200 Switching to ASCII mode.
+PORT 172,18,0,12,228,47
+200 PORT command successful. Consider using PASV.
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.
+QUIT
+221 Goodbye.

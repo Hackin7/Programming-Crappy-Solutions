@@ -1,0 +1,178 @@
+##### Checking if file is a Mach-O Universal static library...
+
+##### Checking if file is an archive...
+RUN: /root/retdec/bin/retdec-ar-extractor /tmp/decompilation/Shifting.exe --arch-magic
+Not an archive, going to the next step.
+
+##### Gathering file information...
+RUN: /root/retdec/bin/retdec-fileinfo -c /tmp/decompilation/Shifting.exe.config.json --similarity /tmp/decompilation/Shifting.exe --no-hashes=all --crypto /root/retdec/bin/../share/retdec/support/generic/yara_patterns/signsrch/signsrch.yara --crypto /root/retdec/bin/../share/retdec/support/generic/yara_patterns/signsrch/signsrch.yarac --max-memory-half-ram
+Input file               : /tmp/decompilation/Shifting.exe
+File format              : PE
+File class               : 32-bit
+File type                : Executable file
+Architecture             : x86
+Endianness               : Little endian
+Image base address       : 0x400000
+Entry point address      : 0x4014a0
+Entry point offset       : 0x8a0
+Entry point section name : .text
+Entry point section index: 0
+Bytes on entry point     : 83ec0cc70598c3400000000000e8ce05000083c40ce996fcffff8db60000000083ec1c8b442420890424e80163000085c00f
+Detected tool            : GCC (8.1.0) (compiler), DWARF heuristic
+Detected tool            : Microsoft (linker), dos header style
+Detected tool            : ASPack (packer), 13 from 25 significant nibbles (52%)
+Original language        : C
+
+##### Trying to unpack /tmp/decompilation/Shifting.exe into /tmp/decompilation/Shifting.exe-unpacked.tmp by using generic unpacker...
+RUN: /root/retdec/bin/retdec-unpacker /tmp/decompilation/Shifting.exe -o /tmp/decompilation/Shifting.exe-unpacked.tmp --max-memory-half-ram
+No matching plugins found for 'GCC 8.1.0'
+No matching plugins found for 'Microsoft'
+No matching plugins found for 'ASPack'
+##### Unpacking by using generic unpacker: nothing to do
+
+##### Trying to unpack /tmp/decompilation/Shifting.exe into /tmp/decompilation/Shifting.exe-unpacked.tmp by using UPX...
+RUN: upx -d /tmp/decompilation/Shifting.exe -o /tmp/decompilation/Shifting.exe-unpacked.tmp
+upx: /tmp/decompilation/Shifting.exe: NotPackedException: not packed by UPX
+##### Unpacking by using UPX: nothing to do
+
+##### Decompiling /tmp/decompilation/Shifting.exe into /tmp/decompilation/Shifting.exe.bc...
+RUN: /root/retdec/bin/retdec-bin2llvmir -provider-init -decoder -verify -x86-addr-spaces -x87-fpu -main-detection -idioms-libgcc -inst-opt -cond-branch-opt -syscalls -stack -constants -param-return -inst-opt-rda -inst-opt -simple-types -generate-dsm -remove-asm-instrs -class-hierarchy -select-fncs -unreachable-funcs -inst-opt -register-localization -value-protect -instcombine -tbaa -basicaa -simplifycfg -early-cse -tbaa -basicaa -globalopt -mem2reg -instcombine -simplifycfg -early-cse -lazy-value-info -jump-threading -correlated-propagation -simplifycfg -instcombine -simplifycfg -reassociate -loops -loop-simplify -lcssa -loop-rotate -licm -lcssa -instcombine -loop-simplifycfg -loop-simplify -aa -loop-accesses -loop-load-elim -lcssa -indvars -loop-idiom -loop-deletion -gvn -sccp -instcombine -lazy-value-info -jump-threading -correlated-propagation -dse -bdce -adce -simplifycfg -instcombine -strip-dead-prototypes -globaldce -constmerge -constprop -instcombine -instcombine -tbaa -basicaa -simplifycfg -early-cse -tbaa -basicaa -globalopt -mem2reg -instcombine -simplifycfg -early-cse -lazy-value-info -jump-threading -correlated-propagation -simplifycfg -instcombine -simplifycfg -reassociate -loops -loop-simplify -lcssa -loop-rotate -licm -lcssa -instcombine -loop-simplifycfg -loop-simplify -aa -loop-accesses -loop-load-elim -lcssa -indvars -loop-idiom -loop-deletion -gvn -sccp -instcombine -lazy-value-info -jump-threading -correlated-propagation -dse -bdce -adce -simplifycfg -instcombine -strip-dead-prototypes -globaldce -constmerge -constprop -instcombine -inst-opt -simple-types -stack-ptr-op-remove -idioms -instcombine -inst-opt -idioms -remove-phi -value-protect -sink -config-path /tmp/decompilation/Shifting.exe.config.json -max-memory-half-ram -o /tmp/decompilation/Shifting.exe.bc
+[0;1;33mRunning phase: Initialization ( 0.01s )[0m
+[0;1;33mRunning phase: LLVM ( 0.02s )[0m
+[0;1;33mRunning phase: Providers initialization ( 0.02s )[0m
+[0;1;33mRunning phase: Input binary to LLVM IR decoding ( 0.56s )[0m
+[0;1;33mRunning phase: LLVM ( 0.71s )[0m
+[0;1;33mRunning phase: x86 address spaces optimization ( 0.73s )[0m
+[0;1;33mRunning phase: x87 fpu register analysis ( 0.74s )[0m
+[0;1;33mRunning phase: Main function identification optimization ( 0.75s )[0m
+[0;1;33mRunning phase: Libgcc idioms optimization ( 0.75s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 0.75s )[0m
+[0;1;33mRunning phase: Conditional branch optimization ( 0.75s )[0m
+[0;1;33mRunning phase: Syscalls optimization ( 0.81s )[0m
+[0;1;33mRunning phase: Stack optimization ( 0.81s )[0m
+[0;1;33mRunning phase: Constants optimization ( 0.97s )[0m
+[0;1;33mRunning phase: Function parameters and returns optimization ( 1.16s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization using RDA ( 1.32s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 1.47s )[0m
+[0;1;33mRunning phase: Simple types recovery optimization ( 1.48s )[0m
+[0;1;33mRunning phase: Disassembly generation ( 1.54s )[0m
+[0;1;33mRunning phase: Assembly mapping instruction removal ( 1.61s )[0m
+[0;1;33mRunning phase: C++ class hierarchy optimization ( 1.63s )[0m
+[0;1;33mRunning phase: Selected functions optimization ( 1.63s )[0m
+[0;1;33mRunning phase: Unreachable functions optimization ( 1.63s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 1.65s )[0m
+[0;1;33mRunning phase: Make all registers local ( 1.65s )[0m
+[0;1;33mRunning phase: Value protection optimization ( 1.65s )[0m
+[0;1;33mRunning phase: LLVM ( 1.65s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 1.77s )[0m
+[0;1;33mRunning phase: Simple types recovery optimization ( 1.77s )[0m
+[0;1;33mRunning phase: Stack pointer operations optimization ( 1.77s )[0m
+[0;1;33mRunning phase: Instruction idioms optimization ( 1.77s )[0m
+[0;1;33mRunning phase: LLVM ( 1.77s )[0m
+[0;1;33mRunning phase: LLVM instruction optimization ( 1.78s )[0m
+[0;1;33mRunning phase: Instruction idioms optimization ( 1.78s )[0m
+[0;1;33mRunning phase: Phi removal ( 1.78s )[0m
+[0;1;33mRunning phase: Value protection optimization ( 1.78s )[0m
+[0;1;33mRunning phase: Code sinking ( 1.78s )[0m
+[0;1;33mRunning phase: LLVM ( 1.78s )[0m
+[0;1;33mRunning phase: Bitcode Writer ( 1.78s )[0m
+[0;1;33mRunning phase: Assembly Writer ( 1.78s )[0m
+[0;1;33mRunning phase: Cleanup ( 1.79s )[0m
+
+##### Decompiling /tmp/decompilation/Shifting.exe.bc into /tmp/decompilation/Shifting.exe.c...
+RUN: /root/retdec/bin/retdec-llvmir2hll -target-hll=c -output-format=plain -var-renamer=readable -var-name-gen=fruit -var-name-gen-prefix= -call-info-obtainer=optim -arithm-expr-evaluator=c -validate-module -o /tmp/decompilation/Shifting.exe.c /tmp/decompilation/Shifting.exe.bc -enable-debug -emit-debug-comments -config-path=/tmp/decompilation/Shifting.exe.config.json -max-memory-half-ram
+[0;1;33mRunning phase: initialization ( 0.02s )[0m
+[0;1;33m -> creating the used HLL writer [c] ( 0.02s )[0m
+[0;1;33m -> creating the used alias analysis [simple] ( 0.02s )[0m
+[0;1;33m -> creating the used call info obtainer [optim] ( 0.02s )[0m
+[0;1;33m -> creating the used evaluator of arithmetical expressions [c] ( 0.02s )[0m
+[0;1;33m -> creating the used variable names generator [fruit] ( 0.02s )[0m
+[0;1;33m -> creating the used variable renamer [readable] ( 0.02s )[0m
+[0;1;33m -> creating the used semantics [libc,gcc-general,win-api] ( 0.02s )[0m
+[0;1;33m -> loading the input config ( 0.02s )[0m
+[0;1;33mRunning phase: conversion of LLVM IR into BIR ( 0.03s )[0m
+[0;1;33m -> converting global variables ( 0.03s )[0m
+[0;1;33m -> converting function _atexit ( 0.03s )[0m
+[0;1;33m -> converting function __Z6cryptoRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE ( 0.03s )[0m
+[0;1;33m -> converting function main ( 0.03s )[0m
+[0;1;33m -> converting function function_401845 ( 0.03s )[0m
+[0;1;33m -> converting function __ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE ( 0.03s )[0m
+[0;1;33m -> converting function ___do_global_ctors ( 0.03s )[0m
+[0;1;33m -> converting function ___main ( 0.03s )[0m
+[0;1;33m -> converting function __Unwind_Resume ( 0.03s )[0m
+[0;1;33m -> converting function ___chkstk_ms ( 0.03s )[0m
+[0;1;33m -> converting function __ZN9__gnu_cxx12__to_xstringINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEcEET_PFiPT0_jPKS8_PcEjSB_z ( 0.03s )[0m
+[0;1;33m -> converting function function_407a1e ( 0.03s )[0m
+[0;1;33m -> converting function __ZN9__gnu_cxx17__is_null_pointerIcEEbPT_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZN9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEppEv ( 0.03s )[0m
+[0;1;33m -> converting function __ZN9__gnu_cxxneIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEbRKNS_17__normal_iteratorIT_T0_EESE_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZNK9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4baseEv ( 0.03s )[0m
+[0;1;33m -> converting function __ZNK9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEdeEv ( 0.03s )[0m
+[0;1;33m -> converting function __ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tag ( 0.03s )[0m
+[0;1;33m -> converting function function_407bd5 ( 0.03s )[0m
+[0;1;33m -> converting function __ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_construct_auxIPcEEvT_S7_St12__false_type ( 0.03s )[0m
+[0;1;33m -> converting function __ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1IPcvEET_S7_RKS3_ ( 0.03s )[0m
+[0;1;33m -> converting function function_407c67 ( 0.03s )[0m
+[0;1;33m -> converting function __ZNSt7__cxx119to_stringEi ( 0.03s )[0m
+[0;1;33m -> converting function __ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag ( 0.03s )[0m
+[0;1;33m -> converting function __ZSt19__iterator_categoryIPcENSt15iterator_traitsIT_E17iterator_categoryERKS2_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZSt8distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_ ( 0.03s )[0m
+[0;1;33m -> converting function __ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_ ( 0.03s )[0m
+[0;1;33mRunning phase: removing functions prefixed with [__decompiler_undefined_function_] ( 0.03s )[0m
+[0;1;33mRunning phase: removing functions from standard libraries ( 0.03s )[0m
+[0;1;33mRunning phase: removing code that is not reachable in a CFG ( 0.03s )[0m
+[0;1;33mRunning phase: signed/unsigned types fixing ( 0.04s )[0m
+[0;1;33mRunning phase: converting LLVM intrinsic functions to standard functions ( 0.04s )[0m
+[0;1;33mRunning phase: obtaining debug information ( 0.04s )[0m
+[0;1;33mRunning phase: alias analysis [simple] ( 0.04s )[0m
+[0;1;33mRunning phase: optimizations [normal] ( 0.04s )[0m
+[0;1;33m -> running GotoStmtOptimizer ( 0.04s )[0m
+[0;1;33m -> running RemoveUselessCastsOptimizer ( 0.04s )[0m
+[0;1;33m -> running UnusedGlobalVarOptimizer ( 0.04s )[0m
+[0;1;33m -> running DeadLocalAssignOptimizer ( 0.04s )[0m
+[0;1;33m -> running SimpleCopyPropagationOptimizer ( 0.04s )[0m
+[0;1;33m -> running CopyPropagationOptimizer ( 0.04s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.05s )[0m
+[0;1;33m -> running IfStructureOptimizer ( 0.05s )[0m
+[0;1;33m -> running LoopLastContinueOptimizer ( 0.05s )[0m
+[0;1;33m -> running PreWhileTrueLoopConvOptimizer ( 0.05s )[0m
+[0;1;33m -> running WhileTrueToForLoopOptimizer ( 0.05s )[0m
+[0;1;33m -> running WhileTrueToWhileCondOptimizer ( 0.05s )[0m
+[0;1;33m -> running IfBeforeLoopOptimizer ( 0.05s )[0m
+[0;1;33m -> running LLVMIntrinsicsOptimizer ( 0.05s )[0m
+[0;1;33m -> running VoidReturnOptimizer ( 0.05s )[0m
+[0;1;33m -> running BreakContinueReturnOptimizer ( 0.05s )[0m
+[0;1;33m -> running BitShiftOptimizer ( 0.05s )[0m
+[0;1;33m -> running DerefAddressOptimizer ( 0.05s )[0m
+[0;1;33m -> running EmptyArrayToStringOptimizer ( 0.06s )[0m
+[0;1;33m -> running BitOpToLogOpOptimizer ( 0.06s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.06s )[0m
+[0;1;33m -> running UnusedGlobalVarOptimizer ( 0.06s )[0m
+[0;1;33m -> running DeadLocalAssignOptimizer ( 0.06s )[0m
+[0;1;33m -> running SimpleCopyPropagationOptimizer ( 0.06s )[0m
+[0;1;33m -> running CopyPropagationOptimizer ( 0.06s )[0m
+[0;1;33m -> running SelfAssignOptimizer ( 0.07s )[0m
+[0;1;33m -> running VarDefForLoopOptimizer ( 0.07s )[0m
+[0;1;33m -> running VarDefStmtOptimizer ( 0.07s )[0m
+[0;1;33m -> running EmptyStmtOptimizer ( 0.07s )[0m
+[0;1;33m -> running GotoStmtOptimizer ( 0.07s )[0m
+[0;1;33m -> running SimplifyArithmExprOptimizer ( 0.07s )[0m
+[0;1;33m -> running DeadCodeOptimizer ( 0.07s )[0m
+[0;1;33m -> running DerefToArrayIndexOptimizer ( 0.07s )[0m
+[0;1;33m -> running IfToSwitchOptimizer ( 0.07s )[0m
+[0;1;33m -> running CCastOptimizer ( 0.07s )[0m
+[0;1;33m -> running CArrayArgOptimizer ( 0.07s )[0m
+[0;1;33mRunning phase: variable renaming [readable] ( 0.07s )[0m
+[0;1;33mRunning phase: converting constants to symbolic names ( 0.07s )[0m
+[0;1;33mRunning phase: module validation ( 0.07s )[0m
+[0;1;33m -> running BreakOutsideLoopValidator ( 0.07s )[0m
+[0;1;33m -> running NoGlobalVarDefValidator ( 0.07s )[0m
+[0;1;33m -> running ReturnValidator ( 0.07s )[0m
+[0;1;33mRunning phase: emission of the target code [c] ( 0.07s )[0m
+[0;1;33mRunning phase: finalization ( 0.07s )[0m
+[0;1;33mRunning phase: cleanup ( 0.08s )[0m
+
+##### Done!

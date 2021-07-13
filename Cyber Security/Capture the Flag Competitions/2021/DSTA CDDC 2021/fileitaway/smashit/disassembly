@@ -1,0 +1,60 @@
+164: int main (char **argv);
+; var char *s @ ebp-0x4c
+; var int32_t var_ch @ ebp-0xc
+; var int32_t var_8h @ ebp-0x8
+; arg char **argv @ esp+0x74
+0x08049216      endbr32
+0x0804921a      lea ecx, [argv]
+0x0804921e      and esp, 0xfffffff0
+0x08049221      push dword [ecx - 4]
+0x08049224      push ebp
+0x08049225      mov ebp, esp
+0x08049227      push ebx
+0x08049228      push ecx
+0x08049229      sub esp, 0x50
+0x0804922c      call __x86.get_pc_thunk.bx ; sym.__x86.get_pc_thunk.bx
+0x08049231      add ebx, 0x2dcf
+0x08049237      mov dword [var_ch], 0
+0x0804923e      sub esp, 0xc
+0x08049241      lea eax, [ebx - 0x1ff8]
+0x08049247      push eax           ; const char *s
+0x08049248      call puts          ; sym.imp.puts ; int puts(const char *s)
+0x0804924d      add esp, 0x10
+0x08049250      mov eax, dword [ebx - 4]
+0x08049256      mov eax, dword [eax]
+0x08049258      sub esp, 0xc
+0x0804925b      push eax           ; FILE *stream
+0x0804925c      call section..plt.sec ; sym.imp.fflush ; int fflush(FILE *stream)
+0x08049261      add esp, 0x10
+0x08049264      sub esp, 0xc
+0x08049267      lea eax, [s]
+0x0804926a      push eax           ; char *s
+0x0804926b      call gets          ; sym.imp.gets ; char *gets(char *s)
+0x08049270      add esp, 0x10
+0x08049273      mov eax, dword [var_ch]
+0x08049276      cmp eax, 0x43444443
+0x0804927b      jne 0x8049299
+0x0804927d      sub esp, 0xc
+0x08049280      lea eax, [ebx - 0x1fe6]
+   
+0x08049286      push    eax        ; const char *string
+0x08049287      call    system     ; sym.imp.system ; int system(const char *string)
+0x0804928c      add     esp, 0x10
+0x0804928f      sub     esp, 0xc
+0x08049292      push    0          ; int status
+0x08049294      call    exit       ; sym.imp.exit ; void exit(int status)
+0x08049299      sub     esp, 0xc
+0x0804929c      lea     eax, [ebx - 0x1fd9]
+0x080492a2      push    eax        ; const char *s
+0x080492a3      call    puts       ; sym.imp.puts ; int puts(const char *s)
+0x080492a8      add     esp, 0x10
+0x080492ab      mov     eax, 0
+0x080492b0      lea     esp, [var_8h]
+0x080492b3      pop     ecx
+0x080492b4      pop     ebx
+0x080492b5      pop     ebp
+0x080492b6      lea     esp, [ecx - 4]
+0x080492b9      ret
+0x080492ba      nop
+0x080492bc      nop
+0x080492be      nop

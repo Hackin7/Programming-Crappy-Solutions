@@ -1,0 +1,46 @@
+ey$ ssh -i cybot01_bot1.key bot1@13.213.91.240
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-1035-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Jun 24 13:57:21 UTC 2021
+
+  System load:  0.0               Processes:             380
+  Usage of /:   8.2% of 29.02GB   Users logged in:       1
+  Memory usage: 3%                IPv4 address for ens5: 172.31.34.218
+  Swap usage:   0%
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+6 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Last login: Thu Jun 24 13:54:51 2021 from 222.164.132.238
+bot1@cybot01:~$ ls
+^[[Aflag.txt
+bot1@cybot01:~$ cat flag.txt
+CDDC21{b0t_eNtR3nC3}
+bot1@cybot01:~$

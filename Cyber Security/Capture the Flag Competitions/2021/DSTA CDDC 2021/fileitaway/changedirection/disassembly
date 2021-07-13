@@ -1,0 +1,42 @@
+
+
+30: flag ();
+0x080484fd      push ebp
+0x080484fe      mov ebp, esp
+0x08048500      sub esp, 0x18
+0x08048503      mov dword [esp], str.cat_flag.txt ; 0x8048600 ; const char *string
+0x0804850a      call system        ; sym.imp.system ; int system(const char *string)
+0x0804850f      mov dword [esp], 0 ; int status
+0x08048516      call exit          ; sym.imp.exit ; void exit(int status)
+
+20: notaflag ();
+0x0804851b      push ebp
+0x0804851c      mov ebp, esp
+0x0804851e      sub esp, 0x18
+0x08048521      mov dword [esp], str.echo_not_flag___notflag ; 0x804860d ; const char *string
+0x08048528      call system        ; sym.imp.system ; int system(const char *string)
+0x0804852d      leave
+0x0804852e      ret
+
+64: int main (int argc, char **argv, char **envp);
+; var void *buf @ esp+0x4
+; var size_t nbyte @ esp+0x8
+; var int32_t var_10h @ esp+0x10
+0x0804852f      push    ebp
+0x08048530      mov     ebp, esp
+0x08048532      and     esp, 0xfffffff0
+0x08048535      sub     esp, 0x50
+0x08048538      mov     dword [esp], str.Enter_password:_ ; 0x8048627 ; const char *format
+0x0804853f      call    printf     ; sym.imp.printf ; int printf(const char *format)
+0x08048544      mov     eax, dword [stdout] ; obj.stdout__GLIBC_2.0
+                                   ; 0x804a040
+0x08048549      mov     dword [esp], eax ; FILE *stream
+0x0804854c      call    fflush     ; sym.imp.fflush ; int fflush(FILE *stream)
+0x08048551      mov     dword [nbyte], 0x64 ; 'd' ; 100 ; size_t nbyte
+0x08048559      lea     eax, [var_10h]
+0x0804855d      mov     dword [buf], eax ; void *buf
+0x08048561      mov     dword [esp], 0 ; int fildes
+0x08048568      call    read       ; sym.imp.read ; ssize_t read(int fildes, void *buf, size_t nbyte)
+0x0804856d      leave
+0x0804856e      ret
+0x0804856f      nop

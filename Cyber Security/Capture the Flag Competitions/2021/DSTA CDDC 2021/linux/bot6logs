@@ -1,0 +1,326 @@
+bot6 /usr/bin/cat /var/log/../../home/bot5/flag.txt
+CDDC21{b3w4r3sud03rz}
+bot5@cybot01:~$ su bot6
+Password:
+bot6@cybot01:/home/bot5$ cd ~
+bot6@cybot01:~$ ls -al
+total 44
+dr-xr-x---  2 root bot6  4096 Jun 18 09:51 .
+drwxr-xr-x 10 root bot5  4096 Jun 18 09:51 ..
+lrwxrwxrwx  1 root root     9 Jun 18 09:51 .bash_history -> /dev/null
+-r--r-----  1 bot6 bot6   220 Feb 25  2020 .bash_logout
+-r--r-----  1 bot6 bot6  3771 Feb 25  2020 .bashrc
+-r--r-----  1 bot6 bot6   807 Feb 25  2020 .profile
+-r--------  1 bot7 root    31 Jun 18 09:51 flag.txt
+-r-sr-xr-x  1 bot7 root 17008 Jun 18 09:51 systeminfo
+bot6@cybot01:~$ sudo -l
+[sudo] password for bot6:
+Sorry, user bot6 may not run sudo on cybot01.
+bot6@cybot01:~$ cat flag.txt
+cat: flag.txt: Permission denied
+bot6@cybot01:~$ cat .bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+bot6@cybot01:~$ cat .bash_hisrory
+cat: .bash_hisrory: No such file or directory
+bot6@cybot01:~$ cat .bash_history
+bot6@cybot01:~$ ls -al
+total 44
+dr-xr-x---  2 root bot6  4096 Jun 18 09:51 .
+drwxr-xr-x 10 root bot5  4096 Jun 18 09:51 ..
+lrwxrwxrwx  1 root root     9 Jun 18 09:51 .bash_history -> /dev/null
+-r--r-----  1 bot6 bot6   220 Feb 25  2020 .bash_logout
+-r--r-----  1 bot6 bot6  3771 Feb 25  2020 .bashrc
+-r--r-----  1 bot6 bot6   807 Feb 25  2020 .profile
+-r--------  1 bot7 root    31 Jun 18 09:51 flag.txt
+-r-sr-xr-x  1 bot7 root 17008 Jun 18 09:51 systeminfo
+bot6@cybot01:~$ echo $PATG
+
+bot6@cybot01:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+bot6@cybot01:~$ cat .bash_logout
+# ~/.bash_logout: executed by bash(1) when login shell exits.
+
+# when leaving the console clear the screen to increase privacy
+
+if [ "$SHLVL" = 1 ]; then
+    [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
+fi
+bot6@cybot01:~$ cat systeminfo
+@@@@���uu   ���-�=�=���-�=�=�888 XXXDDS�td888 P�td` ` ` DDQ�tdR�td�-�=�=xx/lib64/ld-linux-x86-64.so.2GNU�GNU�}�,����:�t�PnvE�:GNU
+                                                     �
+                                                      (��e�m p 6(R�
+                                                                    � =/C"libc.so.6fflushputssetreuidputcharprintfstdoutsystemsleep__cxa_finalize__libc_start_mainGLIBC_2.2.5_ITM_deregisterTMCloneTable__gmon_start___ITM_registerTMCloneTableui   d�@�?�?�?�?
+@?
+ �?�?�?�?��?    �?
+                  ��H�H��/H��t��H���5j/��%k/��h���������h���������h���������h��������h��������h��������h����������%M/D����%�.D����%�.D����%�.D����%�.D���H�=���.�H�=�.H��.H9�tH�n.H��tH������H�=�.H�5�.H)�H��H��?H��H�H��tH�E.H����fD�����=M.u+UH�=".H��t
+�����H��-H�������E��'�.�h���H��-H������������E��}�~ӿH��H��H�=�
+����H�=y���H�=x�։��u���H�=�
+��������f���AWL�=�*AVI��AUI��ATA��UH�-|*SL)�H������H��t1��L��L��D��A��H��H9�u�H�[]A\A]A^A_�ff.������H�H��System information
+[*] Date:/bin/date
+[*] Kernel:/bin/uname -r
+[*] User infomation:id;D����x@����P��������`�������������8zRx
+                                                            X���/D$4@����FJ
+                                                                          �?�*3$"\����t����p������E�C
+D�����eF�I�E �E(�D0�H8�G@n8A0A(B BB������
+h�����o��
+�
+ �?��  ������o����o���o����o�=0@P`p�@GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.08X|�� �
+
+�
+ �� h ` � �=�=�=�?@@��
+                      P�!�7@F�=my�=�������!����=��=��=�` ��?�
+                                                             `, H� @\n@hu���@� @� ��e� @� /.@:      �?@K ex"crtstuff.cderegister_tm_clones__do_global_dtors_auxcompleted.8060__do_global_dtors_aux_fini_array_entryframe_dummy__frame_dummy_init_array_entrymission6.c__FRAME_END____init_array_end_DYNAMIC__init_array_start__GNU_EH_FRAME_HDR_GLOBAL_OFFSET_TABLE___libc_csu_finiputchar@@GLIBC_2.2.5_ITM_deregisterTMCloneTablestdout@@GLIBC_2.2.5puts@@GLIBC_2.2.5_edatasystem@@GLIBC_2.2.5printf@@GLIBC_2.2.5__libc_start_main@@GLIBC_2.2.5__data_start__gmon_start____dso_handle_IO_stdin_used__libc_csu_initfflush@@GLIBC_2.2.5setreuid@@GLIBC_2.2.5__bss_startmain__TMC_END___ITM_registerTMCloneTablesleep@@GLIBC_2.2.5__cxa_finalize@@GLIBC_2.2.5.symtab.strtab.shstrtab.interp.note.gnu.property.note.gnu.build-id.note.ABI-tag.gnu.hash.dynsym.dynstr.gnu.version.gnu.version_r.rela.dyn.rela.plt.init.plt.got.plt.sec.text.fini.rodata.eh_frame_hdr.eh_frame.init_array.fini_array.dynamic.data.bss.comment#86XX$I|| W���o��a
+�  `�` ` D�� ������=�-��?�@0�o����B����  �������p�  E�hh
+                          @00*@0�.      7��9bot6@cybot01:~$ ./systeminfo
+System information.
+..
+
+[*] Date:
+Thu Jun 24 14:27:36 UTC 2021
+
+[*] Kernel:
+5.8.0-1035-aws
+
+[*] User infomation:
+uid=1007(bot7) gid=1006(bot6) groups=1006(bot6),1005(bot5)
+bot6@cybot01:~$
+
+
+$ ltrace ./systeminfo
+System information...
+
+[*] Date:
+Thu Jun 24 14:46:38 UTC 2021
+--- SIGCHLD (Child exited) ---
+
+[*] Kernel:
+5.8.0-1035-aws
+--- SIGCHLD (Child exited) ---
+
+[*] User infomation:
+uid=1006(bot6) gid=1006(bot6) groups=1006(bot6),1005(bot5)
+--- SIGCHLD (Child exited) ---
++++ exited (status 0) +++
+bot6@cybot01:~$ strace ./systeminfo
+execve("./systeminfo", ["./systeminfo"], 0x7ffe423a2020 /* 25 vars */) = 0
+access("/etc/suid-debug", F_OK)         = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x55d4860be000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffeb03e5e10) = -1 EINVAL (Invalid argument)
+fcntl(0, F_GETFD)                       = 0
+fcntl(1, F_GETFD)                       = 0
+fcntl(2, F_GETFD)                       = 0
+access("/etc/suid-debug", F_OK)         = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=23698, ...}) = 0
+mmap(NULL, 23698, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f600e826000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360q\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029224, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f600e824000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\t\233\222%\274\260\320\31\331\326\10\204\276X>\263"..., 68, 880) = 68
+mmap(NULL, 2036952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f600e632000
+mprotect(0x7f600e657000, 1847296, PROT_NONE) = 0
+mmap(0x7f600e657000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25000) = 0x7f600e657000
+mmap(0x7f600e7cf000, 303104, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0x7f600e7cf000
+mmap(0x7f600e81a000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f600e81a000
+mmap(0x7f600e820000, 13528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f600e820000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f600e825540) = 0
+mprotect(0x7f600e81a000, 12288, PROT_READ) = 0
+mprotect(0x55d484d0a000, 4096, PROT_READ) = 0
+mprotect(0x7f600e859000, 4096, PROT_READ) = 0
+munmap(0x7f600e826000, 23698)           = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x15), ...}) = 0
+brk(NULL)                               = 0x55d4860be000
+brk(0x55d4860df000)                     = 0x55d4860df000
+write(1, "System information", 18System information)      = 18
+write(1, ".", 1.)                        = 1
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffeb03e5da0) = 0
+write(1, ".", 1.)                        = 1
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffeb03e5da0) = 0
+write(1, ".", 1.)                        = 1
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffeb03e5da0) = 0
+write(1, "\n", 1
+)                       = 1
+setreuid(1007, 1007)                    = -1 EPERM (Operation not permitted)
+write(1, "\n", 1
+)                       = 1
+write(1, "[*] Date:\n", 10[*] Date:
+)             = 10
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f600e629000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7f600e631ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1100201
+munmap(0x7f600e629000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(1100201, Thu Jun 24 14:46:52 UTC 2021
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1100201
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1100201, si_uid=1006, si_status=0, si_utime=0, si_stime=0} ---
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7ffeb03e5da0) = 0
+write(1, "\n", 1
+)                       = 1
+write(1, "[*] Kernel:\n", 12[*] Kernel:
+)           = 12
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f600e629000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7f600e631ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1100205
+munmap(0x7f600e629000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(1100205, 5.8.0-1035-aws
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1100205
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1100205, si_uid=1006, si_status=0, si_utime=0, si_stime=0} ---
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=2, tv_nsec=0}, 0x7ffeb03e5da0) = 0
+write(1, "\n", 1
+)                       = 1
+write(1, "[*] User infomation:\n", 21[*] User infomation:
+)  = 21
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+mmap(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f600e629000
+rt_sigprocmask(SIG_BLOCK, ~[], [CHLD], 8) = 0
+clone(child_stack=0x7f600e631ff0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1100207
+munmap(0x7f600e629000, 36864)           = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(1100207, uid=1006(bot6) gid=1006(bot6) groups=1006(bot6),1005(bot5)
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1100207
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f600e678210}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1100207, si_uid=1006, si_status=0, si_utime=0, si_stime=0} ---
+exit_group(0)                           = ?
++++ exited with 0 +++

