@@ -1,0 +1,24 @@
+# Poem Collection
+
+Navigate the website
+
+Accessing `/flag.txt` directly reveals errors. The web app has a parameter to access the txt files.
+
+I guessed it is Local File Inclusion vulnerability, so `http://web.chal.csaw.io:5003/poems/?poem=../flag.txt` will give the flag
+
+`flag{l0c4l_f1l3_1nclusi0n_f0r_7h3_w1n}`
+
+# Password Checker
+
+Classic Buffer Overflow to return pointer
+
+Just overflow to the `backdoor` function.
+
+```
+$ ls
+flag.txt
+password_checker
+$ cat flag.txt
+flag{ch4r1i3_4ppr3ci4t35_y0u_f0r_y0ur_h31p}
+$
+```

@@ -1,0 +1,2 @@
+Just follow TCP Stream 2 (Telnet, which is plain text) in wireshark
+flag{T00_L@ZY_4_$3CUR1TY}
