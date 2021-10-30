@@ -1,0 +1,31 @@
+# Challenge Name
+
+### Description
+
+## Solution
+
+```
+(base) [hacker@hackerbook tmp]$ dtrx sentosa-sea-aquarium.7z
+sentosa-sea-aquarium.7z contains one file but its name doesn't match.
+ Expected: sentosa-sea-aquarium
+   Actual: sentosa-sea-aquarium.jpg
+You can:
+ * extract the file _I_nside a new directory named sentosa-sea-aquarium
+ * extract the file and _R_ename it sentosa-sea-aquarium
+ * extract the file _H_ere
+What do you want to do?  (I/r/h)
+(base) [hacker@hackerbook tmp]$ cd sentosa-sea-aquarium/
+(base) [hacker@hackerbook sentosa-sea-aquarium]$ ls
+sentosa-sea-aquarium.jpg
+(base) [hacker@hackerbook sentosa-sea-aquarium]$ cksum sentosa-sea-aquarium.jpg
+1295326303 45620 sentosa-sea-aquarium.jpg
+(base) [hacker@hackerbook sentosa-sea-aquarium]$ crc32 sentosa-sea-aquarium.jpg
+040e23da
+(base) [hacker@hackerbook sentosa-sea-aquarium]$
+```
+
+For Arch linux install perl-archive-zip-crc32 from AUR
+
+## Flag
+
+`TISC{040E23DA}`

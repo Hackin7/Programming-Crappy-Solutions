@@ -1,0 +1,185 @@
+# Challenge Name
+
+### Description
+
+![](Chal.png)
+
+## Solution
+
+```
+(base) [hacker@hackerbook tmp]$ binwalk -e file3.jpg
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+7184          0x1C10          Zip archive data, at least v2.0 to extract, compressed size: 6348, uncompressed size: 7232, name: picture_with_text.jpg
+13686         0x3576          End of Zip archive, footer length: 22
+
+(base) [hacker@hackerbook tmp]$ cd _file3.jpg.extracted/
+(base) [hacker@hackerbook _file3.jpg.extracted]$ ls
+1C10.zip  picture_with_text.jpg
+(base) [hacker@hackerbook _file3.jpg.extracted]$ file picture_with_text.jpg
+picture_with_text.jpg: data
+(base) [hacker@hackerbook _file3.jpg.extracted]$ foremost -i picture_with_text.jpg
+Processing: picture_with_text.jpg
+|*|
+(base) [hacker@hackerbook _file3.jpg.extracted]$ ls
+1C10.zip  output  picture_with_text.jpg
+(base) [hacker@hackerbook _file3.jpg.extracted]$ cd output
+(base) [hacker@hackerbook output]$ ls
+audit.txt  jpg
+(base) [hacker@hackerbook output]$ cat audit.txt
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Oct 29 22:23:14 2021
+Invocation: foremost -i picture_with_text.jpg
+Output directory: /tmp/_file3.jpg.extracted/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: picture_with_text.jpg
+Start: Fri Oct 29 22:23:14 2021
+Length: 7 KB (7232 bytes)
+
+Num	 Name (bs=512)	       Size	 File Offset	 Comment
+
+0:	00000000.jpg 	       7 KB 	         48
+Finish: Fri Oct 29 22:23:14 2021
+
+1 FILES EXTRACTED
+
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Fri Oct 29 22:23:14 2021
+(base) [hacker@hackerbook output]$ cd jpg/
+(base) [hacker@hackerbook jpg]$ ls
+00000000.jpg
+(base) [hacker@hackerbook jpg]$ file 00000000.jpg
+00000000.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 360x360, components 3
+(base) [hacker@hackerbook jpg]$ exiftool 00000000.jpg
+ExifTool Version Number         : 12.30
+File Name                       : 00000000.jpg
+Directory                       : .
+File Size                       : 7.0 KiB
+File Modification Date/Time     : 2021:10:29 22:23:14+08:00
+File Access Date/Time           : 2021:10:29 22:24:11+08:00
+File Inode Change Date/Time     : 2021:10:29 22:23:14+08:00
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : None
+X Resolution                    : 1
+Y Resolution                    : 1
+Image Width                     : 360
+Image Height                    : 360
+Encoding Process                : Progressive DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Image Size                      : 360x360
+Megapixels                      : 0.130
+(base) [hacker@hackerbook jpg]$ strings 00000000.jpg
+JFIF
+ )/'%'/9339GDG]]}
+ )/'%'/9339GDG]]}
+1u/3
+jsc"
+A`2$
+I^uMS
+czUP
+%HjE
+,{"L
+kNud
+1~%M
+d/#Z
+!^I)
+f'=b1
+xz%=
+QjpM
+:\G5
+/_bK
+)(QEU
+r&UJl
+:kfv3
+j"22
+Er12=
+D	6+x
+{z;F
+o:LM
+n6/c
+#+R<sk
+3=/I
+\.*B
+KIH""
+l6/q
+ "01AQ
+2@qr
+kEkEt+
+ccz7
+4Hz2
+.;2~
+lcccc
+?)#sL
+y2IF
+jN7)
+||c%
+yK't
+)se*^P
+m2Q~Q
+mn%'
+OO-
+IGkQ
+myZ1cy
+OzR[
+y//A
+B,LB
+ccz661
+/18`O
+B,LB
+01AS
+ "@Rqr#3a4p
+]]]]
+%uuu.lv
+p7zX
+wS@*$
+"01AQUq
+%BSbcdp
+cBZe!r
+Xs{nuv
+crO$
+<+Mi
+5.:%
+Sk)?
+g)e(l}5U
+SaYR@$vf
+5tno
+v+Mi
+UGR^a
+mLq*
+/|(J~
+yEKS
+KJ:^I
+ZkMi
+ZkMi
+(base) [hacker@hackerbook jpg]$ binwalk 00000000.jpg 0
+
+General Error: Cannot open file 0 (CWD: /tmp/_file3.jpg.extracted/output/jpg) : [Errno 2] No such file or directory: '0'
+
+(base) [hacker@hackerbook jpg]$ binwalk 00000000.jpg
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+
+(base) [hacker@hackerbook jpg]$
+(base) [hacker@hackerbook _file3.jpg.extracted]$ strings picture_with_text.jpg
+NAFJRE GB GUVF PUNYYRATR VF URER NCCYRPNEEBGCRNE
+...
+```
+
+
+## Flag
+``

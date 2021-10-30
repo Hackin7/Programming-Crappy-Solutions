@@ -29,5 +29,10 @@ We can use that as the desired output, reverse it (using the encrypted file) to 
 
 The password is `No1Trust`. Putting in the password will decrypt the remaining files. The flag is in `critical_data.txt`
 
+```
+(base) [hacker@hackerbook Working]$ cat Files/critical_data.txt
+(>0_0)> You_Have_Awakened_Me_Too_Soon_EXE@flare-on.com <(0_0<)
+```
+
 ## Flag
 `You_Have_Awakened_Me_Too_Soon_EXE@flare-on.com`

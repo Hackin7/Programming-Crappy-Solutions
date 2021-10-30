@@ -1,0 +1,25 @@
+# Scratching the Surface - Challenge 1
+
+### Description
+
+![Chal.png](Chal.png)
+
+## Solution
+
+At first I opened the file1.wav in Audacity, to notice that the Left and Right audio channels are quite different.
+Moreover, the Right Track sounded and looked awfully like Morse Code.
+
+![](1_Analysis.png)
+
+The Steps I took to extract the audio morse code track (from `code.wav`) in Audactiy are
+1. Split Stereo Track to Mono (under the file1 dropdown)
+2. Delete the track with music
+3. Effect -> Normalise, Make the code as loud as possible.
+
+Afterwards, I used an online audio morse code decoder ([here](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)) to get the message.
+
+![](2_Decoding.png)
+
+## Flag
+
+`TISC{csitislocatedinsciencepark}`

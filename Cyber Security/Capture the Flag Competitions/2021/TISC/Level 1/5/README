@@ -1,0 +1,14 @@
+# 5
+
+### Description
+
+## Solution
+
+Login Time is `17/06/2021 10:41:37`
+Since Singapore is UTC +8, must minus 8 hours
+
+
+
+## Flag
+
+`TISC{17/06/2021 02:41:37}`

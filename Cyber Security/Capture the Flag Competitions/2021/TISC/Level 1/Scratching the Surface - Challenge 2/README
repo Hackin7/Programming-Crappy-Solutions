@@ -1,0 +1,109 @@
+# Scratching the Surface - Challenge 2
+
+### Description
+
+![](Chal.png)
+
+## Solution
+
+```
+(base) [hacker@hackerbook tmp]$ exiftool file2.jpg
+ExifTool Version Number         : 12.30
+File Name                       : file2.jpg
+Directory                       : .
+File Size                       : 312 KiB
+File Modification Date/Time     : 2021:10:29 21:33:09+08:00
+File Access Date/Time           : 2021:10:29 21:33:22+08:00
+File Inode Change Date/Time     : 2021:10:29 21:33:09+08:00
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Description               :
+Make                            : NIKON
+Camera Model Name               : E885
+Orientation                     : Horizontal (normal)
+X Resolution                    : 300
+Y Resolution                    : 300
+Resolution Unit                 : inches
+Software                        : E885v1.1
+Modify Date                     : 2003:08:25 14:55:27
+Y Cb Cr Positioning             : Co-sited
+Exposure Time                   : 1/234
+F Number                        : 3.1
+Exposure Program                : Program AE
+ISO                             : 100
+Exif Version                    : 0210
+Date/Time Original              : 2003:08:25 14:55:27
+Create Date                     : 2003:08:25 14:55:27
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : 4
+Exposure Compensation           : 0
+Max Aperture Value              : 1.0
+Metering Mode                   : Multi-segment
+Light Source                    : Unknown
+Flash                           : No Flash
+Focal Length                    : 10.1 mm
+Maker Note Version              : 1.00
+Color Mode                      : Color
+Quality                         : Fine
+White Balance                   : Auto
+Sharpness                       : Auto
+Focus Mode                      : AF-C
+Flash Setting                   : Red-Eye
+ISO Selection                   : Auto
+Image Adjustment                : Auto
+Auxiliary Lens                  : Off
+Manual Focus Distance           : undef
+Digital Zoom                    : 1
+AF Area Mode                    : Single Area
+AF Point                        : Center
+AF Points In Focus              : (none)
+Scene Mode                      :
+Saturation Adj                  : 0
+Noise Reduction                 : Off
+Data Dump                       : (Binary data 254 bytes, use -b option to extract)
+Compression                     : JPEG (old-style)
+Preview Image Start             : 14409
+Preview Image Length            : 18939
+PrintIM Version                 : 0100
+User Comment                    :
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 1024
+Exif Image Height               : 768
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Thumbnail Offset                : 4096
+Thumbnail Length                : 9329
+Image Width                     : 1024
+Image Height                    : 768
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:2 (2 1)
+Aperture                        : 3.1
+Image Size                      : 1024x768
+Megapixels                      : 0.786
+Preview Image                   : (Binary data 18939 bytes, use -b option to extract)
+Shutter Speed                   : 1/234
+Thumbnail Image                 : (Binary data 9329 bytes, use -b option to extract)
+Focal Length                    : 10.1 mm
+Light Value                     : 11.1
+
+```
+
+We can derive the flag from this time
+
+```
+Modify Date                     : 2003:08:25 14:55:27
+```
+
+Putting in this format `TISC{2003:08:25 14:55:27}` we get the flag
+
+## Flag
+
+`TISC{2003:08:25 14:55:27}`
