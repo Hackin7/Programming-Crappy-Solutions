@@ -1,0 +1,17 @@
+Look at source code of forum
+
+http://10.8.202.2:5000/5d5b09f6dcb2d53a5fffc60c4ac0d55fabdf556069d6631545f42aa6e3500f2e?string=${route
+
+Can generate url for post1 (since doesnt exist)
+http://10.8.202.2:5000/e0ec165a064cc409f6116bc842080ac4daec347c3b8791699ef0b5e6d621dea8
+
+
+
+
+Login to  http://10.8.202.2:5000/428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324?string=forum/post0
+admin
+Id15l1k3p@55w0rds
+
+http://10.8.202.2:5000/428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324
+
+htx{A_d1r3ct0Ry_Tr4v3rSaL_tRaV35Ty}

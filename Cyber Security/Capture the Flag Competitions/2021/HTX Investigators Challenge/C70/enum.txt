@@ -1,0 +1,26 @@
+┌──(kali㉿kali)-[~]
+└─$ dirb http://10.8.203.2      
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon Dec 20 00:27:15 2021
+URL_BASE: http://10.8.203.2/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://10.8.203.2/ ----
++ http://10.8.203.2/index.html (CODE:200|SIZE:3515)                                                                                                                    
+==> DIRECTORY: http://10.8.203.2/new/                                                                                                                                  
++ http://10.8.203.2/server-status (CODE:403|SIZE:199)                                                                                                                  
+                                                                                                                                                                       
+---- Entering directory: http://10.8.203.2/new/ ----
+                                                                                                                                                                       
+-----------------
+END_TIME: Mon Dec 20 00:33:16 2021
+DOWNLOADED: 9224 - FOUND: 2

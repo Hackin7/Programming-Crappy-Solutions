@@ -1,0 +1,87 @@
+┌──(kali㉿kali)-[~]
+└─$ dirb http://10.8.202.2:5000/                                                                                                                                  130 ⨯
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon Dec 20 03:51:47 2021
+URL_BASE: http://10.8.202.2:5000/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://10.8.202.2:5000/ ----
++ http://10.8.202.2:5000/home (CODE:200|SIZE:926)                                                                                                                      
+                                                                                                                                                                       
+-----------------
+END_TIME: Mon Dec 20 03:58:32 2021
+DOWNLOADED: 4612 - FOUND: 1
+
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ hashlines() {                                                  
+  python -c '
+import sys, hashlib
+for line in sys.stdin:
+    print(hashlib.sha256(line.rstrip("\n")).hexdigest().upper())'
+}
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ cat rockyou.txt | hashlines | tr '[:upper:]' '[:lower:]' > /tmp/sha
+^[[A^[[B^CTraceback (most recent call last):
+  File "<string>", line 4, in <module>
+KeyboardInterrupt
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ cat /usr/share/dirb/wordlists/common.txt | hashlines | tr '[:upper:]' '[:lower:]' > /tmp/sha                                                                  130 ⨯
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ dirb http://10.8.202.2:5000/   /tmp/sha
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon Dec 20 03:58:56 2021
+URL_BASE: http://10.8.202.2:5000/
+WORDLIST_FILES: /tmp/sha
+
+-----------------
+
+GENERATED WORDS: 4614                                                          
+┌──(kali㉿kali)-[/usr/share/wordlists]
+└─$ dirb http://10.8.202.2:5000/   /tmp/sha
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Mon Dec 20 03:58:56 2021
+URL_BASE: http://10.8.202.2:5000/
+WORDLIST_FILES: /tmp/sha
+
+-----------------
+
+GENERATED WORDS: 4614                                                          
+
+---- Scanning URL: http://10.8.202.2:5000/ ----
++ http://10.8.202.2:5000/4eb41a2a9dfe70722ee4671a6d1fcc6921c26cc8bcb54e5632f5e7d740352940 (CODE:200|SIZE:2913)                                                         
++ http://10.8.202.2:5000/4ea140588150773ce3aace786aeef7f4049ce100fa649c94fbbddb960f1da942 (CODE:200|SIZE:1299)                                                         
++ http://10.8.202.2:5000/428821350e9691491f616b754cd8315fb86d797ab35d843479e732ef90665324 (CODE:200|SIZE:1656)                                                         
++ http://10.8.202.2:5000/36bde66f289a35683683b041c6d8f418a5f36607b547da25d00ad55891e80b88 (CODE:200|SIZE:868)                                                          
+                                                                               b39e60064d815204f4d62                                                                   
+-----------------
+END_TIME: Mon Dec 20 04:05:38 2021
+DOWNLOADED: 4614 - FOUND: 4
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/usr/share/wordlists]
+
