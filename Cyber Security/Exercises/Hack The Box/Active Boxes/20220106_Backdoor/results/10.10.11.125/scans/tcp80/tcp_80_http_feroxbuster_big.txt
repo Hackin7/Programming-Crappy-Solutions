@@ -1,0 +1,14 @@
+403        9l       28w      277c http://10.10.11.125/.htpasswd
+403        9l       28w      277c http://10.10.11.125/.htaccess
+403        9l       28w      277c http://10.10.11.125/.htaccess.txt
+403        9l       28w      277c http://10.10.11.125/.htpasswd.txt
+403        9l       28w      277c http://10.10.11.125/.htaccess.html
+403        9l       28w      277c http://10.10.11.125/.htpasswd.html
+403        9l       28w      277c http://10.10.11.125/.htpasswd.php
+403        9l       28w      277c http://10.10.11.125/.htaccess.php
+403        9l       28w      277c http://10.10.11.125/.htpasswd.asp
+403        9l       28w      277c http://10.10.11.125/.htaccess.asp
+403        9l       28w      277c http://10.10.11.125/.htpasswd.aspx
+403        9l       28w      277c http://10.10.11.125/.htaccess.aspx
+403        9l       28w      277c http://10.10.11.125/.htaccess.jsp
+403        9l       28w      277c http://10.10.11.125/.htpasswd.jsp

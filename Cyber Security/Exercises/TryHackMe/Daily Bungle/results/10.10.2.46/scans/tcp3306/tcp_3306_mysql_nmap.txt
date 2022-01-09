@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Thu Jan  6 03:52:22 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Exercises/TryHackMe/Daily Bungle/results/10.10.2.46/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Exercises/TryHackMe/Daily Bungle/results/10.10.2.46/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 10.10.2.46
+Nmap scan report for 10.10.2.46
+Host is up, received user-set (0.29s latency).
+Scanned at 2022-01-06 03:52:24 EST for 13s
+
+PORT     STATE SERVICE REASON  VERSION
+3306/tcp open  mysql   syn-ack MariaDB (unauthorized)
+| banner: d\x00\x00\x00\xFFj\x04Host 'ip-10-8-52-126.eu-west-1.compute.in
+|_ternal' is not allowed to connect to this MariaDB server
+|_mysql-empty-password: Host 'ip-10-8-52-126.eu-west-1.compute.internal' is not allowed to connect to this MariaDB server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  6 03:52:37 2022 -- 1 IP address (1 host up) scanned in 15.39 seconds

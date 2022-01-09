@@ -1,0 +1,108 @@
+WhatWeb report for http://10.10.2.46:80
+Status    : 200 OK
+Title     : Home
+IP        : 10.10.2.46
+Country   : RESERVED, ZZ
+
+Summary   : Script[application/json], X-Powered-By[PHP/5.6.40], MetaGenerator[Joomla! - Open Source Content Management], HTML5, JQuery, PHP[5.6.40], HTTPServer[CentOS][Apache/2.4.6 (CentOS) PHP/5.6.40], Bootstrap, Cookies[eaa83fe8b963ab08ce9ab7d4a798de05], HttpOnly[eaa83fe8b963ab08ce9ab7d4a798de05], Apache[2.4.6], PasswordField[password]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 2.4.6 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : eaa83fe8b963ab08ce9ab7d4a798de05
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : CentOS
+	String       : Apache/2.4.6 (CentOS) PHP/5.6.40 (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie
+	response header and the browser supports it then the cookie
+	cannot be accessed through client side script - More Info:
+	http://en.wikipedia.org/wiki/HTTP_cookie
+
+	String       : eaa83fe8b963ab08ce9ab7d4a798de05
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Website     : http://jquery.com/
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its
+	value.
+
+	String       : Joomla! - Open Source Content Management
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language
+	that is especially suited for Web development and can be
+	embedded into HTML. This plugin identifies PHP errors,
+	modules and versions and extracts the local file path and
+	username if present.
+
+	Version      : 5.6.40
+	Version      : 5.6.40
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ PasswordField ]
+	find password fields
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : application/json
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : PHP/5.6.40 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Thu, 06 Jan 2022 08:52:28 GMT
+	Server: Apache/2.4.6 (CentOS) PHP/5.6.40
+	X-Powered-By: PHP/5.6.40
+	Set-Cookie: eaa83fe8b963ab08ce9ab7d4a798de05=82idkeio3380hcv67ugrmoq0a2; path=/; HttpOnly
+	Expires: Wed, 17 Aug 2005 00:00:00 GMT
+	Last-Modified: Thu, 06 Jan 2022 08:52:28 GMT
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Pragma: no-cache
+	Connection: close
+	Transfer-Encoding: chunked
+	Content-Type: text/html; charset=utf-8
+
+
