@@ -6,12 +6,24 @@
       {
         "id": "96124f4b524c90d3",
         "type": "leaf",
+        "dimension": 78.42942345924453,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
+            "file": "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Windows 10 Privesc/README.md",
             "mode": "source",
             "source": false
+          }
+        }
+      },
+      {
+        "id": "89df512b31d74c42",
+        "type": "leaf",
+        "dimension": 21.570576540755468,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Windows 10 Privesc/README.md"
           }
         }
       }
@@ -69,14 +81,24 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
-                "collapseAll": false,
+                "file": "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Windows 10 Privesc/README.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c38ef49d7234a16e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Windows 10 Privesc/README.md"
               }
             }
           }
@@ -89,15 +111,15 @@
   },
   "active": "96124f4b524c90d3",
   "lastOpenFiles": [
+    "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Windows 10 Privesc/README.md",
+    "W.md",
+    "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Post-Exploitation Basics/README.md",
+    "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Post-Exploitation Basics/THM-Post-Exploitation-Bloodhound-2.png",
+    "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Post-Exploitation Basics/THM-Post-Exploitation-Bloodhound-1.png",
+    "Cyber Security/Penetration Testing Exercises/TryHackMe/Walkthroughs/Post-Exploitation Basics/THM-Post-Exploitation Basics-Mimikatz-1.png",
     "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
     "Cyber Security/Exercises/protostar/README.md",
     "Cyber Security/Capture the Flag Competitions/2020/DSTA CDDC 2020/Warp Gate 5/(UNDONE) [Pwn (Linux)-3] Find Singapore Bug/how2fsb-master/README.md",
-    "Cyber Security/Exercises/OverTheWire/README.md",
-    "Competitve Programming/Exercises/National Olympiad of Informatics (Singapore)/NOI Prelim 2020/solarstorm/solarstorm (en).pdf",
-    "Cyber Security/Capture the Flag Competitions/2020/Cyberthon 2020/Finals/README.md",
-    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/Execution/Challenge 10/Screenshot from 2021-09-10 16-05-57.png",
-    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/Execution/Challenge 10/Screenshot from 2021-09-10 16-00-49.png",
-    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/README.md",
-    "Cyber Security/Capture the Flag Competitions/CTF General Writeup.md"
+    "Cyber Security/Exercises/OverTheWire/README.md"
   ]
 }
