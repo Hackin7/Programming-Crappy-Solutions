@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "a9d287eacd3df30f",
+    "type": "split",
+    "children": [
+      {
+        "id": "96124f4b524c90d3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d60aa636a5ab7333",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed70e968156f8c88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6cf3c72df495e30",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "76c4d84b4ec73acd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "97fc30474c035c4a",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebfa2962f2f75c4a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0157bdb8a90a9387",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "96124f4b524c90d3",
+  "lastOpenFiles": [
+    "Cyber Security/Exercises/CTFLearn/Binary/Lazy Game Challenge/README.md",
+    "Cyber Security/Exercises/protostar/README.md",
+    "Cyber Security/Capture the Flag Competitions/2020/DSTA CDDC 2020/Warp Gate 5/(UNDONE) [Pwn (Linux)-3] Find Singapore Bug/how2fsb-master/README.md",
+    "Cyber Security/Exercises/OverTheWire/README.md",
+    "Competitve Programming/Exercises/National Olympiad of Informatics (Singapore)/NOI Prelim 2020/solarstorm/solarstorm (en).pdf",
+    "Cyber Security/Capture the Flag Competitions/2020/Cyberthon 2020/Finals/README.md",
+    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/Execution/Challenge 10/Screenshot from 2021-09-10 16-05-57.png",
+    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/Execution/Challenge 10/Screenshot from 2021-09-10 16-00-49.png",
+    "Cyber Security/Capture the Flag Competitions/2021/CSA-Elastic Threat Hunting Challenge/README.md",
+    "Cyber Security/Capture the Flag Competitions/CTF General Writeup.md"
+  ]
+}
