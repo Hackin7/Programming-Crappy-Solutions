@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 11:28:21 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.123.42 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.123.42" start="1642004901" startstr="Wed Jan 12 11:28:21 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642004905"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642004906"/>
+<taskbegin task="SYN Stealth Scan" time="1642004906"/>
+<taskend task="SYN Stealth Scan" time="1642004906" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642004907"/>
+<taskend task="Service scan" time="1642004918" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642004918"/>
+<taskend task="NSE" time="1642004937"/>
+<taskbegin task="NSE" time="1642004937"/>
+<taskprogress task="NSE" time="1642004968" percent="92.31" remaining="3" etc="1642004971"/>
+<taskprogress task="NSE" time="1642004998" percent="92.31" remaining="6" etc="1642005003"/>
+<taskprogress task="NSE" time="1642005028" percent="92.31" remaining="8" etc="1642005036"/>
+<taskprogress task="NSE" time="1642005058" percent="92.31" remaining="11" etc="1642005068"/>
+<taskprogress task="NSE" time="1642005088" percent="92.31" remaining="13" etc="1642005101"/>
+<taskend task="NSE" time="1642005115"/>
+<taskbegin task="NSE" time="1642005115"/>
+<taskend task="NSE" time="1642005115"/>
+<host starttime="1642004906" endtime="1642005115"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.42" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.0.14a-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: 0XBABE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  0XBABE&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-enum-sessions" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-users" output="&#xa;  0XBABE\backup (RID: 1068)&#xa;    Full name:   backup&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\bin (RID: 1004)&#xa;    Full name:   bin&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\daemon (RID: 1002)&#xa;    Full name:   daemon&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\Debian-exim (RID: 1204)&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\games (RID: 1010)&#xa;    Full name:   games&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\gnats (RID: 1082)&#xa;    Full name:   Gnats Bug-Reporting System (admin)&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\irc (RID: 1078)&#xa;    Full name:   ircd&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\list (RID: 1076)&#xa;    Full name:   Mailing List Manager&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\lp (RID: 1014)&#xa;    Full name:   lp&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\mail (RID: 1016)&#xa;    Full name:   mail&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\man (RID: 1012)&#xa;    Full name:   man&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\news (RID: 1018)&#xa;    Full name:   news&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\nobody (RID: 501)&#xa;    Full name:   nobody&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\proxy (RID: 1026)&#xa;    Full name:   proxy&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\root (RID: 1000)&#xa;    Full name:   root&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\ryu (RID: 3000)&#xa;    Full name:   ryu,,,&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\sync (RID: 1008)&#xa;    Full name:   sync&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\sys (RID: 1006)&#xa;    Full name:   sys&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\uucp (RID: 1020)&#xa;    Full name:   uucp&#xa;    Flags:       Account disabled, Normal user account&#xa;  0XBABE\www-data (RID: 1066)&#xa;    Full name:   www-data&#xa;    Flags:       Account disabled, Normal user account&#xa;"/><script id="smb-mbenum" output="&#xa;  Potential Browser&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Print server&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Server&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Server service&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Unix server&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Windows NT/2000/XP/2003 server&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;  Workstation&#xa;    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.14a-Debian)&#xa;  NetBIOS computer name: &#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2022-01-12T16:28:40-05:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.14a-Debian</elem>
+<elem key="domain">WORKGROUP\x00</elem>
+<elem key="server"></elem>
+<elem key="date">2022-01-12T16:28:40-05:00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: share (dangerous)&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">share</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb2-capabilities" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="202824" rttvar="202824" to="1014120"/>
+</host>
+<taskbegin task="NSE" time="1642005115"/>
+<taskend task="NSE" time="1642005115"/>
+<taskbegin task="NSE" time="1642005115"/>
+<taskend task="NSE" time="1642005115"/>
+<taskbegin task="NSE" time="1642005115"/>
+<taskend task="NSE" time="1642005115"/>
+<runstats><finished time="1642005115" timestr="Wed Jan 12 11:31:55 2022" summary="Nmap done at Wed Jan 12 11:31:55 2022; 1 IP address (1 host up) scanned in 214.40 seconds" elapsed="214.40" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

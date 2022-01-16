@@ -1,0 +1,208 @@
+# Nmap 7.91 scan initiated Wed Jan 12 11:33:31 2022 as: nmap -vv --reason -Pn -T4 -sU -sV -p 161 "--script=banner,(snmp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/udp_161_snmp-nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/xml/udp_161_snmp_nmap.xml" 192.168.123.42
+Nmap scan report for 192.168.123.42
+Host is up, received user-set.
+Scanned at 2022-01-12 11:33:33 EST for 38s
+
+PORT    STATE SERVICE REASON       VERSION
+161/udp open  snmp    udp-response SNMPv1 server; U.C. Davis, ECE Dept. Tom SNMPv3 server (public)
+| snmp-info: 
+|   enterprise: U.C. Davis, ECE Dept. Tom
+|   engineIDFormat: unknown
+|   engineIDData: 9e325869f30c7749
+|   snmpEngineBoots: 61
+|_  snmpEngineTime: 6m25s
+| snmp-interfaces: 
+|   lo
+|     IP address: 127.0.0.1  Netmask: 255.0.0.0
+|     Type: softwareLoopback  Speed: 10 Mbps
+|     Status: up
+|     Traffic stats: 0.00 Kb sent, 0.00 Kb received
+|   eth0
+|     IP address: 192.168.123.42  Netmask: 255.255.255.0
+|     MAC address: 00:50:56:ba:1e:6e (VMware)
+|     Type: ethernetCsmacd  Speed: 100 Mbps
+|     Status: up
+|     Traffic stats: 4.17 Mb sent, 2.77 Mb received
+|   sit0
+|     MAC address: 00:00:00:00:1e:6e (Xerox)
+|     Type: tunnel  Speed: 0 Kbps
+|     Status: down
+|_    Traffic stats: 0.00 Kb sent, 0.00 Kb received
+| snmp-netstat: 
+|   TCP  0.0.0.0:25           0.0.0.0:0
+|   TCP  0.0.0.0:80           0.0.0.0:0
+|   TCP  0.0.0.0:139          0.0.0.0:0
+|   TCP  0.0.0.0:199          0.0.0.0:0
+|   TCP  0.0.0.0:445          0.0.0.0:0
+|   TCP  192.168.123.42:80    192.168.49.123:57842
+|   TCP  192.168.123.42:80    192.168.49.123:57864
+|   TCP  192.168.123.42:80    192.168.49.123:57866
+|   TCP  192.168.123.42:80    192.168.49.123:59356
+|   TCP  192.168.123.42:80    192.168.49.123:59382
+|   TCP  192.168.123.42:80    192.168.49.123:59396
+|   TCP  192.168.123.42:80    192.168.49.123:59400
+|   TCP  192.168.123.42:80    192.168.49.123:59408
+|   TCP  192.168.123.42:80    192.168.49.123:59410
+|   TCP  192.168.123.42:80    192.168.49.123:59480
+|   TCP  192.168.123.42:80    192.168.49.123:59482
+|   TCP  192.168.123.42:80    192.168.49.123:59484
+|   TCP  192.168.123.42:80    192.168.49.123:59486
+|   TCP  192.168.123.42:80    192.168.49.123:59488
+|   TCP  192.168.123.42:80    192.168.49.123:59490
+|   TCP  192.168.123.42:80    192.168.49.123:59492
+|   TCP  192.168.123.42:80    192.168.49.123:59496
+|   TCP  192.168.123.42:80    192.168.49.123:59504
+|   TCP  192.168.123.42:80    192.168.49.123:59506
+|   TCP  192.168.123.42:80    192.168.49.123:59560
+|   TCP  192.168.123.42:80    192.168.49.123:59898
+|   TCP  192.168.123.42:80    192.168.49.123:59900
+|   TCP  192.168.123.42:80    192.168.49.123:59902
+|   TCP  192.168.123.42:80    192.168.49.123:59904
+|   TCP  192.168.123.42:80    192.168.49.123:59906
+|   TCP  192.168.123.42:80    192.168.49.123:59908
+|   TCP  192.168.123.42:80    192.168.49.123:59910
+|   TCP  192.168.123.42:80    192.168.49.123:59912
+|   TCP  192.168.123.42:80    192.168.49.123:59914
+|   TCP  192.168.123.42:80    192.168.49.123:59916
+|   TCP  192.168.123.42:139   192.168.49.123:53864
+|   TCP  192.168.123.42:445   192.168.49.123:50998
+|   TCP  192.168.123.42:445   192.168.49.123:53492
+|   UDP  0.0.0.0:137          *:*
+|   UDP  0.0.0.0:138          *:*
+|   UDP  0.0.0.0:161          *:*
+|   UDP  1.0.0.127:32891      *:*
+|   UDP  42.123.168.192:137   *:*
+|_  UDP  42.123.168.192:138   *:*
+| snmp-processes: 
+|   1: 
+|     Name: init
+|   2: 
+|     Name: ksoftirqd/0
+|   3: 
+|     Name: events/0
+|   4: 
+|     Name: khelper
+|   5: 
+|     Name: kacpid
+|   99: 
+|     Name: kblockd/0
+|   109: 
+|     Name: pdflush
+|   110: 
+|     Name: pdflush
+|   111: 
+|     Name: kswapd0
+|   112: 
+|     Name: aio/0
+|   255: 
+|     Name: kseriod
+|   276: 
+|     Name: scsi_eh_0
+|   284: 
+|     Name: khubd
+|   348: 
+|     Name: shpchpd_event
+|   380: 
+|     Name: kjournald
+|   935: 
+|     Name: vmmemctl
+|   1177: 
+|     Name: vmtoolsd
+|   3775: 
+|     Name: syslogd
+|   3778: 
+|     Name: klogd
+|   3782: 
+|     Name: clamd
+|   3784: 
+|     Name: clamav-milter
+|   3793: 
+|     Name: inetd
+|   3797: 
+|     Name: nmbd
+|   3799: 
+|     Name: smbd
+|   3803: 
+|     Name: snmpd
+|   3809: 
+| 
+|   3887: 
+| 
+|   3900: 
+| 
+|   3903: 
+| 
+|   3910: 
+| 
+|   3911: 
+| 
+|   3912: 
+| 
+|   3913: 
+| 
+|   3914: 
+| 
+|   3915: 
+| 
+|   3921: 
+| 
+|   3922: 
+| 
+|   3923: 
+| 
+|   3924: 
+| 
+|   3925: 
+| 
+|   3926: 
+| 
+|   3977: 
+| 
+|   3982: 
+| 
+|   3986: 
+| 
+|   3993: 
+| 
+|   3994: 
+| 
+|   4014: 
+| 
+|   4208: 
+| 
+|   4210: 
+| 
+|   4211: 
+| 
+|   4212: 
+| 
+|   4213: 
+| 
+|   4214: 
+| 
+|   4215: 
+| 
+|   4216: 
+| 
+|   4217: 
+| 
+|   4218: 
+| 
+|   4219: 
+| 
+|   4220: 
+| 
+|   4233: 
+| 
+|   4234: 
+| 
+|   4235: 
+| 
+|_  4239: 
+| snmp-sysdescr: Linux 0xbabe.local 2.6.8-4-386 #1 Wed Feb 20 06:15:54 UTC 2008 i686
+|_  System uptime: 6m25.21s (38521 timeticks)
+Service Info: Host: 0xbabe.local
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 11:34:11 2022 -- 1 IP address (1 host up) scanned in 40.23 seconds

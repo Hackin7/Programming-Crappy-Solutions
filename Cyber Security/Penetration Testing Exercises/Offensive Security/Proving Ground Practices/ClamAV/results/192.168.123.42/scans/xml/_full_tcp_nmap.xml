@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 11:27:13 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.42 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.42" start="1642004833" startstr="Wed Jan 12 11:27:13 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642004835"/>
+<taskend task="NSE" time="1642004835"/>
+<taskbegin task="NSE" time="1642004835"/>
+<taskend task="NSE" time="1642004835"/>
+<taskbegin task="NSE" time="1642004835"/>
+<taskend task="NSE" time="1642004835"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642004835"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642004835"/>
+<taskbegin task="SYN Stealth Scan" time="1642004835"/>
+<taskprogress task="SYN Stealth Scan" time="1642004866" percent="6.10" remaining="477" etc="1642005343"/>
+<taskprogress task="SYN Stealth Scan" time="1642004896" percent="7.52" remaining="750" etc="1642005646"/>
+<taskprogress task="SYN Stealth Scan" time="1642004926" percent="8.99" remaining="922" etc="1642005848"/>
+<taskprogress task="SYN Stealth Scan" time="1642004956" percent="9.30" remaining="1181" etc="1642006137"/>
+<taskprogress task="SYN Stealth Scan" time="1642004986" percent="9.44" remaining="1449" etc="1642006434"/>
+<taskprogress task="SYN Stealth Scan" time="1642005016" percent="9.78" remaining="1671" etc="1642006686"/>
+<taskprogress task="SYN Stealth Scan" time="1642005046" percent="9.94" remaining="1912" etc="1642006957"/>
+<taskprogress task="SYN Stealth Scan" time="1642005076" percent="10.19" remaining="2125" etc="1642007200"/>
+<taskprogress task="SYN Stealth Scan" time="1642005106" percent="10.51" remaining="2309" etc="1642007414"/>
+<taskprogress task="SYN Stealth Scan" time="1642005136" percent="10.61" remaining="2537" etc="1642007673"/>
+<taskprogress task="SYN Stealth Scan" time="1642005166" percent="10.62" remaining="2787" etc="1642007953"/>
+<taskprogress task="SYN Stealth Scan" time="1642005202" percent="12.35" remaining="2605" etc="1642007806"/>
+<taskprogress task="SYN Stealth Scan" time="1642005232" percent="15.00" remaining="2250" etc="1642007481"/>
+<taskprogress task="SYN Stealth Scan" time="1642005262" percent="17.35" remaining="2035" etc="1642007296"/>
+<taskprogress task="SYN Stealth Scan" time="1642005292" percent="20.30" remaining="1795" etc="1642007087"/>
+<taskprogress task="SYN Stealth Scan" time="1642005322" percent="22.64" remaining="1664" etc="1642006986"/>
+<taskprogress task="SYN Stealth Scan" time="1642005370" percent="25.61" remaining="1554" etc="1642006924"/>
+<taskprogress task="SYN Stealth Scan" time="1642005418" percent="28.72" remaining="1447" etc="1642006865"/>
+<taskprogress task="SYN Stealth Scan" time="1642005484" percent="32.57" remaining="1344" etc="1642006828"/>
+<taskprogress task="SYN Stealth Scan" time="1642005541" percent="36.23" remaining="1243" etc="1642006784"/>
+<taskprogress task="SYN Stealth Scan" time="1642005592" percent="39.87" remaining="1142" etc="1642006734"/>
+<taskprogress task="SYN Stealth Scan" time="1642005640" percent="43.51" remaining="1046" etc="1642006685"/>
+<taskprogress task="SYN Stealth Scan" time="1642005697" percent="47.63" remaining="948" etc="1642006645"/>
+<taskprogress task="SYN Stealth Scan" time="1642005760" percent="51.90" remaining="858" etc="1642006617"/>
+<taskprogress task="SYN Stealth Scan" time="1642005817" percent="56.17" remaining="767" etc="1642006583"/>
+<taskprogress task="SYN Stealth Scan" time="1642005904" percent="61.23" remaining="677" etc="1642006581"/>
+<taskprogress task="SYN Stealth Scan" time="1642005967" percent="65.85" remaining="588" etc="1642006554"/>
+<taskprogress task="SYN Stealth Scan" time="1642006036" percent="70.67" remaining="499" etc="1642006534"/>
+<taskprogress task="SYN Stealth Scan" time="1642006096" percent="75.51" remaining="409" etc="1642006505"/>
+<taskprogress task="SYN Stealth Scan" time="1642006153" percent="80.41" remaining="322" etc="1642006474"/>
+<taskprogress task="SYN Stealth Scan" time="1642006213" percent="85.30" remaining="238" etc="1642006450"/>
+<taskprogress task="SYN Stealth Scan" time="1642006279" percent="90.27" remaining="156" etc="1642006435"/>
+<taskprogress task="SYN Stealth Scan" time="1642006345" percent="95.24" remaining="76" etc="1642006420"/>
+<taskend task="SYN Stealth Scan" time="1642006419" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642006419"/>
+<taskend task="Service scan" time="1642006431" extrainfo="6 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642006452"/>
+<taskend task="Traceroute" time="1642006453"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642006453"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642006453"/>
+<taskbegin task="NSE" time="1642006453"/>
+<taskprogress task="NSE" time="1642006484" percent="99.88" remaining="1" etc="1642006484"/>
+<taskend task="NSE" time="1642006484"/>
+<taskbegin task="NSE" time="1642006484"/>
+<taskend task="NSE" time="1642006485"/>
+<taskbegin task="NSE" time="1642006485"/>
+<taskend task="NSE" time="1642006485"/>
+<host starttime="1642004835" endtime="1642006485"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.42" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65508">
+<extrareasons reason="resets" count="65508"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="3.8.1p1 Debian 8.sarge.6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:3.8.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 30:3e:a4:13:5f:9a:32:c0:8e:46:eb:26:b3:5e:ee:6d (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=&#xa;  1024 af:a2:49:3e:d8:f2:26:12:4a:a0:b5:ee:62:76:b0:18 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0="><table>
+<elem key="type">ssh-dss</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">303ea4135f9a32c08e46eb26b35eee6d</elem>
+</table>
+<table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0=</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">afa2493ed8f226124aa0b5ee6276b018</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="1.3.33" extrainfo="(Debian GNU/Linux)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:1.3.33</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/1.3.33 (Debian GNU/Linux)"><elem>Apache/1.3.33 (Debian GNU/Linux)</elem>
+</script><script id="http-title" output="Ph33r"><elem key="title">Ph33r</elem>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="199"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smux" product="Linux SNMP multiplexer" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.0.14a-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="9693"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="12872"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="16094"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="17895"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="19500"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="19927"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22148"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="27150"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="27278"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="27584"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="31198"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="31663"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="34027"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="34423"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="36958"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="45221"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="45494"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49458"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="60000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="3.8.1p1 Debian 8.sarge.6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:3.8.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 30:3e:a4:13:5f:9a:32:c0:8e:46:eb:26:b3:5e:ee:6d (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=&#xa;  1024 af:a2:49:3e:d8:f2:26:12:4a:a0:b5:ee:62:76:b0:18 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0="><table>
+<elem key="type">ssh-dss</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">303ea4135f9a32c08e46eb26b35eee6d</elem>
+</table>
+<table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0=</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">afa2493ed8f226124aa0b5ee6276b018</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="60002"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="61509"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="64820"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42312"/>
+<osmatch name="Linux 2.6.9" accuracy="95" line="58701">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.9</cpe></osclass>
+</osmatch>
+<osmatch name="Cisco SA520 firewall (Linux 2.6)" accuracy="95" line="47302">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="firewall" vendor="Cisco" osfamily="embedded" accuracy="95"><cpe>cpe:/h:cisco:sa520</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.9 - 2.6.27" accuracy="95" line="59202">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18" accuracy="94" line="49662">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+</osmatch>
+<osmatch name="Riverbed Steelhead 200 proxy server" accuracy="94" line="95424">
+<osclass type="proxy server" vendor="Riverbed" osfamily="embedded" accuracy="94"><cpe>cpe:/h:riverbed:steelhead_200</cpe></osclass>
+</osmatch>
+<osmatch name="Ruckus 7363 WAP" accuracy="94" line="95692">
+<osclass type="WAP" vendor="Ruckus" osfamily="embedded" accuracy="94"><cpe>cpe:/h:ruckus:7363</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.9 (CentOS 4.4)" accuracy="93" line="58919">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="93" line="56050">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Cisco UC320W PBX (Linux 2.6)" accuracy="93" line="59847">
+<osclass type="PBX" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="PBX" vendor="Cisco" osfamily="embedded" accuracy="93"><cpe>cpe:/h:cisco:uc320w</cpe></osclass>
+</osmatch>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="93" line="42259">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="93"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=1/12%OT=22%CT=1%CU=42312%PV=Y%DS=2%DC=T%G=Y%TM=61DF07D&#xa;OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CC%TI=Z%II=I%TS=A)OPS(O1=M54&#xa;OS:EST11NW0%O2=M54EST11NW0%O3=M54ENNT11NW0%O4=M54EST11NW0%O5=M54EST11NW0%O6&#xa;OS:=M54EST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF&#xa;OS:=Y%T=40%W=16D0%O=M54ENNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%&#xa;OS:Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6&#xa;OS:(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RU&#xa;OS:D=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1394" lastboot="Wed Jan 12 11:31:31 2022"/>
+<distance value="2"/>
+<tcpsequence index="201" difficulty="Good luck!" values="A1732D7E,A212CDD4,A1C994C0,A1A745C2,A16C927E"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="14BA9C,14BB13,14BB78,14BBD1,14BC49"/>
+<hostscript><script id="clock-skew" output="mean: 7h30m00s, deviation: 3h32m08s, median: 4h59m59s"><elem key="stddev">12728</elem>
+<elem key="count">2</elem>
+<elem key="median">17999</elem>
+<elem key="mean">27000</elem>
+</script><script id="nbstat" output="NetBIOS name: 0XBABE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  0XBABE&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 48725/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 11011/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 23330/udp): CLEAN (Failed to receive data)&#xa;  Check 4 (port 41800/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.14a-Debian)&#xa;  NetBIOS computer name: &#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2022-01-12T16:54:14-05:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.14a-Debian</elem>
+<elem key="domain">WORKGROUP\x00</elem>
+<elem key="server"></elem>
+<elem key="date">2022-01-12T16:54:14-05:00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: share (dangerous)&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">share</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><trace port="110" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="340.49"/>
+<hop ttl="2" ipaddr="192.168.123.42" rtt="342.72"/>
+</trace>
+<times srtt="274912" rttvar="44086" to="451256"/>
+</host>
+<taskbegin task="NSE" time="1642006485"/>
+<taskend task="NSE" time="1642006485"/>
+<taskbegin task="NSE" time="1642006485"/>
+<taskend task="NSE" time="1642006485"/>
+<taskbegin task="NSE" time="1642006485"/>
+<taskend task="NSE" time="1642006485"/>
+<runstats><finished time="1642006485" timestr="Wed Jan 12 11:54:45 2022" summary="Nmap done at Wed Jan 12 11:54:45 2022; 1 IP address (1 host up) scanned in 1653.04 seconds" elapsed="1653.04" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

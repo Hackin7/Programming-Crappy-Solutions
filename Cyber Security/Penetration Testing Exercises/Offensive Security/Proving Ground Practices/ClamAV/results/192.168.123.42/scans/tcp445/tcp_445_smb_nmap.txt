@@ -1,0 +1,120 @@
+# Nmap 7.91 scan initiated Wed Jan 12 11:28:22 2022 as: nmap -vv --reason -Pn -T4 -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.123.42
+Nmap scan report for 192.168.123.42
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-12 11:28:26 EST for 113s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.0.14a-Debian (workgroup: WORKGROUP)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+| nbstat: NetBIOS name: 0XBABE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   0XBABE<00>           Flags: <unique><active>
+|   0XBABE<03>           Flags: <unique><active>
+|   0XBABE<20>           Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_smb-enum-sessions: ERROR: Script execution failed (use -d to debug)
+| smb-enum-users: 
+|   0XBABE\backup (RID: 1068)
+|     Full name:   backup
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\bin (RID: 1004)
+|     Full name:   bin
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\daemon (RID: 1002)
+|     Full name:   daemon
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\Debian-exim (RID: 1204)
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\games (RID: 1010)
+|     Full name:   games
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\gnats (RID: 1082)
+|     Full name:   Gnats Bug-Reporting System (admin)
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\irc (RID: 1078)
+|     Full name:   ircd
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\list (RID: 1076)
+|     Full name:   Mailing List Manager
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\lp (RID: 1014)
+|     Full name:   lp
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\mail (RID: 1016)
+|     Full name:   mail
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\man (RID: 1012)
+|     Full name:   man
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\news (RID: 1018)
+|     Full name:   news
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\proxy (RID: 1026)
+|     Full name:   proxy
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\root (RID: 1000)
+|     Full name:   root
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\ryu (RID: 3000)
+|     Full name:   ryu,,,
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\sync (RID: 1008)
+|     Full name:   sync
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\sys (RID: 1006)
+|     Full name:   sys
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\uucp (RID: 1020)
+|     Full name:   uucp
+|     Flags:       Normal user account, Account disabled
+|   0XBABE\www-data (RID: 1066)
+|     Full name:   www-data
+|_    Flags:       Normal user account, Account disabled
+| smb-mbenum: 
+|   Potential Browser
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Print server
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Server
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Server service
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Unix server
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Windows NT/2000/XP/2003 server
+|     0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+|   Workstation
+|_    0XBABE  0.0  0xbabe server (Samba 3.0.14a-Debian) brave pig
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.14a-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-01-12T16:28:34-05:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: share (dangerous)
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 11:30:19 2022 -- 1 IP address (1 host up) scanned in 117.80 seconds

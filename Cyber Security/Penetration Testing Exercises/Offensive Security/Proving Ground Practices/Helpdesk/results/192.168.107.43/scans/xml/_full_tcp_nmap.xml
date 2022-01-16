@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 05:13:16 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/xml/_full_tcp_nmap.xml&quot; 192.168.107.43 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/xml/_full_tcp_nmap.xml&quot; 192.168.107.43" start="1641982396" startstr="Wed Jan 12 05:13:16 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1641982397"/>
+<taskend task="NSE" time="1641982397"/>
+<taskbegin task="NSE" time="1641982397"/>
+<taskend task="NSE" time="1641982397"/>
+<taskbegin task="NSE" time="1641982397"/>
+<taskend task="NSE" time="1641982397"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1641982398"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1641982398"/>
+<taskbegin task="SYN Stealth Scan" time="1641982398"/>
+<taskprogress task="SYN Stealth Scan" time="1641982429" percent="1.35" remaining="2272" etc="1641984700"/>
+<taskprogress task="SYN Stealth Scan" time="1641982459" percent="1.56" remaining="3857" etc="1641986315"/>
+<taskprogress task="SYN Stealth Scan" time="1641982489" percent="2.59" remaining="3421" etc="1641985909"/>
+<taskprogress task="SYN Stealth Scan" time="1641982519" percent="4.05" remaining="2868" etc="1641985386"/>

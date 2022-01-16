@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 13 11:38:02 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 6379 -&#45;script=banner,redis-info -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp6379/tcp_6379_redis_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp6379/xml/tcp_6379_redis_nmap.xml&quot; 192.168.70.69 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 6379 -&#45;script=banner,redis-info -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp6379/tcp_6379_redis_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp6379/xml/tcp_6379_redis_nmap.xml&quot; 192.168.70.69" start="1642091882" startstr="Thu Jan 13 11:38:02 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6379"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642091882"/>
+<taskend task="NSE" time="1642091882"/>
+<taskbegin task="NSE" time="1642091882"/>
+<taskend task="NSE" time="1642091882"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642091882"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642091882"/>
+<taskbegin task="SYN Stealth Scan" time="1642091882"/>
+<taskend task="SYN Stealth Scan" time="1642091882" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642091882"/>
+<taskend task="Service scan" time="1642091889" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642091889"/>
+<taskend task="NSE" time="1642091904"/>
+<taskbegin task="NSE" time="1642091904"/>
+<taskend task="NSE" time="1642091904"/>
+<host starttime="1642091882" endtime="1642091904"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.70.69" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="redis" product="Redis key-value store" version="5.0.9" extrainfo="64 bits" method="probed" conf="10"><cpe>cpe:/a:redislabs:redis:5.0.9</cpe><cpe>cpe:/a:redis:redis:5.0.9</cpe></service><script id="redis-info" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="284645" rttvar="284645" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1642091904"/>
+<taskend task="NSE" time="1642091904"/>
+<taskbegin task="NSE" time="1642091904"/>
+<taskend task="NSE" time="1642091904"/>
+<runstats><finished time="1642091904" timestr="Thu Jan 13 11:38:24 2022" summary="Nmap done at Thu Jan 13 11:38:24 2022; 1 IP address (1 host up) scanned in 22.75 seconds" elapsed="22.75" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

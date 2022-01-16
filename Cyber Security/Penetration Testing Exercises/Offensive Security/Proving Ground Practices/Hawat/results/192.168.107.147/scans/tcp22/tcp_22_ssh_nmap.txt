@@ -1,0 +1,61 @@
+# Nmap 7.91 scan initiated Wed Jan 12 02:12:03 2022 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/tcp22/tcp_22_ssh_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/tcp22/xml/tcp_22_ssh_nmap.xml" 192.168.107.147
+Nmap scan report for 192.168.107.147
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-01-12 02:12:03 EST for 9s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_8.4
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+| ssh-hostkey: 
+|   3072 78:2f:ea:84:4c:09:ae:0e:36:bf:b3:01:35:cf:47:22 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDj3RK6xsdeO4e9FcGxkWDFkLF6hB7c+1AvLuouW7Hb9yCluZ2mIoIHBm8p8+h8ZefUURi9GirIwsti4lQdcIxKwGepWKjj9/yTKe/sNEWugWUhA2+twlcG16FWSt83UenfW9L8pJ7swSobVFWl3bLcig9vBZxRcP4S90lskZ00v7+ivglQ5ZhUEfbOm4QG9ygqY4pLTFN2jf/z91XhoTANWOrKZNOb+ESbspGxQTEUCHwVNrODS6BDqTTWNj2gZlB3rR3OxkHAiOvBaiKmt3o3IKegyx2LnjnG1s5JxjfjsV3DDesEqgB5TPfLF9SM3ablgqyBvHr1XeMWmqpQoSanb8+oNzQBmodmiARh1ScZQ4YdlAXuZPGae5bgIoCKWj8fWpxAtjvEt1GuoBmfSUrX2IZ0F+TuGLp6r2QZAAyBCc6DkZyisSVRBqgSHiCcUSMMX1s4Q+3ejdMKQdr/sio1F3KrqcxRus9r7QNHe9aPHZQvgqtfILrtRHpCLS1nESk=
+|   256 d2:7d:eb:2d:a5:9a:2f:9e:93:9a:d5:2e:aa:dc:f4:a6 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKlBMKDw3CXTIbkuaAnYiGGEVUj1gx8Cx0sCphpMw8LfYEwRT39bv6O6K/4/IRdx/55N+IZs9C15K5SoHJbACVI=
+|   256 b6:d4:96:f0:a4:04:e4:36:78:1e:9d:a5:10:93:d7:99 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8bIayyvqAHx2g8sE1rJUia1dcCXeTm0bR6MkIuzYIq
+| ssh2-enum-algos: 
+|   kex_algorithms: (9)
+|       curve25519-sha256
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group16-sha512
+|       diffie-hellman-group18-sha512
+|       diffie-hellman-group14-sha256
+|   server_host_key_algorithms: (5)
+|       rsa-sha2-512
+|       rsa-sha2-256
+|       ssh-rsa
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (6)
+|       chacha20-poly1305@openssh.com
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|   mac_algorithms: (10)
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-sha1
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 02:12:12 2022 -- 1 IP address (1 host up) scanned in 9.24 seconds

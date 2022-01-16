@@ -1,0 +1,3 @@
+WLD        0l        0w        0c Got 301 for http://192.168.90.62/fd40b95e992c4296bc93b60a78b5e808 (url length: 32)
+WLD         -         -         - http://192.168.90.62/fd40b95e992c4296bc93b60a78b5e808 redirects to => /fd40b95e992c4296bc93b60a78b5e808/
+200        4l        7w      530c http://192.168.90.62/sitemap.xml

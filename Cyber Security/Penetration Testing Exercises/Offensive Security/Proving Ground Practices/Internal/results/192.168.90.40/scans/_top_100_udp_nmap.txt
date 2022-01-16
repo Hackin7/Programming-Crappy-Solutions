@@ -1,0 +1,61 @@
+# Nmap 7.91 scan initiated Wed Jan 12 08:20:04 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/xml/_top_100_udp_nmap.xml" 192.168.90.40
+Nmap scan report for 192.168.90.40
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-01-12 08:20:06 EST for 885s
+Not shown: 78 open|filtered ports
+Reason: 78 no-responses
+PORT      STATE  SERVICE       REASON               VERSION
+9/udp     closed discard       port-unreach ttl 127
+17/udp    closed qotd          port-unreach ttl 127
+53/udp    open   domain        udp-response         Microsoft DNS 6.0.6001 (17714650) (Windows Server 2008 SP1)
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.0.6001 (17714650)
+69/udp    closed tftp          port-unreach ttl 127
+137/udp   open   netbios-ns    udp-response         Microsoft Windows netbios-ns (workgroup: WORKGROUP)
+443/udp   closed https         port-unreach ttl 127
+996/udp   closed vsinet        port-unreach ttl 127
+1026/udp  closed win-rpc       port-unreach ttl 127
+1029/udp  closed solid-mux     port-unreach ttl 127
+1030/udp  closed iad1          port-unreach ttl 127
+1433/udp  closed ms-sql-s      port-unreach ttl 127
+1646/udp  closed radacct       port-unreach ttl 127
+1701/udp  closed L2TP          port-unreach ttl 127
+1813/udp  closed radacct       port-unreach ttl 127
+1900/udp  closed upnp          port-unreach ttl 127
+2048/udp  closed dls-monitor   port-unreach ttl 127
+3456/udp  closed IISrpc-or-vat port-unreach ttl 127
+3703/udp  closed adobeserver-3 port-unreach ttl 127
+49181/udp closed unknown       port-unreach ttl 127
+49186/udp closed unknown       port-unreach ttl 127
+49188/udp closed unknown       port-unreach ttl 127
+49201/udp closed unknown       port-unreach ttl 127
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/12%OT=%CT=%CU=9%PV=Y%DS=2%DC=T%G=N%TM=61DED8FB%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+Service Info: Host: INTERNAL; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008::sp1, cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: INTERNAL, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:ba:60:24 (VMware)
+| Names:
+|   INTERNAL<00>         Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   INTERNAL<20>         Flags: <unique><active>
+| Statistics:
+|   00 50 56 ba 60 24 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE (using port 9/udp)
+HOP RTT       ADDRESS
+1   212.58 ms 192.168.49.1
+2   207.57 ms 192.168.90.40
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 08:34:51 2022 -- 1 IP address (1 host up) scanned in 887.23 seconds

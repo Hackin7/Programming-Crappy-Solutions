@@ -1,0 +1,106 @@
+# Nmap 7.91 scan initiated Wed Jan 12 02:22:32 2022 as: nmap -vv --reason -Pn -T4 -sV -p 30455 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/tcp30455/tcp_30455_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/tcp30455/xml/tcp_30455_http_nmap.xml" 192.168.107.147
+Nmap scan report for 192.168.107.147
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-01-12 02:22:33 EST for 672s
+
+PORT      STATE SERVICE REASON         VERSION
+30455/tcp open  http    syn-ack ttl 63 nginx 1.18.0
+|_http-chrono: Request times for /; avg: 677.70ms; min: 576.19ms; max: 715.68ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.107.147
+|     
+|     Path: http://192.168.107.147:30455/
+|     Line number: 121
+|     Comment: 
+|         <!-- Test adds with URL/?title=test -->
+|     
+|     Path: http://192.168.107.147:30455/4/w3.css
+|     Line number: 1
+|     Comment: 
+|         /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+|     
+|     Path: http://192.168.107.147:30455/4/w3.css
+|     Line number: 3
+|     Comment: 
+|         /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+|     
+|     Path: http://192.168.107.147:30455/4/w3.css
+|     Line number: 26
+|     Comment: 
+|         /* End extract */
+|     
+|     Path: http://192.168.107.147:30455/4/w3.css
+|     Line number: 151
+|     Comment: 
+|_        /* Colors */
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 12 Jan 2022 07:22:55 GMT; +2s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /phpinfo.php: Possible information file
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: nginx/1.18.0
+|   Date: Wed, 12 Jan 2022 07:22:56 GMT
+|   Content-Type: text/html; charset=UTF-8
+|   Connection: close
+|   X-Powered-By: PHP/7.4.15
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash bc497628014ec6effb66a8c1afc6f283
+| Credits query returned unknown hash bc497628014ec6effb66a8c1afc6f283
+|_Version from header x-powered-by: PHP/7.4.15
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: nginx/1.18.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /4/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /4/
+|   Total files found (by extension):
+|_    Other: 1; css: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: W3.CSS
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 02:33:45 2022 -- 1 IP address (1 host up) scanned in 673.14 seconds

@@ -1,0 +1,7 @@
+
+; <<>> DiG 9.16.11-Debian <<>> AXFR -p 53 @192.168.90.62
+; (1 server found)
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+
+

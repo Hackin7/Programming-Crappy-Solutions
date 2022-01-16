@@ -1,0 +1,69 @@
+# Nmap 7.91 scan initiated Thu Jan 13 11:38:02 2022 as: nmap -vv --reason -Pn -T4 -sV -p 27017 "--script=banner,(mongodb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp27017/tcp_27017_mongodb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp27017/xml/tcp_27017_mongodb_nmap.xml" 192.168.70.69
+Nmap scan report for 192.168.70.69
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-01-13 11:38:02 EST for 80s
+
+PORT      STATE SERVICE REASON         VERSION
+27017/tcp open  mongodb syn-ack ttl 63 MongoDB 4.0.18
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/plain
+|     Content-Length: 85
+|     looks like you are trying to access MongoDB over HTTP on the native driver port.
+|   mongodb: 
+|     errmsg
+|     command serverStatus requires authentication
+|     code
+|     codeName
+|_    Unauthorized
+| mongodb-databases: 
+|   errmsg = command listDatabases requires authentication
+|   code = 13
+|   codeName = Unauthorized
+|_  ok = 0.0
+| mongodb-info: 
+|   MongoDB Build info
+|     ok = 1.0
+|     debug = false
+|     version = 4.0.18
+|     sysInfo = deprecated
+|     modules
+|     storageEngines
+|       0 = devnull
+|       3 = wiredTiger
+|       2 = mmapv1
+|       1 = ephemeralForTest
+|     maxBsonObjectSize = 16777216
+|     versionArray
+|       0 = 4
+|       3 = 0
+|       2 = 18
+|       1 = 0
+|     javascriptEngine = mozjs
+|     allocator = tcmalloc
+|     bits = 64
+|     buildEnvironment
+|       linkflags = -pthread -Wl,-z,now -rdynamic -Wl,--fatal-warnings -fstack-protector-strong -fuse-ld=gold -Wl,--build-id -Wl,--hash-style=gnu -Wl,-z,noexecstack -Wl,--warn-execstack -Wl,-z,relro
+|       cc = /opt/mongodbtoolchain/v2/bin/gcc: gcc (GCC) 5.4.0
+|       ccflags = -fno-omit-frame-pointer -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch -Werror -O2 -Wno-unused-local-typedefs -Wno-unused-function -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-missing-braces -fstack-protector-strong -fno-builtin-memcmp
+|       cxx = /opt/mongodbtoolchain/v2/bin/g++: g++ (GCC) 5.4.0
+|       distmod = debian92
+|       target_os = linux
+|       cxxflags = -Woverloaded-virtual -Wno-maybe-uninitialized -std=c++14
+|       distarch = x86_64
+|       target_arch = x86_64
+|     openssl
+|       compiled = OpenSSL 1.1.0l  10 Sep 2019
+|       running = OpenSSL 1.1.0l  10 Sep 2019
+|     gitVersion = 6883bdfb8b8cff32176b1fd176df04da9165fd67
+|   Server status
+|     errmsg = command serverStatus requires authentication
+|     code = 13
+|     codeName = Unauthorized
+|_    ok = 0.0
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 13 11:39:22 2022 -- 1 IP address (1 host up) scanned in 80.21 seconds

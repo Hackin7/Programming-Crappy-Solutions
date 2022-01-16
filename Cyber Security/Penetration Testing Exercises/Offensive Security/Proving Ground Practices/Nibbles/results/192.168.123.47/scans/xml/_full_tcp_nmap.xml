@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 15 07:20:51 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.47 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.47" start="1642249251" startstr="Sat Jan 15 07:20:51 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642249253"/>
+<taskend task="NSE" time="1642249253"/>
+<taskbegin task="NSE" time="1642249253"/>
+<taskend task="NSE" time="1642249253"/>
+<taskbegin task="NSE" time="1642249253"/>
+<taskend task="NSE" time="1642249253"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642249253"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642249253"/>
+<taskbegin task="SYN Stealth Scan" time="1642249253"/>
+<taskprogress task="SYN Stealth Scan" time="1642249284" percent="10.20" remaining="273" etc="1642249557"/>
+<taskprogress task="SYN Stealth Scan" time="1642249317" percent="20.36" remaining="251" etc="1642249567"/>
+<taskprogress task="SYN Stealth Scan" time="1642249347" percent="39.19" remaining="146" etc="1642249493"/>
+<taskprogress task="SYN Stealth Scan" time="1642249377" percent="50.31" remaining="123" etc="1642249499"/>
+<taskprogress task="SYN Stealth Scan" time="1642249407" percent="65.09" remaining="83" etc="1642249490"/>
+<taskprogress task="SYN Stealth Scan" time="1642249437" percent="54.49" remaining="154" etc="1642249591"/>
+<taskprogress task="SYN Stealth Scan" time="1642249467" percent="63.57" remaining="123" etc="1642249590"/>
+<taskprogress task="SYN Stealth Scan" time="1642249497" percent="73.12" remaining="90" etc="1642249587"/>
+<taskprogress task="SYN Stealth Scan" time="1642249527" percent="88.76" remaining="35" etc="1642249562"/>
+<taskend task="SYN Stealth Scan" time="1642249565" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642249565"/>
+<taskend task="Service scan" time="1642249577" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642249582"/>
+<taskend task="Traceroute" time="1642249582"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642249582"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642249582"/>
+<taskbegin task="NSE" time="1642249582"/>
+<taskend task="NSE" time="1642249588"/>
+<taskbegin task="NSE" time="1642249588"/>
+<taskend task="NSE" time="1642249590"/>
+<taskbegin task="NSE" time="1642249590"/>
+<taskend task="NSE" time="1642249590"/>
+<host starttime="1642249253" endtime="1642249590"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.47" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65529">
+<extrareasons reason="no-responses" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 10:62:1f:f5:22:de:29:d4:24:96:a7:66:c3:64:b7:10 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJgyzpWrB8SyLb/XmPYQYzsnfizW7d0aNZHpwQ9ivcHQ/RYLbCc8yUIQGN2JMqCgfSj8CRMA36UnV8jnngjkw9njcgMyA5qc1mO4tzzH7VNkW2t5AmP7Q1HBt+SThlLa0JxBN6Gd5BOPwrsk9YTjLj8ax2ncvGBq8jzQjYmm9jF4VgBak5DY+Q5JWdf9krumSlR+V8yneV9aQ6sVy2XgkCJQLQ8GoUTm/13XUTc3TCKQ2KOJ2FzA8VcNTfxqTDxalwnYrZ1tod7BRfMeff5MwxC5gzeB+hdOVC0zAZlvNtMxH6SCxMBRCoX9IHL27E6WtSGXCj1SLYJWrFImjp+I1L&#xa;  256 c9:15:ff:cd:f3:97:ec:39:13:16:48:38:c5:58:d7:5f (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM7uIYLogPsKP+c0QrezqQfB94ml7djfUOtG8ZAoMX6yK898l0TbgyAShcQSmdOsSMGdSO4GZpixCFJdsYkBi0M=&#xa;  256 90:7c:a3:44:73:b4:b4:4c:e3:9c:71:d1:87:ba:ca:7b (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoHnGdMtb37ORTRBt2cTfWvQE7IB3fF3ewP/1tqn0JF"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDJgyzpWrB8SyLb/XmPYQYzsnfizW7d0aNZHpwQ9ivcHQ/RYLbCc8yUIQGN2JMqCgfSj8CRMA36UnV8jnngjkw9njcgMyA5qc1mO4tzzH7VNkW2t5AmP7Q1HBt+SThlLa0JxBN6Gd5BOPwrsk9YTjLj8ax2ncvGBq8jzQjYmm9jF4VgBak5DY+Q5JWdf9krumSlR+V8yneV9aQ6sVy2XgkCJQLQ8GoUTm/13XUTc3TCKQ2KOJ2FzA8VcNTfxqTDxalwnYrZ1tod7BRfMeff5MwxC5gzeB+hdOVC0zAZlvNtMxH6SCxMBRCoX9IHL27E6WtSGXCj1SLYJWrFImjp+I1L</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">10621ff522de29d42496a766c364b710</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM7uIYLogPsKP+c0QrezqQfB94ml7djfUOtG8ZAoMX6yK898l0TbgyAShcQSmdOsSMGdSO4GZpixCFJdsYkBi0M=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c915ffcdf397ec3913164838c558d75f</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIKoHnGdMtb37ORTRBt2cTfWvQE7IB3fF3ewP/1tqn0JF</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">907ca34473b4b44ce39c71d187baca7b</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.38" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.38</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS HEAD GET POST"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.38 (Debian)"><elem>Apache/2.4.38 (Debian)</elem>
+</script><script id="http-title" output="Enter a title, displayed at the top of the window."><elem key="title">Enter a title, displayed at the top of the window.</elem>
+</script></port>
+<port protocol="tcp" portid="139"><state state="closed" reason="reset" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="closed" reason="reset" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5437"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="postgresql" product="PostgreSQL DB" version="11.3 - 11.7" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql:11</cpe></service><script id="ssl-cert" output="Subject: commonName=debian&#xa;Subject Alternative Name: DNS:debian&#xa;Issuer: commonName=debian&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-04-27T15:41:47&#xa;Not valid after:  2030-04-25T15:41:47&#xa;MD5:   b086 6d30 4913 684e 16c1 8348 fc76 fe43&#xa;SHA-1: cb30 5109 0fc1 14ab 0fb9 8e55 5874 4bb5 ba57 66af&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUYoM4kALX3eWKWuCQ1/K5FujVbGowDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGZGViaWFuMB4XDTIwMDQyNzE1NDE0N1oXDTMwMDQyNTE1&#xa;NDE0N1owETEPMA0GA1UEAwwGZGViaWFuMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAkpSVo7cfTt1CRy7yDV5Nr2dOJxIyg3JdaE+Mdtsw7/cbPaucXy/L&#xa;fYOoyUsSINbZtIV6/WEpFVD+fIWwPoPWsgazcnNF0Z1quuxOjXnmZICvVqku5vHk&#xa;Q+facbUNjGpz9OMC4s0y/T7uHH6psPoBBgL5ZVTNvU6tK/CnvjtPpMgQ+bOkIqsM&#xa;mMxQnUILBBfUdaVfgetlPCc1qg4+fq0ZCP/d0vjIlb6kA3AuprjFo2xpLwtbx0RM&#xa;BXkmm+STQRTxYnY62MRiL52tzACWfI7lml8LnUFP98tpPzT/0UCBx8cLLNrGlhQP&#xa;ZZb7sALAS8hjpOcIjvRT+ZfXKHHma5RvGQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBmRlYmlhbjANBgkqhkiG9w0BAQsFAAOCAQEAJ1f62YGJW8Ds0e31&#xa;s6hlCQX0kpn5+UXbTMMkjkBWp54aPg6YjUbg4py/E+gJtDWDv/Z8bT+ggiHdIQLf&#xa;+99KE7ShNlnn+hiI4MYjza5rl2W00taN0PiYcKpz898aQ/4Kmho5wkYz+s1bi87O&#xa;5/IphYJXZYLOLf3CzuWzCT5RUBKZO/BVX79kqJvOLH2xJOkRwA9mgNh5QY0CBzCk&#xa;NVOoDL+Yhof2sZs/UetiW//U8Mtiz22rQWmU4l/tU/X8rUAJQYOCmohGCXnU3aN2&#xa;6VSDkryCvRWChxwJtqXdKEMZ03E/zr35LhqLWmQmRSEjeVw10HN3g6Y1NpAKV1+g&#xa;rFaQxA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">debian</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">debian</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">929495A3B71F4EDD42472EF20D5E4DAF674E27123283725D684F8C76DB30EFF71B3DAB9C5F2FCB7D83A8C94B1220D6D9B4857AFD61291550FE7C85B03E83D6B206B3727345D19D6ABAEC4E8D79E66480AF56A92EE6F1E443E7DA71B50D8C6A73F4E302E2CD32FD3EEE1C7EA9B0FA010602F96554CDBD4EAD2BF0A7BE3B4FA4C810F9B3A422AB0C98CC509D420B0417D475A55F81EB653C2735AA0E3E7EAD1908FFDDD2F8C895BEA403702EA6B8C5A36C692F0B5BC7444C0579269BE4934114F162763AD8C4622F9DADCC00967C8EE59A5F0B9D414FF7CB693F34FFD14081C7C70B2CDAC696140F6596FBB002C04BC863A4E7088EF453F997D72871E66B946F19</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:debian</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-04-27T15:41:47</elem>
+<elem key="notAfter">2030-04-25T15:41:47</elem>
+</table>
+<elem key="md5">b0866d304913684e16c18348fc76fe43</elem>
+<elem key="sha1">cb3051090fc114ab0fb98e5558744bb5ba5766af</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUYoM4kALX3eWKWuCQ1/K5FujVbGowDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGZGViaWFuMB4XDTIwMDQyNzE1NDE0N1oXDTMwMDQyNTE1&#xa;NDE0N1owETEPMA0GA1UEAwwGZGViaWFuMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAkpSVo7cfTt1CRy7yDV5Nr2dOJxIyg3JdaE+Mdtsw7/cbPaucXy/L&#xa;fYOoyUsSINbZtIV6/WEpFVD+fIWwPoPWsgazcnNF0Z1quuxOjXnmZICvVqku5vHk&#xa;Q+facbUNjGpz9OMC4s0y/T7uHH6psPoBBgL5ZVTNvU6tK/CnvjtPpMgQ+bOkIqsM&#xa;mMxQnUILBBfUdaVfgetlPCc1qg4+fq0ZCP/d0vjIlb6kA3AuprjFo2xpLwtbx0RM&#xa;BXkmm+STQRTxYnY62MRiL52tzACWfI7lml8LnUFP98tpPzT/0UCBx8cLLNrGlhQP&#xa;ZZb7sALAS8hjpOcIjvRT+ZfXKHHma5RvGQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBmRlYmlhbjANBgkqhkiG9w0BAQsFAAOCAQEAJ1f62YGJW8Ds0e31&#xa;s6hlCQX0kpn5+UXbTMMkjkBWp54aPg6YjUbg4py/E+gJtDWDv/Z8bT+ggiHdIQLf&#xa;+99KE7ShNlnn+hiI4MYjza5rl2W00taN0PiYcKpz898aQ/4Kmho5wkYz+s1bi87O&#xa;5/IphYJXZYLOLf3CzuWzCT5RUBKZO/BVX79kqJvOLH2xJOkRwA9mgNh5QY0CBzCk&#xa;NVOoDL+Yhof2sZs/UetiW//U8Mtiz22rQWmU4l/tU/X8rUAJQYOCmohGCXnU3aN2&#xa;6VSDkryCvRWChxwJtqXdKEMZ03E/zr35LhqLWmQmRSEjeVw10HN3g6Y1NpAKV1+g&#xa;rFaQxA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="139"/>
+<osmatch name="Linux 2.6.32" accuracy="88" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="88" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="88" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="88" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="88" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="88"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="87" line="68507">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="87"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="87"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="87" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="87" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="87" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/15%OT=21%CT=139%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E2BD76%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FD%GCD=1%ISR=10A%TI=Z%II=I%TS=A)&#xa;SEQ(SP=FD%GCD=1%ISR=109%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="3714968" lastboot="Fri Dec  3 07:30:22 2021"/>
+<distance value="2"/>
+<tcpsequence index="253" difficulty="Good luck!" values="3BF88E2C,12101A96,B57FC751,E14A8FD1,9F2A196F,D3B4742A"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="DD6DC324,DD6DC389,DD6DC3ED,DD6DC452,DD6DC4C0,DD6DC525"/>
+<trace port="139" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="180.23"/>
+<hop ttl="2" ipaddr="192.168.123.47" rtt="180.10"/>
+</trace>
+<times srtt="179559" rttvar="903" to="183171"/>
+</host>
+<taskbegin task="NSE" time="1642249590"/>
+<taskend task="NSE" time="1642249590"/>
+<taskbegin task="NSE" time="1642249590"/>
+<taskend task="NSE" time="1642249590"/>
+<taskbegin task="NSE" time="1642249590"/>
+<taskend task="NSE" time="1642249590"/>
+<runstats><finished time="1642249590" timestr="Sat Jan 15 07:26:30 2022" summary="Nmap done at Sat Jan 15 07:26:30 2022; 1 IP address (1 host up) scanned in 339.64 seconds" elapsed="339.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,28 @@
+# Nmap 7.91 scan initiated Wed Jan 12 05:13:16 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.107.43/scans/xml/_quick_tcp_nmap.xml" 192.168.107.43
+Increasing send delay for 192.168.107.43 from 0 to 5 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 192.168.107.43 from 5 to 10 due to 11 out of 11 dropped probes since last increase.
+Nmap scan report for 192.168.107.43
+Host is up, received user-set (0.031s latency).
+Scanned at 2022-01-12 05:13:18 EST for 131s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT    STATE SERVICE    REASON         VERSION
+80/tcp  open  tcpwrapped syn-ack ttl 64
+443/tcp open  tcpwrapped syn-ack ttl 64
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|phone
+Running: Linux 2.4.X|2.6.X, Sony Ericsson embedded
+OS CPE: cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6.22 cpe:/h:sonyericsson:u8i_vivaz
+OS details: Tomato 1.28 (Linux 2.4.20), Tomato firmware (Linux 2.6.22), Sony Ericsson U8i Vivaz mobile phone
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/12%OT=443%CT=%CU=%PV=Y%G=N%TM=61DEAA41%P=x86_64-pc-l
+OS:inux-gnu)ECN(R=N)T1(R=N)T2(R=N)T3(R=N)T4(R=N)U1(R=N)IE(R=N)
+
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 05:15:29 2022 -- 1 IP address (1 host up) scanned in 133.62 seconds

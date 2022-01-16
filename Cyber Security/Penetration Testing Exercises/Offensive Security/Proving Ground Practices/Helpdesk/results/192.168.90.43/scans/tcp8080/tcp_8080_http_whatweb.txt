@@ -1,0 +1,71 @@
+WhatWeb report for http://192.168.90.43:8080
+Status    : 200 OK
+Title     : ManageEngine ServiceDesk Plus
+IP        : 192.168.90.43
+Country   : RESERVED, ZZ
+
+Summary   : Script[text/JavaScript,text/javascript], HTTPServer[Apache-Coyote/1.1], Java, Cookies[JSESSIONID], Frame, Apache, PasswordField[j_password]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : JSESSIONID
+
+[ Frame ]
+	This plugin detects instances of frame and iframe HTML
+	elements.
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Apache-Coyote/1.1 (from server string)
+
+[ Java ]
+	Java allows you to play online games, chat with people
+	around the world, calculate your mortgage interest, and
+	view images in 3D, just to name a few. It's also integral
+	to the intranet applications and other e-business solutions
+	that are the foundation of corporate computing.
+
+	Website     : http://www.java.com/
+
+[ PasswordField ]
+	find password fields
+
+	String       : j_password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/JavaScript,text/javascript
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Set-Cookie: JSESSIONID=4FE1D55DD5A49DCB13AAE51683EA1D59; Path=/
+	Pragma: No-cache
+	Cache-Control: no-cache
+	Expires: Wed, 31 Dec 1969 16:00:00 PST
+	Content-Type: text/html;charset=UTF-8
+	Content-Encoding: gzip
+	Vary: Accept-Encoding
+	Date: Wed, 12 Jan 2022 11:44:01 GMT
+	Server: Apache-Coyote/1.1
+	Connection: close
+
+

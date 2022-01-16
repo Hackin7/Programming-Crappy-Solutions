@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 08:22:08 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.90.40 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.90.40" start="1641993728" startstr="Wed Jan 12 08:22:08 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1641993735"/>
+<taskend task="NSE" time="1641993735"/>
+<taskbegin task="NSE" time="1641993735"/>
+<taskend task="NSE" time="1641993735"/>
+<taskbegin task="NSE" time="1641993735"/>
+<taskend task="NSE" time="1641993735"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1641993735"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1641993735"/>
+<taskbegin task="SYN Stealth Scan" time="1641993736"/>
+<taskend task="SYN Stealth Scan" time="1641993736" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1641993738"/>
+<taskend task="Service scan" time="1641993745" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1641993745"/>
+<taskprogress task="NSE" time="1641993776" percent="97.14" remaining="1" etc="1641993777"/>
+<taskprogress task="NSE" time="1641993806" percent="97.14" remaining="2" etc="1641993808"/>
+<taskprogress task="NSE" time="1641993836" percent="97.14" remaining="3" etc="1641993839"/>
+<taskprogress task="NSE" time="1641993866" percent="97.14" remaining="4" etc="1641993870"/>
+<taskprogress task="NSE" time="1641993896" percent="97.14" remaining="5" etc="1641993900"/>
+<taskprogress task="NSE" time="1641993926" percent="97.14" remaining="6" etc="1641993931"/>
+<taskprogress task="NSE" time="1641993956" percent="97.14" remaining="7" etc="1641993962"/>
+<taskend task="NSE" time="1641993972"/>
+<taskbegin task="NSE" time="1641993972"/>
+<taskend task="NSE" time="1641993981"/>
+<taskbegin task="NSE" time="1641993981"/>
+<taskend task="NSE" time="1641993981"/>
+<host starttime="1641993736" endtime="1641993981"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.90.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Windows Server (R) 2008 Standard 6001 Service Pack 1 netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: INTERNAL, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:ba:60:24 (VMware)&#xa;Names:&#xa;  INTERNAL&lt;00&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  INTERNAL&lt;20&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 ba 60 24 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)&#xa;  account_used: &lt;blank&gt;&#xa;  \\192.168.90.40\ADMIN$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.90.40\C$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.90.40\IPC$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: READ&#xa;  \\192.168.90.40\PUBLIC: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)</elem>
+<elem key="account_used">&lt;blank&gt;</elem>
+<table key="\\192.168.90.40\ADMIN$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.90.40\C$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.90.40\IPC$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">READ</elem>
+</table>
+<table key="\\192.168.90.40\PUBLIC">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Call to Browser Service failed with status = 2184"/><script id="smb-os-discovery" output="&#xa;  OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)&#xa;  OS CPE: cpe:/o:microsoft:windows_server_2008::sp1&#xa;  Computer name: internal&#xa;  NetBIOS computer name: INTERNAL\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2022-01-12T05:22:27-08:00&#xa;"><elem key="os">Windows Server (R) 2008 Standard 6001 Service Pack 1</elem>
+<elem key="lanmanager">Windows Server (R) 2008 Standard 6.0</elem>
+<elem key="server">INTERNAL\x00</elem>
+<elem key="date">2022-01-12T05:22:27-08:00</elem>
+<elem key="fqdn">internal</elem>
+<elem key="domain_dns">internal</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_server_2008::sp1</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="year">2017</elem>
+<elem key="month">03</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+</table>
+</table>
+</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-12T13:22:27&#xa;  start_date: 2021-07-26T21:49:10"><elem key="date">2022-01-12T13:22:27</elem>
+<elem key="start_date">2021-07-26T21:49:10</elem>
+</script></hostscript><times srtt="202281" rttvar="202281" to="1011405"/>
+</host>
+<taskbegin task="NSE" time="1641993981"/>
+<taskend task="NSE" time="1641993981"/>
+<taskbegin task="NSE" time="1641993981"/>
+<taskend task="NSE" time="1641993981"/>
+<taskbegin task="NSE" time="1641993981"/>
+<taskend task="NSE" time="1641993981"/>
+<runstats><finished time="1641993981" timestr="Wed Jan 12 08:26:21 2022" summary="Nmap done at Wed Jan 12 08:26:21 2022; 1 IP address (1 host up) scanned in 253.05 seconds" elapsed="253.05" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

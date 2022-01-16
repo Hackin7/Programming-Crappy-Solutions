@@ -1,0 +1,40 @@
+WhatWeb report for http://192.168.123.42:80
+Status    : 200 OK
+Title     : Ph33r
+IP        : 192.168.123.42
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Debian Linux][Apache/1.3.33 (Debian GNU/Linux)], Apache[1.3.33]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 1.3.33 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Debian Linux
+	String       : Apache/1.3.33 (Debian GNU/Linux) (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Wed, 12 Jan 2022 21:28:29 GMT
+	Server: Apache/1.3.33 (Debian GNU/Linux)
+	Last-Modified: Thu, 22 Jan 2009 01:57:56 GMT
+	ETag: "660ee-121-4977d2a4"
+	Accept-Ranges: bytes
+	Content-Length: 289
+	Connection: close
+	Content-Type: text/html; charset=iso-8859-1
+
+

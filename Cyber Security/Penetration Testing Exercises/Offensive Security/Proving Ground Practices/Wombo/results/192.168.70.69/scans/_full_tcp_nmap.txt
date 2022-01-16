@@ -1,0 +1,236 @@
+# Nmap 7.91 scan initiated Thu Jan 13 11:28:58 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/xml/_full_tcp_nmap.xml" 192.168.70.69
+Nmap scan report for 192.168.70.69
+Host is up, received user-set (0.29s latency).
+Scanned at 2022-01-13 11:28:58 EST for 543s
+Not shown: 65529 filtered ports
+Reason: 65529 no-responses
+PORT      STATE  SERVICE    REASON         VERSION
+22/tcp    open   ssh        syn-ack ttl 63 OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 09:80:39:ef:3f:61:a8:d9:e6:fb:04:94:23:c9:ef:a8 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGBXRhQCez7/IOdnHzLYdpVtWWRMN/7bUR/C3T/W6V9DwlKUS2AfdncLdLwqnx61jODFdXDrTdEdTAtK4MHuXt/UOLDXr1SOfUHYQbZd1rmpMaeB3qOKfoVP7NMp2Ga68kT/9NvBphakYXRWw4C7RS0N+4YWU/BjSyMTIdnhJX05lC5Uyljg7FliJ7d3J/CtF98I6Oo5u/Eb2/5BB45/1IuM6R7BGCDOpIs6po1FyEk8gFktbB+INGATdBPxvmAOX6G7m/R491a9/QtaF8wrgsjS3fQftoiW8vwcaom8Bmu94xZ9pZq0Dgt9VWQz241T5dGQrp57s6Djl/V83/qGFP
+|   256 83:f8:6f:50:7a:62:05:aa:15:44:10:f5:4a:c2:f5:a6 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLg0oQ1t4NCz+KWPtrCjgDf+qjW2Vb4oOc/eM21vT9rIPJa//rO0LFT8czDxcWFU9HMSEohfSm8emC4lShgGrY4=
+|   256 1e:2b:13:30:5c:f1:31:15:b4:e8:f3:d2:c4:e8:05:b5 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPS81xs7EU6k92rNFdmsDF7qcRDxDILJUeva18aKW1GV
+53/tcp    closed domain     reset ttl 63
+80/tcp    open   http       syn-ack ttl 63 nginx 1.10.3
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.10.3
+|_http-title: Welcome to nginx!
+6379/tcp  open   redis      syn-ack ttl 63 Redis key-value store 5.0.9
+8080/tcp  open   http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=vFV35miQFQewZP2a20QEmUeN; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 11098
+|     ETag: W/"2b5a-a+gjUTnHrmbpEJ0mOuz3dHtaAb4"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:33:17 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Not Found | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_n
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=0b73NLIw9rO7vx86ugf5xOWW; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 18181
+|     ETag: W/"4705-lrtbvj2GmNcdA1wWkGZ5kLJ/K1M"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:33:15 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Home | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_name" content
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     Allow: GET,HEAD
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 8
+|     ETag: W/"8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:33:16 GMT
+|     Connection: close
+|     GET,HEAD
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+|_http-favicon: Unknown favicon MD5: 152FF7D5AE5BDB84B33D4DCA31EB7CD3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 3 disallowed entries 
+|_/admin/ /reset/ /compose
+|_http-title: Home | NodeBB
+27017/tcp open   mongodb    syn-ack ttl 63 MongoDB
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, OfficeScan, apple-iphoto, docker, hazelcast-http, metasploit-msgrpc: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Content-Type: text/plain
+|     Content-Length: 85
+|     looks like you are trying to access MongoDB over HTTP on the native driver port.
+|   mongodb: 
+|     errmsg
+|     command serverStatus requires authentication
+|     code
+|     codeName
+|_    Unauthorized
+| mongodb-databases: 
+|   ok = 0.0
+|   codeName = Unauthorized
+|   errmsg = command listDatabases requires authentication
+|_  code = 13
+| mongodb-info: 
+|   MongoDB Build info
+|     openssl
+|       compiled = OpenSSL 1.1.0l  10 Sep 2019
+|       running = OpenSSL 1.1.0l  10 Sep 2019
+|     allocator = tcmalloc
+|     modules
+|     gitVersion = 6883bdfb8b8cff32176b1fd176df04da9165fd67
+|     version = 4.0.18
+|     sysInfo = deprecated
+|     ok = 1.0
+|     storageEngines
+|       1 = ephemeralForTest
+|       0 = devnull
+|       3 = wiredTiger
+|       2 = mmapv1
+|     maxBsonObjectSize = 16777216
+|     debug = false
+|     bits = 64
+|     javascriptEngine = mozjs
+|     buildEnvironment
+|       cxx = /opt/mongodbtoolchain/v2/bin/g++: g++ (GCC) 5.4.0
+|       distarch = x86_64
+|       ccflags = -fno-omit-frame-pointer -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch -Werror -O2 -Wno-unused-local-typedefs -Wno-unused-function -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-missing-braces -fstack-protector-strong -fno-builtin-memcmp
+|       target_arch = x86_64
+|       linkflags = -pthread -Wl,-z,now -rdynamic -Wl,--fatal-warnings -fstack-protector-strong -fuse-ld=gold -Wl,--build-id -Wl,--hash-style=gnu -Wl,-z,noexecstack -Wl,--warn-execstack -Wl,-z,relro
+|       cxxflags = -Woverloaded-virtual -Wno-maybe-uninitialized -std=c++14
+|       distmod = debian92
+|       cc = /opt/mongodbtoolchain/v2/bin/gcc: gcc (GCC) 5.4.0
+|       target_os = linux
+|     versionArray
+|       1 = 0
+|       0 = 4
+|       3 = 0
+|       2 = 18
+|   Server status
+|     ok = 0.0
+|     codeName = Unauthorized
+|     errmsg = command serverStatus requires authentication
+|_    code = 13
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=9%D=1/13%Time=61E05441%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,31C4,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=b
+SF:lock\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powere
+SF:d-By:\x20NodeBB\r\nset-cookie:\x20_csrf=0b73NLIw9rO7vx86ugf5xOWW;\x20Pa
+SF:th=/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x2018181\r\nETag:\x20W/\"4705-lrtbvj2GmNcdA1wWkGZ5kLJ/K1M\"\r\nVary:\x
+SF:20Accept-Encoding\r\nDate:\x20Thu,\x2013\x20Jan\x202022\x2016:33:15\x20
+SF:GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=
+SF:\"en-GB\"\x20data-dir=\"ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\
+SF:r\n<head>\r\n\t<title>Home\x20\|\x20NodeBB</title>\r\n\t<meta\x20name=\
+SF:"viewport\"\x20content=\"width&#x3D;device-width,\x20initial-scale&#x3D
+SF:;1\.0\"\x20/>\n\t<meta\x20name=\"content-type\"\x20content=\"text/html;
+SF:\x20charset=UTF-8\"\x20/>\n\t<meta\x20name=\"apple-mobile-web-app-capab
+SF:le\"\x20content=\"yes\"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable
+SF:\"\x20content=\"yes\"\x20/>\n\t<meta\x20property=\"og:site_name\"\x20co
+SF:ntent")%r(HTTPOptions,1BF,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Con
+SF:trol:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x
+SF:20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x20
+SF:1;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin
+SF:\r\nX-Powered-By:\x20NodeBB\r\nAllow:\x20GET,HEAD\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=utf-8\r\nContent-Length:\x208\r\nETag:\x20W/\"8-ZR
+SF:Af8oNBS3Bjb/SU2GYZCmbtmXg\"\r\nVary:\x20Accept-Encoding\r\nDate:\x20Thu
+SF:,\x2013\x20Jan\x202022\x2016:33:16\x20GMT\r\nConnection:\x20close\r\n\r
+SF:\nGET,HEAD")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:nnection:\x20close\r\n\r\n")%r(FourOhFourRequest,2D42,"HTTP/1\.1\x20404
+SF:\x20Not\x20Found\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Poli
+SF:cy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nse
+SF:t-cookie:\x20_csrf=vFV35miQFQewZP2a20QEmUeN;\x20Path=/\r\nContent-Type:
+SF:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2011098\r\nETag:\x2
+SF:0W/\"2b5a-a\+gjUTnHrmbpEJ0mOuz3dHtaAb4\"\r\nVary:\x20Accept-Encoding\r\
+SF:nDate:\x20Thu,\x2013\x20Jan\x202022\x2016:33:17\x20GMT\r\nConnection:\x
+SF:20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en-GB\"\x20data-di
+SF:r=\"ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\r\n<head>\r\n\t<titl
+SF:e>Not\x20Found\x20\|\x20NodeBB</title>\r\n\t<meta\x20name=\"viewport\"\
+SF:x20content=\"width&#x3D;device-width,\x20initial-scale&#x3D;1\.0\"\x20/
+SF:>\n\t<meta\x20name=\"content-type\"\x20content=\"text/html;\x20charset=
+SF:UTF-8\"\x20/>\n\t<meta\x20name=\"apple-mobile-web-app-capable\"\x20cont
+SF:ent=\"yes\"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable\"\x20conten
+SF:t=\"yes\"\x20/>\n\t<meta\x20property=\"og:site_n");
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Linux 3.11 - 4.1 (93%), Linux 4.4 (93%), Linux 3.16 (90%), Linux 3.13 (90%), Linux 3.10 - 3.16 (88%), Linux 2.6.32 (88%), Linux 3.2 - 3.8 (88%), Linux 3.8 (88%), WatchGuard Fireware 11.8 (88%), Kyocera CopyStar CS-2560 printer (87%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/13%OT=22%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E05569%P=x86_64-pc-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=109%TI=Z%II=I%TS=8)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.035 days (since Thu Jan 13 10:47:49 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+1   294.39 ms 192.168.49.1
+2   295.93 ms 192.168.70.69
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 13 11:38:01 2022 -- 1 IP address (1 host up) scanned in 544.04 seconds

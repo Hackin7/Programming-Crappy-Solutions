@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+X-DNS-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+X-Powered-By: NodeBB
+Content-Type: text/plain; charset=utf-8
+Content-Length: 111
+ETag: W/"6f-U/cx4ocjtIfj1b4jCcBuxwfZOck"
+Vary: Accept-Encoding
+Date: Thu, 13 Jan 2022 16:30:56 GMT
+Connection: keep-alive
+
+User-agent: *
+Disallow: /admin/
+Disallow: /reset/
+Disallow: /compose
+Sitemap: http://localhost:4567/sitemap.xml

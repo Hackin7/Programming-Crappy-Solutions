@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 02:11:25 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/xml/_full_tcp_nmap.xml&quot; 192.168.107.147 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/results/192.168.107.147/scans/xml/_full_tcp_nmap.xml&quot; 192.168.107.147" start="1641971485" startstr="Wed Jan 12 02:11:25 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1641971486"/>
+<taskend task="NSE" time="1641971486"/>
+<taskbegin task="NSE" time="1641971486"/>
+<taskend task="NSE" time="1641971486"/>
+<taskbegin task="NSE" time="1641971486"/>
+<taskend task="NSE" time="1641971486"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1641971486"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1641971486"/>
+<taskbegin task="SYN Stealth Scan" time="1641971486"/>
+<taskprogress task="SYN Stealth Scan" time="1641971517" percent="3.30" remaining="909" etc="1641972425"/>
+<taskprogress task="SYN Stealth Scan" time="1641971547" percent="12.67" remaining="421" etc="1641971968"/>
+<taskprogress task="SYN Stealth Scan" time="1641971577" percent="24.03" remaining="288" etc="1641971865"/>
+<taskprogress task="SYN Stealth Scan" time="1641971607" percent="32.49" remaining="252" etc="1641971858"/>
+<taskprogress task="SYN Stealth Scan" time="1641971637" percent="42.89" remaining="202" etc="1641971838"/>
+<taskprogress task="SYN Stealth Scan" time="1641971667" percent="54.00" remaining="155" etc="1641971821"/>
+<taskprogress task="SYN Stealth Scan" time="1641971697" percent="63.96" remaining="119" etc="1641971816"/>
+<taskprogress task="SYN Stealth Scan" time="1641971727" percent="74.46" remaining="83" etc="1641971810"/>
+<taskprogress task="SYN Stealth Scan" time="1641971757" percent="80.98" remaining="64" etc="1641971821"/>
+<taskprogress task="SYN Stealth Scan" time="1641971814" percent="87.72" remaining="46" etc="1641971860"/>
+<taskprogress task="SYN Stealth Scan" time="1641971844" percent="63.01" remaining="211" etc="1641972054"/>
+<taskprogress task="SYN Stealth Scan" time="1641971883" percent="68.99" remaining="179" etc="1641972061"/>
+<taskprogress task="SYN Stealth Scan" time="1641971913" percent="74.83" remaining="144" etc="1641972057"/>
+<taskprogress task="SYN Stealth Scan" time="1641971946" percent="80.24" remaining="114" etc="1641972059"/>
+<taskprogress task="SYN Stealth Scan" time="1641971976" percent="86.85" remaining="75" etc="1641972050"/>
+<taskprogress task="SYN Stealth Scan" time="1641972006" percent="93.31" remaining="38" etc="1641972043"/>
+<taskend task="SYN Stealth Scan" time="1641972037" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1641972037"/>
+<taskend task="Service scan" time="1641972136" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1641972142"/>
+<taskend task="Traceroute" time="1641972142"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1641972142"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1641972142"/>
+<taskbegin task="NSE" time="1641972142"/>
+<taskend task="NSE" time="1641972151"/>
+<taskbegin task="NSE" time="1641972151"/>
+<taskend task="NSE" time="1641972152"/>
+<taskbegin task="NSE" time="1641972152"/>
+<taskend task="NSE" time="1641972152"/>
+<host starttime="1641971486" endtime="1641972152"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.107.147" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65527">
+<extrareasons reason="no-responses" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 78:2f:ea:84:4c:09:ae:0e:36:bf:b3:01:35:cf:47:22 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDj3RK6xsdeO4e9FcGxkWDFkLF6hB7c+1AvLuouW7Hb9yCluZ2mIoIHBm8p8+h8ZefUURi9GirIwsti4lQdcIxKwGepWKjj9/yTKe/sNEWugWUhA2+twlcG16FWSt83UenfW9L8pJ7swSobVFWl3bLcig9vBZxRcP4S90lskZ00v7+ivglQ5ZhUEfbOm4QG9ygqY4pLTFN2jf/z91XhoTANWOrKZNOb+ESbspGxQTEUCHwVNrODS6BDqTTWNj2gZlB3rR3OxkHAiOvBaiKmt3o3IKegyx2LnjnG1s5JxjfjsV3DDesEqgB5TPfLF9SM3ablgqyBvHr1XeMWmqpQoSanb8+oNzQBmodmiARh1ScZQ4YdlAXuZPGae5bgIoCKWj8fWpxAtjvEt1GuoBmfSUrX2IZ0F+TuGLp6r2QZAAyBCc6DkZyisSVRBqgSHiCcUSMMX1s4Q+3ejdMKQdr/sio1F3KrqcxRus9r7QNHe9aPHZQvgqtfILrtRHpCLS1nESk=&#xa;  256 d2:7d:eb:2d:a5:9a:2f:9e:93:9a:d5:2e:aa:dc:f4:a6 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKlBMKDw3CXTIbkuaAnYiGGEVUj1gx8Cx0sCphpMw8LfYEwRT39bv6O6K/4/IRdx/55N+IZs9C15K5SoHJbACVI=&#xa;  256 b6:d4:96:f0:a4:04:e4:36:78:1e:9d:a5:10:93:d7:99 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8bIayyvqAHx2g8sE1rJUia1dcCXeTm0bR6MkIuzYIq"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">782fea844c09ae0e36bfb30135cf4722</elem>
+<elem key="bits">3072</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDj3RK6xsdeO4e9FcGxkWDFkLF6hB7c+1AvLuouW7Hb9yCluZ2mIoIHBm8p8+h8ZefUURi9GirIwsti4lQdcIxKwGepWKjj9/yTKe/sNEWugWUhA2+twlcG16FWSt83UenfW9L8pJ7swSobVFWl3bLcig9vBZxRcP4S90lskZ00v7+ivglQ5ZhUEfbOm4QG9ygqY4pLTFN2jf/z91XhoTANWOrKZNOb+ESbspGxQTEUCHwVNrODS6BDqTTWNj2gZlB3rR3OxkHAiOvBaiKmt3o3IKegyx2LnjnG1s5JxjfjsV3DDesEqgB5TPfLF9SM3ablgqyBvHr1XeMWmqpQoSanb8+oNzQBmodmiARh1ScZQ4YdlAXuZPGae5bgIoCKWj8fWpxAtjvEt1GuoBmfSUrX2IZ0F+TuGLp6r2QZAAyBCc6DkZyisSVRBqgSHiCcUSMMX1s4Q+3ejdMKQdr/sio1F3KrqcxRus9r7QNHe9aPHZQvgqtfILrtRHpCLS1nESk=</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">d27deb2da59a2f9e939ad52eaadcf4a6</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKlBMKDw3CXTIbkuaAnYiGGEVUj1gx8Cx0sCphpMw8LfYEwRT39bv6O6K/4/IRdx/55N+IZs9C15K5SoHJbACVI=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">b6d496f0a404e436781e9da51093d799</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAID8bIayyvqAHx2g8sE1rJUia1dcCXeTm0bR6MkIuzYIq</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="63"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="closed" reason="reset" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="63"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="closed" reason="reset" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="17445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port17445-TCP:V=7.91%I=9%D=1/12%Time=61DE8152%P=x86_64-pc-linux-gnu%r(GetRequest,623,&quot;HTTP/1\.1\x20200\x20\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCache-Control:\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nX-Frame-Options:\x20DENY\r\nContent-Type:\x20text/html;charset=UTF-8\r\nContent-Language:\x20en-US\r\nDate:\x20Wed,\x2012\x20Jan\x202022\x2007:20:51\x20GMT\r\nConnection:\x20close\r\n\r\n\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\t&lt;head&gt;\n\x20\x20\x20\x20\t&lt;meta\x20charset=\&quot;UTF-8\&quot;&gt;\n\x20\x20\x20\x20\t&lt;title&gt;Issue\x20Tracker&lt;/title&gt;\n\t\t&lt;link\x20href=\&quot;/css/bootstrap\.min\.css\&quot;\x20rel=\&quot;stylesheet\&quot;\x20/&gt;\n\t&lt;/head&gt;\n\t&lt;body&gt;\n\t\x20\x20\x20\x20&lt;section&gt;\n\t\t&lt;div\x20class=\&quot;container\x20mt-4\&quot;&gt;\n\t\t\t&lt;span&gt;\n\x20\t\t\t\n\t\x20\x20\x20\x20\x20\x20\x20\x20&lt;div&gt;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\t&lt;a\x20href=\&quot;/login\&quot;\x20class=\&quot;btn\x20btn-primary\&quot;\x20style=\&quot;float:right\&quot;&gt;Sign\x20In&lt;/a&gt;\x20\n\t\x20\x20\x20\x20\x20\x20\x20\x20\t&lt;a\x20href=\&quot;/register\&quot;\x20class=\&quot;btn\x20btn-primary\&quot;\x20style=\&quot;float:right;margin-right:5px\&quot;&gt;Register&lt;/a&gt;\n\t\x20\x20\x20\x20\x20\x20\x20\x20&lt;/div&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;/span&gt;\n\t\t\t&lt;br&gt;&lt;br&gt;\n\t\t\t&lt;table\x20class=\&quot;table\&quot;&gt;\n\t\t\t&lt;thead&gt;\n\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t&lt;th&gt;ID&lt;/th&gt;\n\t\t\t\t\t&lt;th&gt;Message&lt;/th&gt;\n\t\t\t\t\t&lt;th&gt;P&quot;)%r(HTTPOptions,12B,&quot;HTTP/1\.1\x20200\x20\r\nAllow:\x20GET,HEAD,OPTIONS\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCache-Control:\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nX-Frame-Options:\x20DENY\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2012\x20Jan\x202022\x2007:20:51\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,24E,&quot;HTTP/1\.1\x20400\x20\r\nContent-Type:\x20text/html;charset=utf-8\r\nContent-Language:\x20en\r\nContent-Length:\x20435\r\nDate:\x20Wed,\x2012\x20Jan\x202022\x2007:20:53\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!doctype\x20html&gt;&lt;html\x20lang=\&quot;en\&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request&lt;/title&gt;&lt;style\x20type=\&quot;text/css\&quot;&gt;body\x20{font-family:Tahoma,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;background-color:#525D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-size:16px;}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{color:black;}\x20\.line\x20{height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 200 &#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Cache-Control: no-cache, no-store, max-age=0, must-revalidate&#xa;    Pragma: no-cache&#xa;    Expires: 0&#xa;    X-Frame-Options: DENY&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Content-Language: en-US&#xa;    Date: Wed, 12 Jan 2022 07:20:51 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#xa;    &lt;title&gt;Issue Tracker&lt;/title&gt;&#xa;    &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;section&gt;&#xa;    &lt;div class=&quot;container mt-4&quot;&gt;&#xa;    &lt;span&gt;&#xa;    &lt;div&gt;&#xa;    href=&quot;/login&quot; class=&quot;btn btn-primary&quot; style=&quot;float:right&quot;&gt;Sign In&lt;/a&gt; &#xa;    href=&quot;/register&quot; class=&quot;btn btn-primary&quot; style=&quot;float:right;margin-right:5px&quot;&gt;Register&lt;/a&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/span&gt;&#xa;    &lt;br&gt;&lt;br&gt;&#xa;    &lt;table class=&quot;table&quot;&gt;&#xa;    &lt;thead&gt;&#xa;    &lt;tr&gt;&#xa;    &lt;th&gt;ID&lt;/th&gt;&#xa;    &lt;th&gt;Message&lt;/th&gt;&#xa;    &lt;th&gt;P&#xa;  HTTPOptions: &#xa;    HTTP/1.1 200 &#xa;    Allow: GET,HEAD,OPTIONS&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Cache-Control: no-cache, no-store, max-age=0, must-revalidate&#xa;    Pragma: no-cache&#xa;    Expires: 0&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 0&#xa;    Date: Wed, 12 Jan 2022 07:20:51 GMT&#xa;    Connection: close&#xa;  RTSPRequest: &#xa;    HTTP/1.1 400 &#xa;    Content-Type: text/html;charset=utf-8&#xa;    Content-Language: en&#xa;    Content-Length: 435&#xa;    Date: Wed, 12 Jan 2022 07:20:53 GMT&#xa;    Connection: close&#xa;    &lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 400 &#xa;    Request&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 400 &#xa;    Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"><elem key="GetRequest">&#xa;    HTTP/1.1 200 &#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Cache-Control: no-cache, no-store, max-age=0, must-revalidate&#xa;    Pragma: no-cache&#xa;    Expires: 0&#xa;    X-Frame-Options: DENY&#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Content-Language: en-US&#xa;    Date: Wed, 12 Jan 2022 07:20:51 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#xa;    &lt;title&gt;Issue Tracker&lt;/title&gt;&#xa;    &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;section&gt;&#xa;    &lt;div class=&quot;container mt-4&quot;&gt;&#xa;    &lt;span&gt;&#xa;    &lt;div&gt;&#xa;    href=&quot;/login&quot; class=&quot;btn btn-primary&quot; style=&quot;float:right&quot;&gt;Sign In&lt;/a&gt; &#xa;    href=&quot;/register&quot; class=&quot;btn btn-primary&quot; style=&quot;float:right;margin-right:5px&quot;&gt;Register&lt;/a&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/span&gt;&#xa;    &lt;br&gt;&lt;br&gt;&#xa;    &lt;table class=&quot;table&quot;&gt;&#xa;    &lt;thead&gt;&#xa;    &lt;tr&gt;&#xa;    &lt;th&gt;ID&lt;/th&gt;&#xa;    &lt;th&gt;Message&lt;/th&gt;&#xa;    &lt;th&gt;P</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 200 &#xa;    Allow: GET,HEAD,OPTIONS&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Cache-Control: no-cache, no-store, max-age=0, must-revalidate&#xa;    Pragma: no-cache&#xa;    Expires: 0&#xa;    X-Frame-Options: DENY&#xa;    Content-Length: 0&#xa;    Date: Wed, 12 Jan 2022 07:20:51 GMT&#xa;    Connection: close</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 400 &#xa;    Content-Type: text/html;charset=utf-8&#xa;    Content-Language: en&#xa;    Content-Length: 435&#xa;    Date: Wed, 12 Jan 2022 07:20:53 GMT&#xa;    Connection: close&#xa;    &lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 400 &#xa;    Request&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 400 &#xa;    Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</elem>
+</script></port>
+<port protocol="tcp" portid="30455"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.18.0"><elem>nginx/1.18.0</elem>
+</script><script id="http-title" output="W3.CSS"><elem key="title">W3.CSS</elem>
+</script></port>
+<port protocol="tcp" portid="50080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Unix) PHP/7.4.15" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.46 (Unix) PHP/7.4.15"><elem>Apache/2.4.46 (Unix) PHP/7.4.15</elem>
+</script><script id="http-title" output="W3.CSS Template"><elem key="title">W3.CSS Template</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="111"/>
+<osmatch name="Linux 2.6.32" accuracy="88" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="88" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="88" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="88" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="88" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="88" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="88"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="88"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="88" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="88"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="87" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="87" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/12%OT=22%CT=111%CU=%PV=Y%DS=2%DC=T%G=N%TM=61DE81B8%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=100%GCD=1%ISR=10B%TI=Z%II=I%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="4089245" lastboot="Thu Nov 25 18:28:27 2021"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="278DE201,C0C1E183,92A17084,B5A4EB0C,7BD7FEB,C080831A"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="F3BCBAC0,F3BCBB24,F3BCBB88,F3BCBBEC,F3BCBC5A,F3BCBCBE"/>
+<trace port="111" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="303.11"/>
+<hop ttl="2" ipaddr="192.168.107.147" rtt="303.21"/>
+</trace>
+<times srtt="295408" rttvar="11460" to="341248"/>
+</host>
+<taskbegin task="NSE" time="1641972152"/>
+<taskend task="NSE" time="1641972152"/>
+<taskbegin task="NSE" time="1641972152"/>
+<taskend task="NSE" time="1641972152"/>
+<taskbegin task="NSE" time="1641972152"/>
+<taskend task="NSE" time="1641972152"/>
+<runstats><finished time="1641972152" timestr="Wed Jan 12 02:22:32 2022" summary="Nmap done at Wed Jan 12 02:22:32 2022; 1 IP address (1 host up) scanned in 666.73 seconds" elapsed="666.73" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

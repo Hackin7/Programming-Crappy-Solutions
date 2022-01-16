@@ -1,0 +1,130 @@
+# Nmap 7.91 scan initiated Wed Jan 12 08:20:05 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/xml/_full_tcp_nmap.xml" 192.168.90.40
+Increasing send delay for 192.168.90.40 from 0 to 5 due to 11 out of 11 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -65585 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -65585 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -131958 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -131958 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -91900 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -91900 microseconds.  Ignoring time.
+Nmap scan report for 192.168.90.40
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-12 08:20:06 EST for 842s
+Not shown: 65522 closed ports
+Reason: 65522 resets
+PORT      STATE SERVICE            REASON          VERSION
+53/tcp    open  domain             syn-ack ttl 127 Microsoft DNS 6.0.6001 (17714650) (Windows Server 2008 SP1)
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.0.6001 (17714650)
+135/tcp   open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack ttl 127 Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack ttl 127
+| ssl-cert: Subject: commonName=internal
+| Issuer: commonName=internal
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-06-04T01:51:04
+| Not valid after:  2021-12-04T01:51:04
+| MD5:   abd2 65e8 d694 2ad4 7861 9558 fab4 1cd5
+| SHA-1: 7e77 cdd9 5606 18e9 9a60 4cae c74d aac1 d089 c022
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQ6xLXxYMLu4tJWHIBWKvT+jANBgkqhkiG9w0BAQUFADAT
+| MREwDwYDVQQDEwhpbnRlcm5hbDAeFw0yMTA2MDQwMTUxMDRaFw0yMTEyMDQwMTUx
+| MDRaMBMxETAPBgNVBAMTCGludGVybmFsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAjO70Gl5KaaHUlVKrpWEwejb+fsKX2sRzbGNUndBUL8kzxHhFHtmG
+| 7lBAOCKKJvjg5yth1+f2WI0G97zZ8BtwFxElLjP6a1C/v/WJamJLgjT2onGWUlcH
+| VMoxR27N9IaBNJ/nHqFikk6gzJWyNeoRpTRRtxzlc+R2sUv3tHgFVVdGKxnLos2w
+| hn2rwko3ynwBo8nnb18EFgldBACSE+R17oQ1CrUIoaG9p9R+1KEX8ePDfWEFuAzO
+| shwVKJNDxU0Kt88ns4rKNyToLkmkutyWUzA0OkMbXP1PGtiGK3e8QVwilHwX9E09
+| p7B3SFSw3JEf2tPqfzb+XVYmpqXZrCjX7QIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBACi1RgiKTaIV
+| vw59lfv7Tyx2CbDcf7hHwH6lbtW7HdNccCSgIHJzZT8zMAok+xyhAjCEdT8OiVnM
+| 3ug7Ps4K9I4N4fas6f9As9JzrlppLcqP2hwFAK7DDKsVb889UoxCYQB/50TjKfL8
+| ZVfgvgYaIC8w7+socrCBNiEaKj780M1KAmMlOHxOyhrhL+P+ia4Osq7ugcbx7H8V
+| ghb7nBXKDpK514/+JR7euOYxqGMkgT/gKH376IcX+aFM+hRpesKbZNhg7+G6fYAF
+| dzRS89zVvt8B8OwO/PsQGJOmcNjZdJZh1VSffLJO58vxCV10DY1JvB/qZy5n1dkw
+| CID2f7EigT8=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-01-12T13:34:08+00:00; 0s from scanner time.
+5357/tcp  open  http               syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+49152/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49156/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49157/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+49158/tcp open  msrpc              syn-ack ttl 127 Microsoft Windows RPC
+OS fingerprint not ideal because: maxTimingRatio (1.590000e+00) is greater than 1.4
+Aggressive OS guesses: Microsoft Windows 7 or Windows Server 2008 R2 (94%), Microsoft Windows Server 2008 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Vista SP2 (94%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (94%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (94%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/12%OT=53%CT=1%CU=40893%PV=Y%DS=2%DC=T%G=N%TM=61DED8D0%P=x86_64-pc-linux-gnu)
+SEQ(SP=106%GCD=1%ISR=10E%TS=7)
+SEQ(SP=106%GCD=1%ISR=10E%II=I%TS=8)
+OPS(O1=M54ENW8ST11%O2=M54ENW8ST11%O3=M54ENW8NNT11%O4=M54ENW8ST11%O5=M54ENW8ST11%O6=M54EST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%T=80%W=2000%O=M54ENW8NNS%CC=N%Q=)
+T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T7(R=N)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.016 days (since Wed Jan 12 08:10:56 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: Host: INTERNAL; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008::sp1, cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2
+
+Host script results:
+|_clock-skew: mean: 2h00m00s, deviation: 4h00m00s, median: 0s
+| nbstat: NetBIOS name: INTERNAL, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:ba:60:24 (VMware)
+| Names:
+|   INTERNAL<00>         Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   INTERNAL<20>         Flags: <unique><active>
+| Statistics:
+|   00 50 56 ba 60 24 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 12798/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 62945/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 64550/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 31938/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: internal
+|   NetBIOS computer name: INTERNAL\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-01-12T05:33:59-08:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-01-12T13:33:59
+|_  start_date: 2021-07-26T21:49:10
+
+TRACEROUTE (using port 44912/tcp)
+HOP RTT       ADDRESS
+1   208.94 ms 192.168.49.1
+2   209.00 ms 192.168.90.40
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 08:34:08 2022 -- 1 IP address (1 host up) scanned in 844.36 seconds

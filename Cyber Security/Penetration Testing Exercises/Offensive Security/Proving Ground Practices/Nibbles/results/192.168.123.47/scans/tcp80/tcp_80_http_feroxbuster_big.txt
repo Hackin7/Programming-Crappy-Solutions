@@ -1,0 +1,17 @@
+403        9l       28w      279c http://192.168.123.47/.htaccess
+403        9l       28w      279c http://192.168.123.47/.htpasswd
+403        9l       28w      279c http://192.168.123.47/.htpasswd.txt
+403        9l       28w      279c http://192.168.123.47/.htaccess.txt
+403        9l       28w      279c http://192.168.123.47/.htpasswd.html
+403        9l       28w      279c http://192.168.123.47/.htaccess.html
+403        9l       28w      279c http://192.168.123.47/.htpasswd.php
+403        9l       28w      279c http://192.168.123.47/.htaccess.php
+403        9l       28w      279c http://192.168.123.47/.htpasswd.asp
+403        9l       28w      279c http://192.168.123.47/.htaccess.asp
+403        9l       28w      279c http://192.168.123.47/.htpasswd.aspx
+403        9l       28w      279c http://192.168.123.47/.htaccess.aspx
+403        9l       28w      279c http://192.168.123.47/.htaccess.jsp
+403        9l       28w      279c http://192.168.123.47/.htpasswd.jsp
+200       30l      201w     1272c http://192.168.123.47/index.html
+200      169l      550w     4115c http://192.168.123.47/page2.html
+403        9l       28w      279c http://192.168.123.47/server-status

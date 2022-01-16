@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 15 07:21:24 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.123.47 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/results/192.168.123.47/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.123.47" start="1642249284" startstr="Sat Jan 15 07:21:24 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642249287"/>
+<taskend task="NSE" time="1642249287"/>
+<taskbegin task="NSE" time="1642249287"/>
+<taskend task="NSE" time="1642249287"/>
+<taskbegin task="NSE" time="1642249287"/>
+<taskend task="NSE" time="1642249287"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642249288"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642249288"/>
+<taskbegin task="SYN Stealth Scan" time="1642249288"/>
+<taskend task="SYN Stealth Scan" time="1642249288" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642249288"/>
+<taskend task="Service scan" time="1642249295" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642249295"/>
+<taskprogress task="NSE" time="1642249326" percent="99.67" remaining="1" etc="1642249326"/>
+<taskend task="NSE" time="1642249334"/>
+<taskbegin task="NSE" time="1642249334"/>
+<taskend task="NSE" time="1642249335"/>
+<taskbegin task="NSE" time="1642249335"/>
+<taskend task="NSE" time="1642249335"/>
+<host starttime="1642249288" endtime="1642249335"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.47" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.38" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.38</cpe></service><script id="http-chrono" output="Request times for /; avg: 461.41ms; min: 431.70ms; max: 490.82ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.123.47&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 107&#xa;    Comment: &#xa;        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 68&#xa;    Comment: &#xa;        /* Column container */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 26&#xa;    Comment: &#xa;        /* Increase the font size of the heading */&#xa;    &#xa;    Path: http://192.168.123.47:80/&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45; Text between angle brackets is an HTML tag and is not displayed.&#xa;        Most tags, such as the HTML and /HTML tags that surround the contents of&#xa;        a page, come in pairs; some tags, like HR, for a horizontal rule, stand &#xa;        alone. Comments, such as the text you&apos;re reading, are not displayed when&#xa;        the Web page is shown. The information between the HEAD and /HEAD tags is &#xa;        not displayed. The information between the BODY and /BODY tags is displayed.-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 100&#xa;    Comment: &#xa;        /* Footer */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 40&#xa;    Comment: &#xa;        /* Style the navigation bar links */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 51&#xa;    Comment: &#xa;        /* Right-aligned link */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 62&#xa;    Comment: &#xa;        /* Active/current link */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 114&#xa;    Comment: &#xa;        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */&#xa;    &#xa;    Path: http://192.168.123.47:80/&#xa;    Line number: 11&#xa;    Comment: &#xa;        &lt;!-&#45; The information between the BODY and /BODY tags is displayed.-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 56&#xa;    Comment: &#xa;        /* Change color on hover */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 70&#xa;    Comment: &#xa;        /* IE10 */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 85&#xa;    Comment: &#xa;        /* Main column */&#xa;    &#xa;    Path: http://192.168.123.47:80/&#xa;    Line number: 25&#xa;    Comment: &#xa;        &lt;!-&#45; And add a copyright notice.-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 93&#xa;    Comment: &#xa;        /* Fake image, just for this example */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 12&#xa;    Comment: &#xa;        /* Style the body */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 76&#xa;    Comment: &#xa;        /* Create two unequal columns that sits next to each other */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 31&#xa;    Comment: &#xa;        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it &quot;sticks&quot; in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 18&#xa;    Comment: &#xa;        /* Header/logo Title */&#xa;    &#xa;    Path: http://192.168.123.47:80/page2.html&#xa;    Line number: 77&#xa;    Comment: &#xa;        /* Sidebar/left column */&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sat, 15 Jan 2022 12:20:41 GMT; -56s from local time."><elem key="date">2022-01-15T12:20:41+00:00</elem>
+<elem key="delta">-56.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-exif-spider" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Sat, 15 Jan 2022 12:20:44 GMT&#xa;  Server: Apache/2.4.38 (Debian)&#xa;  Last-Modified: Tue, 14 Apr 2020 13:25:06 GMT&#xa;  ETag: &quot;4f8-5a34020bc5080&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 1272&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS HEAD GET POST"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash aaa44e49fe189c1202da3f7f571d97f1&#xa;Credits query returned unknown hash aaa44e49fe189c1202da3f7f571d97f1"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.4.38 (Debian)"><elem>Apache/2.4.38 (Debian)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; html: 1; jpg: 1; png: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; html: 1; jpg: 1; png: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Enter a title, displayed at the top of the window."><elem key="title">Enter a title, displayed at the top of the window.</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="175506" rttvar="175506" to="877530"/>
+</host>
+<taskbegin task="NSE" time="1642249335"/>
+<taskend task="NSE" time="1642249335"/>
+<taskbegin task="NSE" time="1642249335"/>
+<taskend task="NSE" time="1642249335"/>
+<taskbegin task="NSE" time="1642249335"/>
+<taskend task="NSE" time="1642249335"/>
+<runstats><finished time="1642249335" timestr="Sat Jan 15 07:22:15 2022" summary="Nmap done at Sat Jan 15 07:22:15 2022; 1 IP address (1 host up) scanned in 51.70 seconds" elapsed="51.70" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

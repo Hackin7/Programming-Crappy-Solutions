@@ -1,0 +1,14 @@
+Doing NBT name scan for addresses from 192.168.90.40
+
+
+NetBIOS Name Table for Host 192.168.90.40:
+
+Incomplete packet, 155 bytes long.
+Name             Service          Type
+----------------------------------------
+INTERNAL         Workstation Service
+WORKGROUP        Domain Name
+INTERNAL         File Server Service
+
+Adapter address: 00:50:56:ba:60:24
+----------------------------------------

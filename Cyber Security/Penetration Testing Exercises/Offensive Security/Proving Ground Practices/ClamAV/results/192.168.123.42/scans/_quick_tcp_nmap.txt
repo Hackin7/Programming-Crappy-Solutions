@@ -1,0 +1,84 @@
+# Nmap 7.91 scan initiated Wed Jan 12 11:27:13 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_quick_tcp_nmap.xml" 192.168.123.42
+Nmap scan report for 192.168.123.42
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-01-12 11:27:15 EST for 65s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT    STATE SERVICE     REASON         VERSION
+22/tcp  open  ssh         syn-ack ttl 63 OpenSSH 3.8.1p1 Debian 8.sarge.6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 30:3e:a4:13:5f:9a:32:c0:8e:46:eb:26:b3:5e:ee:6d (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=
+|   1024 af:a2:49:3e:d8:f2:26:12:4a:a0:b5:ee:62:76:b0:18 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0=
+80/tcp  open  http        syn-ack ttl 63 Apache httpd 1.3.33 ((Debian GNU/Linux))
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/1.3.33 (Debian GNU/Linux)
+|_http-title: Ph33r
+139/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+199/tcp open  smux        syn-ack ttl 63 Linux SNMP multiplexer
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.0.14a-Debian (workgroup: WORKGROUP)
+Device type: general purpose|firewall|WAP|proxy server|PBX|printer|media device|storage-misc
+Running (JUST GUESSING): Linux 2.6.X (95%), Cisco embedded (95%), Ruckus embedded (95%), Riverbed embedded (94%), Kyocera embedded (93%), Sony embedded (92%), Dell embedded (91%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.9 cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:sa520 cpe:/h:ruckus:7363 cpe:/h:riverbed:steelhead_200 cpe:/h:cisco:uc320w cpe:/h:kyocera:cs-2560 cpe:/h:dell:dr4100
+Aggressive OS guesses: Linux 2.6.9 (95%), Cisco SA520 firewall (Linux 2.6) (95%), Linux 2.6.9 - 2.6.27 (95%), Ruckus 7363 WAP (95%), Linux 2.6.18 (94%), Riverbed Steelhead 200 proxy server (94%), Linux 2.6.9 (CentOS 4.4) (93%), Linux 2.6.32 (93%), Cisco UC320W PBX (Linux 2.6) (93%), Kyocera CopyStar CS-2560 printer (93%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/12%OT=22%CT=1%CU=36514%PV=Y%DS=2%DC=T%G=Y%TM=61DF01A
+OS:4%P=x86_64-pc-linux-gnu)SEQ(SP=C6%GCD=1%ISR=CD%TI=Z%II=I%TS=A)SEQ(SP=C3%
+OS:GCD=1%ISR=CC%TI=Z%TS=A)OPS(O1=M54EST11NW0%O2=M54EST11NW0%O3=M54ENNT11NW0
+OS:%O4=M54EST11NW0%O5=M54EST11NW0%O6=M54EST11)WIN(W1=16A0%W2=16A0%W3=16A0%W
+OS:4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M54ENNSNW0%CC=N%Q=)T1(
+OS:R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=4
+OS:0%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN
+OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 49.708 days (since Tue Nov 23 18:28:44 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=198 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 7h30m00s, deviation: 3h32m07s, median: 5h00m00s
+| nbstat: NetBIOS name: 0XBABE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   0XBABE<00>           Flags: <unique><active>
+|   0XBABE<03>           Flags: <unique><active>
+|   0XBABE<20>           Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 48725/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 11011/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 23330/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 41800/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.14a-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-01-12T16:28:13-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: share (dangerous)
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT       ADDRESS
+1   324.90 ms 192.168.49.1
+2   325.82 ms 192.168.123.42
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 11:28:20 2022 -- 1 IP address (1 host up) scanned in 67.64 seconds

@@ -1,0 +1,76 @@
+# Nmap 7.91 scan initiated Wed Jan 12 08:22:09 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp3389/tcp_3389_rdp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/results/192.168.90.40/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml" 192.168.90.40
+Nmap scan report for 192.168.90.40
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-12 08:22:17 EST for 34s
+
+PORT     STATE SERVICE            REASON          VERSION
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 127
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|     Native RDP: SUCCESS
+|     RDSTLS: SUCCESS
+|     SSL: SUCCESS
+|   RDP Encryption level: Client Compatible
+|     40-bit RC4: SUCCESS
+|     56-bit RC4: SUCCESS
+|     128-bit RC4: SUCCESS
+|     FIPS 140-1: SUCCESS
+|_  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server
+| rdp-vuln-ms12-020: 
+|   VULNERABLE:
+|   MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0152
+|     Risk factor: Medium  CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152
+|   
+|   MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0002
+|     Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002
+|_      http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+| ssl-cert: Subject: commonName=internal
+| Issuer: commonName=internal
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-06-04T01:51:04
+| Not valid after:  2021-12-04T01:51:04
+| MD5:   abd2 65e8 d694 2ad4 7861 9558 fab4 1cd5
+| SHA-1: 7e77 cdd9 5606 18e9 9a60 4cae c74d aac1 d089 c022
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQ6xLXxYMLu4tJWHIBWKvT+jANBgkqhkiG9w0BAQUFADAT
+| MREwDwYDVQQDEwhpbnRlcm5hbDAeFw0yMTA2MDQwMTUxMDRaFw0yMTEyMDQwMTUx
+| MDRaMBMxETAPBgNVBAMTCGludGVybmFsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAjO70Gl5KaaHUlVKrpWEwejb+fsKX2sRzbGNUndBUL8kzxHhFHtmG
+| 7lBAOCKKJvjg5yth1+f2WI0G97zZ8BtwFxElLjP6a1C/v/WJamJLgjT2onGWUlcH
+| VMoxR27N9IaBNJ/nHqFikk6gzJWyNeoRpTRRtxzlc+R2sUv3tHgFVVdGKxnLos2w
+| hn2rwko3ynwBo8nnb18EFgldBACSE+R17oQ1CrUIoaG9p9R+1KEX8ePDfWEFuAzO
+| shwVKJNDxU0Kt88ns4rKNyToLkmkutyWUzA0OkMbXP1PGtiGK3e8QVwilHwX9E09
+| p7B3SFSw3JEf2tPqfzb+XVYmpqXZrCjX7QIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBACi1RgiKTaIV
+| vw59lfv7Tyx2CbDcf7hHwH6lbtW7HdNccCSgIHJzZT8zMAok+xyhAjCEdT8OiVnM
+| 3ug7Ps4K9I4N4fas6f9As9JzrlppLcqP2hwFAK7DDKsVb889UoxCYQB/50TjKfL8
+| ZVfgvgYaIC8w7+socrCBNiEaKj780M1KAmMlOHxOyhrhL+P+ia4Osq7ugcbx7H8V
+| ghb7nBXKDpK514/+JR7euOYxqGMkgT/gKH376IcX+aFM+hRpesKbZNhg7+G6fYAF
+| dzRS89zVvt8B8OwO/PsQGJOmcNjZdJZh1VSffLJO58vxCV10DY1JvB/qZy5n1dkw
+| CID2f7EigT8=
+|_-----END CERTIFICATE-----
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 08:22:51 2022 -- 1 IP address (1 host up) scanned in 41.94 seconds

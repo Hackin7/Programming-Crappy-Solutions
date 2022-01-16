@@ -1,0 +1,218 @@
+HTTP/1.1 200 OK
+Set-Cookie: JSESSIONID=6DDD23C1F2F33B1DF31D478037D1F219; Path=/
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Wed, 31 Dec 1969 16:00:00 PST
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 12 Jan 2022 11:44:03 GMT
+Server: Apache-Coyote/1.1
+
+
+
+
+
+
+
+
+<html>
+	<head>
+		<script language='JavaScript' type="text/javascript" src='/scripts/Login.js?7601'></script>
+		<link href="/style/loginstyle.css" type="text/css" rel="stylesheet"/>
+		<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+		<title>ManageEngine ServiceDesk Plus</title>
+		<script language="JavaScript" type="text/JavaScript">
+			var logged_user = "null";
+			var logged_domain = "null";
+			var loginError = "null";
+		</script>
+	</head>
+	<!-- 20593 username focus fixed -->
+	<body onLoad="setFocus();loadLogin(false);">
+		<div id='loginDiv'  style=''>
+	        <form action='j_security_check;jsessionid=6DDD23C1F2F33B1DF31D478037D1F219' method="post" name='login' AUTOCOMPLETE="off">
+				<table width="100%" height="95%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+
+					<div style="display:none;">
+                         <img src='http://www.adventnet.com/images/35-prodad.gif?ry=c&pi=35' >
+                 </div>
+
+						<td align="center" valign="middle">
+							<table border="0" align="center" cellpadding="0" cellspacing="0">
+								<tr>
+									<td colspan="2" class="log_bluebg"><span class="log_ltcorner"></span></td>
+									<td align="right" class="log_bluebg"><span class="log_rtcorner"></span></td>
+        							</tr>
+								<tr><td colspan="3" class="log_bluebg"><img src="/images/spacer.gif" width="910" height="1"></td></tr>
+								<tr>
+          								<td height="409" colspan="3" align="right" class="log_bg">
+										<table border="0" cellpadding="0" cellspacing="0">
+              										<tr>
+												<td><img src="/images/log_logo.gif" width="252" height="61" hspace="20"></td>
+												<td class="log_separator"></td>
+												<td>
+													<table width="200" border="0" cellpadding="4" cellspacing="0">
+														<tr>
+															<td colspan="2" class="fontBlack" valign='middle'>
+																<div id="message">
+
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td nowrap class="fontBlackBold">Username</td>
+															<!-- sd-11880 Loding domain list To login AD authentication or local Authentication -->
+															<td nowrap><span class="fontBlack"><input name="j_username" type="text" class="formStyle" onchange='loadDomainListForADLogin(this)' id="username"></span></td>
+														</tr>
+														<tr>
+															<td nowrap class="fontBlackBold">Password</td>
+															<td nowrap><span class="fontBlack"><input name="j_password" type="password" class="formStyle" id="password"></span></td>
+														</tr>
+
+														<tr>
+															<td height="26">
+                              <div class='hide' id='choosedomaindiv'> Select a Domain</div>
+                              <div class='hide' id='moreOptionsMsg'>Options</div>
+                              <div class='hide' id='jserror'>enter both username and password to proceed</div>
+                              <div id="LocalAuthLabel"></div>
+                            </td>
+                            <td>
+                              <div id="LocalAuthdomainname"></div>
+                              <div id='showDomainDetails' style=' visibility:hidden;position: absolute; left: 550px; top: 250px; z-index: 100;'>
+                                <div style="overflow: auto; width: 525px;">
+<table width="505" cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+		<td class="helptool-shadow-tl"> </td>
+		<td height="50" class="helptool-shadow-tm">
+			<span style="float: right;"><img border="0" align="absmiddle" onclick="closeDialog();" src="/images/exit1.gif"/></span>
+			<img border="0" align="absmiddle" style="margin-top: 3px;" src="/images/helptool-icon.gif"/><b> Login - Help</b>
+		</td>
+		<td class="helptool-shadow-tr"> </td>
+	</tr>
+	<tr>
+		<td class="helptool-shadow-lm"> </td>
+		<td valign="top" class="helptool-content">
+			<table width="100%" cellspacing="2" cellpadding="2" border="0" bgcolor="#ffffff">
+				<tbody>
+				<tr>
+					<td>Username specified is available in more than one domain or not in any domain. Kindly select the appropriate Domain or "Not in Domain" from the list to login in.</td>
+			</tbody></table>
+		</td>
+		<td class="helptool-shadow-rm"> </td>
+	</tr>
+	<tr>
+		<td class="helptool-shadow-bl"> </td>
+		<td class="helptool-shadow-bm"> </td>
+		<td class="helptool-shadow-br"> </td>
+	</tr>
+</tbody></table>
+
+                              </div>
+
+																<div id="domainname"></div>
+
+				<!--sd-11880 to check whether LDAP is enable or not. -->
+			      <input name="LDAPEnable" type="hidden" value='false'/>
+				<input name="hidden" type="hidden" id="choosedomain" value='Select a Domain'/>
+                              <!-- sd-11880 key to display as Lebel named ForDomain for Local authentication list. -->
+                              <input name="hidden" type="hidden" id="fordomain" value='For Domain'/>
+                              <input name="AdEnable" type="hidden" value='false'/>
+                              <!-- sd-11880 to check the count of domain-->
+							  <!-- 21649  Js Exception in login page fixed -->
+                              <input name="DomainCount" type="hidden" value="0"/>
+                              <!-- sd-11880 to check domain name is null-->
+                              <input name="LocalAuth" type="hidden" value="No"/>
+                                <!-- sd-11880 to check local auth and domain name is not null-->
+                              <input name="LocalAuthWithDomain" type="hidden" value="No"/>
+                              <!-- sd-11880 to check Dyanmic user addition is true or flase -->
+                              <input name="dynamicUserAddition_status" type="hidden" value='true'/>
+                              <!-- sd-11880 to check Local Authenticaiton enable or not in Global config -->
+                              <input name="localAuthEnable" type="hidden" value='true'/>
+                              <!-- sd-11880 to check selected domain for ADlogin in sdrelationalloginmodule-->
+                              <input name="logonDomainName" type="hidden" value='-1'/>
+			      <div id="LocalAuthentication" class='hide'>Local Authentication</div>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+															<td height="26" nowrap class="fontBlackBold">
+																<table cellpadding="0" cellspacing="0" border="0">
+																	<tr>
+																		<td><input type="checkbox" name="checkbox" value="checkbox" id="signedInCB"></td>
+																		<td nowrap class="rightbdr"><label for="signedInCB">Keep me signed in</label></td>
+
+																		<td class="leftbdr" nowrap><input name="loginButton" type="submit" class="formStylebuttonact" value='Login' title='Login' onClick="return checkForNullInLogin(this.form)"></td>
+
+
+	<td nowrap><img src="/images/spacer.gif" width="1" height="1"></td>
+	<td nowrap><img src="/images/spacer.gif" width="70" height="1"></td>
+
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td><img src="/images/spacer.gif" width="100" height="1"></td>
+												<td colspan="3">
+
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="3" class="log_bluebg" valign="top">
+
+										<table border="0" cellpadding="5" cellspacing="0" width="100%">
+											<tr class="fontWhite">
+
+
+	<td width="117" align="left" style="padding-right:0px;" valign='bottom'><a href='http://www.manageengine.com/' target="_blank" class="log_adventnetlogo"></a></td>
+			<td class="fontWhite" width="70%" align="left" valign='bottom'><div style="border-left:1px #7188c8 solid; line-height:20px;padding-left:10px;">Copyright &copy; 2009 ZOHO Corporation. All rights reserved.</div></td>
+
+
+
+												<td align="right" valign='bottom'>
+													<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="fontwhite" align="right" nowrap="nowrap"><a href="http://www.manageengine.com/products/service-desk/help-desk-software.html" target="_blank" class="fontWhite" style="text-decoration:none;" title='Help Desk Software' name='Help Desk Software' alt='Help Desk Software'><b>Help Desk Software</b></a> by </td>
+  	                                                                                                                 <td class="fontwhite" align="right" nowrap="nowrap"><b><a name='ManageEngine ServiceDesk Plus' alt='ManageEngine ServiceDesk Plus' href="http://www.manageengine.com/products/service-desk/index.html" target="_blank" class="fontWhite" style="text-decoration:none;" title='ManageEngine ServiceDesk Plus'>ManageEngine ServiceDesk Plus</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;7.6.0</span></b></td></tr>
+
+														<tr><td align="right"></td></tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="log_bluebg"><span class="log_lbcorner"></span></td>
+									<td class="log_bluebg"></td>
+									<td align="right" class="log_bluebg"><span class="log_rbcorner"></span></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</form>
+		</div>
+
+		<script>
+		function setFocus() {
+			if(document.getElementById("loginDiv").style.display != "none") {
+				document.login.j_username.focus();
+			}
+		}
+		</script>
+		<iframe style='display:none;' class='hide' name="LoginInfo" src="/framework/html/blank.html" frameborder="0"></iframe>
+	</body>
+</html>
+

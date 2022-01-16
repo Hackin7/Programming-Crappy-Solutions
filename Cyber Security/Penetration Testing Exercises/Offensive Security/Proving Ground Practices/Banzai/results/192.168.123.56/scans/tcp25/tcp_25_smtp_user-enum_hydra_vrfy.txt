@@ -1,0 +1,12 @@
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2022-01-15 12:34:09
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 17 login tries (l:17/p:1), ~2 tries per task
+[DATA] attacking smtp-enum://192.168.123.56:25/vrfy
+[25][smtp-enum] host: 192.168.123.56   login: root
+[25][smtp-enum] host: 192.168.123.56   login: mysql
+[25][smtp-enum] host: 192.168.123.56   login: ftp
+[25][smtp-enum] host: 192.168.123.56   login: admin
+1 of 1 target successfully completed, 4 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2022-01-15 12:34:10
+

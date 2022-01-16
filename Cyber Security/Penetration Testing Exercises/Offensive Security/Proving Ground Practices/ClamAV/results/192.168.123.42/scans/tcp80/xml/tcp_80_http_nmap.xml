@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 11:28:21 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.123.42 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.123.42" start="1642004901" startstr="Wed Jan 12 11:28:21 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="NSE" time="1642004905"/>
+<taskend task="NSE" time="1642004905"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642004905"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642004905"/>
+<taskbegin task="SYN Stealth Scan" time="1642004905"/>
+<taskend task="SYN Stealth Scan" time="1642004906" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642004906"/>
+<taskend task="Service scan" time="1642004913" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642004913"/>
+<taskprogress task="NSE" time="1642004944" percent="98.37" remaining="1" etc="1642004945"/>
+<taskprogress task="NSE" time="1642004974" percent="99.02" remaining="1" etc="1642004975"/>
+<taskprogress task="NSE" time="1642005004" percent="99.35" remaining="1" etc="1642005005"/>
+<taskprogress task="NSE" time="1642005034" percent="99.35" remaining="1" etc="1642005035"/>
+<taskprogress task="NSE" time="1642005064" percent="99.35" remaining="1" etc="1642005065"/>
+<taskprogress task="NSE" time="1642005094" percent="99.35" remaining="2" etc="1642005095"/>
+<taskprogress task="NSE" time="1642005124" percent="99.35" remaining="2" etc="1642005125"/>
+<taskprogress task="NSE" time="1642005154" percent="99.67" remaining="1" etc="1642005155"/>
+<taskend task="NSE" time="1642005170"/>
+<taskbegin task="NSE" time="1642005170"/>
+<taskend task="NSE" time="1642005175"/>
+<taskbegin task="NSE" time="1642005175"/>
+<taskend task="NSE" time="1642005175"/>
+<host starttime="1642004905" endtime="1642005175"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.42" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="1.3.33" extrainfo="(Debian GNU/Linux)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:1.3.33</cpe></service><script id="http-apache-negotiation" output="mod_negotiation enabled."/><script id="http-chrono" output="Request times for /; avg: 482.35ms; min: 438.24ms; max: 512.79ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Wed, 12 Jan 2022 21:28:34 GMT; +5h00m01s from local time."><elem key="date">2022-01-12T21:28:34+00:00</elem>
+<elem key="delta">18001.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 12 Jan 2022 21:28:41 GMT&#xa;  Server: Apache/1.3.33 (Debian GNU/Linux)&#xa;  Last-Modified: Thu, 22 Jan 2009 01:57:56 GMT&#xa;  ETag: &quot;660ee-121-4977d2a4&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 289&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=iso-8859-1&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash e2c529a56ecd16e452ca4509e2b7487b&#xa;Credits query returned unknown hash e2c529a56ecd16e452ca4509e2b7487b"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Ph33r"><elem key="title">Ph33r</elem>
+</script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Wed, 12 Jan 2022 21:28:37 GMT&#xa;Server: Apache/1.3.33 (Debian GNU/Linux)&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    Python-urllib/2.5&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    http client&#xa;    Wget/1.13.4 (linux-gnu)"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>http client</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="208428" rttvar="208428" to="1042140"/>
+</host>
+<taskbegin task="NSE" time="1642005175"/>
+<taskend task="NSE" time="1642005175"/>
+<taskbegin task="NSE" time="1642005175"/>
+<taskend task="NSE" time="1642005175"/>
+<taskbegin task="NSE" time="1642005175"/>
+<taskend task="NSE" time="1642005175"/>
+<runstats><finished time="1642005175" timestr="Wed Jan 12 11:32:55 2022" summary="Nmap done at Wed Jan 12 11:32:55 2022; 1 IP address (1 host up) scanned in 274.21 seconds" elapsed="274.21" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

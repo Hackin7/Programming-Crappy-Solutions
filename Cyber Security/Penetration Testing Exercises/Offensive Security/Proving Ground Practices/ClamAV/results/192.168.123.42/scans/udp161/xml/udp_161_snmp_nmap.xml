@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan 12 11:33:31 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 161 &quot;-&#45;script=banner,(snmp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/udp_161_snmp-nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/xml/udp_161_snmp_nmap.xml&quot; 192.168.123.42 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 161 &quot;-&#45;script=banner,(snmp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/udp_161_snmp-nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/xml/udp_161_snmp_nmap.xml&quot; 192.168.123.42" start="1642005211" startstr="Wed Jan 12 11:33:31 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="161"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642005213"/>
+<taskend task="NSE" time="1642005213"/>
+<taskbegin task="NSE" time="1642005213"/>
+<taskend task="NSE" time="1642005213"/>
+<taskbegin task="NSE" time="1642005213"/>
+<taskend task="NSE" time="1642005213"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642005213"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642005213"/>
+<taskbegin task="UDP Scan" time="1642005213"/>
+<taskend task="UDP Scan" time="1642005214" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642005215"/>
+<taskend task="Service scan" time="1642005215" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642005215"/>
+<taskprogress task="NSE" time="1642005246" percent="98.21" remaining="1" etc="1642005247"/>
+<taskend task="NSE" time="1642005251"/>
+<taskbegin task="NSE" time="1642005251"/>
+<taskend task="NSE" time="1642005251"/>
+<taskbegin task="NSE" time="1642005251"/>
+<taskend task="NSE" time="1642005251"/>
+<host starttime="1642005213" endtime="1642005251"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.42" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="161"><state state="open" reason="udp-response" reason_ttl="0"/><service name="snmp" product="SNMPv1 server; U.C. Davis, ECE Dept. Tom SNMPv3 server" extrainfo="public" hostname="0xbabe.local" method="probed" conf="10"/><script id="snmp-info" output="&#xa;  enterprise: U.C. Davis, ECE Dept. Tom&#xa;  engineIDFormat: unknown&#xa;  engineIDData: 9e325869f30c7749&#xa;  snmpEngineBoots: 61&#xa;  snmpEngineTime: 6m25s"><elem key="enterprise">U.C. Davis, ECE Dept. Tom</elem>
+<elem key="engineIDFormat">unknown</elem>
+<elem key="engineIDData">9e325869f30c7749</elem>
+<elem key="snmpEngineBoots">61</elem>
+<elem key="snmpEngineTime">6m25s</elem>
+</script><script id="snmp-interfaces" output="&#xa;  lo&#xa;    IP address: 127.0.0.1  Netmask: 255.0.0.0&#xa;    Type: softwareLoopback  Speed: 10 Mbps&#xa;    Status: up&#xa;    Traffic stats: 0.00 Kb sent, 0.00 Kb received&#xa;  eth0&#xa;    IP address: 192.168.123.42  Netmask: 255.255.255.0&#xa;    MAC address: 00:50:56:ba:1e:6e (VMware)&#xa;    Type: ethernetCsmacd  Speed: 100 Mbps&#xa;    Status: up&#xa;    Traffic stats: 4.17 Mb sent, 2.77 Mb received&#xa;  sit0&#xa;    MAC address: 00:00:00:00:1e:6e (Xerox)&#xa;    Type: tunnel  Speed: 0 Kbps&#xa;    Status: down&#xa;    Traffic stats: 0.00 Kb sent, 0.00 Kb received&#xa;"/><script id="snmp-netstat" output="&#xa;  TCP  0.0.0.0:25           0.0.0.0:0&#xa;  TCP  0.0.0.0:80           0.0.0.0:0&#xa;  TCP  0.0.0.0:139          0.0.0.0:0&#xa;  TCP  0.0.0.0:199          0.0.0.0:0&#xa;  TCP  0.0.0.0:445          0.0.0.0:0&#xa;  TCP  192.168.123.42:80    192.168.49.123:57842&#xa;  TCP  192.168.123.42:80    192.168.49.123:57864&#xa;  TCP  192.168.123.42:80    192.168.49.123:57866&#xa;  TCP  192.168.123.42:80    192.168.49.123:59356&#xa;  TCP  192.168.123.42:80    192.168.49.123:59382&#xa;  TCP  192.168.123.42:80    192.168.49.123:59396&#xa;  TCP  192.168.123.42:80    192.168.49.123:59400&#xa;  TCP  192.168.123.42:80    192.168.49.123:59408&#xa;  TCP  192.168.123.42:80    192.168.49.123:59410&#xa;  TCP  192.168.123.42:80    192.168.49.123:59480&#xa;  TCP  192.168.123.42:80    192.168.49.123:59482&#xa;  TCP  192.168.123.42:80    192.168.49.123:59484&#xa;  TCP  192.168.123.42:80    192.168.49.123:59486&#xa;  TCP  192.168.123.42:80    192.168.49.123:59488&#xa;  TCP  192.168.123.42:80    192.168.49.123:59490&#xa;  TCP  192.168.123.42:80    192.168.49.123:59492&#xa;  TCP  192.168.123.42:80    192.168.49.123:59496&#xa;  TCP  192.168.123.42:80    192.168.49.123:59504&#xa;  TCP  192.168.123.42:80    192.168.49.123:59506&#xa;  TCP  192.168.123.42:80    192.168.49.123:59560&#xa;  TCP  192.168.123.42:80    192.168.49.123:59898&#xa;  TCP  192.168.123.42:80    192.168.49.123:59900&#xa;  TCP  192.168.123.42:80    192.168.49.123:59902&#xa;  TCP  192.168.123.42:80    192.168.49.123:59904&#xa;  TCP  192.168.123.42:80    192.168.49.123:59906&#xa;  TCP  192.168.123.42:80    192.168.49.123:59908&#xa;  TCP  192.168.123.42:80    192.168.49.123:59910&#xa;  TCP  192.168.123.42:80    192.168.49.123:59912&#xa;  TCP  192.168.123.42:80    192.168.49.123:59914&#xa;  TCP  192.168.123.42:80    192.168.49.123:59916&#xa;  TCP  192.168.123.42:139   192.168.49.123:53864&#xa;  TCP  192.168.123.42:445   192.168.49.123:50998&#xa;  TCP  192.168.123.42:445   192.168.49.123:53492&#xa;  UDP  0.0.0.0:137          *:*&#xa;  UDP  0.0.0.0:138          *:*&#xa;  UDP  0.0.0.0:161          *:*&#xa;  UDP  1.0.0.127:32891      *:*&#xa;  UDP  42.123.168.192:137   *:*&#xa;  UDP  42.123.168.192:138   *:*&#xa;"/><script id="snmp-processes" output="&#xa;  1: &#xa;    Name: init&#xa;  2: &#xa;    Name: ksoftirqd/0&#xa;  3: &#xa;    Name: events/0&#xa;  4: &#xa;    Name: khelper&#xa;  5: &#xa;    Name: kacpid&#xa;  99: &#xa;    Name: kblockd/0&#xa;  109: &#xa;    Name: pdflush&#xa;  110: &#xa;    Name: pdflush&#xa;  111: &#xa;    Name: kswapd0&#xa;  112: &#xa;    Name: aio/0&#xa;  255: &#xa;    Name: kseriod&#xa;  276: &#xa;    Name: scsi_eh_0&#xa;  284: &#xa;    Name: khubd&#xa;  348: &#xa;    Name: shpchpd_event&#xa;  380: &#xa;    Name: kjournald&#xa;  935: &#xa;    Name: vmmemctl&#xa;  1177: &#xa;    Name: vmtoolsd&#xa;  3775: &#xa;    Name: syslogd&#xa;  3778: &#xa;    Name: klogd&#xa;  3782: &#xa;    Name: clamd&#xa;  3784: &#xa;    Name: clamav-milter&#xa;  3793: &#xa;    Name: inetd&#xa;  3797: &#xa;    Name: nmbd&#xa;  3799: &#xa;    Name: smbd&#xa;  3803: &#xa;    Name: snmpd&#xa;  3809: &#xa;&#xa;  3887: &#xa;&#xa;  3900: &#xa;&#xa;  3903: &#xa;&#xa;  3910: &#xa;&#xa;  3911: &#xa;&#xa;  3912: &#xa;&#xa;  3913: &#xa;&#xa;  3914: &#xa;&#xa;  3915: &#xa;&#xa;  3921: &#xa;&#xa;  3922: &#xa;&#xa;  3923: &#xa;&#xa;  3924: &#xa;&#xa;  3925: &#xa;&#xa;  3926: &#xa;&#xa;  3977: &#xa;&#xa;  3982: &#xa;&#xa;  3986: &#xa;&#xa;  3993: &#xa;&#xa;  3994: &#xa;&#xa;  4014: &#xa;&#xa;  4208: &#xa;&#xa;  4210: &#xa;&#xa;  4211: &#xa;&#xa;  4212: &#xa;&#xa;  4213: &#xa;&#xa;  4214: &#xa;&#xa;  4215: &#xa;&#xa;  4216: &#xa;&#xa;  4217: &#xa;&#xa;  4218: &#xa;&#xa;  4219: &#xa;&#xa;  4220: &#xa;&#xa;  4233: &#xa;&#xa;  4234: &#xa;&#xa;  4235: &#xa;&#xa;  4239: &#xa;"><table key="1">
+<elem key="Name">init</elem>
+</table>
+<table key="2">
+<elem key="Name">ksoftirqd/0</elem>
+</table>
+<table key="3">
+<elem key="Name">events/0</elem>
+</table>
+<table key="4">
+<elem key="Name">khelper</elem>
+</table>
+<table key="5">
+<elem key="Name">kacpid</elem>
+</table>
+<table key="99">
+<elem key="Name">kblockd/0</elem>
+</table>
+<table key="109">
+<elem key="Name">pdflush</elem>
+</table>
+<table key="110">
+<elem key="Name">pdflush</elem>
+</table>
+<table key="111">
+<elem key="Name">kswapd0</elem>
+</table>
+<table key="112">
+<elem key="Name">aio/0</elem>
+</table>
+<table key="255">
+<elem key="Name">kseriod</elem>
+</table>
+<table key="276">
+<elem key="Name">scsi_eh_0</elem>
+</table>
+<table key="284">
+<elem key="Name">khubd</elem>
+</table>
+<table key="348">
+<elem key="Name">shpchpd_event</elem>
+</table>
+<table key="380">
+<elem key="Name">kjournald</elem>
+</table>
+<table key="935">
+<elem key="Name">vmmemctl</elem>
+</table>
+<table key="1177">
+<elem key="Name">vmtoolsd</elem>
+</table>
+<table key="3775">
+<elem key="Name">syslogd</elem>
+</table>
+<table key="3778">
+<elem key="Name">klogd</elem>
+</table>
+<table key="3782">
+<elem key="Name">clamd</elem>
+</table>
+<table key="3784">
+<elem key="Name">clamav-milter</elem>
+</table>
+<table key="3793">
+<elem key="Name">inetd</elem>
+</table>
+<table key="3797">
+<elem key="Name">nmbd</elem>
+</table>
+<table key="3799">
+<elem key="Name">smbd</elem>
+</table>
+<table key="3803">
+<elem key="Name">snmpd</elem>
+</table>
+<table key="3809">
+</table>
+<table key="3887">
+</table>
+<table key="3900">
+</table>
+<table key="3903">
+</table>
+<table key="3910">
+</table>
+<table key="3911">
+</table>
+<table key="3912">
+</table>
+<table key="3913">
+</table>
+<table key="3914">
+</table>
+<table key="3915">
+</table>
+<table key="3921">
+</table>
+<table key="3922">
+</table>
+<table key="3923">
+</table>
+<table key="3924">
+</table>
+<table key="3925">
+</table>
+<table key="3926">
+</table>
+<table key="3977">
+</table>
+<table key="3982">
+</table>
+<table key="3986">
+</table>
+<table key="3993">
+</table>
+<table key="3994">
+</table>
+<table key="4014">
+</table>
+<table key="4208">
+</table>
+<table key="4210">
+</table>
+<table key="4211">
+</table>
+<table key="4212">
+</table>
+<table key="4213">
+</table>
+<table key="4214">
+</table>
+<table key="4215">
+</table>
+<table key="4216">
+</table>
+<table key="4217">
+</table>
+<table key="4218">
+</table>
+<table key="4219">
+</table>
+<table key="4220">
+</table>
+<table key="4233">
+</table>
+<table key="4234">
+</table>
+<table key="4235">
+</table>
+<table key="4239">
+</table>
+</script><script id="snmp-sysdescr" output="Linux 0xbabe.local 2.6.8-4-386 #1 Wed Feb 20 06:15:54 UTC 2008 i686&#xa;  System uptime: 6m25.21s (38521 timeticks)"/></port>
+</ports>
+</host>
+<taskbegin task="NSE" time="1642005251"/>
+<taskend task="NSE" time="1642005251"/>
+<taskbegin task="NSE" time="1642005251"/>
+<taskend task="NSE" time="1642005251"/>
+<taskbegin task="NSE" time="1642005251"/>
+<taskend task="NSE" time="1642005251"/>
+<runstats><finished time="1642005251" timestr="Wed Jan 12 11:34:11 2022" summary="Nmap done at Wed Jan 12 11:34:11 2022; 1 IP address (1 host up) scanned in 40.23 seconds" elapsed="40.23" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

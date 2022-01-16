@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Wed Jan 12 06:43:55 2022 as: nmap -vv --reason -Pn -T4 -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.90.43/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.90.43/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.90.43
+Nmap scan report for 192.168.90.43
+Host is up, received user-set.
+Scanned at 2022-01-12 06:43:58 EST for 1s
+
+PORT    STATE    SERVICE      REASON      VERSION
+445/tcp filtered microsoft-ds no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 06:43:59 2022 -- 1 IP address (1 host up) scanned in 4.72 seconds

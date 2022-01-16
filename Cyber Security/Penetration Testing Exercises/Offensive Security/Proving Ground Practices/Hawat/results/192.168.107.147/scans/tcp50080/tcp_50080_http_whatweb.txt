@@ -1,0 +1,60 @@
+WhatWeb report for http://192.168.107.147:50080
+Status    : 200 OK
+Title     : W3.CSS Template
+IP        : 192.168.107.147
+Country   : RESERVED, ZZ
+
+Summary   : Script, HTML5, PHP[7.4.15], HTTPServer[Unix][Apache/2.4.46 (Unix) PHP/7.4.15], Apache[2.4.46]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 2.4.46 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Unix
+	String       : Apache/2.4.46 (Unix) PHP/7.4.15 (from server string)
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language
+	that is especially suited for Web development and can be
+	embedded into HTML. This plugin identifies PHP errors,
+	modules and versions and extracts the local file path and
+	username if present.
+
+	Version      : 7.4.15
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Wed, 12 Jan 2022 07:22:38 GMT
+	Server: Apache/2.4.46 (Unix) PHP/7.4.15
+	Last-Modified: Mon, 15 Feb 2021 16:23:07 GMT
+	ETag: "2380-5bb6266aed339"
+	Accept-Ranges: bytes
+	Content-Length: 9088
+	Connection: close
+	Content-Type: text/html
+
+

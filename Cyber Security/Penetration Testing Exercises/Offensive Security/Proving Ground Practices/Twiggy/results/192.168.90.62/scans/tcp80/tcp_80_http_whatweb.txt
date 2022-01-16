@@ -1,0 +1,65 @@
+WhatWeb report for http://192.168.90.62:80
+Status    : 200 OK
+Title     : Home | Mezzanine
+IP        : 192.168.90.62
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.16.1], Script, HTML5, JQuery[1.8.3], HTTPServer[nginx/1.16.1], Bootstrap, X-Frame-Options[SAMEORIGIN]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : nginx/1.16.1 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 1.8.3
+	Website     : http://jquery.com/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.16.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.16.1
+	Date: Wed, 12 Jan 2022 14:12:35 GMT
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 6927
+	Connection: close
+	X-Frame-Options: SAMEORIGIN
+	Vary: Cookie
+
+

@@ -1,0 +1,66 @@
+# Nmap 7.91 scan initiated Wed Jan 12 09:11:40 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/results/192.168.90.62/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/results/192.168.90.62/scans/xml/_full_tcp_nmap.xml" 192.168.90.62
+adjust_timeouts2: packet supposedly had rtt of -52538 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -52538 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -174487 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -174487 microseconds.  Ignoring time.
+Nmap scan report for 192.168.90.62
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-12 09:11:42 EST for 358s
+Not shown: 65530 filtered ports
+Reason: 65530 no-responses
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 44:7d:1a:56:9b:68:ae:f5:3b:f6:38:17:73:16:5d:75 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZz8rKSxgnT5mqHeBPqGlXFj2JJdq21roV/2M8/+0F5/5D1XsaXmbktDpKILFdBcYnLtPxWstxPq+FTbWAJad2uk3BPYWRxidK2dOozE5rKLCyxtkEqs/lO09pM6VKQUi83y5wMwI+9Akkir0AMruuFUSpeCIBt/L98g8OYxzyTsylQATnPxJrrQOWGUQYAvX6jIs25n6d3rmbXk/crg1ZfAVFEHEeR9Y6Bjc2o5YWjMp3XbOZyC4yYseoM6eH2yCSDwu1DzPYrU6cNMfxBf863w1uyhiFk3eIb5jud3kfoxIq6t5JU2DXNhEd4rdXuuinZUSxWiCpHLZ1FCi4tkX5
+|   256 1c:78:9d:83:81:52:f4:b0:1d:8e:32:03:cb:a6:18:93 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA1gj1q7mOswnou9RvKwuX8S7WFBhz2NlaSIpYPQmM0I/vqb4T459PgJcMaJOE+WmPiMnDSFsyV3C6YszM754Hc=
+|   256 08:c9:12:d9:7b:98:98:c8:b3:99:7a:19:82:2e:a3:ea (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBzTSyInONbcDxdYULbDvI/HyrQm9m9M5b6Z825jnBEF
+53/tcp   open  domain  syn-ack ttl 63 NLnet Labs NSD
+80/tcp   open  http    syn-ack ttl 63 nginx 1.16.1
+|_http-favicon: Unknown favicon MD5: 11FB4799192313DD5474A343D9CC0A17
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-server-header: nginx/1.16.1
+|_http-title: Home | Mezzanine
+4505/tcp open  zmtp    syn-ack ttl 63 ZeroMQ ZMTP 2.0
+8000/tcp open  http    syn-ack ttl 63 nginx 1.16.1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: nginx/1.16.1
+|_http-title: Site doesn't have a title (application/json).
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X|4.X (90%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4.4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 3.12 (90%), Linux 4.4 (90%), Linux 4.9 (90%), Linux 3.10 (86%), Linux 3.10 - 3.16 (86%), Linux 4.0 (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/12%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61DEE304%P=x86_64-pc-linux-gnu)
+SEQ(SP=102%GCD=1%ISR=10A%TI=Z%TS=A)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.004 days (since Wed Jan 12 09:12:22 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+1   203.46 ms 192.168.49.1
+2   203.49 ms 192.168.90.62
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 09:17:40 2022 -- 1 IP address (1 host up) scanned in 360.51 seconds

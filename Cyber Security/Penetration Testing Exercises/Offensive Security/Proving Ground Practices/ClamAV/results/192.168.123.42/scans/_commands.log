@@ -1,0 +1,92 @@
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_quick_tcp_nmap.xml" 192.168.123.42
+
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_full_tcp_nmap.xml" 192.168.123.42
+
+nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/xml/_top_100_udp_nmap.xml" 192.168.123.42
+
+nmap -vv --reason -Pn -T4 -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp22/tcp_22_ssh_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp22/xml/tcp_22_ssh_nmap.xml" 192.168.123.42
+
+feroxbuster -u http://192.168.123.42:80/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_feroxbuster_common.txt"
+
+curl -sSik http://192.168.123.42:80/
+
+curl -sSikf http://192.168.123.42:80/robots.txt
+
+nmap -vv --reason -Pn -T4 -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.123.42
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.123.42:80 2>&1
+
+wkhtmltoimage --format png http://192.168.123.42:80/ /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_screenshot.png
+
+enum4linux -a -M -l -d 192.168.123.42 2>&1
+
+nbtscan -rvh 192.168.123.42 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/tcp_139_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp139/xml/tcp_139_smb_nmap.xml" 192.168.123.42
+
+smbclient -L\\ -N -I 192.168.123.42 2>&1
+
+smbmap -H 192.168.123.42 -P 139 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.123.42
+
+smbmap -H 192.168.123.42 -P 445 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 139 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 445 2>&1
+
+smbmap -H 192.168.123.42 -P 139 -R 2>&1
+
+smbmap -H 192.168.123.42 -P 445 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 139 -R 2>&1
+
+smbmap -H 192.168.123.42 -P 139 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 445 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 139 -x "ipconfig /all" 2>&1
+
+smbmap -H 192.168.123.42 -P 445 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 445 -x "ipconfig /all" 2>&1
+
+nmap -vv --reason -Pn -T4 -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp137/udp_137_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp137/xml/udp_137_smb_nmap.xml" 192.168.123.42
+
+smbmap -H 192.168.123.42 -P 137 2>&1
+
+nmap -vv --reason -Pn -T4 -sU -sV -p 161 --script="banner,(snmp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/udp_161_snmp-nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/udp161/xml/udp_161_snmp_nmap.xml" 192.168.123.42
+
+snmpwalk -c public -v 1 192.168.123.42 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 137 2>&1
+
+smbmap -H 192.168.123.42 -P 137 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 137 -R 2>&1
+
+smbmap -H 192.168.123.42 -P 137 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.123.42 -P 137 -x "ipconfig /all" 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.25.1.6.0 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.25.4.2.1.2 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.25.4.2.1.4 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.25.2.3.1.4 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.25.2.3.1.4 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.4.1.77.1.2.25 2>&1
+
+snmpwalk -c public -v 1 192.168.123.42 1.3.6.1.2.1.6.13.1.3 2>&1
+
+feroxbuster -u http://192.168.123.42:80/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_feroxbuster_big.txt"
+
+nmap -vv --reason -Pn -T4 -sV -p 60000 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp60000/tcp_60000_ssh_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp60000/xml/tcp_60000_ssh_nmap.xml" 192.168.123.42
+
+feroxbuster -u http://192.168.123.42:80/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/raft-large-words.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/results/192.168.123.42/scans/tcp80/tcp_80_http_feroxbuster_raft-large-words.txt"
+

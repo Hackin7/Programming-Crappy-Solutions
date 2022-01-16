@@ -1,0 +1,17 @@
+Doing NBT name scan for addresses from 192.168.123.42
+
+
+NetBIOS Name Table for Host 192.168.123.42:
+
+Incomplete packet, 191 bytes long.
+Name             Service          Type
+----------------------------------------
+0XBABE           Workstation Service
+0XBABE           Messenger Service
+0XBABE           File Server Service
+WORKGROUP        Domain Name
+WORKGROUP        Browser Service Elections
+
+Adapter address: 00:00:00:00:00:00
+----------------------------------------
+

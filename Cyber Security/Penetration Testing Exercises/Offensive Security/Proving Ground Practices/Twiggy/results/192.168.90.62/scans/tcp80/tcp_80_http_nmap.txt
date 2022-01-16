@@ -1,0 +1,1021 @@
+# Nmap 7.91 scan initiated Wed Jan 12 09:12:25 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/results/192.168.90.62/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/results/192.168.90.62/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.90.62
+Nmap scan report for 192.168.90.62
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-12 09:12:28 EST for 587s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.16.1
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.62
+|   url                             method
+|_  http://192.168.90.62:80/admin/  FORM
+|_http-chrono: Request times for /; avg: 909.10ms; min: 626.23ms; max: 1202.81ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.62
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1324
+|     Comment: 
+|          // we must check for NaN for ie 8/9
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 176
+|     Comment: 
+|         /*========================================
+|                     MEZZANINE BLOG
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 69
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: alert.js v3.2.0
+|          * http://getbootstrap.com/javascript/#alerts
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 81
+|     Comment: 
+|         <!-- CONTAINER -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 467
+|     Comment: 
+|          // CAROUSEL DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 201
+|     Comment: 
+|          // push to event loop to allow forms to submit
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 2068
+|     Comment: 
+|          // AFFIX PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 54
+|     Comment: 
+|          // Prevent touch events within dropdown bubbling down to document
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 128
+|     Comment: 
+|          // =======================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 703
+|     Comment: 
+|          // if mobile we use a backdrop because click events don't delegate
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1320
+|     Comment: 
+|          // manually read margins because getBoundingClientRect includes difference
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 468
+|     Comment: 
+|         /*========================================
+|                   RESPONSIVE TWEAKS
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1446
+|     Comment: 
+|          // top overflow
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1101
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: tooltip.js v3.2.0
+|          * http://getbootstrap.com/javascript/#tooltip
+|          * Inspired by the original jQuery.tipsy by Jason Frame
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 115
+|     Comment: 
+|          // detach from parent, fire event then clean up data
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1973
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: affix.js v3.2.0
+|          * http://getbootstrap.com/javascript/#affix
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 175
+|     Comment: 
+|          // ==============================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1935
+|     Comment: 
+|          // TAB PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 40
+|     Comment: 
+|         /**
+|              * Touch events
+|              *
+|              * @description Support click to open if we're dealing with a touchscreen
+|              */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 459
+|     Comment: 
+|          // ====================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 82
+|     Comment: 
+|          // ======================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1344
+|     Comment: 
+|          // check to see if placing tip in new offset caused the tip to resize itself
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1571
+|     Comment: 
+|          // POPOVER PUBLIC CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1332
+|     Comment: 
+|          // so we use setOffset directly with our own function B-0
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1528
+|     Comment: 
+|          // TOOLTIP PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 156
+|     Comment: 
+|          // ==============
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 2097
+|     Comment: 
+|          // AFFIX DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 285
+|     Comment: 
+|          // CAROUSEL CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 472
+|     Comment: 
+|         /* Display dropdowns on hover only in desktops (md and lg classes) */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 497
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: collapse.js v3.2.0
+|          * http://getbootstrap.com/javascript/#collapse
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 56
+|     Comment: 
+|          // Toggle hover
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1559
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: popover.js v3.2.0
+|          * http://getbootstrap.com/javascript/#popovers
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 680
+|     Comment: 
+|          // DROPDOWN CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 40
+|     Comment: 
+|          // explicit for ie8 (  ._.)
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 668
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: dropdown.js v3.2.0
+|          * http://getbootstrap.com/javascript/#dropdowns
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 174
+|     Comment: 
+|          // BUTTON PUBLIC CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1549
+|     Comment: 
+|          // TOOLTIP NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 64
+|     Comment: 
+|          // Hide other open dropdowns
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 22
+|     Comment: 
+|          // ============================================================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1448
+|     Comment: 
+|          // bottom overflow
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1550
+|     Comment: 
+|          // ===================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 947
+|     Comment: 
+|          // guard against infinite focus loop
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1049
+|     Comment: 
+|          // MODAL PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 231
+|     Comment: 
+|          // ========================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1663
+|     Comment: 
+|          // POPOVER NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 252
+|     Comment: 
+|          // BUTTON NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 68
+|     Comment: 
+|          // Hide dropdown on touch outside
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 509
+|     Comment: 
+|          // COLLAPSE PUBLIC CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 59
+|     Comment: 
+|          // Prevent link on first touch
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 800
+|     Comment: 
+|          // DROPDOWN NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1954
+|     Comment: 
+|          // TAB NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 155
+|     Comment: 
+|          // ALERT DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1432
+|     Comment: 
+|         /* placement == 'right' */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 127
+|     Comment: 
+|          // ALERT PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 26
+|     Comment: 
+|         <!-- JAVASCRIPTS / EXTRAHEAD -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 162
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: button.js v3.2.0
+|          * http://getbootstrap.com/javascript/#buttons
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 286
+|     Comment: 
+|          // =========================
+|     
+|     Path: http://192.168.90.62:80/static/css/bootstrap.css
+|     Line number: 6203
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.css.map */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1912
+|     Comment: 
+|          // reflow for transition
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 262
+|     Comment: 
+|          // ===============
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1456
+|     Comment: 
+|          // right overflow
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1673
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: scrollspy.js v3.2.0
+|          * http://getbootstrap.com/javascript/#scrollspy
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 9
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: transition.js v3.2.0
+|          * http://getbootstrap.com/javascript/#transitions
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 2088
+|     Comment: 
+|          // AFFIX NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 17
+|     Comment: 
+|         /* These are set in PageAdmin's view methods, and mezzanine.utils.admin.SingletonAdmin */
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 7
+|     Comment: 
+|         <!-- LOADING -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 435
+|     Comment: 
+|          // CAROUSEL PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1331
+|     Comment: 
+|          // $.fn.offset doesn't round pixel values
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1963
+|     Comment: 
+|          // TAB DATA-API
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 10
+|     Comment: 
+|         <!-- STYLESHEETS / EXTRASTYLE -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 781
+|     Comment: 
+|          // DROPDOWN PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 810
+|     Comment: 
+|          // ===================================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 634
+|     Comment: 
+|          // COLLAPSE NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 226
+|     Comment: 
+|         /*========================================
+|                     MEZZANINE FORMS
+|         ==========================================
+|           These rules mirror the rules for .form-control included with
+|           Bootstrap. They are needed because we can not directly apply
+|           CSS classes to the form fields when rendering them in the template.
+|           They also cover special cases for date and date/time inputs.
+|         */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 43
+|     Comment: 
+|          // http://blog.alexmaccaw.com/css-transitions
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1114
+|     Comment: 
+|          // TOOLTIP PUBLIC CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 409
+|     Comment: 
+|          // force reflow
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1590
+|     Comment: 
+|          // NOTE: POPOVER EXTENDS tooltip.js
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1685
+|     Comment: 
+|          // SCROLLSPY CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/css/bootstrap.css
+|     Line number: 7
+|     Comment: 
+|         /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 460
+|     Comment: 
+|         /*========================================
+|                   MEZZANINE ACCOUNTS
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 377
+|     Comment: 
+|         /* We apply the clearfix hack to .form-actions because we often
+|         float the buttons inside it. This prevents collapsing. */
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 97
+|     Comment: 
+|         <!-- BREADCRUMBS -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 809
+|     Comment: 
+|          // APPLY TO STANDARD DROPDOWN ELEMENTS
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 51
+|     Comment: 
+|          // Ensures jQuery does not pollute the global namespace
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 643
+|     Comment: 
+|          // COLLAPSE DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1824
+|     Comment: 
+|          // =====================
+|     
+|     Path: http://192.168.90.62:80/static/css/bootstrap-theme.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v3.2.0 (http://getbootstrap.com)
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 748
+|     Comment: 
+|          // down
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 253
+|     Comment: 
+|          // ==================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 820
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: modal.js v3.2.0
+|          * http://getbootstrap.com/javascript/#modals
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/search/
+|     Line number: 34
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <script src="/static/js/html5shiv.js"></script>
+|         <script src="/static/js/respond.min.js"></script>
+|         <![endif]-->
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 2
+|     Comment: 
+|         /*========================================
+|                 MEZZANINE GENERAL STYLES
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/respond.min.js
+|     Line number: 5
+|     Comment: 
+|         /*! Respond.js v1.3.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
+|     
+|     Path: http://192.168.90.62:80/static/mezzanine/js/jquery-1.8.3.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.8.3 jquery.com | jquery.org/license */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1091
+|     Comment: 
+|          // only register focus restorer if modal will actually get shown
+|     
+|     Path: http://192.168.90.62:80/static/js/respond.min.js
+|     Line number: 2
+|     Comment: 
+|         /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1804
+|     Comment: 
+|          // ===========================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 9
+|     Comment: 
+|          // Specifying the element is faster for older browsers
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 90
+|     Comment: 
+|         <!-- Title -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1964
+|     Comment: 
+|          // ============
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 60
+|     Comment: 
+|          // This line can be removed after a decent amount of time has passed since
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 400
+|     Comment: 
+|         /*========================================
+|                   MEZZANINE GENERIC
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1039
+|     Comment: 
+|          // thx walsh
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 430
+|     Comment: 
+|         /*========================================
+|                   MEZZANINE TWEETS
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 100
+|     Comment: 
+|         <!-- MESSAGES -->
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 107
+|     Comment: 
+|         <!-- CONTENT -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 81
+|     Comment: 
+|          // ALERT CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 61
+|     Comment: 
+|          // https://github.com/stephenmcd/grappelli-safe/pull/56/files occurring.
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 147
+|     Comment: 
+|          // =================
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 106
+|     Comment: 
+|         /* Style error messages as danger alerts */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1079
+|     Comment: 
+|          // MODAL DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 97
+|     Comment: 
+|          // strip for ie7
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 613
+|     Comment: 
+|          // COLLAPSE PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 436
+|     Comment: 
+|          // ==========================
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 389
+|     Comment: 
+|         /*========================================
+|                   MEZZANINE GALLERY
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1844
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: tab.js v3.2.0
+|          * http://getbootstrap.com/javascript/#tabs
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 230
+|     Comment: 
+|          // BUTTON PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1115
+|     Comment: 
+|          // ===============================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 832
+|     Comment: 
+|          // MODAL CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 16
+|     Comment: 
+|          // Mouseenter (used with .hover()) does not trigger when user enters from outside document window
+|     
+|     Path: http://192.168.90.62:80/static/js/respond.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 4
+|     Comment: 
+|          // Form css tweaks.
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 747
+|     Comment: 
+|          // up
+|     
+|     Path: http://192.168.90.62:80/static/css/bootstrap-theme.css
+|     Line number: 442
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap-theme.css.map */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 510
+|     Comment: 
+|          // ================================
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1985
+|     Comment: 
+|          // AFFIX CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1856
+|     Comment: 
+|          // TAB CLASS DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap-extras.js
+|     Line number: 10
+|     Comment: 
+|         /**
+|              * Mouse events
+|              *
+|              * @description Mimic hoverIntent plugin by waiting for the mouse to 'settle' within the target before triggering
+|              */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1803
+|     Comment: 
+|          // SCROLLSPY PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 886
+|     Comment: 
+|          // don't move modals dom position
+|     
+|     Path: http://192.168.90.62:80/static/js/html5shiv.js
+|     Line number: 1
+|     Comment: 
+|         /**
+|         * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+|         */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1832
+|     Comment: 
+|          // SCROLLSPY DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/css/mezzanine.css
+|     Line number: 128
+|     Comment: 
+|         /*========================================
+|                   MULTI-LEVEL DROP-DOWN NAV
+|         ==========================================*/
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 261
+|     Comment: 
+|          // BUTTON DATA-API
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 458
+|     Comment: 
+|          // CAROUSEL NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1607
+|     Comment: 
+|          // we use append for html objects to maintain js events
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1823
+|     Comment: 
+|          // SCROLLSPY NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 273
+|     Comment: 
+|         /* ========================================================================
+|          * Bootstrap: carousel.js v3.2.0
+|          * http://getbootstrap.com/javascript/#carousel
+|          * ========================================================================
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          * ======================================================================== */
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 906
+|     Comment: 
+|          // wait for modal to slide in
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 344
+|     Comment: 
+|          // yes, "slid"
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1642
+|     Comment: 
+|          // POPOVER PLUGIN DEFINITION
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1614
+|     Comment: 
+|          // this manually by checking the contents.
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1613
+|     Comment: 
+|          // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1454
+|     Comment: 
+|          // left overflow
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 146
+|     Comment: 
+|          // ALERT NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 84
+|     Comment: 
+|         <!-- HEADER -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 1070
+|     Comment: 
+|          // MODAL NO CONFLICT
+|     
+|     Path: http://192.168.90.62:80/admin/
+|     Line number: 152
+|     Comment: 
+|         <!-- FOOTER -->
+|     
+|     Path: http://192.168.90.62:80/static/js/bootstrap.js
+|     Line number: 21
+|     Comment: 
+|_         // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.62
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.90.62:80/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/about/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/contact/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/contact/legals/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/gallery/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/about/team/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/about/history/
+|     Form id: 
+|     Form action: /search/
+|     
+|     Path: http://192.168.90.62:80/search/
+|     Form id: 
+|_    Form action: /search/
+|_http-date: Wed, 12 Jan 2022 14:12:42 GMT; -3s from local time.
+|_http-devframework: Django detected. Found Django admin login page on /admin/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /blog/: Blog
+|   /contact/: Potentially interesting folder
+|_  /search/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-favicon: Unknown favicon MD5: 11FB4799192313DD5474A343D9CC0A17
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.90.62
+|   Found the following feeds: 
+|     Atom: /blog/feeds/atom/
+|     RSS (version 2.0): http://192.168.90.62:80/blog/feeds/rss/
+|     RSS (version 2.0): /blog/feeds/rss/
+|_    Atom: http://192.168.90.62:80/blog/feeds/atom/
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| http-headers: 
+|   Server: nginx/1.16.1
+|   Date: Wed, 12 Jan 2022 14:12:48 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 6927
+|   Connection: close
+|   X-Frame-Options: SAMEORIGIN
+|   Vary: Cookie
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash e2d05cb54f0c980109f3fdab35c8404b
+|_Credits query returned unknown hash e2d05cb54f0c980109f3fdab35c8404b
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: nginx/1.16.1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /about/
+|       Other: 1
+|     /about/history/
+|       Other: 1
+|     /about/team/
+|       Other: 1
+|     /admin/
+|       Other: 1
+|     /blog/feeds/atom/
+|       Other: 1
+|     /blog/feeds/rss/
+|       Other: 1
+|     /contact/
+|       Other: 1
+|     /contact/legals/
+|       Other: 1
+|     /gallery/
+|       Other: 1
+|     /search/
+|       Other: 1
+|     /static/css/
+|       css: 3
+|     /static/img/
+|       ico: 1
+|     /static/js/
+|       js: 4
+|     /static/mezzanine/js/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /static/mezzanine/js/
+|   Total files found (by extension):
+|_    Other: 11; css: 3; ico: 1; js: 5
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Home | Mezzanine
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 16 names had status ERROR
+|_112 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 09:22:15 2022 -- 1 IP address (1 host up) scanned in 590.76 seconds

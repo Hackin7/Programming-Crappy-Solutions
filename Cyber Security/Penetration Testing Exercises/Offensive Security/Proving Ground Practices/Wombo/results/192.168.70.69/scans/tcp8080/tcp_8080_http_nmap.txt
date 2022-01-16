@@ -1,0 +1,172 @@
+# Nmap 7.91 scan initiated Thu Jan 13 11:30:46 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/results/192.168.70.69/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.70.69
+Nmap scan report for 192.168.70.69
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-01-13 11:30:47 EST for 740s
+
+PORT     STATE SERVICE    REASON         VERSION
+8080/tcp open  http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=0Ww0fMSIDqGPTsp7pozMkkBi; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 11098
+|     ETag: W/"2b5a-6I9+8LXH0o+A/f1xCKpEmLv6Iik"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:31:06 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Not Found | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_n
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=ODb4wkWQ14kmlqelmOs_R--C; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 18181
+|     ETag: W/"4705-LcxNp0nWRKZ1lqLUQPWu6vXtgJ0"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:31:04 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Home | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_name" content
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     Allow: GET,HEAD
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 8
+|     ETag: W/"8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg"
+|     Vary: Accept-Encoding
+|     Date: Thu, 13 Jan 2022 16:31:05 GMT
+|     Connection: close
+|     GET,HEAD
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.70.69
+|   url                                 method
+|_  http://192.168.70.69:8080/register  FORM
+|_http-backup-finder: ERROR: Script execution failed (use -d to debug)
+|_http-chrono: Request times for /; avg: 998.47ms; min: 927.59ms; max: 1056.69ms
+|_http-date: Thu, 13 Jan 2022 16:31:33 GMT; +9s from local time.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /login/: Login page
+|   /robots.txt: Robots file
+|   /register/: Potentially interesting folder
+|_  /top/: Potentially interesting folder
+|_http-favicon: Unknown favicon MD5: 152FF7D5AE5BDB84B33D4DCA31EB7CD3
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   X-DNS-Prefetch-Control: off
+|   X-Frame-Options: SAMEORIGIN
+|   X-Download-Options: noopen
+|   X-Content-Type-Options: nosniff
+|   X-XSS-Protection: 1; mode=block
+|   Referrer-Policy: strict-origin-when-cross-origin
+|   X-Powered-By: NodeBB
+|   set-cookie: _csrf=EnM5gjkvXkWKEcWLLLAmBmBA; Path=/
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 18181
+|   ETag: W/"4705-8XaQ5ifPZHiaGeamitM9ZfqPZKY"
+|   Vary: Accept-Encoding
+|   Date: Thu, 13 Jan 2022 16:31:31 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-php-version: Logo query returned unknown hash cfbe748563872f7e6d4bf17571471b11
+|_Credits query returned unknown hash 7d5c9070785f7052bed9773a1531b7fe
+| http-robots.txt: 3 disallowed entries 
+|_/admin/ /reset/ /compose
+|_http-title: Home | NodeBB
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=7%D=1/13%Time=61E053BE%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,31C4,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=b
+SF:lock\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powere
+SF:d-By:\x20NodeBB\r\nset-cookie:\x20_csrf=ODb4wkWQ14kmlqelmOs_R--C;\x20Pa
+SF:th=/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x2018181\r\nETag:\x20W/\"4705-LcxNp0nWRKZ1lqLUQPWu6vXtgJ0\"\r\nVary:\x
+SF:20Accept-Encoding\r\nDate:\x20Thu,\x2013\x20Jan\x202022\x2016:31:04\x20
+SF:GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=
+SF:\"en-GB\"\x20data-dir=\"ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\
+SF:r\n<head>\r\n\t<title>Home\x20\|\x20NodeBB</title>\r\n\t<meta\x20name=\
+SF:"viewport\"\x20content=\"width&#x3D;device-width,\x20initial-scale&#x3D
+SF:;1\.0\"\x20/>\n\t<meta\x20name=\"content-type\"\x20content=\"text/html;
+SF:\x20charset=UTF-8\"\x20/>\n\t<meta\x20name=\"apple-mobile-web-app-capab
+SF:le\"\x20content=\"yes\"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable
+SF:\"\x20content=\"yes\"\x20/>\n\t<meta\x20property=\"og:site_name\"\x20co
+SF:ntent")%r(HTTPOptions,1BF,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Con
+SF:trol:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x
+SF:20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x20
+SF:1;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin
+SF:\r\nX-Powered-By:\x20NodeBB\r\nAllow:\x20GET,HEAD\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=utf-8\r\nContent-Length:\x208\r\nETag:\x20W/\"8-ZR
+SF:Af8oNBS3Bjb/SU2GYZCmbtmXg\"\r\nVary:\x20Accept-Encoding\r\nDate:\x20Thu
+SF:,\x2013\x20Jan\x202022\x2016:31:05\x20GMT\r\nConnection:\x20close\r\n\r
+SF:\nGET,HEAD")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:nnection:\x20close\r\n\r\n")%r(FourOhFourRequest,2D42,"HTTP/1\.1\x20404
+SF:\x20Not\x20Found\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Poli
+SF:cy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nse
+SF:t-cookie:\x20_csrf=0Ww0fMSIDqGPTsp7pozMkkBi;\x20Path=/\r\nContent-Type:
+SF:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2011098\r\nETag:\x2
+SF:0W/\"2b5a-6I9\+8LXH0o\+A/f1xCKpEmLv6Iik\"\r\nVary:\x20Accept-Encoding\r
+SF:\nDate:\x20Thu,\x2013\x20Jan\x202022\x2016:31:06\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en-GB\"\x20data-d
+SF:ir=\"ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\r\n<head>\r\n\t<tit
+SF:le>Not\x20Found\x20\|\x20NodeBB</title>\r\n\t<meta\x20name=\"viewport\"
+SF:\x20content=\"width&#x3D;device-width,\x20initial-scale&#x3D;1\.0\"\x20
+SF:/>\n\t<meta\x20name=\"content-type\"\x20content=\"text/html;\x20charset
+SF:=UTF-8\"\x20/>\n\t<meta\x20name=\"apple-mobile-web-app-capable\"\x20con
+SF:tent=\"yes\"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable\"\x20conte
+SF:nt=\"yes\"\x20/>\n\t<meta\x20property=\"og:site_n");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 13 11:43:07 2022 -- 1 IP address (1 host up) scanned in 741.79 seconds

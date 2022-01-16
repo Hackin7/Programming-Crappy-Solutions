@@ -1,0 +1,437 @@
+# Nmap 7.91 scan initiated Wed Jan 12 06:43:55 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.90.43/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/results/192.168.90.43/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.90.43
+Nmap scan report for 192.168.90.43
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-01-12 06:43:59 EST for 120s
+
+PORT     STATE SERVICE REASON          VERSION
+8080/tcp open  http    syn-ack ttl 127 Apache Tomcat/Coyote JSP engine 1.1
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.43
+|   url                                                                                     method
+|   http://192.168.90.43:8080/                                                              FORM
+|_  http://192.168.90.43:8080/j_security_check;jsessionid=BA737C8E9363781CF9794DEE45BF0479  FORM
+|_http-chrono: Request times for /; avg: 1162.84ms; min: 1016.48ms; max: 1553.91ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.43
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 523
+|     Comment: 
+|         /*}
+|                     else //sd-11880 the user is added by manually for login as local authentication.
+|                     {
+|         		document.cookie="localAuthWithDomain=Not in Domain;expires= "+((expDate).toGMTString());//NO I18N
+|         		document.cookie="domainname=Local Authentication;expires= "+((expDate).toGMTString());//NO I18N
+|                         document.forms['login'].LocalAuthWithDomain.value='No';//NO I18N
+|                         document.forms['login'].LocalAuth.value='yes';//NO I18N
+|                     }*/
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 578
+|     Comment: 
+|         /**********
+|         		*  If domainList is available, cookie will be set 
+|         		************/
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 439
+|     Comment: 
+|          //{
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 445
+|     Comment: 
+|          // sd-11880 the user is added by manually.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 78
+|     Comment: 
+|          //alert("ee "+e);
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 379
+|     Comment: 
+|          //sd-11880 The domain list will be overwritten when dynamic user addition is false.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 136
+|     Comment: 
+|          //sd-11880 to avoid For Domain list for local authentication when no domain for the user
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 120
+|     Comment: 
+|          // sd-11880 listing domain when more than a domain for the user.
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 69
+|     Comment: 
+|         <!-- sd-11880 Loding domain list To login AD authentication or local Authentication -->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 535
+|     Comment: 
+|         /* ## To convert username to lowercase ## */
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 220
+|     Comment: 
+|          // sd-11880 The user is not in AD. local authentication will be added to domain list to user to select Local Authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 203
+|     Comment: 
+|          // sd-11880 listing domain name(s) when AD enbable is false. to list domain name from aaalogin.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 37
+|     Comment: 
+|         
+|         // SD-11880 to list domain name(s) for local authentication, When user login as Local Authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 483
+|     Comment: 
+|         /*}
+|                           else //sd-11880 the user is added by manually for login as local authentication.
+|                          {
+|         		     document.cookie="localAuthWithDomain=Not in Domain;expires= "+((expDate).toGMTString());//NO I18N
+|         		     document.cookie="domainname=Local Authentication;expires= "+((expDate).toGMTString());//NO I18N
+|                              document.forms['login'].LocalAuthWithDomain.value='No';//NO I18N
+|                              document.forms['login'].LocalAuth.value='yes';//NO I18N
+|                          }*/
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 103
+|     Comment: 
+|          // if 200 - success , returned with a object.
+|     
+|     Path: http://192.168.90.43:8080/style/loginstyle.css
+|     Line number: 37
+|     Comment: 
+|         /* HelpTool Styles */
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 119
+|     Comment: 
+|         <!--sd-11880 to check whether LDAP is enable or not. -->
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 134
+|     Comment: 
+|         <!-- sd-11880 to check Local Authenticaiton enable or not in Global config -->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 236
+|     Comment: 
+|          // sd-11880 listing domain name(s) for AD authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 677
+|     Comment: 
+|         
+|         // sd-11880 DOMAIN_NAME will be created for AD authentication and local authentication with domain based. No need to create the domain_name object for user added by manually.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 319
+|     Comment: 
+|          //No internationalization
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 130
+|     Comment: 
+|         <!-- sd-11880 to check local auth and domain name is not null-->
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 126
+|     Comment: 
+|         <!-- 21649  Js Exception in login page fixed -->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 443
+|     Comment: 
+|         /*}
+|                             else
+|                             { // sd-11880 the user is added by manually.
+|                                 document.forms['login'].LocalAuthWithDomain.value='No';//NO I18N
+|                                 document.forms['login'].LocalAuth.value='yes';//NO I18N
+|                             }*/
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 674
+|     Comment: 
+|          //document.login.j_username.focus();
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 163
+|     Comment: 
+|          // sd-11880 waiting process state to list domain name(s) for AD User to login as AD authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 416
+|     Comment: 
+|          // sd-11880 When user login with AD Authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 422
+|     Comment: 
+|          //sd-11880 When user login as local authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 209
+|     Comment: 
+|         
+|         //sd-11880 listing domain name(s) for AD Imported User login as AD Authentication.
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 128
+|     Comment: 
+|         <!-- sd-11880 to check domain name is null-->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 438
+|     Comment: 
+|          //if (domainvalue!="Not in Domain") // sd-11880 domain_name will be created for local authentication with domain support.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 122
+|     Comment: 
+|          //NO I18N
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 484
+|     Comment: 
+|          //sd-11880 the user is added by manually for login as local authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 382
+|     Comment: 
+|          //sd-11880 The user can login as AD authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 368
+|     Comment: 
+|          // sd-11880 To login AD user. Domain_name is created when the user choose domain name. not in domain for login as local authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 255
+|     Comment: 
+|          //sd-11880 Local Authentication won't show when Local authentication is false.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 245
+|     Comment: 
+|          //sd-11880 the choose domain will be overwritten by the domain name when only one domain for the user.
+|     
+|     Path: http://192.168.90.43:8080/style/loginstyle.css
+|     Line number: 1
+|     Comment: 
+|         /* Admin Page CSS Icons Map */
+|     
+|     Path: http://192.168.90.43:8080/style/loginstyle.css
+|     Line number: 22
+|     Comment: 
+|         /* CSS Image Map */
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 476
+|     Comment: 
+|          //if (domainvalue!="Not in Domain") //sd-11880 the user is added using AD for login as local authentication with domain based.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 1
+|     Comment: 
+|         /* $Id: Login.js,v 1.42 2009/09/25 11:06:31 gayathri Exp $ */
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 46
+|     Comment: 
+|         
+|         // SD-11880 Only for Local Authentication. Its listing domain name(s) from aaalogin table for the user to login as local authentication.
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 122
+|     Comment: 
+|         <!-- sd-11880 key to display as Lebel named ForDomain for Local authentication list. -->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 186
+|     Comment: 
+|          // sd-11880 waiting process state to list domain name(s) for AD User to login as AD authentication
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 110
+|     Comment: 
+|          //sd-11880 domain list does not show if only one domain for the user.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 101
+|     Comment: 
+|          // if value is 4, then it is Ready State.
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 136
+|     Comment: 
+|         <!-- sd-11880 to check selected domain for ADlogin in sdrelationalloginmodule-->
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 123
+|     Comment: 
+|          //sd-11880 label to identify the local authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 61
+|     Comment: 
+|          // sd-11880 waiting process state to list domain name(s) for AD User to login as Local Authentication.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 98
+|     Comment: 
+|         
+|         // sd-11880 To list domain name(s) for local authentication.listing domain name(s) from aaalogin table based on login name. Only for local authentication.Following user can login with this 1. Not in Domain for manually added user. 2. AD imported user can login as local Authentication. 3. User can login as local authentication when user imported using Ad and domain name(s) is deleted in domaininfo.
+|     
+|     Path: http://192.168.90.43:8080/scripts/Login.js?7601
+|     Line number: 313
+|     Comment: 
+|         /*
+|         	* Opertions to be performed for Domain List
+|         	*/
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 19
+|     Comment: 
+|         <!-- 20593 username focus fixed -->
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 132
+|     Comment: 
+|         <!-- sd-11880 to check Dyanmic user addition is true or flase -->
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Line number: 125
+|     Comment: 
+|_        <!-- sd-11880 to check the count of domain-->
+| http-cookie-flags: 
+|   /: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /ui/vManage.do: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /images/printer.gif: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /cwhp/auditLog.do: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /debug/: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /jsp/: 
+|     JSESSIONID: 
+|       httponly flag not set
+|   /servlet/: 
+|     JSESSIONID: 
+|_      httponly flag not set
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.43
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.90.43:8080/
+|     Form id: message
+|     Form action: j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     
+|     Path: http://192.168.90.43:8080/j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|     Form id: message
+|_    Form action: j_security_check;jsessionid=86760532ACE2F0EAE8B5AC5F09DF0132
+|_http-date: Wed, 12 Jan 2022 11:44:14 GMT; 0s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /ui/vManage.do: VMWare
+|   /images/printer.gif: Lexmark Printer
+|   /cwhp/auditLog.do?file=..\..\..\..\..\..\..\boot.ini: Possible CiscoWorks (CuOM 8.0 and 8.5) Directory traversal (CVE-2011-0966) (Windows)
+|   /cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program%20Files\CSCOpx\MDC\Tomcat\webapps\triveni\WEB-INF\classes\schedule.properties: Possible CiscoWorks (CuOM 8.0 and 8.5) Directory traversal (CVE-2011-0966) (Windows)
+|   /cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program%20Files\CSCOpx\lib\classpath\com\cisco\nm\cmf\dbservice2\DBServer.properties: Possible CiscoWorks (CuOM 8.0 and 8.5) Directory traversal (CVE-2011-0966) (Windows)
+|   /cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program%20Files\CSCOpx\log\dbpwdChange.log: Possible CiscoWorks (CuOM 8.0 and 8.5) Directory traversal (CVE-2011-0966) (Windows)
+|   /debug/: Potentially interesting folder
+|   /jsp/: Potentially interesting folder
+|_  /servlet/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Set-Cookie: JSESSIONID=421ADF31AF11F3219AF721C00168844B; Path=/
+|   Pragma: No-cache
+|   Cache-Control: no-cache
+|   Expires: Wed, 31 Dec 1969 16:00:00 PST
+|   Content-Type: text/html;charset=UTF-8
+|   Date: Wed, 12 Jan 2022 11:44:12 GMT
+|   Server: Apache-Coyote/1.1
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+|_http-php-version: Logo query returned unknown hash 06f8c136fefa7a48b0a4507a8d0702d4
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-cache
+|   Pragma: 
+|     Header: Pragma: No-cache
+|   Expires: 
+|_    Header: Expires: Wed, 31 Dec 1969 16:00:00 PST
+|_http-server-header: Apache-Coyote/1.1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 2
+|     /framework/html/
+|       html: 1
+|     /images/
+|       gif: 5; ico: 1
+|     /scripts/
+|       js: 1
+|     /style/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /framework/html/
+|   Total files found (by extension):
+|_    Other: 2; css: 1; gif: 5; html: 1; ico: 1; js: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: ManageEngine ServiceDesk Plus
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 13 names had status ERROR
+|_115 names had status 200
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 12 06:45:59 2022 -- 1 IP address (1 host up) scanned in 123.65 seconds

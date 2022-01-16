@@ -1,0 +1,14 @@
+Doing NBT name scan for addresses from 192.168.107.43
+
+
+NetBIOS Name Table for Host 192.168.107.43:
+
+Incomplete packet, 155 bytes long.
+Name             Service          Type
+----------------------------------------
+HELPDESK         Workstation Service
+WORKGROUP        Domain Name
+HELPDESK         File Server Service
+
+Adapter address: 00:50:56:bf:4d:04
+----------------------------------------

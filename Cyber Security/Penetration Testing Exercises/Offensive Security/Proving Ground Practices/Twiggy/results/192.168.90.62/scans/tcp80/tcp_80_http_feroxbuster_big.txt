@@ -1,0 +1,3 @@
+WLD        0l        0w        0c Got 301 for http://192.168.90.62/6a215d2b87bc480e8aa00f5a328b65d4 (url length: 32)
+WLD         -         -         - http://192.168.90.62/6a215d2b87bc480e8aa00f5a328b65d4 redirects to => /6a215d2b87bc480e8aa00f5a328b65d4/
+200        4l        7w      530c http://192.168.90.62/sitemap.xml
