@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 16 06:47:34 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.225.53 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.225.53" start="1642333654" startstr="Sun Jan 16 06:47:34 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3306"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642333659"/>
+<taskend task="NSE" time="1642333659"/>
+<taskbegin task="NSE" time="1642333659"/>
+<taskend task="NSE" time="1642333659"/>
+<taskbegin task="NSE" time="1642333659"/>
+<taskend task="NSE" time="1642333659"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642333659"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642333659"/>
+<taskbegin task="SYN Stealth Scan" time="1642333660"/>
+<taskend task="SYN Stealth Scan" time="1642333660" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642333661"/>
+<taskend task="Service scan" time="1642333675" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642333675"/>
+<taskend task="NSE" time="1642333676"/>
+<taskbegin task="NSE" time="1642333676"/>
+<taskend task="NSE" time="1642333683"/>
+<taskbegin task="NSE" time="1642333683"/>
+<taskend task="NSE" time="1642333685"/>
+<host starttime="1642333660" endtime="1642333685"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.225.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" servicefp="SF-Port3306-TCP:V=7.91%I=7%D=1/16%Time=61E405DD%P=x86_64-pc-linux-gnu%r(NULL,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(GenericLines,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(SMBProgNeg,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(LDAPBindReq,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;);" method="table" conf="3"/><script id="banner" output="I\x00\x00\x01\xFFj\x04Host &apos;192.168.49.225&apos; is not allowed to c&#xa;onnect to this MariaDB server"/><script id="fingerprint-strings" output="&#xa;  GenericLines, LDAPBindReq, NULL, SMBProgNeg: &#xa;    Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server"><elem key="GenericLines, LDAPBindReq, NULL, SMBProgNeg">&#xa;    Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server</elem>
+</script><script id="mysql-empty-password" output="Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server"/><script id="mysql-info" output="&#xa;  MySQL Error: Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server"><elem key="MySQL Error">Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server</elem>
+</script><script id="mysql-vuln-cve2012-2122" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="242459" rttvar="242459" to="1212295"/>
+</host>
+<taskbegin task="NSE" time="1642333685"/>
+<taskend task="NSE" time="1642333685"/>
+<taskbegin task="NSE" time="1642333685"/>
+<taskend task="NSE" time="1642333685"/>
+<taskbegin task="NSE" time="1642333685"/>
+<taskend task="NSE" time="1642333685"/>
+<runstats><finished time="1642333685" timestr="Sun Jan 16 06:48:05 2022" summary="Nmap done at Sun Jan 16 06:48:05 2022; 1 IP address (1 host up) scanned in 32.41 seconds" elapsed="32.41" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

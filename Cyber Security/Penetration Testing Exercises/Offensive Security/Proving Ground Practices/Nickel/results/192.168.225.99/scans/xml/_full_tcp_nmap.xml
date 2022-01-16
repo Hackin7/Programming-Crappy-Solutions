@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 16 05:45:36 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nickel/results/192.168.225.99/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nickel/results/192.168.225.99/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.99 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nickel/results/192.168.225.99/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nickel/results/192.168.225.99/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.99" start="1642329936" startstr="Sun Jan 16 05:45:36 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642329936"/>
+<taskend task="NSE" time="1642329936"/>
+<taskbegin task="NSE" time="1642329936"/>
+<taskend task="NSE" time="1642329936"/>
+<taskbegin task="NSE" time="1642329936"/>
+<taskend task="NSE" time="1642329936"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642329936"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642329936"/>
+<taskbegin task="SYN Stealth Scan" time="1642329937"/>
+<taskprogress task="SYN Stealth Scan" time="1642329968" percent="7.49" remaining="383" etc="1642330351"/>
+<taskprogress task="SYN Stealth Scan" time="1642329998" percent="17.39" remaining="290" etc="1642330288"/>
+<taskprogress task="SYN Stealth Scan" time="1642330028" percent="26.92" remaining="248" etc="1642330275"/>
+<taskprogress task="SYN Stealth Scan" time="1642330058" percent="38.36" remaining="195" etc="1642330252"/>
+<taskprogress task="SYN Stealth Scan" time="1642330088" percent="50.88" remaining="146" etc="1642330234"/>
+<taskprogress task="SYN Stealth Scan" time="1642330118" percent="66.29" remaining="93" etc="1642330210"/>
+<taskprogress task="SYN Stealth Scan" time="1642330148" percent="82.15" remaining="46" etc="1642330194"/>
+<taskend task="SYN Stealth Scan" time="1642330181" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642330181"/>
+<taskend task="Service scan" time="1642330199" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642330212"/>
+<taskend task="Traceroute" time="1642330213"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642330213"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642330213"/>
+<taskbegin task="NSE" time="1642330213"/>
+<taskprogress task="NSE" time="1642330244" percent="99.47" remaining="1" etc="1642330244"/>
+<taskprogress task="NSE" time="1642330274" percent="99.79" remaining="1" etc="1642330274"/>
+<taskend task="NSE" time="1642330285"/>
+<taskbegin task="NSE" time="1642330285"/>
+<taskend task="NSE" time="1642330287"/>
+<taskbegin task="NSE" time="1642330287"/>
+<taskend task="NSE" time="1642330287"/>
+<host starttime="1642329937" endtime="1642330287"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.225.99" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-responses" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ssh" product="OpenSSH" version="for_Windows_8.1" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:for_windows_8.1</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 86:84:fd:d5:43:27:05:cf:a7:f2:e9:e2:75:70:d5:f3 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYR4Bx82VWETlsjIFs21j6lZ6/S40jMJvuXF+ay4Qz4b+ws2YobB5h0+IrHdr3epMNFmSY8JXFWzIILhkvF/rmadXRtGwib1VZkSa3nr5oYdMajoWK0jOVSoFJmDTJvhj+T3XE7+Q0tEkQ2EeGPrz7nK5XWzBp8SZdywCE/iz1HLvUIlsOqpDWHSjrnjkUaaleTgoVTEi63Dx4inY2KS5mX2mnS/mLzMlLZ0qj8vL9gz6ZJgf7LMNhXb/pWOtxfn6zmSoVHXEXgubXwLtrn4wOIvbZkm5/uEx+eFzx1AOEQ2LjaKItEqLlP3E5sdutVP6yymDTGBtlXgfvtfGS2lgZiitorAXjjND6Sqcppp5lQJk2XSBJC58U0SzjXdyflJwsus5mnKnX79nKxXPNPwM6Z3Ki1O9vE+KsJ1dZJuaTINVgLqrgwJ7BCkI2HyojfqzjHs4FlYVHnukjqunG90OMyAASSR0oEnUTPqFmrtL/loEc3h44GT+8m9JS1LgdExU=&#xa;  256 9c:93:cf:48:a9:4e:70:f4:60:de:e1:a9:c2:c0:b6:ff (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDJYE805huwKUl0fJM8+N9Mk7GUQeEEc5iA/yYqgxE7Bwgz4h5xufRONkR6bWxcxu8/AHslwkkDkjRKNdr4uFzY=&#xa;  256 00:4e:d7:3b:0f:9f:e3:74:4d:04:99:0b:b1:8b:de:a5 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL8cLYuHBTVFfYPb/YzUIyT39bUzA/sPDFEC/xChZyZ4"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDYR4Bx82VWETlsjIFs21j6lZ6/S40jMJvuXF+ay4Qz4b+ws2YobB5h0+IrHdr3epMNFmSY8JXFWzIILhkvF/rmadXRtGwib1VZkSa3nr5oYdMajoWK0jOVSoFJmDTJvhj+T3XE7+Q0tEkQ2EeGPrz7nK5XWzBp8SZdywCE/iz1HLvUIlsOqpDWHSjrnjkUaaleTgoVTEi63Dx4inY2KS5mX2mnS/mLzMlLZ0qj8vL9gz6ZJgf7LMNhXb/pWOtxfn6zmSoVHXEXgubXwLtrn4wOIvbZkm5/uEx+eFzx1AOEQ2LjaKItEqLlP3E5sdutVP6yymDTGBtlXgfvtfGS2lgZiitorAXjjND6Sqcppp5lQJk2XSBJC58U0SzjXdyflJwsus5mnKnX79nKxXPNPwM6Z3Ki1O9vE+KsJ1dZJuaTINVgLqrgwJ7BCkI2HyojfqzjHs4FlYVHnukjqunG90OMyAASSR0oEnUTPqFmrtL/loEc3h44GT+8m9JS1LgdExU=</elem>
+<elem key="fingerprint">8684fdd5432705cfa7f2e9e27570d5f3</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDJYE805huwKUl0fJM8+N9Mk7GUQeEEc5iA/yYqgxE7Bwgz4h5xufRONkR6bWxcxu8/AHslwkkDkjRKNdr4uFzY=</elem>
+<elem key="fingerprint">9c93cf48a94e70f460dee1a9c2c0b6ff</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIL8cLYuHBTVFfYPb/YzUIyT39bUzA/sPDFEC/xChZyZ4</elem>
+<elem key="fingerprint">004ed73b0f9fe3744d04990bb18bdea5</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: NICKEL&#xa;  NetBIOS_Domain_Name: NICKEL&#xa;  NetBIOS_Computer_Name: NICKEL&#xa;  DNS_Domain_Name: nickel&#xa;  DNS_Computer_Name: nickel&#xa;  Product_Version: 10.0.18362&#xa;  System_Time: 2022-01-16T10:50:19+00:00"><elem key="Target_Name">NICKEL</elem>
+<elem key="NetBIOS_Domain_Name">NICKEL</elem>
+<elem key="NetBIOS_Computer_Name">NICKEL</elem>
+<elem key="DNS_Domain_Name">nickel</elem>
+<elem key="DNS_Computer_Name">nickel</elem>
+<elem key="Product_Version">10.0.18362</elem>
+<elem key="System_Time">2022-01-16T10:50:19+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=nickel&#xa;Issuer: commonName=nickel&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-01-15T10:44:55&#xa;Not valid after:  2022-07-17T10:44:55&#xa;MD5:   8296 c628 9f00 3a2b 6ddb 594e 0281 cb0f&#xa;SHA-1: 822e 9680 5729 7d97 d76c d23c 60b5 83e5 9b94 0013&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIQXxTaaHntc6RG6qwReBQG+DANBgkqhkiG9w0BAQsFADAR&#xa;MQ8wDQYDVQQDEwZuaWNrZWwwHhcNMjIwMTE1MTA0NDU1WhcNMjIwNzE3MTA0NDU1&#xa;WjARMQ8wDQYDVQQDEwZuaWNrZWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQDly/vmp00kCX31dd9QTeRGu3ItdtQNYM4TJrK99vAuh5uDYWlr5f6VRUZb&#xa;toKy2GCJLwTATLU7GOiOu/Q1asag3CitGi01gq23WEkOgrBW2+AyKi38R1+hYsFn&#xa;1wHH5HlUbTQN33yhDVXwPdxnqXh1oAiCBvOOZfBSiAgWTUBooA7YM9tJVmtkT+bi&#xa;DYaG3ZF4RS3shMquqEg9490Tto4RN3USeuzLEDZXLAiQeapL3ZbPcNGZHEWPduZN&#xa;6yfEryzOh535Kg6Nkte/aapnwit/HFJN/drCKxciizU+/ahUOXVvmuSppInMVftT&#xa;bj01sS5csyHdOKetsc16+OsRg+6dAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUF&#xa;BwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAXO/WHNHNEWpp5eQY&#xa;GWEhYKEkrWYAQ+xzPO7B08Pn6+0wRu+PgW1YCPVffwqxWwRm61zF+pH5eFnNtbum&#xa;Xu91sx9tadJZ57Z6kZvDrIgZaoWO8LtIyXn1BuFrpwbZ92tzfkvL72rtcI9GHggg&#xa;lGdrjUIsQ4ZaX8z/s9tQ917Ut+dpUit2qDgPVwKrzNNPDKU9LcvsVG8iLW/NyaEG&#xa;GnYQuVxlkOc7WrLrmebJOwFpR9d3NV1pfb/csbAnNjUi8ENjMNFBjytP/BLCqKKJ&#xa;lkIsNJn8IwF+JPouNMFCXBJnYa0eTTgOiSiMXXKDboNMBx6YMbQxlDdW2khkddcU&#xa;L7kQvg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">nickel</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">nickel</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E5CBFBE6A74D24097DF575DF504DE446BB722D76D40D60CE1326B2BDF6F02E879B8361696BE5FE9545465BB682B2D860892F04C04CB53B18E88EBBF4356AC6A0DC28AD1A2D3582ADB758490E82B056DBE0322A2DFC475FA162C167D701C7E479546D340DDF7CA10D55F03DDC67A97875A0088206F38E65F0528808164D4068A00ED833DB49566B644FE6E20D8686DD9178452DEC84CAAEA8483DE3DD13B68E113775127AECCB1036572C089079AA4BDD96CF70D1991C458F76E64DEB27C4AF2CCE879DF92A0E8D92D7BF69AA67C22B7F1C524DFDDAC22B17228B353EFDA85439756F9AE4A9A489CC55FB536E3D35B12E5CB321DD38A7ADB1CD7AF8EB1183EE9D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-01-15T10:44:55</elem>
+<elem key="notAfter">2022-07-17T10:44:55</elem>
+</table>
+<elem key="md5">8296c6289f003a2b6ddb594e0281cb0f</elem>
+<elem key="sha1">822e968057297d97d76cd23c60b583e59b940013</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIQXxTaaHntc6RG6qwReBQG+DANBgkqhkiG9w0BAQsFADAR&#xa;MQ8wDQYDVQQDEwZuaWNrZWwwHhcNMjIwMTE1MTA0NDU1WhcNMjIwNzE3MTA0NDU1&#xa;WjARMQ8wDQYDVQQDEwZuaWNrZWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQDly/vmp00kCX31dd9QTeRGu3ItdtQNYM4TJrK99vAuh5uDYWlr5f6VRUZb&#xa;toKy2GCJLwTATLU7GOiOu/Q1asag3CitGi01gq23WEkOgrBW2+AyKi38R1+hYsFn&#xa;1wHH5HlUbTQN33yhDVXwPdxnqXh1oAiCBvOOZfBSiAgWTUBooA7YM9tJVmtkT+bi&#xa;DYaG3ZF4RS3shMquqEg9490Tto4RN3USeuzLEDZXLAiQeapL3ZbPcNGZHEWPduZN&#xa;6yfEryzOh535Kg6Nkte/aapnwit/HFJN/drCKxciizU+/ahUOXVvmuSppInMVftT&#xa;bj01sS5csyHdOKetsc16+OsRg+6dAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUF&#xa;BwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAXO/WHNHNEWpp5eQY&#xa;GWEhYKEkrWYAQ+xzPO7B08Pn6+0wRu+PgW1YCPVffwqxWwRm61zF+pH5eFnNtbum&#xa;Xu91sx9tadJZ57Z6kZvDrIgZaoWO8LtIyXn1BuFrpwbZ92tzfkvL72rtcI9GHggg&#xa;lGdrjUIsQ4ZaX8z/s9tQ917Ut+dpUit2qDgPVwKrzNNPDKU9LcvsVG8iLW/NyaEG&#xa;GnYQuVxlkOc7WrLrmebJOwFpR9d3NV1pfb/csbAnNjUi8ENjMNFBjytP/BLCqKKJ&#xa;lkIsNJn8IwF+JPouNMFCXBJnYa0eTTgOiSiMXXKDboNMBx6YMbQxlDdW2khkddcU&#xa;L7kQvg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-01-16T10:51:27+00:00; +2s from scanner time."><elem key="delta">2.0</elem>
+<elem key="date">2022-01-16T10:51:27+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="8089"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 9D1EAD73E678FA2F51A70A933B0BF017"/><script id="http-methods" output="&#xa;  Supported Methods: GET"><table key="Supported Methods">
+<elem>GET</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="33333"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 76C5844B4ABE20F72AA23CBE15B2494E"/><script id="http-methods" output="&#xa;  Supported Methods: GET POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows XP SP3" accuracy="88" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 98 SE" accuracy="85" line="78713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="98" accuracy="85"><cpe>cpe:/o:microsoft:windows_98</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/16%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E3F8AF%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=101%GCD=1%ISR=108%TS=U)&#xa;SEQ(SP=103%GCD=1%ISR=107%II=I%TS=U)&#xa;OPS(O1=M506NW8NNS%O2=M506NW8NNS%O3=M506NW8%O4=M506NW8NNS%O5=M506NW8NNS%O6=M506NNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M506NW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="259" difficulty="Good luck!" values="8713C829,7A708C9B,C2518356,F53F0C95,50E0FD2B,223AC929"/>
+<ipidsequence class="Busy server or unknown class" values="468,473,474,47F,480,48B"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="mean: 1s, deviation: 0s, median: 1s"><elem key="mean">1</elem>
+<elem key="median">1</elem>
+<elem key="count">2</elem>
+<elem key="stddev">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 51811/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 10967/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 27269/udp): CLEAN (Timeout)&#xa;  Check 4 (port 59903/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb2-time" output="ERROR: Script execution failed (use -d to debug)"/></hostscript><trace port="139" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="244.42"/>
+<hop ttl="2" ipaddr="192.168.225.99" rtt="244.52"/>
+</trace>
+<times srtt="238083" rttvar="12877" to="289591"/>
+</host>
+<taskbegin task="NSE" time="1642330287"/>
+<taskend task="NSE" time="1642330287"/>
+<taskbegin task="NSE" time="1642330287"/>
+<taskend task="NSE" time="1642330287"/>
+<taskbegin task="NSE" time="1642330287"/>
+<taskend task="NSE" time="1642330287"/>
+<runstats><finished time="1642330287" timestr="Sun Jan 16 05:51:27 2022" summary="Nmap done at Sun Jan 16 05:51:27 2022; 1 IP address (1 host up) scanned in 351.69 seconds" elapsed="351.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,60 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] msrpc found on tcp/135.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] microsoft-ds found on tcp/445.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+
+[*] http found on tcp/4443.
+
+
+
+[*] http found on tcp/8080.
+
+
+
+[*] unknown found on tcp/5040.
+
+
+
+[*] pando-pub found on tcp/7680.
+
+
+
+[*] msrpc found on tcp/49664.
+
+
+
+[*] msrpc found on tcp/49665.
+
+
+
+[*] msrpc found on tcp/49666.
+
+
+
+[*] msrpc found on tcp/49667.
+
+
+
+[*] msrpc found on tcp/49668.
+
+
+
+[*] msrpc found on tcp/49669.
+
+
+

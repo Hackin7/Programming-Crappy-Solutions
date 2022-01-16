@@ -1,0 +1,72 @@
+[*] msrpc found on tcp/135.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] microsoft-ds found on tcp/445.
+
+
+
+[*] cce4x found on tcp/12000.
+
+
+
+[*] unknown found on tcp/5040.
+
+
+
+[*] tcpwrapped found on tcp/12000.
+
+
+
+[*] ssh found on tcp/22222.
+
+
+
+[*] msrpc found on tcp/49664.
+
+
+
+[*] msrpc found on tcp/49665.
+
+
+
+[*] msrpc found on tcp/49666.
+
+
+
+[*] msrpc found on tcp/49667.
+
+
+
+[*] msrpc found on tcp/49668.
+
+
+
+[*] msrpc found on tcp/49669.
+
+
+
+[*] tcpwrapped found on tcp/49670.
+
+
+
+[*] tcpwrapped found on tcp/49693.
+
+
+
+[*] tcpwrapped found on tcp/49718.
+
+
+
+[*] tcpwrapped found on tcp/49796.
+
+
+
+[*] tcpwrapped found on tcp/49797.
+
+
+

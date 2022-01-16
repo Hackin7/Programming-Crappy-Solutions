@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 16 08:11:02 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/results/192.168.225.45/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/results/192.168.225.45/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.225.45 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/results/192.168.225.45/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/results/192.168.225.45/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.225.45" start="1642338662" startstr="Sun Jan 16 08:11:02 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642338670"/>
+<taskend task="NSE" time="1642338670"/>
+<taskbegin task="NSE" time="1642338670"/>
+<taskend task="NSE" time="1642338670"/>
+<taskbegin task="NSE" time="1642338670"/>
+<taskend task="NSE" time="1642338670"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642338670"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642338670"/>
+<taskbegin task="SYN Stealth Scan" time="1642338670"/>
+<taskend task="SYN Stealth Scan" time="1642338671" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642338672"/>
+<taskend task="Service scan" time="1642338679" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642338679"/>
+<taskprogress task="NSE" time="1642338710" percent="97.39" remaining="1" etc="1642338711"/>
+<taskprogress task="NSE" time="1642338740" percent="98.70" remaining="1" etc="1642338741"/>
+<taskprogress task="NSE" time="1642338770" percent="99.02" remaining="1" etc="1642338771"/>
+<taskprogress task="NSE" time="1642338800" percent="99.02" remaining="2" etc="1642338801"/>
+<taskprogress task="NSE" time="1642338830" percent="99.67" remaining="1" etc="1642338830"/>
+<taskprogress task="NSE" time="1642338860" percent="99.67" remaining="1" etc="1642338861"/>
+<taskprogress task="NSE" time="1642338890" percent="99.67" remaining="1" etc="1642338891"/>
+<taskprogress task="NSE" time="1642338920" percent="99.67" remaining="1" etc="1642338921"/>
+<taskprogress task="NSE" time="1642338950" percent="99.67" remaining="1" etc="1642338951"/>
+<taskprogress task="NSE" time="1642338980" percent="99.67" remaining="1" etc="1642338981"/>
+<taskprogress task="NSE" time="1642339010" percent="99.67" remaining="2" etc="1642339011"/>
+<taskprogress task="NSE" time="1642339040" percent="99.67" remaining="2" etc="1642339041"/>
+<taskprogress task="NSE" time="1642339070" percent="99.67" remaining="2" etc="1642339071"/>
+<taskprogress task="NSE" time="1642339100" percent="99.67" remaining="2" etc="1642339101"/>
+<taskend task="NSE" time="1642339109"/>
+<taskbegin task="NSE" time="1642339109"/>
+<taskend task="NSE" time="1642339112"/>
+<taskbegin task="NSE" time="1642339112"/>
+<taskend task="NSE" time="1642339112"/>
+<host starttime="1642338671" endtime="1642339112"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.225.45" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="GoAhead WebServer" method="probed" conf="10"><cpe>cpe:/a:goahead:goahead_webserver</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.225.45&#xa;  url                                                                        method&#xa;  http://192.168.225.45:80/index.asp                                         FORM&#xa;  http://192.168.225.45:80/index.asp?Message=Invalid user name or password.  FORM&#xa;"/><script id="http-backup-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.225.45&#xa;  http://192.168.225.45:80/CStyle/Theme.bak&#xa;  http://192.168.225.45:80/CStyle/Theme.css~&#xa;  http://192.168.225.45:80/CStyle/Theme copy.css&#xa;  http://192.168.225.45:80/CStyle/Copy of Theme.css&#xa;  http://192.168.225.45:80/CStyle/Copy (2) of Theme.css&#xa;  http://192.168.225.45:80/CStyle/Theme.css.1&#xa;  http://192.168.225.45:80/CStyle/Theme.css.~1~&#xa;  http://192.168.225.45:80/goform/%20&apos;/index.bak&#xa;  http://192.168.225.45:80/goform/%20&apos;/index.asp~&#xa;  http://192.168.225.45:80/goform/%20&apos;/index copy.asp&#xa;  http://192.168.225.45:80/goform/%20&apos;/Copy of index.asp&#xa;  http://192.168.225.45:80/goform/%20&apos;/Copy (2) of index.asp&#xa;  http://192.168.225.45:80/goform/%20&apos;/index.asp.1&#xa;  http://192.168.225.45:80/goform/%20&apos;/index.asp.~1~&#xa;"/><script id="http-chrono" output="Request times for /index.asp; avg: 906.00ms; min: 885.15ms; max: 951.44ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.225.45&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 120&#xa;    Comment: &#xa;        &lt;!-&#45; *** dialog box content *** -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 113&#xa;    Comment: &#xa;        &lt;!-&#45; System Login -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/CStyle/Theme.css&#xa;    Line number: 8&#xa;    Comment: &#xa;        /* 1st we cover the background color of a page for our three major display frames */&#xa;    &#xa;    Path: http://192.168.225.45:80/CStyle/Theme.css&#xa;    Line number: 33&#xa;    Comment: &#xa;        /* a unique set for tab navigation displays */&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 102&#xa;    Comment: &#xa;        &lt;!-&#45; *** begin dialog box *** -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 15&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#x9;&#x9;//-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/CStyle/Theme.css&#xa;    Line number: 25&#xa;    Comment: &#xa;        /* a unique set for error type displays */&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 106&#xa;    Comment: &#xa;        &lt;!-&#45; *** header bar *** -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/CStyle/Theme.css&#xa;    Line number: 16&#xa;    Comment: &#xa;        /* a unique set for dialog type displays, used most often */&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Line number: 92&#xa;    Comment: &#xa;        &lt;!-&#45; *** login page ****************************************************** -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp&#xa;    Line number: 15&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#x9;&#x9;//-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.225.45:80/CStyle/Theme.css&#xa;    Line number: 2&#xa;    Comment: &#xa;        /* default values for selected tags, Note: without background color defined! */&#xa;    &#xa;    Path: http://192.168.225.45:80/goform/formLogin&#xa;    Line number: 6&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;        top.location.href = &apos;/index.asp?Message=Invalid user name or password.&apos;;&#xa;        -&#45;&gt;&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.225.45&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp&#xa;    Form id: &#xa;    Form action: /goform/formLogin&#xa;    &#xa;    Path: http://192.168.225.45:80/index.asp?Message=Invalid user name or password.&#xa;    Form id: &#xa;    Form action: /goform/formLogin&#xa;"/><script id="http-date" output="Sun Jan 16 05:11:22 2022; -8h00m00s from local time."><elem key="date">2022-01-16T05:11:22+00:00</elem>
+<elem key="delta">-28800.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /cgi-bin/mj_wwwusr: Majordomo2 Mailing List&#xa;  /cgi-bin/vcs: Mitel Audio and Web Conferencing (AWC)&#xa;  /cgi-bin/ffileman.cgi?: Ffileman Web File Manager&#xa;  /cgi-bin/ck/mimencode: ContentKeeper Web Appliance&#xa;  /cgi-bin/masterCGI?: Alcatel-Lucent OmniPCX Enterprise&#xa;  /cgi-bin/awstats.pl: AWStats&#xa;  /cgi-bin/image/shikaku2.png: TeraStation PRO RAID 0/1/5 Network Attached Storage&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Sun Jan 16 05:11:28 2022&#xa;  Server: GoAhead-Webs&#xa;  Pragma: no-cache&#xa;  Cache-Control: no-cache&#xa;  Content-type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-majordomo2-dir-traversal" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 3eed0da39686ae686bf048c444b70841&#xa;Credits query returned unknown hash 3eed0da39686ae686bf048c444b70841"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache&#xa;  Pragma: &#xa;    Header: Pragma: no-cache"><table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache</elem>
+</table>
+<table key="Pragma">
+<elem>Header: Pragma: no-cache</elem>
+</table>
+</script><script id="http-server-header" output="GoAhead-Webs"><elem>GoAhead-Webs</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      asp: 1&#xa;    /CStyle/&#xa;      css: 1&#xa;    /goform/&#xa;      Other: 1&#xa;    /goform/%20&apos;/&#xa;      asp: 1&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /goform/%20&apos;/&#xa;  Total files found (by extension):&#xa;    Other: 1; asp: 2; css: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="HP Power Manager&#xa;Requested resource was http://192.168.225.45/index.asp"><elem key="title">HP Power Manager</elem>
+<elem key="redirect_url">http://192.168.225.45/index.asp</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: http://192.168.225.45/index.asp&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">http://192.168.225.45/index.asp</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 302"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;192.168.225.45:80/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="248156" rttvar="248156" to="1240780"/>
+</host>
+<taskbegin task="NSE" time="1642339112"/>
+<taskend task="NSE" time="1642339112"/>
+<taskbegin task="NSE" time="1642339112"/>
+<taskend task="NSE" time="1642339112"/>
+<taskbegin task="NSE" time="1642339112"/>
+<taskend task="NSE" time="1642339112"/>
+<runstats><finished time="1642339112" timestr="Sun Jan 16 08:18:32 2022" summary="Nmap done at Sun Jan 16 08:18:32 2022; 1 IP address (1 host up) scanned in 450.55 seconds" elapsed="450.55" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

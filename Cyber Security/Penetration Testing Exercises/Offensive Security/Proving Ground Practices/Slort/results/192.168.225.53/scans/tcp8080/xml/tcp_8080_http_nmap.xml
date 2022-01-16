@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 16 06:47:35 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.225.53 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.225.53" start="1642333655" startstr="Sun Jan 16 06:47:35 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8080"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642333660"/>
+<taskend task="NSE" time="1642333660"/>
+<taskbegin task="NSE" time="1642333660"/>
+<taskend task="NSE" time="1642333660"/>
+<taskbegin task="NSE" time="1642333660"/>
+<taskend task="NSE" time="1642333660"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642333661"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642333661"/>
+<taskbegin task="SYN Stealth Scan" time="1642333661"/>
+<taskend task="SYN Stealth Scan" time="1642333661" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642333662"/>
+<taskend task="Service scan" time="1642333668" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642333668"/>
+<taskprogress task="NSE" time="1642333719" percent="91.18" remaining="5" etc="1642333724"/>
+<taskprogress task="NSE" time="1642333749" percent="97.72" remaining="2" etc="1642333751"/>
+<taskprogress task="NSE" time="1642333779" percent="99.02" remaining="2" etc="1642333780"/>
+<taskprogress task="NSE" time="1642333809" percent="99.67" remaining="1" etc="1642333809"/>
+<taskprogress task="NSE" time="1642333839" percent="99.67" remaining="1" etc="1642333840"/>
+<taskprogress task="NSE" time="1642333869" percent="99.67" remaining="1" etc="1642333870"/>
+<taskprogress task="NSE" time="1642333899" percent="99.67" remaining="1" etc="1642333900"/>
+<taskprogress task="NSE" time="1642333929" percent="99.67" remaining="1" etc="1642333930"/>
+<taskprogress task="NSE" time="1642333959" percent="99.67" remaining="1" etc="1642333960"/>
+<taskprogress task="NSE" time="1642333989" percent="99.67" remaining="2" etc="1642333990"/>
+<taskprogress task="NSE" time="1642334019" percent="99.67" remaining="2" etc="1642334020"/>
+<taskprogress task="NSE" time="1642334049" percent="99.67" remaining="2" etc="1642334050"/>
+<taskprogress task="NSE" time="1642334079" percent="99.67" remaining="2" etc="1642334080"/>
+<taskprogress task="NSE" time="1642334109" percent="99.67" remaining="2" etc="1642334110"/>
+<taskprogress task="NSE" time="1642334139" percent="99.67" remaining="2" etc="1642334141"/>
+<taskprogress task="NSE" time="1642334169" percent="99.67" remaining="2" etc="1642334171"/>
+<taskprogress task="NSE" time="1642334199" percent="99.67" remaining="2" etc="1642334201"/>
+<taskprogress task="NSE" time="1642334229" percent="99.67" remaining="2" etc="1642334231"/>
+<taskprogress task="NSE" time="1642334259" percent="99.67" remaining="2" etc="1642334261"/>
+<taskprogress task="NSE" time="1642334289" percent="99.67" remaining="3" etc="1642334291"/>
+<taskprogress task="NSE" time="1642334319" percent="99.67" remaining="3" etc="1642334321"/>
+<taskprogress task="NSE" time="1642334349" percent="99.67" remaining="3" etc="1642334351"/>
+<taskprogress task="NSE" time="1642334379" percent="99.67" remaining="3" etc="1642334381"/>
+<taskprogress task="NSE" time="1642334409" percent="99.67" remaining="3" etc="1642334411"/>
+<taskprogress task="NSE" time="1642334439" percent="99.67" remaining="3" etc="1642334442"/>
+<taskprogress task="NSE" time="1642334469" percent="99.67" remaining="3" etc="1642334472"/>
+<taskprogress task="NSE" time="1642334499" percent="99.67" remaining="3" etc="1642334502"/>
+<taskprogress task="NSE" time="1642334529" percent="99.67" remaining="3" etc="1642334532"/>
+<taskprogress task="NSE" time="1642334559" percent="99.67" remaining="3" etc="1642334562"/>
+<taskprogress task="NSE" time="1642334589" percent="99.67" remaining="4" etc="1642334592"/>
+<taskprogress task="NSE" time="1642334619" percent="99.67" remaining="4" etc="1642334622"/>
+<taskprogress task="NSE" time="1642334649" percent="99.67" remaining="4" etc="1642334652"/>
+<taskprogress task="NSE" time="1642334679" percent="99.67" remaining="4" etc="1642334682"/>
+<taskprogress task="NSE" time="1642334709" percent="99.67" remaining="4" etc="1642334712"/>
+<taskprogress task="NSE" time="1642334739" percent="99.67" remaining="4" etc="1642334743"/>
+<taskprogress task="NSE" time="1642334769" percent="99.67" remaining="4" etc="1642334773"/>
+<taskprogress task="NSE" time="1642334799" percent="99.67" remaining="4" etc="1642334803"/>
+<taskprogress task="NSE" time="1642334829" percent="99.67" remaining="4" etc="1642334833"/>
+<taskprogress task="NSE" time="1642334859" percent="99.67" remaining="4" etc="1642334863"/>
+<taskprogress task="NSE" time="1642334889" percent="99.67" remaining="4" etc="1642334893"/>
+<taskprogress task="NSE" time="1642334919" percent="99.67" remaining="5" etc="1642334923"/>
+<taskprogress task="NSE" time="1642334949" percent="99.67" remaining="5" etc="1642334953"/>
+<taskprogress task="NSE" time="1642334979" percent="99.67" remaining="5" etc="1642334983"/>
+<taskprogress task="NSE" time="1642335009" percent="99.67" remaining="5" etc="1642335013"/>
+<taskprogress task="NSE" time="1642335039" percent="99.67" remaining="5" etc="1642335043"/>
+<taskprogress task="NSE" time="1642335069" percent="99.67" remaining="5" etc="1642335074"/>
+<taskprogress task="NSE" time="1642335099" percent="99.67" remaining="5" etc="1642335104"/>
+<taskprogress task="NSE" time="1642335129" percent="99.67" remaining="5" etc="1642335134"/>
+<taskprogress task="NSE" time="1642335159" percent="99.67" remaining="5" etc="1642335164"/>
+<taskprogress task="NSE" time="1642335189" percent="99.67" remaining="5" etc="1642335194"/>
+<taskprogress task="NSE" time="1642335219" percent="99.67" remaining="6" etc="1642335224"/>
+<taskprogress task="NSE" time="1642335249" percent="99.67" remaining="6" etc="1642335254"/>
+<taskprogress task="NSE" time="1642335279" percent="99.67" remaining="6" etc="1642335284"/>
+<taskprogress task="NSE" time="1642335309" percent="99.67" remaining="6" etc="1642335314"/>
+<taskprogress task="NSE" time="1642335339" percent="99.67" remaining="6" etc="1642335344"/>
+<taskprogress task="NSE" time="1642335369" percent="99.67" remaining="6" etc="1642335375"/>
+<taskprogress task="NSE" time="1642335399" percent="99.67" remaining="6" etc="1642335405"/>
+<taskprogress task="NSE" time="1642335429" percent="99.67" remaining="6" etc="1642335435"/>
+<taskprogress task="NSE" time="1642335459" percent="99.67" remaining="6" etc="1642335465"/>
+<taskprogress task="NSE" time="1642335489" percent="99.67" remaining="6" etc="1642335495"/>
+<taskprogress task="NSE" time="1642335519" percent="99.67" remaining="7" etc="1642335525"/>
+<taskprogress task="NSE" time="1642335549" percent="99.67" remaining="7" etc="1642335555"/>
+<taskprogress task="NSE" time="1642335579" percent="99.67" remaining="7" etc="1642335585"/>
+<taskprogress task="NSE" time="1642335609" percent="99.67" remaining="7" etc="1642335615"/>
+<taskprogress task="NSE" time="1642335639" percent="99.67" remaining="7" etc="1642335645"/>
+<taskprogress task="NSE" time="1642335669" percent="99.67" remaining="7" etc="1642335676"/>
+<taskprogress task="NSE" time="1642335699" percent="99.67" remaining="7" etc="1642335706"/>
+<taskprogress task="NSE" time="1642335729" percent="99.67" remaining="7" etc="1642335736"/>
+<taskprogress task="NSE" time="1642335759" percent="99.67" remaining="7" etc="1642335766"/>
+<taskprogress task="NSE" time="1642335789" percent="99.67" remaining="7" etc="1642335796"/>
+<taskprogress task="NSE" time="1642335819" percent="99.67" remaining="8" etc="1642335826"/>
+<taskprogress task="NSE" time="1642335849" percent="99.67" remaining="8" etc="1642335856"/>
+<taskprogress task="NSE" time="1642335879" percent="99.67" remaining="8" etc="1642335886"/>
+<taskprogress task="NSE" time="1642335909" percent="99.67" remaining="8" etc="1642335916"/>
+<taskprogress task="NSE" time="1642335939" percent="99.67" remaining="8" etc="1642335946"/>
+<taskprogress task="NSE" time="1642335969" percent="99.67" remaining="8" etc="1642335977"/>
+<taskprogress task="NSE" time="1642335999" percent="99.67" remaining="8" etc="1642336007"/>
+<taskprogress task="NSE" time="1642336029" percent="99.67" remaining="8" etc="1642336037"/>
+<taskprogress task="NSE" time="1642336059" percent="99.67" remaining="8" etc="1642336067"/>
+<taskprogress task="NSE" time="1642336089" percent="99.67" remaining="8" etc="1642336097"/>
+<taskprogress task="NSE" time="1642336119" percent="99.67" remaining="9" etc="1642336127"/>
+<taskprogress task="NSE" time="1642336149" percent="99.67" remaining="9" etc="1642336157"/>
+<taskprogress task="NSE" time="1642336179" percent="99.67" remaining="9" etc="1642336187"/>
+<taskprogress task="NSE" time="1642336209" percent="99.67" remaining="9" etc="1642336217"/>
+<taskprogress task="NSE" time="1642336239" percent="99.67" remaining="9" etc="1642336247"/>
+<taskprogress task="NSE" time="1642336269" percent="99.67" remaining="9" etc="1642336278"/>
+<taskprogress task="NSE" time="1642336299" percent="99.67" remaining="9" etc="1642336308"/>
+<taskprogress task="NSE" time="1642336329" percent="99.67" remaining="9" etc="1642336338"/>
+<taskprogress task="NSE" time="1642336359" percent="99.67" remaining="9" etc="1642336368"/>
+<taskprogress task="NSE" time="1642336389" percent="99.67" remaining="9" etc="1642336398"/>
+<taskprogress task="NSE" time="1642336419" percent="99.67" remaining="9" etc="1642336428"/>
+<taskprogress task="NSE" time="1642336449" percent="99.67" remaining="10" etc="1642336458"/>
+<taskprogress task="NSE" time="1642336479" percent="99.67" remaining="10" etc="1642336488"/>
+<taskprogress task="NSE" time="1642336509" percent="99.67" remaining="10" etc="1642336518"/>
+<taskprogress task="NSE" time="1642336539" percent="99.67" remaining="10" etc="1642336548"/>
+<taskprogress task="NSE" time="1642336569" percent="99.67" remaining="10" etc="1642336578"/>
+<taskprogress task="NSE" time="1642336599" percent="99.67" remaining="10" etc="1642336609"/>
+<taskprogress task="NSE" time="1642336629" percent="99.67" remaining="10" etc="1642336639"/>
+<taskprogress task="NSE" time="1642336659" percent="99.67" remaining="10" etc="1642336669"/>
+<taskprogress task="NSE" time="1642336689" percent="99.67" remaining="10" etc="1642336699"/>
+<taskprogress task="NSE" time="1642336719" percent="99.67" remaining="10" etc="1642336729"/>
+<taskprogress task="NSE" time="1642336749" percent="99.67" remaining="11" etc="1642336759"/>
+<taskprogress task="NSE" time="1642336779" percent="99.67" remaining="11" etc="1642336789"/>
+<taskprogress task="NSE" time="1642336809" percent="99.67" remaining="11" etc="1642336819"/>
+<taskprogress task="NSE" time="1642336839" percent="99.67" remaining="11" etc="1642336849"/>
+<taskprogress task="NSE" time="1642336869" percent="99.67" remaining="11" etc="1642336879"/>
+<taskprogress task="NSE" time="1642336899" percent="99.67" remaining="11" etc="1642336910"/>
+<taskprogress task="NSE" time="1642336929" percent="99.67" remaining="11" etc="1642336940"/>
+<taskprogress task="NSE" time="1642336959" percent="99.67" remaining="11" etc="1642336970"/>
+<taskprogress task="NSE" time="1642336989" percent="99.67" remaining="11" etc="1642337000"/>
+<taskprogress task="NSE" time="1642337019" percent="99.67" remaining="11" etc="1642337030"/>
+<taskprogress task="NSE" time="1642337049" percent="99.67" remaining="12" etc="1642337060"/>
+<taskprogress task="NSE" time="1642337079" percent="99.67" remaining="12" etc="1642337090"/>
+<taskprogress task="NSE" time="1642337109" percent="99.67" remaining="12" etc="1642337120"/>
+<taskprogress task="NSE" time="1642337139" percent="99.67" remaining="12" etc="1642337150"/>
+<taskprogress task="NSE" time="1642337169" percent="99.67" remaining="12" etc="1642337180"/>
+<taskprogress task="NSE" time="1642337199" percent="99.67" remaining="12" etc="1642337211"/>
+<taskprogress task="NSE" time="1642337229" percent="99.67" remaining="12" etc="1642337241"/>
+<taskprogress task="NSE" time="1642337259" percent="99.67" remaining="12" etc="1642337271"/>
+<taskprogress task="NSE" time="1642337289" percent="99.67" remaining="12" etc="1642337301"/>
+<taskprogress task="NSE" time="1642337319" percent="99.67" remaining="12" etc="1642337331"/>
+<taskprogress task="NSE" time="1642337349" percent="99.67" remaining="13" etc="1642337361"/>
+<taskprogress task="NSE" time="1642337379" percent="99.67" remaining="13" etc="1642337391"/>
+<taskprogress task="NSE" time="1642337409" percent="99.67" remaining="13" etc="1642337421"/>
+<taskprogress task="NSE" time="1642337439" percent="99.67" remaining="13" etc="1642337451"/>
+<taskprogress task="NSE" time="1642337469" percent="99.67" remaining="13" etc="1642337481"/>
+<taskprogress task="NSE" time="1642337499" percent="99.67" remaining="13" etc="1642337512"/>
+<taskprogress task="NSE" time="1642337529" percent="99.67" remaining="13" etc="1642337542"/>
+<taskprogress task="NSE" time="1642337559" percent="99.67" remaining="13" etc="1642337572"/>
+<taskprogress task="NSE" time="1642337589" percent="99.67" remaining="13" etc="1642337602"/>
+<taskprogress task="NSE" time="1642337619" percent="99.67" remaining="13" etc="1642337632"/>
+<taskprogress task="NSE" time="1642337649" percent="99.67" remaining="14" etc="1642337662"/>
+<taskprogress task="NSE" time="1642337679" percent="99.67" remaining="14" etc="1642337692"/>
+<taskprogress task="NSE" time="1642337709" percent="99.67" remaining="14" etc="1642337722"/>
+<taskprogress task="NSE" time="1642337739" percent="99.67" remaining="14" etc="1642337752"/>
+<taskprogress task="NSE" time="1642337769" percent="99.67" remaining="14" etc="1642337782"/>
+<taskprogress task="NSE" time="1642337799" percent="99.67" remaining="14" etc="1642337813"/>
+<taskprogress task="NSE" time="1642337829" percent="99.67" remaining="14" etc="1642337843"/>
+<taskprogress task="NSE" time="1642337859" percent="99.67" remaining="14" etc="1642337873"/>
+<taskprogress task="NSE" time="1642337889" percent="99.67" remaining="14" etc="1642337903"/>
+<taskprogress task="NSE" time="1642337919" percent="99.67" remaining="14" etc="1642337933"/>
+<taskprogress task="NSE" time="1642337949" percent="99.67" remaining="14" etc="1642337963"/>
+<taskprogress task="NSE" time="1642337979" percent="99.67" remaining="15" etc="1642337993"/>
+<taskprogress task="NSE" time="1642338009" percent="99.67" remaining="15" etc="1642338023"/>
+<taskprogress task="NSE" time="1642338039" percent="99.67" remaining="15" etc="1642338053"/>
+<taskprogress task="NSE" time="1642338069" percent="99.67" remaining="15" etc="1642338083"/>
+<taskprogress task="NSE" time="1642338099" percent="99.67" remaining="15" etc="1642338113"/>
+<taskprogress task="NSE" time="1642338129" percent="99.67" remaining="15" etc="1642338144"/>
+<taskprogress task="NSE" time="1642338159" percent="99.67" remaining="15" etc="1642338174"/>
+<taskprogress task="NSE" time="1642338189" percent="99.67" remaining="15" etc="1642338204"/>
+<taskprogress task="NSE" time="1642338219" percent="99.67" remaining="15" etc="1642338234"/>
+<taskprogress task="NSE" time="1642338249" percent="99.67" remaining="15" etc="1642338264"/>
+<taskprogress task="NSE" time="1642338279" percent="99.67" remaining="16" etc="1642338294"/>
+<taskprogress task="NSE" time="1642338309" percent="99.67" remaining="16" etc="1642338324"/>
+<taskprogress task="NSE" time="1642338339" percent="99.67" remaining="16" etc="1642338354"/>
+<taskprogress task="NSE" time="1642338369" percent="99.67" remaining="16" etc="1642338384"/>
+<taskprogress task="NSE" time="1642338399" percent="99.67" remaining="16" etc="1642338414"/>
+<taskprogress task="NSE" time="1642338429" percent="99.67" remaining="16" etc="1642338445"/>

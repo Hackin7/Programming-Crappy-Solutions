@@ -1,0 +1,3 @@
+Impacket v0.9.25.dev1+20211027.123255.1dad8f7f - Copyright 2021 SecureAuth Corporation
+
+

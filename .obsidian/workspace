@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Banzai/README.md",
+            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/README.md",
             "mode": "source",
             "source": false
           }
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Banzai/README.md"
+            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/README.md"
           }
         }
       }
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Banzai/README.md",
+                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Banzai/README.md"
+                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/README.md"
               }
             }
           }
@@ -111,15 +111,15 @@
   },
   "active": "96124f4b524c90d3",
   "lastOpenFiles": [
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nickel/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Internal/README.md",
     "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Banzai/README.md",
     "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nibbles/README.md",
     "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Helpdesk/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hawat/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/Pasted image 20220114002454.png",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ClamAV/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/Screenshot_2022-01-14_22_26_43.png",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Wombo/Screenshot_2022-01-14_22_23_29.png"
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Twiggy/README.md"
   ]
 }

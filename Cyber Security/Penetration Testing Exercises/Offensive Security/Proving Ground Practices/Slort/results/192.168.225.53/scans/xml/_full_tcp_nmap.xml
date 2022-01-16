@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 16 06:45:01 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.53 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Slort/results/192.168.225.53/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.53" start="1642333501" startstr="Sun Jan 16 06:45:01 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642333503"/>
+<taskend task="NSE" time="1642333503"/>
+<taskbegin task="NSE" time="1642333503"/>
+<taskend task="NSE" time="1642333503"/>
+<taskbegin task="NSE" time="1642333503"/>
+<taskend task="NSE" time="1642333503"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642333503"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642333503"/>
+<taskbegin task="SYN Stealth Scan" time="1642333503"/>
+<taskprogress task="SYN Stealth Scan" time="1642333534" percent="7.61" remaining="377" etc="1642333911"/>
+<taskprogress task="SYN Stealth Scan" time="1642333564" percent="21.14" remaining="228" etc="1642333792"/>
+<taskprogress task="SYN Stealth Scan" time="1642333594" percent="36.68" remaining="158" etc="1642333751"/>
+<taskprogress task="SYN Stealth Scan" time="1642333624" percent="48.16" remaining="131" etc="1642333754"/>
+<taskprogress task="SYN Stealth Scan" time="1642333654" percent="58.40" remaining="108" etc="1642333762"/>
+<taskprogress task="SYN Stealth Scan" time="1642333684" percent="73.99" remaining="64" etc="1642333748"/>
+<taskend task="SYN Stealth Scan" time="1642333725" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642333725"/>
+<taskprogress task="Service scan" time="1642333775" percent="40.00" remaining="76" etc="1642333850"/>
+<taskend task="Service scan" time="1642334264" extrainfo="15 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642334271"/>
+<taskend task="Traceroute" time="1642334272"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642334272"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642334272"/>
+<taskbegin task="NSE" time="1642334272"/>
+<taskprogress task="NSE" time="1642334303" percent="99.95" remaining="1" etc="1642334303"/>
+<taskend task="NSE" time="1642334314"/>
+<taskbegin task="NSE" time="1642334314"/>
+<taskend task="NSE" time="1642334317"/>
+<taskbegin task="NSE" time="1642334317"/>
+<taskend task="NSE" time="1642334317"/>
+<host starttime="1642333503" endtime="1642334317"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.225.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65520">
+<extrareasons reason="no-responses" count="65520"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" version="0.9.41 beta" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server:0.9.41_beta</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" servicefp="SF-Port3306-TCP:V=7.91%I=9%D=1/16%Time=61E4061E%P=x86_64-pc-linux-gnu%r(NULL,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(LDAPSearchReq,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.225&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  LDAPSearchReq, NULL: &#xa;    Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server"><elem key="LDAPSearchReq, NULL">&#xa;    Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server</elem>
+</script><script id="mysql-info" output="&#xa;  MySQL Error: Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server"><elem key="MySQL Error">Host &apos;192.168.49.225&apos; is not allowed to connect to this MariaDB server</elem>
+</script></port>
+<port protocol="tcp" portid="4443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.43" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.4.6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.43</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6"><elem>Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6</elem>
+</script><script id="http-title" output="Welcome to XAMPP&#xa;Requested resource was http://192.168.225.53:4443/dashboard/"><elem key="title">Welcome to XAMPP</elem>
+<elem key="redirect_url">http://192.168.225.53:4443/dashboard/</elem>
+</script></port>
+<port protocol="tcp" portid="5040"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.43" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.4.6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.43</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6"><elem>Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6</elem>
+</script><script id="http-title" output="Welcome to XAMPP&#xa;Requested resource was http://192.168.225.53:8080/dashboard/"><elem key="title">Welcome to XAMPP</elem>
+<elem key="redirect_url">http://192.168.225.53:8080/dashboard/</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows XP SP3" accuracy="88" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 98 SE" accuracy="85" line="78713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="98" accuracy="85"><cpe>cpe:/o:microsoft:windows_98</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/16%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E4086D%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=101%GCD=1%ISR=109%TS=U)&#xa;OPS(O1=M506NW8NNS%O2=M506NW8NNS%O3=M506NW8%O4=M506NW8NNS%O5=M506NW8NNS%O6=M506NNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M506NW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="75F4EAAF,B753540B,C68B675A,6F79D2C,64AE1EAD,9772DB50"/>
+<ipidsequence class="Busy server or unknown class" values="E2A1,E2FC,E307,E33B,E365,E384"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="0s"><elem key="count">1</elem>
+<elem key="mean">0</elem>
+<elem key="stddev">0</elem>
+<elem key="median">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 36196/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 17617/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 48522/udp): CLEAN (Timeout)&#xa;  Check 4 (port 21495/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-16T11:57:55&#xa;  start_date: N/A"><elem key="date">2022-01-16T11:57:55</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="243.05"/>
+<hop ttl="2" ipaddr="192.168.225.53" rtt="243.06"/>
+</trace>
+<times srtt="242992" rttvar="183" to="243724"/>
+</host>
+<taskbegin task="NSE" time="1642334317"/>
+<taskend task="NSE" time="1642334317"/>
+<taskbegin task="NSE" time="1642334317"/>
+<taskend task="NSE" time="1642334317"/>
+<taskbegin task="NSE" time="1642334317"/>
+<taskend task="NSE" time="1642334317"/>
+<runstats><finished time="1642334317" timestr="Sun Jan 16 06:58:37 2022" summary="Nmap done at Sun Jan 16 06:58:37 2022; 1 IP address (1 host up) scanned in 816.68 seconds" elapsed="816.68" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

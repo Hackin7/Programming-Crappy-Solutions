@@ -1,0 +1,17 @@
+Doing NBT name scan for addresses from 192.168.225.45
+
+
+NetBIOS Name Table for Host 192.168.225.45:
+
+Incomplete packet, 209 bytes long.
+Name             Service          Type
+----------------------------------------
+KEVIN            Workstation Service
+WORKGROUP        Domain Name
+KEVIN            File Server Service
+WORKGROUP        Browser Service Elections
+WORKGROUP        Master Browser
+__MSBROWSE__  Master Browser
+
+Adapter address: 00:50:56:bf:40:6d
+----------------------------------------
