@@ -60,3 +60,5 @@ Nmap done: 1 IP address (1 host up) scanned in 876.65 seconds
 # Exploitation
 
 # Others
+OpenSSH
+https://msrc.microsoft.com/update-guide/vulnerability/CVE-2020-1292

@@ -1,0 +1,187 @@
+# Nmap 7.91 scan initiated Mon Jan 17 07:53:30 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.225.71
+Nmap scan report for 192.168.225.71
+Host is up, received user-set (0.39s latency).
+Scanned at 2022-01-17 07:53:36 EST for 804s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.14.0 (Ubuntu)
+|_http-chrono: Request times for /; avg: 1140.16ms; min: 971.89ms; max: 1315.16ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.225.71
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 120
+|     Comment: 
+|         <!-- end navbar -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 98
+|     Comment: 
+|         <!-- navbar right -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 118
+|     Comment: 
+|         <!-- end navbar right -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 168
+|     Comment: 
+|         <!-- jquery and bootstrap and flaskbb.js -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 68
+|     Comment: 
+|         <!-- navbar left -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 123
+|     Comment: 
+|         <!-- Place for all the (flashed) messages -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 40
+|     Comment: 
+|         <!-- main forum layout -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 146
+|     Comment: 
+|         <!-- end container -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 25
+|     Comment: 
+|         <!-- emoji -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 148
+|     Comment: 
+|         <!-- the forum footer -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 21
+|     Comment: 
+|         <!-- bootstrap & aurora theme -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 165
+|     Comment: 
+|         <!-- end flaskbb-layout -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 19
+|     Comment: 
+|         <!-- syntax highlighting -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 57
+|     Comment: 
+|         <!-- Brand and toggle get grouped for better mobile display -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 170
+|     Comment: 
+|         <!-- Enable tooltips in all templates -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 44
+|     Comment: 
+|         <!-- forum header - place for the project title and subtitle -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 132
+|     Comment: 
+|         <!-- the actual content block -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 54
+|     Comment: 
+|         <!-- forum menu - contains all the navigation items -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 119
+|     Comment: 
+|         <!-- end navbar-collapse -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 23
+|     Comment: 
+|         <!-- lato font -->
+|     
+|     Path: http://192.168.225.71:80/
+|     Line number: 101
+|     Comment: 
+|_        <!-- Not logged in - Login/Register -->
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 17 Jan 2022 12:53:59 GMT; 0s from local time.
+|_http-devframework: RoR detected. Found csrf field onhttp://192.168.225.71:80/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /robots.txt: Robots file
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.225.71
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://192.168.225.71:80/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: nginx/1.14.0 (Ubuntu)
+|   Date: Mon, 17 Jan 2022 12:54:04 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 6461
+|   Connection: close
+|   Vary: Cookie
+|   Set-Cookie: session=eyJjc3JmX3Rva2VuIjp7IiBiIjoiWmpkbVpEaGtaRGhqT1dKbFpUUm1Oak5rWldSbFpUYzNNemM0TnpRek16SmxPVFF6WVdZd09BPT0ifX0.FMb4bA.fJoORCcHLkQMZlv_KzEYbcRqzzc; HttpOnly; Path=/
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+|_http-mobileversion-checker: No mobile version detected.
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  http://nil:80/static/js/scripts.min.js
+|_http-security-headers: 
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title:         Page not found - FlaskBB        
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 404
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 17 08:07:00 2022 -- 1 IP address (1 host up) scanned in 810.22 seconds

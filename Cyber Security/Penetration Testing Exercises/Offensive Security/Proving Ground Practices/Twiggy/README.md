@@ -21,6 +21,9 @@
 https://chr0x6eos.github.io/2021/02/20/htb-Feline.html
 https://www.exploit-db.com/exploits/48421
 https://ivanitlearning.wordpress.com/2021/06/02/tips-from-the-pwk-labs-and-pg-practice/
+
+https://github.com/dozernz/cve-2020-11651/blob/master/CVE-2020-11651.py
+
 ```
 ┌──(kali㉿kali)-[/tmp]
 └─$ python3 CVE-2020-11651.py 192.168.90.62 master whoami                                                                                                           1 ⨯

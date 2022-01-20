@@ -1,0 +1,12 @@
+lpcfg_do_global_parameter: WARNING: The "client use spnego" option is deprecated
+lpcfg_do_global_parameter: WARNING: The "client ntlmv2 auth" option is deprecated
+do_connect: Connection to  failed (Error NT_STATUS_IO_TIMEOUT)
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	backups         Disk      Share for backups
+	IPC$            IPC       IPC Service (Samba 4.7.6-Ubuntu)
+Reconnecting with SMB1 for workgroup listing.
+Unable to connect with SMB1 -- no workgroup available
+

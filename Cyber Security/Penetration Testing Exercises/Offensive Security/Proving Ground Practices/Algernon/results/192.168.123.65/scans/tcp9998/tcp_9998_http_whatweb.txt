@@ -1,0 +1,130 @@
+WhatWeb report for http://192.168.123.65:9998
+Status    : 302 Found
+Title     : Object moved
+IP        : 192.168.123.65
+Country   : RESERVED, ZZ
+
+Summary   : Microsoft-IIS[10.0], HTTPServer[Microsoft-IIS/10.0], UncommonHeaders[x-aspnetmvc-version], RedirectLocation[/interface/root], ASP_NET[MVC5.2]
+
+Detected Plugins:
+[ ASP_NET ]
+	ASP.NET is a free web framework that enables great Web
+	applications. Used by millions of developers, it runs some
+	of the biggest sites in the world.
+
+	String       : MVC5.2
+	Google Dorks: (2)
+	Website     : https://www.asp.net/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and
+	302
+
+	String       : /interface/root (from location)
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-aspnetmvc-version (from headers)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Cache-Control: private
+	Content-Type: text/html; charset=utf-8
+	Location: /interface/root
+	Server: Microsoft-IIS/10.0
+	X-AspNetMvc-Version: 5.2
+	Date: Mon, 17 Jan 2022 10:18:53 GMT
+	Connection: close
+	Content-Length: 132
+
+WhatWeb report for http://192.168.123.65:9998/interface/root
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.123.65
+Country   : RESERVED, ZZ
+
+Summary   : Script, Microsoft-IIS[10.0], X-UA-Compatible[IE=edge], HTML5, HTTPServer[Microsoft-IIS/10.0], UncommonHeaders[x-aspnetmvc-version], ASP_NET[MVC5.2]
+
+Detected Plugins:
+[ ASP_NET ]
+	ASP.NET is a free web framework that enables great Web
+	applications. Used by millions of developers, it runs some
+	of the biggest sites in the world.
+
+	String       : MVC5.2
+	Google Dorks: (2)
+	Website     : https://www.asp.net/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-aspnetmvc-version (from headers)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Cache-Control: private
+	Content-Type: text/html; charset=utf-8
+	Server: Microsoft-IIS/10.0
+	X-AspNetMvc-Version: 5.2
+	Date: Mon, 17 Jan 2022 10:18:55 GMT
+	Connection: close
+	Content-Length: 5199
+
+

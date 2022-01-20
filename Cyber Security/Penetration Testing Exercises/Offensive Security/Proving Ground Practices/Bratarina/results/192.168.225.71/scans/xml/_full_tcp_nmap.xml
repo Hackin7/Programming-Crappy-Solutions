@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Jan 17 07:52:15 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.71 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/xml/_full_tcp_nmap.xml&quot; 192.168.225.71" start="1642423935" startstr="Mon Jan 17 07:52:15 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642423938"/>
+<taskend task="NSE" time="1642423938"/>
+<taskbegin task="NSE" time="1642423938"/>
+<taskend task="NSE" time="1642423938"/>
+<taskbegin task="NSE" time="1642423938"/>
+<taskend task="NSE" time="1642423938"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642423938"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642423938"/>
+<taskbegin task="SYN Stealth Scan" time="1642423938"/>
+<taskprogress task="SYN Stealth Scan" time="1642423969" percent="5.63" remaining="520" etc="1642424489"/>
+<taskprogress task="SYN Stealth Scan" time="1642423999" percent="16.14" remaining="317" etc="1642424316"/>
+<taskprogress task="SYN Stealth Scan" time="1642424029" percent="25.41" remaining="268" etc="1642424296"/>
+<taskprogress task="SYN Stealth Scan" time="1642424059" percent="28.52" remaining="304" etc="1642424362"/>
+<taskprogress task="SYN Stealth Scan" time="1642424104" percent="37.43" remaining="278" etc="1642424382"/>
+<taskprogress task="SYN Stealth Scan" time="1642424134" percent="50.12" remaining="196" etc="1642424329"/>
+<taskprogress task="SYN Stealth Scan" time="1642424164" percent="63.20" remaining="132" etc="1642424296"/>
+<taskprogress task="SYN Stealth Scan" time="1642424194" percent="75.65" remaining="83" etc="1642424276"/>
+<taskprogress task="SYN Stealth Scan" time="1642424224" percent="85.56" remaining="49" etc="1642424272"/>
+<taskend task="SYN Stealth Scan" time="1642424275" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642424275"/>
+<taskend task="Service scan" time="1642424282" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642424289"/>
+<taskend task="Traceroute" time="1642424289"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642424289"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642424289"/>
+<taskbegin task="NSE" time="1642424289"/>
+<taskprogress task="NSE" time="1642424320" percent="99.82" remaining="1" etc="1642424320"/>
+<taskend task="NSE" time="1642424329"/>
+<taskbegin task="NSE" time="1642424329"/>
+<taskend task="NSE" time="1642424332"/>
+<taskbegin task="NSE" time="1642424332"/>
+<taskend task="NSE" time="1642424332"/>
+<host starttime="1642423938" endtime="1642424332"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.225.71" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65530"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 db:dd:2c:ea:2f:85:c5:89:bc:fc:e9:a3:38:f0:d7:50 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ0GZmmFtQUJbj2HgPsye2Xccyyh9mC8fsCwIivM4x3o3mwZDNi6g+Y6nIs5SuOJj2IpS+E9O5wB71MSIv7d7XYrd6paprfvnvMCyAQ9VTn8py6CQ/OsgeOITU+JnAxoe3WQklpyAVqhJ7ASqAInZF8oHDaebr6gBKEq4nkoLOtJSZeB8xWDHhbQZjG6AY81Y2mHPZH/LC4gSXpSmw+3h0zhlCN/kxeyhjrsrZqIVdKhg4emds8+gQyu1Wrz4AUUBGscI6Sh5rjImr+SC4rAGgn6N0MVPcZA1mS0JUplz758Y3YFXstqO2SdaHB/Qb50fkcpclcYKibSbCv5ZLNzOf&#xa;  256 e3:b7:65:c2:a7:8e:45:29:bb:62:ec:30:1a:eb:ed:6d (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOWgZAzhJ+plc4Rk/YyGvQ1KOKK9j31ix1uCWIAirjnZS/lKwcvYrkG+lVsJRBnBYVA+67ILSJR2YNVz9uZshPE=&#xa;  256 d5:5b:79:5b:ce:48:d8:57:46:db:59:4f:cd:45:5d:ef (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC2Z9krPXlbEN6Xl40sc3BiVLfhbtd+l5ZFNBKkF7pYT"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">dbdd2cea2f85c589bcfce9a338f0d750</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDJ0GZmmFtQUJbj2HgPsye2Xccyyh9mC8fsCwIivM4x3o3mwZDNi6g+Y6nIs5SuOJj2IpS+E9O5wB71MSIv7d7XYrd6paprfvnvMCyAQ9VTn8py6CQ/OsgeOITU+JnAxoe3WQklpyAVqhJ7ASqAInZF8oHDaebr6gBKEq4nkoLOtJSZeB8xWDHhbQZjG6AY81Y2mHPZH/LC4gSXpSmw+3h0zhlCN/kxeyhjrsrZqIVdKhg4emds8+gQyu1Wrz4AUUBGscI6Sh5rjImr+SC4rAGgn6N0MVPcZA1mS0JUplz758Y3YFXstqO2SdaHB/Qb50fkcpclcYKibSbCv5ZLNzOf</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">e3b765c2a78e4529bb62ec301aebed6d</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOWgZAzhJ+plc4Rk/YyGvQ1KOKK9j31ix1uCWIAirjnZS/lKwcvYrkG+lVsJRBnBYVA+67ILSJR2YNVz9uZshPE=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">d55b795bce48d85746db594fcd455def</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIC2Z9krPXlbEN6Xl40sc3BiVLfhbtd+l5ZFNBKkF7pYT</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="OpenSMTPD" hostname="bratarina" method="probed" conf="10"/><script id="smtp-commands" output="bratarina Hello nmap.scanme.org [192.168.49.225], pleased to meet you, 8BITMIME, ENHANCEDSTATUSCODES, SIZE 36700160, DSN, HELP, &#xa; 2.0.0 This is OpenSMTPD 2.0.0 To report bugs in the implementation, please contact bugs@openbsd.org 2.0.0 with full details 2.0.0 End of HELP info "/></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.14.0 (Ubuntu)"><elem>nginx/1.14.0 (Ubuntu)</elem>
+</script><script id="http-title" output="        Page not found - FlaskBB        "><elem key="title">&#xa;        Page not found - FlaskBB&#xa;        </elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.7.6-Ubuntu" extrainfo="workgroup: COFFEECORP" hostname="BRATARINA" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="53"/>
+<osmatch name="Linux 2.6.32" accuracy="88" line="55584">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="88" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="88" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="87" line="68507">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="87"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="87"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="87" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="87" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="87" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="87" line="67261">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="87" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/17%OT=22%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E5680C%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=101%GCD=1%ISR=110%TI=Z%II=I%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2715000" lastboot="Thu Dec 16 21:48:52 2021"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="8E98E153,780AA2F,C62DA45A,56CDF90B,9E674F97,1FD19767"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="A1D2E9EB,A1D2EA4D,A1D2EAB1,A1D2EB1A,A1D2EB6F,A1D2EBE7"/>
+<hostscript><script id="clock-skew" output="mean: 1h40m01s, deviation: 2h53m13s, median: 0s"><elem key="stddev">10393</elem>
+<elem key="median">0</elem>
+<elem key="mean">6001</elem>
+<elem key="count">3</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 24217/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 35039/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 35554/udp): CLEAN (Timeout)&#xa;  Check 4 (port 26627/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.7.6-Ubuntu)&#xa;  Computer name: bratarina&#xa;  NetBIOS computer name: BRATARINA\x00&#xa;  Domain name: \x00&#xa;  FQDN: bratarina&#xa;  System time: 2022-01-17T07:58:12-05:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.7.6-Ubuntu</elem>
+<elem key="server">BRATARINA\x00</elem>
+<elem key="date">2022-01-17T07:58:12-05:00</elem>
+<elem key="fqdn">bratarina</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">COFFEECORP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-17T12:58:13&#xa;  start_date: N/A"><elem key="date">2022-01-17T12:58:13</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="53" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="330.87"/>
+<hop ttl="2" ipaddr="192.168.225.71" rtt="334.60"/>
+</trace>
+<times srtt="317170" rttvar="13128" to="369682"/>
+</host>
+<taskbegin task="NSE" time="1642424332"/>
+<taskend task="NSE" time="1642424332"/>
+<taskbegin task="NSE" time="1642424332"/>
+<taskend task="NSE" time="1642424332"/>
+<taskbegin task="NSE" time="1642424332"/>
+<taskend task="NSE" time="1642424332"/>
+<runstats><finished time="1642424332" timestr="Mon Jan 17 07:58:52 2022" summary="Nmap done at Mon Jan 17 07:58:52 2022; 1 IP address (1 host up) scanned in 397.64 seconds" elapsed="397.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

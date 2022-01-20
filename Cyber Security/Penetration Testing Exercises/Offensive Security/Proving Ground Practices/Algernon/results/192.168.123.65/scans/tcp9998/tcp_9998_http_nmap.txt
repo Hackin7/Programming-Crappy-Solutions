@@ -1,0 +1,257 @@
+# Nmap 7.91 scan initiated Mon Jan 17 05:18:48 2022 as: nmap -vv --reason -Pn -T4 -sV -p 9998 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/tcp_9998_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/xml/tcp_9998_http_nmap.xml" 192.168.123.65
+Nmap scan report for 192.168.123.65
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-17 05:18:50 EST for 602s
+
+PORT     STATE SERVICE REASON          VERSION
+9998/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-backup-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.123.65
+|   http://192.168.123.65:9998/interface/output/vendor-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js
+|   http://192.168.123.65:9998/interface/output/angular-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js
+|_  http://192.168.123.65:9998/interface/output/site-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js
+|_http-chrono: Request times for /; avg: 902.89ms; min: 833.27ms; max: 1097.20ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.123.65
+|     
+|     Path: http://192.168.123.65:9998/
+|     Line number: 8
+|     Comment: 
+|         <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+|     
+|     Path: http://192.168.123.65:9998/
+|     Line number: 16
+|     Comment: 
+|         <!-- Title set in directive -->
+|     
+|     Path: http://192.168.123.65:9998/
+|     Line number: 20
+|     Comment: 
+|         <!-- Styles -->
+|     
+|     Path: http://192.168.123.65:9998/
+|     Line number: 6
+|     Comment: 
+|         <!-- SmarterMail Copyright (c) 2003-2022 SmarterTools Inc.  All Rights Reserved. -->
+|     
+|     Path: http://192.168.123.65:9998/
+|     Line number: 28
+|     Comment: 
+|_        <!-- Font Awesome and Bootstrap -->
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 17 Jan 2022 10:19:11 GMT; +2s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /account.aspx: Possible admin folder
+|   /admin/account.aspx: Possible admin folder
+|   /admin/index.aspx: Possible admin folder
+|   /admin/login.aspx: Possible admin folder
+|   /admin/admin.aspx: Possible admin folder
+|   /admin_area/admin.aspx: Possible admin folder
+|   /admin_area/login.aspx: Possible admin folder
+|   /admin_area/index.aspx: Possible admin folder
+|   /bb-admin/index.aspx: Possible admin folder
+|   /bb-admin/login.aspx: Possible admin folder
+|   /bb-admin/admin.aspx: Possible admin folder
+|   /admin/home.aspx: Possible admin folder
+|   /admin/controlpanel.aspx: Possible admin folder
+|   /admin.aspx: Possible admin folder
+|   /pages/admin/admin-login.aspx: Possible admin folder
+|   /admin/admin-login.aspx: Possible admin folder
+|   /admin-login.aspx: Possible admin folder
+|   /admin/cp.aspx: Possible admin folder
+|   /cp.aspx: Possible admin folder
+|   /administrator/account.aspx: Possible admin folder
+|   /administrator.aspx: Possible admin folder
+|   /modelsearch/login.aspx: Possible admin folder
+|   /moderator.aspx: Possible admin folder
+|   /moderator/login.aspx: Possible admin folder
+|   /administrator/login.aspx: Possible admin folder
+|   /moderator/admin.aspx: Possible admin folder
+|   /controlpanel.aspx: Possible admin folder
+|   /user.aspx: Possible admin folder
+|   /admincp/index.aspx: Possible admin folder
+|   /admincp/login.aspx: Possible admin folder
+|   /admincontrol.aspx: Possible admin folder
+|   /adminpanel.aspx: Possible admin folder
+|   /webadmin.aspx: Possible admin folder
+|   /webadmin/index.aspx: Possible admin folder
+|   /webadmin/admin.aspx: Possible admin folder
+|   /webadmin/login.aspx: Possible admin folder
+|   /admin/admin_login.aspx: Possible admin folder
+|   /admin_login.aspx: Possible admin folder
+|   /panel-administracion/login.aspx: Possible admin folder
+|   /adminLogin.aspx: Possible admin folder
+|   /admin/adminLogin.aspx: Possible admin folder
+|   /home.aspx: Possible admin folder
+|   /adminarea/index.aspx: Possible admin folder
+|   /adminarea/admin.aspx: Possible admin folder
+|   /adminarea/login.aspx: Possible admin folder
+|   /panel-administracion/index.aspx: Possible admin folder
+|   /panel-administracion/admin.aspx: Possible admin folder
+|   /modelsearch/index.aspx: Possible admin folder
+|   /modelsearch/admin.aspx: Possible admin folder
+|   /administrator/index.aspx: Possible admin folder
+|   /admincontrol/login.aspx: Possible admin folder
+|   /adm/admloginuser.aspx: Possible admin folder
+|   /admloginuser.aspx: Possible admin folder
+|   /admin2.aspx: Possible admin folder
+|   /admin2/login.aspx: Possible admin folder
+|   /admin2/index.aspx: Possible admin folder
+|   /adm/index.aspx: Possible admin folder
+|   /adm.aspx: Possible admin folder
+|   /adm_auth.aspx: Possible admin folder
+|   /memberadmin.aspx: Possible admin folder
+|   /administratorlogin.aspx: Possible admin folder
+|   /siteadmin/login.aspx: Possible admin folder
+|   /siteadmin/index.aspx: Possible admin folder
+|   /administr8.aspx: Possible admin folder
+|   /administracao.aspx: Possible admin folder
+|   /administracion.aspx: Possible admin folder
+|   /admins.aspx: Possible admin folder
+|   /AdminLogin.aspx: Possible admin folder
+|   /atom.aspx: RSS or Atom feed
+|   /rss.aspx: RSS or Atom feed
+|   /mono/1.1/index.aspx: Sample scripts
+|   /log.aspx: Logs
+|   /logs.aspx: Logs
+|   /Citrix/MetaFrame/auth/login.aspx: Citrix
+|   /sw/auth/login.aspx: Citrix
+|   /Pages/Default.aspx: MS Sharepoint
+|   /_admin/operations.aspx: MS Sharepoint
+|   /_layouts/viewlsts.aspx: MS Sharepoint
+|   /forms/allitems.aspx: MS Sharepoint
+|   /forms/webfldr.aspx: MS Sharepoint
+|   /forms/mod-view.aspx: MS Sharepoint
+|   /forms/my-sub.aspx: MS Sharepoint
+|   /pages/categoryresults.aspx: MS Sharepoint
+|   /categories/viewcategory.aspx: MS Sharepoint
+|   /editdocs.aspx: MS Sharepoint
+|   /workflowtasks/allitems.aspx: MS Sharepoint
+|   /categories/allcategories.aspx: MS Sharepoint
+|   /categories/SOMEOTHERDIR/allcategories.aspx: MS Sharepoint
+|   /mycategories.aspx: MS Sharepoint
+|   /lists/allitems.aspx: MS Sharepoint
+|   /lists/default.aspx: MS Sharepoint
+|   /lists/allposts.aspx: MS Sharepoint
+|   /lists/archive.aspx: MS Sharepoint
+|   /lists/byauthor.aspx: MS Sharepoint
+|   /lists/calendar.aspx: MS Sharepoint
+|   /lists/mod-view.aspx: MS Sharepoint
+|   /lists/myposts.aspx: MS Sharepoint
+|   /lists/my-sub.aspx: MS Sharepoint
+|   /lists/allcomments.aspx: MS Sharepoint
+|   /lists/mycomments.aspx: MS Sharepoint
+|   /_layouts/userdisp.aspx: MS Sharepoint
+|   /_layouts/help.aspx: MS Sharepoint
+|   /_layouts/download.aspx: MS Sharepoint
+|   /CuteSoft_Client/CuteEditor/Load.ashx?type=image&file=../../../web.config: Cute Editor ASP.NET Remote File Disclosure ( CVE 2009-4665 )
+|   /includes/FCKeditor/editor/filemanager/browser/default/connectors/aspx/connector.aspx: PHPnuke/Remote File Download
+|   /Backstage/Components/FreeTextBox/ftb.imagegallery.aspx: Luftguitar CMS/File upload
+|   /Providers/HtmlEditorProviders/Fck/fcklinkgallery.aspx: DotNetNuke / File Upload
+|   /reports/: Potentially interesting folder
+|   /scripts/: Potentially interesting folder
+|   /services/: Potentially interesting folder
+|   /webdav/: Potentially interesting folder (401 Access Denied)
+|   /sitecore/login/default.aspx: Sitecore.NET login page
+|   /sitecore/admin/stats.aspx: Sitecore.NET (CMS)
+|   /sitecore/admin/unlock_admin.aspx: Sitecore.NET (CMS)
+|   /sitecore/admin/ShowConfig.aspx: Sitecore.NET (CMS)
+|_  /sitecore%20modules/staging/service/api.asmx: Sitecore.NET (CMS)
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-favicon: Unknown favicon MD5: 9D7294CAAB5C2DF4CD916F53653714D5
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.123.65:9998/interface/output/angular-v-100.0.6919.30414.8d65fc3f1d47d00.js: 
+|     (1) email: 
+|_      + ariel@mashraki.co.il
+| http-headers: 
+|   Cache-Control: private
+|   Content-Length: 5199
+|   Content-Type: text/html; charset=utf-8
+|   Server: Microsoft-IIS/10.0
+|   X-AspNetMvc-Version: 5.2
+|   Date: Mon, 17 Jan 2022 10:19:12 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-iis-webdav-vuln: Could not determine vulnerability, since root folder is password protected
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 6ca29178930769195cdff059439d72d6
+|_Credits query returned unknown hash 6ca29178930769195cdff059439d72d6
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: private
+|_http-server-header: Microsoft-IIS/10.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; ico: 1
+|     /interface/output/
+|       css: 1; js: 2
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /interface/output/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; ico: 1; js: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_Requested resource was /interface/root
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Redirected To: /interface/errors/OutofDateBrowser.html
+|   Forbidden/Redirected User Agents: 
+|     http client: 
+|       Different Host: /interface/root
+|     HTTP::Lite: 
+|       Different Host: /interface/root
+|     PHPCrawl: 
+|       Different Host: /interface/root
+|     WWW-Mechanize/1.34: 
+|       Different Host: /interface/root
+|     Snoopy: 
+|       Different Host: /interface/root
+|     Wget/1.13.4 (linux-gnu): 
+|       Different Host: /interface/root
+|     Zend_Http_Client: 
+|       Different Host: /interface/root
+|     libcurl-agent/1.0: 
+|       Different Host: /interface/root
+|     GT::WWW: 
+|       Different Host: /interface/root
+|     PHP/: 
+|       Different Host: /interface/root
+|     MFC_Tear_Sample: 
+|       Different Host: /interface/root
+|     libwww: 
+|       Different Host: /interface/root
+|     Python-urllib/2.5: 
+|       Different Host: /interface/root
+|     URI::Fetch: 
+|       Different Host: /interface/root
+|     PECL::HTTP: 
+|       Different Host: /interface/root
+|     lwp-trivial: 
+|       Different Host: /interface/root
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): 
+|_      Different Host: /interface/root
+| http-vhosts: 
+|_128 names had status 302
+| http-waf-detect: IDS/IPS/WAF detected:
+|_192.168.123.65:9998/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 17 05:28:52 2022 -- 1 IP address (1 host up) scanned in 603.81 seconds

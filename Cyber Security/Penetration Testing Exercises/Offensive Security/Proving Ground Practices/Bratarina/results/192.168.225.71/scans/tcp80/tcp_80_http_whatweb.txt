@@ -1,0 +1,74 @@
+WhatWeb report for http://192.168.225.71:80
+Status    : 404 Not Found
+Title     : ,Page not found - FlaskBB
+IP        : 192.168.225.71
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.14.0], Script, X-UA-Compatible[IE=edge], HTML5, HTTPServer[Ubuntu Linux][nginx/1.14.0 (Ubuntu)], Cookies[session], HttpOnly[session], Meta-Author[FlaskBB Team]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : session
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Ubuntu Linux
+	String       : nginx/1.14.0 (Ubuntu) (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie
+	response header and the browser supports it then the cookie
+	cannot be accessed through client side script - More Info:
+	http://en.wikipedia.org/wiki/HTTP_cookie
+
+	String       : session
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name
+	tag - info:
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : FlaskBB Team
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.14.0
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 404 NOT FOUND
+	Server: nginx/1.14.0 (Ubuntu)
+	Date: Mon, 17 Jan 2022 12:53:40 GMT
+	Content-Type: text/html; charset=utf-8
+	Transfer-Encoding: chunked
+	Connection: close
+	Vary: Cookie
+	Set-Cookie: session=eyJjc3JmX3Rva2VuIjp7IiBiIjoiWXpsaE5XSTBPRFF5WW1NME5HRXlNRE5tT1RJMk5HSmlPV0l5WW1aaU9USXpOalJqWlRNMk53PT0ifX0.FMb4VA.myiVqQVMWi1DMGRGyStSFzDVVw4; HttpOnly; Path=/
+	Content-Encoding: gzip
+
+

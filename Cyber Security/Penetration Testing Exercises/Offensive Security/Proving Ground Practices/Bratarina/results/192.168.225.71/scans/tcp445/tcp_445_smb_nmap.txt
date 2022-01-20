@@ -1,0 +1,116 @@
+# Nmap 7.91 scan initiated Mon Jan 17 07:53:31 2022 as: nmap -vv --reason -Pn -T4 -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.225.71
+Nmap scan report for 192.168.225.71
+Host is up, received user-set (0.38s latency).
+Scanned at 2022-01-17 07:53:36 EST for 389s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 4.7.6-Ubuntu (workgroup: COFFEECORP)
+Service Info: Host: BRATARINA
+
+Host script results:
+| smb-enum-domains: 
+|   BRATARINA
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: <blank>
+|   \\192.168.225.71\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Samba 4.7.6-Ubuntu)
+|     Users: 2
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|   \\192.168.225.71\backups: 
+|     Type: STYPE_DISKTREE
+|     Comment: Share for backups
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\opt\samba
+|_    Anonymous access: READ/WRITE
+| smb-ls: Volume \\192.168.225.71\backups
+| SIZE   TIME                 FILENAME
+| <DIR>  2020-07-06T07:46:41  .
+| <DIR>  2018-04-26T18:17:34  ..
+| 1747   2020-07-06T07:46:41  passwd.bak
+|_
+| smb-mbenum: 
+|   DFS Root
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Potential Browser
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Print server
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Server
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Server service
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Unix server
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Windows NT/2000/XP/2003 server
+|     BRATARINA  0.0  Samba 4.7.6-Ubuntu
+|   Workstation
+|_    BRATARINA  0.0  Samba 4.7.6-Ubuntu
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: bratarina
+|   NetBIOS computer name: BRATARINA\x00
+|   Domain name: \x00
+|   FQDN: bratarina
+|_  System time: 2022-01-17T07:53:58-05:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.11: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-01-17T12:54:02
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 17 08:00:05 2022 -- 1 IP address (1 host up) scanned in 394.52 seconds

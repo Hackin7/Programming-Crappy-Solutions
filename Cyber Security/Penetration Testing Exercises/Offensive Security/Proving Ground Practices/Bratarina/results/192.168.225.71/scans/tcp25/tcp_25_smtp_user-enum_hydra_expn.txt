@@ -1,0 +1,25 @@
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2022-01-17 07:53:35
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 17 login tries (l:17/p:1), ~2 tries per task
+[DATA] attacking smtp-enum://192.168.225.71:25/expn
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+[ERROR] command is disabled on the server (choose different method): 500 5.5.1 Invalid command: Command unrecognized
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2022-01-17 07:53:39
+

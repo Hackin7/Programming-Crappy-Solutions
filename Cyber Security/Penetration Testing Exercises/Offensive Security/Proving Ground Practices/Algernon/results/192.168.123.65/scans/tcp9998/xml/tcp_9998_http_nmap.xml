@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Jan 17 05:18:48 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 9998 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/tcp_9998_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/xml/tcp_9998_http_nmap.xml&quot; 192.168.123.65 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 9998 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/tcp_9998_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/tcp9998/xml/tcp_9998_http_nmap.xml&quot; 192.168.123.65" start="1642414728" startstr="Mon Jan 17 05:18:48 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="9998"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642414730"/>
+<taskend task="NSE" time="1642414730"/>
+<taskbegin task="NSE" time="1642414730"/>
+<taskend task="NSE" time="1642414730"/>
+<taskbegin task="NSE" time="1642414730"/>
+<taskend task="NSE" time="1642414730"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642414730"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642414730"/>
+<taskbegin task="SYN Stealth Scan" time="1642414730"/>
+<taskend task="SYN Stealth Scan" time="1642414731" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642414731"/>
+<taskend task="Service scan" time="1642414743" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642414743"/>
+<taskprogress task="NSE" time="1642414774" percent="90.88" remaining="4" etc="1642414777"/>
+<taskprogress task="NSE" time="1642414804" percent="96.09" remaining="3" etc="1642414806"/>
+<taskprogress task="NSE" time="1642414834" percent="98.70" remaining="2" etc="1642414835"/>
+<taskprogress task="NSE" time="1642414864" percent="99.67" remaining="1" etc="1642414864"/>
+<taskprogress task="NSE" time="1642414894" percent="99.67" remaining="1" etc="1642414894"/>
+<taskprogress task="NSE" time="1642414924" percent="99.67" remaining="1" etc="1642414925"/>
+<taskprogress task="NSE" time="1642414954" percent="99.67" remaining="1" etc="1642414955"/>
+<taskprogress task="NSE" time="1642414984" percent="99.67" remaining="1" etc="1642414985"/>
+<taskprogress task="NSE" time="1642415014" percent="99.67" remaining="1" etc="1642415015"/>
+<taskprogress task="NSE" time="1642415044" percent="99.67" remaining="1" etc="1642415045"/>
+<taskprogress task="NSE" time="1642415074" percent="99.67" remaining="2" etc="1642415075"/>
+<taskprogress task="NSE" time="1642415104" percent="99.67" remaining="2" etc="1642415105"/>
+<taskprogress task="NSE" time="1642415134" percent="99.67" remaining="2" etc="1642415135"/>
+<taskprogress task="NSE" time="1642415164" percent="99.67" remaining="2" etc="1642415165"/>
+<taskprogress task="NSE" time="1642415194" percent="99.67" remaining="2" etc="1642415195"/>
+<taskprogress task="NSE" time="1642415224" percent="99.67" remaining="2" etc="1642415226"/>
+<taskprogress task="NSE" time="1642415254" percent="99.67" remaining="2" etc="1642415256"/>
+<taskend task="NSE" time="1642415283"/>
+<taskbegin task="NSE" time="1642415283"/>
+<taskprogress task="NSE" time="1642415314" percent="91.67" remaining="3" etc="1642415317"/>
+<taskend task="NSE" time="1642415332"/>
+<taskbegin task="NSE" time="1642415332"/>
+<taskend task="NSE" time="1642415332"/>
+<host starttime="1642414730" endtime="1642415332"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.65" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="9998"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-backup-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.123.65&#xa;  http://192.168.123.65:9998/interface/output/vendor-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js&#xa;  http://192.168.123.65:9998/interface/output/angular-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js&#xa;  http://192.168.123.65:9998/interface/output/site-v-100.0.6919.30414.8d65fc3f1d47d00 copy.js&#xa;"/><script id="http-chrono" output="Request times for /; avg: 902.89ms; min: 833.27ms; max: 1097.20ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.123.65&#xa;    &#xa;    Path: http://192.168.123.65:9998/&#xa;    Line number: 8&#xa;    Comment: &#xa;        &lt;!-&#45; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.65:9998/&#xa;    Line number: 16&#xa;    Comment: &#xa;        &lt;!-&#45; Title set in directive -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.65:9998/&#xa;    Line number: 20&#xa;    Comment: &#xa;        &lt;!-&#45; Styles -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.65:9998/&#xa;    Line number: 6&#xa;    Comment: &#xa;        &lt;!-&#45; SmarterMail Copyright (c) 2003-2022 SmarterTools Inc.  All Rights Reserved. -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.123.65:9998/&#xa;    Line number: 28&#xa;    Comment: &#xa;        &lt;!-&#45; Font Awesome and Bootstrap -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 17 Jan 2022 10:19:11 GMT; +2s from local time."><elem key="date">2022-01-17T10:19:11+00:00</elem>
+<elem key="delta">2.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /account.aspx: Possible admin folder&#xa;  /admin/account.aspx: Possible admin folder&#xa;  /admin/index.aspx: Possible admin folder&#xa;  /admin/login.aspx: Possible admin folder&#xa;  /admin/admin.aspx: Possible admin folder&#xa;  /admin_area/admin.aspx: Possible admin folder&#xa;  /admin_area/login.aspx: Possible admin folder&#xa;  /admin_area/index.aspx: Possible admin folder&#xa;  /bb-admin/index.aspx: Possible admin folder&#xa;  /bb-admin/login.aspx: Possible admin folder&#xa;  /bb-admin/admin.aspx: Possible admin folder&#xa;  /admin/home.aspx: Possible admin folder&#xa;  /admin/controlpanel.aspx: Possible admin folder&#xa;  /admin.aspx: Possible admin folder&#xa;  /pages/admin/admin-login.aspx: Possible admin folder&#xa;  /admin/admin-login.aspx: Possible admin folder&#xa;  /admin-login.aspx: Possible admin folder&#xa;  /admin/cp.aspx: Possible admin folder&#xa;  /cp.aspx: Possible admin folder&#xa;  /administrator/account.aspx: Possible admin folder&#xa;  /administrator.aspx: Possible admin folder&#xa;  /modelsearch/login.aspx: Possible admin folder&#xa;  /moderator.aspx: Possible admin folder&#xa;  /moderator/login.aspx: Possible admin folder&#xa;  /administrator/login.aspx: Possible admin folder&#xa;  /moderator/admin.aspx: Possible admin folder&#xa;  /controlpanel.aspx: Possible admin folder&#xa;  /user.aspx: Possible admin folder&#xa;  /admincp/index.aspx: Possible admin folder&#xa;  /admincp/login.aspx: Possible admin folder&#xa;  /admincontrol.aspx: Possible admin folder&#xa;  /adminpanel.aspx: Possible admin folder&#xa;  /webadmin.aspx: Possible admin folder&#xa;  /webadmin/index.aspx: Possible admin folder&#xa;  /webadmin/admin.aspx: Possible admin folder&#xa;  /webadmin/login.aspx: Possible admin folder&#xa;  /admin/admin_login.aspx: Possible admin folder&#xa;  /admin_login.aspx: Possible admin folder&#xa;  /panel-administracion/login.aspx: Possible admin folder&#xa;  /adminLogin.aspx: Possible admin folder&#xa;  /admin/adminLogin.aspx: Possible admin folder&#xa;  /home.aspx: Possible admin folder&#xa;  /adminarea/index.aspx: Possible admin folder&#xa;  /adminarea/admin.aspx: Possible admin folder&#xa;  /adminarea/login.aspx: Possible admin folder&#xa;  /panel-administracion/index.aspx: Possible admin folder&#xa;  /panel-administracion/admin.aspx: Possible admin folder&#xa;  /modelsearch/index.aspx: Possible admin folder&#xa;  /modelsearch/admin.aspx: Possible admin folder&#xa;  /administrator/index.aspx: Possible admin folder&#xa;  /admincontrol/login.aspx: Possible admin folder&#xa;  /adm/admloginuser.aspx: Possible admin folder&#xa;  /admloginuser.aspx: Possible admin folder&#xa;  /admin2.aspx: Possible admin folder&#xa;  /admin2/login.aspx: Possible admin folder&#xa;  /admin2/index.aspx: Possible admin folder&#xa;  /adm/index.aspx: Possible admin folder&#xa;  /adm.aspx: Possible admin folder&#xa;  /adm_auth.aspx: Possible admin folder&#xa;  /memberadmin.aspx: Possible admin folder&#xa;  /administratorlogin.aspx: Possible admin folder&#xa;  /siteadmin/login.aspx: Possible admin folder&#xa;  /siteadmin/index.aspx: Possible admin folder&#xa;  /administr8.aspx: Possible admin folder&#xa;  /administracao.aspx: Possible admin folder&#xa;  /administracion.aspx: Possible admin folder&#xa;  /admins.aspx: Possible admin folder&#xa;  /AdminLogin.aspx: Possible admin folder&#xa;  /atom.aspx: RSS or Atom feed&#xa;  /rss.aspx: RSS or Atom feed&#xa;  /mono/1.1/index.aspx: Sample scripts&#xa;  /log.aspx: Logs&#xa;  /logs.aspx: Logs&#xa;  /Citrix/MetaFrame/auth/login.aspx: Citrix&#xa;  /sw/auth/login.aspx: Citrix&#xa;  /Pages/Default.aspx: MS Sharepoint&#xa;  /_admin/operations.aspx: MS Sharepoint&#xa;  /_layouts/viewlsts.aspx: MS Sharepoint&#xa;  /forms/allitems.aspx: MS Sharepoint&#xa;  /forms/webfldr.aspx: MS Sharepoint&#xa;  /forms/mod-view.aspx: MS Sharepoint&#xa;  /forms/my-sub.aspx: MS Sharepoint&#xa;  /pages/categoryresults.aspx: MS Sharepoint&#xa;  /categories/viewcategory.aspx: MS Sharepoint&#xa;  /editdocs.aspx: MS Sharepoint&#xa;  /workflowtasks/allitems.aspx: MS Sharepoint&#xa;  /categories/allcategories.aspx: MS Sharepoint&#xa;  /categories/SOMEOTHERDIR/allcategories.aspx: MS Sharepoint&#xa;  /mycategories.aspx: MS Sharepoint&#xa;  /lists/allitems.aspx: MS Sharepoint&#xa;  /lists/default.aspx: MS Sharepoint&#xa;  /lists/allposts.aspx: MS Sharepoint&#xa;  /lists/archive.aspx: MS Sharepoint&#xa;  /lists/byauthor.aspx: MS Sharepoint&#xa;  /lists/calendar.aspx: MS Sharepoint&#xa;  /lists/mod-view.aspx: MS Sharepoint&#xa;  /lists/myposts.aspx: MS Sharepoint&#xa;  /lists/my-sub.aspx: MS Sharepoint&#xa;  /lists/allcomments.aspx: MS Sharepoint&#xa;  /lists/mycomments.aspx: MS Sharepoint&#xa;  /_layouts/userdisp.aspx: MS Sharepoint&#xa;  /_layouts/help.aspx: MS Sharepoint&#xa;  /_layouts/download.aspx: MS Sharepoint&#xa;  /CuteSoft_Client/CuteEditor/Load.ashx?type=image&amp;file=../../../web.config: Cute Editor ASP.NET Remote File Disclosure ( CVE 2009-4665 )&#xa;  /includes/FCKeditor/editor/filemanager/browser/default/connectors/aspx/connector.aspx: PHPnuke/Remote File Download&#xa;  /Backstage/Components/FreeTextBox/ftb.imagegallery.aspx: Luftguitar CMS/File upload&#xa;  /Providers/HtmlEditorProviders/Fck/fcklinkgallery.aspx: DotNetNuke / File Upload&#xa;  /reports/: Potentially interesting folder&#xa;  /scripts/: Potentially interesting folder&#xa;  /services/: Potentially interesting folder&#xa;  /webdav/: Potentially interesting folder (401 Access Denied)&#xa;  /sitecore/login/default.aspx: Sitecore.NET login page&#xa;  /sitecore/admin/stats.aspx: Sitecore.NET (CMS)&#xa;  /sitecore/admin/unlock_admin.aspx: Sitecore.NET (CMS)&#xa;  /sitecore/admin/ShowConfig.aspx: Sitecore.NET (CMS)&#xa;  /sitecore%20modules/staging/service/api.asmx: Sitecore.NET (CMS)&#xa;"/><script id="http-errors" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-favicon" output="Unknown favicon MD5: 9D7294CAAB5C2DF4CD916F53653714D5"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.123.65:9998/interface/output/angular-v-100.0.6919.30414.8d65fc3f1d47d00.js: &#xa;    (1) email: &#xa;      + ariel@mashraki.co.il"><table key="(1) http://192.168.123.65:9998/interface/output/angular-v-100.0.6919.30414.8d65fc3f1d47d00.js">
+<table key="(1) email">
+<elem>+ ariel@mashraki.co.il</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Cache-Control: private&#xa;  Content-Length: 5199&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Server: Microsoft-IIS/10.0&#xa;  X-AspNetMvc-Version: 5.2&#xa;  Date: Mon, 17 Jan 2022 10:19:12 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-iis-webdav-vuln" output="Could not determine vulnerability, since root folder is password protected"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 6ca29178930769195cdff059439d72d6&#xa;Credits query returned unknown hash 6ca29178930769195cdff059439d72d6"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: private"><table key="Cache_Control">
+<elem>Header: Cache-Control: private</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; ico: 1&#xa;    /interface/output/&#xa;      css: 1; js: 2&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /interface/output/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 1; ico: 1; js: 2&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8).&#xa;Requested resource was /interface/root"><elem key="title"></elem>
+<elem key="redirect_url">/interface/root</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: /interface/errors/OutofDateBrowser.html&#xa;  Forbidden/Redirected User Agents: &#xa;    http client: &#xa;      Different Host: /interface/root&#xa;    HTTP::Lite: &#xa;      Different Host: /interface/root&#xa;    PHPCrawl: &#xa;      Different Host: /interface/root&#xa;    WWW-Mechanize/1.34: &#xa;      Different Host: /interface/root&#xa;    Snoopy: &#xa;      Different Host: /interface/root&#xa;    Wget/1.13.4 (linux-gnu): &#xa;      Different Host: /interface/root&#xa;    Zend_Http_Client: &#xa;      Different Host: /interface/root&#xa;    libcurl-agent/1.0: &#xa;      Different Host: /interface/root&#xa;    GT::WWW: &#xa;      Different Host: /interface/root&#xa;    PHP/: &#xa;      Different Host: /interface/root&#xa;    MFC_Tear_Sample: &#xa;      Different Host: /interface/root&#xa;    libwww: &#xa;      Different Host: /interface/root&#xa;    Python-urllib/2.5: &#xa;      Different Host: /interface/root&#xa;    URI::Fetch: &#xa;      Different Host: /interface/root&#xa;    PECL::HTTP: &#xa;      Different Host: /interface/root&#xa;    lwp-trivial: &#xa;      Different Host: /interface/root&#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): &#xa;      Different Host: /interface/root"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">/interface/errors/OutofDateBrowser.html</elem>
+<table key="Forbidden/Redirected User Agents">
+<table key="http client">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="HTTP::Lite">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="PHPCrawl">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="WWW-Mechanize/1.34">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="Snoopy">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="Wget/1.13.4 (linux-gnu)">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="Zend_Http_Client">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="libcurl-agent/1.0">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="GT::WWW">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="PHP/">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="MFC_Tear_Sample">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="libwww">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="Python-urllib/2.5">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="URI::Fetch">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="PECL::HTTP">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="lwp-trivial">
+<elem key="Different Host">/interface/root</elem>
+</table>
+<table key="Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)">
+<elem key="Different Host">/interface/root</elem>
+</table>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 302"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;192.168.123.65:9998/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="198033" rttvar="198033" to="990165"/>
+</host>
+<taskbegin task="NSE" time="1642415332"/>
+<taskend task="NSE" time="1642415332"/>
+<taskbegin task="NSE" time="1642415332"/>
+<taskend task="NSE" time="1642415332"/>
+<taskbegin task="NSE" time="1642415332"/>
+<taskend task="NSE" time="1642415332"/>
+<runstats><finished time="1642415332" timestr="Mon Jan 17 05:28:52 2022" summary="Nmap done at Mon Jan 17 05:28:52 2022; 1 IP address (1 host up) scanned in 603.81 seconds" elapsed="603.81" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

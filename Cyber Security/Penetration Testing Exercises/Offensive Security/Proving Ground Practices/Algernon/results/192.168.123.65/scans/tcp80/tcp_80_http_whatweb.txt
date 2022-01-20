@@ -1,0 +1,43 @@
+WhatWeb report for http://192.168.123.65:80
+Status    : 200 OK
+Title     : IIS Windows
+IP        : 192.168.123.65
+Country   : RESERVED, ZZ
+
+Summary   : Microsoft-IIS[10.0], X-Powered-By[ASP.NET], HTTPServer[Microsoft-IIS/10.0]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Thu, 30 Apr 2020 05:29:47 GMT
+	Accept-Ranges: bytes
+	ETag: "c692185db01ed61:0"
+	Server: Microsoft-IIS/10.0
+	X-Powered-By: ASP.NET
+	Date: Mon, 17 Jan 2022 10:18:53 GMT
+	Connection: close
+	Content-Length: 696
+
+

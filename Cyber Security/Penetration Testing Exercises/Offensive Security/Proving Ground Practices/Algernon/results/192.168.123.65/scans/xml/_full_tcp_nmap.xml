@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Jan 17 05:16:25 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.65 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Algernon/results/192.168.123.65/scans/xml/_full_tcp_nmap.xml&quot; 192.168.123.65" start="1642414585" startstr="Mon Jan 17 05:16:25 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642414586"/>
+<taskend task="NSE" time="1642414586"/>
+<taskbegin task="NSE" time="1642414586"/>
+<taskend task="NSE" time="1642414586"/>
+<taskbegin task="NSE" time="1642414586"/>
+<taskend task="NSE" time="1642414586"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642414586"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642414586"/>
+<taskbegin task="SYN Stealth Scan" time="1642414586"/>
+<taskprogress task="SYN Stealth Scan" time="1642414617" percent="8.03" remaining="356" etc="1642414972"/>
+<taskprogress task="SYN Stealth Scan" time="1642414647" percent="23.49" remaining="199" etc="1642414846"/>
+<taskprogress task="SYN Stealth Scan" time="1642414677" percent="38.74" remaining="144" etc="1642414821"/>
+<taskprogress task="SYN Stealth Scan" time="1642414707" percent="57.79" remaining="89" etc="1642414795"/>
+<taskprogress task="SYN Stealth Scan" time="1642414737" percent="80.20" remaining="38" etc="1642414774"/>
+<taskend task="SYN Stealth Scan" time="1642414762" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642414762"/>
+<taskend task="Service scan" time="1642414842" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642414849"/>
+<taskend task="Traceroute" time="1642414849"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642414849"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642414849"/>
+<taskbegin task="NSE" time="1642414849"/>
+<taskprogress task="NSE" time="1642414880" percent="99.79" remaining="1" etc="1642414880"/>
+<taskend task="NSE" time="1642414890"/>
+<taskbegin task="NSE" time="1642414890"/>
+<taskend task="NSE" time="1642414891"/>
+<taskbegin task="NSE" time="1642414891"/>
+<taskend task="NSE" time="1642414891"/>
+<host starttime="1642414586" endtime="1642414891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.123.65" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-responses" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: TIMEOUT"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="IIS Windows"><elem key="title">IIS Windows</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9998"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 9D7294CAAB5C2DF4CD916F53653714D5"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8).&#xa;Requested resource was /interface/root"><elem key="title"></elem>
+<elem key="redirect_url">/interface/root</elem>
+</script><script id="uptime-agent-info" output="HTTP/1.1 400 Bad Request&#xd;&#xa;Content-Type: text/html; charset=us-ascii&#xd;&#xa;Server: Microsoft-HTTPAPI/2.0&#xd;&#xa;Date: Mon, 17 Jan 2022 10:20:54 GMT&#xd;&#xa;Connection: close&#xd;&#xa;Content-Length: 326&#xd;&#xa;&#xd;&#xa;&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#xd;&#xa;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Bad Request&lt;/TITLE&gt;&#xd;&#xa;&lt;META HTTP-EQUIV=&quot;Content-Type&quot; Content=&quot;text/html; charset=us-ascii&quot;&gt;&lt;/HEAD&gt;&#xd;&#xa;&lt;BODY&gt;&lt;h2&gt;Bad Request - Invalid Verb&lt;/h2&gt;&#xd;&#xa;&lt;hr&gt;&lt;p&gt;HTTP Error 400. The request verb is invalid.&lt;/p&gt;&#xd;&#xa;&lt;/BODY&gt;&lt;/HTML&gt;&#xd;&#xa;"/></port>
+<port protocol="tcp" portid="17001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows XP SP3" accuracy="88" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 98 SE" accuracy="85" line="78713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="98" accuracy="85"><cpe>cpe:/o:microsoft:windows_98</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/17%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61E5432B%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=102%GCD=1%ISR=104%TS=U)&#xa;OPS(O1=M54ENW8NNS%O2=M54ENW8NNS%O3=M54ENW8%O4=M54ENW8NNS%O5=M54ENW8NNS%O6=M54ENNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M54ENW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="BEBFD79E,C64EE7F4,7C6C053C,FCB3336C,276FEE3D,394C9E50"/>
+<ipidsequence class="Busy server or unknown class" values="8884,88A4,88C1,88E1,8909,8911"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="1s"><elem key="count">1</elem>
+<elem key="stddev">0</elem>
+<elem key="median">1</elem>
+<elem key="mean">1</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 45580/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 6414/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 32046/udp): CLEAN (Timeout)&#xa;  Check 4 (port 22032/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-17T10:20:54&#xa;  start_date: N/A"><elem key="date">2022-01-17T10:20:54</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="206.03"/>
+<hop ttl="2" ipaddr="192.168.123.65" rtt="206.34"/>
+</trace>
+<times srtt="205084" rttvar="2209" to="213920"/>
+</host>
+<taskbegin task="NSE" time="1642414891"/>
+<taskend task="NSE" time="1642414891"/>
+<taskbegin task="NSE" time="1642414891"/>
+<taskend task="NSE" time="1642414891"/>
+<taskbegin task="NSE" time="1642414891"/>
+<taskend task="NSE" time="1642414891"/>
+<runstats><finished time="1642414891" timestr="Mon Jan 17 05:21:31 2022" summary="Nmap done at Mon Jan 17 05:21:31 2022; 1 IP address (1 host up) scanned in 306.49 seconds" elapsed="306.49" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,18 @@
+# Nmap 7.91 scan initiated Mon Jan 17 07:53:29 2022 as: nmap -vv --reason -Pn -T4 -sV -p 25 "--script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp25/tcp_25_smtp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bratarina/results/192.168.225.71/scans/tcp25/xml/tcp_25_smtp_nmap.xml" 192.168.225.71
+Nmap scan report for 192.168.225.71
+Host is up, received user-set (0.32s latency).
+Scanned at 2022-01-17 07:53:35 EST for 7s
+
+PORT   STATE SERVICE REASON         VERSION
+25/tcp open  smtp    syn-ack ttl 63 OpenSMTPD
+|_banner: 220 bratarina ESMTP OpenSMTPD
+| smtp-commands: bratarina Hello nmap.scanme.org [192.168.49.225], pleased to meet you, 8BITMIME, ENHANCEDSTATUSCODES, SIZE 36700160, DSN, HELP, 
+|_ 2.0.0 This is OpenSMTPD 2.0.0 To report bugs in the implementation, please contact bugs@openbsd.org 2.0.0 with full details 2.0.0 End of HELP info 
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+Service Info: Host: bratarina
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 17 07:53:42 2022 -- 1 IP address (1 host up) scanned in 13.47 seconds

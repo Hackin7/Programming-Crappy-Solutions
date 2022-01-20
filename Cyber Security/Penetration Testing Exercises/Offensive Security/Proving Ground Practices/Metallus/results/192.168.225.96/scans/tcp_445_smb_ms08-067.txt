@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Thu Jan 20 07:45:20 2022 as: nmap -vv --reason -Pn -T4 -sV -p 445 --script=smb-vuln-ms08-067 --script-args=unsafe=1 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/results/192.168.225.96/scans/tcp_445_smb_ms08-067.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Metallus/results/192.168.225.96/scans/xml/tcp_445_smb_ms08-067.xml" 192.168.234.96
+Nmap scan report for 192.168.234.96
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-01-20 07:45:20 EST for 26s
+
+PORT    STATE SERVICE       REASON  VERSION
+445/tcp open  microsoft-ds? syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 20 07:45:46 2022 -- 1 IP address (1 host up) scanned in 26.06 seconds
