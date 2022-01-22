@@ -1,0 +1,115 @@
+# Nmap 7.91 scan initiated Fri Jan 21 02:42:19 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3000 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/tcp3000/tcp_3000_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/tcp3000/xml/tcp_3000_http_nmap.xml" 192.168.196.110
+Nmap scan report for 192.168.196.110
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-21 02:42:20 EST for 593s
+
+PORT     STATE SERVICE REASON         VERSION
+3000/tcp open  http    syn-ack ttl 63 Node.js (Express middleware)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.110
+|   url                                        method
+|   http://192.168.196.110:3000/auth/login     FORM
+|_  http://192.168.196.110:3000/auth/register  FORM
+|_http-chrono: Request times for /; avg: 716.67ms; min: 559.75ms; max: 1118.58ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.110
+|     
+|     Path: http://192.168.196.110:3000/stylesheets/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.min.css.map */
+|     
+|     Path: http://192.168.196.110:3000/stylesheets/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.3.1 (https://getbootstrap.com/)
+|          * Copyright 2011-2019 The Bootstrap Authors
+|          * Copyright 2011-2019 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|_         */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.110
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.196.110:3000/auth/login
+|     Form id: username
+|     Form action: /auth/login
+|     
+|     Path: http://192.168.196.110:3000/auth/register
+|     Form id: username
+|_    Form action: /auth/register
+|_http-date: Fri, 21 Jan 2022 07:42:38 GMT; 0s from local time.
+|_http-devframework: Express detected. Found Express in X-Powered-By Header
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+| http-exif-spider: 
+|   http://192.168.196.110:3000/robot.jpg
+|_    Date: 2020:09:22 22:50:11
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   X-Powered-By: Express
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 1233
+|   ETag: W/"4d1-EM+k5bfo8/suRUiS5v251LloBP4"
+|   Date: Fri, 21 Jan 2022 07:42:40 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 6bc235ec1434f2650b6ad9bb13098b47
+|_Credits query returned unknown hash 6bc235ec1434f2650b6ad9bb13098b47
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; jpg: 1
+|     /auth/
+|       Other: 2
+|     /logs/
+|       Other: 1
+|     /stylesheets/
+|       css: 2
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /auth/
+|   Total files found (by extension):
+|_    Other: 4; css: 2; jpg: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 21 02:52:14 2022 -- 1 IP address (1 host up) scanned in 594.64 seconds

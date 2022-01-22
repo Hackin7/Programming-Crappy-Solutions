@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 07:57:11 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp443/tcp_443_https_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp443/xml/tcp_443_https_nmap.xml&quot; 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp443/tcp_443_https_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp443/xml/tcp_443_https_nmap.xml&quot; 192.168.196.44" start="1642769831" startstr="Fri Jan 21 07:57:11 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642769833"/>
+<taskend task="NSE" time="1642769833"/>
+<taskbegin task="NSE" time="1642769833"/>
+<taskend task="NSE" time="1642769833"/>
+<taskbegin task="NSE" time="1642769833"/>
+<taskend task="NSE" time="1642769833"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642769833"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642769833"/>
+<taskbegin task="SYN Stealth Scan" time="1642769833"/>
+<taskend task="SYN Stealth Scan" time="1642769833" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642769834"/>
+<taskend task="Service scan" time="1642769848" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642769848"/>
+<taskprogress task="NSE" time="1642769879" percent="84.59" remaining="6" etc="1642769885"/>
+<taskprogress task="NSE" time="1642769909" percent="96.42" remaining="3" etc="1642769911"/>
+<taskprogress task="NSE" time="1642769939" percent="98.37" remaining="2" etc="1642769941"/>
+<taskprogress task="NSE" time="1642769969" percent="99.35" remaining="1" etc="1642769970"/>
+<taskprogress task="NSE" time="1642769999" percent="99.35" remaining="1" etc="1642770000"/>
+<taskprogress task="NSE" time="1642770029" percent="99.35" remaining="2" etc="1642770030"/>
+<taskprogress task="NSE" time="1642770059" percent="99.67" remaining="1" etc="1642770060"/>
+<taskend task="NSE" time="1642770092"/>
+<taskbegin task="NSE" time="1642770092"/>
+<taskprogress task="NSE" time="1642770123" percent="87.50" remaining="5" etc="1642770127"/>
+<taskend task="NSE" time="1642770126"/>
+<taskbegin task="NSE" time="1642770126"/>
+<taskend task="NSE" time="1642770128"/>
+<host starttime="1642769833" endtime="1642770128"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.16" extrainfo="OpenSSL/1.0.1p PHP/5.6.12" hostname="www.example.com" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.16</cpe></service><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.44&#xa;  url                                                                                                   method&#xa;  https://192.168.196.44:443/public_html/                                                               FORM&#xa;  https://192.168.196.44:443/public_html/index.php?sid=1&amp;amp;name=News&amp;amp;file=articleghz%3ehzx%22zxc  FORM&#xa;  https://192.168.196.44:443/public_html/index.php?name=coppermine&amp;amp;file=search                      FORM&#xa;  https://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit                 FORM&#xa;  https://192.168.196.44:443/public_html/index.php?name=Surveys                                         FORM&#xa;  https://192.168.196.44:443/public_html/index.php?callback=test                                        FORM&#xa;  https://192.168.196.44:443/public_html/?callback=test                                                 FORM&#xa;  https://192.168.196.44:443/public_html/index.php?file=article&amp;amp;name=Newsghz%3ehzx%22zxc            FORM&#xa;  https://192.168.196.44:443/public_html/index.php?name=Contact                                         FORM&#xa;  https://192.168.196.44:443/public_html/index.php?name=News&amp;amp;topic=0                                FORM&#xa;"/><script id="http-chrono" output="Request times for /; avg: 1166.40ms; min: 1122.16ms; max: 1193.57ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.44&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 7&#xa;    Comment: &#xa;         // Are we using Internet Explorer Version 5 and up?&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 9&#xa;    Comment: &#xa;         // Current help position and main window size&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 4&#xa;    Comment: &#xa;        &#xa;        // of the GNU GENERAL PUBLIC LICENSE Version 2.&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 2&#xa;    Comment: &#xa;        &#xa;        // Bubblehelp infoboxes, (C) 2002 Klaus Knopper &lt;infobox@knopper.net&gt;&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 10&#xa;    Comment: &#xa;         // Pointer to infodiv container&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 44&#xa;    Comment: &#xa;         // middle of window&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 42&#xa;    Comment: &#xa;         // konqueror can&apos;t get mouse position&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 31&#xa;    Comment: &#xa;        &#xa;        // Prepare tip boxes, but don&apos;t show them yet&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/blockscript.js&#xa;    Line number: 49&#xa;    Comment: &#xa;         // &quot;domain=cpgnuke.com;&quot;;&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 72&#xa;    Comment: &#xa;        &#xa;        // Initialize after loading the page&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 6&#xa;    Comment: &#xa;         // Tip box width&#xa;    &#xa;    Path: http://192.168.196.44:443/public_html/includes/javascript/infobox.js&#xa;    Line number: 8&#xa;    Comment: &#xa;         // Are we using KDE Konqueror?&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.44&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/&#xa;    Form id: &#xa;    Form action: /public_html/&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?sid=1&amp;amp;name=News&amp;amp;file=articleghz%3ehzx%22zxc&#xa;    Form id: &#xa;    Form action: /public_html/index.php?sid=1&amp;name=News&amp;file=articleghz%3ehzx%22zxc&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=coppermine&amp;amp;file=search&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=coppermine&amp;file=search&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=Your_Account&amp;profile=kermit&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit&#xa;    Form id: ulogin2&#xa;    Form action: index.php?name=Your_Account&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Surveys&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=Surveys&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Surveys&#xa;    Form id: &#xa;    Form action: index.php?name=Surveys&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?callback=test&#xa;    Form id: &#xa;    Form action: /public_html/index.php?callback=test&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/?callback=test&#xa;    Form id: &#xa;    Form action: /public_html/?callback=test&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?file=article&amp;amp;name=Newsghz%3ehzx%22zxc&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=News&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Contact&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=Contact&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=Contact&#xa;    Form id: email_mod&#xa;    Form action: index.php?name=Contact&#xa;    &#xa;    Path: https://192.168.196.44:443/public_html/index.php?name=News&amp;amp;topic=0&#xa;    Form id: &#xa;    Form action: /public_html/index.php?name=News&amp;topic=0&#xa;"/><script id="http-date" output="Fri, 21 Jan 2022 12:57:49 GMT; -4s from local time."><elem key="date">2022-01-21T12:57:49+00:00</elem>
+<elem key="delta">-4.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /: Root directory w/ listing on &apos;apache/2.4.16 (win32) openssl/1.0.1p php/5.6.12&apos;&#xa;  /phpmyadmin/: phpMyAdmin&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.196.44&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?sid=1&amp;amp;name=News&amp;amp;file=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=http://tools.ietf.org/html/rfc13?&amp;amp;file=register&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?sid=1&amp;amp;name=http://tools.ietf.org/html/rfc13?&amp;amp;file=print&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=Your_Account&amp;amp;op=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=Forums&amp;amp;file=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=Your_Account&amp;amp;file=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=News&amp;amp;topic=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.196.44:80/public_html/index.php?name=coppermine&amp;amp;file=http://tools.ietf.org/html/rfc13?&#xa;  &#xa;  Error Code: 503&#xa;  &#x9;http://192.168.196.44:443/public_html/index.php?name=Forums&amp;amp;file=search&#xa;  &#xa;  Error Code: 503&#xa;  &#x9;http://192.168.196.44:443/public_html/index.php?name=Members_List&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) https://192.168.196.44:443/: &#xa;    (1) ip: &#xa;      + 192.168.196.44"><table key="(1) https://192.168.196.44:443/">
+<table key="(1) ip">
+<elem>+ 192.168.196.44</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Fri, 21 Jan 2022 12:57:39 GMT&#xa;  Server: Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12&#xa;  Connection: close&#xa;  Content-Type: text/html;charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 4fa509f135e47e9f26cf9bb751fa1bd2"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12"><elem>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /icons/&#xa;      gif: 2&#xa;    /public_html/&#xa;      Other: 1; php: 1&#xa;    /public_html/images/&#xa;      gif: 1&#xa;    /public_html/images/blocks/&#xa;      gif: 1&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /public_html/images/blocks/&#xa;  Total files found (by extension):&#xa;    Other: 2; gif: 4; php: 1&#xa;"/><script id="http-sql-injection" output="&#xa;  Possible sqli for queries:&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dD%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dD%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dD%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dD%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dD%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=M%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=D%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=S%3bO%3dA%27%20OR%20sqlspider&#xa;    http://192.168.196.44:443/?C=N%3bO%3dA%27%20OR%20sqlspider&#xa;"/><script id="http-stored-xss" output="&#xa;  Found the following stored XSS vulnerabilities: &#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?sid=1&amp;amp;name=News&amp;amp;file=articleghz%3ehzx%22zxc&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=coppermine&amp;amp;file=search&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Surveys&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?callback=test&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/?callback=test&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?file=article&amp;amp;name=Newsghz%3ehzx%22zxc&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Contact&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.&#xa;  &#xa;     Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=News&amp;amp;topic=0&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability."><elem>Found the following stored XSS vulnerabilities: </elem>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?sid=1&amp;amp;name=News&amp;amp;file=articleghz%3ehzx%22zxc&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=coppermine&amp;amp;file=search&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Surveys&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?callback=test&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/?callback=test&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?file=article&amp;amp;name=Newsghz%3ehzx%22zxc&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=Contact&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+<table>
+<elem> Payload: zxc&apos;xcv&#xa;&#x9; Uploaded on: https://192.168.196.44:443/public_html/index.php?name=News&amp;amp;topic=0&#xa;&#x9; Description: Unfiltered &apos; (apostrophe). An indication of potential XSS vulnerability.</elem>
+</table>
+</script><script id="http-title" output="Bad request!"><elem key="title">Bad request!</elem>
+</script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Fri, 21 Jan 2022 12:57:33 GMT&#xa;Server: Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-unsafe-output-escaping" output="&#xa;  Characters [&apos;] reflected in parameter call at http://192.168.196.44:443/public_html/?call=test&#xa;  Characters [&apos;] reflected in parameter profile at http://192.168.196.44:443/public_html/index.php?name=Your_Account&amp;amp;profile=kermit&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;squid : 400&#xa;aptest : 400&#xa;sip : 400&#xa;stage : 400&#xa;vm : 400&#xa;beta : 400&#xa;122 names had status 200"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;192.168.196.44:443/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0&#xa;SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C125D327E3ECAD0D836A6DE75F9A751023E2909DA063958F1D419A58D59C638C5B73869079CCC3D6A389B875BC1E947C7C6EE3ADE8275C0BC60C6AF90F32FEB3C47A1023042B2928D4AAF9B32F6610F8A7C1CD60C46B2857E3673BF79ECD4822DC38EA4813803A4097570C4735463D71629AEE539D630E677A28C9A434FF19ED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: RFC2409/Oakley Group 2&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-8">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: RFC2409/Oakley Group 2&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher IDEA vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher IDEA vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - D&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - D&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher IDEA vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  least strength: D"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_IDEA_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher IDEA vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_IDEA_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher IDEA vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">D</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_IDEA_CBC_SHA</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher IDEA vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<elem key="least strength">D</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="247014" rttvar="247014" to="1235070"/>
+</host>
+<taskbegin task="NSE" time="1642770128"/>
+<taskend task="NSE" time="1642770128"/>
+<taskbegin task="NSE" time="1642770128"/>
+<taskend task="NSE" time="1642770128"/>
+<taskbegin task="NSE" time="1642770128"/>
+<taskend task="NSE" time="1642770128"/>
+<runstats><finished time="1642770128" timestr="Fri Jan 21 08:02:08 2022" summary="Nmap done at Fri Jan 21 08:02:08 2022; 1 IP address (1 host up) scanned in 297.24 seconds" elapsed="297.24" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

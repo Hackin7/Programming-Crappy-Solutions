@@ -1,0 +1,5 @@
+* [Main](/)
+* [Cyber Security](/Cyber%20Security/)
+* [Competitive Programming](/Competitive%20Programming/)
+* [Machine Learning](/Machine%20Learning/)
+* [School Exercises](/School%20Exercises/)

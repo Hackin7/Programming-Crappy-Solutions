@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 08:04:29 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6758/tcp_6758_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6758/xml/tcp_6758_irc_nmap.xml&quot; -p 6758 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6758/tcp_6758_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6758/xml/tcp_6758_irc_nmap.xml&quot; -p 6758 192.168.196.44" start="1642770269" startstr="Fri Jan 21 08:04:29 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6758"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642770273"/>
+<taskend task="NSE" time="1642770273"/>
+<taskbegin task="NSE" time="1642770273"/>
+<taskend task="NSE" time="1642770273"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642770274"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642770274"/>
+<taskbegin task="SYN Stealth Scan" time="1642770274"/>
+<taskend task="SYN Stealth Scan" time="1642770274" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642770276"/>
+<taskend task="Service scan" time="1642770293" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642770293"/>
+<taskend task="NSE" time="1642770293"/>
+<taskbegin task="NSE" time="1642770293"/>
+<taskend task="NSE" time="1642770293"/>
+<host starttime="1642770274" endtime="1642770293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="6758"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-botnet-channels" output="&#xa;  ERROR: Closing link: (unknown@192.168.49.196) [No more connections allowed from your host via this connect class (local)]&#xa;"/></port>
+</ports>
+<times srtt="247375" rttvar="247375" to="1236875"/>
+</host>
+<taskbegin task="NSE" time="1642770293"/>
+<taskend task="NSE" time="1642770293"/>
+<taskbegin task="NSE" time="1642770293"/>
+<taskend task="NSE" time="1642770293"/>
+<runstats><finished time="1642770293" timestr="Fri Jan 21 08:04:53 2022" summary="Nmap done at Fri Jan 21 08:04:53 2022; 1 IP address (1 host up) scanned in 24.77 seconds" elapsed="24.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

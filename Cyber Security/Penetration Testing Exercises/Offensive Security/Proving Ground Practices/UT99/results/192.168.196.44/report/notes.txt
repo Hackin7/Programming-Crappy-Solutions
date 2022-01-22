@@ -1,0 +1,1392 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] http found on tcp/443.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+
+[*] irc found on tcp/6666.
+
+
+
+[*] irc found on tcp/6667.
+
+
+
+[*] irc found on tcp/6668.
+
+
+
+[*] irc found on tcp/6669.
+
+
+
+[*] irc found on tcp/6689.
+
+
+
+[*] irc found on tcp/6692.
+
+
+
+[*] irc found on tcp/6699.
+
+
+
+[*] irc found on tcp/6779.
+
+
+
+[*] irc found on tcp/6788.
+
+
+
+[*] irc found on tcp/6789.
+
+
+
+[*] irc found on tcp/6792.
+
+
+
+[*] irc found on tcp/6839.
+
+
+
+[*] irc found on tcp/6881.
+
+
+
+[*] irc found on tcp/6901.
+
+
+
+[*] irc found on tcp/6969.
+
+
+
+[*] irc found on tcp/7000.
+
+
+
+[*] tcpwrapped found on tcp/7001.
+
+
+
+[*] irc found on tcp/7007.
+
+
+
+[*] irc found on tcp/6660.
+
+
+
+[*] irc found on tcp/6661.
+
+
+
+[*] irc found on tcp/6662.
+
+
+
+[*] irc found on tcp/6663.
+
+
+
+[*] irc found on tcp/6664.
+
+
+
+[*] irc found on tcp/6665.
+
+
+
+[*] irc found on tcp/6670.
+
+
+
+[*] irc found on tcp/6671.
+
+
+
+[*] irc found on tcp/6672.
+
+
+
+[*] irc found on tcp/6673.
+
+
+
+[*] irc found on tcp/6674.
+
+
+
+[*] irc found on tcp/6675.
+
+
+
+[*] irc found on tcp/6676.
+
+
+
+[*] irc found on tcp/6677.
+
+
+
+[*] irc found on tcp/6678.
+
+
+
+[*] irc found on tcp/6679.
+
+
+
+[*] irc found on tcp/6680.
+
+
+
+[*] irc found on tcp/6681.
+
+
+
+[*] irc found on tcp/6682.
+
+
+
+[*] irc found on tcp/6683.
+
+
+
+[*] irc found on tcp/6684.
+
+
+
+[*] irc found on tcp/6685.
+
+
+
+[*] irc found on tcp/6686.
+
+
+
+[*] irc found on tcp/6687.
+
+
+
+[*] irc found on tcp/6688.
+
+
+
+[*] irc found on tcp/6690.
+
+
+
+[*] irc found on tcp/6691.
+
+
+
+[*] irc found on tcp/6693.
+
+
+
+[*] irc found on tcp/6694.
+
+
+
+[*] irc found on tcp/6695.
+
+
+
+[*] irc found on tcp/6696.
+
+
+
+[*] irc found on tcp/6697.
+
+
+
+[*] irc found on tcp/6698.
+
+
+
+[*] irc found on tcp/6700.
+
+
+
+[*] irc found on tcp/6701.
+
+
+
+[*] irc found on tcp/6702.
+
+
+
+[*] irc found on tcp/6703.
+
+
+
+[*] irc found on tcp/6704.
+
+
+
+[*] irc found on tcp/6705.
+
+
+
+[*] irc found on tcp/6706.
+
+
+
+[*] irc found on tcp/6707.
+
+
+
+[*] irc found on tcp/6708.
+
+
+
+[*] irc found on tcp/6709.
+
+
+
+[*] irc found on tcp/6710.
+
+
+
+[*] irc found on tcp/6711.
+
+
+
+[*] irc found on tcp/6712.
+
+
+
+[*] irc found on tcp/6713.
+
+
+
+[*] irc found on tcp/6714.
+
+
+
+[*] irc found on tcp/6715.
+
+
+
+[*] irc found on tcp/6716.
+
+
+
+[*] irc found on tcp/6717.
+
+
+
+[*] irc found on tcp/6718.
+
+
+
+[*] irc found on tcp/6719.
+
+
+
+[*] irc found on tcp/6720.
+
+
+
+[*] irc found on tcp/6721.
+
+
+
+[*] irc found on tcp/6722.
+
+
+
+[*] irc found on tcp/6723.
+
+
+
+[*] irc found on tcp/6724.
+
+
+
+[*] irc found on tcp/6725.
+
+
+
+[*] irc found on tcp/6726.
+
+
+
+[*] irc found on tcp/6727.
+
+
+
+[*] irc found on tcp/6728.
+
+
+
+[*] irc found on tcp/6729.
+
+
+
+[*] irc found on tcp/6730.
+
+
+
+[*] irc found on tcp/6731.
+
+
+
+[*] irc found on tcp/6732.
+
+
+
+[*] irc found on tcp/6733.
+
+
+
+[*] irc found on tcp/6734.
+
+
+
+[*] irc found on tcp/6735.
+
+
+
+[*] irc found on tcp/6736.
+
+
+
+[*] irc found on tcp/6737.
+
+
+
+[*] irc found on tcp/6738.
+
+
+
+[*] irc found on tcp/6739.
+
+
+
+[*] irc found on tcp/6740.
+
+
+
+[*] irc found on tcp/6741.
+
+
+
+[*] irc found on tcp/6742.
+
+
+
+[*] irc found on tcp/6743.
+
+
+
+[*] irc found on tcp/6744.
+
+
+
+[*] irc found on tcp/6745.
+
+
+
+[*] irc found on tcp/6746.
+
+
+
+[*] irc found on tcp/6747.
+
+
+
+[*] irc found on tcp/6748.
+
+
+
+[*] irc found on tcp/6749.
+
+
+
+[*] irc found on tcp/6750.
+
+
+
+[*] irc found on tcp/6751.
+
+
+
+[*] irc found on tcp/6752.
+
+
+
+[*] irc found on tcp/6753.
+
+
+
+[*] irc found on tcp/6754.
+
+
+
+[*] irc found on tcp/6755.
+
+
+
+[*] irc found on tcp/6756.
+
+
+
+[*] irc found on tcp/6757.
+
+
+
+[*] irc found on tcp/6758.
+
+
+
+[*] irc found on tcp/6759.
+
+
+
+[*] irc found on tcp/6760.
+
+
+
+[*] irc found on tcp/6761.
+
+
+
+[*] irc found on tcp/6762.
+
+
+
+[*] irc found on tcp/6763.
+
+
+
+[*] irc found on tcp/6764.
+
+
+
+[*] irc found on tcp/6765.
+
+
+
+[*] irc found on tcp/6766.
+
+
+
+[*] irc found on tcp/6767.
+
+
+
+[*] irc found on tcp/6768.
+
+
+
+[*] irc found on tcp/6769.
+
+
+
+[*] irc found on tcp/6770.
+
+
+
+[*] irc found on tcp/6771.
+
+
+
+[*] irc found on tcp/6772.
+
+
+
+[*] irc found on tcp/6773.
+
+
+
+[*] irc found on tcp/6774.
+
+
+
+[*] irc found on tcp/6775.
+
+
+
+[*] irc found on tcp/6776.
+
+
+
+[*] irc found on tcp/6777.
+
+
+
+[*] irc found on tcp/6778.
+
+
+
+[*] irc found on tcp/6780.
+
+
+
+[*] irc found on tcp/6781.
+
+
+
+[*] irc found on tcp/6782.
+
+
+
+[*] irc found on tcp/6783.
+
+
+
+[*] irc found on tcp/6784.
+
+
+
+[*] irc found on tcp/6785.
+
+
+
+[*] irc found on tcp/6786.
+
+
+
+[*] irc found on tcp/6787.
+
+
+
+[*] irc found on tcp/6790.
+
+
+
+[*] irc found on tcp/6791.
+
+
+
+[*] irc found on tcp/6793.
+
+
+
+[*] irc found on tcp/6794.
+
+
+
+[*] irc found on tcp/6795.
+
+
+
+[*] irc found on tcp/6796.
+
+
+
+[*] irc found on tcp/6797.
+
+
+
+[*] irc found on tcp/6798.
+
+
+
+[*] irc found on tcp/6799.
+
+
+
+[*] irc found on tcp/6800.
+
+
+
+[*] irc found on tcp/6801.
+
+
+
+[*] irc found on tcp/6802.
+
+
+
+[*] irc found on tcp/6803.
+
+
+
+[*] irc found on tcp/6804.
+
+
+
+[*] irc found on tcp/6805.
+
+
+
+[*] irc found on tcp/6806.
+
+
+
+[*] irc found on tcp/6807.
+
+
+
+[*] irc found on tcp/6808.
+
+
+
+[*] irc found on tcp/6809.
+
+
+
+[*] irc found on tcp/6810.
+
+
+
+[*] irc found on tcp/6811.
+
+
+
+[*] irc found on tcp/6812.
+
+
+
+[*] irc found on tcp/6813.
+
+
+
+[*] irc found on tcp/6814.
+
+
+
+[*] irc found on tcp/6815.
+
+
+
+[*] irc found on tcp/6816.
+
+
+
+[*] irc found on tcp/6817.
+
+
+
+[*] irc found on tcp/6818.
+
+
+
+[*] irc found on tcp/6819.
+
+
+
+[*] irc found on tcp/6820.
+
+
+
+[*] irc found on tcp/6821.
+
+
+
+[*] irc found on tcp/6822.
+
+
+
+[*] irc found on tcp/6823.
+
+
+
+[*] irc found on tcp/6824.
+
+
+
+[*] irc found on tcp/6825.
+
+
+
+[*] irc found on tcp/6826.
+
+
+
+[*] irc found on tcp/6827.
+
+
+
+[*] irc found on tcp/6828.
+
+
+
+[*] irc found on tcp/6829.
+
+
+
+[*] irc found on tcp/6830.
+
+
+
+[*] irc found on tcp/6831.
+
+
+
+[*] irc found on tcp/6832.
+
+
+
+[*] irc found on tcp/6833.
+
+
+
+[*] irc found on tcp/6834.
+
+
+
+[*] irc found on tcp/6835.
+
+
+
+[*] irc found on tcp/6836.
+
+
+
+[*] irc found on tcp/6837.
+
+
+
+[*] irc found on tcp/6838.
+
+
+
+[*] irc found on tcp/6840.
+
+
+
+[*] irc found on tcp/6841.
+
+
+
+[*] irc found on tcp/6842.
+
+
+
+[*] irc found on tcp/6843.
+
+
+
+[*] irc found on tcp/6844.
+
+
+
+[*] irc found on tcp/6845.
+
+
+
+[*] irc found on tcp/6846.
+
+
+
+[*] irc found on tcp/6847.
+
+
+
+[*] irc found on tcp/6848.
+
+
+
+[*] irc found on tcp/6849.
+
+
+
+[*] irc found on tcp/6850.
+
+
+
+[*] irc found on tcp/6851.
+
+
+
+[*] irc found on tcp/6852.
+
+
+
+[*] irc found on tcp/6853.
+
+
+
+[*] irc found on tcp/6854.
+
+
+
+[*] irc found on tcp/6855.
+
+
+
+[*] irc found on tcp/6856.
+
+
+
+[*] irc found on tcp/6857.
+
+
+
+[*] irc found on tcp/6858.
+
+
+
+[*] irc found on tcp/6859.
+
+
+
+[*] irc found on tcp/6860.
+
+
+
+[*] irc found on tcp/6861.
+
+
+
+[*] irc found on tcp/6862.
+
+
+
+[*] irc found on tcp/6863.
+
+
+
+[*] irc found on tcp/6864.
+
+
+
+[*] irc found on tcp/6865.
+
+
+
+[*] irc found on tcp/6866.
+
+
+
+[*] irc found on tcp/6867.
+
+
+
+[*] irc found on tcp/6868.
+
+
+
+[*] irc found on tcp/6869.
+
+
+
+[*] irc found on tcp/6870.
+
+
+
+[*] irc found on tcp/6871.
+
+
+
+[*] irc found on tcp/6872.
+
+
+
+[*] irc found on tcp/6873.
+
+
+
+[*] irc found on tcp/6874.
+
+
+
+[*] irc found on tcp/6875.
+
+
+
+[*] irc found on tcp/6876.
+
+
+
+[*] irc found on tcp/6877.
+
+
+
+[*] irc found on tcp/6878.
+
+
+
+[*] irc found on tcp/6879.
+
+
+
+[*] irc found on tcp/6880.
+
+
+
+[*] irc found on tcp/6882.
+
+
+
+[*] irc found on tcp/6883.
+
+
+
+[*] irc found on tcp/6884.
+
+
+
+[*] irc found on tcp/6885.
+
+
+
+[*] irc found on tcp/6886.
+
+
+
+[*] irc found on tcp/6887.
+
+
+
+[*] irc found on tcp/6888.
+
+
+
+[*] irc found on tcp/6889.
+
+
+
+[*] irc found on tcp/6890.
+
+
+
+[*] irc found on tcp/6891.
+
+
+
+[*] irc found on tcp/6892.
+
+
+
+[*] irc found on tcp/6893.
+
+
+
+[*] irc found on tcp/6894.
+
+
+
+[*] irc found on tcp/6895.
+
+
+
+[*] irc found on tcp/6896.
+
+
+
+[*] irc found on tcp/6897.
+
+
+
+[*] irc found on tcp/6898.
+
+
+
+[*] irc found on tcp/6899.
+
+
+
+[*] irc found on tcp/6900.
+
+
+
+[*] irc found on tcp/6902.
+
+
+
+[*] irc found on tcp/6903.
+
+
+
+[*] irc found on tcp/6904.
+
+
+
+[*] irc found on tcp/6905.
+
+
+
+[*] irc found on tcp/6906.
+
+
+
+[*] irc found on tcp/6907.
+
+
+
+[*] irc found on tcp/6908.
+
+
+
+[*] irc found on tcp/6909.
+
+
+
+[*] irc found on tcp/6910.
+
+
+
+[*] irc found on tcp/6911.
+
+
+
+[*] irc found on tcp/6912.
+
+
+
+[*] irc found on tcp/6913.
+
+
+
+[*] irc found on tcp/6914.
+
+
+
+[*] irc found on tcp/6915.
+
+
+
+[*] irc found on tcp/6916.
+
+
+
+[*] irc found on tcp/6917.
+
+
+
+[*] irc found on tcp/6918.
+
+
+
+[*] irc found on tcp/6919.
+
+
+
+[*] irc found on tcp/6920.
+
+
+
+[*] irc found on tcp/6921.
+
+
+
+[*] irc found on tcp/6922.
+
+
+
+[*] irc found on tcp/6923.
+
+
+
+[*] irc found on tcp/6924.
+
+
+
+[*] irc found on tcp/6925.
+
+
+
+[*] irc found on tcp/6926.
+
+
+
+[*] irc found on tcp/6927.
+
+
+
+[*] irc found on tcp/6928.
+
+
+
+[*] irc found on tcp/6929.
+
+
+
+[*] irc found on tcp/6930.
+
+
+
+[*] irc found on tcp/6931.
+
+
+
+[*] irc found on tcp/6932.
+
+
+
+[*] irc found on tcp/6933.
+
+
+
+[*] irc found on tcp/6934.
+
+
+
+[*] irc found on tcp/6935.
+
+
+
+[*] irc found on tcp/6936.
+
+
+
+[*] irc found on tcp/6937.
+
+
+
+[*] irc found on tcp/6938.
+
+
+
+[*] irc found on tcp/6939.
+
+
+
+[*] irc found on tcp/6940.
+
+
+
+[*] irc found on tcp/6941.
+
+
+
+[*] irc found on tcp/6942.
+
+
+
+[*] irc found on tcp/6943.
+
+
+
+[*] irc found on tcp/6944.
+
+
+
+[*] irc found on tcp/6945.
+
+
+
+[*] irc found on tcp/6946.
+
+
+
+[*] irc found on tcp/6947.
+
+
+
+[*] irc found on tcp/6948.
+
+
+
+[*] irc found on tcp/6949.
+
+
+
+[*] irc found on tcp/6950.
+
+
+
+[*] irc found on tcp/6951.
+
+
+
+[*] irc found on tcp/6952.
+
+
+
+[*] irc found on tcp/6953.
+
+
+
+[*] irc found on tcp/6954.
+
+
+
+[*] irc found on tcp/6955.
+
+
+
+[*] irc found on tcp/6956.
+
+
+
+[*] irc found on tcp/6957.
+
+
+
+[*] irc found on tcp/6958.
+
+
+
+[*] irc found on tcp/6959.
+
+
+
+[*] irc found on tcp/6960.
+
+
+
+[*] irc found on tcp/6961.
+
+
+
+[*] irc found on tcp/6962.
+
+
+
+[*] irc found on tcp/6963.
+
+
+
+[*] irc found on tcp/6964.
+
+
+
+[*] irc found on tcp/6965.
+
+
+
+[*] irc found on tcp/6966.
+
+
+
+[*] irc found on tcp/6967.
+
+
+
+[*] irc found on tcp/6968.
+
+
+
+[*] irc found on tcp/6970.
+
+
+
+[*] irc found on tcp/6971.
+
+
+
+[*] irc found on tcp/6972.
+
+
+
+[*] irc found on tcp/6973.
+
+
+
+[*] irc found on tcp/6974.
+
+
+
+[*] irc found on tcp/6975.
+
+
+
+[*] irc found on tcp/6976.
+
+
+
+[*] irc found on tcp/6977.
+
+
+
+[*] irc found on tcp/6978.
+
+
+
+[*] irc found on tcp/6979.
+
+
+
+[*] irc found on tcp/6980.
+
+
+
+[*] irc found on tcp/6981.
+
+
+
+[*] irc found on tcp/6982.
+
+
+
+[*] irc found on tcp/6983.
+
+
+
+[*] irc found on tcp/6984.
+
+
+
+[*] irc found on tcp/6985.
+
+
+
+[*] irc found on tcp/6986.
+
+
+
+[*] irc found on tcp/6987.
+
+
+
+[*] irc found on tcp/6988.
+
+
+
+[*] irc found on tcp/6989.
+
+
+
+[*] irc found on tcp/6990.
+
+
+
+[*] irc found on tcp/6991.
+
+
+
+[*] irc found on tcp/6992.
+
+
+
+[*] irc found on tcp/6993.
+
+
+
+[*] irc found on tcp/6994.
+
+
+
+[*] irc found on tcp/6995.
+
+
+
+[*] irc found on tcp/6996.
+
+
+
+[*] irc found on tcp/6997.
+
+
+
+[*] irc found on tcp/6998.
+
+
+
+[*] irc found on tcp/6999.
+
+
+
+[*] tcpwrapped found on tcp/7005.
+
+
+

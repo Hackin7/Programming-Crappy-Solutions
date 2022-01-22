@@ -1,0 +1,32 @@
+# Nmap 7.91 scan initiated Fri Jan 21 02:47:14 2022 as: nmap -vv --reason -Pn -T4 -sV -p 27017 "--script=banner,(mongodb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/tcp27017/tcp_27017_mongodb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/tcp27017/xml/tcp_27017_mongodb_nmap.xml" 192.168.196.110
+Nmap scan report for 192.168.196.110
+Host is up, received user-set (0.27s latency).
+Scanned at 2022-01-21 02:47:15 EST for 17s
+
+PORT      STATE SERVICE REASON         VERSION
+27017/tcp open  mongodb syn-ack ttl 63 MongoDB 4.2.9
+| mongodb-databases: 
+|   ok = 1.0
+|   totalSize = 307200.0
+|   databases
+|     0
+|       empty = false
+|       name = account-app
+|       sizeOnDisk = 131072.0
+|     3
+|       empty = false
+|       name = local
+|       sizeOnDisk = 73728.0
+|     2
+|       empty = false
+|       name = config
+|       sizeOnDisk = 61440.0
+|     1
+|       empty = false
+|       name = admin
+|_      sizeOnDisk = 40960.0
+|_mongodb-info: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 21 02:47:32 2022 -- 1 IP address (1 host up) scanned in 18.11 seconds

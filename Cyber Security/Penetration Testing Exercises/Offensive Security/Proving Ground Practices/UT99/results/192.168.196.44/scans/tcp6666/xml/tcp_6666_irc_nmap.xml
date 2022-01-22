@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 07:57:11 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6666/tcp_6666_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6666/xml/tcp_6666_irc_nmap.xml&quot; -p 6666 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6666/tcp_6666_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6666/xml/tcp_6666_irc_nmap.xml&quot; -p 6666 192.168.196.44" start="1642769831" startstr="Fri Jan 21 07:57:11 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6666"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642769833"/>
+<taskend task="NSE" time="1642769833"/>
+<taskbegin task="NSE" time="1642769833"/>
+<taskend task="NSE" time="1642769833"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642769833"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642769833"/>
+<taskbegin task="SYN Stealth Scan" time="1642769833"/>
+<taskend task="SYN Stealth Scan" time="1642769833" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642769834"/>
+<taskend task="Service scan" time="1642769834" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642769835"/>
+<taskprogress task="NSE" time="1642769866" percent="97.83" remaining="1" etc="1642769867"/>
+<taskprogress task="NSE" time="1642769896" percent="97.83" remaining="2" etc="1642769897"/>
+<taskend task="NSE" time="1642769901"/>
+<taskbegin task="NSE" time="1642769901"/>
+<taskend task="NSE" time="1642769901"/>
+<host starttime="1642769833" endtime="1642769901"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="6666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-botnet-channels" output="&#xa;  ERROR: TIMEOUT&#xa;"/><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 3&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">3</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script><script id="irc-unrealircd-backdoor" output="Server closed connection, possibly due to too many reconnects. Try again with argument irc-unrealircd-backdoor.wait set to 100 (or higher if you get this message again)."/></port>
+</ports>
+<times srtt="247055" rttvar="247055" to="1235275"/>
+</host>
+<taskbegin task="NSE" time="1642769901"/>
+<taskend task="NSE" time="1642769901"/>
+<taskbegin task="NSE" time="1642769901"/>
+<taskend task="NSE" time="1642769901"/>
+<runstats><finished time="1642769901" timestr="Fri Jan 21 07:58:21 2022" summary="Nmap done at Fri Jan 21 07:58:21 2022; 1 IP address (1 host up) scanned in 70.08 seconds" elapsed="70.08" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

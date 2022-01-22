@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 02:41:03 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/xml/_full_tcp_nmap.xml&quot; 192.168.196.110 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/xml/_full_tcp_nmap.xml&quot; 192.168.196.110" start="1642750863" startstr="Fri Jan 21 02:41:03 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642750864"/>
+<taskend task="NSE" time="1642750864"/>
+<taskbegin task="NSE" time="1642750864"/>
+<taskend task="NSE" time="1642750864"/>
+<taskbegin task="NSE" time="1642750864"/>
+<taskend task="NSE" time="1642750864"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642750864"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642750864"/>
+<taskbegin task="SYN Stealth Scan" time="1642750864"/>
+<taskprogress task="SYN Stealth Scan" time="1642750895" percent="2.34" remaining="1293" etc="1642752188"/>
+<taskprogress task="SYN Stealth Scan" time="1642750925" percent="9.00" remaining="617" etc="1642751542"/>
+<taskprogress task="SYN Stealth Scan" time="1642750955" percent="18.46" remaining="402" etc="1642751357"/>
+<taskprogress task="SYN Stealth Scan" time="1642750985" percent="29.90" remaining="284" etc="1642751269"/>
+<taskprogress task="SYN Stealth Scan" time="1642751015" percent="36.87" remaining="259" etc="1642751274"/>
+<taskprogress task="SYN Stealth Scan" time="1642751045" percent="48.03" remaining="196" etc="1642751241"/>
+<taskprogress task="SYN Stealth Scan" time="1642751075" percent="61.33" remaining="134" etc="1642751208"/>
+<taskprogress task="SYN Stealth Scan" time="1642751105" percent="72.77" remaining="91" etc="1642751195"/>
+<taskprogress task="SYN Stealth Scan" time="1642751135" percent="82.18" remaining="59" etc="1642751194"/>
+<taskend task="SYN Stealth Scan" time="1642751179" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642751180"/>
+<taskend task="Service scan" time="1642751191" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642751199"/>
+<taskend task="Traceroute" time="1642751200"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642751200"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642751200"/>
+<taskbegin task="NSE" time="1642751200"/>
+<taskprogress task="NSE" time="1642751231" percent="99.85" remaining="1" etc="1642751231"/>
+<taskend task="NSE" time="1642751232"/>
+<taskbegin task="NSE" time="1642751232"/>
+<taskend task="NSE" time="1642751234"/>
+<taskbegin task="NSE" time="1642751234"/>
+<taskend task="NSE" time="1642751234"/>
+<host starttime="1642750864" endtime="1642751234"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.110" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65530"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: TIMEOUT"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.196&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.196&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.3</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 9d:3f:eb:1b:aa:9c:1e:b1:30:9b:23:53:4b:cf:59:75 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJQfskNhOndcMLdRllpGbvhSaJBkmwdZnt3n0U7U3XxjpKx/ZUagAkwNTNPooV1Vc10PSdPE1pWMpqEiiHz7+guLRB4SrXsayYx67pZ0yiRrZ7gaxyEMKoI+p9owIt77Q6mG7PDjb5PQCd7G0xYFMCCaNFUpDfzZZUp2RGenL6b/xLSY1g0/Id1c9Q1S2pKsxMmf+TFqvAS6uOjSHY9fMbQesNQ0hZ74hcWooMOARyPTIYsu2/EmFjhz/hWydF2y5yikz96aBmBl6Z4KBVjp9vFHH50BwAMJuXyKMx5yCr4JzEV8RY3D6otNvR/yxuAxGcwffsaY6O1f9K8HyP6mF9J22tuxsRepSQTDUXNAUGeg9RR86RP7EpGkJ+3Y08vFGnsaRUY7w0800mpafyBeQMjO07urK0UuHihOKTRyW0aXsk9W/ruNJkLQNPWuNiZ/R1QCFRICQLJXl6V0nw0sKv7uxdDYO50OyQ3w3T08pazQr8tiuW38YonUwKPU6I6xc=&#xa;  256 cd:dc:05:e6:e3:bb:12:33:f7:09:74:50:12:8a:85:64 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK9spPy8kad9kuulG4kX03Wofq8wXe6arLeCb41/Nh7xFMtpRGM6zo7A8U3Vatg7bX20jaU43i7uYZyl7IA5dNA=&#xa;  256 a0:90:1f:50:78:b3:9e:41:2a:7f:5c:6f:4d:0e:a1:fa (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ00KH0CvMHGQmVCsdM6I+93pxC0naR6to6qUq3ZJa4b"><table>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">9d3feb1baa9c1eb1309b23534bcf5975</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDJQfskNhOndcMLdRllpGbvhSaJBkmwdZnt3n0U7U3XxjpKx/ZUagAkwNTNPooV1Vc10PSdPE1pWMpqEiiHz7+guLRB4SrXsayYx67pZ0yiRrZ7gaxyEMKoI+p9owIt77Q6mG7PDjb5PQCd7G0xYFMCCaNFUpDfzZZUp2RGenL6b/xLSY1g0/Id1c9Q1S2pKsxMmf+TFqvAS6uOjSHY9fMbQesNQ0hZ74hcWooMOARyPTIYsu2/EmFjhz/hWydF2y5yikz96aBmBl6Z4KBVjp9vFHH50BwAMJuXyKMx5yCr4JzEV8RY3D6otNvR/yxuAxGcwffsaY6O1f9K8HyP6mF9J22tuxsRepSQTDUXNAUGeg9RR86RP7EpGkJ+3Y08vFGnsaRUY7w0800mpafyBeQMjO07urK0UuHihOKTRyW0aXsk9W/ruNJkLQNPWuNiZ/R1QCFRICQLJXl6V0nw0sKv7uxdDYO50OyQ3w3T08pazQr8tiuW38YonUwKPU6I6xc=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">cddc05e6e3bb1233f7097450128a8564</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK9spPy8kad9kuulG4kX03Wofq8wXe6arLeCb41/Nh7xFMtpRGM6zo7A8U3Vatg7bX20jaU43i7uYZyl7IA5dNA=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">a0901f5078b39e412a7f5c6f4d0ea1fa</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJ00KH0CvMHGQmVCsdM6I+93pxC0naR6to6qUq3ZJa4b</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Fedora)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-favicon" output="Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03"/><script id="http-generator" output="Drupal 9 (https://www.drupal.org)"/><script id="http-methods" output="&#xa;  Supported Methods: GET POST HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="22 disallowed entries &#xa;/core/ /profiles/ /README.txt /web.config /admin/ &#xa;/comment/reply/ /filter/tips /node/add/ /search/ /user/register/ &#xa;/user/password/ /user/login/ /user/logout/ /index.php/admin/ &#xa;/index.php/comment/reply/ /index.php/filter/tips /index.php/node/add/ &#xa;/index.php/search/ /index.php/user/password/ /index.php/user/register/ &#xa;/index.php/user/login/ /index.php/user/logout/"/><script id="http-server-header" output="Apache/2.4.46 (Fedora)"><elem>Apache/2.4.46 (Fedora)</elem>
+</script><script id="http-title" output="Home | Hacking Articles"><elem key="title">Home | Hacking Articles</elem>
+</script></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Node.js" extrainfo="Express middleware" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."><elem key="title"></elem>
+</script></port>
+<port protocol="tcp" portid="27017"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mongodb" product="MongoDB" version="4.2.9" method="probed" conf="10"><cpe>cpe:/a:mongodb:mongodb:4.2.9</cpe></service><script id="mongodb-databases" output="&#xa;  totalSize = 307200.0&#xa;  databases&#xa;    1&#xa;      empty = false&#xa;      name = admin&#xa;      sizeOnDisk = 40960.0&#xa;    0&#xa;      empty = false&#xa;      name = account-app&#xa;      sizeOnDisk = 131072.0&#xa;    3&#xa;      empty = false&#xa;      name = local&#xa;      sizeOnDisk = 73728.0&#xa;    2&#xa;      empty = false&#xa;      name = config&#xa;      sizeOnDisk = 61440.0&#xa;  ok = 1.0&#xa;"/><script id="mongodb-info" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/21%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61EA6502%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=108%TI=Z%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2621841" lastboot="Tue Dec 21 18:29:53 2021"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="2E74F592,B19E33EF,FACCFB8F,EDCE4E7C,13247B51,9825A42"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="9C458DD8,9C458E3D,9C458ED6,9C458F3C,9C458FA0,9C45900B"/>
+<trace port="22" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="248.61"/>
+<hop ttl="2" ipaddr="192.168.196.110" rtt="248.94"/>
+</trace>
+<times srtt="249095" rttvar="453" to="250907"/>
+</host>
+<taskbegin task="NSE" time="1642751234"/>
+<taskend task="NSE" time="1642751234"/>
+<taskbegin task="NSE" time="1642751234"/>
+<taskend task="NSE" time="1642751234"/>
+<taskbegin task="NSE" time="1642751234"/>
+<taskend task="NSE" time="1642751234"/>
+<runstats><finished time="1642751234" timestr="Fri Jan 21 02:47:14 2022" summary="Nmap done at Fri Jan 21 02:47:14 2022; 1 IP address (1 host up) scanned in 371.02 seconds" elapsed="371.02" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

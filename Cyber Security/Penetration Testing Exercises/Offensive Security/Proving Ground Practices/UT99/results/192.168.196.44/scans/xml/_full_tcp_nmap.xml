@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 07:56:14 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/xml/_full_tcp_nmap.xml&quot; 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/xml/_full_tcp_nmap.xml&quot; 192.168.196.44" start="1642769774" startstr="Fri Jan 21 07:56:14 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642769775"/>
+<taskend task="NSE" time="1642769775"/>
+<taskbegin task="NSE" time="1642769775"/>
+<taskend task="NSE" time="1642769775"/>
+<taskbegin task="NSE" time="1642769775"/>
+<taskend task="NSE" time="1642769775"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642769775"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642769775"/>
+<taskbegin task="SYN Stealth Scan" time="1642769775"/>
+<taskprogress task="SYN Stealth Scan" time="1642769806" percent="7.02" remaining="411" etc="1642770217"/>
+<taskprogress task="SYN Stealth Scan" time="1642769836" percent="11.40" remaining="475" etc="1642770310"/>
+<taskprogress task="SYN Stealth Scan" time="1642769866" percent="20.46" remaining="354" etc="1642770220"/>
+<taskprogress task="SYN Stealth Scan" time="1642769896" percent="31.55" remaining="263" etc="1642770159"/>
+<taskprogress task="SYN Stealth Scan" time="1642769926" percent="42.15" remaining="208" etc="1642770133"/>
+<taskprogress task="SYN Stealth Scan" time="1642769956" percent="53.40" remaining="158" etc="1642770114"/>
+<taskprogress task="SYN Stealth Scan" time="1642769986" percent="61.73" remaining="131" etc="1642770117"/>
+<taskprogress task="SYN Stealth Scan" time="1642770022" percent="68.60" remaining="114" etc="1642770135"/>
+<taskprogress task="SYN Stealth Scan" time="1642770052" percent="76.32" remaining="86" etc="1642770138"/>
+<taskprogress task="SYN Stealth Scan" time="1642770082" percent="84.87" remaining="55" etc="1642770137"/>
+<taskend task="SYN Stealth Scan" time="1642770144" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642770144"/>
+<taskend task="Service scan" time="1642770180" extrainfo="348 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642770188"/>
+<taskend task="Traceroute" time="1642770189"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642770189"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642770189"/>
+<taskbegin task="NSE" time="1642770189"/>
+<taskend task="NSE" time="1642770209"/>
+<taskbegin task="NSE" time="1642770209"/>
+<taskend task="NSE" time="1642770216"/>
+<taskbegin task="NSE" time="1642770216"/>
+<taskend task="NSE" time="1642770216"/>
+<host starttime="1642769775" endtime="1642770216"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65187">
+<extrareasons reason="no-responses" count="65187"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.16" extrainfo="OpenSSL/1.0.1p PHP/5.6.12" hostname="localhost" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.16</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12"><elem>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12</elem>
+</script><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.16" extrainfo="OpenSSL/1.0.1p PHP/5.6.12" hostname="www.example.com" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.16</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12"><elem>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12</elem>
+</script><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0&#xa;SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C125D327E3ECAD0D836A6DE75F9A751023E2909DA063958F1D419A58D59C638C5B73869079CCC3D6A389B875BC1E947C7C6EE3ADE8275C0BC60C6AF90F32FEB3C47A1023042B2928D4AAF9B32F6610F8A7C1CD60C46B2857E3673BF79ECD4822DC38EA4813803A4097570C4735463D71629AEE539D630E677A28C9A434FF19ED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" product="MySQL" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql</cpe></service></port>
+<port protocol="tcp" portid="6660"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6661"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6662"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6663"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6670"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6671"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6672"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6673"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6674"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6675"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6676"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6677"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6678"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6679"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6681"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6682"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6683"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6684"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6685"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6686"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6687"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6688"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6689"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6690"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6691"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6692"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6693"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6694"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6695"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6696"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6697"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6698"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6699"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6700"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6701"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6702"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6703"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6704"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6705"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6706"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6707"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6708"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6709"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6710"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6711"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6712"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6713"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6714"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6715"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6716"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6717"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6718"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6719"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6720"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6721"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6722"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6723"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6724"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6725"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6726"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6727"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6728"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6729"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6730"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6731"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6732"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6733"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6734"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6735"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6736"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6737"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6738"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6739"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6740"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6741"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6742"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6743"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6744"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6745"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6746"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6747"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6748"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6749"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6750"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6751"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6752"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6753"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 2&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">2</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6754"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6755"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 4&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 4&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">4</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">4</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6756"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6757"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6758"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6759"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6760"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6761"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6762"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6763"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6764"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6765"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6766"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6767"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6768"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6769"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6770"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6771"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6772"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6773"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6774"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6775"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6776"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6777"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6778"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6779"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6780"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6781"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6782"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6783"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6784"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6785"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6786"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6787"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6788"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6789"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6790"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6791"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6792"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6793"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6794"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6795"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6796"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6797"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6798"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6799"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6800"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6801"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6802"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6803"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6804"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6805"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6806"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6807"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6808"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6809"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6810"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6811"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6812"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6813"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6814"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6815"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6816"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6817"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 3&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">3</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6818"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6819"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6820"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6821"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6822"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6823"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6824"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 4&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 4&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">4</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">4</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6825"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6826"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 3&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">3</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6827"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6828"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6829"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6830"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6831"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6832"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6833"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6834"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6835"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6836"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6837"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6838"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6839"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6840"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6841"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6842"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6843"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6844"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6845"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6846"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6847"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6848"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6849"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6850"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6851"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6852"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6853"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6854"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6855"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6856"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 2&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">2</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6857"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6858"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6859"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6860"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6861"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 4&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 4&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">4</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">4</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6862"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6863"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6864"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6865"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6866"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6867"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6868"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6869"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6870"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6871"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6872"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6873"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6874"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 3&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">3</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6875"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6876"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6877"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6878"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6879"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6880"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6881"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6882"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6883"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6884"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6885"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6886"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6887"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6888"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6889"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6890"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6891"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6892"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6893"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6894"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6895"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6896"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6897"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6898"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6899"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6900"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6901"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6902"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6903"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6904"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6905"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6906"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6907"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6908"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6909"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6910"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6911"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6912"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6913"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6914"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6915"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6916"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6917"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6918"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6919"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6920"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6921"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6922"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6923"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6924"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6925"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6926"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6927"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6928"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6929"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6930"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6931"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6932"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6933"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6934"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6935"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6936"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6937"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6938"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6939"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6940"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6941"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6942"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6943"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6944"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6945"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6946"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6947"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-info" output="&#xa;  server: irc.madcowz.localdomain&#xa;  users: 2&#xa;  servers: 1&#xa;  chans: 1&#xa;  lusers: 3&#xa;  lservers: 0&#xa;  source ident: nmap&#xa;  source host: 192.168.49.196&#xa;  error: Closing link: (nmap@192.168.49.196) [Client exited]"><elem key="server">irc.madcowz.localdomain</elem>
+<elem key="users">2</elem>
+<elem key="servers">1</elem>
+<elem key="chans">1</elem>
+<elem key="lusers">3</elem>
+<elem key="lservers">0</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">192.168.49.196</elem>
+<elem key="error">Closing link: (nmap@192.168.49.196) [Client exited]</elem>
+</script></port>
+<port protocol="tcp" portid="6948"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6949"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6950"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6951"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6952"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6953"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6954"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6955"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6956"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6957"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6958"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6959"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6960"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6961"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6962"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6963"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6964"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6965"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6966"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6967"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6968"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6969"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6970"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6971"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6972"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6973"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6974"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6975"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6976"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6977"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6978"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6979"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6980"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6981"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6982"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6983"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6984"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6986"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6987"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6988"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6989"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6990"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6991"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6992"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6993"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6994"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6995"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6996"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6997"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6998"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="6999"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="7000"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+<port protocol="tcp" portid="7001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7005"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="7007"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1" accuracy="89" line="74952">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="89" line="75839">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008" accuracy="89" line="74479">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="89" line="74840">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8" accuracy="89" line="74912">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="89"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1" accuracy="89" line="77261">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="89"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="89" line="77943">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="89"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="89" line="78051">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="89"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 8.1 R1" accuracy="89" line="78203">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="89"><cpe>cpe:/o:microsoft:windows_8.1:r1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="89" line="79339">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="89"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/21%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61EAAF28%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=10A%TS=7)&#xa;OPS(O1=M506NW8ST11%O2=M506NW8ST11%O3=M506NW8NNT11%O4=M506NW8ST11%O5=M506NW8ST11%O6=M506ST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M506NW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=N)&#xa;"/>
+</os>
+<uptime seconds="915" lastboot="Fri Jan 21 07:48:21 2022"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="8F85A809,6167F7E4,D8CA132C,F5F7F0C6,16CAC3FF,6FD20D86"/>
+<ipidsequence class="Busy server or unknown class" values="75DC,75F0,763D,765B,76A3,76C1"/>
+<tcptssequence class="100HZ" values="15947,15951,15961,1596C,1597B,15985"/>
+<trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="249.22"/>
+<hop ttl="2" ipaddr="192.168.196.44" rtt="250.02"/>
+</trace>
+<times srtt="249448" rttvar="780" to="252568"/>
+</host>
+<taskbegin task="NSE" time="1642770216"/>
+<taskend task="NSE" time="1642770216"/>
+<taskbegin task="NSE" time="1642770216"/>
+<taskend task="NSE" time="1642770216"/>
+<taskbegin task="NSE" time="1642770216"/>
+<taskend task="NSE" time="1642770216"/>
+<runstats><finished time="1642770216" timestr="Fri Jan 21 08:03:36 2022" summary="Nmap done at Fri Jan 21 08:03:36 2022; 1 IP address (1 host up) scanned in 442.69 seconds" elapsed="442.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

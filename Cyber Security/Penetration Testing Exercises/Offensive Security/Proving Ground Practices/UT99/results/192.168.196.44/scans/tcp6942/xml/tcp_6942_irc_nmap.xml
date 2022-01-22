@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 08:03:58 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6942/tcp_6942_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6942/xml/tcp_6942_irc_nmap.xml&quot; -p 6942 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6942/tcp_6942_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6942/xml/tcp_6942_irc_nmap.xml&quot; -p 6942 192.168.196.44" start="1642770238" startstr="Fri Jan 21 08:03:58 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6942"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642770245"/>
+<taskend task="NSE" time="1642770245"/>
+<taskbegin task="NSE" time="1642770245"/>
+<taskend task="NSE" time="1642770245"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642770245"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642770246"/>
+<taskbegin task="SYN Stealth Scan" time="1642770247"/>
+<taskend task="SYN Stealth Scan" time="1642770249" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642770250"/>
+<taskend task="Service scan" time="1642770266" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642770266"/>
+<taskend task="NSE" time="1642770269"/>
+<taskbegin task="NSE" time="1642770269"/>
+<taskend task="NSE" time="1642770269"/>
+<host starttime="1642770248" endtime="1642770269"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="6942"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unknown" servicefp="SF-Port6942-TCP:V=7.91%I=7%D=1/21%Time=61EAAF4B%P=x86_64-pc-linux-gnu%r(NULL,7B,&quot;ERROR\x20:Closing\x20link:\x20\(unknown@192\.168\.49\.196\)\x20\[No\x20more\x20connections\x20allowed\x20from\x20your\x20host\x20via\x20this\x20connect\x20class\x20\(local\)\]\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  NULL: &#xa;    ERROR :Closing link: (unknown@192.168.49.196) [No more connections allowed from your host via this connect class (local)]"><elem key="NULL">&#xa;    ERROR :Closing link: (unknown@192.168.49.196) [No more connections allowed from your host via this connect class (local)]</elem>
+</script></port>
+</ports>
+<times srtt="448086" rttvar="448086" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1642770270"/>
+<taskend task="NSE" time="1642770270"/>
+<taskbegin task="NSE" time="1642770270"/>
+<taskend task="NSE" time="1642770270"/>
+<runstats><finished time="1642770270" timestr="Fri Jan 21 08:04:30 2022" summary="Nmap done at Fri Jan 21 08:04:30 2022; 1 IP address (1 host up) scanned in 32.84 seconds" elapsed="32.84" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

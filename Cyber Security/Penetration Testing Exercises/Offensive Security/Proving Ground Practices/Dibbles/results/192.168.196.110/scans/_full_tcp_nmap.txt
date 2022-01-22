@@ -1,0 +1,107 @@
+# Nmap 7.91 scan initiated Fri Jan 21 02:41:03 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Dibbles/results/192.168.196.110/scans/xml/_full_tcp_nmap.xml" 192.168.196.110
+adjust_timeouts2: packet supposedly had rtt of -302953 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -302953 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -256434 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -256434 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -255651 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -255651 microseconds.  Ignoring time.
+Nmap scan report for 192.168.196.110
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-21 02:41:04 EST for 370s
+Not shown: 65530 filtered ports
+Reason: 65530 no-responses
+PORT      STATE SERVICE REASON         VERSION
+21/tcp    open  ftp     syn-ack ttl 63 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.49.196
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 8.3 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 9d:3f:eb:1b:aa:9c:1e:b1:30:9b:23:53:4b:cf:59:75 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJQfskNhOndcMLdRllpGbvhSaJBkmwdZnt3n0U7U3XxjpKx/ZUagAkwNTNPooV1Vc10PSdPE1pWMpqEiiHz7+guLRB4SrXsayYx67pZ0yiRrZ7gaxyEMKoI+p9owIt77Q6mG7PDjb5PQCd7G0xYFMCCaNFUpDfzZZUp2RGenL6b/xLSY1g0/Id1c9Q1S2pKsxMmf+TFqvAS6uOjSHY9fMbQesNQ0hZ74hcWooMOARyPTIYsu2/EmFjhz/hWydF2y5yikz96aBmBl6Z4KBVjp9vFHH50BwAMJuXyKMx5yCr4JzEV8RY3D6otNvR/yxuAxGcwffsaY6O1f9K8HyP6mF9J22tuxsRepSQTDUXNAUGeg9RR86RP7EpGkJ+3Y08vFGnsaRUY7w0800mpafyBeQMjO07urK0UuHihOKTRyW0aXsk9W/ruNJkLQNPWuNiZ/R1QCFRICQLJXl6V0nw0sKv7uxdDYO50OyQ3w3T08pazQr8tiuW38YonUwKPU6I6xc=
+|   256 cd:dc:05:e6:e3:bb:12:33:f7:09:74:50:12:8a:85:64 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK9spPy8kad9kuulG4kX03Wofq8wXe6arLeCb41/Nh7xFMtpRGM6zo7A8U3Vatg7bX20jaU43i7uYZyl7IA5dNA=
+|   256 a0:90:1f:50:78:b3:9e:41:2a:7f:5c:6f:4d:0e:a1:fa (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ00KH0CvMHGQmVCsdM6I+93pxC0naR6to6qUq3ZJa4b
+80/tcp    open  http    syn-ack ttl 63 Apache httpd 2.4.46 ((Fedora))
+|_http-favicon: Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03
+|_http-generator: Drupal 9 (https://www.drupal.org)
+| http-methods: 
+|_  Supported Methods: GET POST HEAD OPTIONS
+| http-robots.txt: 22 disallowed entries 
+| /core/ /profiles/ /README.txt /web.config /admin/ 
+| /comment/reply/ /filter/tips /node/add/ /search/ /user/register/ 
+| /user/password/ /user/login/ /user/logout/ /index.php/admin/ 
+| /index.php/comment/reply/ /index.php/filter/tips /index.php/node/add/ 
+| /index.php/search/ /index.php/user/password/ /index.php/user/register/ 
+|_/index.php/user/login/ /index.php/user/logout/
+|_http-server-header: Apache/2.4.46 (Fedora)
+|_http-title: Home | Hacking Articles
+3000/tcp  open  http    syn-ack ttl 63 Node.js (Express middleware)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+27017/tcp open  mongodb syn-ack ttl 63 MongoDB 4.2.9
+| mongodb-databases: 
+|   totalSize = 307200.0
+|   databases
+|     1
+|       empty = false
+|       name = admin
+|       sizeOnDisk = 40960.0
+|     0
+|       empty = false
+|       name = account-app
+|       sizeOnDisk = 131072.0
+|     3
+|       empty = false
+|       name = local
+|       sizeOnDisk = 73728.0
+|     2
+|       empty = false
+|       name = config
+|       sizeOnDisk = 61440.0
+|_  ok = 1.0
+|_mongodb-info: ERROR: Script execution failed (use -d to debug)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/21%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61EA6502%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=108%TI=Z%TS=A)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 30.345 days (since Tue Dec 21 18:29:53 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   248.61 ms 192.168.49.1
+2   248.94 ms 192.168.196.110
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 21 02:47:14 2022 -- 1 IP address (1 host up) scanned in 371.02 seconds

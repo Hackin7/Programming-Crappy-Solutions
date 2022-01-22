@@ -1,0 +1,124 @@
+WhatWeb report for http://192.168.196.110:80
+Status    : 200 OK
+Title     : Home | Hacking Articles
+IP        : 192.168.196.110
+Country   : RESERVED, ZZ
+
+Summary   : Script[application/json], X-UA-Compatible[IE=edge], X-Powered-By[PHP/7.4.10], MetaGenerator[Drupal 9 (https://www.drupal.org)], HTML5, PHP[7.4.10], Modernizr[additional-tests], HTTPServer[Fedora Linux][Apache/2.4.46 (Fedora)], UncommonHeaders[x-drupal-dynamic-cache,x-content-type-options,x-generator,x-drupal-cache], Content-Language[en], X-Frame-Options[SAMEORIGIN], Drupal, Apache[2.4.46]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 2.4.46 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Content-Language ]
+	Detect the content-language setting from the HTTP header.
+
+	String       : en
+
+[ Drupal ]
+	Drupal is an opensource CMS written in PHP.
+
+	Aggressive function available (check plugin file or details).
+	Google Dorks: (1)
+	Website     : http://www.drupal.org
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Fedora Linux
+	String       : Apache/2.4.46 (Fedora) (from server string)
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its
+	value.
+
+	String       : Drupal 9 (https://www.drupal.org)
+
+[ Modernizr ]
+	Modernizr adds classes to the <html> element which allow
+	you to target specific browser functionality in your
+	stylesheet. You don't actually need to write any Javascript
+	to use it. [JavaScript]
+
+	Version      : additional-tests
+	Website     : http://www.modernizr.com/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language
+	that is especially suited for Web development and can be
+	embedded into HTML. This plugin identifies PHP errors,
+	modules and versions and extracts the local file path and
+	username if present.
+
+	Version      : 7.4.10
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : application/json
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-drupal-dynamic-cache,x-content-type-options,x-generator,x-drupal-cache (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : PHP/7.4.10 (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 21 Jan 2022 07:41:47 GMT
+	Server: Apache/2.4.46 (Fedora)
+	X-Powered-By: PHP/7.4.10
+	Cache-Control: must-revalidate, no-cache, private
+	X-Drupal-Dynamic-Cache: MISS
+	X-UA-Compatible: IE=edge
+	Content-language: en
+	X-Content-Type-Options: nosniff
+	X-Frame-Options: SAMEORIGIN
+	Expires: Sun, 19 Nov 1978 05:00:00 GMT
+	X-Generator: Drupal 9 (https://www.drupal.org)
+	X-Drupal-Cache: HIT
+	Connection: close
+	Transfer-Encoding: chunked
+	Content-Type: text/html; charset=UTF-8
+
+

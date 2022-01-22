@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 21 08:03:40 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6678/tcp_6678_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6678/xml/tcp_6678_irc_nmap.xml&quot; -p 6678 192.168.196.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -&#45;script irc-botnet-channels,irc-info,irc-unrealircd-backdoor -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6678/tcp_6678_irc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/UT99/results/192.168.196.44/scans/tcp6678/xml/tcp_6678_irc_nmap.xml&quot; -p 6678 192.168.196.44" start="1642770220" startstr="Fri Jan 21 08:03:40 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6678"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642770222"/>
+<taskend task="NSE" time="1642770222"/>
+<taskbegin task="NSE" time="1642770222"/>
+<taskend task="NSE" time="1642770222"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642770222"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642770222"/>
+<taskbegin task="SYN Stealth Scan" time="1642770222"/>
+<taskend task="SYN Stealth Scan" time="1642770222" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642770223"/>
+<taskend task="Service scan" time="1642770230" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642770230"/>
+<taskprogress task="NSE" time="1642770261" percent="97.83" remaining="1" etc="1642770262"/>
+<taskprogress task="NSE" time="1642770291" percent="97.83" remaining="2" etc="1642770292"/>
+<taskend task="NSE" time="1642770296"/>
+<taskbegin task="NSE" time="1642770296"/>
+<taskend task="NSE" time="1642770296"/>
+<host starttime="1642770222" endtime="1642770296"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="6678"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="irc" product="InspIRCd" hostname="irc.madcowz.localdomain" method="probed" conf="10"><cpe>cpe:/a:inspire_ircd:inspircd</cpe></service><script id="irc-botnet-channels" output="&#xa;  ERROR: TIMEOUT&#xa;"/></port>
+</ports>
+<times srtt="247498" rttvar="247498" to="1237490"/>
+</host>
+<taskbegin task="NSE" time="1642770297"/>
+<taskend task="NSE" time="1642770297"/>
+<taskbegin task="NSE" time="1642770297"/>
+<taskend task="NSE" time="1642770297"/>
+<runstats><finished time="1642770297" timestr="Fri Jan 21 08:04:57 2022" summary="Nmap done at Fri Jan 21 08:04:57 2022; 1 IP address (1 host up) scanned in 76.99 seconds" elapsed="76.99" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
