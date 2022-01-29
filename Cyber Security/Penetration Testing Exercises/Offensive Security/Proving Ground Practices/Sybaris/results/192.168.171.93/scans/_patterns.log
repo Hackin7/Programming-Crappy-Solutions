@@ -1,0 +1,16 @@
+Matched Pattern: Powered-By: PHP/7.3.22
+
+Matched Pattern: powered by HTMLy, a databaseless blogging platform."/>
+
+Matched Pattern: powered by HTMLy, a databaseless blogging platform.</p>
+
+Matched Pattern: powered by <a href="http://www.htmly.com" target="_blank">HTMLy</a></p></span>
+
+Identified HTTP Server: Apache/2.4.6 (CentOS) PHP/7.3.22
+
+CVE Identified: CVE-2005-3299
+
+CVE Identified: CVE-2005-3299
+
+Identified HTTP Server: Apache/2.4.6 (CentOS) PHP/7.3.22
+

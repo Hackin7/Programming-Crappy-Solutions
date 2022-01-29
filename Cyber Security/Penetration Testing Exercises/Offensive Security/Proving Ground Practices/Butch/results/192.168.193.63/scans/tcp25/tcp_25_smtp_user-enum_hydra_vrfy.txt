@@ -1,0 +1,25 @@
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2022-01-27 11:41:15
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 17 login tries (l:17/p:1), ~2 tries per task
+[DATA] attacking smtp-enum://192.168.193.63:25/vrfy
+[25][smtp-enum] host: 192.168.193.63   login: admin
+[25][smtp-enum] host: 192.168.193.63   login: guest
+[25][smtp-enum] host: 192.168.193.63   login: root
+[25][smtp-enum] host: 192.168.193.63   login: info
+[25][smtp-enum] host: 192.168.193.63   login: adm
+[25][smtp-enum] host: 192.168.193.63   login: mysql
+[25][smtp-enum] host: 192.168.193.63   login: user
+[25][smtp-enum] host: 192.168.193.63   login: administrator
+[25][smtp-enum] host: 192.168.193.63   login: oracle
+[25][smtp-enum] host: 192.168.193.63   login: puppet
+[25][smtp-enum] host: 192.168.193.63   login: ansible
+[25][smtp-enum] host: 192.168.193.63   login: ec2-user
+[25][smtp-enum] host: 192.168.193.63   login: test
+[25][smtp-enum] host: 192.168.193.63   login: ftp
+[25][smtp-enum] host: 192.168.193.63   login: pi
+[25][smtp-enum] host: 192.168.193.63   login: vagrant
+[25][smtp-enum] host: 192.168.193.63   login: azureuser
+1 of 1 target successfully completed, 17 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2022-01-27 11:41:17
+

@@ -1,0 +1,48 @@
+# Nmap 7.91 scan initiated Sun Jan 23 23:03:19 2022 as: nmap -vv --reason -Pn -T4 -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Panic/results/192.168.234.150/scans/tcp21/tcp_21_ftp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Panic/results/192.168.234.150/scans/tcp21/xml/tcp_21_ftp_nmap.xml" 192.168.234.150
+Nmap scan report for 192.168.234.150
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-23 23:03:20 EST for 16s
+
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 FileZilla ftpd
+| banner: 220-FileZilla Server 0.9.60 beta\x0D\x0A220-written by Tim Koss
+| e (tim.kosse@filezilla-project.org)\x0D\x0A220 Please visit https://fil
+|_ezilla-project.org/
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 AppData
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Application Data
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Contacts
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Cookies
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Desktop
+| drwxr-xr-x 1 ftp ftp              0 Jun 21  2021 Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Downloads
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Favorites
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Links
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Local Settings
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Music
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 My Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 NetHood
+| ---------- 1 ftp ftp         786432 Jun 22  2021 NTUSER.DAT
+| ---------- 1 ftp ftp           8192 Dec 01  2020 ntuser.dat.LOG1
+| ---------- 1 ftp ftp         372736 Dec 01  2020 ntuser.dat.LOG2
+| ---------- 1 ftp ftp          65536 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TM.blf
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000001.regtrans-ms
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000002.regtrans-ms
+| ---------- 1 ftp ftp             20 Dec 01  2020 ntuser.ini
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Pictures
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 PrintHood
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Recent
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Saved Games
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Searches
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 SendTo
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Start Menu
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Templates
+|_drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Videos
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 23:03:36 2022 -- 1 IP address (1 host up) scanned in 17.03 seconds

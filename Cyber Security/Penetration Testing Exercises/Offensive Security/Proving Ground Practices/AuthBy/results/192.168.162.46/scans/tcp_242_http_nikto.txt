@@ -1,0 +1,21 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.162.46
++ Target Hostname:    192.168.162.46
++ Target Port:        242
++ Start Time:         2022-01-28 23:08:19 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.21 (Win32) PHP/5.3.8
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ / - Requires Authentication for realm 'Qui e nuce nuculeum esse volt, frangit nucem!'
++ PHP/5.3.8 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ Apache/2.2.21 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Retrieved x-powered-by header: PHP/5.3.8
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ 8877 requests: 0 error(s) and 8 item(s) reported on remote host
++ End Time:           2022-01-28 23:35:54 (GMT-5) (1655 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

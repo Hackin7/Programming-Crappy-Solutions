@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 27 10:40:06 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.193.61 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.193.61" start="1643298006" startstr="Thu Jan 27 10:40:06 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643298007"/>
+<taskend task="NSE" time="1643298007"/>
+<taskbegin task="NSE" time="1643298007"/>
+<taskend task="NSE" time="1643298007"/>
+<taskbegin task="NSE" time="1643298007"/>
+<taskend task="NSE" time="1643298007"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643298007"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643298007"/>
+<taskbegin task="SYN Stealth Scan" time="1643298007"/>
+<taskend task="SYN Stealth Scan" time="1643298008" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643298008"/>
+<taskend task="Service scan" time="1643298014" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643298014"/>
+<taskprogress task="NSE" time="1643298045" percent="86.84" remaining="5" etc="1643298050"/>
+<taskprogress task="NSE" time="1643298075" percent="89.87" remaining="7" etc="1643298082"/>
+<taskprogress task="NSE" time="1643298105" percent="99.35" remaining="1" etc="1643298106"/>
+<taskprogress task="NSE" time="1643298135" percent="99.35" remaining="1" etc="1643298136"/>
+<taskprogress task="NSE" time="1643298165" percent="99.67" remaining="1" etc="1643298165"/>
+<taskend task="NSE" time="1643298179"/>
+<taskbegin task="NSE" time="1643298179"/>
+<taskend task="NSE" time="1643298180"/>
+<taskbegin task="NSE" time="1643298180"/>
+<taskend task="NSE" time="1643298180"/>
+<host starttime="1643298007" endtime="1643298180"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.193.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-chrono" output="Request times for /; avg: 939.99ms; min: 561.06ms; max: 1866.07ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.193.61&#xa;    &#xa;    Path: http://192.168.193.61:80/static/css/2.ab0e71a6.chunk.css&#xa;    Line number: 8&#xa;    Comment: &#xa;        /*# sourceMappingURL=2.ab0e71a6.chunk.css.map */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/css/2.ab0e71a6.chunk.css&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/js/2.1cec334d.chunk.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* @noflip */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/css/main.bf7806c2.chunk.css&#xa;    Line number: 2&#xa;    Comment: &#xa;        /*# sourceMappingURL=main.bf7806c2.chunk.css.map */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/js/2.1cec334d.chunk.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        &lt;!-&#45;/,/-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.193.61:80/static/css/2.ab0e71a6.chunk.css&#xa;    Line number: 6&#xa;    Comment: &#xa;        /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/css/2.ab0e71a6.chunk.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Bootstrap v3.3.7 (http://getbootstrap.com)&#xa;         * Copyright 2011-2016 Twitter, Inc.&#xa;         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:80/static/js/2.1cec334d.chunk.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* @deprecated */&#xa;"/><script id="http-cors" output="HEAD GET POST PUT DELETE TRACE OPTIONS CONNECT PATCH"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 27 Jan 2022 15:40:18 GMT; -2s from local time."><elem key="date">2022-01-27T15:40:18+00:00</elem>
+<elem key="delta">-2.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-favicon" output="Unknown favicon MD5: 8D9ADDAFA993A4318E476ED8EB0C8061"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Length: 2166&#xa;  Content-Type: text/html&#xa;  Last-Modified: Tue, 11 Feb 2020 12:44:24 GMT&#xa;  Accept-Ranges: bytes&#xa;  ETag: &quot;1d5e0d8fd07cc76&quot;&#xa;  Server: Microsoft-IIS/10.0&#xa;  Date: Thu, 27 Jan 2022 15:40:18 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-majordomo2-dir-traversal" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-malware-host" output="false">false</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash ff2fc68dcd0b05519a73e086e4d59cb0&#xa;Credits query returned unknown hash ff2fc68dcd0b05519a73e086e4d59cb0"/><script id="http-phpmyadmin-dir-traversal" output="&#xa;  VULNERABLE:&#xa;  phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2005-3299&#xa;      PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.&#xa;      &#xa;    Disclosure date: 2005-10-nil&#xa;    Extra information:&#xa;      ../../../../../etc/passwd not found.&#xa;  &#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299&#xa;      http://www.exploit-db.com/exploits/1244/&#xa;"><table key="CVE-2005-3299">
+<elem key="title">phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2005-3299</elem>
+</table>
+<table key="description">
+<elem>PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="dat">10</elem>
+<elem key="month">10</elem>
+<elem key="year">2005</elem>
+</table>
+</table>
+<elem key="disclosure">2005-10-nil</elem>
+<table key="extra_info">
+<elem>../../../../../etc/passwd not found.&#xa;</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299</elem>
+<elem>http://www.exploit-db.com/exploits/1244/</elem>
+</table>
+</table>
+</script><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; ico: 1&#xa;    /static/css/&#xa;      css: 2&#xa;    /static/js/&#xa;      js: 2; registrationController=new: 1; tokens=%7b%7d,u=0: 1&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /static/js/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 2; ico: 1; js: 2; registrationController=new: 1; tokens=%7b%7d,u=0: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="BaGet"><elem key="title">BaGet</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-vuln-cve2017-1001000" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="191772" rttvar="191772" to="958860"/>
+</host>
+<taskbegin task="NSE" time="1643298180"/>
+<taskend task="NSE" time="1643298180"/>
+<taskbegin task="NSE" time="1643298180"/>
+<taskend task="NSE" time="1643298180"/>
+<taskbegin task="NSE" time="1643298180"/>
+<taskend task="NSE" time="1643298180"/>
+<runstats><finished time="1643298180" timestr="Thu Jan 27 10:43:00 2022" summary="Nmap done at Thu Jan 27 10:43:00 2022; 1 IP address (1 host up) scanned in 174.35 seconds" elapsed="174.35" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

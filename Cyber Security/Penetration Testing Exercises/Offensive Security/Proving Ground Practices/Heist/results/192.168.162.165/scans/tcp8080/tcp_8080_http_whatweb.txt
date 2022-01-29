@@ -1,0 +1,62 @@
+WhatWeb report for http://192.168.162.165:8080
+Status    : 200 OK
+Title     : Super Secure Web Browser
+IP        : 192.168.162.165
+Country   : RESERVED, ZZ
+
+Summary   : Script, HTML5, JQuery[2.2.2], HTTPServer[Werkzeug/2.0.1 Python/3.9.0], Bootstrap[3.3.6], Werkzeug[2.0.1], Python[3.9.0]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Version      : 3.3.6
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Werkzeug/2.0.1 Python/3.9.0 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 2.2.2
+	Website     : http://jquery.com/
+
+[ Python ]
+	Python is a programming language that lets you work more
+	quickly and integrate your systems more effectively. You
+	can learn to use Python and see almost immediate gains in
+	productivity and lower maintenance costs.
+
+	Version      : 3.9.0
+	Website     : http://www.python.org/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ Werkzeug ]
+	Werkzeug is a WSGI utility library for Python.
+
+	Version      : 2.0.1
+	Website     : http://werkzeug.pocoo.org/
+
+HTTP Headers:
+	HTTP/1.0 200 OK
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 3608
+	Server: Werkzeug/2.0.1 Python/3.9.0
+	Date: Fri, 28 Jan 2022 16:03:18 GMT
+
+

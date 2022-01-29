@@ -1,0 +1,128 @@
+# Nmap 7.91 scan initiated Sat Jan 29 08:25:44 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8003 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp8003/tcp_8003_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp8003/xml/tcp_8003_http_nmap.xml" 192.168.162.64
+Nmap scan report for 192.168.162.64
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-01-29 08:25:49 EST for 49s
+
+PORT     STATE SERVICE REASON         VERSION
+8003/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.38
+|_http-chrono: Request times for /; avg: 487.21ms; min: 369.21ms; max: 624.57ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sat, 29 Jan 2022 13:24:46 GMT; -1m18s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /: Root directory w/ listing on 'apache/2.4.38 (debian)'
+|_  /manual/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.162.64:8003/: 
+|     (1) ip: 
+|_      + 192.168.162.64
+| http-headers: 
+|   Date: Sat, 29 Jan 2022 13:24:46 GMT
+|   Server: Apache/2.4.38 (Debian)
+|   Connection: close
+|   Content-Type: text/html;charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| -     2019-02-05 21:02  booked/
+|_
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 19184f154103a432afa09dfa8ffca78b
+|_Credits query returned unknown hash 19184f154103a432afa09dfa8ffca78b
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /booked/
+|       Other: 1
+|     /icons/
+|       gif: 2
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /booked/
+|   Total files found (by extension):
+|_    Other: 2; gif: 2
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dD%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dD%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dD%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://192.168.162.64:8003/?C=D%3bO%3dA%27%20OR%20sqlspider
+|_    http://192.168.162.64:8003/?C=N%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Index of /
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: Host: 127.0.1.1
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 08:26:38 2022 -- 1 IP address (1 host up) scanned in 54.98 seconds

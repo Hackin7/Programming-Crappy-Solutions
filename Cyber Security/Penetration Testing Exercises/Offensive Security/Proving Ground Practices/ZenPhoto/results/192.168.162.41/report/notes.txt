@@ -1,0 +1,20 @@
+[*] mdns found on udp/5353.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] ipp found on tcp/23.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+

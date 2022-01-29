@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 27 19:01:44 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 -&#45;script=smb-vuln-ms06-025 -&#45;script-args=unsafe=1 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp_445_smb_ms06-025.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/xml/tcp_445_smb_ms06-025.xml&quot; 192.168.193.63 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 -&#45;script=smb-vuln-ms06-025 -&#45;script-args=unsafe=1 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp_445_smb_ms06-025.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/xml/tcp_445_smb_ms06-025.xml&quot; 192.168.193.63" start="1643328104" startstr="Thu Jan 27 19:01:44 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643328105"/>
+<taskend task="NSE" time="1643328105"/>
+<taskbegin task="NSE" time="1643328105"/>
+<taskend task="NSE" time="1643328105"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643328105"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643328105"/>
+<taskbegin task="Connect Scan" time="1643328105"/>
+<taskend task="Connect Scan" time="1643328105" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643328105"/>
+<taskend task="Service scan" time="1643328123" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643328123"/>
+<taskend task="NSE" time="1643328126"/>
+<taskbegin task="NSE" time="1643328126"/>
+<taskend task="NSE" time="1643328126"/>
+<host starttime="1643328105" endtime="1643328126"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.193.63" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="195244" rttvar="195244" to="976220"/>
+</host>
+<taskbegin task="NSE" time="1643328127"/>
+<taskend task="NSE" time="1643328127"/>
+<taskbegin task="NSE" time="1643328127"/>
+<taskend task="NSE" time="1643328127"/>
+<runstats><finished time="1643328127" timestr="Thu Jan 27 19:02:07 2022" summary="Nmap done at Thu Jan 27 19:02:07 2022; 1 IP address (1 host up) scanned in 22.48 seconds" elapsed="22.48" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

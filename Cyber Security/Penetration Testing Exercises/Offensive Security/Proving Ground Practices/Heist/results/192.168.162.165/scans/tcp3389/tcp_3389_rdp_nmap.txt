@@ -1,0 +1,105 @@
+# Nmap 7.91 scan initiated Fri Jan 28 11:02:59 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3389/tcp_3389_rdp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml" 192.168.162.165
+Nmap scan report for 192.168.162.165
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-28 11:03:06 EST for 46s
+
+PORT     STATE SERVICE       REASON          VERSION
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|     RDSTLS: SUCCESS
+|     SSL: SUCCESS
+|_  RDP Protocol Version:  RDP 10.6 server
+| rdp-ntlm-info: 
+|   Target_Name: HEIST
+|   NetBIOS_Domain_Name: HEIST
+|   NetBIOS_Computer_Name: DC01
+|   DNS_Domain_Name: heist.offsec
+|   DNS_Computer_Name: DC01.heist.offsec
+|   DNS_Tree_Name: heist.offsec
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-01-28T16:03:14+00:00
+| ssl-cert: Subject: commonName=DC01.heist.offsec
+| Issuer: commonName=DC01.heist.offsec
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-01-27T15:53:21
+| Not valid after:  2022-07-29T15:53:21
+| MD5:   4ba8 5eeb 7b79 8605 5c97 f2c8 6610 c08b
+| SHA-1: 7f78 0889 0b69 6120 65e9 9fa6 f1fa 3150 b038 9ebc
+| -----BEGIN CERTIFICATE-----
+| MIIC5jCCAc6gAwIBAgIQEk/rv0jDmrRKL6GsaPSPbzANBgkqhkiG9w0BAQsFADAc
+| MRowGAYDVQQDExFEQzAxLmhlaXN0Lm9mZnNlYzAeFw0yMjAxMjcxNTUzMjFaFw0y
+| MjA3MjkxNTUzMjFaMBwxGjAYBgNVBAMTEURDMDEuaGVpc3Qub2Zmc2VjMIIBIjAN
+| BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuhyitBpyVMW3XSZEMndYcqdvGnpI
+| lrvttBaitjhb6wL9c/UpMHPiYM6Dz8GUK/IZ8JKShuC4aImeBcdLJOGEG6qqt143
+| EhEbdRHPsAi2kVZLC6nZh3sKP03zv7Duq9HmMpPJJh1BJXwFd7oFsUeKkbzn6uPR
+| +XPj8HPQxXQXzLgXNRvptVathxaZrPEbTexWkpCC6yvrUUytJjq0Fx1Stgu/8x7l
+| Og2FtGxbgD119FiVgc0jPcElci91Q57Mq07xxU4U7FH+mGCQZLyx7/Vez94VjWVQ
+| TNjd9Kh9M1JORNHmOcP2APUgcTn9AD17pwQAcSSbQyLMWWWJV2Q00Of2LQIDAQAB
+| oyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcN
+| AQELBQADggEBABvdZNmwaQD3ZAPEZP1uCUDE5pCJMC9dRuhjV39gnbXZSqU9vaU4
+| vJ9Wo3J/kutDHZoomAGxvTY2gdS4PvNG3q9rwfMCmVG/dxuMOlggCoo54n4hd3NW
+| fCi9G5BuPu2QlY/ALtyrl8iE+qY6YBucprjeLzlL7rFz1a0zTI6k13Gz9M7AoZDr
+| gtN4ivOC4nTsdZ5keSsn5H41Xs5XKt+ONntnn2xbR9XYa/ze4AF6bw3RMjClXdk7
+| /uCyQW/BOIsKF3Oekza+GFwYJELJ2ZVyXXtWTs50VU58uAqP8jCKzXbSQonQsZaj
+| NEFmQSl7H9MjBL5YDOocLr2M11lYGKiq7qc=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-01-28T16:03:35+00:00; -1s from scanner time.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 28 11:03:52 2022 -- 1 IP address (1 host up) scanned in 53.19 seconds

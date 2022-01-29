@@ -1,0 +1,28 @@
+# Nmap 7.91 scan initiated Fri Jan 28 22:33:05 2022 as: nmap -vv --reason -Pn -T4 -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp21/tcp_21_ftp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp21/xml/tcp_21_ftp_nmap.xml" 192.168.162.46
+Nmap scan report for 192.168.162.46
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-28 22:33:07 EST for 8s
+
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 zFTPServer 6.0 build 2011-10-17
+|_banner: 220 zFTPServer v6.0, build 2011-10-17 14:25 ready.
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| total 9680
+| ----------   1 root     root      5610496 Oct 18  2011 zFTPServer.exe
+| ----------   1 root     root           25 Feb 10  2011 UninstallService.bat
+| ----------   1 root     root      4284928 Oct 18  2011 Uninstall.exe
+| ----------   1 root     root           17 Aug 13  2011 StopService.bat
+| ----------   1 root     root           18 Aug 13  2011 StartService.bat
+| ----------   1 root     root         8736 Nov 09  2011 Settings.ini
+| dr-xr-xr-x   1 root     root          512 Jan 29 11:31 log
+| ----------   1 root     root         2275 Aug 09  2011 LICENSE.htm
+| ----------   1 root     root           23 Feb 10  2011 InstallService.bat
+| dr-xr-xr-x   1 root     root          512 Nov 08  2011 extensions
+| dr-xr-xr-x   1 root     root          512 Nov 08  2011 certificates
+|_dr-xr-xr-x   1 root     root          512 Jul 26  2021 accounts
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 28 22:33:15 2022 -- 1 IP address (1 host up) scanned in 9.98 seconds

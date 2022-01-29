@@ -1,0 +1,663 @@
+# Nmap 7.91 scan initiated Sat Jan 22 23:52:12 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.70.39
+Nmap scan report for 192.168.70.39
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-01-22 23:52:16 EST for 207s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.2.4 ((Ubuntu) PHP/5.2.3-1ubuntu6)
+|_http-apache-negotiation: mod_negotiation enabled.
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.70.39
+|   url                                                                                                method
+|   http://192.168.70.39:80/                                                                           FORM
+|   http://192.168.70.39:80/index.php?target=pages&amp;page_id=about                                   FORM
+|   http://192.168.70.39:80/index.php?mode=catalog                                                     FORM
+|   http://192.168.70.39:80/index.php?target=pages&amp;page_id=privacy_policy                          FORM
+|   http://192.168.70.39:80/index.php?target=cart&csid=671859f4e754548ce3504b7dfb552101                FORM
+|   http://192.168.70.39:80/index.php?target=pages&amp;page_id=what_is_cs                              FORM
+|   http://192.168.70.39:80/index.php?target=auth&amp;mode=login_form                                  FORM
+|   http://192.168.70.39:80/index.php                                                                  FORM
+|   http://192.168.70.39:80/index.php?target=exceptions&no_page&csid=f7aba05bd053a57738488e925260aaf3  FORM
+|   http://192.168.70.39:80/index.php?target=auth&amp;mode=recover_password                            FORM
+|   http://192.168.70.39:80/index.php?target=cart                                                      FORM
+|   http://192.168.70.39:80/index.php?target=topics&amp;topic_id=9                                     FORM
+|   http://192.168.70.39:80/index.php?target=sitemap                                                   FORM
+|   http://192.168.70.39:80/index.php?target=search                                                    FORM
+|   http://192.168.70.39:80/index.php?target=categories&amp;category_id=119                            FORM
+|   http://192.168.70.39:80/index.php?target=categories&amp;category_id=113                            FORM
+|_  http://192.168.70.39:80/index.php?target=categories&amp;category_id=93                             FORM
+|_http-chrono: Request times for /; avg: 1284.58ms; min: 1120.28ms; max: 1592.84ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.70.39
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 406
+|     Comment: 
+|         /* /categories side box */
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Line number: 13
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         -->
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 352
+|     Comment: 
+|         /* /Main boxes styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 354
+|     Comment: 
+|         /* categories side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 130
+|     Comment: 
+|         /* /General styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 547
+|     Comment: 
+|         /* /Search side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 132
+|     Comment: 
+|         /* Header styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 258
+|     Comment: 
+|         /* Side boxes styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 203
+|     Comment: 
+|         /* /Header styles */
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Line number: 602
+|     Comment: 
+|         
+|         
+|         -->
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Line number: 265
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         	-->
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 549
+|     Comment: 
+|         /* bestsellers side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 408
+|     Comment: 
+|         /* Site info side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 557
+|     Comment: 
+|         /* Notification box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 687
+|     Comment: 
+|         /* category page */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 766
+|     Comment: 
+|         /* form styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 469
+|     Comment: 
+|         /* /Site info side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 495
+|     Comment: 
+|         /*  /authentication side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 335
+|     Comment: 
+|         /* Main boxes styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 472
+|     Comment: 
+|         /* authentication side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 821
+|     Comment: 
+|         /* all levels outer */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 671
+|     Comment: 
+|         /* /buttons */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 1
+|     Comment: 
+|         /* General styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 205
+|     Comment: 
+|         /* Footer styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 617
+|     Comment: 
+|         /* buttons */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 685
+|     Comment: 
+|         /* /eMenu */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 814
+|     Comment: 
+|         /* all levels inner */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 584
+|     Comment: 
+|         /* Warning message */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 917
+|     Comment: 
+|         /* \manufacturers style */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 913
+|     Comment: 
+|         /* manufacturers style */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 497
+|     Comment: 
+|         /* Search side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 785
+|     Comment: 
+|         /* checkout pages */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 256
+|     Comment: 
+|         /* /Footer styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 597
+|     Comment: 
+|         /* /Notification box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 555
+|     Comment: 
+|         /* /bestsellers side box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 673
+|     Comment: 
+|         /* eMenu */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 315
+|     Comment: 
+|         /* /Side boxes styles */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 571
+|     Comment: 
+|         /* error message */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 599
+|     Comment: 
+|         /* Section in main box */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 558
+|     Comment: 
+|         /* Notification message */
+|     
+|     Path: http://192.168.70.39:80/skins/new_vision_blue/customer/styles.css
+|     Line number: 806
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|_        */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.70.39
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.70.39:80/
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=about
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=about
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=about
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?mode=catalog
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?mode=catalog
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?mode=catalog
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=privacy_policy
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=privacy_policy
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=privacy_policy
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart&csid=671859f4e754548ce3504b7dfb552101
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart&csid=671859f4e754548ce3504b7dfb552101
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart&csid=671859f4e754548ce3504b7dfb552101
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=what_is_cs
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=what_is_cs
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=pages&amp;page_id=what_is_cs
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=login_form
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=login_form
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=login_form
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=exceptions&no_page&csid=f7aba05bd053a57738488e925260aaf3
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=exceptions&no_page&csid=f7aba05bd053a57738488e925260aaf3
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=exceptions&no_page&csid=f7aba05bd053a57738488e925260aaf3
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=recover_password
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=recover_password
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=auth&amp;mode=recover_password
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=cart
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=topics&amp;topic_id=9
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=topics&amp;topic_id=9
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=topics&amp;topic_id=9
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=sitemap
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=sitemap
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=sitemap
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=search
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=search
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=search
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=search
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=119
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=119
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=119
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=113
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=113
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=113
+|     Form id: subscribe_email
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Form id: 
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Form id: login_form2
+|     Form action: index.php
+|     
+|     Path: http://192.168.70.39:80/index.php?target=categories&amp;category_id=93
+|     Form id: subscribe_email
+|_    Form action: index.php
+|_http-date: Sun, 23 Jan 2022 04:52:31 GMT; +6s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /admin.php: Possible admin folder
+|   /admin/: Possible admin folder
+|   /admin/admin/: Possible admin folder
+|   /admin/account.php: Possible admin folder
+|   /admin/index.php: Possible admin folder
+|   /admin/login.php: Possible admin folder
+|   /admin/admin.php: Possible admin folder
+|   /admin/index.html: Possible admin folder
+|   /admin/login.html: Possible admin folder
+|   /admin/admin.html: Possible admin folder
+|   /admin/home.php: Possible admin folder
+|   /admin/controlpanel.php: Possible admin folder
+|   /admin/account.html: Possible admin folder
+|   /admin/admin_login.html: Possible admin folder
+|   /admin/cp.php: Possible admin folder
+|   /admin/admin_login.php: Possible admin folder
+|   /admin/admin-login.php: Possible admin folder
+|   /admin/home.html: Possible admin folder
+|   /admin/admin-login.html: Possible admin folder
+|   /admin/adminLogin.html: Possible admin folder
+|   /admin/controlpanel.html: Possible admin folder
+|   /admin/cp.html: Possible admin folder
+|   /admin/adminLogin.php: Possible admin folder
+|   /admin/account.cfm: Possible admin folder
+|   /admin/index.cfm: Possible admin folder
+|   /admin/login.cfm: Possible admin folder
+|   /admin/admin.cfm: Possible admin folder
+|   /admin/admin_login.cfm: Possible admin folder
+|   /admin/controlpanel.cfm: Possible admin folder
+|   /admin/cp.cfm: Possible admin folder
+|   /admin/adminLogin.cfm: Possible admin folder
+|   /admin/admin-login.cfm: Possible admin folder
+|   /admin/home.cfm: Possible admin folder
+|   /admin/account.asp: Possible admin folder
+|   /admin/index.asp: Possible admin folder
+|   /admin/login.asp: Possible admin folder
+|   /admin/admin.asp: Possible admin folder
+|   /admin/home.asp: Possible admin folder
+|   /admin/controlpanel.asp: Possible admin folder
+|   /admin/admin-login.asp: Possible admin folder
+|   /admin/cp.asp: Possible admin folder
+|   /admin/admin_login.asp: Possible admin folder
+|   /admin/adminLogin.asp: Possible admin folder
+|   /admin/account.aspx: Possible admin folder
+|   /admin/index.aspx: Possible admin folder
+|   /admin/login.aspx: Possible admin folder
+|   /admin/admin.aspx: Possible admin folder
+|   /admin/home.aspx: Possible admin folder
+|   /admin/controlpanel.aspx: Possible admin folder
+|   /admin/admin-login.aspx: Possible admin folder
+|   /admin/cp.aspx: Possible admin folder
+|   /admin/admin_login.aspx: Possible admin folder
+|   /admin/adminLogin.aspx: Possible admin folder
+|   /admin/index.jsp: Possible admin folder
+|   /admin/login.jsp: Possible admin folder
+|   /admin/admin.jsp: Possible admin folder
+|   /admin/home.jsp: Possible admin folder
+|   /admin/controlpanel.jsp: Possible admin folder
+|   /admin/admin-login.jsp: Possible admin folder
+|   /admin/cp.jsp: Possible admin folder
+|   /admin/account.jsp: Possible admin folder
+|   /admin/admin_login.jsp: Possible admin folder
+|   /admin/adminLogin.jsp: Possible admin folder
+|   /admin/backup/: Possible backup
+|   /admin/download/backup.sql: Possible database backup
+|   /admin/upload.php: Admin File Upload
+|   /admin/CiscoAdmin.jhtml: Cisco Collaboration Server
+|   /config/public/usergrp.gif: AXIS StorPoint
+|   /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS
+|   /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload
+|   /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload
+|   /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload
+|   /admin/jscript/upload.php: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.html: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.pl: Lizard Cart/Remote File upload
+|   /admin/jscript/upload.asp: Lizard Cart/Remote File upload
+|   /admin/environment.xml: Moodle files
+|   /catalog/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'
+|   /classes/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'
+|   /config/: Potentially interesting folder
+|   /icons/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'
+|   /image/: Potentially interesting folder
+|   /index/: Potentially interesting folder
+|   /install/: Potentially interesting folder
+|_  /payments/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Sun, 23 Jan 2022 04:52:42 GMT
+|   Server: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6
+|   X-Powered-By: PHP/5.2.3-1ubuntu6
+|   Expires: -1
+|   Last-Modified: Sun, 23 Jan 2022 04:52:42 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: no-cache
+|   Set-Cookie: csid=d1bd8d5d2fdbe62c2089bba39e703d54; expires=Sun, 23-Jan-2022 06:52:42 GMT; path=/; domain=.192.168.70.39
+|   Set-Cookie: csid=d1bd8d5d2fdbe62c2089bba39e703d54; path=/; domain=.192.168.70.39
+|   Set-Cookie: cart_languageC=EN; domain=.192.168.70.39
+|   Set-Cookie: cart_languageC=EN; domain=.192.168.70.39
+|   Set-Cookie: secondary_currencyC=usd; domain=.192.168.70.39
+|   Set-Cookie: secondary_currencyC=usd; domain=.192.168.70.39
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 127.0.0.1
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Versions from logo query (less accurate): 5.1.3 - 5.1.6, 5.2.0 - 5.2.17
+| Versions from credits query (more accurate): 5.2.3 - 5.2.5, 5.2.6RC3
+|_Version from header x-powered-by: PHP/5.2.3-1ubuntu6
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: -1
+|_http-server-header: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 2
+|     /skins/new_vision_blue/customer/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /skins/new_vision_blue/customer/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; php: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: CS-Cart. Powerful PHP shopping cart software
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Sun, 23 Jan 2022 04:52:43 GMT
+| Server: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-traceroute: 
+|   last-modified
+|     Hop #1: Sun, 23 Jan 2022 04:52:31 GMT
+|     Hop #2: Sun, 23 Jan 2022 04:52:33 GMT
+|_    Hop #3: Sun, 23 Jan 2022 04:52:35 GMT
+| http-unsafe-output-escaping: 
+|   Characters [> " '] reflected in parameter csid at http://192.168.70.39:80/index.php?target=cart&csid=671859f4e754548ce3504b7dfb552101
+|_  Characters [> " '] reflected in parameter csid at http://192.168.70.39:80/index.php?target=exceptions&no_page&csid=f7aba05bd053a57738488e925260aaf3
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 22 23:55:43 2022 -- 1 IP address (1 host up) scanned in 211.29 seconds

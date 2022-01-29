@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 28 22:32:23 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/xml/_full_tcp_nmap.xml&quot; 192.168.162.46 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/xml/_full_tcp_nmap.xml&quot; 192.168.162.46" start="1643427143" startstr="Fri Jan 28 22:32:23 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643427145"/>
+<taskend task="NSE" time="1643427145"/>
+<taskbegin task="NSE" time="1643427145"/>
+<taskend task="NSE" time="1643427145"/>
+<taskbegin task="NSE" time="1643427145"/>
+<taskend task="NSE" time="1643427145"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643427145"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643427145"/>
+<taskbegin task="SYN Stealth Scan" time="1643427145"/>
+<taskprogress task="SYN Stealth Scan" time="1643427176" percent="7.69" remaining="373" etc="1643427548"/>
+<taskprogress task="SYN Stealth Scan" time="1643427206" percent="25.74" remaining="176" etc="1643427382"/>
+<taskprogress task="SYN Stealth Scan" time="1643427236" percent="49.04" remaining="95" etc="1643427331"/>
+<taskprogress task="SYN Stealth Scan" time="1643427266" percent="76.34" remaining="38" etc="1643427304"/>
+<taskend task="SYN Stealth Scan" time="1643427290" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1643427290"/>
+<taskend task="Service scan" time="1643427307" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643427312"/>
+<taskend task="Traceroute" time="1643427312"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643427312"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643427312"/>
+<taskbegin task="NSE" time="1643427312"/>
+<taskend task="NSE" time="1643427318"/>
+<taskbegin task="NSE" time="1643427318"/>
+<taskend task="NSE" time="1643427320"/>
+<taskbegin task="NSE" time="1643427320"/>
+<taskend task="NSE" time="1643427320"/>
+<host starttime="1643427145" endtime="1643427320"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.162.46" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="zFTPServer" version="6.0 build 2011-10-17" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:vaestgoeta-data:zftpserver:6.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;total 9680&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root      5610496 Oct 18  2011 zFTPServer.exe&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root           25 Feb 10  2011 UninstallService.bat&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root      4284928 Oct 18  2011 Uninstall.exe&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root           17 Aug 13  2011 StopService.bat&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root           18 Aug 13  2011 StartService.bat&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root         8736 Nov 09  2011 Settings.ini&#xa;dr-xr-xr-x   1 root     root          512 Jan 29 11:31 log&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root         2275 Aug 09  2011 LICENSE.htm&#xa;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;   1 root     root           23 Feb 10  2011 InstallService.bat&#xa;dr-xr-xr-x   1 root     root          512 Nov 08  2011 extensions&#xa;dr-xr-xr-x   1 root     root          512 Nov 08  2011 certificates&#xa;dr-xr-xr-x   1 root     root          512 Jul 26  2021 accounts"/></port>
+<port protocol="tcp" portid="242"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.2.21" extrainfo="(Win32) PHP/5.3.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.21</cpe></service><script id="http-auth" output="&#xa;HTTP/1.1 401 Authorization Required&#xd;&#xa;  Basic realm=Qui e nuce nuculeum esse volt, frangit nucem!&#xa;"><table>
+<elem key="scheme">Basic</elem>
+<table key="params">
+<elem key="realm">Qui e nuce nuculeum esse volt, frangit nucem!</elem>
+</table>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.21 (Win32) PHP/5.3.8"><elem>Apache/2.2.21 (Win32) PHP/5.3.8</elem>
+</script><script id="http-title" output="401 Authorization Required"><elem key="title">401 Authorization Required</elem>
+</script></port>
+<port protocol="tcp" portid="3145"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="zftp-admin" product="zFTPServer admin" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:vaestgoeta-data:zftpserver</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=LIVDA&#xa;Issuer: commonName=LIVDA&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2021-06-03T21:15:17&#xa;Not valid after:  2021-12-03T21:15:17&#xa;MD5:   bb3f f979 9fc1 9d02 baa7 d0a4 9ccb 0922&#xa;SHA-1: d0a1 8a6a 8326 1123 85f2 59e3 71ea c66c f3a4 048f&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQGttsFTOC+IFFUDrl75tnVzANBgkqhkiG9w0BAQUFADAQ&#xa;MQ4wDAYDVQQDEwVMSVZEQTAeFw0yMTA2MDMyMTE1MTdaFw0yMTEyMDMyMTE1MTda&#xa;MBAxDjAMBgNVBAMTBUxJVkRBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAw5XIXz8iD9nH+yWmmm8qL9mhTX2ePktQVr8V+9pejC7+QnNWIBRiQgn1n24f&#xa;LXtl9fWPICyoHMRlMzPYZXddHGgFU8ld7UwJs2q5/egKfKE25T0Qp6GN8KesIzkn&#xa;un0mIJY7eEx+U+KbjH6Yh7607bGmy3Mjpa18WqwF+i2WWBF8bXDvuZPkcWP2YWBQ&#xa;01LoDtUFGJ0KeCFIHFe5eCsREFkYKkqLhvGCYPl3EYKVY3Av2VE8VUtf2HadzF1s&#xa;LBlefoT3p26bKr4guGhXUk8EXSNfHZAMl9mGlGX11A4RpVx/gna4Lx/elUYnfLNP&#xa;oSVwjm2I4M/cQyeWXK670acSTwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAHGQtYLWjpu4Mebquf3u&#xa;xfUqqlq+012JEgM2W2j/ny/ax71gMxKa2jr6bWWhfN8j2cNe0tEsJYmaHsiq12l9&#xa;OnOiJ6pSq9HBSp8lycCZ6uyXmPfcYYMuurcAf0dvUjBVbNr7vt74DogaJUzM7HH+&#xa;Do+r1PIODTQdPPiBS+Ygmx1tyStwnMIg47WHslB5L22t31xruDx83l2BzUftdbPB&#xa;/xy1v6LqHhKR/1JPVVbad5dGBJT5nZqPSM2NS6OmiUyZlZbvkLQo8WOnHgq7fSHu&#xa;ylD3NdGLQzpIV6R6tzkY/Gw8gWLH3pFCppgxL7nsnYltPYPDqhT7WHudKsS6CrYC&#xa;3Ws=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">LIVDA</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">LIVDA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C395C85F3F220FD9C7FB25A69A6F2A2FD9A14D7D9E3E4B5056BF15FBDA5E8C2EFE4273562014624209F59F6E1F2D7B65F5F58F202CA81CC4653333D865775D1C680553C95DED4C09B36AB9FDE80A7CA136E53D10A7A18DF0A7AC233927BA7D2620963B784C7E53E29B8C7E9887BEB4EDB1A6CB7323A5AD7C5AAC05FA2D9658117C6D70EFB993E47163F6616050D352E80ED505189D0A7821481C57B9782B111059182A4A8B86F18260F97711829563702FD9513C554B5FD8769DCC5D6C2C195E7E84F7A76E9B2ABE20B86857524F045D235F1D900C97D9869465F5D40E11A55C7F8276B82F1FDE9546277CB34FA125708E6D88E0CFDC4327965CAEBBD1A7124F</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-06-03T21:15:17</elem>
+<elem key="notAfter">2021-12-03T21:15:17</elem>
+</table>
+<elem key="md5">bb3ff9799fc19d02baa7d0a49ccb0922</elem>
+<elem key="sha1">d0a18a6a8326112385f259e371eac66cf3a4048f</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQGttsFTOC+IFFUDrl75tnVzANBgkqhkiG9w0BAQUFADAQ&#xa;MQ4wDAYDVQQDEwVMSVZEQTAeFw0yMTA2MDMyMTE1MTdaFw0yMTEyMDMyMTE1MTda&#xa;MBAxDjAMBgNVBAMTBUxJVkRBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAw5XIXz8iD9nH+yWmmm8qL9mhTX2ePktQVr8V+9pejC7+QnNWIBRiQgn1n24f&#xa;LXtl9fWPICyoHMRlMzPYZXddHGgFU8ld7UwJs2q5/egKfKE25T0Qp6GN8KesIzkn&#xa;un0mIJY7eEx+U+KbjH6Yh7607bGmy3Mjpa18WqwF+i2WWBF8bXDvuZPkcWP2YWBQ&#xa;01LoDtUFGJ0KeCFIHFe5eCsREFkYKkqLhvGCYPl3EYKVY3Av2VE8VUtf2HadzF1s&#xa;LBlefoT3p26bKr4guGhXUk8EXSNfHZAMl9mGlGX11A4RpVx/gna4Lx/elUYnfLNP&#xa;oSVwjm2I4M/cQyeWXK670acSTwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAHGQtYLWjpu4Mebquf3u&#xa;xfUqqlq+012JEgM2W2j/ny/ax71gMxKa2jr6bWWhfN8j2cNe0tEsJYmaHsiq12l9&#xa;OnOiJ6pSq9HBSp8lycCZ6uyXmPfcYYMuurcAf0dvUjBVbNr7vt74DogaJUzM7HH+&#xa;Do+r1PIODTQdPPiBS+Ygmx1tyStwnMIg47WHslB5L22t31xruDx83l2BzUftdbPB&#xa;/xy1v6LqHhKR/1JPVVbad5dGBJT5nZqPSM2NS6OmiUyZlZbvkLQo8WOnHgq7fSHu&#xa;ylD3NdGLQzpIV6R6tzkY/Gw8gWLH3pFCppgxL7nsnYltPYPDqhT7WHudKsS6CrYC&#xa;3Ws=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-01-29T03:34:01+00:00; -1m18s from scanner time."><elem key="date">2022-01-29T03:34:01+00:00</elem>
+<elem key="delta">-78.0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="92" line="78051">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="92"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="92" line="79339">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="92"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="91" line="74387">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="91" line="74606">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8.1" accuracy="91" line="74932">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="91"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="91" line="75116">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="91"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="91" line="76462">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional or Windows 8" accuracy="91" line="77013">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="91"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 R2" accuracy="91" line="77679">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1" accuracy="91" line="77747">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/28%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F4B5F8%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=10D%TI=I%II=I%SS=S%TS=7)&#xa;OPS(O1=M54ENW8ST11%O2=M54ENW8ST11%O3=M54ENW8NNT11%O4=M54ENW8ST11%O5=M54ENW8ST11%O6=M54EST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54ENW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="452" lastboot="Fri Jan 28 22:27:48 2022"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="9D42678E,2C7C86B8,9C606B99,7FBFF437,55FBFDA5,F626B63A"/>
+<ipidsequence class="Incremental" values="35D,35E,35F,360,361,362"/>
+<tcptssequence class="100HZ" values="ACE6,ACF0,ACFA,AD05,AD0F,AD1A"/>
+<hostscript><script id="clock-skew" output="-1m18s"><elem key="median">-78</elem>
+<elem key="count">1</elem>
+<elem key="mean">-78</elem>
+<elem key="stddev">0</elem>
+</script></hostscript><trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="171.87"/>
+<hop ttl="2" ipaddr="192.168.162.46" rtt="171.86"/>
+</trace>
+<times srtt="171609" rttvar="364" to="173065"/>
+</host>
+<taskbegin task="NSE" time="1643427320"/>
+<taskend task="NSE" time="1643427320"/>
+<taskbegin task="NSE" time="1643427320"/>
+<taskend task="NSE" time="1643427320"/>
+<taskbegin task="NSE" time="1643427320"/>
+<taskend task="NSE" time="1643427320"/>
+<runstats><finished time="1643427320" timestr="Fri Jan 28 22:35:20 2022" summary="Nmap done at Fri Jan 28 22:35:20 2022; 1 IP address (1 host up) scanned in 178.64 seconds" elapsed="178.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

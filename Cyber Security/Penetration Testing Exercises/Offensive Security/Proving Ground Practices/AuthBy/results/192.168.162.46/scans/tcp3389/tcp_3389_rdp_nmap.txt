@@ -1,0 +1,76 @@
+# Nmap 7.91 scan initiated Fri Jan 28 22:33:05 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp3389/tcp_3389_rdp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml" 192.168.162.46
+Nmap scan report for 192.168.162.46
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-28 22:33:07 EST for 30s
+
+PORT     STATE SERVICE            REASON          VERSION
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 127
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|     Native RDP: SUCCESS
+|     RDSTLS: SUCCESS
+|     SSL: SUCCESS
+|   RDP Encryption level: Client Compatible
+|     40-bit RC4: SUCCESS
+|     56-bit RC4: SUCCESS
+|     128-bit RC4: SUCCESS
+|     FIPS 140-1: SUCCESS
+|_  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server
+| rdp-vuln-ms12-020: 
+|   VULNERABLE:
+|   MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0152
+|     Risk factor: Medium  CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152
+|       http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|   
+|   MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0002
+|     Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002
+|_      http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+| ssl-cert: Subject: commonName=LIVDA
+| Issuer: commonName=LIVDA
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-06-03T21:15:17
+| Not valid after:  2021-12-03T21:15:17
+| MD5:   bb3f f979 9fc1 9d02 baa7 d0a4 9ccb 0922
+| SHA-1: d0a1 8a6a 8326 1123 85f2 59e3 71ea c66c f3a4 048f
+| -----BEGIN CERTIFICATE-----
+| MIICzjCCAbagAwIBAgIQGttsFTOC+IFFUDrl75tnVzANBgkqhkiG9w0BAQUFADAQ
+| MQ4wDAYDVQQDEwVMSVZEQTAeFw0yMTA2MDMyMTE1MTdaFw0yMTEyMDMyMTE1MTda
+| MBAxDjAMBgNVBAMTBUxJVkRBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEAw5XIXz8iD9nH+yWmmm8qL9mhTX2ePktQVr8V+9pejC7+QnNWIBRiQgn1n24f
+| LXtl9fWPICyoHMRlMzPYZXddHGgFU8ld7UwJs2q5/egKfKE25T0Qp6GN8KesIzkn
+| un0mIJY7eEx+U+KbjH6Yh7607bGmy3Mjpa18WqwF+i2WWBF8bXDvuZPkcWP2YWBQ
+| 01LoDtUFGJ0KeCFIHFe5eCsREFkYKkqLhvGCYPl3EYKVY3Av2VE8VUtf2HadzF1s
+| LBlefoT3p26bKr4guGhXUk8EXSNfHZAMl9mGlGX11A4RpVx/gna4Lx/elUYnfLNP
+| oSVwjm2I4M/cQyeWXK670acSTwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAHGQtYLWjpu4Mebquf3u
+| xfUqqlq+012JEgM2W2j/ny/ax71gMxKa2jr6bWWhfN8j2cNe0tEsJYmaHsiq12l9
+| OnOiJ6pSq9HBSp8lycCZ6uyXmPfcYYMuurcAf0dvUjBVbNr7vt74DogaJUzM7HH+
+| Do+r1PIODTQdPPiBS+Ygmx1tyStwnMIg47WHslB5L22t31xruDx83l2BzUftdbPB
+| /xy1v6LqHhKR/1JPVVbad5dGBJT5nZqPSM2NS6OmiUyZlZbvkLQo8WOnHgq7fSHu
+| ylD3NdGLQzpIV6R6tzkY/Gw8gWLH3pFCppgxL7nsnYltPYPDqhT7WHudKsS6CrYC
+| 3Ws=
+|_-----END CERTIFICATE-----
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 28 22:33:37 2022 -- 1 IP address (1 host up) scanned in 32.55 seconds

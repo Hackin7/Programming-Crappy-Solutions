@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 22 23:51:12 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/xml/_full_tcp_nmap.xml&quot; 192.168.70.39 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/xml/_full_tcp_nmap.xml&quot; 192.168.70.39" start="1642913472" startstr="Sat Jan 22 23:51:12 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642913473"/>
+<taskend task="NSE" time="1642913473"/>
+<taskbegin task="NSE" time="1642913473"/>
+<taskend task="NSE" time="1642913473"/>
+<taskbegin task="NSE" time="1642913473"/>
+<taskend task="NSE" time="1642913473"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642913473"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642913473"/>
+<taskbegin task="SYN Stealth Scan" time="1642913473"/>
+<taskprogress task="SYN Stealth Scan" time="1642913504" percent="5.14" remaining="573" etc="1642914077"/>
+<taskprogress task="SYN Stealth Scan" time="1642913534" percent="7.49" remaining="754" etc="1642914288"/>
+<taskprogress task="SYN Stealth Scan" time="1642913564" percent="9.90" remaining="829" etc="1642914392"/>
+<taskprogress task="SYN Stealth Scan" time="1642913615" percent="15.39" remaining="781" etc="1642914395"/>
+<taskprogress task="SYN Stealth Scan" time="1642913711" percent="24.50" remaining="734" etc="1642914444"/>
+<taskprogress task="SYN Stealth Scan" time="1642913744" percent="28.39" remaining="684" etc="1642914428"/>
+<taskprogress task="SYN Stealth Scan" time="1642913786" percent="33.03" remaining="635" etc="1642914421"/>
+<taskprogress task="SYN Stealth Scan" time="1642913831" percent="37.92" remaining="587" etc="1642914417"/>
+<taskprogress task="SYN Stealth Scan" time="1642913873" percent="42.65" remaining="538" etc="1642914411"/>
+<taskprogress task="SYN Stealth Scan" time="1642913915" percent="47.47" remaining="490" etc="1642914404"/>
+<taskprogress task="SYN Stealth Scan" time="1642913957" percent="52.30" remaining="442" etc="1642914398"/>
+<taskprogress task="SYN Stealth Scan" time="1642914005" percent="57.52" remaining="393" etc="1642914398"/>
+<taskprogress task="SYN Stealth Scan" time="1642914053" percent="62.59" remaining="347" etc="1642914400"/>
+<taskprogress task="SYN Stealth Scan" time="1642914098" percent="67.79" remaining="297" etc="1642914395"/>
+<taskprogress task="SYN Stealth Scan" time="1642914146" percent="73.01" remaining="249" etc="1642914395"/>
+<taskprogress task="SYN Stealth Scan" time="1642914191" percent="78.16" remaining="201" etc="1642914392"/>
+<taskprogress task="SYN Stealth Scan" time="1642914236" percent="83.50" remaining="151" etc="1642914387"/>
+<taskprogress task="SYN Stealth Scan" time="1642914272" percent="88.55" remaining="104" etc="1642914375"/>
+<taskprogress task="SYN Stealth Scan" time="1642914311" percent="93.55" remaining="58" etc="1642914369"/>
+<taskend task="SYN Stealth Scan" time="1642914369" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642914369"/>
+<taskend task="Service scan" time="1642914381" extrainfo="8 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642914402"/>
+<taskend task="Traceroute" time="1642914403"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642914403"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642914403"/>
+<taskbegin task="NSE" time="1642914403"/>
+<taskend task="NSE" time="1642914416"/>
+<taskbegin task="NSE" time="1642914416"/>
+<taskend task="NSE" time="1642914421"/>
+<taskbegin task="NSE" time="1642914421"/>
+<taskend task="NSE" time="1642914421"/>
+<host starttime="1642913473" endtime="1642914421"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.70.39" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65527">
+<extrareasons reason="resets" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="4.6p1 Debian 5build1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 f3:6e:87:04:ea:2d:b3:60:ff:42:ad:26:67:17:94:d5 (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAJedhI7AqO17xYjoo1RT33T4x4g7b+u71OK2CNJW//eoNBEibTyvqAmBDobETDcAZXHMdEMTvINlM7ZjGV4EAhfE57Fkkhae8LvML3Ae0OVsa/l4pWizwGEEkHVujayyHZlwqXnK1ePV9rKnc6VJUYL4yHPMEwhNDme92hxlEWBbAAAAFQCyn5tJyWy2EZXJLQgS/xpiBH36uQAAAIBcUdaW5kLYjbgbalp1Z3cMQuuiG/YhaLxNBMh75vM/SrrsATeqEIUlBNBgDel+fUSPbr2iCQ+I8xrk6CNvcXtugMfJSF78pH42VN5GrLKzNZeoyGzywEhcFKHAqcRMntyEZJ/BiLWRunRcnKznMMa00/d3xRLvTFKUmUjdW1IebAAAAIBRhyvDlRI873HIhNd8GiXY/kZyL+jDQle8ULF1Lk+H+EzKXMSPt0gMv8z2bpSD1XIB565rcFWlO+7q0BZFY+NLJAhMWAWxBE4Ib87uPUqeGvg6D8w6gZur84lpMg7P1KjyihIfY5tMCwfKkkaS418IPzhKtDUvtI0Vr6h3Wv0luA==&#xa;  2048 bb:03:ce:ed:13:f1:9a:9e:36:03:e2:af:ca:b2:35:04 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzGacK6NGRpMIVjkA/xYbfKDgeJeQzkJl25og4nQl+FV4ZbvXv6h0vCU+E8SPHKPL/WJAIqmL6hdQaTQiTDmhcKjecWBq9fX1Esb8cvlOPEzphl+wESfJx/lWYvLPBXz0ZdKfy2/O+0an9ua6jl3tDEFzeosHwIF8zDbaBL6/RzBV+0gkzA67OowtcaxoioYYPzsEaOAkAFjlaRMviUA3nzCvffG61KyqmAdwodl+rXyI4KHjQqinPYk5qmj9rO8LcLE/gWVRoRw4va6hbJ2V7e74Tt1HQ4V/FzhG1zrWdkI/qA65RMCw/0270w1PjYkfYl2ENJL6YHHosf4NCkfdbw=="><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJedhI7AqO17xYjoo1RT33T4x4g7b+u71OK2CNJW//eoNBEibTyvqAmBDobETDcAZXHMdEMTvINlM7ZjGV4EAhfE57Fkkhae8LvML3Ae0OVsa/l4pWizwGEEkHVujayyHZlwqXnK1ePV9rKnc6VJUYL4yHPMEwhNDme92hxlEWBbAAAAFQCyn5tJyWy2EZXJLQgS/xpiBH36uQAAAIBcUdaW5kLYjbgbalp1Z3cMQuuiG/YhaLxNBMh75vM/SrrsATeqEIUlBNBgDel+fUSPbr2iCQ+I8xrk6CNvcXtugMfJSF78pH42VN5GrLKzNZeoyGzywEhcFKHAqcRMntyEZJ/BiLWRunRcnKznMMa00/d3xRLvTFKUmUjdW1IebAAAAIBRhyvDlRI873HIhNd8GiXY/kZyL+jDQle8ULF1Lk+H+EzKXMSPt0gMv8z2bpSD1XIB565rcFWlO+7q0BZFY+NLJAhMWAWxBE4Ib87uPUqeGvg6D8w6gZur84lpMg7P1KjyihIfY5tMCwfKkkaS418IPzhKtDUvtI0Vr6h3Wv0luA==</elem>
+<elem key="fingerprint">f36e8704ea2db360ff42ad26671794d5</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAQEAzGacK6NGRpMIVjkA/xYbfKDgeJeQzkJl25og4nQl+FV4ZbvXv6h0vCU+E8SPHKPL/WJAIqmL6hdQaTQiTDmhcKjecWBq9fX1Esb8cvlOPEzphl+wESfJx/lWYvLPBXz0ZdKfy2/O+0an9ua6jl3tDEFzeosHwIF8zDbaBL6/RzBV+0gkzA67OowtcaxoioYYPzsEaOAkAFjlaRMviUA3nzCvffG61KyqmAdwodl+rXyI4KHjQqinPYk5qmj9rO8LcLE/gWVRoRw4va6hbJ2V7e74Tt1HQ4V/FzhG1zrWdkI/qA65RMCw/0270w1PjYkfYl2ENJL6YHHosf4NCkfdbw==</elem>
+<elem key="fingerprint">bb03ceed13f19a9e3603e2afcab23504</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.4" extrainfo="(Ubuntu) PHP/5.2.3-1ubuntu6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.4</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6"><elem>Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6</elem>
+</script><script id="http-title" output="CS-Cart. Powerful PHP shopping cart software"><elem key="title">CS-Cart. Powerful PHP shopping cart software</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="pop3-capabilities" output="SASL PIPELINING TOP STLS CAPA UIDL RESP-CODES"/><script id="ssl-date" output="2022-01-23T05:07:04+00:00; +7s from scanner time."><elem key="delta">7.0</elem>
+<elem key="date">2022-01-23T05:07:04+00:00</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: MSHOME" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="imap-capabilities" output="LITERAL+ completed IMAP4rev1 OK THREAD=REFERENCES Capability SORT NAMESPACE LOGIN-REFERRALS UNSELECT MULTIAPPEND LOGINDISABLEDA0001 IDLE SASL-IR CHILDREN STARTTLS"/><script id="ssl-date" output="2022-01-23T05:07:04+00:00; +7s from scanner time."><elem key="delta">7.0</elem>
+<elem key="date">2022-01-23T05:07:04+00:00</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.0.26a" extrainfo="workgroup: MSHOME" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imaps" tunnel="ssl" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/localityName=Everywhere/emailAddress=root@ubuntu01/organizationalUnitName=Office for Complication of Otherwise Simple Affairs&#xa;Issuer: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/localityName=Everywhere/emailAddress=root@ubuntu01/organizationalUnitName=Office for Complication of Otherwise Simple Affairs&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2008-04-25T02:02:48&#xa;Not valid after:  2008-05-25T02:02:48&#xa;MD5:   90db 2a9a 2d86 29dc f047 d19d c636 9c8e&#xa;SHA-1: 1bde 08b6 86fc 9892 33c9 7bd4 0125 c572 5b32 d829&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDEzCCAnwCCQCZRVLhl4lWWjANBgkqhkiG9w0BAQUFADCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwHhcNMDgwNDI1MDIwMjQ4WhcNMDgwNTI1MDIwMjQ4WjCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMU3nxwLcuZqpwkOS9z97lvT&#xa;yR3ByDzjPSVW/FDorKebyGqttioV9xUsO0ws+v8OfNrJbPaJZwZIF8tiRBIbMTJf&#xa;TkSpCbmstakQmJFfI3HG9Hgp4AnmJbTPRla1HzYuRArDog/1zZZu/rk9bttIPU3K&#xa;eDZWaNQE/5QSszIEv0pXAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAof/wZAH33zX6&#xa;+sV9LEX3DBhRyyEHYBP1/zEG/gL4MONuNv1+thRYnkpKYc4BbUyO821YdWsUXLM1&#xa;gVXXFxJdzZec+L+ouwXxhLOLCvS9xu+sNsqa+jfFmdHWikDpJ8EPf+tNh/jb2MbS&#xa;tXYFup7cGHV+SdI/s5ho9Vdbr68NbW0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu01</elem>
+<elem key="countryName">XX</elem>
+<elem key="emailAddress">root@ubuntu01</elem>
+<elem key="localityName">Everywhere</elem>
+<elem key="organizationName">OCOSA</elem>
+<elem key="organizationalUnitName">Office for Complication of Otherwise Simple Affairs</elem>
+<elem key="stateOrProvinceName">There is no such thing outside US</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu01</elem>
+<elem key="countryName">XX</elem>
+<elem key="emailAddress">root@ubuntu01</elem>
+<elem key="localityName">Everywhere</elem>
+<elem key="organizationName">OCOSA</elem>
+<elem key="organizationalUnitName">Office for Complication of Otherwise Simple Affairs</elem>
+<elem key="stateOrProvinceName">There is no such thing outside US</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C5379F1C0B72E66AA7090E4BDCFDEE5BD3C91DC1C83CE33D2556FC50E8ACA79BC86AADB62A15F7152C3B4C2CFAFF0E7CDAC96CF68967064817CB6244121B31325F4E44A909B9ACB5A91098915F2371C6F47829E009E625B4CF4656B51F362E440AC3A20FF5CD966EFEB93D6EDB483D4DCA78365668D404FF9412B33204BF4A57</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2008-04-25T02:02:48</elem>
+<elem key="notAfter">2008-05-25T02:02:48</elem>
+</table>
+<elem key="md5">90db2a9a2d8629dcf047d19dc6369c8e</elem>
+<elem key="sha1">1bde08b686fc989233c97bd40125c5725b32d829</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDEzCCAnwCCQCZRVLhl4lWWjANBgkqhkiG9w0BAQUFADCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwHhcNMDgwNDI1MDIwMjQ4WhcNMDgwNTI1MDIwMjQ4WjCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMU3nxwLcuZqpwkOS9z97lvT&#xa;yR3ByDzjPSVW/FDorKebyGqttioV9xUsO0ws+v8OfNrJbPaJZwZIF8tiRBIbMTJf&#xa;TkSpCbmstakQmJFfI3HG9Hgp4AnmJbTPRla1HzYuRArDog/1zZZu/rk9bttIPU3K&#xa;eDZWaNQE/5QSszIEv0pXAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAof/wZAH33zX6&#xa;+sV9LEX3DBhRyyEHYBP1/zEG/gL4MONuNv1+thRYnkpKYc4BbUyO821YdWsUXLM1&#xa;gVXXFxJdzZec+L+ouwXxhLOLCvS9xu+sNsqa+jfFmdHWikDpJ8EPf+tNh/jb2MbS&#xa;tXYFup7cGHV+SdI/s5ho9Vdbr68NbW0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-01-23T05:07:04+00:00; +7s from scanner time."><elem key="delta">7.0</elem>
+<elem key="date">2022-01-23T05:07:04+00:00</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="pop3s" tunnel="ssl" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/localityName=Everywhere/emailAddress=root@ubuntu01/organizationalUnitName=Office for Complication of Otherwise Simple Affairs&#xa;Issuer: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/localityName=Everywhere/emailAddress=root@ubuntu01/organizationalUnitName=Office for Complication of Otherwise Simple Affairs&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2008-04-25T02:02:48&#xa;Not valid after:  2008-05-25T02:02:48&#xa;MD5:   90db 2a9a 2d86 29dc f047 d19d c636 9c8e&#xa;SHA-1: 1bde 08b6 86fc 9892 33c9 7bd4 0125 c572 5b32 d829&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDEzCCAnwCCQCZRVLhl4lWWjANBgkqhkiG9w0BAQUFADCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwHhcNMDgwNDI1MDIwMjQ4WhcNMDgwNTI1MDIwMjQ4WjCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMU3nxwLcuZqpwkOS9z97lvT&#xa;yR3ByDzjPSVW/FDorKebyGqttioV9xUsO0ws+v8OfNrJbPaJZwZIF8tiRBIbMTJf&#xa;TkSpCbmstakQmJFfI3HG9Hgp4AnmJbTPRla1HzYuRArDog/1zZZu/rk9bttIPU3K&#xa;eDZWaNQE/5QSszIEv0pXAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAof/wZAH33zX6&#xa;+sV9LEX3DBhRyyEHYBP1/zEG/gL4MONuNv1+thRYnkpKYc4BbUyO821YdWsUXLM1&#xa;gVXXFxJdzZec+L+ouwXxhLOLCvS9xu+sNsqa+jfFmdHWikDpJ8EPf+tNh/jb2MbS&#xa;tXYFup7cGHV+SdI/s5ho9Vdbr68NbW0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu01</elem>
+<elem key="countryName">XX</elem>
+<elem key="emailAddress">root@ubuntu01</elem>
+<elem key="localityName">Everywhere</elem>
+<elem key="organizationName">OCOSA</elem>
+<elem key="organizationalUnitName">Office for Complication of Otherwise Simple Affairs</elem>
+<elem key="stateOrProvinceName">There is no such thing outside US</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu01</elem>
+<elem key="countryName">XX</elem>
+<elem key="emailAddress">root@ubuntu01</elem>
+<elem key="localityName">Everywhere</elem>
+<elem key="organizationName">OCOSA</elem>
+<elem key="organizationalUnitName">Office for Complication of Otherwise Simple Affairs</elem>
+<elem key="stateOrProvinceName">There is no such thing outside US</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C5379F1C0B72E66AA7090E4BDCFDEE5BD3C91DC1C83CE33D2556FC50E8ACA79BC86AADB62A15F7152C3B4C2CFAFF0E7CDAC96CF68967064817CB6244121B31325F4E44A909B9ACB5A91098915F2371C6F47829E009E625B4CF4656B51F362E440AC3A20FF5CD966EFEB93D6EDB483D4DCA78365668D404FF9412B33204BF4A57</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2008-04-25T02:02:48</elem>
+<elem key="notAfter">2008-05-25T02:02:48</elem>
+</table>
+<elem key="md5">90db2a9a2d8629dcf047d19dc6369c8e</elem>
+<elem key="sha1">1bde08b686fc989233c97bd40125c5725b32d829</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDEzCCAnwCCQCZRVLhl4lWWjANBgkqhkiG9w0BAQUFADCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwHhcNMDgwNDI1MDIwMjQ4WhcNMDgwNTI1MDIwMjQ4WjCBzTELMAkGA1UEBhMC&#xa;WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET&#xa;MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m&#xa;ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly&#xa;czERMA8GA1UEAxMIdWJ1bnR1MDExHDAaBgkqhkiG9w0BCQEWDXJvb3RAdWJ1bnR1&#xa;MDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMU3nxwLcuZqpwkOS9z97lvT&#xa;yR3ByDzjPSVW/FDorKebyGqttioV9xUsO0ws+v8OfNrJbPaJZwZIF8tiRBIbMTJf&#xa;TkSpCbmstakQmJFfI3HG9Hgp4AnmJbTPRla1HzYuRArDog/1zZZu/rk9bttIPU3K&#xa;eDZWaNQE/5QSszIEv0pXAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAof/wZAH33zX6&#xa;+sV9LEX3DBhRyyEHYBP1/zEG/gL4MONuNv1+thRYnkpKYc4BbUyO821YdWsUXLM1&#xa;gVXXFxJdzZec+L+ouwXxhLOLCvS9xu+sNsqa+jfFmdHWikDpJ8EPf+tNh/jb2MbS&#xa;tXYFup7cGHV+SdI/s5ho9Vdbr68NbW0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-01-23T05:07:04+00:00; +7s from scanner time."><elem key="delta">7.0</elem>
+<elem key="date">2022-01-23T05:07:04+00:00</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="30812"/>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="96" line="42259">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="96"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osmatch name="DD-WRT v24-presp2 (Linux 2.6.34)" accuracy="95" line="47555">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.34</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.22" accuracy="95" line="51411">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.22</cpe></osclass>
+</osmatch>
+<osmatch name="AVM FRITZ!Box FON WLAN 7170 WAP" accuracy="94" line="8863">
+<osclass type="WAP" vendor="AVM" osfamily="embedded" accuracy="94"><cpe>cpe:/h:avm:fritz%21box_fon_wlan_7170</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 12.5.4" accuracy="94" line="24976">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="12.X" accuracy="94"><cpe>cpe:/o:extremenetworks:extremexos:12.5.4</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 15.3" accuracy="94" line="25072">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="15.X" accuracy="94"><cpe>cpe:/o:extremenetworks:extremexos:15.3</cpe></osclass>
+</osmatch>
+<osmatch name="HP Brocade 4Gb SAN switch or" accuracy="94" line="35280">
+<osclass type="switch" vendor="HP" osfamily="embedded" accuracy="94"/>
+<osclass type="media device" vendor="Philips" osfamily="embedded" accuracy="94"/>
+</osmatch>
+<osmatch name="Linux 2.4.20" accuracy="94" line="45310">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.4.21 (embedded)" accuracy="94" line="46241">
+<osclass type="specialized" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.4.21</cpe></osclass>
+</osmatch>
+<osmatch name="Motorola SURFboard SB6120 or SB6141 cable modem (Linux 2.6.18)" accuracy="94" line="47068">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+<osclass type="broadband router" vendor="Motorola" osfamily="embedded" accuracy="94"><cpe>cpe:/h:motorola:surfboard_sb6120</cpe><cpe>cpe:/h:motorola:surfboard_sb6141</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=1/23%OT=22%CT=1%CU=30812%PV=Y%DS=2%DC=T%G=Y%TM=61ECE27&#xa;OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=CE%GCD=1%ISR=EF%TI=Z%II=I%TS=7)SEQ(SP=CF%&#xa;OS:GCD=1%ISR=EF%TI=Z%TS=7)OPS(O1=M54EST11NW5%O2=M54EST11NW5%O3=M54ENNT11NW5&#xa;OS:%O4=M54EST11NW5%O5=M54EST11NW5%O6=M54EST11)WIN(W1=16A0%W2=16A0%W3=16A0%W&#xa;OS:4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M54ENNSNW5%CC=N%Q=)T1(&#xa;OS:R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=4&#xa;OS:0%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN&#xa;OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1488" lastboot="Sat Jan 22 23:42:13 2022"/>
+<distance value="2"/>
+<tcpsequence index="217" difficulty="Good luck!" values="F54273C9,FABD8E73,27202CB,784186A,D7040C8,134D3A21"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="23D6D,23D77,23D83,23D8B,23D95,23DA0"/>
+<hostscript><script id="clock-skew" output="mean: 50m07s, deviation: 2h02m29s, median: 6s"><elem key="mean">3007</elem>
+<elem key="median">6</elem>
+<elem key="stddev">7349</elem>
+<elem key="count">6</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 61052/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 64434/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 57954/udp): CLEAN (Timeout)&#xa;  Check 4 (port 56381/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.26a)&#xa;  Computer name: payday&#xa;  NetBIOS computer name: &#xa;  Domain name: &#xa;  FQDN: payday&#xa;  System time: 2022-01-23T00:06:52-05:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.26a</elem>
+<elem key="server"></elem>
+<elem key="date">2022-01-23T00:06:52-05:00</elem>
+<elem key="fqdn">payday</elem>
+<elem key="domain_dns"></elem>
+<elem key="workgroup">MSHOME\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><trace port="8888" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="180.20"/>
+<hop ttl="2" ipaddr="192.168.70.39" rtt="180.55"/>
+</trace>
+<times srtt="176911" rttvar="11055" to="221131"/>
+</host>
+<taskbegin task="NSE" time="1642914421"/>
+<taskend task="NSE" time="1642914421"/>
+<taskbegin task="NSE" time="1642914421"/>
+<taskend task="NSE" time="1642914421"/>
+<taskbegin task="NSE" time="1642914421"/>
+<taskend task="NSE" time="1642914421"/>
+<runstats><finished time="1642914421" timestr="Sun Jan 23 00:07:01 2022" summary="Nmap done at Sun Jan 23 00:07:01 2022; 1 IP address (1 host up) scanned in 948.95 seconds" elapsed="948.95" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

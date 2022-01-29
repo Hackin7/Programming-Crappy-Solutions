@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 27 11:38:50 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/_top_100_udp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/xml/_top_100_udp_nmap.xml&quot; 192.168.193.63 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/_top_100_udp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/xml/_top_100_udp_nmap.xml&quot; 192.168.193.63" start="1643301530" startstr="Thu Jan 27 11:38:50 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643301531"/>
+<taskend task="NSE" time="1643301531"/>
+<taskbegin task="NSE" time="1643301531"/>
+<taskend task="NSE" time="1643301531"/>
+<taskbegin task="NSE" time="1643301531"/>
+<taskend task="NSE" time="1643301531"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643301531"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643301531"/>
+<taskbegin task="UDP Scan" time="1643301531"/>
+<taskend task="UDP Scan" time="1643301542" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1643301543"/>
+<taskprogress task="Service scan" time="1643301640" percent="1.00" remaining="9604" etc="1643311243"/>
+<taskprogress task="Service scan" time="1643301738" percent="31.00" remaining="435" etc="1643302172"/>
+<taskprogress task="Service scan" time="1643301835" percent="61.00" remaining="187" etc="1643302022"/>
+<taskprogress task="Service scan" time="1643301933" percent="91.00" remaining="39" etc="1643301972"/>
+<taskend task="Service scan" time="1643301933" extrainfo="100 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643301941"/>
+<taskend task="Traceroute" time="1643301941"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643301941"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643301941"/>
+<taskbegin task="NSE" time="1643301941"/>
+<taskprogress task="NSE" time="1643301972" percent="98.52" remaining="1" etc="1643301972"/>
+<taskprogress task="NSE" time="1643302002" percent="98.55" remaining="1" etc="1643302003"/>
+<taskprogress task="NSE" time="1643302032" percent="98.57" remaining="2" etc="1643302033"/>
+<taskprogress task="NSE" time="1643302062" percent="98.62" remaining="2" etc="1643302064"/>
+<taskprogress task="NSE" time="1643302092" percent="98.64" remaining="3" etc="1643302094"/>
+<taskprogress task="NSE" time="1643302122" percent="98.66" remaining="3" etc="1643302124"/>
+<taskprogress task="NSE" time="1643302152" percent="98.67" remaining="3" etc="1643302155"/>
+<taskprogress task="NSE" time="1643302182" percent="98.74" remaining="4" etc="1643302185"/>
+<taskprogress task="NSE" time="1643302212" percent="98.76" remaining="4" etc="1643302215"/>
+<taskprogress task="NSE" time="1643302242" percent="98.78" remaining="4" etc="1643302246"/>
+<taskprogress task="NSE" time="1643302272" percent="98.84" remaining="4" etc="1643302276"/>
+<taskprogress task="NSE" time="1643302302" percent="98.87" remaining="5" etc="1643302306"/>
+<taskprogress task="NSE" time="1643302332" percent="98.89" remaining="5" etc="1643302336"/>
+<taskprogress task="NSE" time="1643302362" percent="98.94" remaining="5" etc="1643302367"/>
+<taskprogress task="NSE" time="1643302392" percent="98.97" remaining="5" etc="1643302397"/>
+<taskprogress task="NSE" time="1643302422" percent="98.99" remaining="5" etc="1643302427"/>
+<taskprogress task="NSE" time="1643302452" percent="99.05" remaining="5" etc="1643302457"/>
+<taskprogress task="NSE" time="1643302482" percent="99.06" remaining="6" etc="1643302487"/>
+<taskprogress task="NSE" time="1643302512" percent="99.08" remaining="6" etc="1643302517"/>
+<taskprogress task="NSE" time="1643302542" percent="99.13" remaining="6" etc="1643302547"/>
+<taskprogress task="NSE" time="1643302572" percent="99.16" remaining="6" etc="1643302577"/>
+<taskprogress task="NSE" time="1643302602" percent="99.19" remaining="6" etc="1643302607"/>
+<taskprogress task="NSE" time="1643302632" percent="99.22" remaining="6" etc="1643302637"/>
+<taskprogress task="NSE" time="1643302662" percent="99.25" remaining="6" etc="1643302667"/>
+<taskprogress task="NSE" time="1643302692" percent="99.27" remaining="6" etc="1643302698"/>
+<taskprogress task="NSE" time="1643302722" percent="99.28" remaining="6" etc="1643302728"/>
+<taskprogress task="NSE" time="1643302752" percent="99.35" remaining="6" etc="1643302757"/>
+<taskprogress task="NSE" time="1643302782" percent="99.37" remaining="6" etc="1643302787"/>
+<taskprogress task="NSE" time="1643302812" percent="99.40" remaining="6" etc="1643302817"/>
+<taskprogress task="NSE" time="1643302842" percent="99.45" remaining="5" etc="1643302847"/>
+<taskprogress task="NSE" time="1643302872" percent="99.46" remaining="6" etc="1643302877"/>
+<taskprogress task="NSE" time="1643302902" percent="99.52" remaining="5" etc="1643302907"/>
+<taskprogress task="NSE" time="1643302932" percent="99.55" remaining="5" etc="1643302937"/>
+<taskprogress task="NSE" time="1643302962" percent="99.57" remaining="5" etc="1643302966"/>
+<taskprogress task="NSE" time="1643302992" percent="99.59" remaining="5" etc="1643302996"/>
+<taskprogress task="NSE" time="1643303022" percent="99.65" remaining="4" etc="1643303026"/>
+<taskprogress task="NSE" time="1643303052" percent="99.66" remaining="4" etc="1643303056"/>
+<taskprogress task="NSE" time="1643303082" percent="99.70" remaining="4" etc="1643303085"/>
+<taskprogress task="NSE" time="1643303112" percent="99.73" remaining="4" etc="1643303115"/>
+<taskprogress task="NSE" time="1643303142" percent="99.75" remaining="3" etc="1643303145"/>
+<taskprogress task="NSE" time="1643303172" percent="99.78" remaining="3" etc="1643303175"/>
+<taskprogress task="NSE" time="1643303202" percent="99.82" remaining="3" etc="1643303204"/>
+<taskprogress task="NSE" time="1643303232" percent="99.85" remaining="2" etc="1643303234"/>
+<taskprogress task="NSE" time="1643303262" percent="99.90" remaining="2" etc="1643303263"/>
+<taskprogress task="NSE" time="1643303292" percent="99.92" remaining="2" etc="1643303293"/>
+<taskprogress task="NSE" time="1643303322" percent="99.94" remaining="1" etc="1643303323"/>
+<taskend task="NSE" time="1643303342"/>
+<taskbegin task="NSE" time="1643303342"/>
+<taskend task="NSE" time="1643303347"/>
+<taskbegin task="NSE" time="1643303347"/>
+<taskend task="NSE" time="1643303347"/>
+<host starttime="1643301531" endtime="1643303347"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.193.63" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="100">
+<extrareasons reason="no-responses" count="100"/>
+</extraports>
+</ports>
+<os><osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/27%OT=%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F2D1B3%P=x86_64-pc-linux-gnu)&#xa;SEQ(II=I)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="201.32"/>
+<hop ttl="2" ipaddr="192.168.193.63" rtt="201.38"/>
+</trace>
+<times srtt="198696" rttvar="11690" to="245456"/>
+</host>
+<taskbegin task="NSE" time="1643303347"/>
+<taskend task="NSE" time="1643303347"/>
+<taskbegin task="NSE" time="1643303347"/>
+<taskend task="NSE" time="1643303347"/>
+<taskbegin task="NSE" time="1643303347"/>
+<taskend task="NSE" time="1643303347"/>
+<runstats><finished time="1643303347" timestr="Thu Jan 27 12:09:07 2022" summary="Nmap done at Thu Jan 27 12:09:07 2022; 1 IP address (1 host up) scanned in 1818.82 seconds" elapsed="1818.82" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

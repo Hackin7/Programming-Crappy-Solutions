@@ -1,4 +1,169 @@
-# Dibbles
+# Dibble
+
+# Methodology
+
+## Overall
+
+- [x] nmap simple scan
+- [x] nmap full script scan
+- [x] nmap UDP scan?
+- [x] nmap vuln scan
+
+## 21 - FTP
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+
+Custom ways of Exploitation
+- [x] Hacktricks https://book.hacktricks.xyz/pentesting/pentesting-ftp
+	- [ ] FTP Bounce Attack
+
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+	- [ ] Remote denial of Service - Useless
+- [ ] Google
+- [ ] More
+
+Logging in
+- [x] Anonymous/ Null Login - **Works**
+Brute Force `I` - Doesn't work as anonymous only
+
+## 22 - SSH
+
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+
+Custom ways of Exploitation
+- [ ] Hacktricks
+
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+
+Logging in
+Brute Force `I` 
+- [ ] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] rockyou.txt
+- [ ] More
+
+## 80 - Web
+### Apache
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+
+Custom ways of Exploitation
+- [ ] Hacktricks
+
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+
+### Drupal
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+
+Custom ways of Exploitation
+- [x] Hacktricks - https://book.hacktricks.xyz/pentesting/pentesting-web/drupal
+	- [x] User Enumeration
+	- [x] Hidden Page Enumeration
+	- [ ] Code execution with admin creds
+	- [ ] Post exploitation
+- [ ] More
+
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+
+Logging in
+Brute Force `I` 
+- [x] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] rockyou.txt
+- [ ] More
+
+
+### Basic
+Source Code `E`
+- [ ] Find all the files, hidden or not (if possible)
+- [ ] Look through the source code of ALL the files
+    - [ ] Find all Input Fields `-> Input Fields`
+    - [ ] File Uploads `-> File upload`
+
+Directory Enumeration (dirb) `I -> Custom page/ CMS`
+- [x] Sitemap (robots.txt)
+- [x] Common wordlist
+- [x] big wordlist
+- [ ] More
+
+Virtual Hosts Testing `I`
+- [ ] Given hostname - No Given
+- [ ] Hostname derived from box name - *banzai.pg* - No Diff
+- [ ] More
+
+Vulnerability Scanning `I`
+- [ ] Nikto Vulnerability Scanner
+- [ ] More
+
+
+## 3000 - Web
+
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+
+Custom ways of Exploitation
+- [ ] Hacktricks
+
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+
+**Basic**
+
+Source Code `E`
+- [ ] Find all the files, hidden or not (if possible)
+- [ ] Look through the source code of ALL the files
+    - [ ] Find all Input Fields `-> Input Fields`
+    - [ ] File Uploads `-> File upload`
+
+Directory Enumeration (dirb) `I -> Custom page/ CMS`
+- [x] Sitemap (robots.txt)
+- [x] Common wordlist
+- [x] big wordlist
+- [ ] More
+
+Virtual Hosts Testing `I`
+- [ ] Given hostname - No Given
+- [ ] Hostname derived from box name - *banzai.pg* - No Diff
+- [ ] More
+
+Vulnerability Scanning `I`
+- [ ] Nikto Vulnerability Scanner
+- [ ] More
+
+## 27017 - MongoDB
+
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation 
+- [ ]  Google
+
+Custom ways of Exploitation
+- [x] Hacktricks  https://book.hacktricks.xyz/pentesting/27017-27018-mongodb
+	- [x] Enumerate Database
+- [ ] More
+
+Search & Test for Vulnerabiliaties `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
 
 # Enumeration
 
@@ -117,6 +282,19 @@ OS and Service detection performed. Please report any incorrect results at https
 ## 21 - FTP
 
 ```
+┌──(kali㉿kali)-[/tmp]
+└─$ ftp 192.168.171.110 
+Connected to 192.168.171.110.
+220 (vsFTPd 3.0.3)
+Name (192.168.171.110:kali): 
+530 This FTP server is anonymous only.
+Login failed.
+ftp> 
+
+```
+
+
+```
 ┌──(kali㉿kali)-[~]
 └─$ ftp 192.168.196.110
 Connected to 192.168.196.110.
@@ -164,6 +342,10 @@ ftp> exit
 No hidden, 1-4
 
 ![](Pasted%20image%2020220121183644.png)
+
+### Tried Creating Account
+
+![](Pasted%20image%2020220123222625.png)
 
 ## 3000 - Web
 
@@ -267,6 +449,8 @@ startup_log
 ```
 
 `admin`:`ab6edb97f0c7a6455c57f94b7df73263e57113c85f38cd9b9470c8be8d6dd8ac`
+
+`admin`:`36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80`
 
 On adding a new user `test`:`test`
 

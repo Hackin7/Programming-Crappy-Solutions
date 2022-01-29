@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 29 08:18:48 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/xml/_full_tcp_nmap.xml&quot; 192.168.162.64 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/xml/_full_tcp_nmap.xml&quot; 192.168.162.64" start="1643462328" startstr="Sat Jan 29 08:18:48 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643462332"/>
+<taskend task="NSE" time="1643462332"/>
+<taskbegin task="NSE" time="1643462332"/>
+<taskend task="NSE" time="1643462332"/>
+<taskbegin task="NSE" time="1643462332"/>
+<taskend task="NSE" time="1643462332"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643462332"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643462332"/>
+<taskbegin task="SYN Stealth Scan" time="1643462332"/>
+<taskprogress task="SYN Stealth Scan" time="1643462363" percent="5.13" remaining="573" etc="1643462936"/>
+<taskprogress task="SYN Stealth Scan" time="1643462393" percent="19.35" remaining="255" etc="1643462647"/>
+<taskprogress task="SYN Stealth Scan" time="1643462423" percent="38.85" remaining="144" etc="1643462566"/>
+<taskprogress task="SYN Stealth Scan" time="1643462569" percent="63.66" remaining="136" etc="1643462704"/>
+<taskprogress task="SYN Stealth Scan" time="1643462605" percent="70.76" remaining="113" etc="1643462718"/>
+<taskprogress task="SYN Stealth Scan" time="1643462635" percent="87.34" remaining="44" etc="1643462679"/>
+<taskend task="SYN Stealth Scan" time="1643462652" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1643462653"/>
+<taskend task="Service scan" time="1643462691" extrainfo="6 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643462697"/>
+<taskend task="Traceroute" time="1643462697"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643462697"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643462697"/>
+<taskbegin task="NSE" time="1643462697"/>
+<taskprogress task="NSE" time="1643462728" percent="99.88" remaining="1" etc="1643462728"/>
+<taskend task="NSE" time="1643462738"/>
+<taskbegin task="NSE" time="1643462738"/>
+<taskend task="NSE" time="1643462742"/>
+<taskbegin task="NSE" time="1643462742"/>
+<taskend task="NSE" time="1643462742"/>
+<host starttime="1643462332" endtime="1643462742"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.162.64" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65529">
+<extrareasons reason="no-responses" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 b2:66:75:50:1b:18:f5:e9:9f:db:2c:d4:e3:95:7a:44 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC44YysvRUv+02vB7LK+DbEvDnTUU2Zzaj42pbyX7gL4I5DhhWWZmK4Sr/MulEE2XPnKhXCCwTVuA12C/VuFhVdnq7WjDwfV+4a1DEuDG8P7wQAux0waAsly34mGtd7HQhQIv9h7nQWcTx8hoOrF6D71eHiZmLJ6fk01VlFN75XKJGn/T/ClJHz9UJ33zwkhqXskMO9At21LfOBE+I3IQCHuFFO6DcQWw/SsZaXQxHNzLqnI/9j1aQuvyuh6KMdT6p10D577maBz+T+Hyq/qeOgbGU0YGAoXXMU36FibkoQ+WwDRYbEHYKJccUXhzFWp980PYCIDtZNaWuo/AbgryLB&#xa;  256 91:2d:26:f1:ba:af:d1:8b:69:8f:81:4a:32:af:9c:77 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOmcORNC6GjDnH1cqJrCeytZJjGrpJyY+CgseFsH27PJmSbmVYEz0ls0w/oXR0xrG/IfvxxyH9RRX2BIsBTx2cY=&#xa;  256 ec:6f:df:8b:ce:19:13:8a:52:57:3e:72:a3:14:6f:40 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP9wfKL6wusRXGDMv5Tcf2OxMAIkhvOofRPsrSQ+aMbK"><table>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC44YysvRUv+02vB7LK+DbEvDnTUU2Zzaj42pbyX7gL4I5DhhWWZmK4Sr/MulEE2XPnKhXCCwTVuA12C/VuFhVdnq7WjDwfV+4a1DEuDG8P7wQAux0waAsly34mGtd7HQhQIv9h7nQWcTx8hoOrF6D71eHiZmLJ6fk01VlFN75XKJGn/T/ClJHz9UJ33zwkhqXskMO9At21LfOBE+I3IQCHuFFO6DcQWw/SsZaXQxHNzLqnI/9j1aQuvyuh6KMdT6p10D577maBz+T+Hyq/qeOgbGU0YGAoXXMU36FibkoQ+WwDRYbEHYKJccUXhzFWp980PYCIDtZNaWuo/AbgryLB</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">b26675501b18f5e99fdb2cd4e3957a44</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOmcORNC6GjDnH1cqJrCeytZJjGrpJyY+CgseFsH27PJmSbmVYEz0ls0w/oXR0xrG/IfvxxyH9RRX2BIsBTx2cY=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">912d26f1baafd18b698f814a32af9c77</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIP9wfKL6wusRXGDMv5Tcf2OxMAIkhvOofRPsrSQ+aMbK</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">ec6fdf8bce19138a52573e72a3146f40</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" hostname="ZINO" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.9.5-Debian" extrainfo="workgroup: WORKGROUP" hostname="ZINO" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" servicefp="SF-Port3306-TCP:V=7.91%I=9%D=1/29%Time=61F53FFE%P=x86_64-pc-linux-gnu%r(NULL,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(GenericLines,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(TerminalServerCookie,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(TLSSessionReq,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(SSLv23SessionReq,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(Kerberos,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(LANDesk-RC,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(NessusTPv10,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(WMSRequest,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(oracle-tns,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(WWWOFFLEctrlstat,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(Verifier,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(VerifierAdvanced,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(Socks5,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(ibm-db2-das,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.162&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, Kerberos, LANDesk-RC, NULL, NessusTPv10, SSLv23SessionReq, Socks5, TLSSessionReq, TerminalServerCookie, Verifier, VerifierAdvanced, WMSRequest, WWWOFFLEctrlstat, ibm-db2-das, oracle-tns: &#xa;    Host &apos;192.168.49.162&apos; is not allowed to connect to this MariaDB server"><elem key="GenericLines, Kerberos, LANDesk-RC, NULL, NessusTPv10, SSLv23SessionReq, Socks5, TLSSessionReq, TerminalServerCookie, Verifier, VerifierAdvanced, WMSRequest, WWWOFFLEctrlstat, ibm-db2-das, oracle-tns">&#xa;    Host &apos;192.168.49.162&apos; is not allowed to connect to this MariaDB server</elem>
+</script><script id="mysql-info" output="&#xa;  MySQL Error: Host &apos;192.168.49.162&apos; is not allowed to connect to this MariaDB server"><elem key="MySQL Error">Host &apos;192.168.49.162&apos; is not allowed to connect to this MariaDB server</elem>
+</script></port>
+<port protocol="tcp" portid="8003"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.38" hostname="127.0.1.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.38</cpe></service><script id="http-ls" output="Volume /&#xa;SIZE  TIME              FILENAME&#xa;-     2019-02-05 21:02  booked/&#xa;&#xa;"><table key="volumes">
+<table>
+<elem key="volume">/</elem>
+<table key="files">
+<table>
+<elem key="size">- </elem>
+<elem key="time">2019-02-05 21:02</elem>
+<elem key="filename">booked/</elem>
+</table>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="files">1</elem>
+<elem key="bytes">0</elem>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.38 (Debian)"><elem>Apache/2.4.38 (Debian)</elem>
+</script><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Linux 5.0 - 5.3" accuracy="85" line="68085">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="85"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/29%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F54056%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=F8%GCD=1%ISR=110%TI=Z%II=I%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1768325" lastboot="Sat Jan  8 21:13:37 2022"/>
+<distance value="2"/>
+<tcpsequence index="244" difficulty="Good luck!" values="4788809F,DA74FA73,651AE688,FF1C4F87,AA98352B,48CEF553"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="6965C50B,6965C56F,6965C5E9,6965C64B,6965C6AF,6965C715"/>
+<hostscript><script id="clock-skew" output="mean: 1h38m42s, deviation: 2h53m14s, median: -1m18s"><elem key="mean">5922</elem>
+<elem key="stddev">10394</elem>
+<elem key="count">3</elem>
+<elem key="median">-78</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 41933/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 43229/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 27637/udp): CLEAN (Timeout)&#xa;  Check 4 (port 29155/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.9.5-Debian)&#xa;  Computer name: zino&#xa;  NetBIOS computer name: ZINO\x00&#xa;  Domain name: \x00&#xa;  FQDN: zino&#xa;  System time: 2022-01-29T08:23:43-05:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.9.5-Debian</elem>
+<elem key="server">ZINO\x00</elem>
+<elem key="date">2022-01-29T08:23:43-05:00</elem>
+<elem key="fqdn">zino</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-29T13:23:42&#xa;  start_date: N/A"><elem key="date">2022-01-29T13:23:42</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="3306" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="179.46"/>
+<hop ttl="2" ipaddr="192.168.162.64" rtt="179.46"/>
+</trace>
+<times srtt="178732" rttvar="1441" to="184496"/>
+</host>
+<taskbegin task="NSE" time="1643462742"/>
+<taskend task="NSE" time="1643462742"/>
+<taskbegin task="NSE" time="1643462742"/>
+<taskend task="NSE" time="1643462742"/>
+<taskbegin task="NSE" time="1643462742"/>
+<taskend task="NSE" time="1643462742"/>
+<runstats><finished time="1643462742" timestr="Sat Jan 29 08:25:42 2022" summary="Nmap done at Sat Jan 29 08:25:42 2022; 1 IP address (1 host up) scanned in 416.64 seconds" elapsed="416.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

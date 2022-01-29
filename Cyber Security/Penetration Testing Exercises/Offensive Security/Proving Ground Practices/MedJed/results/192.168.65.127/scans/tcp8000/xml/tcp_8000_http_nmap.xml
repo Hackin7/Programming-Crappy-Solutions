@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Jan 25 00:37:46 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/tcp_8000_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/xml/tcp_8000_http_nmap.xml&quot; 192.168.65.127 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/tcp_8000_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/xml/tcp_8000_http_nmap.xml&quot; 192.168.65.127" start="1643089066" startstr="Tue Jan 25 00:37:46 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8000"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643089068"/>
+<taskend task="NSE" time="1643089068"/>
+<taskbegin task="NSE" time="1643089068"/>
+<taskend task="NSE" time="1643089068"/>
+<taskbegin task="NSE" time="1643089068"/>
+<taskend task="NSE" time="1643089068"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643089068"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643089068"/>
+<taskbegin task="SYN Stealth Scan" time="1643089068"/>
+<taskend task="SYN Stealth Scan" time="1643089069" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643089069"/>
+<taskend task="Service scan" time="1643089205" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643089205"/>
+<taskprogress task="NSE" time="1643089236" percent="97.96" remaining="1" etc="1643089237"/>
+<taskprogress task="NSE" time="1643089266" percent="99.66" remaining="1" etc="1643089266"/>
+<taskprogress task="NSE" time="1643089296" percent="99.66" remaining="1" etc="1643089296"/>
+<taskprogress task="NSE" time="1643089326" percent="99.66" remaining="1" etc="1643089326"/>
+<taskprogress task="NSE" time="1643089356" percent="99.66" remaining="1" etc="1643089357"/>
+<taskprogress task="NSE" time="1643089386" percent="99.66" remaining="1" etc="1643089387"/>
+<taskprogress task="NSE" time="1643089416" percent="99.66" remaining="1" etc="1643089417"/>
+<taskprogress task="NSE" time="1643089446" percent="99.66" remaining="1" etc="1643089447"/>
+<taskprogress task="NSE" time="1643089476" percent="99.66" remaining="1" etc="1643089477"/>
+<taskprogress task="NSE" time="1643089506" percent="99.66" remaining="2" etc="1643089507"/>
+<taskprogress task="NSE" time="1643089536" percent="99.66" remaining="2" etc="1643089537"/>
+<taskprogress task="NSE" time="1643089566" percent="99.66" remaining="2" etc="1643089567"/>
+<taskprogress task="NSE" time="1643089596" percent="99.66" remaining="2" etc="1643089597"/>
+<taskprogress task="NSE" time="1643089626" percent="99.66" remaining="2" etc="1643089627"/>
+<taskprogress task="NSE" time="1643089656" percent="99.66" remaining="2" etc="1643089658"/>
+<taskend task="NSE" time="1643089666"/>
+<taskbegin task="NSE" time="1643089666"/>
+<taskend task="NSE" time="1643089668"/>
+<taskbegin task="NSE" time="1643089668"/>
+<taskend task="NSE" time="1643089668"/>
+<host starttime="1643089068" endtime="1643089668"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.65.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http-alt" product="BarracudaServer.com (Windows)" servicefp="SF-Port8000-TCP:V=7.91%I=7%D=1/25%Time=61EF8CB4%P=x86_64-pc-linux-gnu%r(GenericLines,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:37:56\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(GetRequest,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:37:56\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(FourOhFourRequest,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38:02\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(Socks5,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38:02\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(HTTPOptions,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38:08\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(RTSPRequest,72,&quot;HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38:08\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n&quot;)%r(SIPOptions,13C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:39:13\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\nContent-Type:\x20text/html\r\nCache-Control:\x20no-store,\x20no-cache,\x20must-revalidate,\x20max-age=0\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;Can&apos;t\x20parse\x20request&lt;p&gt;BarracudaServer\.com\x20\(Windows\)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, Socks5: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:38:02 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close&#xa;  GenericLines, GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:37:56 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close&#xa;  HTTPOptions, RTSPRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:38:08 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close&#xa;  SIPOptions: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Tue, 25 Jan 2022 05:39:13 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close&#xa;    Content-Type: text/html&#xa;    Cache-Control: no-store, no-cache, must-revalidate, max-age=0&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;Can&apos;t parse request&lt;p&gt;BarracudaServer.com (Windows)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"><elem key="FourOhFourRequest, Socks5">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:38:02 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close</elem>
+<elem key="GenericLines, GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:37:56 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close</elem>
+<elem key="HTTPOptions, RTSPRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Date: Tue, 25 Jan 2022 05:38:08 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close</elem>
+<elem key="SIPOptions">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Tue, 25 Jan 2022 05:39:13 GMT&#xa;    Server: BarracudaServer.com (Windows)&#xa;    Connection: Close&#xa;    Content-Type: text/html&#xa;    Cache-Control: no-store, no-cache, must-revalidate, max-age=0&#xa;    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;Can&apos;t parse request&lt;p&gt;BarracudaServer.com (Windows)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</elem>
+</script><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.65.127&#xa;  url                                                           method&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM&#xa;"/><script id="http-chrono" output="Request times for /; avg: 604.84ms; min: 570.99ms; max: 643.55ms"/><script id="http-date" output="Tue, 25 Jan 2022 05:40:07 GMT; 0s from local time."><elem key="date">2022-01-25T05:40:07+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /blog/: Blog&#xa;  /private/sdc.tgz: IBM Bladecenter Management Logs (401 Unauthorized)&#xa;"/><script id="http-favicon" output="Unknown favicon MD5: FDF624762222B41E2767954032B6F1FF"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.65.127:8000/: &#xa;    (1) ip: &#xa;      + 192.168.65.127"><table key="(1) http://192.168.65.127:8000/">
+<table key="(1) ip">
+<elem>+ 192.168.65.127</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Tue, 25 Jan 2022 05:40:10 GMT&#xa;  Server: BarracudaServer.com (Windows)&#xa;  Connection: Close&#xa;  Last-Modified: Tue, 19 Feb 2013 19:58:47 GMT&#xa;  Content-Length: 8294&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="&#xa;Litespeed Web Server Source Code Disclosure (CVE-2010-2333)&#xa;/index.php source code:&#xa;"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS GET HEAD PROPFIND PUT COPY DELETE MOVE MKCOL PROPPATCH LOCK UNLOCK POST&#xa;  Potentially risky methods: PROPFIND PUT COPY DELETE MOVE MKCOL PROPPATCH LOCK UNLOCK"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>PROPFIND</elem>
+<elem>PUT</elem>
+<elem>COPY</elem>
+<elem>DELETE</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>PROPFIND</elem>
+<elem>PUT</elem>
+<elem>COPY</elem>
+<elem>DELETE</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+</table>
+</script><script id="http-php-version" output="Logo query returned unknown hash 51ed0f4ae9cbc8392ecbdd7b25ef8a86&#xa;Credits query returned unknown hash 51ed0f4ae9cbc8392ecbdd7b25ef8a86"/><script id="http-server-header" output="BarracudaServer.com (Windows)"><elem>BarracudaServer.com (Windows)</elem>
+</script><script id="http-title" output="Home"><elem key="title">Home</elem>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-webdav-scan" output="&#xa;  WebDAV type: Unknown&#xa;  Allowed Methods: OPTIONS, GET, HEAD, PROPFIND, PUT, COPY, DELETE, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK&#xa;  Server Type: BarracudaServer.com (Windows)&#xa;  Server Date: Tue, 25 Jan 2022 05:40:12 GMT"><elem key="WebDAV type">Unknown</elem>
+<elem key="Allowed Methods">OPTIONS, GET, HEAD, PROPFIND, PUT, COPY, DELETE, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK</elem>
+<elem key="Server Type">BarracudaServer.com (Windows)</elem>
+<elem key="Server Date">Tue, 25 Jan 2022 05:40:12 GMT</elem>
+</script><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="174831" rttvar="174831" to="874155"/>
+</host>
+<taskbegin task="NSE" time="1643089668"/>
+<taskend task="NSE" time="1643089668"/>
+<taskbegin task="NSE" time="1643089668"/>
+<taskend task="NSE" time="1643089668"/>
+<taskbegin task="NSE" time="1643089668"/>
+<taskend task="NSE" time="1643089668"/>
+<runstats><finished time="1643089668" timestr="Tue Jan 25 00:47:48 2022" summary="Nmap done at Tue Jan 25 00:47:48 2022; 1 IP address (1 host up) scanned in 601.83 seconds" elapsed="601.83" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

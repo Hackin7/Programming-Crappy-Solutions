@@ -1,0 +1,6 @@
+WLD        0l        0w        0c Got 302 for http://192.168.65.127:8000/b4f7352523f44fc2add472f68e5b641b (url length: 32)
+WLD         -         -         - http://192.168.65.127:8000/b4f7352523f44fc2add472f68e5b641b redirects to => http://192.168.65.127:8000/b4f7352523f44fc2add472f68e5b641b/
+200        1l        3w       42c http://192.168.65.127:8000/red.txt
+200        3l       11w      112c http://192.168.65.127:8000/sky.txt
+200        3l        9w       95c http://192.168.65.127:8000/flower.txt
+200        1l        3w       42c http://192.168.65.127:8000/Red.txt

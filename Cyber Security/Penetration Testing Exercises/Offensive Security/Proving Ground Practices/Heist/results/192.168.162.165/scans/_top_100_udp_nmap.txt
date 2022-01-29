@@ -1,0 +1,39 @@
+# Nmap 7.91 scan initiated Fri Jan 28 10:56:38 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/xml/_top_100_udp_nmap.xml" 192.168.162.165
+Nmap scan report for 192.168.162.165
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-28 10:56:40 EST for 1776s
+Not shown: 97 open|filtered ports
+Reason: 97 no-responses
+PORT    STATE SERVICE      REASON               VERSION
+53/udp  open  domain       udp-response ttl 127 (generic dns response: SERVFAIL)
+| fingerprint-strings: 
+|   NBTStat: 
+|_    CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+88/udp  open  kerberos-sec udp-response         Microsoft Windows Kerberos (server time: 2022-01-28 15:56:51Z)
+123/udp open  ntp          udp-response         NTP v3
+| ntp-info: 
+|_  receive time stamp: 2022-01-28T16:03:50
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-UDP:V=7.91%I=7%D=1/28%Time=61F41253%P=x86_64-pc-linux-gnu%r(NBTS
+SF:tat,32,"\x80\xf0\x80\x82\0\x01\0\0\0\0\0\0\x20CKAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAA\0\0!\0\x01");
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/28%OT=%CT=%CU=%PV=Y%G=N%TM=61F41929%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 12s
+
+TRACEROUTE (using port 53/udp)
+HOP RTT       ADDRESS
+1   172.50 ms 192.168.49.1
+2   ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 28 11:26:17 2022 -- 1 IP address (1 host up) scanned in 1779.40 seconds

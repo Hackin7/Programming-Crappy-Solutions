@@ -1,0 +1,108 @@
+# Nmap 7.91 scan initiated Tue Jan 25 00:37:46 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8000 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/tcp_8000_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp8000/xml/tcp_8000_http_nmap.xml" 192.168.65.127
+Nmap scan report for 192.168.65.127
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-25 00:37:48 EST for 600s
+
+PORT     STATE SERVICE  REASON          VERSION
+8000/tcp open  http-alt syn-ack ttl 127 BarracudaServer.com (Windows)
+| fingerprint-strings: 
+|   FourOhFourRequest, Socks5: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Jan 2022 05:38:02 GMT
+|     Server: BarracudaServer.com (Windows)
+|     Connection: Close
+|   GenericLines, GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Jan 2022 05:37:56 GMT
+|     Server: BarracudaServer.com (Windows)
+|     Connection: Close
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Jan 2022 05:38:08 GMT
+|     Server: BarracudaServer.com (Windows)
+|     Connection: Close
+|   SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 25 Jan 2022 05:39:13 GMT
+|     Server: BarracudaServer.com (Windows)
+|     Connection: Close
+|     Content-Type: text/html
+|     Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+|_    <html><body><h1>400 Bad Request</h1>Can't parse request<p>BarracudaServer.com (Windows)</p></body></html>
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.65.127
+|   url                                                           method
+|   http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|   http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|   http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|   http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|   http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|_  http://192.168.65.127:8000/Config-Wizard/wizard/SetAdmin.lsp  FORM
+|_http-chrono: Request times for /; avg: 604.84ms; min: 570.99ms; max: 643.55ms
+|_http-date: Tue, 25 Jan 2022 05:40:07 GMT; 0s from local time.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /blog/: Blog
+|_  /private/sdc.tgz: IBM Bladecenter Management Logs (401 Unauthorized)
+|_http-favicon: Unknown favicon MD5: FDF624762222B41E2767954032B6F1FF
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.65.127:8000/: 
+|     (1) ip: 
+|_      + 192.168.65.127
+| http-headers: 
+|   Date: Tue, 25 Jan 2022 05:40:10 GMT
+|   Server: BarracudaServer.com (Windows)
+|   Connection: Close
+|   Last-Modified: Tue, 19 Feb 2013 19:58:47 GMT
+|   Content-Length: 8294
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-litespeed-sourcecode-download: 
+| Litespeed Web Server Source Code Disclosure (CVE-2010-2333)
+|_/index.php source code:
+| http-methods: 
+|   Supported Methods: OPTIONS GET HEAD PROPFIND PUT COPY DELETE MOVE MKCOL PROPPATCH LOCK UNLOCK POST
+|_  Potentially risky methods: PROPFIND PUT COPY DELETE MOVE MKCOL PROPPATCH LOCK UNLOCK
+| http-php-version: Logo query returned unknown hash 51ed0f4ae9cbc8392ecbdd7b25ef8a86
+|_Credits query returned unknown hash 51ed0f4ae9cbc8392ecbdd7b25ef8a86
+|_http-server-header: BarracudaServer.com (Windows)
+|_http-title: Home
+| http-vhosts: 
+|_128 names had status 200
+| http-webdav-scan: 
+|   WebDAV type: Unknown
+|   Allowed Methods: OPTIONS, GET, HEAD, PROPFIND, PUT, COPY, DELETE, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK
+|   Server Type: BarracudaServer.com (Windows)
+|_  Server Date: Tue, 25 Jan 2022 05:40:12 GMT
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.91%I=7%D=1/25%Time=61EF8CB4%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,72,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x20
+SF:2022\x2005:37:56\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows
+SF:\)\r\nConnection:\x20Close\r\n\r\n")%r(GetRequest,72,"HTTP/1\.1\x20200\
+SF:x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:37:56\x20GMT\r\nServe
+SF:r:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r
+SF:\n")%r(FourOhFourRequest,72,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2
+SF:025\x20Jan\x202022\x2005:38:02\x20GMT\r\nServer:\x20BarracudaServer\.co
+SF:m\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n")%r(Socks5,72,"HTTP/1\
+SF:.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38:02\x20GM
+SF:T\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20C
+SF:lose\r\n\r\n")%r(HTTPOptions,72,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue
+SF:,\x2025\x20Jan\x202022\x2005:38:08\x20GMT\r\nServer:\x20BarracudaServer
+SF:\.com\x20\(Windows\)\r\nConnection:\x20Close\r\n\r\n")%r(RTSPRequest,72
+SF:,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:38
+SF::08\x20GMT\r\nServer:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnect
+SF:ion:\x20Close\r\n\r\n")%r(SIPOptions,13C,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nDate:\x20Tue,\x2025\x20Jan\x202022\x2005:39:13\x20GMT\r\nServe
+SF:r:\x20BarracudaServer\.com\x20\(Windows\)\r\nConnection:\x20Close\r\nCo
+SF:ntent-Type:\x20text/html\r\nCache-Control:\x20no-store,\x20no-cache,\x2
+SF:0must-revalidate,\x20max-age=0\r\n\r\n<html><body><h1>400\x20Bad\x20Req
+SF:uest</h1>Can't\x20parse\x20request<p>BarracudaServer\.com\x20\(Windows\
+SF:)</p></body></html>");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 25 00:47:48 2022 -- 1 IP address (1 host up) scanned in 601.83 seconds

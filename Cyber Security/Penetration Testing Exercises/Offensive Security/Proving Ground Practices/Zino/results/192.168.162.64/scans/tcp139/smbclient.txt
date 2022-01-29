@@ -1,0 +1,18 @@
+lpcfg_do_global_parameter: WARNING: The "client use spnego" option is deprecated
+lpcfg_do_global_parameter: WARNING: The "client ntlmv2 auth" option is deprecated
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	zino            Disk      Logs
+	print$          Disk      Printer Drivers
+	IPC$            IPC       IPC Service (Samba 4.9.5-Debian)
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+	ZINO                 Samba 4.9.5-Debian
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP
+

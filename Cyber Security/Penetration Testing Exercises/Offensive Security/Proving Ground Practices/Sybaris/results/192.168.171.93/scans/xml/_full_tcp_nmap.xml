@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Jan 23 06:43:44 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/xml/_full_tcp_nmap.xml&quot; 192.168.171.93 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/xml/_full_tcp_nmap.xml&quot; 192.168.171.93" start="1642938224" startstr="Sun Jan 23 06:43:44 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642938225"/>
+<taskend task="NSE" time="1642938225"/>
+<taskbegin task="NSE" time="1642938225"/>
+<taskend task="NSE" time="1642938225"/>
+<taskbegin task="NSE" time="1642938225"/>
+<taskend task="NSE" time="1642938225"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642938225"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642938226"/>
+<taskbegin task="SYN Stealth Scan" time="1642938226"/>
+<taskprogress task="SYN Stealth Scan" time="1642938257" percent="2.45" remaining="1236" etc="1642939493"/>
+<taskprogress task="SYN Stealth Scan" time="1642938287" percent="8.51" remaining="657" etc="1642938943"/>
+<taskprogress task="SYN Stealth Scan" time="1642938317" percent="15.61" remaining="493" etc="1642938809"/>
+<taskprogress task="SYN Stealth Scan" time="1642938347" percent="22.07" remaining="428" etc="1642938774"/>
+<taskprogress task="SYN Stealth Scan" time="1642938377" percent="30.72" remaining="341" etc="1642938718"/>
+<taskprogress task="SYN Stealth Scan" time="1642938407" percent="40.61" remaining="265" etc="1642938672"/>
+<taskprogress task="SYN Stealth Scan" time="1642938437" percent="48.33" remaining="226" etc="1642938663"/>
+<taskprogress task="SYN Stealth Scan" time="1642938467" percent="56.04" remaining="190" etc="1642938656"/>
+<taskprogress task="SYN Stealth Scan" time="1642938497" percent="63.55" remaining="156" etc="1642938652"/>
+<taskprogress task="SYN Stealth Scan" time="1642938527" percent="72.89" remaining="112" etc="1642938639"/>
+<taskprogress task="SYN Stealth Scan" time="1642938557" percent="81.80" remaining="74" etc="1642938631"/>
+<taskend task="SYN Stealth Scan" time="1642938606" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1642938606"/>
+<taskend task="Service scan" time="1642938613" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1642938620"/>
+<taskend task="Traceroute" time="1642938620"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1642938620"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1642938620"/>
+<taskbegin task="NSE" time="1642938620"/>
+<taskend task="NSE" time="1642938627"/>
+<taskbegin task="NSE" time="1642938627"/>
+<taskend task="NSE" time="1642938629"/>
+<taskbegin task="NSE" time="1642938629"/>
+<taskend task="NSE" time="1642938629"/>
+<host starttime="1642938226" endtime="1642938629"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.171.93" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65519">
+<extrareasons reason="no-responses" count="65519"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="reset" reason_ttl="63"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.2" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.2</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxrwxrwx    2 0        0               6 Apr 01  2020 pub [NSE: writeable]"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.171&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.2 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.171&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.2 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 21:94:de:d3:69:64:a8:4d:a8:f0:b5:0a:ea:bd:02:ad (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoWnaSOW2cc+sYUe6aqQSPWY9e9OWgerEomQZv6FujchbKcxcm6sPRTZJnGrPsDum5vx7otZDGG9Vc55NByLaLU9WoQTLPhnepGTMzbbg9DyIDR9HXFw3fX0s+vSvjvDo/Cz19gWKTB2lBfJgPa239Hp0NmaxOAXmJ+d+oUEmnhLmZ1wAQFvJ/9Ta2zt8q6KOvjykUcISuFwr741HwcudFS4Z84LsO+WbcIGtkTELLn9yFc3KiZraJYNi72rOKsxHip/98js8nEIsryRfo6sZexu4lxT5SchvDNQCirLSHsEIFyzde5Ym5FDf4hb831SwJqFg7qDO+wDT1/oZp/dnP&#xa;  256 67:42:45:19:8b:f5:f9:a5:a4:cf:fb:87:48:a2:66:d0 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLoSyEH4GdzHPYxZPUgKP068JBcpx5KSL1KzaMRo9xP4ai5QKUKJ+H2xu8atQdvkE0ul6GnDPVlZ5Flf/npwYWY=&#xa;  256 f3:e2:29:a3:41:1e:76:1e:b1:b7:46:dc:0b:b9:91:77 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH4F/u2LLgVpGw2tr0bpe0MgbiV36HAzwcu5HqcuShJd"><table>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCoWnaSOW2cc+sYUe6aqQSPWY9e9OWgerEomQZv6FujchbKcxcm6sPRTZJnGrPsDum5vx7otZDGG9Vc55NByLaLU9WoQTLPhnepGTMzbbg9DyIDR9HXFw3fX0s+vSvjvDo/Cz19gWKTB2lBfJgPa239Hp0NmaxOAXmJ+d+oUEmnhLmZ1wAQFvJ/9Ta2zt8q6KOvjykUcISuFwr741HwcudFS4Z84LsO+WbcIGtkTELLn9yFc3KiZraJYNi72rOKsxHip/98js8nEIsryRfo6sZexu4lxT5SchvDNQCirLSHsEIFyzde5Ym5FDf4hb831SwJqFg7qDO+wDT1/oZp/dnP</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">2194ded36964a84da8f0b50aeabd02ad</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLoSyEH4GdzHPYxZPUgKP068JBcpx5KSL1KzaMRo9xP4ai5QKUKJ+H2xu8atQdvkE0ul6GnDPVlZ5Flf/npwYWY=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">674245198bf5f9a5a4cffb8748a266d0</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIH4F/u2LLgVpGw2tr0bpe0MgbiV36HAzwcu5HqcuShJd</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">f3e229a3411e761eb1b746dc0bb99177</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) PHP/7.3.22" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-favicon" output="Unknown favicon MD5: A4DA8778FE902EB34FD9A5D4C0A832E1"/><script id="http-generator" output="HTMLy v2.7.5"/><script id="http-methods" output="&#xa;  Supported Methods: GET POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-robots.txt" output="11 disallowed entries &#xa;/config/ /system/ /themes/ /vendor/ /cache/ &#xa;/changelog.txt /composer.json /composer.lock /composer.phar /search/ &#xa;/admin/"/><script id="http-server-header" output="Apache/2.4.6 (CentOS) PHP/7.3.22"><elem>Apache/2.4.6 (CentOS) PHP/7.3.22</elem>
+</script><script id="http-title" output="Sybaris - Just another HTMLy blog"><elem key="title">Sybaris - Just another HTMLy blog</elem>
+</script></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="redis" product="Redis key-value store" version="5.0.9" method="probed" conf="10"><cpe>cpe:/a:redislabs:redis:5.0.9</cpe></service></port>
+<port protocol="tcp" portid="10091"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10092"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10093"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="10094"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10095"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10096"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10097"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10098"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10099"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10100"><state state="closed" reason="reset" reason_ttl="63"/><service name="itap-ddtp" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="20"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="93" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="93" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="92" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.0" accuracy="89" line="67026">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:4.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="88" line="63251">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.11 - 4.1" accuracy="88" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="88" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="88" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="88" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/23%OT=21%CT=20%CU=%PV=Y%DS=2%DC=T%G=N%TM=61ED4105%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=101%GCD=1%ISR=10A%TI=Z%II=I%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="281" lastboot="Sun Jan 23 06:45:48 2022"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="C70A0789,F3989B4F,20B8489B,4C66BA80,BA194E77,F01D25"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="41975,419D8,41A42,41AA0,41B04,41B68"/>
+<trace port="53" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="257.35"/>
+<hop ttl="2" ipaddr="192.168.171.93" rtt="257.34"/>
+</trace>
+<times srtt="248709" rttvar="16902" to="316317"/>
+</host>
+<taskbegin task="NSE" time="1642938629"/>
+<taskend task="NSE" time="1642938629"/>
+<taskbegin task="NSE" time="1642938629"/>
+<taskend task="NSE" time="1642938629"/>
+<taskbegin task="NSE" time="1642938629"/>
+<taskend task="NSE" time="1642938629"/>
+<runstats><finished time="1642938629" timestr="Sun Jan 23 06:50:29 2022" summary="Nmap done at Sun Jan 23 06:50:29 2022; 1 IP address (1 host up) scanned in 406.13 seconds" elapsed="406.13" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

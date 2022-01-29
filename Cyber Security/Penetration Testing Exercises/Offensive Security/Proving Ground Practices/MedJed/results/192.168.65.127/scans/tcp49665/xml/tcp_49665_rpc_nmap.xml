@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Jan 25 00:49:04 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 49665 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp49665/tcp_49665_rpc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp49665/xml/tcp_49665_rpc_nmap.xml&quot; 192.168.65.127 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 49665 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp49665/tcp_49665_rpc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp49665/xml/tcp_49665_rpc_nmap.xml&quot; 192.168.65.127" start="1643089744" startstr="Tue Jan 25 00:49:04 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="49665"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643089746"/>
+<taskend task="NSE" time="1643089746"/>
+<taskbegin task="NSE" time="1643089746"/>
+<taskend task="NSE" time="1643089746"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643089746"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643089746"/>
+<taskbegin task="SYN Stealth Scan" time="1643089746"/>
+<taskend task="SYN Stealth Scan" time="1643089746" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643089746"/>
+<taskend task="Service scan" time="1643089803" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643089803"/>
+<taskend task="NSE" time="1643089818"/>
+<taskbegin task="NSE" time="1643089818"/>
+<taskend task="NSE" time="1643089818"/>
+<host starttime="1643089746" endtime="1643089818"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.65.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="173933" rttvar="173933" to="869665"/>
+</host>
+<taskbegin task="NSE" time="1643089818"/>
+<taskend task="NSE" time="1643089818"/>
+<taskbegin task="NSE" time="1643089818"/>
+<taskend task="NSE" time="1643089818"/>
+<runstats><finished time="1643089818" timestr="Tue Jan 25 00:50:18 2022" summary="Nmap done at Tue Jan 25 00:50:18 2022; 1 IP address (1 host up) scanned in 73.82 seconds" elapsed="73.82" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

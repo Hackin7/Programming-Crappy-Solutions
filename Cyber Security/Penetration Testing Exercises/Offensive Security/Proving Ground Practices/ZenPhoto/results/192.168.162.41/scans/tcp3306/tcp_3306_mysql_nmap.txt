@@ -1,0 +1,22 @@
+# Nmap 7.91 scan initiated Sat Jan 29 04:15:55 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 192.168.162.41
+Nmap scan report for 192.168.162.41
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-29 04:16:02 EST for 272s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql?  syn-ack ttl 63
+|_mysql-empty-password: ERROR: Script execution failed (use -d to debug)
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_ssl-dh-params: ERROR: Script execution failed (use -d to debug)
+|_ssl-heartbleed: ERROR: Script execution failed (use -d to debug)
+|_ssl-poodle: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 04:20:34 2022 -- 1 IP address (1 host up) scanned in 279.76 seconds

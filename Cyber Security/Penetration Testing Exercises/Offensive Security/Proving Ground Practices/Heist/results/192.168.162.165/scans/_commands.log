@@ -1,0 +1,124 @@
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/xml/_quick_tcp_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/xml/_full_tcp_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/xml/_top_100_udp_nmap.xml" 192.168.162.165
+
+dig -p 53 -x 192.168.162.165 @192.168.162.165
+
+dig AXFR -p 53 @192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp53/tcp_53_dns_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp53/xml/tcp_53_dns_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 88 --script="banner,krb5-enum-users" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp88/tcp_88_kerberos_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp88/xml/tcp_88_kerberos_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp135/tcp_135_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp135/xml/tcp_135_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 135 192.168.162.165
+
+enum4linux -a -M -l -d 192.168.162.165 2>&1
+
+nbtscan -rvh 192.168.162.165 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp139/tcp_139_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp139/xml/tcp_139_smb_nmap.xml" 192.168.162.165
+
+smbclient -L\\ -N -I 192.168.162.165 2>&1
+
+smbmap -H 192.168.162.165 -P 139 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 389 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp389/tcp_389_ldap_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp389/xml/tcp_389_ldap_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.162.165
+
+smbmap -H 192.168.162.165 -P 445 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 464 --script="banner,krb5-enum-users" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp464/tcp_464_kerberos_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp464/xml/tcp_464_kerberos_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 3268 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3268/tcp_3268_ldap_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3268/xml/tcp_3268_ldap_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 3389 --script="banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3389/tcp_3389_rdp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml" 192.168.162.165
+
+feroxbuster -u http://192.168.162.165:5985/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/tcp_5985_http_feroxbuster_common.txt"
+
+curl -sSik http://192.168.162.165:5985/
+
+curl -sSikf http://192.168.162.165:5985/robots.txt
+
+nmap -vv --reason -Pn -T4 -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/tcp_5985_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/xml/tcp_5985_http_nmap.xml" 192.168.162.165
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.162.165:5985 2>&1
+
+wkhtmltoimage --format png http://192.168.162.165:5985/ /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/tcp_5985_http_screenshot.png
+
+feroxbuster -u http://192.168.162.165:8080/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_feroxbuster_common.txt"
+
+curl -sSik http://192.168.162.165:8080/
+
+curl -sSikf http://192.168.162.165:8080/robots.txt
+
+nmap -vv --reason -Pn -T4 -sV -p 8080 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.162.165
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.162.165:8080 2>&1
+
+wkhtmltoimage --format png http://192.168.162.165:8080/ /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_screenshot.png
+
+nmap -vv --reason -Pn -T4 -sV -p 49666 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49666/tcp_49666_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49666/xml/tcp_49666_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49666 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 49668 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49668/tcp_49668_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49668/xml/tcp_49668_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49668 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 49674 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49674/tcp_49674_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49674/xml/tcp_49674_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49674 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 49677 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49677/tcp_49677_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49677/xml/tcp_49677_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49677 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 49701 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49701/tcp_49701_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49701/xml/tcp_49701_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49701 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sV -p 49748 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49748/tcp_49748_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp49748/xml/tcp_49748_rpc_nmap.xml" 192.168.162.165
+
+impacket-rpcdump -port 49748 192.168.162.165
+
+smbmap -u null -p "" -H 192.168.162.165 -P 445 2>&1
+
+smbmap -u null -p "" -H 192.168.162.165 -P 139 2>&1
+
+smbmap -H 192.168.162.165 -P 445 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.162.165 -P 445 -R 2>&1
+
+smbmap -H 192.168.162.165 -P 445 -x "ipconfig /all" 2>&1
+
+smbmap -H 192.168.162.165 -P 139 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.162.165 -P 445 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.162.165 -P 139 -R 2>&1
+
+smbmap -H 192.168.162.165 -P 139 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.162.165 -P 139 -x "ipconfig /all" 2>&1
+
+feroxbuster -u http://192.168.162.165:5985/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/tcp_5985_http_feroxbuster_big.txt"
+
+feroxbuster -u http://192.168.162.165:8080/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_feroxbuster_big.txt"
+
+feroxbuster -u http://192.168.162.165:8080/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/raft-large-words.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_feroxbuster_raft-large-words.txt"
+
+dig -p 53 -x 192.168.162.165 @192.168.162.165
+
+dig AXFR -p 53 @192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sU -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/udp53/udp_53_dns_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/udp53/xml/udp_53_dns_nmap.xml" 192.168.162.165
+
+nmap -vv --reason -Pn -T4 -sU -sV -p 88 --script="banner,krb5-enum-users" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/udp88/udp_88_kerberos_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/udp88/xml/udp_88_kerberos_nmap.xml" 192.168.162.165
+
+feroxbuster -u http://192.168.162.165:5985/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/raft-large-words.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp5985/tcp_5985_http_feroxbuster_raft-large-words.txt"
+

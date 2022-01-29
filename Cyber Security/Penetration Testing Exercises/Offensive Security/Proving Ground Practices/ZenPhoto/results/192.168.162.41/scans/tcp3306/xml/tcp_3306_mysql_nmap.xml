@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 29 04:15:55 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.162.41 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.162.41" start="1643447755" startstr="Sat Jan 29 04:15:55 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3306"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643447762"/>
+<taskend task="NSE" time="1643447762"/>
+<taskbegin task="NSE" time="1643447762"/>
+<taskend task="NSE" time="1643447762"/>
+<taskbegin task="NSE" time="1643447762"/>
+<taskend task="NSE" time="1643447762"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643447762"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643447762"/>
+<taskbegin task="SYN Stealth Scan" time="1643447762"/>
+<taskend task="SYN Stealth Scan" time="1643447762" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643447764"/>
+<taskend task="Service scan" time="1643447925" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643447925"/>
+<taskend task="NSE" time="1643447955"/>
+<taskbegin task="NSE" time="1643447955"/>
+<taskprogress task="NSE" time="1643447986" percent="65.00" remaining="17" etc="1643448003"/>
+<taskprogress task="NSE" time="1643448016" percent="85.00" remaining="11" etc="1643448027"/>
+<taskend task="NSE" time="1643448026"/>
+<taskbegin task="NSE" time="1643448026"/>
+<taskend task="NSE" time="1643448034"/>
+<host starttime="1643447762" endtime="1643448034"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.162.41" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" method="table" conf="3"/><script id="mysql-empty-password" output="ERROR: Script execution failed (use -d to debug)"/><script id="mysql-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="mysql-vuln-cve2012-2122" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-ccs-injection" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-cert" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-date" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-dh-params" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-heartbleed" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-poodle" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2-drown" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="171115" rttvar="171115" to="855575"/>
+</host>
+<taskbegin task="NSE" time="1643448034"/>
+<taskend task="NSE" time="1643448034"/>
+<taskbegin task="NSE" time="1643448034"/>
+<taskend task="NSE" time="1643448034"/>
+<taskbegin task="NSE" time="1643448034"/>
+<taskend task="NSE" time="1643448034"/>
+<runstats><finished time="1643448034" timestr="Sat Jan 29 04:20:34 2022" summary="Nmap done at Sat Jan 29 04:20:34 2022; 1 IP address (1 host up) scanned in 279.76 seconds" elapsed="279.76" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

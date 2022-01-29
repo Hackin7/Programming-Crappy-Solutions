@@ -1,0 +1,19 @@
+# Nmap 7.91 scan initiated Thu Jan 27 11:41:14 2022 as: nmap -vv --reason -Pn -T4 -sV -p 25 "--script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/tcp_25_smtp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/xml/tcp_25_smtp_nmap.xml" 192.168.193.63
+Nmap scan report for 192.168.193.63
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-01-27 11:41:19 EST for 5s
+
+PORT   STATE SERVICE REASON          VERSION
+25/tcp open  smtp    syn-ack ttl 127 Microsoft ESMTP 10.0.17763.1
+| banner: 220 butch Microsoft ESMTP MAIL Service, Version: 10.0.17763.1 r
+|_eady at  Thu, 27 Jan 2022 08:40:06 -0800
+| smtp-commands: butch Hello [192.168.49.193], TURN, SIZE 2097152, ETRN, PIPELINING, DSN, ENHANCEDSTATUSCODES, 8bitmime, BINARYMIME, CHUNKING, VRFY, OK, 
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH TURN ETRN BDAT VRFY 
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+Service Info: Host: butch; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 27 11:41:24 2022 -- 1 IP address (1 host up) scanned in 10.32 seconds

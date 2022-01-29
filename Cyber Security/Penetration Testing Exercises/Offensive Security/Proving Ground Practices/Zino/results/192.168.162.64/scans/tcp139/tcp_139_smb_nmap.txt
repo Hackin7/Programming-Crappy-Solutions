@@ -1,0 +1,127 @@
+# Nmap 7.91 scan initiated Sat Jan 29 08:20:41 2022 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/tcp_139_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/xml/tcp_139_smb_nmap.xml" 192.168.162.64
+Nmap scan report for 192.168.162.64
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-29 08:20:48 EST for 403s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
+Service Info: Host: ZINO
+
+Host script results:
+| smb-enum-domains: 
+|   ZINO
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.162.64\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Samba 4.9.5-Debian)
+|     Users: 4
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.162.64\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\192.168.162.64\zino: 
+|     Type: STYPE_DISKTREE
+|     Comment: Logs
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\home\peter
+|     Anonymous access: READ
+|_    Current user access: READ
+| smb-ls: Volume \\192.168.162.64\zino
+| SIZE   TIME                 FILENAME
+| <DIR>  2020-07-09T19:11:49  .
+| <DIR>  2020-04-28T13:38:53  ..
+| 265    2020-04-28T14:07:32  error.log
+| 33     2020-07-09T19:11:49  local.txt
+| 424    2020-04-28T14:08:15  misc.log
+| 368    2020-04-28T14:07:54  auth.log
+| 5464   2020-04-28T14:07:09  access.log
+| <DIR>  2020-04-28T14:12:56  ftp
+|_
+| smb-mbenum: 
+|   DFS Root
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Potential Browser
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Print server
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Server
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Server service
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Unix server
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Windows NT/2000/XP/2003 server
+|     ZINO  0.0  Samba 4.9.5-Debian
+|   Workstation
+|_    ZINO  0.0  Samba 4.9.5-Debian
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.9.5-Debian)
+|   Computer name: zino
+|   NetBIOS computer name: ZINO\x00
+|   Domain name: \x00
+|   FQDN: zino
+|_  System time: 2022-01-29T08:20:04-05:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|   3.11: 
+|     Distributed File System
+|_    Leasing
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-01-29T13:19:53
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 08:27:31 2022 -- 1 IP address (1 host up) scanned in 411.21 seconds

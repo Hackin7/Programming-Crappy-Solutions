@@ -1,0 +1,7 @@
+WLD        0l        0w        0c Got 302 for http://192.168.65.127:8000/b65fcb1ab3d648588d7ebf0d082c2691 (url length: 32)
+WLD         -         -         - http://192.168.65.127:8000/b65fcb1ab3d648588d7ebf0d082c2691 redirects to => http://192.168.65.127:8000/b65fcb1ab3d648588d7ebf0d082c2691/
+200        1l       23w      600c http://192.168.65.127:8000/favicon.ico
+200        3l        9w       95c http://192.168.65.127:8000/flower.txt
+200        1l        7w       76c http://192.168.65.127:8000/passion.txt
+200        1l        3w       42c http://192.168.65.127:8000/red.txt
+200        3l       11w      112c http://192.168.65.127:8000/sky.txt

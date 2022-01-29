@@ -1,0 +1,20 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] ident found on tcp/113.
+
+
+
+[*] postgresql found on tcp/5432.
+
+
+
+[*] http found on tcp/8080.
+
+
+
+[*] snet-sensor-mgmt found on tcp/10000.
+
+
+

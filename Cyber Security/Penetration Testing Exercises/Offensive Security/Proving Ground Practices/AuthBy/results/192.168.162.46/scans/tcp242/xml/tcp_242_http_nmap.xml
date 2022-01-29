@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Fri Jan 28 22:35:21 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 242 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp242/tcp_242_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp242/xml/tcp_242_http_nmap.xml&quot; 192.168.162.46 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 242 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp242/tcp_242_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp242/xml/tcp_242_http_nmap.xml&quot; 192.168.162.46" start="1643427321" startstr="Fri Jan 28 22:35:21 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="242"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643427324"/>
+<taskend task="NSE" time="1643427324"/>
+<taskbegin task="NSE" time="1643427324"/>
+<taskend task="NSE" time="1643427324"/>
+<taskbegin task="NSE" time="1643427324"/>
+<taskend task="NSE" time="1643427324"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643427324"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643427324"/>
+<taskbegin task="SYN Stealth Scan" time="1643427325"/>
+<taskend task="SYN Stealth Scan" time="1643427325" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643427326"/>
+<taskend task="Service scan" time="1643427337" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643427337"/>
+<taskprogress task="NSE" time="1643427368" percent="92.13" remaining="3" etc="1643427371"/>
+<taskend task="NSE" time="1643427384"/>
+<taskbegin task="NSE" time="1643427384"/>
+<taskend task="NSE" time="1643427384"/>
+<taskbegin task="NSE" time="1643427384"/>
+<taskend task="NSE" time="1643427384"/>
+<host starttime="1643427325" endtime="1643427384"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.162.46" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="242"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.2.21" extrainfo="(Win32) PHP/5.3.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.21</cpe></service><script id="http-auth" output="&#xa;HTTP/1.1 401 Authorization Required&#xd;&#xa;  Basic realm=Qui e nuce nuculeum esse volt, frangit nucem!&#xa;"><table>
+<table key="params">
+<elem key="realm">Qui e nuce nuculeum esse volt, frangit nucem!</elem>
+</table>
+<elem key="scheme">Basic</elem>
+</table>
+</script><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.162.46&#xa;  url                         method&#xa;  http://192.168.162.46:242/  HTTP: Basic&#xa;"/><script id="http-chrono" output="Request times for /; avg: 409.59ms; min: 381.79ms; max: 436.84ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sat, 29 Jan 2022 03:34:25 GMT; -1m17s from local time."><elem key="date">2022-01-29T03:34:25+00:00</elem>
+<elem key="delta">-77.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.162.46&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 401&#xa;  &#x9;http://192.168.162.46:242/&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Sat, 29 Jan 2022 03:34:41 GMT&#xa;  Server: Apache/2.2.21 (Win32) PHP/5.3.8&#xa;  WWW-Authenticate: Basic realm=&quot;Qui e nuce nuculeum esse volt, frangit nucem!&quot;&#xa;  Content-Length: 401&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=iso-8859-1&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-method-tamper" output="&#xa;  VULNERABLE:&#xa;  Authentication bypass by HTTP verb tampering&#xa;    State: VULNERABLE (Exploitable)&#xa;      This web server contains password protected resources vulnerable to authentication bypass&#xa;      vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the&#xa;       common HTTP methods and in misconfigured .htaccess files.&#xa;             &#xa;    Extra information:&#xa;      &#xa;  URIs suspected to be vulnerable to HTTP verb tampering:&#xa;    / [GENERIC]&#xa;  &#xa;    References:&#xa;      http://capec.mitre.org/data/definitions/274.html&#xa;      https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29&#xa;      http://www.mkit.com.ar/labs/htexploit/&#xa;      http://www.imperva.com/resources/glossary/http_verb_tampering.html&#xa;"><table key="NMAP-5">
+<elem key="title">Authentication bypass by HTTP verb tampering</elem>
+<elem key="state">VULNERABLE (Exploitable)</elem>
+<table key="description">
+<elem>This web server contains password protected resources vulnerable to authentication bypass&#xa;vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the&#xa; common HTTP methods and in misconfigured .htaccess files.&#xa;       </elem>
+</table>
+<table key="extra_info">
+<elem>&#xa;URIs suspected to be vulnerable to HTTP verb tampering:&#xa;  / [GENERIC]&#xa;</elem>
+</table>
+<table key="refs">
+<elem>http://capec.mitre.org/data/definitions/274.html</elem>
+<elem>https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29</elem>
+<elem>http://www.mkit.com.ar/labs/htexploit/</elem>
+<elem>http://www.imperva.com/resources/glossary/http_verb_tampering.html</elem>
+</table>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.2.21 (Win32) PHP/5.3.8"><elem>Apache/2.2.21 (Win32) PHP/5.3.8</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="401 Authorization Required"><elem key="title">401 Authorization Required</elem>
+</script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Sat, 29 Jan 2022 03:34:20 GMT&#xa;Server: Apache/2.2.21 (Win32) PHP/5.3.8&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 401&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">401</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 401"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="170924" rttvar="170924" to="854620"/>
+</host>
+<taskbegin task="NSE" time="1643427384"/>
+<taskend task="NSE" time="1643427384"/>
+<taskbegin task="NSE" time="1643427384"/>
+<taskend task="NSE" time="1643427384"/>
+<taskbegin task="NSE" time="1643427384"/>
+<taskend task="NSE" time="1643427385"/>
+<runstats><finished time="1643427385" timestr="Fri Jan 28 22:36:25 2022" summary="Nmap done at Fri Jan 28 22:36:25 2022; 1 IP address (1 host up) scanned in 63.54 seconds" elapsed="63.54" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

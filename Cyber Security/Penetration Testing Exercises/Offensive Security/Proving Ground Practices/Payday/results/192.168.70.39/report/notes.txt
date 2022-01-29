@@ -1,0 +1,32 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] pop3 found on tcp/110.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] imap found on tcp/143.
+
+
+
+[*] netbios-ssn found on tcp/445.
+
+
+
+[*] imaps found on tcp/993.
+
+
+
+[*] pop3s found on tcp/995.
+
+
+

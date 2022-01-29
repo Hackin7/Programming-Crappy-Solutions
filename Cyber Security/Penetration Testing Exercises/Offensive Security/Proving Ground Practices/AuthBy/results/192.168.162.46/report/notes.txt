@@ -1,0 +1,16 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ms-wbt-server found on tcp/3389.
+
+
+
+[*] http found on tcp/242.
+
+
+
+[*] zftp-admin found on tcp/3145.
+
+
+

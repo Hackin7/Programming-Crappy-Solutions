@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 27 11:41:14 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/tcp_25_smtp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/xml/tcp_25_smtp_nmap.xml&quot; 192.168.193.63 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/tcp_25_smtp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp25/xml/tcp_25_smtp_nmap.xml&quot; 192.168.193.63" start="1643301674" startstr="Thu Jan 27 11:41:14 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="25"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643301679"/>
+<taskend task="NSE" time="1643301679"/>
+<taskbegin task="NSE" time="1643301679"/>
+<taskend task="NSE" time="1643301679"/>
+<taskbegin task="NSE" time="1643301679"/>
+<taskend task="NSE" time="1643301679"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643301679"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643301679"/>
+<taskbegin task="SYN Stealth Scan" time="1643301679"/>
+<taskend task="SYN Stealth Scan" time="1643301679" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643301680"/>
+<taskend task="Service scan" time="1643301681" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643301681"/>
+<taskend task="NSE" time="1643301683"/>
+<taskbegin task="NSE" time="1643301683"/>
+<taskend task="NSE" time="1643301684"/>
+<taskbegin task="NSE" time="1643301684"/>
+<taskend task="NSE" time="1643301684"/>
+<host starttime="1643301679" endtime="1643301684"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.193.63" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="smtp" product="Microsoft ESMTP" version="10.0.17763.1" hostname="butch" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 butch Microsoft ESMTP MAIL Service, Version: 10.0.17763.1 r&#xa;eady at  Thu, 27 Jan 2022 08:40:06 -0800"/><script id="smtp-commands" output="butch Hello [192.168.49.193], TURN, SIZE 2097152, ETRN, PIPELINING, DSN, ENHANCEDSTATUSCODES, 8bitmime, BINARYMIME, CHUNKING, VRFY, OK, &#xa; This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH TURN ETRN BDAT VRFY "/><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="192370" rttvar="192370" to="961850"/>
+</host>
+<taskbegin task="NSE" time="1643301684"/>
+<taskend task="NSE" time="1643301684"/>
+<taskbegin task="NSE" time="1643301684"/>
+<taskend task="NSE" time="1643301684"/>
+<taskbegin task="NSE" time="1643301684"/>
+<taskend task="NSE" time="1643301684"/>
+<runstats><finished time="1643301684" timestr="Thu Jan 27 11:41:24 2022" summary="Nmap done at Thu Jan 27 11:41:24 2022; 1 IP address (1 host up) scanned in 10.32 seconds" elapsed="10.32" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

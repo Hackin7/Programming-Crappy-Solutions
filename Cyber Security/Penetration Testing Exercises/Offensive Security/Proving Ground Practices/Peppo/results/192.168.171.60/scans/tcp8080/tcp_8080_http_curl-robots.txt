@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: text/plain; charset=utf-8
+Etag: W/"3de3a7a6884ea5c882cf051379c6d651"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 3ffe1ee8-0755-4e9f-b86e-ae95f5b70ab3
+X-Runtime: 0.003884
+Content-Length: 103
+Server: WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+Date: Sun, 23 Jan 2022 08:31:07 GMT
+Connection: Keep-Alive
+
+User-agent: *
+Disallow: /issues/gantt
+Disallow: /issues/calendar
+Disallow: /activity
+Disallow: /search

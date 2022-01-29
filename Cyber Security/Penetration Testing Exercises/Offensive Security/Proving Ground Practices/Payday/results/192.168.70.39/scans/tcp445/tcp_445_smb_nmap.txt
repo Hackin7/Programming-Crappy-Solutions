@@ -1,0 +1,152 @@
+# Nmap 7.91 scan initiated Sat Jan 22 23:52:14 2022 as: nmap -vv --reason -Pn -T4 -sV -p 445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/tcp445/tcp_445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/tcp445/xml/tcp_445_smb_nmap.xml" 192.168.70.39
+Nmap scan report for 192.168.70.39
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-22 23:52:17 EST for 453s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.0.26a (workgroup: MSHOME)
+
+Host script results:
+| smb-enum-domains: 
+|   PAYDAY
+|     Groups: n/a
+|     Users: games\x00, nobody\x00, proxy\x00, syslog\x00, www-data\x00, root\x00, news\x00, bin\x00, mail\x00, dhcp\x00, daemon\x00, sshd\x00, man\x00, lp\x00, mysql\x00, dovecot\x00, gnats\x00, backup\x00, sys\x00, klog\x00, postfix\x00, list\x00, irc\x00, sync\x00, uucp\x00
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+|_smb-enum-sessions: ERROR: Script execution failed (use -d to debug)
+| smb-enum-shares: 
+|   account_used: <blank>
+|   \\192.168.70.39\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (payday server (Samba, Ubuntu))
+|     Users: 4
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|   \\192.168.70.39\print$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|_    Anonymous access: <none>
+| smb-enum-users: 
+|   PAYDAY\backup (RID: 1068)
+|     Full name:   backup
+|     Flags:       Normal user account
+|   PAYDAY\bin (RID: 1004)
+|     Full name:   bin
+|     Flags:       Normal user account
+|   PAYDAY\daemon (RID: 1002)
+|     Full name:   daemon
+|     Flags:       Normal user account
+|   PAYDAY\dhcp (RID: 1200)
+|     Flags:       Normal user account
+|   PAYDAY\dovecot (RID: 1208)
+|     Full name:   Dovecot mail server,,,
+|     Flags:       Normal user account
+|   PAYDAY\games (RID: 1010)
+|     Full name:   games
+|     Flags:       Normal user account
+|   PAYDAY\gnats (RID: 1082)
+|     Full name:   Gnats Bug-Reporting System (admin)
+|     Flags:       Normal user account
+|   PAYDAY\irc (RID: 1078)
+|     Full name:   ircd
+|     Flags:       Normal user account
+|   PAYDAY\klog (RID: 1204)
+|     Flags:       Normal user account
+|   PAYDAY\list (RID: 1076)
+|     Full name:   Mailing List Manager
+|     Flags:       Normal user account
+|   PAYDAY\lp (RID: 1014)
+|     Full name:   lp
+|     Flags:       Normal user account
+|   PAYDAY\mail (RID: 1016)
+|     Full name:   mail
+|     Flags:       Normal user account
+|   PAYDAY\man (RID: 1012)
+|     Full name:   man
+|     Flags:       Normal user account
+|   PAYDAY\mysql (RID: 1206)
+|     Full name:   MySQL Server,,,
+|     Flags:       Normal user account
+|   PAYDAY\news (RID: 1018)
+|     Full name:   news
+|     Flags:       Normal user account
+|   PAYDAY\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account
+|   PAYDAY\postfix (RID: 1210)
+|     Flags:       Normal user account
+|   PAYDAY\proxy (RID: 1026)
+|     Full name:   proxy
+|     Flags:       Normal user account
+|   PAYDAY\root (RID: 1000)
+|     Full name:   root
+|     Flags:       Normal user account
+|   PAYDAY\sshd (RID: 1212)
+|     Flags:       Normal user account
+|   PAYDAY\sync (RID: 1008)
+|     Full name:   sync
+|     Flags:       Normal user account
+|   PAYDAY\sys (RID: 1006)
+|     Full name:   sys
+|     Flags:       Normal user account
+|   PAYDAY\syslog (RID: 1202)
+|     Flags:       Normal user account
+|   PAYDAY\uucp (RID: 1020)
+|     Full name:   uucp
+|     Flags:       Normal user account
+|   PAYDAY\www-data (RID: 1066)
+|     Full name:   www-data
+|_    Flags:       Normal user account
+| smb-mbenum: 
+|   DFS Root
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Potential Browser
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Print server
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Server
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Server service
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Unix server
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     PAYDAY  0.0  payday server (Samba, Ubuntu)
+|   Workstation
+|_    PAYDAY  0.0  payday server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.26a)
+|   Computer name: payday
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: payday
+|_  System time: 2022-01-22T23:52:39-05:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 22 23:59:50 2022 -- 1 IP address (1 host up) scanned in 456.71 seconds

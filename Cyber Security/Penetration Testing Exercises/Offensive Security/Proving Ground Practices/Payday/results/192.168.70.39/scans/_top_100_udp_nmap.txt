@@ -1,0 +1,50 @@
+# Nmap 7.91 scan initiated Sat Jan 22 23:51:12 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/results/192.168.70.39/scans/xml/_top_100_udp_nmap.xml" 192.168.70.39
+Warning: 192.168.70.39 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.70.39 from 100 to 200 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 192.168.70.39 from 200 to 400 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 192.168.70.39 from 400 to 800 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 192.168.70.39 from 800 to 1000 due to 11 out of 16 dropped probes since last increase.
+Nmap scan report for 192.168.70.39
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-01-22 23:51:13 EST for 262s
+Not shown: 80 closed ports
+Reason: 80 port-unreaches
+PORT      STATE         SERVICE         REASON      VERSION
+7/udp     open|filtered echo            no-response
+17/udp    open|filtered qotd            no-response
+19/udp    open|filtered chargen         no-response
+68/udp    open|filtered dhcpc           no-response
+136/udp   open|filtered profile         no-response
+137/udp   open|filtered netbios-ns      no-response
+158/udp   open|filtered pcmail-srv      no-response
+497/udp   open|filtered retrospect      no-response
+500/udp   open|filtered isakmp          no-response
+1434/udp  open|filtered ms-sql-m        no-response
+1645/udp  open|filtered radius          no-response
+1813/udp  open|filtered radacct         no-response
+2000/udp  open|filtered cisco-sccp      no-response
+3456/udp  open|filtered IISrpc-or-vat   no-response
+9200/udp  open|filtered wap-wsp         no-response
+20031/udp open|filtered bakbonenetvault no-response
+32769/udp open|filtered filenet-rpc     no-response
+49192/udp open|filtered unknown         no-response
+49194/udp open|filtered unknown         no-response
+65024/udp open|filtered unknown         no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/22%OT=%CT=%CU=9%PV=Y%DS=2%DC=T%G=N%TM=61ECDFC7%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 3283/udp)
+HOP RTT       ADDRESS
+1   175.94 ms 192.168.49.1
+2   176.24 ms 192.168.70.39
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 22 23:55:36 2022 -- 1 IP address (1 host up) scanned in 263.43 seconds

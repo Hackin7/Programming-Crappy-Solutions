@@ -1,0 +1,120 @@
+WhatWeb report for http://192.168.171.60:8080
+Status    : 200 OK
+Title     : Redmine
+IP        : 192.168.171.60
+Country   : RESERVED, ZZ
+
+Summary   : Script, Redmine, X-UA-Compatible[IE=edge], HTML5, JQuery, HTTPServer[WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)], ChiliProject, UncommonHeaders[x-content-type-options,x-download-options,x-permitted-cross-domain-policies,referrer-policy,x-request-id], X-XSS-Protection[1; mode=block], Ruby[2.6.6,WEBrick/1.4.2], X-Frame-Options[SAMEORIGIN], Cookies[_redmine_session], HttpOnly[_redmine_session]
+
+Detected Plugins:
+[ ChiliProject ]
+	ChiliProject is a web based project management system.
+
+	Google Dorks: (1)
+	Website     : https://www.chiliproject.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : _redmine_session
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31) (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie
+	response header and the browser supports it then the cookie
+	cannot be accessed through client side script - More Info:
+	http://en.wikipedia.org/wiki/HTTP_cookie
+
+	String       : _redmine_session
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Website     : http://jquery.com/
+
+[ Redmine ]
+	Redmine is a flexible project management web application.
+	Written using Ruby on Rails framework, it is cross-platform
+	and cross-database.
+
+	Google Dorks: (1)
+
+[ Ruby ]
+	Ruby is a dynamic, open source programming language with a
+	focus on simplicity and productivity. It has an elegant
+	syntax that is natural to read and easy to write.
+
+	Version      : 2.6.6
+	Version      : WEBrick/1.4.2
+	Version      : 2.6.6
+	Website     : http://www.ruby-lang.org/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-content-type-options,x-download-options,x-permitted-cross-domain-policies,referrer-policy,x-request-id (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 1; mode=block
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Frame-Options: SAMEORIGIN
+	X-Xss-Protection: 1; mode=block
+	X-Content-Type-Options: nosniff
+	X-Download-Options: noopen
+	X-Permitted-Cross-Domain-Policies: none
+	Referrer-Policy: strict-origin-when-cross-origin
+	Content-Type: text/html; charset=utf-8
+	Etag: W/"60c3733116cd57e52c111d264377c286"
+	Cache-Control: max-age=0, private, must-revalidate
+	X-Request-Id: 1b822f0c-0582-4885-b1d1-d1d6bd83938d
+	X-Runtime: 0.009179
+	Content-Length: 4602
+	Server: WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+	Date: Sun, 23 Jan 2022 08:31:09 GMT
+	Connection: close
+	Set-Cookie: _redmine_session=QWM4OURLcFA5MzBTY2JMRVJDYkdXdmdyK05BWk5jUjZ5aHg4eTJ2czVSZHA3QnJpdjlyY04zSm5LaTY3dzVxZVZ6L2dVdHMxbW5ncDJXV0tBOE40eldlaW9yamtJL1J1aVZva1NvOFNsYmw1RWZycmxCRmhreUlwQitDUHRQYThuM2Y2WWwxb01TczVKNlZFck1Ua2Juc1NGajlvM1orNWxBQ1h5eUxqNzhSYnhwbENuUjdFL29vcnBSTU1iU0djLS1kVktJUUxnSTZhTFZCOXB4TXBHeXdnPT0%3D--acb810f09d6d6f9bae3a111d224ed4b24637da42; path=/; HttpOnly
+
+

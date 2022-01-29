@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Thu Jan 27 11:41:15 2022 as: nmap -vv --reason -Pn -T4 -sV -p 135 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp135/tcp_135_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Butch/results/192.168.193.63/scans/tcp135/xml/tcp_135_rpc_nmap.xml" 192.168.193.63
+Nmap scan report for 192.168.193.63
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-01-27 11:41:20 EST for 24s
+
+PORT    STATE SERVICE REASON          VERSION
+135/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan 27 11:41:44 2022 -- 1 IP address (1 host up) scanned in 29.47 seconds

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Jan 25 00:37:44 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.65.127 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.65.127" start="1643089064" startstr="Tue Jan 25 00:37:44 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643089066"/>
+<taskend task="NSE" time="1643089066"/>
+<taskbegin task="NSE" time="1643089066"/>
+<taskend task="NSE" time="1643089066"/>
+<taskbegin task="NSE" time="1643089066"/>
+<taskend task="NSE" time="1643089066"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643089066"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643089066"/>
+<taskbegin task="SYN Stealth Scan" time="1643089066"/>
+<taskend task="SYN Stealth Scan" time="1643089067" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643089067"/>
+<taskend task="Service scan" time="1643089073" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643089073"/>
+<taskprogress task="NSE" time="1643089104" percent="95.71" remaining="2" etc="1643089105"/>
+<taskend task="NSE" time="1643089107"/>
+<taskbegin task="NSE" time="1643089107"/>
+<taskend task="NSE" time="1643089109"/>
+<taskbegin task="NSE" time="1643089109"/>
+<taskend task="NSE" time="1643089109"/>
+<host starttime="1643089066" endtime="1643089109"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.65.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-mbenum" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="No dialects accepted. Something may be blocking the responses"/><script id="smb-vuln-ms10-061" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb2-security-mode" output="SMB: Couldn&apos;t find a NetBIOS name that works for the server. Sorry!">false</script><script id="smb2-time" output="ERROR: Script execution failed (use -d to debug)"/></hostscript><times srtt="172990" rttvar="172990" to="864950"/>
+</host>
+<taskbegin task="NSE" time="1643089109"/>
+<taskend task="NSE" time="1643089109"/>
+<taskbegin task="NSE" time="1643089109"/>
+<taskend task="NSE" time="1643089109"/>
+<taskbegin task="NSE" time="1643089109"/>
+<taskend task="NSE" time="1643089109"/>
+<runstats><finished time="1643089109" timestr="Tue Jan 25 00:38:29 2022" summary="Nmap done at Tue Jan 25 00:38:29 2022; 1 IP address (1 host up) scanned in 45.01 seconds" elapsed="45.01" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

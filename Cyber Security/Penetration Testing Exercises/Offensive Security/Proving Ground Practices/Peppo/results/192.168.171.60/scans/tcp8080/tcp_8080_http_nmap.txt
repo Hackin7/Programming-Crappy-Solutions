@@ -1,0 +1,1342 @@
+# Nmap 7.91 scan initiated Sun Jan 23 03:31:06 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Peppo/results/192.168.171.60/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Peppo/results/192.168.171.60/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.171.60
+Nmap scan report for 192.168.171.60
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-01-23 03:31:07 EST for 608s
+
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 62 WEBrick httpd 1.4.2 (Ruby 2.6.6 (2020-03-31))
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.171.60
+|   url                                          method
+|   http://192.168.171.60:8080/account/register  FORM
+|_  http://192.168.171.60:8080/login             FORM
+|_http-chrono: Request times for /; avg: 760.63ms; min: 654.20ms; max: 1007.66ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.171.60
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 767
+|     Comment: 
+|         /***** Tabular forms ******/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1719
+|     Comment: 
+|         /* Accessibility specific styles */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1679
+|     Comment: 
+|         /* Operator.Word */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1635
+|     Comment: 
+|         /************* Rouge styles *************/
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Line number: 29
+|     Comment: 
+|         <!-- page specific tags -->
+|     
+|     Path: http://192.168.171.60:8080/javascripts/tribute-3.7.3.min.js?1586192448
+|     Line number: 2
+|     Comment: 
+|         
+|         //# sourceMappingURL=tribute.min.js.map
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1670
+|     Comment: 
+|         /* Name.Constant */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 342
+|     Comment: 
+|         /* move avatar up 1px */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 237
+|     Comment: 
+|         /***** Tables *****/
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 492
+|     Comment: 
+|          // moves existing modals behind the transparent background
+|     
+|     Path: http://192.168.171.60:8080/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js?1586192448
+|     Line number: 6
+|     Comment: 
+|         /*! jQuery Migrate v1.4.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1663
+|     Comment: 
+|         /* Keyword.Reserved */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 1
+|     Comment: 
+|         /* Redmine - project management software
+|            Copyright (C) 2006-2019  Jean-Philippe Lang */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1678
+|     Comment: 
+|         /* Name.Variable */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1657
+|     Comment: 
+|         /* Generic.Subheading */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1672
+|     Comment: 
+|         /* Name.Entity */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1668
+|     Comment: 
+|         /* Name.Builtin */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1686
+|     Comment: 
+|         /* Literal.String.Affix */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1697
+|     Comment: 
+|         /* Literal.String.Single */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 596
+|     Comment: 
+|         /* reset left padding in order to use whole space */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1655
+|     Comment: 
+|         /* Generic.Prompt */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1029
+|     Comment: 
+|         /***** Calendar *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 805
+|     Comment: 
+|         /* three columns for all cells that are not subject */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 784
+|     Comment: 
+|         /* width of left column */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1707
+|     Comment: 
+|         /***** Media print specific styles *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1676
+|     Comment: 
+|         /* Name.Namespace */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 199
+|     Comment: 
+|         /*----------------------------------------*\
+|             C) MAIN CONTENT & SIDEBAR
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1704
+|     Comment: 
+|         /* Name.Variable.Magic */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 4
+|     Comment: 
+|         /* Fix for CVE-2015-9251, to be removed with JQuery >= 3.0 */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1682
+|     Comment: 
+|         /* Literal.Number.Float */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 672
+|     Comment: 
+|         /* some themes add a margin to login page, remove it on mobile */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 122
+|     Comment: 
+|         /* there are themes which set clear property, this resets it */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1659
+|     Comment: 
+|         /* Keyword.Constant */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 204
+|     Comment: 
+|         /* padding-top equals header height */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1688
+|     Comment: 
+|         /* Literal.String.Char */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1702
+|     Comment: 
+|         /* Name.Variable.Global */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 662
+|     Comment: 
+|          // Store selected project
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 92
+|     Comment: 
+|         /* the height of our header on mobile */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1693
+|     Comment: 
+|         /* Literal.String.Heredoc */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1006
+|     Comment: 
+|         /* fixed not supported by IE */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1658
+|     Comment: 
+|         /* Generic.Traceback */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 5
+|     Comment: 
+|         /*
+|           CONTENTS
+|         
+|           A) BASIC MOBILE RESETS
+|           B) HEADER & TOP MENUS
+|           C) MAIN CONTENT & SIDEBAR
+|           D) TOGGLE BUTTON & FLYOUT MENU
+|           E) UX ELEMENTS
+|           F) PAGE SPECIFIC STYLES
+|           G) FORMS
+|         */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 34
+|     Comment: 
+|         /*
+|             apply natural border box, see: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+|             this helps us to better deal with percentages and padding / margin
+|           */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 1
+|     Comment: 
+|         /*----------------------------------------*\
+|           RESPONSIVE CSS
+|         \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1694
+|     Comment: 
+|         /* Literal.String.Interpol */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 136
+|     Comment: 
+|         /***** Links *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 810
+|     Comment: 
+|         /* needed for .buttons positioning */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 641
+|     Comment: 
+|         /* jquery ui dialogs */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js?1586192448
+|     Line number: 23
+|     Comment: 
+|         /* Rails UJS 5.2.3 */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1645
+|     Comment: 
+|         /* Comment.Preproc */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 723
+|     Comment: 
+|         /*----------------------------------------*\
+|             G) FORMS
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1654
+|     Comment: 
+|         /* Generic.Output */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 715
+|     Comment: 
+|          //home
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1703
+|     Comment: 
+|         /* Name.Variable.Instance */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 540
+|     Comment: 
+|         /* for body not to have scrollbars when left flyout menu is active */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 959
+|     Comment: 
+|         /***** Flash & error messages ****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1669
+|     Comment: 
+|         /* Name.Class */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1653
+|     Comment: 
+|         /* Generic.Inserted */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 663
+|     Comment: 
+|          // Calling focus to scroll to selected project
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1666
+|     Comment: 
+|         /* Literal.String */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1289
+|     Comment: 
+|         /***** Gantt chart *****/
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Line number: 23
+|     Comment: 
+|         
+|         //<![CDATA[
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1674
+|     Comment: 
+|         /* Name.Function */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 548
+|     Comment: 
+|         /* when left flyout is active, move body and header to the right (same amount like flyout-menu's width) */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1662
+|     Comment: 
+|         /* Keyword.Pseudo */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 697
+|     Comment: 
+|         /*
+|            * [1] override inline styles with important
+|            * [2] keep border between subjects and gantt area
+|            * [3] remove whitespace between subjects and gantt area
+|            * [4] maintain width due to [3]
+|            */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1692
+|     Comment: 
+|         /* Literal.String.Escape */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 155
+|     Comment: 
+|         /* set a font-size in order to achive same result in different themes */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1646
+|     Comment: 
+|         /* Comment.PreprocFile */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1695
+|     Comment: 
+|         /* Literal.String.Other */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1700
+|     Comment: 
+|         /* Name.Function.Magic */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1673
+|     Comment: 
+|         /* Name.Exception */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1651
+|     Comment: 
+|         /* Generic.Error */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/responsive.js?1586192449
+|     Line number: 37
+|     Comment: 
+|         /* bind resize handler */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1649
+|     Comment: 
+|         /* Generic.Deleted */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 412
+|     Comment: 
+|         
+|         //replaces current URL with the "href" attribute of the current link
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1675
+|     Comment: 
+|         /* Name.Label */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1690
+|     Comment: 
+|         /* Literal.String.Doc */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 68
+|     Comment: 
+|         /* Set font-size for standard elements to 14px */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 59
+|     Comment: 
+|         /* reset the min-width of 900px */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1644
+|     Comment: 
+|         /* Comment.Multiline */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1687
+|     Comment: 
+|         /* Literal.String.Backtick */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 293
+|     Comment: 
+|         /* reset margin for themes that define it */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 30
+|     Comment: 
+|         /*----------------------------------------*\
+|             A) BASIC MOBILE RESETS
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 214
+|     Comment: 
+|         /* hide sidebar and sidebar switch panel, since it's placed in mobile flyout menu */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 833
+|     Comment: 
+|         /* attachment upload form */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 696
+|     Comment: 
+|         /* Gantt charts */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 55
+|     Comment: 
+|         /* prevent font scaling in landscape mode on webkit */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 830
+|     Comment: 
+|         /* this is the spaces that .buttons uses next to subject */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 813
+|     Comment: 
+|         /* positioniong of unline button */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 801
+|     Comment: 
+|         /* break word if subject is too long */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/responsive.js?1586192449
+|     Line number: 26
+|     Comment: 
+|         /* click handler for mobile menu toggle */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 800
+|     Comment: 
+|         /* let subject have one full width column */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1665
+|     Comment: 
+|         /* Literal.Number */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 795
+|     Comment: 
+|         /* if text exceeds its space, add ... */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 784
+|     Comment: 
+|         /* vertical space between tasks */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 653
+|     Comment: 
+|          // This variable is used to focus selected project
+|     
+|     Path: http://192.168.171.60:8080/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js?1586192448
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v2.2.4 | (c) jQuery Foundation | jquery.org/license */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1627
+|     Comment: 
+|         /* Custom tribute styles */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/responsive.js?1586192449
+|     Line number: 42
+|     Comment: 
+|         /* menu init function for dom detaching and appending on mobile / desktop view */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 775
+|     Comment: 
+|         /* issues page */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 781
+|     Comment: 
+|         /* subtasks and related issues list on issue show */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 753
+|     Comment: 
+|         /* new issue form */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 827
+|     Comment: 
+|          // only bind arrow keys when preview navigation is present
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 731
+|     Comment: 
+|         /* tabular forms resets for mobile */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 720
+|     Comment: 
+|         /* [4] */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1677
+|     Comment: 
+|         /* Name.Tag */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1642
+|     Comment: 
+|         /* Operator */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 123
+|     Comment: 
+|         /* reset max-width */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 107
+|     Comment: 
+|         /* reset #header a color for mobile toggle button */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1243
+|     Comment: 
+|         /* IE6 doesn't autosize div */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 714
+|     Comment: 
+|         /* [2] */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1401
+|     Comment: 
+|         /***** Badges *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 704
+|     Comment: 
+|         /* [1] */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 683
+|     Comment: 
+|         /* History and Changeset */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/responsive.js?1586192449
+|     Line number: 79
+|     Comment: 
+|          // init menu on page load
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1444
+|     Comment: 
+|         /***** Icons *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1621
+|     Comment: 
+|         /* Custom JQuery styles */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 1013
+|     Comment: 
+|          // do not attach if Tribute is already initialized
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 119
+|     Comment: 
+|         /* the quick search within header holding search form and #project_quick_jump_box box*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1705
+|     Comment: 
+|         /* Literal.Number.Integer.Long */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 591
+|     Comment: 
+|         /* Contextual Buttons */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 584
+|     Comment: 
+|         /*----------------------------------------*\
+|             E) UX ELEMENTS
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1680
+|     Comment: 
+|         /* Text.Whitespace */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1671
+|     Comment: 
+|         /* Name.Decorator */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1047
+|     Comment: 
+|         /***** Tooltips ******/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1100
+|     Comment: 
+|         /***** Tabs *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1660
+|     Comment: 
+|         /* Keyword.Declaration */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1652
+|     Comment: 
+|         /* Generic.Heading */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 557
+|     Comment: 
+|         /* close glyph */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1641
+|     Comment: 
+|         /* Keyword */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 282
+|     Comment: 
+|         /* Flyout Menu */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1640
+|     Comment: 
+|         /* Error */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 467
+|     Comment: 
+|         /* Left flyout search container */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 698
+|     Comment: 
+|          //up
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 363
+|     Comment: 
+|         /* Targets list containing checkboxes (e.g. activities sidebar) in flyout menu */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 300
+|     Comment: 
+|         /* avoid zoom on search input focus for ios devices */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 294
+|     Comment: 
+|         /* reset padding for themes that define it */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 515
+|     Comment: 
+|         /* avatar */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 655
+|     Comment: 
+|         /*----------------------------------------*\
+|             F) PAGE SPECIFIC STYLES
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 238
+|     Comment: 
+|         /* remove display: none; of non-mobile version */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 227
+|     Comment: 
+|         /*----------------------------------------*\
+|             D) TOGGLE BUTTON & FLYOUT MENU
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 786
+|     Comment: 
+|         /* width of labels. Should be smaller than left column to create some right margin */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 210
+|     Comment: 
+|         /* reset min-height of #content */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1681
+|     Comment: 
+|         /* Literal.Number.Bin */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1079
+|     Comment: 
+|         /***** Progress bar *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 162
+|     Comment: 
+|         /* achieve dropdwon arrow by scaling a caret character */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 128
+|     Comment: 
+|         /* styles for combobox within quick-search (#project_quick_jump_box) */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1698
+|     Comment: 
+|         /* Literal.String.Symbol */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1661
+|     Comment: 
+|         /* Keyword.Namespace */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 635
+|     Comment: 
+|         /* loading indicator */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1650
+|     Comment: 
+|         /* Generic.Emph */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 111
+|     Comment: 
+|         /* IE */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 113
+|     Comment: 
+|         /* Hide top-menu and main-menu on mobile, because it's placed in our flyout menu */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 102
+|     Comment: 
+|         /* Hide project name on mobile (project name is still visible in select menu) */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 86
+|     Comment: 
+|         /*----------------------------------------*\
+|             B) HEADER & TOP MENUS
+|           \*----------------------------------------*/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 659
+|     Comment: 
+|         /* page /login */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1683
+|     Comment: 
+|         /* Literal.Number.Hex */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1636
+|     Comment: 
+|         /* generated by: pygmentize -f html -a .syntaxhl -S colorful */
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Line number: 25
+|     Comment: 
+|         
+|         //]]>
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1597
+|     Comment: 
+|         /* Used on 12px Gravatar img tags without the icon background */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/jquery/jquery-ui-1.11.0.css?1586192448
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery UI - v1.11.0 - 2014-07-13
+|         * http://jqueryui.com
+|         * Includes: core.css, draggable.css, resizable.css, selectable.css, sortable.css, accordion.css, autocomplete.css, button.css, datepicker.css, dialog.css, menu.css, progressbar.css, selectmenu.css, slider.css, spinner.css, tabs.css, tooltip.css, theme.css
+|         * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2C%20sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=759fcf&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=628db6&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=628db6&iconColorDefault=759fcf&bgColorHover=eef5fd&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=628db6&fcHover=628db6&iconColorHover=759fcf&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=628db6&fcActive=628db6&iconColorActive=759fcf&bgColorHighlight=759fcf&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=628db6&fcHighlight=363636&iconColorHighlight=759fcf&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
+|         * Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 54
+|     Comment: 
+|         /* avoid 2nd scrollbar on desktop */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1176
+|     Comment: 
+|         /***** Diff *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1265
+|     Comment: 
+|         /***** My page layout *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 23
+|     Comment: 
+|         /*
+|           redmine's body is set to min-width: 900px
+|           add first breakpoint here and start adding responsiveness
+|         */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1639
+|     Comment: 
+|         /* Comment */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1656
+|     Comment: 
+|         /* Generic.Strong */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1699
+|     Comment: 
+|         /* Name.Builtin.Pseudo */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/responsive.js?1586192449
+|     Line number: 46
+|     Comment: 
+|         /* only init mobile menu, if it hasn't been done yet */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1696
+|     Comment: 
+|         /* Literal.String.Regex */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1004
+|     Comment: 
+|         /***** Ajax indicator ******/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1190
+|     Comment: 
+|         /***** Wiki *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 17
+|     Comment: 
+|         /* Hide new elements (toggle button and flyout menu) above 900px */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js?1586192448
+|     Line number: 24
+|     Comment: 
+|         /*",text:"text/plain",html:"text/html",xml:"application/xml, text/xml",json:"application/json, text/javascript",script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},S.ajax=function(n){var a;return n=r(n),a=t(n,function(){var t,e;return e=i(null!=(t=a.response)?t:a.responseText,a.getResponseHeader("Content-Type")),2===Math.floor(a.status/100)?"function"==typeof n.success&&n.success(e,a.statusText,a):"function"==typeof n.error&&n.error(e,a.statusText,a),"function"==typeof n.complete?n.complete(a,a.statusText):void 0}),!(null!=n.beforeSend&&!n.beforeSend(a,n))&&(a.readyState===XMLHttpRequest.OPENED?a.send(n.data):void 0)},r=function(t){return t.url=t.url||location.href,t.type=t.type.toUpperCase(),"GET"===t.type&&t.data&&(t.url.indexOf("?")<0?t.url+="?"+t.data:t.url+="&"+t.data),null==e[t.dataType]&&(t.dataType="*"),t.accept=e[t.dataType],"*"!==t.dataType&&(t.accept+=", */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1648
+|     Comment: 
+|         /* Comment.Special */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 13
+|     Comment: 
+|         /***** Layout *****/
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 88
+|     Comment: 
+|         
+|         // columns selection
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 709
+|     Comment: 
+|          //end
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 719
+|     Comment: 
+|         /* [3] */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1684
+|     Comment: 
+|         /* Literal.Number.Integer */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1643
+|     Comment: 
+|         /* Comment.Hashbang */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1701
+|     Comment: 
+|         /* Name.Variable.Class */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 770
+|     Comment: 
+|         /* issue edit form */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 262
+|     Comment: 
+|         /* search magnifier icon */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1647
+|     Comment: 
+|         /* Comment.Single */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 906
+|     Comment: 
+|          // detect if native date input is supported
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 533
+|     Comment: 
+|         /* user link when no avatar is present */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1751
+|     Comment: 
+|         /* Fixes for IE 11 */
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 690
+|     Comment: 
+|          //down
+|     
+|     Path: http://192.168.171.60:8080/javascripts/application.js?1586192449
+|     Line number: 681
+|     Comment: 
+|          // If a project is selected set focused to selected only once
+|     
+|     Path: http://192.168.171.60:8080/javascripts/jquery-2.2.4-ui-1.11.0-ujs-5.2.3.js?1586192448
+|     Line number: 9
+|     Comment: 
+|         /*! jQuery UI - v1.11.0 - 2014-06-26
+|         * http://jqueryui.com
+|         * Includes: core.js, widget.js, mouse.js, position.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, draggable.js, droppable.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js, menu.js, progressbar.js, resizable.js, selectable.js, selectmenu.js, slider.js, sortable.js, spinner.js, tabs.js, tooltip.js
+|         * Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1685
+|     Comment: 
+|         /* Literal.Number.Oct */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 771
+|     Comment: 
+|         /* width of left column containing the label elements */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1434
+|     Comment: 
+|         /***** Tooltips *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 154
+|     Comment: 
+|         /***** Dropdown *****/
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 77
+|     Comment: 
+|         /* hide horizontal overflow */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1691
+|     Comment: 
+|         /* Literal.String.Double */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1667
+|     Comment: 
+|         /* Name.Attribute */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1689
+|     Comment: 
+|         /* Literal.String.Delimiter */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 72
+|     Comment: 
+|         /* prevent long names within select menues from breaking content */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/responsive.css?1586192449
+|     Line number: 561
+|     Comment: 
+|         /*
+|              * only relevant for devices with cursor when flyout it active, in order to show,
+|              * that whole wrapper content is clickable and closes flyout menu
+|              */
+|     
+|     Path: http://192.168.171.60:8080/stylesheets/application.css?1586192449
+|     Line number: 1664
+|     Comment: 
+|_        /* Keyword.Type */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.171.60
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.171.60:8080/
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects?jump=welcome
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects?jump=welcome
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects?jump=welcome
+|     Form id: 
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/projects?jump=welcome
+|     Form id: query_form
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/account/register
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/account/register
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/login
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/login
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/search
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/search
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/search
+|     Form id: search-form
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: 
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: query_form
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: 
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/projects
+|     Form id: query_form
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/activity
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/activity
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/activity
+|     Form id: activity_scope_form
+|     Form action: /activity
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Form id: flyout-search
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Form id: q
+|     Form action: /search
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Form id: 
+|     Form action: /projects
+|     
+|     Path: http://192.168.171.60:8080/projects?set_filter=1&amp;sort=
+|     Form id: query_form
+|_    Form action: /projects
+|_http-date: Sun, 23 Jan 2022 08:31:18 GMT; 0s from local time.
+|_http-devframework: RoR detected. Found csrf field onhttp://192.168.171.60:8080/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /login.stm: Belkin G Wireless Router
+|   /admin.php: Possible admin folder (401 Unauthorized )
+|   /login.php: Possible admin folder
+|   /login.html: Possible admin folder
+|   /admin.cfm: Possible admin folder (401 Unauthorized )
+|   /login.cfm: Possible admin folder
+|   /admin.asp: Possible admin folder (401 Unauthorized )
+|   /login.asp: Possible admin folder
+|   /admin.aspx: Possible admin folder (401 Unauthorized )
+|   /login.aspx: Possible admin folder
+|   /admin.jsp: Possible admin folder (401 Unauthorized )
+|   /login.jsp: Possible admin folder
+|   /users.sql: Possible database backup (401 Unauthorized )
+|   /login/: Login page
+|   /login.htm: Login page
+|   /login.jsp: Login page
+|   /robots.txt: Robots file
+|   /admin.nsf: Lotus Domino (401 Unauthorized )
+|   /news/: Potentially interesting folder
+|_  /search/: Potentially interesting folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.171.60
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://192.168.171.60:8080/account/
+|_http-favicon: Unknown favicon MD5: D316E1622C58825727E7E4E6C954D289
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.171.60
+|   Found the following feeds: 
+|     Atom: http://192.168.171.60:8080/news.atom
+|     Atom: http://192.168.171.60:8080/activity.atom?show_messages=1
+|     Atom: http://192.168.171.60:8080/activity.atom
+|     Atom: http://192.168.171.60:8080/activity.atom?show_documents=1
+|     Atom: http://192.168.171.60:8080/activity.atom?show_issues=1
+|     Atom: http://192.168.171.60:8080/activity.atom?show_news=1
+|     Atom: http://192.168.171.60:8080/activity.atom?show_time_entries=1
+|     Atom: http://192.168.171.60:8080/projects.atom
+|     Atom: http://192.168.171.60:8080/activity.atom?show_files=1
+|     Atom: http://192.168.171.60:8080/activity.atom?show_changesets=1
+|_    Atom: http://192.168.171.60:8080/activity.atom?show_wiki_edits=1
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.171.60:8080/: 
+|     (1) ip: 
+|_      + 192.168.171.60
+| http-headers: 
+|   X-Frame-Options: SAMEORIGIN
+|   X-Xss-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   X-Download-Options: noopen
+|   X-Permitted-Cross-Domain-Policies: none
+|   Referrer-Policy: strict-origin-when-cross-origin
+|   Content-Type: text/html; charset=utf-8
+|   Etag: W/"c1577082896acfac5ce5455f1deef327"
+|   Cache-Control: max-age=0, private, must-revalidate
+|   X-Request-Id: b25a4623-fdcb-44a6-a9b8-e02b6be85b0f
+|   X-Runtime: 0.009117
+|   Content-Length: 0
+|   Server: WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+|   Date: Sun, 23 Jan 2022 08:31:24 GMT
+|   Connection: close
+|   Set-Cookie: _redmine_session=eS9VaThPaGUwTlp2bWVObE9IWUtSdjVLZUxaUUtabjlmR1kyS0Q3MTAvMzA4UEx3QUdXWjNEeWVyOXZmOU0rK01mM2NEUm56RG0rb3pnOUxIbTBLWXl0b3lQN1F2Unk2bTlPbTErTEZlWFhIZWowZHVHZFE4eDREWnpwNmJqLzVNOXZTbyswUkZIbWtSS0lmalBCSE84dE5GMTBCSmlEV3NYVGhTUkpxL3BXMjgzQmNhMWRSb3pqY3ZvdTMwNFB0LS1ibmlpTENrbndJSXhEY0drV2hJTE9BPT0%3D--d3fac23fa34991e185cc91f89873a49abbf0cd07; path=/; HttpOnly
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash ef8c7acb61f9372e36b553a137b1bf54
+|_Credits query returned unknown hash 6e16d30ecfd4fb07f545eab3183668de
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 4 disallowed entries 
+|_/issues/gantt /issues/calendar /activity /search
+| http-security-headers: 
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: SAMEORIGIN
+|     Description: The browser must not display this content in any frame from a page of different origin than the content itself.
+|   X_XSS_Protection: 
+|     Header: X-XSS-Protection: 1; mode=block
+|     Description: The browser will prevent the rendering of the page when XSS is detected.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|     Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|   X_Permitted_Cross_Domain_Policies: 
+|     Header: X-Permitted-Cross-Domain-Policies: none
+|     Description: No policy files are allowed anywhere on the target server, including this master policy file. 
+|   Cache_Control: 
+|_    Header: Cache-Control: max-age=0, private, must-revalidate
+|_http-server-header: WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 5; atom: 2; ico: 1
+|     /account/
+|       Other: 1
+|     /javascripts/
+|       js: 4
+|     /stylesheets/
+|       css: 3
+|     /stylesheets/jquery/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /stylesheets/jquery/
+|   Total files found (by extension):
+|_    Other: 6; atom: 2; css: 4; ico: 1; js: 4
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Redmine
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 03:41:15 2022 -- 1 IP address (1 host up) scanned in 608.89 seconds

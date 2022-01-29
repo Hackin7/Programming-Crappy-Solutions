@@ -1,0 +1,43 @@
+# Nmap 7.91 scan initiated Tue Jan 25 00:29:06 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/xml/_top_100_udp_nmap.xml" 192.168.65.127
+Increasing send delay for 192.168.65.127 from 0 to 50 due to 11 out of 22 dropped probes since last increase.
+Warning: 192.168.65.127 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.65.127 from 200 to 400 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 192.168.65.127 from 400 to 800 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 192.168.65.127 from 800 to 1000 due to 11 out of 22 dropped probes since last increase.
+Nmap scan report for 192.168.65.127
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-25 00:29:09 EST for 357s
+Not shown: 87 closed ports
+Reason: 87 port-unreaches
+PORT      STATE         SERVICE       REASON      VERSION
+137/udp   open|filtered netbios-ns    no-response
+138/udp   open|filtered netbios-dgm   no-response
+500/udp   open|filtered isakmp        no-response
+999/udp   open|filtered applix        no-response
+1645/udp  open|filtered radius        no-response
+1813/udp  open|filtered radacct       no-response
+1900/udp  open|filtered upnp          no-response
+2000/udp  open|filtered cisco-sccp    no-response
+3456/udp  open|filtered IISrpc-or-vat no-response
+4500/udp  open|filtered nat-t-ike     no-response
+5353/udp  open|filtered zeroconf      no-response
+17185/udp open|filtered wdbrpc        no-response
+49192/udp open|filtered unknown       no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/25%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=61EF8C0A%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 17/udp)
+HOP RTT       ADDRESS
+1   176.63 ms 192.168.49.1
+2   180.79 ms 192.168.65.127
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 25 00:35:06 2022 -- 1 IP address (1 host up) scanned in 359.79 seconds

@@ -1,0 +1,1 @@
+# Hydra v9.1 run at 2022-01-28 23:05:40 on 192.168.162.46 ftp (hydra -l livda -P /usr/share/seclists/Passwords/darkweb2017-top100.txt -e nsr -s 3145 -o /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp_21_ftp_hydra.txt ftp://192.168.162.46)

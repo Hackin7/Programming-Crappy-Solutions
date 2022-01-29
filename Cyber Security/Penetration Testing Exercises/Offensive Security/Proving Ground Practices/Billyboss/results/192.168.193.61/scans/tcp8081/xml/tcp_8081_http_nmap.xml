@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Jan 27 10:40:07 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8081 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp8081/tcp_8081_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp8081/xml/tcp_8081_http_nmap.xml&quot; 192.168.193.61 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8081 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp8081/tcp_8081_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Billyboss/results/192.168.193.61/scans/tcp8081/xml/tcp_8081_http_nmap.xml&quot; 192.168.193.61" start="1643298007" startstr="Thu Jan 27 10:40:07 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8081"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643298008"/>
+<taskend task="NSE" time="1643298008"/>
+<taskbegin task="NSE" time="1643298008"/>
+<taskend task="NSE" time="1643298008"/>
+<taskbegin task="NSE" time="1643298008"/>
+<taskend task="NSE" time="1643298008"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643298008"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643298008"/>
+<taskbegin task="SYN Stealth Scan" time="1643298008"/>
+<taskend task="SYN Stealth Scan" time="1643298008" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643298008"/>
+<taskend task="Service scan" time="1643298016" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643298016"/>
+<taskprogress task="NSE" time="1643298047" percent="87.25" remaining="5" etc="1643298052"/>
+<taskprogress task="NSE" time="1643298077" percent="95.11" remaining="4" etc="1643298080"/>
+<taskprogress task="NSE" time="1643298107" percent="95.77" remaining="5" etc="1643298111"/>
+<taskprogress task="NSE" time="1643298137" percent="96.09" remaining="5" etc="1643298142"/>
+<taskprogress task="NSE" time="1643298167" percent="97.39" remaining="5" etc="1643298171"/>
+<taskprogress task="NSE" time="1643298197" percent="98.05" remaining="4" etc="1643298201"/>
+<taskprogress task="NSE" time="1643298227" percent="98.37" remaining="4" etc="1643298230"/>
+<taskprogress task="NSE" time="1643298257" percent="99.35" remaining="2" etc="1643298259"/>
+<taskprogress task="NSE" time="1643298287" percent="99.67" remaining="1" etc="1643298288"/>
+<taskprogress task="NSE" time="1643298317" percent="99.67" remaining="1" etc="1643298318"/>
+<taskprogress task="NSE" time="1643298347" percent="99.67" remaining="2" etc="1643298348"/>
+<taskprogress task="NSE" time="1643298377" percent="99.67" remaining="2" etc="1643298378"/>
+<taskprogress task="NSE" time="1643298407" percent="99.67" remaining="2" etc="1643298408"/>
+<taskprogress task="NSE" time="1643298437" percent="99.67" remaining="2" etc="1643298438"/>
+<taskprogress task="NSE" time="1643298467" percent="99.67" remaining="2" etc="1643298468"/>
+<taskprogress task="NSE" time="1643298497" percent="99.67" remaining="2" etc="1643298499"/>
+<taskprogress task="NSE" time="1643298527" percent="99.67" remaining="2" etc="1643298529"/>
+<taskprogress task="NSE" time="1643298557" percent="99.67" remaining="2" etc="1643298559"/>
+<taskprogress task="NSE" time="1643298587" percent="99.67" remaining="2" etc="1643298589"/>
+<taskprogress task="NSE" time="1643298617" percent="99.67" remaining="2" etc="1643298619"/>
+<taskend task="NSE" time="1643298626"/>
+<taskbegin task="NSE" time="1643298626"/>
+<taskend task="NSE" time="1643298626"/>
+<taskbegin task="NSE" time="1643298626"/>
+<taskend task="NSE" time="1643298626"/>
+<host starttime="1643298008" endtime="1643298626"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.193.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Jetty" version="9.4.18.v20190429" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.18.v20190429</cpe></service><script id="http-chrono" output="Request times for /; avg: 790.40ms; min: 527.58ms; max: 1764.87ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.193.61&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/nexus-security-bundle.css?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 28&#xa;    Comment: &#xa;        /**&#xa;         * @since 3.21&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/frontend-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 14&#xa;    Comment: &#xa;        /** @license React v16.11.0&#xa;         * react.production.min.js&#xa;         *&#xa;         * Copyright (c) Facebook, Inc. and its affiliates.&#xa;         *&#xa;         * This source code is licensed under the MIT license found in the&#xa;         * LICENSE file in the root directory of this source tree.&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/nexus-security-bundle.css?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 290&#xa;    Comment: &#xa;        /* Hide dropdown button on ie11 */&#xa;    &#xa;    Path: http://192.168.193.61:8081/&#xa;    Line number: 11&#xa;    Comment: &#xa;        &lt;!-&#45;[if lt IE 9]&gt;&#xa;            &lt;script&gt;(new Image).src=&quot;http://192.168.193.61:8081/static/rapture/resources/favicon.ico?_v=3.21.0-05&amp;_e=OSS&quot;&lt;/script&gt;&#xa;          &lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/frontend-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&quot;}},r.forEach([&quot;delete&quot;,&quot;get&quot;,&quot;head&quot;],(function(e){u.headers[e]={}})),r.forEach([&quot;post&quot;,&quot;put&quot;,&quot;patch&quot;],(function(e){u.headers[e]=r.merge(i)})),e.exports=u}).call(this,n(19))},function(e,t,n){&quot;use strict&quot;;var r=n(0),l=n(21),i=n(4),o=n(23),a=n(24),u=n(8);e.exports=function(e){return new Promise((function(t,c){var s=e.data,f=e.headers;r.isFormData(s)&amp;&amp;delete f[&quot;Content-Type&quot;];var d=new XMLHttpRequest;if(e.auth){var p=e.auth.username||&quot;&quot;,m=e.auth.password||&quot;&quot;;f.Authorization=&quot;Basic &quot;+btoa(p+&quot;:&quot;+m)}if(d.open(e.method.toUpperCase(),i(e.url,e.params,e.paramsSerializer),!0),d.timeout=e.timeout,d.onreadystatechange=function(){if(d&amp;&amp;4===d.readyState&amp;&amp;(0!==d.status||d.responseURL&amp;&amp;0===d.responseURL.indexOf(&quot;file:&quot;))){var n=&quot;getAllResponseHeaders&quot;in d?o(d.getAllResponseHeaders()):null,r={data:e.responseType&amp;&amp;&quot;text&quot;!==e.responseType?d.response:d.responseText,status:d.status,statusText:d.statusText,headers:n,config:e,request:d};l(t,c,r),d=null}},d.onabort=function(){d&amp;&amp;(c(u(&quot;Request aborted&quot;,e,&quot;ECONNABORTED&quot;,d)),d=null)},d.onerror=function(){c(u(&quot;Network Error&quot;,e,null,d)),d=null},d.ontimeout=function(){c(u(&quot;timeout of &quot;+e.timeout+&quot;ms exceeded&quot;,e,&quot;ECONNABORTED&quot;,d)),d=null},r.isStandardBrowserEnv()){var h=n(25),v=(e.withCredentials||a(e.url))&amp;&amp;e.xsrfCookieName?h.read(e.xsrfCookieName):void 0;v&amp;&amp;(f[e.xsrfHeaderName]=v)}if(&quot;setRequestHeader&quot;in d&amp;&amp;r.forEach(f,(function(e,t){void 0===s&amp;&amp;&quot;content-type&quot;===t.toLowerCase()?delete f[t]:d.setRequestHeader(t,e)})),e.withCredentials&amp;&amp;(d.withCredentials=!0),e.responseType)try{d.responseType=e.responseType}catch(t){if(&quot;json&quot;!==e.responseType)throw t}&quot;function&quot;==typeof e.onDownloadProgress&amp;&amp;d.addEventListener(&quot;progress&quot;,e.onDownloadProgress),&quot;function&quot;==typeof e.onUploadProgress&amp;&amp;d.upload&amp;&amp;d.upload.addEventListener(&quot;progress&quot;,e.onUploadProgress),e.cancelToken&amp;&amp;e.cancelToken.promise.then((function(e){d&amp;&amp;(d.abort(),c(e),d=null)})),void 0===s&amp;&amp;(s=null),d.send(s)}))}},function(e,t,n){&quot;use strict&quot;;var r=n(22);e.exports=function(e,t,n,l,i){var o=new Error(e);return r(o,t,n,l,i)}},function(e,t,n){&quot;use strict&quot;;var r=n(0);e.exports=function(e,t){t=t||{};var n={};return r.forEach([&quot;url&quot;,&quot;method&quot;,&quot;params&quot;,&quot;data&quot;],(function(e){void 0!==t[e]&amp;&amp;(n[e]=t[e])})),r.forEach([&quot;headers&quot;,&quot;auth&quot;,&quot;proxy&quot;],(function(l){r.isObject(t[l])?n[l]=r.deepMerge(e[l],t[l]):void 0!==t[l]?n[l]=t[l]:r.isObject(e[l])?n[l]=r.deepMerge(e[l]):void 0!==e[l]&amp;&amp;(n[l]=e[l])})),r.forEach([&quot;baseURL&quot;,&quot;transformRequest&quot;,&quot;transformResponse&quot;,&quot;paramsSerializer&quot;,&quot;timeout&quot;,&quot;withCredentials&quot;,&quot;adapter&quot;,&quot;responseType&quot;,&quot;xsrfCookieName&quot;,&quot;xsrfHeaderName&quot;,&quot;onUploadProgress&quot;,&quot;onDownloadProgress&quot;,&quot;maxContentLength&quot;,&quot;validateStatus&quot;,&quot;maxRedirects&quot;,&quot;httpAgent&quot;,&quot;httpsAgent&quot;,&quot;cancelToken&quot;,&quot;socketPath&quot;],(function(r){void 0!==t[r]?n[r]=t[r]:void 0!==e[r]&amp;&amp;(n[r]=e[r])})),n}},function(e,t,n){&quot;use strict&quot;;function r(e){this.message=e}r.prototype.toString=function(){return&quot;Cancel&quot;+(this.message?&quot;: &quot;+this.message:&quot;&quot;)},r.prototype.__CANCEL__=!0,e.exports=r},function(e,t,n){&quot;use strict&quot;;&#xa;        /*&#xa;        object-assign&#xa;        (c) Sindre Sorhus&#xa;        @license MIT&#xa;        */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/frontend-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 30&#xa;    Comment: &#xa;        /** @license React v0.17.0&#xa;         * scheduler.production.min.js&#xa;         *&#xa;         * Copyright (c) Facebook, Inc. and its affiliates.&#xa;         *&#xa;         * This source code is licensed under the MIT license found in the&#xa;         * LICENSE file in the root directory of this source tree.&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/nexus-security-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 2&#xa;    Comment: &#xa;        /*!&#xa;          Copyright (c) 2017 Jed Watson.&#xa;          Licensed under the MIT License (MIT), see&#xa;          http://jedwatson.github.io/classnames&#xa;        */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/frontend-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 22&#xa;    Comment: &#xa;        /** @license React v16.11.0&#xa;         * react-dom.production.min.js&#xa;         *&#xa;         * Copyright (c) Facebook, Inc. and its affiliates.&#xa;         *&#xa;         * This source code is licensed under the MIT license found in the&#xa;         * LICENSE file in the root directory of this source tree.&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/nexus-security-bundle.css?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 1&#xa;    Comment: &#xa;        /**&#xa;         * Sonatype Nexus (TM) Open Source Version&#xa;         * Copyright (c) 2008-present Sonatype, Inc.&#xa;         * All rights reserved. Includes the third-party code listed at http://links.sonatype.com/products/nexus/oss/attributions.&#xa;         *&#xa;         * This program and the accompanying materials are made available under the terms of the Eclipse Public License Version 1.0,&#xa;         * which accompanies this distribution and is available at http://www.eclipse.org/legal/epl-v10.html.&#xa;         *&#xa;         * Sonatype Nexus (TM) Professional Version is available from Sonatype, Inc. &quot;Sonatype&quot; and &quot;Sonatype Nexus&quot; are trademarks&#xa;         * of Sonatype, Inc. Apache Maven is a trademark of the Apache Software Foundation. M2eclipse is a trademark of the&#xa;         * Eclipse Foundation. All other trademarks are the property of their respective owners.&#xa;         */&#xa;    &#xa;    Path: http://192.168.193.61:8081/static/frontend-bundle.js?_v=3.21.0-05&amp;_e=OSS&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*!&#xa;         * Determine if an object is a Buffer&#xa;         *&#xa;         * @author   Feross Aboukhadijeh &lt;https://feross.org&gt;&#xa;         * @license  MIT&#xa;         */&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 27 Jan 2022 15:40:23 GMT; -1s from local time."><elem key="date">2022-01-27T15:40:23+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /robots.txt: Robots file&#xa;"/><script id="http-errors" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-favicon" output="Unknown favicon MD5: 9A008BECDE9C5F250EDAD4F00E567721"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-fileupload-exploiter" output="&#xa;  &#xa;    Couldn&apos;t find a file-type field."><table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.193.61:8081/: &#xa;    (1) ip: &#xa;      + 192.168.193.61&#xa;  (5) http://192.168.193.61:8081/static/nexus-security-bundle.js?_v=3.21.0-05&amp;_e=OSS: &#xa;    (5) ip: &#xa;      + 35.01.67.1&#xa;      + 24.69.23.02&#xa;      + 48.02.72.02&#xa;      + 91.45.04.26&#xa;      + 07.52.11.78"><table key="(1) http://192.168.193.61:8081/">
+<table key="(1) ip">
+<elem>+ 192.168.193.61</elem>
+</table>
+</table>
+<table key="(5) http://192.168.193.61:8081/static/nexus-security-bundle.js?_v=3.21.0-05&amp;_e=OSS">
+<table key="(5) ip">
+<elem>+ 35.01.67.1</elem>
+<elem>+ 24.69.23.02</elem>
+<elem>+ 48.02.72.02</elem>
+<elem>+ 91.45.04.26</elem>
+<elem>+ 07.52.11.78</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Connection: close&#xa;  Date: Thu, 27 Jan 2022 15:40:17 GMT&#xa;  Server: Nexus/3.21.0-05 (OSS)&#xa;  X-Content-Type-Options: nosniff&#xa;  X-Frame-Options: DENY&#xa;  X-XSS-Protection: 1; mode=block&#xa;  Content-Type: text/html&#xa;  Last-Modified: Thu, 27 Jan 2022 15:40:17 GMT&#xa;  Pragma: no-cache&#xa;  Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0&#xa;  Expires: 0&#xa;  Content-Length: 10196&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-iis-webdav-vuln" output="Could not determine vulnerability, since root folder is password protected"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 109d03ee651b9f69a175d0f184619c4d&#xa;Credits query returned unknown hash 109d03ee651b9f69a175d0f184619c4d"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-robots.txt" output="2 disallowed entries &#xa;/repository/ /service/"/><script id="http-security-headers" output="&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: DENY&#xa;    Description: The browser must not display this content in any frame.&#xa;  X_XSS_Protection: &#xa;    Header: X-XSS-Protection: 1; mode=block&#xa;    Description: The browser will prevent the rendering of the page when XSS is detected.&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. &#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0&#xa;  Pragma: &#xa;    Header: Pragma: no-cache&#xa;  Expires: &#xa;    Header: Expires: 0"><table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: DENY</elem>
+<elem>Description: The browser must not display this content in any frame.</elem>
+</table>
+<table key="X_XSS_Protection">
+<elem>Header: X-XSS-Protection: 1; mode=block</elem>
+<elem>Description: The browser will prevent the rendering of the page when XSS is detected.</elem>
+</table>
+<table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0</elem>
+</table>
+<table key="Pragma">
+<elem>Header: Pragma: no-cache</elem>
+</table>
+<table key="Expires">
+<elem>Header: Expires: 0</elem>
+</table>
+</script><script id="http-server-header" output="Nexus/3.21.0-05 (OSS)"><elem>Nexus/3.21.0-05 (OSS)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /static/&#xa;      css: 1; js: 1&#xa;    /static/rapture/&#xa;      js: 9&#xa;    /static/rapture/resources/&#xa;      css: 4; ico: 1; png: 2; svg: 1&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /static/rapture/resources/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 5; ico: 1; js: 10; png: 2; svg: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Nexus Repository Manager"><elem key="title">Nexus Repository Manager</elem>
+</script><script id="http-traceroute" output="&#xa;  last-modified&#xa;    Hop #1: Thu, 27 Jan 2022 15:40:20 GMT&#xa;    Hop #2: Thu, 27 Jan 2022 15:40:21 GMT&#xa;    Hop #3: Thu, 27 Jan 2022 15:40:22 GMT&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="192589" rttvar="192589" to="962945"/>
+</host>
+<taskbegin task="NSE" time="1643298626"/>
+<taskend task="NSE" time="1643298626"/>
+<taskbegin task="NSE" time="1643298626"/>
+<taskend task="NSE" time="1643298626"/>
+<taskbegin task="NSE" time="1643298626"/>
+<taskend task="NSE" time="1643298626"/>
+<runstats><finished time="1643298626" timestr="Thu Jan 27 10:50:26 2022" summary="Nmap done at Thu Jan 27 10:50:26 2022; 1 IP address (1 host up) scanned in 619.92 seconds" elapsed="619.92" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

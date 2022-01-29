@@ -1,0 +1,63 @@
+# Nmap 7.91 scan initiated Sat Jan 29 04:05:32 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/xml/_quick_tcp_nmap.xml" 192.168.162.41
+Increasing send delay for 192.168.162.41 from 0 to 5 due to 182 out of 454 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -65508 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -65508 microseconds.  Ignoring time.
+Nmap scan report for 192.168.162.41
+Host is up, received user-set (0.16s latency).
+Scanned at 2022-01-29 04:05:35 EST for 616s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 83:92:ab:f2:b7:6e:27:08:7b:a9:b8:72:32:8c:cc:29 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAIM3Qmxj/JapoH/Vg/pl8IAj0PTqw5Fj5rnhI+9Q0XT5tej5pHpUZoWTmbQKIwA7QBoTWtk4Hnonhkv5We43VXz0abBEvy3allgjf13cvxc96KX0bE7Bb8PhVCQJJBDTIz44koJhvFuSO/sauL9j+lzaUltVMR6/bZbigTINrV4nAAAAFQCvlVi2Us40FGWv8TILJYOR/LJvcwAAAIAHpp8VGuPUA5BowTa55myGr/lGs0xTFXbxFm0We4/D5v3L9kUVgv6MIVL4jweRmXFYvei7YZDGikoe6OjF9PFtSkKriEaGqav6hOER3tmtWChQfMlaNwiZfNJzKHBc4EqeCX4jpLLUxCZAEjwoE0koQRoFcbr+gywBNOQgtrfv+QAAAIA8v2C1COdjtNl4Bp3+XVLOkbYPIpedQXCgTLgRloa5wQZCaZimgE3+txqTQSb7Vp0B+LfjKdqcMFia8g9i+0YC+b69NimiFaZXU8euBoh/GXNo8K2vFHF3yznq6KNPG4+EW3WfaLGqJWkBJM2bb1nJ0YaJZhpOInv2Gsanh4CHOA==
+|   2048 65:77:fa:50:fd:4d:9e:f1:67:e5:cc:0c:c6:96:f2:3e (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7aKskCBM7hdQEibRza0Y1BAiJ0prjECzVow5/txHOHb+Ynokd1ByaBw5roKsOExD3h7d7VGjNVKNqSwB+SBHSRivJaEgCtiV3F/5Q1qdBpehE4zyv7whG9GKeALeNk05icqXCk9kveUsreZyqEqN+c9p3Ed29jTD+6Alc7mml/Zev0EQs7hFfX/kYiV6V4KnQuQ7HXe3kzbMA9WB3yxtp0saBB5zlu4eWGsvyvCibP41ce81LtwkJDSXTr0LwBNYgZOD07GWW//BkOuJvHtKbWPqBievO0yubQxGbz0r7vID3a5DQMj4ZTGrAQPCunaJkGlvZs2zftrUh/BMxQSFLw==
+23/tcp   open  ipp     syn-ack ttl 63 CUPS 1.4
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS POST PUT
+|_  Potentially risky methods: PUT
+|_http-server-header: CUPS/1.4
+|_http-title: 403 Forbidden
+80/tcp   open  http    syn-ack ttl 63 Apache httpd 2.2.14 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+3306/tcp open  mysql?  syn-ack ttl 63
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+Device type: general purpose|terminal|WAP|firewall|printer|security-misc
+Running (JUST GUESSING): Linux 2.6.X|2.4.X (95%), IGEL embedded (94%), HP embedded (94%), IPFire 2.X (93%), Kyocera embedded (93%), Fortinet FortiOS 5.X (92%), Check Point embedded (90%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:2.6 cpe:/h:igel:ud3 cpe:/h:hp:msm410 cpe:/o:ipfire:ipfire:2.11 cpe:/h:kyocera:cs-2560 cpe:/o:linux:linux_kernel:2.4 cpe:/o:fortinet:fortios:5.0.6
+Aggressive OS guesses: Linux 2.6.32 (95%), Linux 2.6.35 (95%), IGEL UD3 thin client (Linux 2.6) (94%), HP MSM410 WAP (94%), IPFire 2.11 firewall (Linux 2.6.32) (93%), Kyocera CopyStar CS-2560 printer (93%), DD-WRT v24-sp1 (Linux 2.4) (92%), Fortinet FortiOS 5.0.6 (92%), Linux 2.6.31 - 2.6.32 (92%), DD-WRT v23 (Linux 2.4.34) (91%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/29%OT=22%CT=1%CU=36324%PV=Y%DS=2%DC=T%G=Y%TM=61F505C
+OS:7%P=x86_64-pc-linux-gnu)SEQ(SP=C2%GCD=1%ISR=D0%TI=Z%II=I%TS=8)SEQ(SP=C2%
+OS:GCD=1%ISR=D0%TI=Z%TS=8)OPS(O1=M54EST11NW6%O2=M54EST11NW6%O3=M54ENNT11NW6
+OS:%O4=M54EST11NW6%O5=M54EST11NW6%O6=M54EST11)WIN(W1=16A0%W2=16A0%W3=16A0%W
+OS:4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M54ENNSNW6%CC=Y%Q=)T1(
+OS:R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=4
+OS:0%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN
+OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.007 days (since Sat Jan 29 04:06:24 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=194 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT       ADDRESS
+1   173.07 ms 192.168.49.1
+2   173.22 ms 192.168.162.41
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 04:15:51 2022 -- 1 IP address (1 host up) scanned in 620.40 seconds

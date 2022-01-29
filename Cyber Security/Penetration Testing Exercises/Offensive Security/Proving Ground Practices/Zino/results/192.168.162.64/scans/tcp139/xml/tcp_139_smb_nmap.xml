@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 29 08:20:41 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.162.64 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/tcp_139_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp139/xml/tcp_139_smb_nmap.xml&quot; 192.168.162.64" start="1643462441" startstr="Sat Jan 29 08:20:41 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643462447"/>
+<taskend task="NSE" time="1643462447"/>
+<taskbegin task="NSE" time="1643462447"/>
+<taskend task="NSE" time="1643462447"/>
+<taskbegin task="NSE" time="1643462447"/>
+<taskend task="NSE" time="1643462447"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643462448"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643462448"/>
+<taskbegin task="SYN Stealth Scan" time="1643462448"/>
+<taskend task="SYN Stealth Scan" time="1643462449" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643462450"/>
+<taskend task="Service scan" time="1643462461" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643462461"/>
+<taskprogress task="NSE" time="1643462492" percent="85.71" remaining="6" etc="1643462497"/>
+<taskprogress task="NSE" time="1643462522" percent="95.71" remaining="3" etc="1643462525"/>
+<taskprogress task="NSE" time="1643462552" percent="95.71" remaining="5" etc="1643462556"/>
+<taskprogress task="NSE" time="1643462582" percent="98.57" remaining="2" etc="1643462584"/>
+<taskprogress task="NSE" time="1643462612" percent="98.57" remaining="3" etc="1643462614"/>
+<taskprogress task="NSE" time="1643462642" percent="98.57" remaining="3" etc="1643462645"/>
+<taskprogress task="NSE" time="1643462672" percent="98.57" remaining="4" etc="1643462675"/>
+<taskprogress task="NSE" time="1643462702" percent="98.57" remaining="4" etc="1643462705"/>
+<taskprogress task="NSE" time="1643462732" percent="98.57" remaining="4" etc="1643462736"/>
+<taskprogress task="NSE" time="1643462762" percent="98.57" remaining="5" etc="1643462766"/>
+<taskend task="NSE" time="1643462766"/>
+<taskbegin task="NSE" time="1643462766"/>
+<taskprogress task="NSE" time="1643462797" percent="92.31" remaining="3" etc="1643462800"/>
+<taskprogress task="NSE" time="1643462827" percent="92.31" remaining="6" etc="1643462832"/>
+<taskend task="NSE" time="1643462851"/>
+<taskbegin task="NSE" time="1643462851"/>
+<taskend task="NSE" time="1643462851"/>
+<host starttime="1643462448" endtime="1643462851"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.162.64" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.9.5-Debian" extrainfo="workgroup: WORKGROUP" hostname="ZINO" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="smb-enum-domains" output="&#xa;  ZINO&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\192.168.162.64\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (Samba 4.9.5-Debian)&#xa;    Users: 4&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\192.168.162.64\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\192.168.162.64\zino: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Logs&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\home\peter&#xa;    Anonymous access: READ&#xa;    Current user access: READ"><elem key="account_used">guest</elem>
+<table key="\\192.168.162.64\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (Samba 4.9.5-Debian)</elem>
+<elem key="Users">4</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\192.168.162.64\print$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.162.64\zino">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Logs</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\home\peter</elem>
+<elem key="Anonymous access">READ</elem>
+<elem key="Current user access">READ</elem>
+</table>
+</script><script id="smb-ls" output="Volume \\192.168.162.64\zino&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2020-07-09T19:11:49  .&#xa;&lt;DIR&gt;  2020-04-28T13:38:53  ..&#xa;265    2020-04-28T14:07:32  error.log&#xa;33     2020-07-09T19:11:49  local.txt&#xa;424    2020-04-28T14:08:15  misc.log&#xa;368    2020-04-28T14:07:54  auth.log&#xa;5464   2020-04-28T14:07:09  access.log&#xa;&lt;DIR&gt;  2020-04-28T14:12:56  ftp&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="files">
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2020-07-09T19:11:49</elem>
+<elem key="filename">.</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2020-04-28T13:38:53</elem>
+<elem key="filename">..</elem>
+</table>
+<table>
+<elem key="size">265</elem>
+<elem key="time">2020-04-28T14:07:32</elem>
+<elem key="filename">error.log</elem>
+</table>
+<table>
+<elem key="size">33</elem>
+<elem key="time">2020-07-09T19:11:49</elem>
+<elem key="filename">local.txt</elem>
+</table>
+<table>
+<elem key="size">424</elem>
+<elem key="time">2020-04-28T14:08:15</elem>
+<elem key="filename">misc.log</elem>
+</table>
+<table>
+<elem key="size">368</elem>
+<elem key="time">2020-04-28T14:07:54</elem>
+<elem key="filename">auth.log</elem>
+</table>
+<table>
+<elem key="size">5464</elem>
+<elem key="time">2020-04-28T14:07:09</elem>
+<elem key="filename">access.log</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2020-04-28T14:12:56</elem>
+<elem key="filename">ftp</elem>
+</table>
+</table>
+<elem key="volume">\\192.168.162.64\zino</elem>
+</table>
+</table>
+<table key="total">
+<elem key="files">8</elem>
+<elem key="bytes">6554</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Potential Browser&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Print server&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Server&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Server service&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Unix server&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Windows NT/2000/XP/2003 server&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;  Workstation&#xa;    ZINO  0.0  Samba 4.9.5-Debian&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.9.5-Debian)&#xa;  Computer name: zino&#xa;  NetBIOS computer name: ZINO\x00&#xa;  Domain name: \x00&#xa;  FQDN: zino&#xa;  System time: 2022-01-29T08:20:04-05:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.9.5-Debian</elem>
+<elem key="server">ZINO\x00</elem>
+<elem key="date">2022-01-29T08:20:04-05:00</elem>
+<elem key="fqdn">zino</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-01-29T13:19:53&#xa;  start_date: N/A"><elem key="date">2022-01-29T13:19:53</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="174149" rttvar="174149" to="870745"/>
+</host>
+<taskbegin task="NSE" time="1643462851"/>
+<taskend task="NSE" time="1643462851"/>
+<taskbegin task="NSE" time="1643462851"/>
+<taskend task="NSE" time="1643462851"/>
+<taskbegin task="NSE" time="1643462851"/>
+<taskend task="NSE" time="1643462851"/>
+<runstats><finished time="1643462851" timestr="Sat Jan 29 08:27:31 2022" summary="Nmap done at Sat Jan 29 08:27:31 2022; 1 IP address (1 host up) scanned in 411.21 seconds" elapsed="411.21" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

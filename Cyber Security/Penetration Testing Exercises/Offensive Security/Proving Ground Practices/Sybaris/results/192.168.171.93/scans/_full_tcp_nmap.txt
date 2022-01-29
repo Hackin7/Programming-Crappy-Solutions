@@ -1,0 +1,92 @@
+# Nmap 7.91 scan initiated Sun Jan 23 06:43:44 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/xml/_full_tcp_nmap.xml" 192.168.171.93
+Nmap scan report for 192.168.171.93
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-23 06:43:46 EST for 403s
+Not shown: 65519 filtered ports
+Reason: 65519 no-responses
+PORT      STATE  SERVICE   REASON         VERSION
+20/tcp    closed ftp-data  reset ttl 63
+21/tcp    open   ftp       syn-ack ttl 63 vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxrwxrwx    2 0        0               6 Apr 01  2020 pub [NSE: writeable]
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.49.171
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.2 - secure, fast, stable
+|_End of status
+22/tcp    open   ssh       syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 21:94:de:d3:69:64:a8:4d:a8:f0:b5:0a:ea:bd:02:ad (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoWnaSOW2cc+sYUe6aqQSPWY9e9OWgerEomQZv6FujchbKcxcm6sPRTZJnGrPsDum5vx7otZDGG9Vc55NByLaLU9WoQTLPhnepGTMzbbg9DyIDR9HXFw3fX0s+vSvjvDo/Cz19gWKTB2lBfJgPa239Hp0NmaxOAXmJ+d+oUEmnhLmZ1wAQFvJ/9Ta2zt8q6KOvjykUcISuFwr741HwcudFS4Z84LsO+WbcIGtkTELLn9yFc3KiZraJYNi72rOKsxHip/98js8nEIsryRfo6sZexu4lxT5SchvDNQCirLSHsEIFyzde5Ym5FDf4hb831SwJqFg7qDO+wDT1/oZp/dnP
+|   256 67:42:45:19:8b:f5:f9:a5:a4:cf:fb:87:48:a2:66:d0 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLoSyEH4GdzHPYxZPUgKP068JBcpx5KSL1KzaMRo9xP4ai5QKUKJ+H2xu8atQdvkE0ul6GnDPVlZ5Flf/npwYWY=
+|   256 f3:e2:29:a3:41:1e:76:1e:b1:b7:46:dc:0b:b9:91:77 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH4F/u2LLgVpGw2tr0bpe0MgbiV36HAzwcu5HqcuShJd
+53/tcp    closed domain    reset ttl 63
+80/tcp    open   http      syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) PHP/7.3.22)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-favicon: Unknown favicon MD5: A4DA8778FE902EB34FD9A5D4C0A832E1
+|_http-generator: HTMLy v2.7.5
+| http-methods: 
+|_  Supported Methods: GET POST
+| http-robots.txt: 11 disallowed entries 
+| /config/ /system/ /themes/ /vendor/ /cache/ 
+| /changelog.txt /composer.json /composer.lock /composer.phar /search/ 
+|_/admin/
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/7.3.22
+|_http-title: Sybaris - Just another HTMLy blog
+6379/tcp  open   redis     syn-ack ttl 63 Redis key-value store 5.0.9
+10091/tcp closed unknown   reset ttl 63
+10092/tcp closed unknown   reset ttl 63
+10093/tcp closed unknown   reset ttl 63
+10094/tcp closed unknown   reset ttl 63
+10095/tcp closed unknown   reset ttl 63
+10096/tcp closed unknown   reset ttl 63
+10097/tcp closed unknown   reset ttl 63
+10098/tcp closed unknown   reset ttl 63
+10099/tcp closed unknown   reset ttl 63
+10100/tcp closed itap-ddtp reset ttl 63
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Linux 3.10 - 3.12 (93%), Linux 4.4 (93%), Linux 4.9 (92%), Linux 4.0 (89%), Linux 3.10 (88%), Linux 3.11 - 4.1 (88%), Linux 2.6.32 (88%), Linux 2.6.32 or 3.10 (88%), Linux 2.6.39 (88%), Linux 3.5 (88%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/23%OT=21%CT=20%CU=%PV=Y%DS=2%DC=T%G=N%TM=61ED4105%P=x86_64-pc-linux-gnu)
+SEQ(SP=101%GCD=1%ISR=10A%TI=Z%II=I%TS=A)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.003 days (since Sun Jan 23 06:45:48 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+1   257.35 ms 192.168.49.1
+2   257.34 ms 192.168.171.93
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 06:50:29 2022 -- 1 IP address (1 host up) scanned in 406.13 seconds

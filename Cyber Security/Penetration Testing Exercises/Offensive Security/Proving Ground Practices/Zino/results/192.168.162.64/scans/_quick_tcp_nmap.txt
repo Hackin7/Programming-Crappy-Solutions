@@ -1,0 +1,120 @@
+# Nmap 7.91 scan initiated Sat Jan 29 08:18:48 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/xml/_quick_tcp_nmap.xml" 192.168.162.64
+Nmap scan report for 192.168.162.64
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-01-29 08:18:52 EST for 106s
+Not shown: 995 filtered ports
+Reason: 995 no-responses
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 63 vsftpd 3.0.3
+22/tcp   open  ssh         syn-ack ttl 63 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 b2:66:75:50:1b:18:f5:e9:9f:db:2c:d4:e3:95:7a:44 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC44YysvRUv+02vB7LK+DbEvDnTUU2Zzaj42pbyX7gL4I5DhhWWZmK4Sr/MulEE2XPnKhXCCwTVuA12C/VuFhVdnq7WjDwfV+4a1DEuDG8P7wQAux0waAsly34mGtd7HQhQIv9h7nQWcTx8hoOrF6D71eHiZmLJ6fk01VlFN75XKJGn/T/ClJHz9UJ33zwkhqXskMO9At21LfOBE+I3IQCHuFFO6DcQWw/SsZaXQxHNzLqnI/9j1aQuvyuh6KMdT6p10D577maBz+T+Hyq/qeOgbGU0YGAoXXMU36FibkoQ+WwDRYbEHYKJccUXhzFWp980PYCIDtZNaWuo/AbgryLB
+|   256 91:2d:26:f1:ba:af:d1:8b:69:8f:81:4a:32:af:9c:77 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOmcORNC6GjDnH1cqJrCeytZJjGrpJyY+CgseFsH27PJmSbmVYEz0ls0w/oXR0xrG/IfvxxyH9RRX2BIsBTx2cY=
+|   256 ec:6f:df:8b:ce:19:13:8a:52:57:3e:72:a3:14:6f:40 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP9wfKL6wusRXGDMv5Tcf2OxMAIkhvOofRPsrSQ+aMbK
+139/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
+3306/tcp open  mysql?      syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, JavaRMI, LDAPBindReq, NCP, NULL, RPCCheck, SIPOptions, SSLv23SessionReq, TerminalServerCookie, VerifierAdvanced, dominoconsole, hp-pjl, ibm-db2, pervasive-relational: 
+|_    Host '192.168.49.162' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.162' is not allowed to connect to this MariaDB server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=9%D=1/29%Time=61F53EC8%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RPCCheck,
+SF:4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSVersionBi
+SF:ndReqTCP,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not
+SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNS
+SF:StatusRequestTCP,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20i
+SF:s\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server
+SF:")%r(TerminalServerCookie,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.
+SF:162'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\
+SF:x20server")%r(SSLv23SessionReq,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\
+SF:.49\.162'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Mar
+SF:iaDB\x20server")%r(LDAPBindReq,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\
+SF:.49\.162'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Mar
+SF:iaDB\x20server")%r(SIPOptions,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.
+SF:49\.162'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Mari
+SF:aDB\x20server")%r(NCP,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'
+SF:\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20s
+SF:erver")%r(JavaRMI,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20
+SF:is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20serve
+SF:r")%r(VerifierAdvanced,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162
+SF:'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20
+SF:server")%r(ibm-db2,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x2
+SF:0is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20serv
+SF:er")%r(pervasive-relational,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49
+SF:\.162'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaD
+SF:B\x20server")%r(hp-pjl,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162
+SF:'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20
+SF:server")%r(dominoconsole,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.1
+SF:62'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x
+SF:20server");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Linux 4.X|5.X (85%)
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 4.15 - 5.6 (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/29%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F53F27%P=x86_64-pc-linux-gnu)
+SEQ(SP=100%GCD=1%ISR=107%TI=Z%II=I%TS=A)
+SEQ(SP=102%GCD=1%ISR=108%TI=Z%TS=B)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 10.856 days (since Tue Jan 18 11:47:52 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: ZINO; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 1h38m42s, deviation: 2h53m13s, median: -1m18s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 41933/tcp): CLEAN (Timeout)
+|   Check 2 (port 43229/tcp): CLEAN (Timeout)
+|   Check 3 (port 27637/udp): CLEAN (Timeout)
+|   Check 4 (port 29155/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.9.5-Debian)
+|   Computer name: zino
+|   NetBIOS computer name: ZINO\x00
+|   Domain name: \x00
+|   FQDN: zino
+|_  System time: 2022-01-29T08:18:40-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-01-29T13:18:43
+|_  start_date: N/A
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT       ADDRESS
+1   ...
+2   200.00 ms 192.168.162.64
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 08:20:39 2022 -- 1 IP address (1 host up) scanned in 113.03 seconds

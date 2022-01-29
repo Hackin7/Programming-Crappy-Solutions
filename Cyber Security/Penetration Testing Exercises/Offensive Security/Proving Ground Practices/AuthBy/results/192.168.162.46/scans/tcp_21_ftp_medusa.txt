@@ -1,0 +1,5 @@
+# Medusa v.2.2 (2022-01-28 23:06:23)
+# medusa -U /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/seclists/Passwords/darkweb2017-top100.txt -e ns -n 3145 -O /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp_21_ftp_medusa.txt -M ftp -h 192.168.162.46 
+# Medusa v.2.2 (2022-01-28 23:06:40)
+# medusa -u livda -P /usr/share/seclists/Passwords/darkweb2017-top100.txt -e ns -n 3145 -O /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/AuthBy/results/192.168.162.46/scans/tcp_21_ftp_medusa.txt -M ftp -h 192.168.162.46 
+# Medusa has finished (2022-01-28 23:07:51).

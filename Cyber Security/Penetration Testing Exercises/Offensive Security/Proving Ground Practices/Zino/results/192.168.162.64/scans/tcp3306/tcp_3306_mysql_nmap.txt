@@ -1,0 +1,43 @@
+# Nmap 7.91 scan initiated Sat Jan 29 08:20:42 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Zino/results/192.168.162.64/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 192.168.162.64
+Nmap scan report for 192.168.162.64
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-01-29 08:20:49 EST for 20s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql?  syn-ack ttl 63
+| banner: I\x00\x00\x01\xFFj\x04Host '192.168.49.162' is not allowed to c
+|_onnect to this MariaDB server
+| fingerprint-strings: 
+|   GenericLines, GetRequest, Help, NCP, NULL, NotesRPC, SSLSessionReq, TerminalServer, TerminalServerCookie, afp: 
+|_    Host '192.168.49.162' is not allowed to connect to this MariaDB server
+|_mysql-empty-password: Host '192.168.49.162' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.162' is not allowed to connect to this MariaDB server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=1/29%Time=61F53F32%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GenericLi
+SF:nes,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20a
+SF:llowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GetReque
+SF:st,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Help,4D,"
+SF:I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20allowed\x
+SF:20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SSLSessionReq,4D
+SF:,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20allowed
+SF:\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(TerminalServer
+SF:Cookie,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x
+SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Termi
+SF:nalServer,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20no
+SF:t\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(NC
+SF:P,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(NotesRPC,4
+SF:D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20allowe
+SF:d\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(afp,4D,"I\0\0
+SF:\x01\xffj\x04Host\x20'192\.168\.49\.162'\x20is\x20not\x20allowed\x20to\
+SF:x20connect\x20to\x20this\x20MariaDB\x20server");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 08:21:10 2022 -- 1 IP address (1 host up) scanned in 28.43 seconds

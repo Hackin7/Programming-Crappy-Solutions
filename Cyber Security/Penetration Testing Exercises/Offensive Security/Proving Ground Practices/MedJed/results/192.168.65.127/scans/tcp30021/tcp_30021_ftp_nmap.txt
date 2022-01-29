@@ -1,0 +1,34 @@
+# Nmap 7.91 scan initiated Tue Jan 25 00:49:00 2022 as: nmap -vv --reason -Pn -T4 -sV -p 30021 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp30021/tcp_30021_ftp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/results/192.168.65.127/scans/tcp30021/xml/tcp_30021_ftp_nmap.xml" 192.168.65.127
+Nmap scan report for 192.168.65.127
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-25 00:49:01 EST for 3s
+
+PORT      STATE SERVICE REASON          VERSION
+30021/tcp open  ftp     syn-ack ttl 127 FileZilla ftpd 0.9.41 beta
+|_banner: 220-FileZilla Server version 0.9.41 beta
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -r--r--r-- 1 ftp ftp            536 Nov 03  2020 .gitignore
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 app
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 bin
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 config
+| -r--r--r-- 1 ftp ftp            130 Nov 03  2020 config.ru
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 db
+| -r--r--r-- 1 ftp ftp           1750 Nov 03  2020 Gemfile
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 lib
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 log
+| -r--r--r-- 1 ftp ftp             66 Nov 03  2020 package.json
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 public
+| -r--r--r-- 1 ftp ftp            227 Nov 03  2020 Rakefile
+| -r--r--r-- 1 ftp ftp            374 Nov 03  2020 README.md
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 test
+| drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 tmp
+|_drwxr-xr-x 1 ftp ftp              0 Nov 03  2020 vendor
+|_ftp-bounce: bounce working!
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 25 00:49:04 2022 -- 1 IP address (1 host up) scanned in 4.45 seconds

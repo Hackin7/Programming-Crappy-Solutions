@@ -1,0 +1,84 @@
+WhatWeb report for http://192.168.193.61:8081
+Status    : 200 OK
+Title     : Nexus Repository Manager
+IP        : 192.168.193.61
+Country   : RESERVED, ZZ
+
+Summary   : Script[text/javascript], X-UA-Compatible[IE=edge], HTML5, HTTPServer[Nexus/3.21.0-05 (OSS)], UncommonHeaders[x-content-type-options], X-XSS-Protection[1; mode=block], Bootstrap, X-Frame-Options[DENY], Frame
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ Frame ]
+	This plugin detects instances of frame and iframe HTML
+	elements.
+
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Nexus/3.21.0-05 (OSS) (from server string)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/javascript
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-content-type-options (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : DENY
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 1; mode=block
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Connection: close
+	Date: Thu, 27 Jan 2022 15:40:09 GMT
+	Server: Nexus/3.21.0-05 (OSS)
+	X-Content-Type-Options: nosniff
+	X-Frame-Options: DENY
+	X-XSS-Protection: 1; mode=block
+	Content-Type: text/html
+	Last-Modified: Thu, 27 Jan 2022 15:40:09 GMT
+	Pragma: no-cache
+	Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0
+	Expires: 0
+	Content-Length: 10196
+
+

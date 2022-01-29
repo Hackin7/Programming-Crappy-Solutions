@@ -1,0 +1,1086 @@
+# Nmap 7.91 scan initiated Sun Jan 23 06:44:25 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sybaris/results/192.168.171.93/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.171.93
+Nmap scan report for 192.168.171.93
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-23 06:44:28 EST for 1159s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) PHP/7.3.22)
+|_http-chrono: Request times for /; avg: 657.13ms; min: 582.10ms; max: 720.25ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.171.93
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 762
+|     Comment: 
+|         /**
+|          * 6.2 - Menus
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1441
+|     Comment: 
+|         /* Recent Posts widget */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 4019
+|     Comment: 
+|         /*----------------------------
+|                 Embed
+|         -----------------------------*/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 149
+|     Comment: 
+|          //   is inserted into a document/fragment
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3687
+|     Comment: 
+|         /**
+|          * 15.0 - Print
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/ie.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Sixteen
+|         Description: Global Styles for older IE versions (previous to IE10).
+|         */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 153
+|     Comment: 
+|          //   or `text` property is set
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 54
+|     Comment: 
+|         /**
+|          * 1.0 - Normalize
+|          *
+|          * Normalizing styles have been helped along thanks to the fine work of
+|          * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3343
+|     Comment: 
+|         /**
+|          * 14.4 - >= 985px
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 197
+|     Comment: 
+|          //abort shiv
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3949
+|     Comment: 
+|         /*----------------------------
+|                 Tab
+|         -----------------------------*/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 151
+|     Comment: 
+|          //   a 403 response, will cause the tab/window to crash
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 60
+|     Comment: 
+|         /**
+|            * Creates a style sheet with the given CSS text and adds it to the document.
+|            * @private
+|            * @param {Document} ownerDocument The document.
+|            * @param {String} cssText The CSS text.
+|            * @returns {StyleSheet} The style element.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/jquery-migrate.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery Migrate v1.2.1 | (c) 2005, 2013 jQuery Foundation, Inc. and other contributors | jquery.org/license */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 124
+|     Comment: 
+|         <!-- .site-info -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1637
+|     Comment: 
+|         /**
+|          * 11.2 - Posts and pages
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 157
+|     Comment: 
+|         /**
+|            * returns a shived DocumentFragment for the given document
+|            * @memberOf html5
+|            * @param {Document} ownerDocument The context document.
+|            * @returns {Object} The shived DocumentFragment.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 9
+|     Comment: 
+|         /** Preset options */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 237
+|     Comment: 
+|          // hides non-rendered elements
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 5
+|     Comment: 
+|         /*jshint evil:true */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 27
+|     Comment: 
+|         /** Cached data for each document */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 6
+|     Comment: 
+|         /** version */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1300
+|     Comment: 
+|         /**
+|          * 8.0 - Alignments
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/genericons/genericons.css
+|     Line number: 8
+|     Comment: 
+|         /* IE8 and below use EOT and allow cross-site embedding. 
+|            IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
+|            So unfortunately, IE9 will throw a console error, but it'll still work.
+|            When the font is base64 encoded, cross-site embedding works in Firefox */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 40
+|     Comment: 
+|         <!-- .site-branding -->
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 105
+|     Comment: 
+|         <!-- .site-content -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1137
+|     Comment: 
+|         /* reset screen-reader-text */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 255
+|     Comment: 
+|         /**
+|          * 2.0 - Genericons
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 19
+|     Comment: 
+|         <!--[if lt IE 10]>
+|             <link rel="stylesheet" id="twentysixteen-ie-css"  href="/themes/twentysixteen/css/ie.css" type="text/css" media="all" />
+|             <![endif]-->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 120
+|     Comment: 
+|         /**
+|            * returns a shived element for the given nodeName and document
+|            * @memberOf html5
+|            * @param {String} nodeName name of the element
+|            * @param {Document|DocumentFragment} ownerDocument The context document.
+|            * @returns {Object} The shived element.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1252
+|     Comment: 
+|         /**
+|          * 7.0 - Accessibility
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2366
+|     Comment: 
+|         /**
+|          * 11.6 - Footer
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 127
+|     Comment: 
+|         <!-- .site -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2112
+|     Comment: 
+|         /**
+|          * 11.3 - Post Formats
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3925
+|     Comment: 
+|         /*----------------------------
+|                 Archive
+|         -----------------------------*/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2692
+|     Comment: 
+|         /**
+|          * 14.1 - >= 710px
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 48
+|     Comment: 
+|         <!-- .main-navigation -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/functions.js
+|     Line number: 2
+|     Comment: 
+|         /**
+|          * Theme functions file.
+|          *
+|          * Contains handlers for navigation and widget area.
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 58
+|     Comment: 
+|         /*--------------------------------------------------------------------------*/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 51
+|     Comment: 
+|          // assign a false positive if detection fails => unable to shiv
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 126
+|     Comment: 
+|         <!-- .site-inner -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 103
+|     Comment: 
+|         /**
+|            * Returns the data associated to the given document
+|            * @private
+|            * @param {Document} ownerDocument The document.
+|            * @returns {Object} An object of data.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 267
+|     Comment: 
+|         /**
+|              * current version of html5shiv
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1333
+|     Comment: 
+|         /**
+|          * 9.0 - Clearings
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 51
+|     Comment: 
+|         <!-- .site-header-main -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3564
+|     Comment: 
+|         /**
+|          * 14.5 - >= 1200px
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 75
+|     Comment: 
+|         /**
+|            * Returns the value of `html5.elements` as an array.
+|            * @private
+|            * @returns {Array} An array of shived element node names.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 316
+|     Comment: 
+|          // expose html5
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 150
+|     Comment: 
+|          // * Link elements with `src` attributes that are inaccessible, as with
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 49
+|     Comment: 
+|         <!-- .site-header-menu -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 518
+|     Comment: 
+|         /* Prevents HTML tables from becoming too wide */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 708
+|     Comment: 
+|         /**
+|          * 6.1 - Links
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 52
+|     Comment: 
+|         <!-- .site-header -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2430
+|     Comment: 
+|         /* Make sure embeds and iframes fit their containers. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2677
+|     Comment: 
+|         /**
+|          * Does the same thing as <meta name="viewport" content="width=device-width">,
+|          * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+|          * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+|          * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/genericons/genericons.css
+|     Line number: 61
+|     Comment: 
+|         /**
+|          * Helper classes
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1533
+|     Comment: 
+|         /**
+|          * 11.1 - Header
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 15
+|     Comment: 
+|         /** Not all elements can be cloned in IE **/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 18
+|     Comment: 
+|         /**
+|          * Table of Contents
+|          *
+|          * 1.0 - Normalize
+|          * 2.0 - Genericons
+|          * 3.0 - Typography
+|          * 4.0 - Elements
+|          * 5.0 - Forms
+|          * 6.0 - Navigation
+|          *   6.1 - Links
+|          *   6.2 - Menus
+|          * 7.0 - Accessibility
+|          * 8.0 - Alignments
+|          * 9.0 - Clearings
+|          * 10.0 - Widgets
+|          * 11.0 - Content
+|          *    11.1 - Header
+|          *    11.2 - Posts and pages
+|          *    11.3 - Post Formats
+|          *    11.4 - Comments
+|          *    11.5 - Sidebar
+|          *    11.6 - Footer
+|          * 12.0 - Media
+|          *    12.1 - Captions
+|          *    12.2 - Galleries
+|          * 13.0 - Multisite
+|          * 14.0 - Media Queries
+|          *    14.1 - >= 710px
+|          *    14.2 - >= 783px
+|          *    14.3 - >= 910px
+|          *    14.4 - >= 985px
+|          *    14.5 - >= 1200px
+|          * 15.0 - Print
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/ie8.css
+|     Line number: 114
+|     Comment: 
+|         /* restore screen-reader-text */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2405
+|     Comment: 
+|         /**
+|          * 12.0 - Media
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 496
+|     Comment: 
+|         /* Make sure images are scaled correctly. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1501
+|     Comment: 
+|         /**
+|          * 11.0 - Content
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 704
+|     Comment: 
+|         /**
+|          * 6.0 - Navigation
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/jquery.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 301
+|     Comment: 
+|          // shivs the document according to the specified `html5` object options
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 287
+|     Comment: 
+|         /**
+|          * 3.0 - Typography
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 22
+|     Comment: 
+|         <!--[if lt IE 9]>
+|             <link rel="stylesheet" id="twentysixteen-ie8-css"  href="/themes/twentysixteen/css/ie8.css" type="text/css" media="all" />
+|             <![endif]-->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 567
+|     Comment: 
+|         /**
+|          * 5.0 - Forms
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 138
+|     Comment: 
+|         /* ]]> */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/genericons/genericons.css
+|     Line number: 37
+|     Comment: 
+|         /**
+|          * All Genericons
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 136
+|     Comment: 
+|         /* <![CDATA[ */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 37
+|     Comment: 
+|          //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1456
+|     Comment: 
+|         /* RSS widget */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 310
+|     Comment: 
+|          //extends list of elements
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 62
+|     Comment: 
+|         <!-- #post-## -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 12
+|     Comment: 
+|         /** Used to skip problem elements */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 152
+|     Comment: 
+|          // * Script elements appended to fragments will execute when their `src`
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/functions.js
+|     Line number: 1
+|     Comment: 
+|         /* global screenReaderText */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3981
+|     Comment: 
+|         /*----------------------------
+|                 Custom
+|         -----------------------------*/
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 498
+|     Comment: 
+|         /* Adhere to container width. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1411
+|     Comment: 
+|         /* Calendar widget */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1256
+|     Comment: 
+|         /* Text meant only for screen readers */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2501
+|     Comment: 
+|         /**
+|          * 12.2 - Galleries
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2917
+|     Comment: 
+|         /**
+|          * 14.3 - >= 910px
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1519
+|     Comment: 
+|         /* Do not show the outline on the skip link target. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 307
+|     Comment: 
+|          //creates a shived documentFragment
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 304
+|     Comment: 
+|          //creates a shived element
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 431
+|     Comment: 
+|         /**
+|          * 4.0 - Elements
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 272
+|     Comment: 
+|         /**
+|              * A flag to indicate that the HTML5 style sheet should be inserted.
+|              * @memberOf html5
+|              * @type Boolean
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2477
+|     Comment: 
+|         /**
+|          * 12.1 - Captions
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 235
+|     Comment: 
+|          // adds styling not present in IE6/7/8/9
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 1
+|     Comment: 
+|         /**
+|         * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+|         */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 207
+|     Comment: 
+|          // unroll the `createElement` calls
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1378
+|     Comment: 
+|         /**
+|          * 10.0 - Widgets
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 452
+|     Comment: 
+|         /* Fallback for when there is no custom background color defined. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 294
+|     Comment: 
+|         /**
+|              * A string to describe the type of `html5` object ("default" or "default print").
+|              * @memberOf html5
+|              * @type String
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 41
+|     Comment: 
+|          // assign a false positive if unable to shiv
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 181
+|     Comment: 
+|         /**
+|            * Shivs the `createElement` and `createDocumentFragment` methods of the document.
+|            * @private
+|            * @param {Document|DocumentFragment} ownerDocument The document.
+|            * @param {Object} data of the document.
+|            */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 62
+|     Comment: 
+|         <!-- .site-main -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1986
+|     Comment: 
+|         /**
+|          * IE8 and earlier will drop any block with CSS3 selectors.
+|          * Do not combine these styles with the next block.
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 543
+|     Comment: 
+|         /* Placeholder text color -- selectors need to be separate to work. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1481
+|     Comment: 
+|         /* Tag Cloud widget */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/ie7.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Sixteen
+|         Description: IE7 specific style.
+|         */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2572
+|     Comment: 
+|         /**
+|          * 13.0 - Multisites
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 148
+|     Comment: 
+|          // * Attributes like `name` or `type` cannot be set/changed once an element
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Sixteen
+|         Theme URI: https://wordpress.org/themes/twentysixteen/
+|         Author: the WordPress team
+|         Author URI: https://wordpress.org/
+|         Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout \xE2\x80\x94 the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
+|         Version: 1.0
+|         License: GNU General Public License v2 or later
+|         License URI: http://www.gnu.org/licenses/gpl-2.0.html
+|         Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+|         Text Domain: twentysixteen
+|         
+|         This theme, like WordPress, is licensed under the GPL.
+|         Use it to make something cool, have fun, and share what you've learned with others.
+|         */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 147
+|     Comment: 
+|          // Avoid adding some elements to fragments in IE < 9 because
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2137
+|     Comment: 
+|         /**
+|          * 11.4 - Comments
+|          */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 103
+|     Comment: 
+|         <!-- .sidebar .widget-area -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 319
+|     Comment: 
+|          // shiv the document
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1268
+|     Comment: 
+|         /* must have higher specificity than alternative color schemes inline styles */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 24
+|     Comment: 
+|         /** The id for the the documents expando */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 129
+|     Comment: 
+|         <!--[if lt IE 9]>
+|             <script type="text/javascript" src="/themes/twentysixteen/js/html5.js"></script>
+|             <![endif]-->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 249
+|     Comment: 
+|         /**
+|            * The `html5` object is exposed so that more elements can be shived and
+|            * existing shiving can be detected on iframes.
+|            * @type Object
+|            * @example
+|            *
+|            * // options can be changed before the script is included
+|            * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/genericons/genericons.css
+|     Line number: 1
+|     Comment: 
+|         /**
+|         
+|         	Genericons
+|         
+|         */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 25
+|     Comment: 
+|         <!--[if lt IE 8]>
+|             <link rel="stylesheet" id="twentysixteen-ie7-css"  href="/themes/twentysixteen/css/ie7.css" type="text/css" media="all" />
+|             <![endif]-->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 286
+|     Comment: 
+|         /**
+|              * A flag to indicate that the document's `createElement` and `createDocumentFragment`
+|              * methods should be overwritten.
+|              * @memberOf html5
+|              * @type Boolean
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/skip-link-focus-fix.js
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * Makes "skip to content" link work correctly in IE9, Chrome, and Opera
+|          * for better accessibility.
+|          *
+|          * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/genericons/genericons.css
+|     Line number: 109
+|     Comment: 
+|         /**
+|          * Individual icons
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 558
+|     Comment: 
+|         /* Since FF19 lowers the opacity of the placeholder by default */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 1264
+|     Comment: 
+|         /* many screen reader and browser combinations announce broken words as they would appear visually */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 279
+|     Comment: 
+|         /**
+|              * Is equal to true if a browser supports creating unknown/HTML5 elements
+|              * @memberOf html5
+|              * @type boolean
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2673
+|     Comment: 
+|         /**
+|          * 14.0 - Media Queries
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 255
+|     Comment: 
+|          // options can be changed before the script is included
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 61
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 260
+|     Comment: 
+|         /**
+|              * An array or space separated string of node names of the elements to shiv.
+|              * @memberOf html5
+|              * @type Array|String
+|              */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 219
+|     Comment: 
+|         /**
+|            * Shivs the given document.
+|            * @memberOf html5
+|            * @param {Document} ownerDocument The document to shiv.
+|            * @returns {Document} The shived document.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 85
+|     Comment: 
+|         /**
+|            * Extends the built-in list of html5 elements
+|            * @memberOf html5
+|            * @param {String|Array} newElements whitespace separated list or array of new element names to shiv
+|            * @param {Document} ownerDocument The context document.
+|            */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 18
+|     Comment: 
+|         /** Detect whether the browser supports default html5 styles */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 125
+|     Comment: 
+|         <!-- .site-footer -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/ie8.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Sixteen
+|         Description: IE8 specific style.
+|         */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 30
+|     Comment: 
+|         /** Detect whether the browser supports unknown elements */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3807
+|     Comment: 
+|         /* Make sure color schemes don't affect to print */
+|     
+|     Path: http://192.168.171.93:80/
+|     Line number: 63
+|     Comment: 
+|         <!-- .content-area -->
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 21
+|     Comment: 
+|         /** Name of the expando, to work with multiple documents or to re-shiv one document */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 444
+|     Comment: 
+|         /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/js/html5.js
+|     Line number: 233
+|     Comment: 
+|          // corrects block display not defined in IE6/7/8/9
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 3798
+|     Comment: 
+|         /* Brute force since user agents all print differently. */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2906
+|     Comment: 
+|         /**
+|          * 14.2 - >= 783px
+|          */
+|     
+|     Path: http://192.168.171.93:80/themes/twentysixteen/css/style.css
+|     Line number: 2356
+|     Comment: 
+|         /**
+|          * 11.5 - Sidebar
+|_         */
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|       httponly flag not set
+|   /index/: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sun, 23 Jan 2022 11:44:40 GMT; 0s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /robots.txt: Robots file
+|   /icons/: Potentially interesting folder w/ directory listing
+|_  /index/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-favicon: Unknown favicon MD5: A4DA8778FE902EB34FD9A5D4C0A832E1
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.171.93
+|   Found the following feeds: 
+|     RSS (version 2.0): http://192.168.171.93:80/feed/rss
+|_    RSS (version 2.0): /feed/rss
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+|_http-generator: HTMLy v2.7.5
+| http-headers: 
+|   Date: Sun, 23 Jan 2022 11:44:45 GMT
+|   Server: Apache/2.4.6 (CentOS) PHP/7.3.22
+|   X-Powered-By: PHP/7.3.22
+|   Set-Cookie: PHPSESSID=vh71cuj0aq6j48qp75ak22h3vc; path=/
+|   Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate
+|   Pragma: no-cache
+|   Vary: Accept-Encoding
+|   Content-Length: 7884
+|   Connection: close
+|   Content-Type: text/html; charset=utf-8
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET POST
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash fe124f56bcd07f28a241e4a69af3367e
+| Credits query returned unknown hash fe124f56bcd07f28a241e4a69af3367e
+|_Version from header x-powered-by: PHP/7.3.22
+| http-phpmyadmin-dir-traversal: 
+|   VULNERABLE:
+|   phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion
+|     State: UNKNOWN (unable to test)
+|     IDs:  CVE:CVE-2005-3299
+|       PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.
+|       
+|     Disclosure date: 2005-10-nil
+|     Extra information:
+|       ../../../../../etc/passwd :
+|   
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299
+|_      http://www.exploit-db.com/exploits/1244/
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 11 disallowed entries 
+| /config/ /system/ /themes/ /vendor/ /cache/ 
+| /changelog.txt /composer.json /composer.lock /composer.phar /search/ 
+|_/admin/
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/7.3.22
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; ico: 1; xml: 1
+|     /feed/
+|       Other: 1
+|     /themes/twentysixteen/css/
+|       css: 4
+|     /themes/twentysixteen/genericons/
+|       css: 1
+|     /themes/twentysixteen/js/
+|       js: 5
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /themes/twentysixteen/css/
+|   Total files found (by extension):
+|_    Other: 2; css: 5; ico: 1; js: 5; xml: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Sybaris - Just another HTMLy blog
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Sun, 23 Jan 2022 11:44:43 GMT
+| Server: Apache/2.4.6 (CentOS) PHP/7.3.22
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 500
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 07:03:47 2022 -- 1 IP address (1 host up) scanned in 1162.24 seconds

@@ -1,0 +1,17 @@
+# Nmap 7.91 scan initiated Sat Jan 29 04:09:18 2022 as: nmap -vv --reason -Pn -T4 -sU -sV -p 5353 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/udp5353/udp_5353_multicastdns_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/ZenPhoto/results/192.168.162.41/scans/udp5353/xml/udp_5353_multicastdns_nmap.xml" 192.168.162.41
+Nmap scan report for 192.168.162.41
+Host is up, received user-set.
+Scanned at 2022-01-29 04:09:21 EST for 8s
+
+PORT     STATE SERVICE REASON       VERSION
+5353/udp open  mdns    udp-response DNS-based service discovery
+| dns-service-discovery: 
+|   9/tcp workstation
+|_    Address=192.168.162.41 fe80::250:56ff:feba:7103
+
+Host script results:
+|_dns-brute: Can't guess domain of "192.168.162.41"; use dns-brute.domain script argument.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 29 04:09:29 2022 -- 1 IP address (1 host up) scanned in 11.56 seconds

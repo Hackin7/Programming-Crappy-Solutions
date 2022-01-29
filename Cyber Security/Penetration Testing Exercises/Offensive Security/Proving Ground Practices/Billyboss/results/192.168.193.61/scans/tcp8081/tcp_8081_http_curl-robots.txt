@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Thu, 27 Jan 2022 15:40:06 GMT
+Server: Nexus/3.21.0-05 (OSS)
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Content-Type: text/plain
+Last-Modified: Mon, 17 Feb 2020 18:19:36 GMT
+Cache-Control: max-age=2592000
+Content-Length: 66
+
+User-agent: *
+Disallow: /repository/
+Disallow: /service/
+Allow: /

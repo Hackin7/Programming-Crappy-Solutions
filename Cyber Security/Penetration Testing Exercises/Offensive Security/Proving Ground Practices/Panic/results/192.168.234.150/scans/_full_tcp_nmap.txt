@@ -1,0 +1,149 @@
+# Nmap 7.91 scan initiated Sun Jan 23 23:02:20 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Panic/results/192.168.234.150/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Panic/results/192.168.234.150/scans/xml/_full_tcp_nmap.xml" 192.168.234.150
+Increasing send delay for 192.168.234.150 from 0 to 5 due to 887 out of 2216 dropped probes since last increase.
+Increasing send delay for 192.168.234.150 from 5 to 10 due to 4018 out of 10044 dropped probes since last increase.
+Nmap scan report for 192.168.234.150
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-23 23:02:21 EST for 1227s
+Not shown: 65521 closed ports
+Reason: 65521 resets
+PORT      STATE SERVICE      REASON          VERSION
+21/tcp    open  ftp          syn-ack ttl 127 FileZilla ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 AppData
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Application Data
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Contacts
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Cookies
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Desktop
+| drwxr-xr-x 1 ftp ftp              0 Jun 21  2021 Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Downloads
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Favorites
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Links
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Local Settings
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Music
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 My Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 NetHood
+| ---------- 1 ftp ftp         786432 Jun 22  2021 NTUSER.DAT
+| ---------- 1 ftp ftp          32768 Dec 01  2020 ntuser.dat.LOG1
+| ---------- 1 ftp ftp         131072 Dec 01  2020 ntuser.dat.LOG2
+| ---------- 1 ftp ftp          65536 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TM.blf
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000001.regtrans-ms
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000002.regtrans-ms
+| ---------- 1 ftp ftp             20 Dec 01  2020 ntuser.ini
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Pictures
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 PrintHood
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Recent
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Saved Games
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Searches
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 SendTo
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Start Menu
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Templates
+|_drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Videos
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+5985/tcp  open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+27015/tcp open  unknown      syn-ack ttl 127
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, DistCCD, FourOhFourRequest, GenericLines, HTTPOptions, Hello, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NessusTPv10, NessusTPv11, NessusTPv12, NotesRPC, RPCCheck, RTSPRequest, Radmin, SIPOptions, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, WWWOFFLEctrlstat, X11Probe, mydoom, oracle-tns: 
+|     Huh?
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Epic/1.0
+|     Content-Length: 67
+|     Content-Type: text/html; charset=utf-8
+|_    <html><body>Epic HTTP Server :: 1.0 :: Invulnerable</body></html>
+47001/tcp open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port27015-TCP:V=7.91%I=9%D=1/23%Time=61EE2913%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,6,"Huh\?\r\n")%r(GetRequest,1FF,"HTTP/1\.1\x20200\x20OK\r\n
+SF:Server:\x20Epic/1\.0\r\nContent-Length:\x2067\r\nContent-Type:\x20text/
+SF:html;\x20charset=utf-8\r\n\r\n<html><body>Epic\x20HTTP\x20Server\x20::\
+SF:x20\x201\.0\x20::\x20Invulnerable</body></html>\n\0\xff\xff\xffI\xb7\x0
+SF:6w\x92\xb7\x06w\x18Hi\0\$\0\0\0\x01\0\0\0\0\0\0\0\0\0\0\0p\0\0\0\xff\xf
+SF:f\xff\xff\xff\xff\xff\xff\x86}\twv\xb7\x06wP\xcb\xa3s\0\0\0\0\0\0\0\0\0
+SF:\xb0\$\x000Hi\0\xec\xeb\x13w\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0>L\xcf\xe3\xd4\xfb\xb7\0\
+SF:0\0\0\0\xf8\xfc\xb7\0pn\nw\xea\xc2j\x94\xfe\xff\xff\xffL\x07\nw\x9b}\tw
+SF:\x82M\xcf\xe3\0\0\0\0\0\0\0\0,\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\x03w\0\0\0\0\$\xfd\xb7\0\0\xb0\$\0\0\0\0\0\xbc\xfc\xb7\0\0\0\0\0\xf
+SF:f\xff\xff\xffpn\nw\xbc\xf0\tw\xea\|\tw\$\xfd\xb7\0\x01\0\0\0\0\0\0\0\0\
+SF:0\0\0\$\xfd\xb7\0\0\0\x03w\0\0\0\0\?\0\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\x7f\x02\0\0\0\0\0\0\xff\xff\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0")%r(HTTPOptions,6,"Huh\?\r\n")%r(RTSPRequest,6,"Huh\?\r\n")%r(RPCC
+SF:heck,6,"Huh\?\r\n")%r(DNSVersionBindReqTCP,6,"Huh\?\r\n")%r(DNSStatusRe
+SF:questTCP,6,"Huh\?\r\n")%r(Hello,6,"Huh\?\r\n")%r(Help,6,"Huh\?\r\n")%r(
+SF:SSLSessionReq,6,"Huh\?\r\n")%r(TerminalServerCookie,6,"Huh\?\r\n")%r(TL
+SF:SSessionReq,6,"Huh\?\r\n")%r(SSLv23SessionReq,6,"Huh\?\r\n")%r(Kerberos
+SF:,6,"Huh\?\r\n")%r(SMBProgNeg,6,"Huh\?\r\n")%r(X11Probe,6,"Huh\?\r\n")%r
+SF:(FourOhFourRequest,6,"Huh\?\r\n")%r(LPDString,6,"Huh\?\r\n")%r(LDAPSear
+SF:chReq,6,"Huh\?\r\n")%r(LDAPBindReq,6,"Huh\?\r\n")%r(SIPOptions,6,"Huh\?
+SF:\r\n")%r(LANDesk-RC,6,"Huh\?\r\n")%r(TerminalServer,6,"Huh\?\r\n")%r(NC
+SF:P,6,"Huh\?\r\n")%r(NotesRPC,6,"Huh\?\r\n")%r(DistCCD,6,"Huh\?\r\n")%r(J
+SF:avaRMI,6,"Huh\?\r\n")%r(Radmin,6,"Huh\?\r\n")%r(NessusTPv12,6,"Huh\?\r\
+SF:n")%r(NessusTPv11,6,"Huh\?\r\n")%r(NessusTPv10,6,"Huh\?\r\n")%r(WMSRequ
+SF:est,6,"Huh\?\r\n")%r(oracle-tns,6,"Huh\?\r\n")%r(mydoom,6,"Huh\?\r\n")%
+SF:r(WWWOFFLEctrlstat,6,"Huh\?\r\n");
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|2016|10|2008|7|Vista (95%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_10:1607 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7::-:professional cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_8
+Aggressive OS guesses: Microsoft Windows Server 2012 R2 (95%), Microsoft Windows Server 2016 (95%), Microsoft Windows 10 1607 (91%), Microsoft Windows Server 2012 (91%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (91%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 10 1511 - 1607 (88%), Microsoft Windows 7 Professional (88%), Microsoft Windows 7 or Windows Server 2008 R2 (88%), Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2 (88%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/23%OT=21%CT=1%CU=31990%PV=Y%DS=2%DC=T%G=Y%TM=61EE299
+OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=107%TI=I%II=I%SS=S%TS=A)SEQ
+OS:(SP=102%GCD=1%ISR=106%TI=I%TS=A)OPS(O1=M506NW8ST11%O2=M506NW8ST11%O3=M50
+OS:6NW8NNT11%O4=M506NW8ST11%O5=M506NW8ST11%O6=M506ST11)WIN(W1=2000%W2=2000%
+OS:W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M506NW8NNS%CC
+OS:=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y
+OS:%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%I
+OS:PL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.022 days (since Sun Jan 23 22:50:30 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 62462/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 51830/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 54445/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 22269/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-01-24T04:22:39
+|_  start_date: 2021-10-26T10:15:46
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   243.49 ms 192.168.49.1
+2   243.65 ms 192.168.234.150
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 23:22:48 2022 -- 1 IP address (1 host up) scanned in 1228.75 seconds

@@ -1,0 +1,54 @@
+WhatWeb report for http://192.168.193.61:80
+Status    : 200 OK
+Title     : BaGet
+IP        : 192.168.193.61
+Country   : RESERVED, ZZ
+
+Summary   : Script, Microsoft-IIS[10.0], HTML5, HTTPServer[Microsoft-IIS/10.0], Meta-Author[Loic Sharma]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name
+	tag - info:
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : Loic Sharma
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Tue, 11 Feb 2020 12:44:24 GMT
+	Accept-Ranges: bytes
+	ETag: "1d5e0d8fd07cc76"
+	Server: Microsoft-IIS/10.0
+	Date: Thu, 27 Jan 2022 15:40:09 GMT
+	Connection: close
+	Content-Length: 2166
+
+

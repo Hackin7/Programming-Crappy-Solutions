@@ -1,0 +1,1977 @@
+# Nmap 7.91 scan initiated Fri Jan 28 11:03:02 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Heist/results/192.168.162.165/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.162.165
+Nmap scan report for 192.168.162.165
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-01-28 11:03:12 EST for 810s
+
+PORT     STATE SERVICE REASON          VERSION
+8080/tcp open  http    syn-ack ttl 127 Werkzeug httpd 2.0.1 (Python 3.9.0)
+|_http-chrono: Request times for /; avg: 789.03ms; min: 458.57ms; max: 1813.12ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.162.165
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3138
+|     Comment: 
+|         /**
+|              * Add a new cloud to the horizon.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 968
+|     Comment: 
+|         /**
+|            * Frames per second.
+|            * @const
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2391
+|     Comment: 
+|         /**
+|              * Make t-rex blink at random intervals.
+|              * @param {number} time Current time in milliseconds.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1251
+|     Comment: 
+|         /**
+|              * Adjust game space dimensions on resize.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1448
+|     Comment: 
+|          // Mobile only touch devices.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3226
+|     Comment: 
+|         /**
+|                   * Returns a formatted localized string where $1 to $9 are replaced by the
+|                   * second to the tenth argument.
+|                   * @param {string} id The ID of the string we want.
+|                   * @param {...string} var_args The extra values to include in the formatted
+|                   *     output.
+|                   * @return {string} The formatted string.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1130
+|     Comment: 
+|         /**
+|              * Load and cache the image assets from the page.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3256
+|     Comment: 
+|         /**
+|                   * As above, but also makes sure that the value is an integer.
+|                   * @param {string} id The key that identifies the desired number.
+|                   * @return {number} The corresponding number value.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2534
+|     Comment: 
+|         /**
+|            * Y positioning of the digits in the sprite sheet.
+|            * X position is always 0.
+|            * @type {array.<number>}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2319
+|     Comment: 
+|         /**
+|              * Set the animation status.
+|              * @param {!number} deltaTime
+|              * @param {Trex.status} status Optional status to switch to.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1443
+|     Comment: 
+|          // Keys.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1012
+|     Comment: 
+|         /**
+|            * Default dimensions.
+|            * @enum {string}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1964
+|     Comment: 
+|          // Axis-Aligned Bounding Box method.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2384
+|     Comment: 
+|         /**
+|              * Sets a random time for the blink to happen.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1762
+|     Comment: 
+|         /******************************************************************************
+|           
+|           
+|             /**
+|            * Game over panel.
+|            * @param {!HTMLCanvasElement} canvas
+|            * @param {!HTMLImage} textSprite
+|            * @param {!HTMLImage} restartImg
+|            * @param {!Object} dimensions Canvas dimensions.
+|            * @constructor
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2029
+|     Comment: 
+|         /**
+|            * Maximum obstacle grouping count.
+|            * @const
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 820
+|     Comment: 
+|          // Implements button clicks.  This function is needed during the transition
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2054
+|     Comment: 
+|          // Make collision box adjustments,
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1736
+|     Comment: 
+|         /**
+|            * Decodes the base 64 audio to ArrayBuffer used by Web Audio.
+|            * @param {string} base64String
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 766
+|     Comment: 
+|          // Re-renders the error page using |strings| as the dictionary of values.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1353
+|     Comment: 
+|         /**
+|              * Update the game frame.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3069
+|     Comment: 
+|         /**
+|              * Update the obstacle positions.
+|              * @param {number} deltaTime
+|              * @param {number} currentSpeed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1241
+|     Comment: 
+|         /**
+|              * Debounce the resize event.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3316
+|     Comment: 
+|         /**
+|                 * @fileoverview This is a simple template engine inspired by JsTemplates
+|                 * optimized for i18n.
+|                 *
+|                 * It currently supports three handlers:
+|                 *
+|                 *   * i18n-content which sets the textContent of the element.
+|                 *
+|                 *     <span i18n-content="myContent"></span>
+|                 *
+|                 *   * i18n-options which generates <option> elements for a <select>.
+|                 *
+|                 *     <select i18n-options="myOptionList"></select>
+|                 *
+|                 *   * i18n-values is a list of attribute-value or property-value pairs.
+|                 *     Properties are prefixed with a '.' and can contain nested properties.
+|                 *
+|                 *     <span i18n-values="title:myTitle;.style.fontSize:fontSize"></span>
+|                 *
+|                 * This file is a copy of i18n_template.js, with minor tweaks to support using
+|                 * load_time_data.js. It should replace i18n_template.js eventually.
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 617
+|     Comment: 
+|         /* If the iframe is too small, always hide the error code. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1190
+|     Comment: 
+|          // Hide the static icon.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2352
+|     Comment: 
+|          // Update the frame position.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1652
+|     Comment: 
+|         /**
+|            * Updates the canvas size taking into
+|            * account the backing store pixel ratio and
+|            * the device pixel ratio.
+|            *
+|            * See article by Paul Lewis:
+|            * https://www.html5rocks.com/en/tutorials/canvas/hidpi/
+|            *
+|            * @param {HTMLCanvasElement} canvas
+|            * @param {number} opt_width
+|            * @param {number} opt_height
+|            * @return {boolean} Whether the canvas was scaled.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 72
+|     Comment: 
+|         <!-- Show details when hovering over the icon, in case the details are
+|                  hidden because they're too large. -->
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1209
+|     Comment: 
+|          // Horizon contains clouds, obstacles and the ground.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 822
+|     Comment: 
+|          // iOS.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2981
+|     Comment: 
+|          // Cloud
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1919
+|     Comment: 
+|         /**
+|            * Adjust the collision box.
+|            * @param {!CollisionBox} box The original box.
+|            * @param {!CollisionBox} adjustment Adjustment box.
+|            * @return {CollisionBox} The adjusted collision box object.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1783
+|     Comment: 
+|         /**
+|            * Dimensions used in the panel.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1934
+|     Comment: 
+|         /**
+|            * Draw the collision boxes for debug.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2986
+|     Comment: 
+|          // Horizon
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2252
+|     Comment: 
+|         /**
+|            * Animation states.
+|            * @enum {string}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 477
+|     Comment: 
+|         /* Not done on mobile for performance reasons. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 433
+|     Comment: 
+|         /**
+|           * Can't access chrome://theme/IDR_ERROR_NETWORK_GENERIC from an untrusted
+|           * renderer process, so embed the resource manually.
+|           */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2583
+|     Comment: 
+|         /**
+|              * Calculate the xPos in the canvas.
+|              * @param {number} canvasWidth
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 814
+|     Comment: 
+|          // clicked.  Separate function from trackClick so the resources don't have to
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2340
+|     Comment: 
+|          // Game intro animation, T-rex moves in from the left.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3376
+|     Comment: 
+|         /**
+|                 * This is used to set HTML attributes and DOM properties. The syntax is:
+|                 *   attributename:key;
+|                 *   .domProperty:key;
+|                 *   .nested.dom.property:key
+|                 * @param {HTMLElement} element The node to modify.
+|                 * @param {string} attributeAndKeys The path of the attribute to modify
+|                 *     followed by a colon, and the name of the value in the dictionary.
+|                 *     Multiple attribute/key pairs may be separated by semicolons.
+|                 * @param {LoadTimeData} dictionary The dictionary of strings to draw from.
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2705
+|     Comment: 
+|         /**
+|              * Draw the high score.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/
+|     Line number: 171
+|     Comment: 
+|         /* Firefox 18- */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2057
+|     Comment: 
+|          //    _|   |-|    _|     |-|    _|       |-|
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3165
+|     Comment: 
+|          // https://github.com/google/closure-compiler/issues/544 is fixed.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3203
+|     Comment: 
+|         /**
+|                   * Fetches a value, expecting that it exists.
+|                   * @param {string} id The key that identifies the desired value.
+|                   * @return {*} The corresponding value.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 10
+|     Comment: 
+|         <!-- Original by the Chromium authors -->
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1705
+|     Comment: 
+|         /**
+|            * Vibrate on mobile devices.
+|            * @param {number} duration Duration of the vibration in milliseconds.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1976
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Collision box object.
+|            * @param {number} x X position.
+|            * @param {number} y Y Position.
+|            * @param {number} w Width.
+|            * @param {number} h Height.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1200
+|     Comment: 
+|          // Player canvas container.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 760
+|     Comment: 
+|          // Subframes use a different layout but the same html file.  This is to make it
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2916
+|     Comment: 
+|         /**
+|              * Update the x position of an indivdual piece of the line.
+|              * @param {number} pos Line position.
+|              * @param {number} increment
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1327
+|     Comment: 
+|         /**
+|              * Update the game status to started.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1538
+|     Comment: 
+|         /**
+|              * RequestAnimationFrame wrapper.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3119
+|     Comment: 
+|         /**
+|              * Reset the horizon layer.
+|              * Remove existing obstacles and reposition the horizon line.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3253
+|     Comment: 
+|         /** @type {boolean} */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 646
+|     Comment: 
+|         /* Styles for platform dependent separation of controls and details button. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 554
+|     Comment: 
+|         /* Decrease padding at low sizes. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 395
+|     Comment: 
+|         /* Don't use the main frame div when the error is in a subframe. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2661
+|     Comment: 
+|          // Flash score and play sound.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2056
+|     Comment: 
+|          //      ____        ______        ________
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1685
+|     Comment: 
+|          // Scale the context to counter the fact that we've manually scaled
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2219
+|     Comment: 
+|         /**
+|            * T-rex player config.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 876
+|     Comment: 
+|          // Show control buttons.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3014
+|     Comment: 
+|         /**
+|              * Initialise the horizon. Just add the line and a cloud. No obstacles.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2092
+|     Comment: 
+|         /**
+|              * Obstacle frame update.
+|              * @param {number} deltaTime
+|              * @param {number} speed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1378
+|     Comment: 
+|          // The horizon doesn't move until the intro is over.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1476
+|     Comment: 
+|         /**
+|              * Process keydown.
+|              * @param {Event} e
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2023
+|     Comment: 
+|         /**
+|            * Coefficient for calculating the maximum gap.
+|            * @const
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1077
+|     Comment: 
+|          // Up, spacebar
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2730
+|     Comment: 
+|         /**
+|              * Reset the distance meter back to '00000'.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 9
+|     Comment: 
+|         <!-- partial:index.partial.html -->
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1848
+|     Comment: 
+|          // Restart button.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1753
+|     Comment: 
+|         /**
+|            * Return the current timestamp.
+|            * @return {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3427
+|     Comment: 
+|         /**
+|                 * Processes a DOM tree with the {@code dictionary} map.
+|                 * @param {HTMLElement} node The root of the DOM tree to process.
+|                 * @param {LoadTimeData} dictionary The dictionary to draw from.
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2440
+|     Comment: 
+|          // Speed drop makes Trex fall faster.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1857
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Check for a collision.
+|            * @param {!Obstacle} obstacle
+|            * @param {!Trex} tRex T-rex object.
+|            * @param {HTMLCanvasContext} opt_canvasCtx Optional canvas context for drawing
+|            *    collision boxes.
+|            * @return {Array.<CollisionBox>}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1548
+|     Comment: 
+|         /**
+|              * Whether the game is running.
+|              * @return {boolean}
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2460
+|     Comment: 
+|          // Back down at ground level. Jump completed.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3357
+|     Comment: 
+|         /**
+|                 * This handler adds options to a <select> element.
+|                 * @param {HTMLElement} select The node to modify.
+|                 * @param {string} key The name of the value in the dictionary. It should
+|                 *     identify an array of values to initialize an <option>. Each value,
+|                 *     if a pair, represents [content, value]. Otherwise, it should be a
+|                 *     content string with no value.
+|                 * @param {LoadTimeData} dictionary The dictionary of strings to draw from.
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1186
+|     Comment: 
+|         /**
+|              * Game initialiser.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3223
+|     Comment: 
+|         /** @type {string} */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1386
+|     Comment: 
+|          // Check for collisions.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2835
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Horizon Line.
+|            * Consists of two connecting lines. Randomly assigns a flat / bumpy horizon.
+|            * @param {HTMLCanvasElement} canvas
+|            * @param {HTMLImage} bgImg Horizon line sprite.
+|            * @constructor
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3000
+|     Comment: 
+|         /**
+|            * Horizon config.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 625
+|     Comment: 
+|         /* Adjust icon for small embedded frames in apps. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2659
+|     Comment: 
+|          // Acheivement unlocked
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1286
+|     Comment: 
+|          // Game over panel.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1686
+|     Comment: 
+|          // our canvas element.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1818
+|     Comment: 
+|          // Game over text.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2951
+|     Comment: 
+|         /**
+|              * Reset horizon to the starting position.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1950
+|     Comment: 
+|         /**
+|            * Compare two collision boxes for a collision.
+|            * @param {CollisionBox} tRexBox
+|            * @param {CollisionBox} obstacleBox
+|            * @return {boolean} Whether the boxes intersected.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1176
+|     Comment: 
+|          // Reduce the speed on smaller mobile screens.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 767
+|     Comment: 
+|          // Used by NetErrorTabHelper to update DNS error pages with probe results.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3340
+|     Comment: 
+|         /**
+|                 * This provides the handlers for the templating engine. The key is used as
+|                 * the attribute name and the value is the function that gets called for every
+|                 * single node that has this attribute.
+|                 * @type {!Object}
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 579
+|     Comment: 
+|         /* Don't allow overflow when in a subframe. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 773
+|     Comment: 
+|          // Given the classList property of an element, adds an icon class to the list
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3293
+|     Comment: 
+|         /**
+|                   * Checks that the given value has the given type.
+|                   * @param {string} id The id of the value (only used for error message).
+|                   * @param {*} value The value to check the type on.
+|                   * @param {string} type The type we expect |value| to be.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2809
+|     Comment: 
+|         /**
+|              * Update the cloud position.
+|              * @param {number} speed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 612
+|     Comment: 
+|         /* Show details only when hovering. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 894
+|     Comment: 
+|          // Copyright (c) 2014 The Chromium Authors. All rights reserved.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1105
+|     Comment: 
+|         /**
+|              * Setting individual settings for debugging.
+|              * @param {string} setting
+|              * @param {*} value
+|              */
+|     
+|     Path: http://192.168.162.165:8080/
+|     Line number: 190
+|     Comment: 
+|         /*********media query starts ***********/
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2455
+|     Comment: 
+|          // Reached max height
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2058
+|     Comment: 
+|          //   | |<->| |   | |<--->| |   | |<----->| |
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 962
+|     Comment: 
+|         /**
+|            * Default game width.
+|            * @const
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 400
+|     Comment: 
+|         /* Don't use the subframe error div when the error is in a main frame. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3105
+|     Comment: 
+|         /**
+|              * Add a new obstacle.
+|              * @param {number} currentSpeed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3265
+|     Comment: 
+|         /** @type {number} */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2894
+|     Comment: 
+|         /**
+|              * Return the crop x position of a type.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1889
+|     Comment: 
+|          // Simple outer bounds check.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 899
+|     Comment: 
+|         /**
+|            * T-Rex runner.
+|            * @param {string} outerContainerId Outer containing element id.
+|            * @param {object} opt_config
+|            * @constructor
+|            * @export
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2935
+|     Comment: 
+|         /**
+|              * Update the horizon line.
+|              * @param {number} deltaTime
+|              * @param {number} speed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1501
+|     Comment: 
+|          // Speed drop, activated only when jump key is not pressed.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3166
+|     Comment: 
+|         /** @constructor */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 869
+|     Comment: 
+|          // Hide the details button if there are no details to show.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2961
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Horizon background class.
+|            * @param {HTMLCanvasElement} canvas
+|            * @param {Array.<HTMLImageElement>} images
+|            * @param {object} dimensions Canvas dimensions.
+|            * @param {number} gapCoefficient
+|            * @constructor
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 907
+|     Comment: 
+|          // Singleton
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2360
+|     Comment: 
+|         /**
+|              * Draw the t-rex to a particular position.
+|              * @param {number} x
+|              * @param {number} y
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1637
+|     Comment: 
+|         /**
+|              * Play a sound.
+|              * @param {SoundBuffer} soundBuffer
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2740
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Cloud background item.
+|            * Similar to an obstacle object but without collision boxes.
+|            * @param {HTMLCanvasElement} canvas Canvas element.
+|            * @param {Image} cloudImg
+|            * @param {number} containerWidth
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2556
+|     Comment: 
+|          // Flash duration in milliseconds.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1083
+|     Comment: 
+|         /**
+|            * Runner event names.
+|            * @enum {string}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1798
+|     Comment: 
+|         /**
+|              * Update the panel dimensions.
+|              * @param {number} width New canvas width.
+|              * @param {number} opt_height Optional new canvas height.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1072
+|     Comment: 
+|         /**
+|            * Key code mapping.
+|            * @enum {object}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2559
+|     Comment: 
+|          // Flash iterations for achievement animation.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1022
+|     Comment: 
+|         /**
+|            * CSS class names.
+|            * @enum {string}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 36
+|     Comment: 
+|         <!-- Outer and inner divs are needed both for margins and sizing. -->
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2825
+|     Comment: 
+|         /**
+|              * Check if the cloud is visible on the stage.
+|              * @return {boolean}
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1337
+|     Comment: 
+|          // Handle tabbing off the page. Pause the current game.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2901
+|     Comment: 
+|         /**
+|              * Draw the horizon line.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2122
+|     Comment: 
+|         /**
+|              * Check if obstacle is visible.
+|              * @return {boolean} Whether the obstacle is in the game area.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1626
+|     Comment: 
+|         /**
+|              * Pause the game if the tab is not in focus.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2779
+|     Comment: 
+|         /**
+|              * Initialise the cloud. Sets the Cloud height.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 855
+|     Comment: 
+|          // Sets up the proper button layout for the current platform.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2037
+|     Comment: 
+|         /**
+|              * Initialise the DOM for the obstacle.
+|              * @param {number} speed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2130
+|     Comment: 
+|         /**
+|              * Make a copy of the collision boxes, since these will change based on
+|              * obstacle type and size.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3245
+|     Comment: 
+|         /**
+|                   * As above, but also makes sure that the value is a boolean.
+|                   * @param {string} id The key that identifies the desired boolean.
+|                   * @return {boolean} The corresponding boolean value.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3412
+|     Comment: 
+|          // In case we set innerHTML (ignoring others) we need to
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2542
+|     Comment: 
+|         /**
+|            * Distance meter config.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 954
+|     Comment: 
+|          // Images.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2469
+|     Comment: 
+|         /**
+|              * Set the speed drop. Immediately cancels the current jump.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2547
+|     Comment: 
+|          // Number of digits.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1303
+|     Comment: 
+|          // CSS animation definition.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 618
+|     Comment: 
+|         /* TODO(mmenke): See if overflow: no-display works better, once supported. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3413
+|     Comment: 
+|          // recursively check the content.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1843
+|     Comment: 
+|          // Game over text from sprite.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3403
+|     Comment: 
+|          // element.foo.bar.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 796
+|     Comment: 
+|          // Does a search using |baseSearchUrl| and the text in the search box.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1578
+|     Comment: 
+|          // Update the high score.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3039
+|     Comment: 
+|         /**
+|              * Update the cloud positions.
+|              * @param {number} deltaTime
+|              * @param {number} currentSpeed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1453
+|     Comment: 
+|          // Mouse.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2060
+|     Comment: 
+|          //   |_|___|_|   |_|_____|_|   |_|_______|_|
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 740
+|     Comment: 
+|          // found in the LICENSE file.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1668
+|     Comment: 
+|          // Query the various pixel ratios
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1439
+|     Comment: 
+|         /**
+|              * Bind relevant key / mouse / touch listeners.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2524
+|     Comment: 
+|         /**
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2450
+|     Comment: 
+|          // Minimum height has been reached.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 761
+|     Comment: 
+|          // easier to support platforms that load the error page via different
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 807
+|     Comment: 
+|          // This can't be done with XHRs because XHRs are cancelled on navigation
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3268
+|     Comment: 
+|         /**
+|                   * Override values in loadTimeData with the values found in |replacements|.
+|                   * @param {Object} replacements The dictionary object of keys to replace.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3195
+|     Comment: 
+|         /**
+|                   * @param {string} id An ID of a value that might exist.
+|                   * @return {boolean} True if |id| is a key in the dictionary.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 391
+|     Comment: 
+|         /* Copyright 2013 The Chromium Authors. All rights reserved.
+|         * Use of this source code is governed by a BSD-style license that can be
+|         * found in the LICENSE file. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1810
+|     Comment: 
+|         /**
+|              * Draw the panel.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1213
+|     Comment: 
+|          // Distance meter
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1694
+|     Comment: 
+|         /**
+|            * Get random number.
+|            * @param {number} min
+|            * @param {number} max
+|            * @param {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1897
+|     Comment: 
+|          // Adjust the box to actual positions.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1556
+|     Comment: 
+|         /**
+|              * Game over state.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1233
+|     Comment: 
+|         /**
+|              * Create the touch controller. A div that covers whole screen.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2196
+|     Comment: 
+|          // Position when on the ground.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 486
+|     Comment: 
+|         /* Prevents a space between controls. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1716
+|     Comment: 
+|         /**
+|            * Create canvas element.
+|            * @param {HTMLElement} container Element to append canvas to.
+|            * @param {number} width
+|            * @param {number} height
+|            * @param {string} opt_classname
+|            * @return {HTMLCanvasElement}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3402
+|     Comment: 
+|          // Allow a property of the form '.foo.bar' to assign a value into
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3164
+|     Comment: 
+|          // Expose this type globally as a temporary work around until
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3150
+|     Comment: 
+|          // Copyright (c) 2012 The Chromium Authors. All rights reserved.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 762
+|     Comment: 
+|          // mechanisms (Currently just iOS).
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2061
+|     Comment: 
+|          //
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3100
+|     Comment: 
+|          // Create new obstacles.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2422
+|     Comment: 
+|         /**
+|              * Jump is complete, falling down.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3281
+|     Comment: 
+|         /**
+|                   * Checks condition, displays error message if expectation fails.
+|                   * @param {*} condition The condition to check for truthiness.
+|                   * @param {string} message The message to display if the check fails.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2618
+|     Comment: 
+|          // Left of the current score.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3082
+|     Comment: 
+|          // Clean up existing obstacles.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3075
+|     Comment: 
+|          // Obstacles, move to Horizon layer.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3062
+|     Comment: 
+|          // Remove expired clouds.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3055
+|     Comment: 
+|          // Check for adding a new cloud.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2310
+|     Comment: 
+|         /**
+|              * Setter for the jump velocity.
+|              * The approriate drop velocity is also set.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2990
+|     Comment: 
+|          // Obstacles
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 804
+|     Comment: 
+|          // service.  If |trackingId| is negative, the element does not come from the
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2818
+|     Comment: 
+|          // Mark as removeable if no longer in the canvas.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2083
+|     Comment: 
+|          // Sprite
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2693
+|     Comment: 
+|          // Draw the digits if not flashing.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1904
+|     Comment: 
+|          // Draw boxes for debug.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2635
+|     Comment: 
+|         /**
+|              * Covert pixel distance to a 'real' distance.
+|              * @param {number} distance Pixel distance ran.
+|              * @return {number} The 'real' distance ran.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2675
+|     Comment: 
+|          // Control flashing of the score on reaching acheivement.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2409
+|     Comment: 
+|         /**
+|              * Initialise a jump.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2055
+|     Comment: 
+|          // Central box is adjusted to the size as one box.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2667
+|     Comment: 
+|          // Create a string representation of the distance with leading 0.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2764
+|     Comment: 
+|         /**
+|            * Cloud object config.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2608
+|     Comment: 
+|          // For high DPI we 2x source values.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1161
+|     Comment: 
+|          // Async, so no guarantee of order in array.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1884
+|     Comment: 
+|          // Debug outer box
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2553
+|     Comment: 
+|          // Used for conversion from pixel distance to a scaled unit.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2550
+|     Comment: 
+|          // Distance that causes achievement animation.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1169
+|     Comment: 
+|         /**
+|              * Sets the game speed. Adjust the speed accordingly if on a smaller screen.
+|              * @param {number} opt_speed
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 884
+|     Comment: 
+|          // Add a main message paragraph.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2263
+|     Comment: 
+|         /**
+|            * Blinking coefficient.
+|            * @const
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2592
+|     Comment: 
+|         /**
+|              * Draw a digit to canvas.
+|              * @param {number} digitPos Position of the digit.
+|              * @param {number} value Digit value 0-9.
+|              * @param {boolean} opt_highScore Whether drawing the high score.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1276
+|     Comment: 
+|          // Outer container and distance meter.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 987
+|     Comment: 
+|         /**
+|            * Default game configuration.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3022
+|     Comment: 
+|         /**
+|              * @param {number} deltaTime
+|              * @param {number} currentSpeed
+|              * @param {boolean} updateObstacles Used as an override to prevent
+|              *     the obstacles from being updated / added. This happens in the
+|              *     ease in section.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2183
+|     Comment: 
+|         /******************************************************************************
+|             /**
+|            * T-rex game character.
+|            * @param {HTMLCanvas} canvas
+|            * @param {HTMLImage} image Character image.
+|            * @constructor
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3173
+|     Comment: 
+|         /**
+|                   * Sets the backing object.
+|                   *
+|                   * Note that there is no getter for |data_| to discourage abuse of the form:
+|                   *
+|                   *     var value = loadTimeData.data()['key'];
+|                   *
+|                   * @param {Object} value The de-serialized page data.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2402
+|     Comment: 
+|          // Set new random delay to blink.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1524
+|     Comment: 
+|          // Check that enough time has elapsed before allowing jump key to restart.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1762
+|     Comment: 
+|          //******************************************************************************
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2327
+|     Comment: 
+|          // Update the status.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2205
+|     Comment: 
+|          // Current status.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3148
+|     Comment: 
+|          // Gitmicks found and fixed this
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1035
+|     Comment: 
+|         /**
+|            * Image source urls.
+|            * @enum {array.<object>}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2492
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Handles displaying the distance meter.
+|            * @param {!HTMLCanvasElement} canvas
+|            * @param {!HTMLImage} spriteSheet Image sprite.
+|            * @param {number} canvasWidth
+|            * @constructor
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1294
+|     Comment: 
+|         /**
+|              * Play the game intro.
+|              * Canvas container width expands out to the full width.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 803
+|     Comment: 
+|          // Use to track clicks on elements generated by the navigation correction
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2565
+|     Comment: 
+|         /**
+|              * Initialise the distance meter to '00000'.
+|              * @param {number} width Canvas width in px.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2295
+|     Comment: 
+|         /**
+|              * T-rex player initaliser.
+|              * Sets the t-rex to blink at random intervals.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2059
+|     Comment: 
+|          //   | | 1 | |   | |  2  | |   | |   3   | |
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2044
+|     Comment: 
+|          // Only allow sizing if we're at the right speed.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 951
+|     Comment: 
+|          // Global web audio context for playing sounds.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2238
+|     Comment: 
+|         /**
+|            * Used in collision detection.
+|            * @type {Array.<CollisionBox>}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1894
+|     Comment: 
+|          // Detailed axis aligned box check.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 805
+|     Comment: 
+|          // correction service.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3187
+|     Comment: 
+|         /**
+|                   * Returns a JsEvalContext for |data_|.
+|                   * @returns {JsEvalContext}
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 547
+|     Comment: 
+|         /* Increase line height at higher resolutions. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1871
+|     Comment: 
+|          // border around the t-rex and obstacles.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 106
+|     Comment: 
+|         <!-- partial -->
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1870
+|     Comment: 
+|          // Adjustments are made to the bounding box as there is a 1 pixel white
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 635
+|     Comment: 
+|         /* details-button is special; it's a <button> element that looks like a link. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2108
+|     Comment: 
+|         /**
+|              * Calculate a random gap size.
+|              * - Minimum gap gets wider as speed increses
+|              * @param {number} gapCoefficient
+|              * @param {number} speed
+|              * @return {number} The gap size.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2717
+|     Comment: 
+|         /**
+|              * Set the highscore as a array string.
+|              * Position of char in the sprite: H - 10, I - 11.
+|              * @param {number} distance Distance ran in pixels.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1217
+|     Comment: 
+|          // Draw t-rex
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 111
+|     Comment: 
+|         /* Copyright 2014 The Chromium Authors. All rights reserved.
+|         Use of this source code is governed by a BSD-style license that can be
+|         found in the LICENSE file. */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1673
+|     Comment: 
+|          // Upscale the canvas if the two ratios don't match
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1146
+|     Comment: 
+|         /**
+|              * Load and decode base 64 encoded sounds.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1584
+|     Comment: 
+|          // Reset the time clock.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2860
+|     Comment: 
+|         /**
+|            * Horizon line dimensions.
+|            * @enum {number}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 821
+|     Comment: 
+|          // between implementing these in trunk chromium and implementing them in
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1264
+|     Comment: 
+|          // Redraw the elements back onto the canvas.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1459
+|     Comment: 
+|         /**
+|              * Remove all listeners.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/
+|     Line number: 176
+|     Comment: 
+|         /* Firefox 19+ */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2872
+|     Comment: 
+|         /**
+|              * Set the source dimensions of the horizon line.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 808
+|     Comment: 
+|          // start, and because these are cross-site requests.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2146
+|     Comment: 
+|         /**
+|            * Obstacle definitions.
+|            * minGap: minimum pixel space betweeen obstacles.
+|            * multipleSpeed: Speed at which multiples are allowed.
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1373
+|     Comment: 
+|          // First jump triggers the intro.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1079
+|     Comment: 
+|          // Enter
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1078
+|     Comment: 
+|          // Down
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 947
+|     Comment: 
+|          // Sound FX.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2270
+|     Comment: 
+|         /**
+|            * Animation config for different states.
+|            * @enum {object}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2432
+|     Comment: 
+|         /**
+|              * Update frame for a jump.
+|              * @param {number} deltaTime
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 739
+|     Comment: 
+|          // Use of this source code is governed by a BSD-style license that can be
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1993
+|     Comment: 
+|         /******************************************************************************
+|           
+|             /**
+|            * Obstacle.
+|            * @param {HTMLCanvasCtx} canvasCtx
+|            * @param {Obstacle.type} type
+|            * @param {image} obstacleImg Image sprite.
+|            * @param {Object} dimensions
+|            * @param {number} gapCoefficient Mutipler in determining the gap.
+|            * @param {number} speed
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 813
+|     Comment: 
+|          // Called when an <a> tag generated by the navigation correction service is
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2071
+|     Comment: 
+|         /**
+|              * Draw and crop based on size.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 774
+|     Comment: 
+|          // and removes the previously-
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2788
+|     Comment: 
+|         /**
+|              * Draw the cloud.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3347
+|     Comment: 
+|         /**
+|                 * This handler sets the textContent of the element.
+|                 * @param {HTMLElement} element The node to modify.
+|                 * @param {string} key The name of the value in the dictionary.
+|                 * @param {LoadTimeData} dictionary The dictionary of strings to draw from.
+|                 */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2645
+|     Comment: 
+|         /**
+|              * Update the distance meter.
+|              * @param {number} deltaTime
+|              * @param {number} distance
+|              * @return {boolean} Whether the acheivement sound fx should be played.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1419
+|     Comment: 
+|         /**
+|              * Event handler.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 668
+|     Comment: 
+|         /* Offline page */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3154
+|     Comment: 
+|         /**
+|                   * @fileoverview This file defines a singleton which provides access to all data
+|                   * that is available as soon as the page's resources are loaded (before DOM
+|                   * content has finished loading). This data includes both localized strings and
+|                   * any data that is important to have ready from a very early stage (e.g. things
+|                   * that must be displayed right away).
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 815
+|     Comment: 
+|          // be updated if new data is added to jstdata.
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3215
+|     Comment: 
+|         /**
+|                   * As above, but also makes sure that the value is a string.
+|                   * @param {string} id The key that identifies the desired string.
+|                   * @return {string} The corresponding string value.
+|                   */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 2477
+|     Comment: 
+|         /**
+|              * Reset the t-rex to running at start of game.
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 974
+|     Comment: 
+|         /** @const */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1061
+|     Comment: 
+|         /**
+|            * Sound FX. Reference to the ID of the audio tag on interstitial page.
+|            * @enum {string}
+|            */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 1509
+|     Comment: 
+|         /**
+|              * Process key up.
+|              * @param {Event} e
+|              */
+|     
+|     Path: http://192.168.162.165:8080/?url=http://localhost
+|     Line number: 3128
+|     Comment: 
+|         /**
+|              * Update the canvas width and scaling.
+|              * @param {number} width Canvas width.
+|              * @param {number} height Canvas height.
+|_             */
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Fri, 28 Jan 2022 16:03:23 GMT; -2s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.162.165
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://192.168.162.165:8080/chrome-extension:/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| http-headers: 
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 21
+|   Server: Werkzeug/2.0.1 Python/3.9.0
+|   Date: Fri, 28 Jan 2022 16:03:20 GMT
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Page: /index.php was not found. Try with an existing file.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET OPTIONS HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 9a2985ab13862403a3e5d1b2ddd08bef
+|_Credits query returned unknown hash 9a2985ab13862403a3e5d1b2ddd08bef
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  https://cdnjs.cloudflare.com:443/ajax/libs/jquery/2.2.2/jquery.min.js
+|_http-security-headers: 
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+| http-sql-injection: 
+|   Possible sqli for queries:
+|_    http://192.168.162.165:8080/?url=http%3a%2f%2flocalhost%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Super Secure Web Browser
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 28 11:16:42 2022 -- 1 IP address (1 host up) scanned in 820.67 seconds
