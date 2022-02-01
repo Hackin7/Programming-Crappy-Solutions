@@ -1,0 +1,91 @@
+WhatWeb report for http://192.168.177.143:8080
+Status    : 200 OK
+Title     : Home | NodeBB
+IP        : 192.168.177.143
+Country   : RESERVED, ZZ
+
+Summary   : Script[application/json,text/javascript], X-Powered-By[NodeBB], HTML5, JQuery, UncommonHeaders[x-dns-prefetch-control,x-download-options,x-content-type-options,referrer-policy], X-XSS-Protection[1; mode=block], Open-Graph-Protocol[website], X-Frame-Options[SAMEORIGIN], Cookies[_csrf]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : _csrf
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Website     : http://jquery.com/
+
+[ Open-Graph-Protocol ]
+	The Open Graph protocol enables you to integrate your Web
+	pages into the social graph. It is currently designed for
+	Web pages representing profiles of real-world things .
+	things like movies, sports teams, celebrities, and
+	restaurants. Including Open Graph tags on your Web page,
+	makes your page equivalent to a Facebook Page.
+
+	Version      : website
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : application/json,text/javascript
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-dns-prefetch-control,x-download-options,x-content-type-options,referrer-policy (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : NodeBB (from x-powered-by string)
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 1; mode=block
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-DNS-Prefetch-Control: off
+	X-Frame-Options: SAMEORIGIN
+	X-Download-Options: noopen
+	X-Content-Type-Options: nosniff
+	X-XSS-Protection: 1; mode=block
+	Referrer-Policy: strict-origin-when-cross-origin
+	X-Powered-By: NodeBB
+	set-cookie: _csrf=Q--9-T3v6A8oXJnUVlVWiu04; Path=/
+	Content-Type: text/html; charset=utf-8
+	ETag: W/"5ea9-9Mn2adey2W9bI+k8luC5NPO7WNg"
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Date: Mon, 31 Jan 2022 14:22:17 GMT
+	Connection: close
+	Transfer-Encoding: chunked
+
+

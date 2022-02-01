@@ -1,0 +1,64 @@
+WhatWeb report for http://192.168.177.59:5000
+Status    : 200 OK
+Title     : Hello, world!
+IP        : 192.168.177.59
+Country   : RESERVED, ZZ
+
+Summary   : HTML5, HTTPServer[Werkzeug/1.0.1 Python/3.5.3], Bootstrap[4.4.1], Werkzeug[1.0.1], Cookies[session], HttpOnly[session], Python[3.5.3]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Version      : 4.4.1
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : session
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Werkzeug/1.0.1 Python/3.5.3 (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie
+	response header and the browser supports it then the cookie
+	cannot be accessed through client side script - More Info:
+	http://en.wikipedia.org/wiki/HTTP_cookie
+
+	String       : session
+
+[ Python ]
+	Python is a programming language that lets you work more
+	quickly and integrate your systems more effectively. You
+	can learn to use Python and see almost immediate gains in
+	productivity and lower maintenance costs.
+
+	Version      : 3.5.3
+	Website     : http://www.python.org/
+
+[ Werkzeug ]
+	Werkzeug is a WSGI utility library for Python.
+
+	Version      : 1.0.1
+	Website     : http://werkzeug.pocoo.org/
+
+HTTP Headers:
+	HTTP/1.0 200 OK
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 897
+	Set-Cookie: session=add0adbd-94c5-4c46-a877-4f42ab33a75d; Expires=Thu, 03-Mar-2022 10:23:17 GMT; HttpOnly; Path=/
+	Server: Werkzeug/1.0.1 Python/3.5.3
+	Date: Mon, 31 Jan 2022 10:23:17 GMT
+
+

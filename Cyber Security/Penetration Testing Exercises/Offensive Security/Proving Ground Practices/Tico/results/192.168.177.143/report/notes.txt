@@ -1,0 +1,24 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] http-proxy found on tcp/8080.
+
+
+
+[*] memcached found on tcp/11211.
+
+
+
+[*] mongodb found on tcp/27017.
+
+
+

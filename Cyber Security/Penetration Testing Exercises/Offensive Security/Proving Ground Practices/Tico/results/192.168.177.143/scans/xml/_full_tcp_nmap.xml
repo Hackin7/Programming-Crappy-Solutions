@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Jan 31 09:20:24 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/xml/_full_tcp_nmap.xml&quot; 192.168.177.143 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/xml/_full_tcp_nmap.xml&quot; 192.168.177.143" start="1643638824" startstr="Mon Jan 31 09:20:24 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643638826"/>
+<taskend task="NSE" time="1643638826"/>
+<taskbegin task="NSE" time="1643638826"/>
+<taskend task="NSE" time="1643638826"/>
+<taskbegin task="NSE" time="1643638826"/>
+<taskend task="NSE" time="1643638826"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643638826"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643638826"/>
+<taskbegin task="SYN Stealth Scan" time="1643638827"/>
+<taskprogress task="SYN Stealth Scan" time="1643638858" percent="2.36" remaining="1282" etc="1643640140"/>
+<taskprogress task="SYN Stealth Scan" time="1643638888" percent="8.09" remaining="694" etc="1643639581"/>
+<taskprogress task="SYN Stealth Scan" time="1643638918" percent="16.51" remaining="461" etc="1643639378"/>
+<taskprogress task="SYN Stealth Scan" time="1643638948" percent="19.65" remaining="495" etc="1643639443"/>
+<taskprogress task="SYN Stealth Scan" time="1643638978" percent="26.23" remaining="425" etc="1643639403"/>
+<taskprogress task="SYN Stealth Scan" time="1643639014" percent="32.33" remaining="392" etc="1643639405"/>
+<taskprogress task="SYN Stealth Scan" time="1643639053" percent="38.52" remaining="361" etc="1643639414"/>
+<taskprogress task="SYN Stealth Scan" time="1643639083" percent="44.12" remaining="325" etc="1643639407"/>
+<taskprogress task="SYN Stealth Scan" time="1643639113" percent="49.77" remaining="289" etc="1643639402"/>
+<taskprogress task="SYN Stealth Scan" time="1643639143" percent="56.71" remaining="242" etc="1643639384"/>
+<taskprogress task="SYN Stealth Scan" time="1643639179" percent="62.57" remaining="211" etc="1643639390"/>
+<taskprogress task="SYN Stealth Scan" time="1643639212" percent="68.00" remaining="182" etc="1643639393"/>
+<taskprogress task="SYN Stealth Scan" time="1643639242" percent="74.85" remaining="140" etc="1643639381"/>
+<taskprogress task="SYN Stealth Scan" time="1643639272" percent="82.07" remaining="98" etc="1643639369"/>
+<taskprogress task="SYN Stealth Scan" time="1643639302" percent="89.77" remaining="55" etc="1643639356"/>
+<taskend task="SYN Stealth Scan" time="1643639336" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1643639336"/>
+<taskend task="Service scan" time="1643639617" extrainfo="6 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643639626"/>
+<taskend task="Traceroute" time="1643639626"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643639626"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643639626"/>
+<taskbegin task="NSE" time="1643639626"/>
+<taskend task="NSE" time="1643639634"/>
+<taskbegin task="NSE" time="1643639634"/>
+<taskend task="NSE" time="1643639635"/>
+<taskbegin task="NSE" time="1643639635"/>
+<taskend task="NSE" time="1643639635"/>
+<host starttime="1643638827" endtime="1643639635"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.177.143" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65428">
+<extrareasons reason="no-responses" count="65428"/>
+</extraports>
+<extraports state="closed" count="101">
+<extrareasons reason="resets" count="101"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    2 ftp      ftp          4096 Feb 01  2021 pub"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.177&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.177&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 85:35:fb:ca:b3:4b:30:d8:e5:8e:b3:25:58:6c:6e:70 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDtXHpFK7WIinYk72khOxHjkwHc2VfAlkPEEUYJH+qcg7XRETxE67aA00jkJfZqzutmsPSJaPfzoJi2WNc7wHv3V+Fq2fNR5BVjll0Gnd/l0J6tlSZ5iL80mfZHK0MbSHBG0rY/AtjKkrkSN697K/Ygpivr5uufhLHZpLVXKcnP1GMsO72BPiDzRQ2ncVsV0ZejQ/m1K2DRVTy+xsdx+pft76qnBZprh5RWuJtIsL6fA23fr4pSAiQ4ElS/vHH02DGZ6PRjJYQNREH9kbMgF6VLI1eHpQubz5vx/7o2EwvFmM9LaQ4Gqryfjye/Z8yS6L7DdJCSKAJt3aucOWjem8GJ&#xa;  256 de:67:a2:32:d5:ff:56:6e:82:5b:6a:17:7d:e2:44:ac (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGE6s/w6Ru4bHrYQLL1yGbhZa/TjQZY2q0bixGR+GF+zIijxexuZ4umQSvnQO018K8WVj73uKTcMwqKHghvSwqE=&#xa;  256 3a:a3:20:3b:32:cd:83:6f:dc:23:a2:66:f9:0f:c6:d3 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ1s5UWvBLLeULmcvB/WiXX+COPZdgnMdJPaAOH/6V+J"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDtXHpFK7WIinYk72khOxHjkwHc2VfAlkPEEUYJH+qcg7XRETxE67aA00jkJfZqzutmsPSJaPfzoJi2WNc7wHv3V+Fq2fNR5BVjll0Gnd/l0J6tlSZ5iL80mfZHK0MbSHBG0rY/AtjKkrkSN697K/Ygpivr5uufhLHZpLVXKcnP1GMsO72BPiDzRQ2ncVsV0ZejQ/m1K2DRVTy+xsdx+pft76qnBZprh5RWuJtIsL6fA23fr4pSAiQ4ElS/vHH02DGZ6PRjJYQNREH9kbMgF6VLI1eHpQubz5vx/7o2EwvFmM9LaQ4Gqryfjye/Z8yS6L7DdJCSKAJt3aucOWjem8GJ</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">8535fbcab34b30d8e58eb325586c6e70</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGE6s/w6Ru4bHrYQLL1yGbhZa/TjQZY2q0bixGR+GF+zIijxexuZ4umQSvnQO018K8WVj73uKTcMwqKHghvSwqE=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">de67a232d5ff566e825b6a177de244ac</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJ1s5UWvBLLeULmcvB/WiXX+COPZdgnMdJPaAOH/6V+J</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">3aa3203b32cd836fdc23a266f90fc6d3</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 7706F0D305F7F82674AA0A16B0D7CDC9"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.14.0 (Ubuntu)"><elem>nginx/1.14.0 (Ubuntu)</elem>
+</script><script id="http-title" output="Markdown Editor"><elem key="title">Markdown Editor</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" servicefp="SF-Port8080-TCP:V=7.91%I=9%D=1/31%Time=61F7F22F%P=x86_64-pc-linux-gnu%r(GetRequest,31C4,&quot;HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nset-cookie:\x20_csrf=kQE8OlSGBt2XdHRzQ86Jxlls;\x20Path=/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2024233\r\nETag:\x20W/\&quot;5ea9-Kro6taa3l26\+hZXLCysr0qIQjQM\&quot;\r\nVary:\x20Accept-Encoding\r\nDate:\x20Mon,\x2031\x20Jan\x202022\x2014:29:02\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en-GB\&quot;\x20data-dir=\&quot;ltr\&quot;\x20style=\&quot;direction:\x20ltr;\&quot;\x20\x20&gt;\n&lt;head&gt;\n\t&lt;title&gt;Home\x20\|\x20NodeBB&lt;/title&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width&amp;#x3D;device-width,\x20initial-scale&amp;#x3D;1\.0\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\t&lt;meta\x20property=\&quot;og:site_name\&quot;\x20content=\&quot;No&quot;)%r(HTTPOptions,1BF,&quot;HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nAllow:\x20GET,HEAD\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x208\r\nETag:\x20W/\&quot;8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg\&quot;\r\nVary:\x20Accept-Encoding\r\nDate:\x20Mon,\x2031\x20Jan\x202022\x2014:29:03\x20GMT\r\nConnection:\x20close\r\n\r\nGET,HEAD&quot;)%r(RTSPRequest,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(FourOhFourRequest,31C4,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nset-cookie:\x20_csrf=MmrQgzIPPKGoOEYg5dw9cSPn;\x20Path=/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2015431\r\nETag:\x20W/\&quot;3c47-fkG3wN9buMUY0umrivSW5vO1UmI\&quot;\r\nVary:\x20Accept-Encoding\r\nDate:\x20Mon,\x2031\x20Jan\x202022\x2014:29:04\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en-GB\&quot;\x20data-dir=\&quot;ltr\&quot;\x20style=\&quot;direction:\x20ltr;\&quot;\x20\x20&gt;\n&lt;head&gt;\n\t&lt;title&gt;Not\x20Found\x20\|\x20NodeBB&lt;/title&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width&amp;#x3D;device-width,\x20initial-scale&amp;#x3D;1\.0\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;apple-mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;mobile-web-app-capable\&quot;\x20content=\&quot;yes\&quot;\x20/&gt;\n\t&lt;meta\x20property=\&quot;og:site_name\&quot;&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    set-cookie: _csrf=MmrQgzIPPKGoOEYg5dw9cSPn; Path=/&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 15431&#xa;    ETag: W/&quot;3c47-fkG3wN9buMUY0umrivSW5vO1UmI&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:04 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en-GB&quot; data-dir=&quot;ltr&quot; style=&quot;direction: ltr;&quot; &gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Not Found | NodeBB&lt;/title&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width&amp;#x3D;device-width, initial-scale&amp;#x3D;1.0&quot; /&gt;&#xa;    &lt;meta name=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta property=&quot;og:site_name&quot;&#xa;  GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    set-cookie: _csrf=kQE8OlSGBt2XdHRzQ86Jxlls; Path=/&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 24233&#xa;    ETag: W/&quot;5ea9-Kro6taa3l26+hZXLCysr0qIQjQM&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:02 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en-GB&quot; data-dir=&quot;ltr&quot; style=&quot;direction: ltr;&quot; &gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Home | NodeBB&lt;/title&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width&amp;#x3D;device-width, initial-scale&amp;#x3D;1.0&quot; /&gt;&#xa;    &lt;meta name=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta property=&quot;og:site_name&quot; content=&quot;No&#xa;  HTTPOptions: &#xa;    HTTP/1.1 200 OK&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    Allow: GET,HEAD&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 8&#xa;    ETag: W/&quot;8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:03 GMT&#xa;    Connection: close&#xa;    GET,HEAD&#xa;  RTSPRequest: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    set-cookie: _csrf=MmrQgzIPPKGoOEYg5dw9cSPn; Path=/&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 15431&#xa;    ETag: W/&quot;3c47-fkG3wN9buMUY0umrivSW5vO1UmI&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:04 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en-GB&quot; data-dir=&quot;ltr&quot; style=&quot;direction: ltr;&quot; &gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Not Found | NodeBB&lt;/title&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width&amp;#x3D;device-width, initial-scale&amp;#x3D;1.0&quot; /&gt;&#xa;    &lt;meta name=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta property=&quot;og:site_name&quot;</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    set-cookie: _csrf=kQE8OlSGBt2XdHRzQ86Jxlls; Path=/&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 24233&#xa;    ETag: W/&quot;5ea9-Kro6taa3l26+hZXLCysr0qIQjQM&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:02 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en-GB&quot; data-dir=&quot;ltr&quot; style=&quot;direction: ltr;&quot; &gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Home | NodeBB&lt;/title&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width&amp;#x3D;device-width, initial-scale&amp;#x3D;1.0&quot; /&gt;&#xa;    &lt;meta name=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;&#xa;    &lt;meta property=&quot;og:site_name&quot; content=&quot;No</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 200 OK&#xa;    X-DNS-Prefetch-Control: off&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    X-Download-Options: noopen&#xa;    X-Content-Type-Options: nosniff&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Referrer-Policy: strict-origin-when-cross-origin&#xa;    X-Powered-By: NodeBB&#xa;    Allow: GET,HEAD&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 8&#xa;    ETag: W/&quot;8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg&quot;&#xa;    Vary: Accept-Encoding&#xa;    Date: Mon, 31 Jan 2022 14:29:03 GMT&#xa;    Connection: close&#xa;    GET,HEAD</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close</elem>
+</script><script id="http-favicon" output="Unknown favicon MD5: 152FF7D5AE5BDB84B33D4DCA31EB7CD3"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="3 disallowed entries &#xa;/admin/ /reset/ /compose"/><script id="http-title" output="Home | NodeBB"><elem key="title">Home | NodeBB</elem>
+</script></port>
+<port protocol="tcp" portid="11211"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="memcached" product="Memcached" version="1.5.6" extrainfo="uptime 1381 seconds; Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:memcached:memcached:1.5.6</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="27017"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mongodb" product="MongoDB" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest, OfficeScan, apple-iphoto, docker, hazelcast-http, metasploit-msgrpc: &#xa;    HTTP/1.0 200 OK&#xa;    Connection: close&#xa;    Content-Type: text/plain&#xa;    Content-Length: 85&#xa;    looks like you are trying to access MongoDB over HTTP on the native driver port.&#xa;  mongodb: &#xa;    errmsg&#xa;    command serverStatus requires authentication&#xa;    code&#xa;    codeName&#xa;    Unauthorized"><elem key="FourOhFourRequest, GetRequest, OfficeScan, apple-iphoto, docker, hazelcast-http, metasploit-msgrpc">&#xa;    HTTP/1.0 200 OK&#xa;    Connection: close&#xa;    Content-Type: text/plain&#xa;    Content-Length: 85&#xa;    looks like you are trying to access MongoDB over HTTP on the native driver port.</elem>
+<elem key="mongodb">&#xa;    errmsg&#xa;    command serverStatus requires authentication&#xa;    code&#xa;    codeName&#xa;    Unauthorized</elem>
+</script><script id="mongodb-databases" output="&#xa;  ok = 0.0&#xa;  codeName = Unauthorized&#xa;  code = 13&#xa;  errmsg = command listDatabases requires authentication&#xa;"/><script id="mongodb-info" output="&#xa;  MongoDB Build info&#xa;    openssl&#xa;      running = OpenSSL 1.1.1  11 Sep 2018&#xa;      compiled = OpenSSL 1.1.1  11 Sep 2018&#xa;    javascriptEngine = mozjs&#xa;    modules&#xa;    sysInfo = deprecated&#xa;    ok = 1.0&#xa;    maxBsonObjectSize = 16777216&#xa;    storageEngines&#xa;      2 = mmapv1&#xa;      1 = ephemeralForTest&#xa;      0 = devnull&#xa;      3 = wiredTiger&#xa;    debug = false&#xa;    buildEnvironment&#xa;      cxx = /opt/mongodbtoolchain/v2/bin/g++: g++ (GCC) 5.4.0&#xa;      target_arch = x86_64&#xa;      cc = /opt/mongodbtoolchain/v2/bin/gcc: gcc (GCC) 5.4.0&#xa;      linkflags = -pthread -Wl,-z,now -rdynamic -Wl,-&#45;fatal-warnings -fstack-protector-strong -fuse-ld=gold -Wl,-&#45;build-id -Wl,-&#45;hash-style=gnu -Wl,-z,noexecstack -Wl,-&#45;warn-execstack -Wl,-z,relro&#xa;      target_os = linux&#xa;      distarch = x86_64&#xa;      ccflags = -fno-omit-frame-pointer -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch -Werror -O2 -Wno-unused-local-typedefs -Wno-unused-function -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-missing-braces -fstack-protector-strong -fno-builtin-memcmp&#xa;      distmod = ubuntu1804&#xa;      cxxflags = -Woverloaded-virtual -Wno-maybe-uninitialized -std=c++14&#xa;    version = 4.0.22&#xa;    versionArray&#xa;      2 = 22&#xa;      1 = 0&#xa;      0 = 4&#xa;      3 = 0&#xa;    allocator = tcmalloc&#xa;    bits = 64&#xa;    gitVersion = 1741806fb46c161a1d42870f6e98f5100d196315&#xa;  Server status&#xa;    ok = 0.0&#xa;    codeName = Unauthorized&#xa;    code = 13&#xa;    errmsg = command serverStatus requires authentication&#xa;"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="40000"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="93" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="93" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="91" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="88" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.0" accuracy="88" line="67026">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.11 - 4.1" accuracy="88" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="88" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="88" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="88" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=1/31%OT=21%CT=40000%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F7F353%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10C%TI=Z%II=I%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1112967" lastboot="Tue Jan 18 12:24:28 2022"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="617315DF,4DDD9672,E9EC0472,599F698F,D1A07FF4,B12BCABE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="4256583A,425658A0,42565905,425659F9,42565A5E,42565AC9"/>
+<trace port="40061" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="250.73"/>
+<hop ttl="2" ipaddr="192.168.177.143" rtt="250.88"/>
+</trace>
+<times srtt="246866" rttvar="7881" to="278390"/>
+</host>
+<taskbegin task="NSE" time="1643639635"/>
+<taskend task="NSE" time="1643639635"/>
+<taskbegin task="NSE" time="1643639635"/>
+<taskend task="NSE" time="1643639635"/>
+<taskbegin task="NSE" time="1643639635"/>
+<taskend task="NSE" time="1643639635"/>
+<runstats><finished time="1643639635" timestr="Mon Jan 31 09:33:55 2022" summary="Nmap done at Mon Jan 31 09:33:55 2022; 1 IP address (1 host up) scanned in 812.19 seconds" elapsed="812.19" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

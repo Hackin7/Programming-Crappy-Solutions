@@ -1,0 +1,24 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] erlang-node found on tcp/65000.
+
+
+
+[*] epmd found on tcp/4369.
+
+
+
+[*] http found on tcp/15672.
+
+
+

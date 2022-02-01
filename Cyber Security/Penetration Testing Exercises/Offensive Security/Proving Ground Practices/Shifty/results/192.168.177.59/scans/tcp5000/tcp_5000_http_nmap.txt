@@ -1,0 +1,82 @@
+# Nmap 7.91 scan initiated Mon Jan 31 05:23:15 2022 as: nmap -vv --reason -Pn -T4 -sV -p 5000 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shifty/results/192.168.177.59/scans/tcp5000/tcp_5000_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shifty/results/192.168.177.59/scans/tcp5000/xml/tcp_5000_http_nmap.xml" 192.168.177.59
+Nmap scan report for 192.168.177.59
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-31 05:23:16 EST for 1166s
+
+PORT     STATE SERVICE REASON         VERSION
+5000/tcp open  http    syn-ack ttl 63 Werkzeug httpd 1.0.1 (Python 3.5.3)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.177.59
+|   url                               method
+|_  http://192.168.177.59:5000/login  FORM
+|_http-chrono: Request times for /; avg: 599.33ms; min: 564.92ms; max: 645.10ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 31 Jan 2022 10:23:28 GMT; 0s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| http-headers: 
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 897
+|   Set-Cookie: session=212ce434-f1ba-420d-b6a8-148ca0fff742; Expires=Thu, 03-Mar-2022 10:23:27 GMT; HttpOnly; Path=/
+|   Server: Werkzeug/1.0.1 Python/3.5.3
+|   Date: Mon, 31 Jan 2022 10:23:27 GMT
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Page: /index.php was not found. Try with an existing file.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS GET
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 4bd985e70175d5bd2254bfa3b61660d4
+|_Credits query returned unknown hash 4bd985e70175d5bd2254bfa3b61660d4
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Werkzeug/1.0.1 Python/3.5.3
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 2
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Hello, world!
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 31 05:42:42 2022 -- 1 IP address (1 host up) scanned in 1167.72 seconds

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Jan 30 17:02:59 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/autorecon/results/192.168.139.68/scans/tcp80/tcp_80_http_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/tcp80/xml/tcp_80_http_nmap.xml 192.168.139.68 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/autorecon/results/192.168.139.68/scans/tcp80/tcp_80_http_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/tcp80/xml/tcp_80_http_nmap.xml 192.168.139.68" start="1643533379" startstr="Sun Jan 30 17:02:59 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643533379"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643533382"/>
+<taskbegin task="SYN Stealth Scan" time="1643533382"/>
+<taskend task="SYN Stealth Scan" time="1643533383" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643533383"/>
+<taskend task="Service scan" time="1643533389" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643533389"/>
+<taskend task="NSE" time="1643533417"/>
+<taskbegin task="NSE" time="1643533417"/>
+<taskend task="NSE" time="1643533418"/>
+<taskbegin task="NSE" time="1643533418"/>
+<taskend task="NSE" time="1643533418"/>
+<host starttime="1643533382" endtime="1643533418"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.139.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-headers" output="&#xa;  Date: Sun, 30 Jan 2022 09:03:18 GMT&#xa;  Server: Apache/2.4.25 (Debian)&#xa;  Last-Modified: Fri, 24 Apr 2020 09:41:19 GMT&#xa;  ETag: &quot;29cd-5a4062ae58563&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 10701&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-grep" output="&#xa;  (1) http://192.168.139.68:80/apache2;repeatmerged=0&quot;: &#xa;    (1) ip: &#xa;      + 192.168.139.68"><table key="(1) http://192.168.139.68:80/apache2;repeatmerged=0&quot;">
+<table key="(1) ip">
+<elem>+ 192.168.139.68</elem>
+</table>
+</table>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.139.68&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.139.68:80/apache2;repeatmerged=0&quot;&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.139.68:80/manual&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-title" output="Apache2 Debian Default Page: It works"><elem key="title">Apache2 Debian Default Page: It works</elem>
+</script><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-php-version" output="Logo query returned unknown hash e2620d4a5a0f8d80dd4b16de59af981f&#xa;Credits query returned unknown hash e2620d4a5a0f8d80dd4b16de59af981f"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.139.68&#xa;    &#xa;    Path: http://192.168.139.68:80/&#xa;    Line number: 196&#xa;    Comment: &#xa;        &lt;!-&#45;      &lt;div class=&quot;table_of_contents floating_element&quot;&gt;&#xa;                &lt;div class=&quot;section_header section_header_grey&quot;&gt;&#xa;                  TABLE OF CONTENTS&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#changes&quot;&gt;Changes&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#scope&quot;&gt;Scope&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#files&quot;&gt;Config files&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;              &lt;/div&gt;&#xa;        -&#45;&gt;&#xa;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-date" output="Sun, 30 Jan 2022 09:03:10 GMT; -30m01s from local time."><elem key="date">2022-01-30T08:33:10+00:00</elem>
+<elem key="delta">-1801.0</elem>
+</script><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET POST OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /icons/&#xa;      png: 1&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /icons/&#xa;  Total files found (by extension):&#xa;    Other: 1; png: 1&#xa;"/><script id="http-chrono" output="Request times for /; avg: 592.47ms; min: 569.53ms; max: 610.21ms"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-security-headers" output=""></script></port>
+</ports>
+<times srtt="251668" rttvar="251668" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1643533418"/>
+<taskend task="NSE" time="1643533418"/>
+<taskbegin task="NSE" time="1643533418"/>
+<taskend task="NSE" time="1643533418"/>
+<taskbegin task="NSE" time="1643533418"/>
+<taskend task="NSE" time="1643533418"/>
+<runstats><finished time="1643533418" timestr="Sun Jan 30 17:03:38 2022" summary="Nmap done at Sun Jan 30 17:03:38 2022; 1 IP address (1 host up) scanned in 39.70 seconds" elapsed="39.70" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

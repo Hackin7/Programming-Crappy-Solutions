@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Jan 30 17:02:59 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.139.68/scans/tcp21/tcp_21_ftp_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/tcp21/xml/tcp_21_ftp_nmap.xml 192.168.139.68 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.139.68/scans/tcp21/tcp_21_ftp_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/tcp21/xml/tcp_21_ftp_nmap.xml 192.168.139.68" start="1643533379" startstr="Sun Jan 30 17:02:59 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="NSE" time="1643533379"/>
+<taskend task="NSE" time="1643533379"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643533379"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643533381"/>
+<taskbegin task="SYN Stealth Scan" time="1643533381"/>
+<taskend task="SYN Stealth Scan" time="1643533382" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1643533382"/>
+<taskend task="Service scan" time="1643533382" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1643533382"/>
+<taskend task="NSE" time="1643533384"/>
+<taskbegin task="NSE" time="1643533384"/>
+<taskend task="NSE" time="1643533386"/>
+<taskbegin task="NSE" time="1643533386"/>
+<taskend task="NSE" time="1643533386"/>
+<host starttime="1643533381" endtime="1643533386"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.139.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="banner" output="220 (vsFTPd 3.0.3)"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.139&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.139&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 PackageKit&#xa;drwxr-xr-x    5 ftp      ftp          4096 Apr 24  2020 apache2&#xa;drwxr-xr-x    5 ftp      ftp          4096 Sep 21  2020 apt&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 dbus&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 dhcp&#xa;drwxr-xr-x    7 ftp      ftp          4096 Sep 21  2020 dpkg&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 20  2020 git&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 initramfs-tools&#xa;drwxr-xr-x    2 ftp      ftp          4096 May 07  2020 logrotate&#xa;drwxr-xr-x    2 ftp      ftp          4096 Sep 08  2019 misc&#xa;drwxr-xr-x    5 ftp      ftp          4096 Mar 10  2021 mysql&#xa;drwxr-xr-x    2 ftp      ftp          4096 Jul 13  2017 os-prober&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 pam&#xa;drwxr-xr-x    4 ftp      ftp          4096 Apr 24  2020 php&#xa;drwx-&#45;&#45;&#45;&#45;&#45;    3 ftp      ftp          4096 Apr 24  2020 polkit-1&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 python&#xa;drwxr-xr-x    3 ftp      ftp          4096 May 08  2020 rabbitmq&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 sgml-base&#xa;drwxr-xr-x    6 ftp      ftp          4096 Apr 22  2020 systemd&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 30  2020 ucf&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 22  2020 vim&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 vmware&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 xml-core"/></port>
+</ports>
+<times srtt="250659" rttvar="250659" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1643533386"/>
+<taskend task="NSE" time="1643533386"/>
+<taskbegin task="NSE" time="1643533386"/>
+<taskend task="NSE" time="1643533386"/>
+<taskbegin task="NSE" time="1643533386"/>
+<taskend task="NSE" time="1643533386"/>
+<runstats><finished time="1643533386" timestr="Sun Jan 30 17:03:06 2022" summary="Nmap done at Sun Jan 30 17:03:06 2022; 1 IP address (1 host up) scanned in 7.46 seconds" elapsed="7.46" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

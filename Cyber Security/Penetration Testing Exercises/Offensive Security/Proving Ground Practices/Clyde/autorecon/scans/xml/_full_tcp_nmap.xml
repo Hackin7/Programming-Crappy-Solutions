@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Jan 30 16:56:37 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /root/autorecon/results/192.168.139.68/scans/_full_tcp_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/xml/_full_tcp_nmap.xml 192.168.139.68 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /root/autorecon/results/192.168.139.68/scans/_full_tcp_nmap.txt -oX /root/autorecon/results/192.168.139.68/scans/xml/_full_tcp_nmap.xml 192.168.139.68" start="1643532997" startstr="Sun Jan 30 16:56:37 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643532997"/>
+<taskend task="NSE" time="1643532997"/>
+<taskbegin task="NSE" time="1643532997"/>
+<taskend task="NSE" time="1643532997"/>
+<taskbegin task="NSE" time="1643532997"/>
+<taskend task="NSE" time="1643532997"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643532997"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643532998"/>
+<taskbegin task="SYN Stealth Scan" time="1643532998"/>
+<taskprogress task="SYN Stealth Scan" time="1643533029" percent="6.63" remaining="437" etc="1643533465"/>
+<taskprogress task="SYN Stealth Scan" time="1643533059" percent="19.50" remaining="252" etc="1643533311"/>
+<taskprogress task="SYN Stealth Scan" time="1643533089" percent="35.64" remaining="165" etc="1643533253"/>
+<taskprogress task="SYN Stealth Scan" time="1643533119" percent="54.45" remaining="102" etc="1643533220"/>
+<taskprogress task="SYN Stealth Scan" time="1643533149" percent="72.54" remaining="58" etc="1643533206"/>
+<taskend task="SYN Stealth Scan" time="1643533192" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1643533192"/>
+<taskend task="Service scan" time="1643533540" extrainfo="6 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643533549"/>
+<taskend task="Traceroute" time="1643533549"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643533549"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643533551"/>
+<taskbegin task="NSE" time="1643533551"/>
+<taskend task="NSE" time="1643533559"/>
+<taskbegin task="NSE" time="1643533559"/>
+<taskend task="NSE" time="1643533561"/>
+<taskbegin task="NSE" time="1643533561"/>
+<taskend task="NSE" time="1643533561"/>
+<host starttime="1643532998" endtime="1643533561"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.139.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65517">
+<extrareasons reason="no-response" count="65517" proto="tcp" ports="1-20,23-52,54-79,81-4368,4370-15671,15673-39999,40011-64999,65001-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 PackageKit&#xa;drwxr-xr-x    5 ftp      ftp          4096 Apr 24  2020 apache2&#xa;drwxr-xr-x    5 ftp      ftp          4096 Sep 21  2020 apt&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 dbus&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 dhcp&#xa;drwxr-xr-x    7 ftp      ftp          4096 Sep 21  2020 dpkg&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 20  2020 git&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 initramfs-tools&#xa;drwxr-xr-x    2 ftp      ftp          4096 May 07  2020 logrotate&#xa;drwxr-xr-x    2 ftp      ftp          4096 Sep 08  2019 misc&#xa;drwxr-xr-x    5 ftp      ftp          4096 Mar 10  2021 mysql&#xa;drwxr-xr-x    2 ftp      ftp          4096 Jul 13  2017 os-prober&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 pam&#xa;drwxr-xr-x    4 ftp      ftp          4096 Apr 24  2020 php&#xa;drwx-&#45;&#45;&#45;&#45;&#45;    3 ftp      ftp          4096 Apr 24  2020 polkit-1&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 python&#xa;drwxr-xr-x    3 ftp      ftp          4096 May 08  2020 rabbitmq&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 sgml-base&#xa;drwxr-xr-x    6 ftp      ftp          4096 Apr 22  2020 systemd&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 30  2020 ucf&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 22  2020 vim&#xa;drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 vmware&#xa;drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 xml-core"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.139&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.139&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 df:63:99:a4:cf:79:00:c8:b1:d6:67:97:81:4d:4f:af (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCr/d1s9Q0w6n653cUossuwd+RzMkHkrS949i2W4XTYfr4AwaDRL7lY1m/2ivtq9BwDgiX89B8j8De8KCE8a3MHayMet3wkJ5qqEGOJHC6neK/m8PQFgqh2E4Rnkibj7GhL0VAB6pe3CX3krfyp5EPI3jOakGk4CABQPQhSNICkM3b9mg9Ygozh/+M/2hNeAfqFvruzmsWr3Lu8HbCqxT4edZFSAgD+QVTaaGwOIqd62PdoWrqPW/aHMEjlhUogNtKQf9KnrvItsNRdJ9XW2W43ON8CastlXe0+08qQCzDE5B6ZiJgaNKHGkfBtLwRMQI+d4O86h9KHuVlLDiO2a/ir&#xa;  256 bd:9b:35:41:34:a2:5a:4c:fa:1b:9f:f1:36:f3:6a:fd (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGpueXIR7Jzq4HWLhVFpJJPnh0pS2dUbQmQ8iMUKm2I+ZQe1on2TmBtGmEfflRS5fQq8Wvz5w79VQRvQFLmwXac=&#xa;  256 db:96:ee:8d:29:2b:f4:a3:58:b2:fb:c1:ac:65:92:48 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBqsvA0Cq307uCVNl2PINBX6HEkeisjNyUVOHdXQT5xt"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCr/d1s9Q0w6n653cUossuwd+RzMkHkrS949i2W4XTYfr4AwaDRL7lY1m/2ivtq9BwDgiX89B8j8De8KCE8a3MHayMet3wkJ5qqEGOJHC6neK/m8PQFgqh2E4Rnkibj7GhL0VAB6pe3CX3krfyp5EPI3jOakGk4CABQPQhSNICkM3b9mg9Ygozh/+M/2hNeAfqFvruzmsWr3Lu8HbCqxT4edZFSAgD+QVTaaGwOIqd62PdoWrqPW/aHMEjlhUogNtKQf9KnrvItsNRdJ9XW2W43ON8CastlXe0+08qQCzDE5B6ZiJgaNKHGkfBtLwRMQI+d4O86h9KHuVlLDiO2a/ir</elem>
+<elem key="fingerprint">df6399a4cf7900c8b1d66797814d4faf</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGpueXIR7Jzq4HWLhVFpJJPnh0pS2dUbQmQ8iMUKm2I+ZQe1on2TmBtGmEfflRS5fQq8Wvz5w79VQRvQFLmwXac=</elem>
+<elem key="fingerprint">bd9b354134a25a4cfa1b9ff136f36afd</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIBqsvA0Cq307uCVNl2PINBX6HEkeisjNyUVOHdXQT5xt</elem>
+<elem key="fingerprint">db96ee8d292bf4a358b2fbc1ac659248</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-title" output="Apache2 Debian Default Page: It works"><elem key="title">Apache2 Debian Default Page: It works</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET POST OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script></port>
+<port protocol="tcp" portid="4369"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="epmd" product="Erlang Port Mapper Daemon" method="probed" conf="10"/><script id="epmd-info" output="&#xa;  epmd_port: 4369&#xa;  nodes: &#xa;    rabbit: 65000"><elem key="epmd_port">4369</elem>
+<table key="nodes">
+<elem key="rabbit">65000</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="15672"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Cowboy httpd" method="probed" conf="10"><cpe>cpe:/a:ninenines:cowboy</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-favicon" output="Unknown favicon MD5: DDC75B0899DBF4F7B15290A77FBEB8FF"/><script id="http-title" output="RabbitMQ Management"><elem key="title">RabbitMQ Management</elem>
+</script><script id="http-server-header" output="Cowboy"><elem>Cowboy</elem>
+</script></port>
+<port protocol="tcp" portid="40000"><state state="closed" reason="reset" reason_ttl="63"/><service name="safetynetp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40001"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40002"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40003"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40004"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="40005"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40006"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="40007"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="40008"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="40009"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="40010"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="65000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="erlang-node" product="Erlang Distribution Node" extrainfo="Node name: rabbit@clyd" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="53"/>
+<osmatch name="Linux 3.11 - 4.1" accuracy="93" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="93" line="67787">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="90" line="64337">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="90" line="63783">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="88" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="88" line="55638">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 3.8" accuracy="88" line="65245">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8" accuracy="88" line="66180">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.8</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="88" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="88"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="87" line="42259">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="87"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=1/30%OT=21%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F654F9%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=106%GCD=1%ISR=108%TI=Z%II=I%TS=8)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="546" lastboot="Sun Jan 30 16:56:55 2022"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="2A6564B1,B7DB4824,DE07463F,925D79DC,ACE4C8BA,B4A4CC92"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="20322,2033B,20354,2036D,20386,2039F"/>
+<trace port="53" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="252.40"/>
+<hop ttl="2" ipaddr="192.168.139.68" rtt="252.42"/>
+</trace>
+<times srtt="243308" rttvar="18199" to="316104"/>
+</host>
+<taskbegin task="NSE" time="1643533561"/>
+<taskend task="NSE" time="1643533561"/>
+<taskbegin task="NSE" time="1643533561"/>
+<taskend task="NSE" time="1643533561"/>
+<taskbegin task="NSE" time="1643533561"/>
+<taskend task="NSE" time="1643533561"/>
+<runstats><finished time="1643533561" timestr="Sun Jan 30 17:06:01 2022" summary="Nmap done at Sun Jan 30 17:06:01 2022; 1 IP address (1 host up) scanned in 564.42 seconds" elapsed="564.42" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

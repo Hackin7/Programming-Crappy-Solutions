@@ -1,0 +1,67 @@
+WhatWeb report for http://192.168.177.59:80
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.177.59
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.10.3], Script, X-UA-Compatible[ie=edge], MetaGenerator[Gatsby 2.22.15], HTML5, HTTPServer[nginx/1.10.3], Open-Graph-Protocol[business.business]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : nginx/1.10.3 (from server string)
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its
+	value.
+
+	String       : Gatsby 2.22.15
+
+[ Open-Graph-Protocol ]
+	The Open Graph protocol enables you to integrate your Web
+	pages into the social graph. It is currently designed for
+	Web pages representing profiles of real-world things .
+	things like movies, sports teams, celebrities, and
+	restaurants. Including Open Graph tags on your Web page,
+	makes your page equivalent to a Facebook Page.
+
+	Version      : business.business
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : ie=edge
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.10.3
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.10.3
+	Date: Mon, 31 Jan 2022 10:23:17 GMT
+	Content-Type: text/html
+	Last-Modified: Tue, 02 Jun 2020 04:48:29 GMT
+	Transfer-Encoding: chunked
+	Connection: close
+	ETag: W/"5ed5da1d-e638"
+	Content-Encoding: gzip
+
+

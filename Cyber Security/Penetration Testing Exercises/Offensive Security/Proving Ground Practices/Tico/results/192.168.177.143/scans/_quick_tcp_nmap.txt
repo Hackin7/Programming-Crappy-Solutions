@@ -1,0 +1,193 @@
+# Nmap 7.91 scan initiated Mon Jan 31 09:20:25 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Tico/results/192.168.177.143/scans/xml/_quick_tcp_nmap.xml" 192.168.177.143
+Nmap scan report for 192.168.177.143
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-01-31 09:20:27 EST for 97s
+Not shown: 996 filtered ports
+Reason: 996 no-responses
+PORT     STATE SERVICE    REASON         VERSION
+21/tcp   open  ftp        syn-ack ttl 63 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 ftp      ftp          4096 Feb 01  2021 pub
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.49.177
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh        syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 85:35:fb:ca:b3:4b:30:d8:e5:8e:b3:25:58:6c:6e:70 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDtXHpFK7WIinYk72khOxHjkwHc2VfAlkPEEUYJH+qcg7XRETxE67aA00jkJfZqzutmsPSJaPfzoJi2WNc7wHv3V+Fq2fNR5BVjll0Gnd/l0J6tlSZ5iL80mfZHK0MbSHBG0rY/AtjKkrkSN697K/Ygpivr5uufhLHZpLVXKcnP1GMsO72BPiDzRQ2ncVsV0ZejQ/m1K2DRVTy+xsdx+pft76qnBZprh5RWuJtIsL6fA23fr4pSAiQ4ElS/vHH02DGZ6PRjJYQNREH9kbMgF6VLI1eHpQubz5vx/7o2EwvFmM9LaQ4Gqryfjye/Z8yS6L7DdJCSKAJt3aucOWjem8GJ
+|   256 de:67:a2:32:d5:ff:56:6e:82:5b:6a:17:7d:e2:44:ac (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGE6s/w6Ru4bHrYQLL1yGbhZa/TjQZY2q0bixGR+GF+zIijxexuZ4umQSvnQO018K8WVj73uKTcMwqKHghvSwqE=
+|   256 3a:a3:20:3b:32:cd:83:6f:dc:23:a2:66:f9:0f:c6:d3 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ1s5UWvBLLeULmcvB/WiXX+COPZdgnMdJPaAOH/6V+J
+80/tcp   open  http       syn-ack ttl 63 nginx 1.14.0 (Ubuntu)
+|_http-favicon: Unknown favicon MD5: 7706F0D305F7F82674AA0A16B0D7CDC9
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: Markdown Editor
+8080/tcp open  http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=BmXCmfJ_gjROHqX-CXmG-PXB; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 15431
+|     ETag: W/"3c47-Z02fFmu5HxDsH8D1w9GPmU68HFU"
+|     Vary: Accept-Encoding
+|     Date: Mon, 31 Jan 2022 14:20:50 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Not Found | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_name"
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     set-cookie: _csrf=txpWyRTf1NFvw0QRP99pubEz; Path=/
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 24233
+|     ETag: W/"5ea9-w48C29xiT/nzSpr+zw+CY3RchIg"
+|     Vary: Accept-Encoding
+|     Date: Mon, 31 Jan 2022 14:20:48 GMT
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="en-GB" data-dir="ltr" style="direction: ltr;" >
+|     <head>
+|     <title>Home | NodeBB</title>
+|     <meta name="viewport" content="width&#x3D;device-width, initial-scale&#x3D;1.0" />
+|     <meta name="content-type" content="text/html; charset=UTF-8" />
+|     <meta name="apple-mobile-web-app-capable" content="yes" />
+|     <meta name="mobile-web-app-capable" content="yes" />
+|     <meta property="og:site_name" content="No
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-DNS-Prefetch-Control: off
+|     X-Frame-Options: SAMEORIGIN
+|     X-Download-Options: noopen
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Powered-By: NodeBB
+|     Allow: GET,HEAD
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 8
+|     ETag: W/"8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg"
+|     Vary: Accept-Encoding
+|     Date: Mon, 31 Jan 2022 14:20:49 GMT
+|     Connection: close
+|     GET,HEAD
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+|_http-favicon: Unknown favicon MD5: 152FF7D5AE5BDB84B33D4DCA31EB7CD3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 3 disallowed entries 
+|_/admin/ /reset/ /compose
+|_http-title: Home | NodeBB
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=9%D=1/31%Time=61F7F041%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,31C4,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=b
+SF:lock\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powere
+SF:d-By:\x20NodeBB\r\nset-cookie:\x20_csrf=txpWyRTf1NFvw0QRP99pubEz;\x20Pa
+SF:th=/\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x2024233\r\nETag:\x20W/\"5ea9-w48C29xiT/nzSpr\+zw\+CY3RchIg\"\r\nVary:
+SF:\x20Accept-Encoding\r\nDate:\x20Mon,\x2031\x20Jan\x202022\x2014:20:48\x
+SF:20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=
+SF:\"en-GB\"\x20data-dir=\"ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\
+SF:n<head>\n\t<title>Home\x20\|\x20NodeBB</title>\n\t<meta\x20name=\"viewp
+SF:ort\"\x20content=\"width&#x3D;device-width,\x20initial-scale&#x3D;1\.0\
+SF:"\x20/>\n\t<meta\x20name=\"content-type\"\x20content=\"text/html;\x20ch
+SF:arset=UTF-8\"\x20/>\n\t<meta\x20name=\"apple-mobile-web-app-capable\"\x
+SF:20content=\"yes\"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable\"\x20
+SF:content=\"yes\"\x20/>\n\t<meta\x20property=\"og:site_name\"\x20content=
+SF:\"No")%r(HTTPOptions,1BF,"HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Cont
+SF:rol:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x2
+SF:0noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201
+SF:;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\
+SF:r\nX-Powered-By:\x20NodeBB\r\nAllow:\x20GET,HEAD\r\nContent-Type:\x20te
+SF:xt/html;\x20charset=utf-8\r\nContent-Length:\x208\r\nETag:\x20W/\"8-ZRA
+SF:f8oNBS3Bjb/SU2GYZCmbtmXg\"\r\nVary:\x20Accept-Encoding\r\nDate:\x20Mon,
+SF:\x2031\x20Jan\x202022\x2014:20:49\x20GMT\r\nConnection:\x20close\r\n\r\
+SF:nGET,HEAD")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:nection:\x20close\r\n\r\n")%r(FourOhFourRequest,31C4,"HTTP/1\.1\x20404\
+SF:x20Not\x20Found\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options
+SF::\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Polic
+SF:y:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nset
+SF:-cookie:\x20_csrf=BmXCmfJ_gjROHqX-CXmG-PXB;\x20Path=/\r\nContent-Type:\
+SF:x20text/html;\x20charset=utf-8\r\nContent-Length:\x2015431\r\nETag:\x20
+SF:W/\"3c47-Z02fFmu5HxDsH8D1w9GPmU68HFU\"\r\nVary:\x20Accept-Encoding\r\nD
+SF:ate:\x20Mon,\x2031\x20Jan\x202022\x2014:20:50\x20GMT\r\nConnection:\x20
+SF:close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en-GB\"\x20data-dir=\"
+SF:ltr\"\x20style=\"direction:\x20ltr;\"\x20\x20>\n<head>\n\t<title>Not\x2
+SF:0Found\x20\|\x20NodeBB</title>\n\t<meta\x20name=\"viewport\"\x20content
+SF:=\"width&#x3D;device-width,\x20initial-scale&#x3D;1\.0\"\x20/>\n\t<meta
+SF:\x20name=\"content-type\"\x20content=\"text/html;\x20charset=UTF-8\"\x2
+SF:0/>\n\t<meta\x20name=\"apple-mobile-web-app-capable\"\x20content=\"yes\
+SF:"\x20/>\n\t<meta\x20name=\"mobile-web-app-capable\"\x20content=\"yes\"\
+SF:x20/>\n\t<meta\x20property=\"og:site_name\"");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X|4.X (91%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4.4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 3.12 (91%), Linux 4.4 (91%), Linux 4.9 (91%), Linux 3.10 (86%), Linux 3.10 - 4.11 (85%), Linux 3.11 - 4.1 (85%), Linux 3.2 - 4.9 (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/31%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61F7F08C%P=x86_64-pc-linux-gnu)
+SEQ(SP=FF%GCD=1%ISR=10D%TI=Z%II=I%TS=A)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 12.873 days (since Tue Jan 18 12:24:28 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   252.69 ms 192.168.49.1
+2   252.72 ms 192.168.177.143
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 31 09:22:04 2022 -- 1 IP address (1 host up) scanned in 100.88 seconds

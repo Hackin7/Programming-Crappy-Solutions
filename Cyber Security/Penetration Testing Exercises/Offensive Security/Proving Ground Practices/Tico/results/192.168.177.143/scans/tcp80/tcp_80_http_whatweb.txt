@@ -1,0 +1,45 @@
+WhatWeb report for http://192.168.177.143:80
+Status    : 200 OK
+Title     : Markdown Editor
+IP        : 192.168.177.143
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.14.0], Script, HTML5, HTTPServer[Ubuntu Linux][nginx/1.14.0 (Ubuntu)]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Ubuntu Linux
+	String       : nginx/1.14.0 (Ubuntu) (from server string)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.14.0
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.14.0 (Ubuntu)
+	Date: Mon, 31 Jan 2022 14:22:17 GMT
+	Content-Type: text/html
+	Last-Modified: Mon, 01 Feb 2021 02:10:22 GMT
+	Transfer-Encoding: chunked
+	Connection: close
+	ETag: W/"6017630e-1114"
+	Content-Encoding: gzip
+
+
