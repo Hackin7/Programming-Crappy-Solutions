@@ -1,0 +1,32 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] msrpc found on tcp/135.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] microsoft-ds found on tcp/445.
+
+
+
+[*] ms-wbt-server found on tcp/3389.
+
+
+
+[*] http found on tcp/2290.
+
+
+
+[*] http found on tcp/5985.
+
+
+

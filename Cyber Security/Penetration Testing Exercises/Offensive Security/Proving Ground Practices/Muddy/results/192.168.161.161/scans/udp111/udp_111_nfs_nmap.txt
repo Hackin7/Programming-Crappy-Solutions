@@ -1,0 +1,17 @@
+# Nmap 7.91 scan initiated Sun Feb 13 00:27:24 2022 as: nmap -vv --reason -Pn -T4 -sU -sV -p 111 "--script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/udp111/udp_111_nfs_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/udp111/xml/udp_111_nfs_nmap.xml" 192.168.161.161
+Nmap scan report for 192.168.161.161
+Host is up, received user-set.
+Scanned at 2022-02-13 00:27:25 EST for 2s
+
+PORT    STATE SERVICE REASON       VERSION
+111/udp open  rpcbind udp-response 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 13 00:27:27 2022 -- 1 IP address (1 host up) scanned in 2.64 seconds

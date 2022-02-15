@@ -1,0 +1,21 @@
+# Nmap 7.91 scan initiated Sun Feb 13 00:25:34 2022 as: nmap -vv --reason -Pn -T4 -sV -p 25 "--script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp25/tcp_25_smtp_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp25/xml/tcp_25_smtp_nmap.xml" 192.168.161.161
+Nmap scan report for 192.168.161.161
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-13 00:25:38 EST for 172s
+
+PORT   STATE SERVICE REASON         VERSION
+25/tcp open  smtp    syn-ack ttl 63 Exim smtpd
+| smtp-commands: muddy Hello nmap.scanme.org [192.168.49.161], SIZE 52428800, 8BITMIME, PIPELINING, CHUNKING, PRDR, HELP, 
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| smtp-vuln-cve2010-4344: 
+|   Exim version: 4.92
+|   Exim heap overflow vulnerability (CVE-2010-4344):
+|     Exim (CVE-2010-4344): NOT VULNERABLE
+|   Exim privileges escalation vulnerability (CVE-2010-4345):
+|     Exim (CVE-2010-4345): NOT VULNERABLE
+|_  To confirm and exploit the vulnerabilities, run with --script-args='smtp-vuln-cve2010-4344.exploit'
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 13 00:28:31 2022 -- 1 IP address (1 host up) scanned in 176.12 seconds

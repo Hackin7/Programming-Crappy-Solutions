@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Wed Jan 19 18:46:12 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/autorecon/results/192.168.58.70/scans/tcp135/tcp_135_rpc_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp135/xml/tcp_135_rpc_nmap.xml 192.168.58.70 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/autorecon/results/192.168.58.70/scans/tcp135/tcp_135_rpc_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp135/xml/tcp_135_rpc_nmap.xml 192.168.58.70" start="1642589172" startstr="Wed Jan 19 18:46:12 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="135"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642589173"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642589175"/>
+<taskbegin task="SYN Stealth Scan" time="1642589175"/>
+<taskend task="SYN Stealth Scan" time="1642589175" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642589175"/>
+<taskend task="Service scan" time="1642589182" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642589182"/>
+<taskend task="NSE" time="1642589197"/>
+<taskbegin task="NSE" time="1642589197"/>
+<taskend task="NSE" time="1642589197"/>
+<host starttime="1642589175" endtime="1642589197"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.58.70" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="168895" rttvar="168895" to="844475"/>
+</host>
+<taskbegin task="NSE" time="1642589197"/>
+<taskend task="NSE" time="1642589197"/>
+<taskbegin task="NSE" time="1642589197"/>
+<taskend task="NSE" time="1642589197"/>
+<runstats><finished time="1642589197" timestr="Wed Jan 19 18:46:37 2022" summary="Nmap done at Wed Jan 19 18:46:37 2022; 1 IP address (1 host up) scanned in 25.58 seconds" elapsed="25.58" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

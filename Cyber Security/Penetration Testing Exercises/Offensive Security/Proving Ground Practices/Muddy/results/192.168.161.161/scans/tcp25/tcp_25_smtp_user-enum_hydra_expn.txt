@@ -1,0 +1,54 @@
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2022-02-13 00:25:50
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 17 login tries (l:17/p:1), ~2 tries per task
+[DATA] attacking smtp-enum://192.168.161.161:25/expn
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+Warning: SMTP does not allow connecting: 421 Too many concurrent SMTP connections; please try again later.
+
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2022-02-13 00:26:11
+

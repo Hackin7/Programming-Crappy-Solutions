@@ -1,0 +1,14 @@
+403        8l       22w      211c http://192.168.161.116/.htpasswd
+403        8l       22w      211c http://192.168.161.116/.htaccess
+403        8l       22w      215c http://192.168.161.116/.htaccess.txt
+403        8l       22w      215c http://192.168.161.116/.htpasswd.txt
+403        8l       22w      216c http://192.168.161.116/.htaccess.html
+403        8l       22w      216c http://192.168.161.116/.htpasswd.html
+403        8l       22w      215c http://192.168.161.116/.htaccess.php
+403        8l       22w      215c http://192.168.161.116/.htaccess.asp
+403        8l       22w      216c http://192.168.161.116/.htaccess.aspx
+403        8l       22w      215c http://192.168.161.116/.htpasswd.php
+403        8l       22w      215c http://192.168.161.116/.htaccess.jsp
+403        8l       22w      215c http://192.168.161.116/.htpasswd.asp
+403        8l       22w      216c http://192.168.161.116/.htpasswd.aspx
+403        8l       22w      215c http://192.168.161.116/.htpasswd.jsp

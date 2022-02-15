@@ -1,0 +1,35 @@
+# Nmap 7.91 scan initiated Mon Feb 14 06:32:16 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/xml/_top_100_udp_nmap.xml" 192.168.90.170
+Increasing send delay for 192.168.90.170 from 0 to 50 due to 11 out of 19 dropped probes since last increase.
+Warning: 192.168.90.170 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.90.170 from 200 to 400 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 192.168.90.170 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+Nmap scan report for 192.168.90.170
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-14 06:32:17 EST for 177s
+Not shown: 94 closed ports
+Reason: 94 port-unreaches
+PORT     STATE         SERVICE        REASON      VERSION
+177/udp  open|filtered xdmcp          no-response
+443/udp  open|filtered https          no-response
+514/udp  open|filtered syslog         no-response
+1645/udp open|filtered radius         no-response
+2048/udp open|filtered dls-monitor    no-response
+5632/udp open|filtered pcanywherestat no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=2/14%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=620A3E72%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 49186/udp)
+HOP RTT       ADDRESS
+1   180.41 ms 192.168.49.1
+2   180.43 ms 192.168.90.170
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 06:35:14 2022 -- 1 IP address (1 host up) scanned in 178.13 seconds

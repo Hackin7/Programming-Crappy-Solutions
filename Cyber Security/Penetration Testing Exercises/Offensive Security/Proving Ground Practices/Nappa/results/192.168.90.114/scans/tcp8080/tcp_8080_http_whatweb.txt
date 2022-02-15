@@ -1,0 +1,75 @@
+WhatWeb report for http://192.168.90.114:8080
+Status    : 200 OK
+Title     : ForumOnRails
+IP        : 192.168.90.114
+Country   : RESERVED, ZZ
+
+Summary   : Script, HTML5, UncommonHeaders[x-content-type-options,x-download-options,x-permitted-cross-domain-policies,referrer-policy,x-request-id], X-XSS-Protection[1; mode=block], X-Frame-Options[SAMEORIGIN], Cookies[_forum_on_rails_session], HttpOnly[_forum_on_rails_session]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : _forum_on_rails_session
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie
+	response header and the browser supports it then the cookie
+	cannot be accessed through client side script - More Info:
+	http://en.wikipedia.org/wiki/HTTP_cookie
+
+	String       : _forum_on_rails_session
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : x-content-type-options,x-download-options,x-permitted-cross-domain-policies,referrer-policy,x-request-id (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the
+	HTTP header. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 1; mode=block
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Frame-Options: SAMEORIGIN
+	X-XSS-Protection: 1; mode=block
+	X-Content-Type-Options: nosniff
+	X-Download-Options: noopen
+	X-Permitted-Cross-Domain-Policies: none
+	Referrer-Policy: strict-origin-when-cross-origin
+	Content-Type: text/html; charset=utf-8
+	ETag: W/"fa456c01e229ccd54bfba640f0635139"
+	Cache-Control: max-age=0, private, must-revalidate
+	Set-Cookie: _forum_on_rails_session=QoKPmAgDmOQFhSh5KuwqRsKcTF%2FbFUxhEBsJe%2FllkFEeSu%2Fz2Bo9YfDoP7Hz9h%2B507cBrzHi7kkLotX4Rb6gXp9nIbbeWUTXLDx9HT55l9333NW9FpUFUIfvvDnzq4WvKh4O565KmSUbXl%2FEptWoi8946MPxydL1UBQhMVHLDeemcBydapS0fbJ7NHCwtusXUAelA%2FkLl3Zl3eYKUKytl1WNgjovVCXCd8WtN3VBLYMM1bWRoT8%2B6rqDS%2BBDRa7%2B8oZRCNCS4%2Be%2Bm9aEqRMjDSJMnzcQUgy%2F6tucCINd0Q%3D%3D--CQAWqsDxKJdjLtdK--4t33FpL6q%2Bfo8JPEUssfJw%3D%3D; path=/; HttpOnly
+	X-Request-Id: 2e33d029-b2e1-4938-bbaa-04765a6184e5
+	X-Runtime: 0.057363
+	Connection: close
+	Transfer-Encoding: chunked
+
+

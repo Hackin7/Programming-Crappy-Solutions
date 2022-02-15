@@ -1,0 +1,56 @@
+# Nmap 7.91 scan initiated Thu Feb  3 08:37:14 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/xml/_quick_tcp_nmap.xml" 192.168.94.54
+Nmap scan report for 192.168.94.54
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-02-03 08:37:22 EST for 38s
+Not shown: 996 filtered ports
+Reason: 996 no-responses
+PORT     STATE  SERVICE REASON         VERSION
+22/tcp   open   ssh     syn-ack ttl 63 OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 cd:88:cb:33:78:9a:bf:f0:31:57:d9:2f:ae:13:ee:db (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC08YEo4oAM7Auedmh2D9jfQTXm2+aKWqg6zPodroXzyRf5WTPVlC+EWhW3MGNx82RGyuRRa45WqJlB6ddr8H/6ShiVvFoxuzuJNfirL19Jg9WOSlvYdJfc3VopSvyAWcqu5HJ4RVrfzcYRMdvstC2nMj6i3MpYHqNq9tVm5zi/NrMGXnN8Z2kiAgbrORMvPqKzHmz6u855dVWihTfRf1bgL3jy9yDVOEojOa4gSGC8bliOv7aF/QEUvf9boXPOWEMOsw9n1A6sLIL9GkDhcbxWBGHM0FenNBNT4wM9HR8QFyUTxcWTP+LxtToclhzeFMA4TknB0F2NthOUUfnrgif
+|   256 fb:54:3b:ba:f6:68:57:81:e4:65:6e:24:9c:db:6d:8a (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGJ9qwjPnRA6t0jYK4kMTRBM7yr6JrdB9HLfS/9eVOVsMAH7Kxb73HqmXUG9HhASBFypOQAd2fBSiPmBF4vytJo=
+|   256 be:6e:25:d1:88:09:7e:33:40:b3:56:6a:b4:ce:16:0d (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPsjY9kVWtNgYRyIhryIUQtthPBX1w0nYzPUIFMpzuI6
+53/tcp   closed domain  reset ttl 63
+80/tcp   open   http    syn-ack ttl 63 Apache httpd 2.4.25 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: PHP Calculator
+3306/tcp open   mysql   syn-ack ttl 63 MariaDB (unauthorized)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Linux 3.11 - 4.1 (93%), Linux 4.4 (93%), Linux 3.16 (92%), Linux 3.13 (90%), Linux 3.2 - 3.8 (88%), Linux 3.8 (88%), WatchGuard Fireware 11.8 (88%), IPFire 2.11 firewall (Linux 2.6.32) (87%), Linux 4.9 (87%), Linux 3.10 - 3.16 (87%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=2/3%OT=22%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=61FBDAB8%P=x86_64-pc-linux-gnu)
+SEQ(SP=100%GCD=1%ISR=109%TI=Z%II=I%TS=8)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)
+ECN(R=N)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T1(R=N)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T5(R=N)
+T6(R=N)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+1   285.53 ms 192.168.49.1
+2   285.61 ms 192.168.94.54
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb  3 08:38:00 2022 -- 1 IP address (1 host up) scanned in 47.50 seconds

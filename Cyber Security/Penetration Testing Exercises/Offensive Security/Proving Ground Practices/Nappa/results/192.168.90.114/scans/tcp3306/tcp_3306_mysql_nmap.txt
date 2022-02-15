@@ -1,0 +1,23 @@
+# Nmap 7.91 scan initiated Mon Feb 14 10:33:02 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 192.168.90.114
+Nmap scan report for 192.168.90.114
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-02-14 10:33:04 EST for 269s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql?  syn-ack ttl 63
+|_mysql-empty-password: ERROR: Script execution failed (use -d to debug)
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.90' is not allowed to connect to this MariaDB server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_ssl-dh-params: ERROR: Script execution failed (use -d to debug)
+|_ssl-heartbleed: ERROR: Script execution failed (use -d to debug)
+|_ssl-poodle: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 10:37:33 2022 -- 1 IP address (1 host up) scanned in 271.77 seconds

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Feb 14 06:32:17 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.170 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.170" start="1644838337" startstr="Mon Feb 14 06:32:17 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644838337"/>
+<taskend task="NSE" time="1644838337"/>
+<taskbegin task="NSE" time="1644838337"/>
+<taskend task="NSE" time="1644838337"/>
+<taskbegin task="NSE" time="1644838337"/>
+<taskend task="NSE" time="1644838337"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644838337"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644838337"/>
+<taskbegin task="SYN Stealth Scan" time="1644838337"/>
+<taskprogress task="SYN Stealth Scan" time="1644838368" percent="5.22" remaining="564" etc="1644838931"/>
+<taskprogress task="SYN Stealth Scan" time="1644838398" percent="10.82" remaining="503" etc="1644838901"/>
+<taskprogress task="SYN Stealth Scan" time="1644838428" percent="16.80" remaining="451" etc="1644838879"/>
+<taskprogress task="SYN Stealth Scan" time="1644838458" percent="22.70" remaining="413" etc="1644838870"/>
+<taskprogress task="SYN Stealth Scan" time="1644838488" percent="28.26" remaining="384" etc="1644838871"/>
+<taskprogress task="SYN Stealth Scan" time="1644838521" percent="34.10" remaining="356" etc="1644838877"/>
+<taskprogress task="SYN Stealth Scan" time="1644838551" percent="39.79" remaining="324" etc="1644838875"/>
+<taskprogress task="SYN Stealth Scan" time="1644838665" percent="52.51" remaining="297" etc="1644838962"/>
+<taskprogress task="SYN Stealth Scan" time="1644838695" percent="57.62" remaining="264" etc="1644838958"/>
+<taskprogress task="SYN Stealth Scan" time="1644838959" percent="69.58" remaining="272" etc="1644839231"/>
+<taskprogress task="SYN Stealth Scan" time="1644839130" percent="77.86" remaining="226" etc="1644839356"/>
+<taskprogress task="SYN Stealth Scan" time="1644839169" percent="82.84" remaining="173" etc="1644839341"/>
+<taskprogress task="SYN Stealth Scan" time="1644839211" percent="87.85" remaining="121" etc="1644839332"/>
+<taskprogress task="SYN Stealth Scan" time="1644839250" percent="92.83" remaining="71" etc="1644839321"/>
+<taskend task="SYN Stealth Scan" time="1644839342" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1644839343"/>
+<taskend task="Service scan" time="1644839646" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1644839660"/>
+<taskend task="Traceroute" time="1644839660"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1644839660"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1644839661"/>
+<taskbegin task="NSE" time="1644839661"/>
+<taskend task="NSE" time="1644839666"/>
+<taskbegin task="NSE" time="1644839666"/>
+<taskend task="NSE" time="1644839668"/>
+<taskbegin task="NSE" time="1644839668"/>
+<taskend task="NSE" time="1644839668"/>
+<host starttime="1644838337" endtime="1644839668"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.90.170" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65486">
+<extrareasons reason="resets" count="65486"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 c1:99:4b:95:22:25:ed:0f:85:20:d3:63:b4:48:bb:cf (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH6PH1/ST7TUJ4Mp/l4c7G+TM07YbX7YIsnHzq1TRpvtiBh8MQuFkL1SWW9+za+h6ZraqoZ0ewwkH+0la436t9Q+2H/Nh4CntJOrRbpLJKg4hChjgCHd5KiLCOKHhXPs/FA3mm0Zkzw1tVJLPR6RTbIkkbQiV2Zk3u8oamV5srWIJeYUY5O2XXmTnKENfrPXeHup1+3wBOkTO4Mu17wBSw6yvXyj+lleKjQ6Hnje7KozW5q4U6ijd3LmvHE34UHq/qUbCUbiwY06N2Mj0NQiZqWW8z48eTzGsuh6u1SfGIDnCCq3sWm37Y5LIUvqAFyIEJZVsC/UyrJDPBE+YIODNbN2QLD9JeBr8P4n1rkMaXbsHGywFtutdSrBZwYuRuB2W0GjIEWD/J7lxKIJ9UxRq0UxWWkZ8s3SNqUq2enfPwQt399nigtUerccskdyUD0oRKqVnhZCjEYfX3qOnlAqejr3Lpm8nA31pp6lrKNAmQEjdSO8Jxk04OR2JBxcfVNfs=&#xa;  256 0f:44:8b:ad:ad:95:b8:22:6a:f0:36:ac:19:d0:0e:f3 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI0EdIHR7NOReMM0G7C8zxbLgwB3ump+nb2D3Pe3tXqp/6jNJ/GbU2e4Ab44njMKHJbm/PzrtYzojMjGDuBlQCg=&#xa;  256 32:e1:2a:6c:cc:7c:e6:3e:23:f4:80:8d:33:ce:9b:3a (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDCc0saExmeDXtqm5FS+D5RnDke8aJEvFq3DJIr0KZML"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDH6PH1/ST7TUJ4Mp/l4c7G+TM07YbX7YIsnHzq1TRpvtiBh8MQuFkL1SWW9+za+h6ZraqoZ0ewwkH+0la436t9Q+2H/Nh4CntJOrRbpLJKg4hChjgCHd5KiLCOKHhXPs/FA3mm0Zkzw1tVJLPR6RTbIkkbQiV2Zk3u8oamV5srWIJeYUY5O2XXmTnKENfrPXeHup1+3wBOkTO4Mu17wBSw6yvXyj+lleKjQ6Hnje7KozW5q4U6ijd3LmvHE34UHq/qUbCUbiwY06N2Mj0NQiZqWW8z48eTzGsuh6u1SfGIDnCCq3sWm37Y5LIUvqAFyIEJZVsC/UyrJDPBE+YIODNbN2QLD9JeBr8P4n1rkMaXbsHGywFtutdSrBZwYuRuB2W0GjIEWD/J7lxKIJ9UxRq0UxWWkZ8s3SNqUq2enfPwQt399nigtUerccskdyUD0oRKqVnhZCjEYfX3qOnlAqejr3Lpm8nA31pp6lrKNAmQEjdSO8Jxk04OR2JBxcfVNfs=</elem>
+<elem key="fingerprint">c1994b952225ed0f8520d363b448bbcf</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI0EdIHR7NOReMM0G7C8zxbLgwB3ump+nb2D3Pe3tXqp/6jNJ/GbU2e4Ab44njMKHJbm/PzrtYzojMjGDuBlQCg=</elem>
+<elem key="fingerprint">0f448badad95b8226af036ac19d00ef3</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIDCc0saExmeDXtqm5FS+D5RnDke8aJEvFq3DJIr0KZML</elem>
+<elem key="fingerprint">32e12a6ccc7ce63e23f4808d33ce9b3a</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script><script id="http-title" output="Under Maintainence"><elem key="title">Under Maintainence</elem>
+</script></port>
+<port protocol="tcp" portid="3422"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="rusb-sys-port" method="table" conf="3"/></port>
+<port protocol="tcp" portid="4144"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="wincim" method="table" conf="3"/></port>
+<port protocol="tcp" portid="4405"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ds-mail" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5132"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port5132-TCP:V=7.91%I=9%D=2/14%Time=620A41B5%P=x86_64-pc-linux-gnu%r(NULL,10,&quot;Enter\x20Username:\x20&quot;)%r(GenericLines,3A,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20Incorrect\x20username\x20or\x20password\n&quot;)%r(GetRequest,3A,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20Incorrect\x20username\x20or\x20password\n&quot;)%r(HTTPOptions,3A,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20Incorrect\x20username\x20or\x20password\n&quot;)%r(RTSPRequest,3A,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20Incorrect\x20username\x20or\x20password\n&quot;)%r(RPCCheck,1CD,&quot;Enter\x20Username:\x20Traceback\x20\(most\x20recent\x20call\x20last\):\n\x20\x20File\x20\&quot;/opt/depreciated/messaging/messages\.py\&quot;,\x20line\x20100,\x20in\x20&lt;module&gt;\n\x20\x20\x20\x20main\(\)\n\x20\x20File\x20\&quot;/opt/depreciated/messaging/messages\.py\&quot;,\x20line\x2082,\x20in\x20main\n\x20\x20\x20\x20username\x20=\x20input\(\&quot;Enter\x20Username:\x20\&quot;\)\n\x20\x20File\x20\&quot;/usr/lib/python3\.8/codecs\.py\&quot;,\x20line\x20322,\x20in\x20decode\n\x20\x20\x20\x20\(result,\x20consumed\)\x20=\x20self\._buffer_decode\(data,\x20self\.errors,\x20final\)\nUnicodeDecodeError:\x20&apos;utf-8&apos;\x20codec\x20can&apos;t\x20decode\x20byte\x200x80\x20in\x20position\x200:\x20invalid\x20start\x20byte\n&quot;)%r(DNSVersionBindReqTCP,10,&quot;Enter\x20Username:\x20&quot;)%r(DNSStatusRequestTCP,10,&quot;Enter\x20Username:\x20&quot;)%r(Hello,1B,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20&quot;)%r(Help,1B,&quot;Enter\x20Username:\x20Enter\x20OTP:\x20&quot;)%r(SSLSessionReq,1D5,&quot;Enter\x20Username:\x20Traceback\x20\(most\x20recent\x20call\x20last\):\n\x20\x20File\x20\&quot;/opt/depreciated/messaging/messages\.py\&quot;,\x20line\x20100,\x20in\x20&lt;module&gt;\n\x20\x20\x20\x20main\(\)\n\x20\x20File\x20\&quot;/opt/depreciated/messaging/messages\.py\&quot;,\x20line\x2082,\x20in\x20main\n\x20\x20\x20\x20username\x20=\x20input\(\&quot;Enter\x20Username:\x20\&quot;\)\n\x20\x20File\x20\&quot;/usr/lib/python3\.8/codecs\.py\&quot;,\x20line\x20322,\x20in\x20decode\n\x20\x20\x20\x20\(result,\x20consumed\)\x20=\x20self\._buffer_decode\(data,\x20self\.errors,\x20final\)\nUnicodeDecodeError:\x20&apos;utf-8&apos;\x20codec\x20can&apos;t\x20decode\x20byte\x200xd7\x20in\x20position\x2013:\x20invalid\x20continuation\x20byte\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, NULL: &#xa;    Enter Username:&#xa;  GenericLines, GetRequest, HTTPOptions, RTSPRequest: &#xa;    Enter Username: Enter OTP: Incorrect username or password&#xa;  Hello, Help: &#xa;    Enter Username: Enter OTP:&#xa;  RPCCheck: &#xa;    Enter Username: Traceback (most recent call last):&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 100, in &lt;module&gt;&#xa;    main()&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 82, in main&#xa;    username = input(&quot;Enter Username: &quot;)&#xa;    File &quot;/usr/lib/python3.8/codecs.py&quot;, line 322, in decode&#xa;    (result, consumed) = self._buffer_decode(data, self.errors, final)&#xa;    UnicodeDecodeError: &apos;utf-8&apos; codec can&apos;t decode byte 0x80 in position 0: invalid start byte&#xa;  SSLSessionReq: &#xa;    Enter Username: Traceback (most recent call last):&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 100, in &lt;module&gt;&#xa;    main()&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 82, in main&#xa;    username = input(&quot;Enter Username: &quot;)&#xa;    File &quot;/usr/lib/python3.8/codecs.py&quot;, line 322, in decode&#xa;    (result, consumed) = self._buffer_decode(data, self.errors, final)&#xa;    UnicodeDecodeError: &apos;utf-8&apos; codec can&apos;t decode byte 0xd7 in position 13: invalid continuation byte"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, NULL">&#xa;    Enter Username:</elem>
+<elem key="GenericLines, GetRequest, HTTPOptions, RTSPRequest">&#xa;    Enter Username: Enter OTP: Incorrect username or password</elem>
+<elem key="Hello, Help">&#xa;    Enter Username: Enter OTP:</elem>
+<elem key="RPCCheck">&#xa;    Enter Username: Traceback (most recent call last):&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 100, in &lt;module&gt;&#xa;    main()&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 82, in main&#xa;    username = input(&quot;Enter Username: &quot;)&#xa;    File &quot;/usr/lib/python3.8/codecs.py&quot;, line 322, in decode&#xa;    (result, consumed) = self._buffer_decode(data, self.errors, final)&#xa;    UnicodeDecodeError: &apos;utf-8&apos; codec can&apos;t decode byte 0x80 in position 0: invalid start byte</elem>
+<elem key="SSLSessionReq">&#xa;    Enter Username: Traceback (most recent call last):&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 100, in &lt;module&gt;&#xa;    main()&#xa;    File &quot;/opt/depreciated/messaging/messages.py&quot;, line 82, in main&#xa;    username = input(&quot;Enter Username: &quot;)&#xa;    File &quot;/usr/lib/python3.8/codecs.py&quot;, line 322, in decode&#xa;    (result, consumed) = self._buffer_decode(data, self.errors, final)&#xa;    UnicodeDecodeError: &apos;utf-8&apos; codec can&apos;t decode byte 0xd7 in position 13: invalid continuation byte</elem>
+</script></port>
+<port protocol="tcp" portid="5507"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="psl-management" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5635"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sfmsso" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8433"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Werkzeug httpd" version="2.0.2" extrainfo="Python 3.8.10" method="probed" conf="10"><cpe>cpe:/a:python:python:3.8.10</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS GET HEAD"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="Werkzeug/2.0.2 Python/3.8.10"><elem>Werkzeug/2.0.2 Python/3.8.10</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+<port protocol="tcp" portid="9845"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="11910"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="12053"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="14564"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="16314"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="19553"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22097"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="23766"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="24789"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="26754"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28986"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="30103"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="32968"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="34317"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="35004"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="rt-classmanager" method="table" conf="3"/></port>
+<port protocol="tcp" portid="35204"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="35263"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="35459"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="36338"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="36416"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="37488"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="38803"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="39412"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="40221"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42558"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="43585"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="45754"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46124"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46479"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46835"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46985"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="47615"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49508"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49681"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51195"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="56693"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="57390"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="58493"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="59261"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="62781"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="33414"/>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="91" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="91" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="91" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="91" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="91" line="67261">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="91" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="91"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=2/14%OT=22%CT=1%CU=33414%PV=Y%DS=2%DC=T%G=Y%TM=620A42F&#xa;OS:4%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10B%TI=Z%II=I%TS=A)SEQ(SP=1&#xa;OS:04%GCD=1%ISR=10B%TI=Z%TS=A)OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT1&#xa;OS:1NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)WIN(W1=FE88%W2=FE88%W3=FE&#xa;OS:88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=&#xa;OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y&#xa;OS:%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=16&#xa;OS:4%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2267504" lastboot="Wed Jan 19 01:02:44 2022"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="E092366E,DDF23828,84148446,3CF17045,9B7B7120,E49C44BD"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="87273689,872736ED,87273754,872737B5,87273819,8727387D"/>
+<trace port="1720" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="179.75"/>
+<hop ttl="2" ipaddr="192.168.90.170" rtt="179.69"/>
+</trace>
+<times srtt="179987" rttvar="1788" to="187139"/>
+</host>
+<taskbegin task="NSE" time="1644839668"/>
+<taskend task="NSE" time="1644839668"/>
+<taskbegin task="NSE" time="1644839668"/>
+<taskend task="NSE" time="1644839668"/>
+<taskbegin task="NSE" time="1644839668"/>
+<taskend task="NSE" time="1644839668"/>
+<runstats><finished time="1644839668" timestr="Mon Feb 14 06:54:28 2022" summary="Nmap done at Mon Feb 14 06:54:28 2022; 1 IP address (1 host up) scanned in 1332.15 seconds" elapsed="1332.15" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

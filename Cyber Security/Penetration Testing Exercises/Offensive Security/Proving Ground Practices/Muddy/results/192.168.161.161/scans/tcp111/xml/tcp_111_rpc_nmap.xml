@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 13 00:25:36 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 111 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp111/tcp_111_rpc_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp111/xml/tcp_111_rpc_nmap.xml&quot; 192.168.161.161 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 111 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp111/tcp_111_rpc_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp111/xml/tcp_111_rpc_nmap.xml&quot; 192.168.161.161" start="1644729936" startstr="Sun Feb 13 00:25:36 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644729938"/>
+<taskend task="NSE" time="1644729938"/>
+<taskbegin task="NSE" time="1644729938"/>
+<taskend task="NSE" time="1644729938"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644729939"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644729939"/>
+<taskbegin task="SYN Stealth Scan" time="1644729939"/>
+<taskend task="SYN Stealth Scan" time="1644729939" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1644729940"/>
+<taskend task="Service scan" time="1644729946" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1644729946"/>
+<taskend task="NSE" time="1644729958"/>
+<taskbegin task="NSE" time="1644729958"/>
+<taskend task="NSE" time="1644729958"/>
+<host starttime="1644729939" endtime="1644729958"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.161.161" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;"><table key="100000">
+<table key="local">
+<elem key="addr">/run/rpcbind.sock</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="173279" rttvar="173279" to="866395"/>
+</host>
+<taskbegin task="NSE" time="1644729959"/>
+<taskend task="NSE" time="1644729959"/>
+<taskbegin task="NSE" time="1644729959"/>
+<taskend task="NSE" time="1644729959"/>
+<runstats><finished time="1644729959" timestr="Sun Feb 13 00:25:59 2022" summary="Nmap done at Sun Feb 13 00:25:59 2022; 1 IP address (1 host up) scanned in 23.12 seconds" elapsed="23.12" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,57 @@
+WhatWeb report for http://192.168.90.114:28080
+Status    : 200 OK
+Title     : html5-goku-en-javascript
+IP        : 192.168.90.114
+Country   : RESERVED, ZZ
+
+Summary   : Script[text/javascript], HTML5, HTTPServer[Unix][Apache/2.4.46 (Unix)], Google-Analytics[Universal] [UA-45433616-1], Apache[2.4.46]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 2.4.46 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Google-Analytics ]
+	This plugin identifies the Google Analytics account.
+
+	Version      : Universal
+	Account      : UA-45433616-1
+	Website     : http://www.google.com/analytics/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Unix
+	String       : Apache/2.4.46 (Unix) (from server string)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/javascript
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Mon, 14 Feb 2022 15:48:50 GMT
+	Server: Apache/2.4.46 (Unix)
+	Last-Modified: Fri, 06 Nov 2020 18:51:15 GMT
+	ETag: "7aa-5b374b277dc6f"
+	Accept-Ranges: bytes
+	Content-Length: 1962
+	Connection: close
+	Content-Type: text/html
+
+

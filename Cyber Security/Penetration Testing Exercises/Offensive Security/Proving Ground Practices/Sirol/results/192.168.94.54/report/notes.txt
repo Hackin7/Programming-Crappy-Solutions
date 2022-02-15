@@ -1,0 +1,20 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+
+[*] esmagent found on tcp/5601.
+
+
+
+[*] rpcbind found on tcp/24007.
+
+
+

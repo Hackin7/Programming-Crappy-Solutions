@@ -41,7 +41,7 @@ Search & Test for Vulnerabilities `(I)`
 
 Logging in
 Brute Force `I` 
-- [ ] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [x] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup` - Nope
 - [ ] Same as username (eg. `mario` : `mario`)
 - [ ] rockyou.txt
 - [ ] More
@@ -394,6 +394,16 @@ ftp> user admin
 421 Login time exceeded. Closing control connection.
 Login failed.
 ftp> exit
+```
+
+Failed Credentials
+
+```
+admin:admin
+admin:password
+guest:guest
+backup:backup
+nickel:nickel
 ```
 
 ## 22 - SSH

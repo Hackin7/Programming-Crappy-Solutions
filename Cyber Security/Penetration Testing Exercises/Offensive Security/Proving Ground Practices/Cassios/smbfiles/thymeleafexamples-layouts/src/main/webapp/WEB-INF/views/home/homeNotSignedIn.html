@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to the Spring MVC Quickstart application! Get started quickly by signing up!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+    <script src="../../../resources/js/jquery.min.js" th:src="@{/resources/js/jquery.min.js}"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}">Header</div>
+<div class="container">
+    <div class="text-center">
+        
+        <h1>Thymeleaf Layouts</h1>
+        
+        <div class="lead" th:insert="https://www.thymeleaf.org :: section.description">
+            Welcome to the Spring MVC Quickstart application!
+            Get started quickly by signing up.
+        </div>
+        
+        <p>
+            <a id="signup" class="btn btn-success btn-lg">Sign up</a>
+        </p>
+    </div>
+    <div th:insert="~{fragments/footer :: footer}">&copy; 2017 The Static Templates</div>
+</div>
+<script th:inline="javascript" type="text/javascript">
+/* Fill in modal with content loaded with Ajax */
+$(document).ready(function () {
+    $('#signup').on('click', function (e) {
+        $("#myModal").modal();
+        $("#myModalBody").text("");
+        $.ajax({
+            url: "signup",
+            cache: false
+        }).done(function (html) {
+            $("#myModalBody").append(html);
+        });
+    })
+});
+</script>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Signup</h4>
+            </div>
+            <div class="modal-body" id="myModalBody">Lorem ipsum</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

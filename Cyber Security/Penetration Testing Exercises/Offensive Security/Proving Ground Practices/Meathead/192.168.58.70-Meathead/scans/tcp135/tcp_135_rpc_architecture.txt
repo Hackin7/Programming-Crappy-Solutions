@@ -1,0 +1,6 @@
+Impacket v0.9.24 - Copyright 2021 SecureAuth Corporation
+
+[*] Gathering OS architecture for 1 machines
+[*] Socket connect timeout set to 2 secs
+192.168.58.70 is 64-bit
+

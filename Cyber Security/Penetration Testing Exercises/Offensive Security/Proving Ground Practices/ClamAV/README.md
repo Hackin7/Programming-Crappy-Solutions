@@ -1,4 +1,4 @@
-# Clam AV
+# ClamAV
 ## Plan
 - [x] nmap simple scan
 - [x] nmap full script scan

@@ -1,0 +1,212 @@
+# Nmap 7.91 scan initiated Sat Feb  5 20:14:10 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8081 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/tcp8081/tcp_8081_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/tcp8081/xml/tcp_8081_http_nmap.xml" 192.168.51.159
+Nmap scan report for 192.168.51.159
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-02-05 20:14:10 EST for 669s
+
+PORT     STATE SERVICE REASON         VERSION
+8081/tcp open  http    syn-ack ttl 63 Jetty 9.4.18.v20190429
+|_http-chrono: Request times for /; avg: 1481.10ms; min: 820.61ms; max: 3751.18ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.51.159
+|     
+|     Path: http://192.168.51.159:8081/static/frontend-bundle.js?_v=3.21.1-01&_e=OSS
+|     Line number: 1
+|     Comment: 
+|         /*"}},r.forEach(["delete","get","head"],(function(e){u.headers[e]={}})),r.forEach(["post","put","patch"],(function(e){u.headers[e]=r.merge(i)})),e.exports=u}).call(this,n(19))},function(e,t,n){"use strict";var r=n(0),l=n(21),i=n(4),o=n(23),a=n(24),u=n(8);e.exports=function(e){return new Promise((function(t,c){var s=e.data,f=e.headers;r.isFormData(s)&&delete f["Content-Type"];var d=new XMLHttpRequest;if(e.auth){var p=e.auth.username||"",m=e.auth.password||"";f.Authorization="Basic "+btoa(p+":"+m)}if(d.open(e.method.toUpperCase(),i(e.url,e.params,e.paramsSerializer),!0),d.timeout=e.timeout,d.onreadystatechange=function(){if(d&&4===d.readyState&&(0!==d.status||d.responseURL&&0===d.responseURL.indexOf("file:"))){var n="getAllResponseHeaders"in d?o(d.getAllResponseHeaders()):null,r={data:e.responseType&&"text"!==e.responseType?d.response:d.responseText,status:d.status,statusText:d.statusText,headers:n,config:e,request:d};l(t,c,r),d=null}},d.onabort=function(){d&&(c(u("Request aborted",e,"ECONNABORTED",d)),d=null)},d.onerror=function(){c(u("Network Error",e,null,d)),d=null},d.ontimeout=function(){c(u("timeout of "+e.timeout+"ms exceeded",e,"ECONNABORTED",d)),d=null},r.isStandardBrowserEnv()){var h=n(25),v=(e.withCredentials||a(e.url))&&e.xsrfCookieName?h.read(e.xsrfCookieName):void 0;v&&(f[e.xsrfHeaderName]=v)}if("setRequestHeader"in d&&r.forEach(f,(function(e,t){void 0===s&&"content-type"===t.toLowerCase()?delete f[t]:d.setRequestHeader(t,e)})),e.withCredentials&&(d.withCredentials=!0),e.responseType)try{d.responseType=e.responseType}catch(t){if("json"!==e.responseType)throw t}"function"==typeof e.onDownloadProgress&&d.addEventListener("progress",e.onDownloadProgress),"function"==typeof e.onUploadProgress&&d.upload&&d.upload.addEventListener("progress",e.onUploadProgress),e.cancelToken&&e.cancelToken.promise.then((function(e){d&&(d.abort(),c(e),d=null)})),void 0===s&&(s=null),d.send(s)}))}},function(e,t,n){"use strict";var r=n(22);e.exports=function(e,t,n,l,i){var o=new Error(e);return r(o,t,n,l,i)}},function(e,t,n){"use strict";var r=n(0);e.exports=function(e,t){t=t||{};var n={};return r.forEach(["url","method","params","data"],(function(e){void 0!==t[e]&&(n[e]=t[e])})),r.forEach(["headers","auth","proxy"],(function(l){r.isObject(t[l])?n[l]=r.deepMerge(e[l],t[l]):void 0!==t[l]?n[l]=t[l]:r.isObject(e[l])?n[l]=r.deepMerge(e[l]):void 0!==e[l]&&(n[l]=e[l])})),r.forEach(["baseURL","transformRequest","transformResponse","paramsSerializer","timeout","withCredentials","adapter","responseType","xsrfCookieName","xsrfHeaderName","onUploadProgress","onDownloadProgress","maxContentLength","validateStatus","maxRedirects","httpAgent","httpsAgent","cancelToken","socketPath"],(function(r){void 0!==t[r]?n[r]=t[r]:void 0!==e[r]&&(n[r]=e[r])})),n}},function(e,t,n){"use strict";function r(e){this.message=e}r.prototype.toString=function(){return"Cancel"+(this.message?": "+this.message:"")},r.prototype.__CANCEL__=!0,e.exports=r},function(e,t,n){"use strict";
+|         /*
+|         object-assign
+|         (c) Sindre Sorhus
+|         @license MIT
+|         */
+|     
+|     Path: http://192.168.51.159:8081/static/frontend-bundle.js?_v=3.21.1-01&_e=OSS
+|     Line number: 14
+|     Comment: 
+|         /** @license React v16.11.0
+|          * react.production.min.js
+|          *
+|          * Copyright (c) Facebook, Inc. and its affiliates.
+|          *
+|          * This source code is licensed under the MIT license found in the
+|          * LICENSE file in the root directory of this source tree.
+|          */
+|     
+|     Path: http://192.168.51.159:8081/static/frontend-bundle.js?_v=3.21.1-01&_e=OSS
+|     Line number: 22
+|     Comment: 
+|         /** @license React v16.11.0
+|          * react-dom.production.min.js
+|          *
+|          * Copyright (c) Facebook, Inc. and its affiliates.
+|          *
+|          * This source code is licensed under the MIT license found in the
+|          * LICENSE file in the root directory of this source tree.
+|          */
+|     
+|     Path: http://192.168.51.159:8081/static/frontend-bundle.js?_v=3.21.1-01&_e=OSS
+|     Line number: 7
+|     Comment: 
+|         /*!
+|          * Determine if an object is a Buffer
+|          *
+|          * @author   Feross Aboukhadijeh <https://feross.org>
+|          * @license  MIT
+|          */
+|     
+|     Path: http://192.168.51.159:8081/
+|     Line number: 11
+|     Comment: 
+|         <!--[if lt IE 9]>
+|             <script>(new Image).src="http://192.168.51.159:8081/static/rapture/resources/favicon.ico?_v=3.21.1-01&_e=OSS"</script>
+|           <![endif]-->
+|     
+|     Path: http://192.168.51.159:8081/static/nexus-security-bundle.css?_v=3.21.1-01&_e=OSS
+|     Line number: 290
+|     Comment: 
+|         /* Hide dropdown button on ie11 */
+|     
+|     Path: http://192.168.51.159:8081/static/nexus-security-bundle.css?_v=3.21.1-01&_e=OSS
+|     Line number: 28
+|     Comment: 
+|         /**
+|          * @since 3.21
+|          */
+|     
+|     Path: http://192.168.51.159:8081/static/frontend-bundle.js?_v=3.21.1-01&_e=OSS
+|     Line number: 30
+|     Comment: 
+|         /** @license React v0.17.0
+|          * scheduler.production.min.js
+|          *
+|          * Copyright (c) Facebook, Inc. and its affiliates.
+|          *
+|          * This source code is licensed under the MIT license found in the
+|          * LICENSE file in the root directory of this source tree.
+|          */
+|     
+|     Path: http://192.168.51.159:8081/static/nexus-security-bundle.css?_v=3.21.1-01&_e=OSS
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * Sonatype Nexus (TM) Open Source Version
+|          * Copyright (c) 2008-present Sonatype, Inc.
+|          * All rights reserved. Includes the third-party code listed at http://links.sonatype.com/products/nexus/oss/attributions.
+|          *
+|          * This program and the accompanying materials are made available under the terms of the Eclipse Public License Version 1.0,
+|          * which accompanies this distribution and is available at http://www.eclipse.org/legal/epl-v10.html.
+|          *
+|          * Sonatype Nexus (TM) Professional Version is available from Sonatype, Inc. "Sonatype" and "Sonatype Nexus" are trademarks
+|          * of Sonatype, Inc. Apache Maven is a trademark of the Apache Software Foundation. M2eclipse is a trademark of the
+|          * Eclipse Foundation. All other trademarks are the property of their respective owners.
+|_         */
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sun, 06 Feb 2022 01:14:57 GMT; -1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /robots.txt: Robots file
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-favicon: Unknown favicon MD5: 9A008BECDE9C5F250EDAD4F00E567721
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| http-grep: 
+|   (1) http://192.168.51.159:8081/: 
+|     (1) ip: 
+|_      + 192.168.51.159
+| http-headers: 
+|   Connection: close
+|   Date: Sun, 06 Feb 2022 01:14:56 GMT
+|   Server: Nexus/3.21.1-01 (OSS)
+|   X-Content-Type-Options: nosniff
+|   X-Frame-Options: DENY
+|   X-XSS-Protection: 1; mode=block
+|   Content-Type: text/html
+|   Last-Modified: Sun, 06 Feb 2022 01:14:56 GMT
+|   Pragma: no-cache
+|   Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0
+|   Expires: 0
+|   Content-Length: 10196
+|   
+|_  (Request type: HEAD)
+|_http-iis-webdav-vuln: Could not determine vulnerability, since root folder is password protected
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 8b6e9c2582568f9ba2576325be6a1fca
+|_Credits query returned unknown hash 8b6e9c2582568f9ba2576325be6a1fca
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 2 disallowed entries 
+|_/repository/ /service/
+| http-security-headers: 
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: DENY
+|     Description: The browser must not display this content in any frame.
+|   X_XSS_Protection: 
+|     Header: X-XSS-Protection: 1; mode=block
+|     Description: The browser will prevent the rendering of the page when XSS is detected.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|     Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|   Cache_Control: 
+|     Header: Cache-Control: no-cache, no-store, max-age=0, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: 0
+|_http-server-header: Nexus/3.21.1-01 (OSS)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /static/
+|       css: 1; js: 2
+|     /static/rapture/
+|       js: 10
+|     /static/rapture/resources/
+|       css: 2; ico: 1; png: 1; svg: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /static/rapture/resources/
+|   Total files found (by extension):
+|_    Other: 1; css: 3; ico: 1; js: 12; png: 1; svg: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Nexus Repository Manager
+| http-traceroute: 
+|   last-modified
+|     Hop #1: Sun, 06 Feb 2022 01:14:58 GMT
+|     Hop #2: Sun, 06 Feb 2022 01:14:58 GMT
+|_    Hop #3: Sun, 06 Feb 2022 01:14:59 GMT
+| http-useragent-tester: 
+|   Change in Status Code: 
+|     PECL::HTTP: 200
+|     Snoopy: 200
+|     PHPCrawl: 200
+|     Wget/1.13.4 (linux-gnu): 200
+|     WWW-Mechanize/1.34: 200
+|     libcurl-agent/1.0: 200
+|     libwww: 200
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html): 200
+|     Zend_Http_Client: 200
+|     MFC_Tear_Sample: 200
+|     Python-urllib/2.5: 200
+|     HTTP::Lite: 200
+|     URI::Fetch: 200
+|     http client: 200
+|     lwp-trivial: 200
+|     GT::WWW: 200
+|_    PHP/: 200
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  5 20:25:20 2022 -- 1 IP address (1 host up) scanned in 669.97 seconds

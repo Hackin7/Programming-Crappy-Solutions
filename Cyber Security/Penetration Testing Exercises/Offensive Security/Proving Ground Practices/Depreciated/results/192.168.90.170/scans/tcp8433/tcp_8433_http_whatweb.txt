@@ -1,0 +1,38 @@
+WhatWeb report for http://192.168.90.170:8433
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.90.170
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Werkzeug/2.0.2 Python/3.8.10], Werkzeug[2.0.2], Python[3.8.10]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Werkzeug/2.0.2 Python/3.8.10 (from server string)
+
+[ Python ]
+	Python is a programming language that lets you work more
+	quickly and integrate your systems more effectively. You
+	can learn to use Python and see almost immediate gains in
+	productivity and lower maintenance costs.
+
+	Version      : 3.8.10
+	Website     : http://www.python.org/
+
+[ Werkzeug ]
+	Werkzeug is a WSGI utility library for Python.
+
+	Version      : 2.0.2
+	Website     : http://werkzeug.pocoo.org/
+
+HTTP Headers:
+	HTTP/1.0 200 OK
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 42
+	Server: Werkzeug/2.0.2 Python/3.8.10
+	Date: Mon, 14 Feb 2022 11:52:49 GMT
+
+

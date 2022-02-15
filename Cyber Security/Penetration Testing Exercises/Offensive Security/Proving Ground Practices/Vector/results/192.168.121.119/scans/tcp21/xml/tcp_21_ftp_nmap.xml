@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb  5 03:22:14 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp21/tcp_21_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp21/xml/tcp_21_ftp_nmap.xml&quot; 192.168.121.119 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp21/tcp_21_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp21/xml/tcp_21_ftp_nmap.xml&quot; 192.168.121.119" start="1644049334" startstr="Sat Feb  5 03:22:14 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644049336"/>
+<taskend task="NSE" time="1644049336"/>
+<taskbegin task="NSE" time="1644049336"/>
+<taskend task="NSE" time="1644049336"/>
+<taskbegin task="NSE" time="1644049336"/>
+<taskend task="NSE" time="1644049336"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644049336"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644049336"/>
+<taskbegin task="SYN Stealth Scan" time="1644049336"/>
+<taskend task="SYN Stealth Scan" time="1644049337" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1644049337"/>
+<taskend task="Service scan" time="1644049337" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1644049337"/>
+<taskend task="NSE" time="1644049338"/>
+<taskbegin task="NSE" time="1644049338"/>
+<taskend task="NSE" time="1644049339"/>
+<taskbegin task="NSE" time="1644049339"/>
+<taskend task="NSE" time="1644049339"/>
+<host starttime="1644049336" endtime="1644049339"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.121.119" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="273006" rttvar="273006" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1644049340"/>
+<taskend task="NSE" time="1644049340"/>
+<taskbegin task="NSE" time="1644049340"/>
+<taskend task="NSE" time="1644049340"/>
+<taskbegin task="NSE" time="1644049340"/>
+<taskend task="NSE" time="1644049340"/>
+<runstats><finished time="1644049340" timestr="Sat Feb  5 03:22:20 2022" summary="Nmap done at Sat Feb  5 03:22:20 2022; 1 IP address (1 host up) scanned in 5.52 seconds" elapsed="5.52" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

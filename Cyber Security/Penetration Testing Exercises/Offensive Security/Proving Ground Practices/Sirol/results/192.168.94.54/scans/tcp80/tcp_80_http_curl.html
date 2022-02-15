@@ -1,0 +1,34 @@
+HTTP/1.1 200 OK
+Date: Thu, 03 Feb 2022 13:38:00 GMT
+Server: Apache/2.4.25 (Debian)
+Vary: Accept-Encoding
+Content-Length: 595
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PHP Calculator</title>
+</head>
+<body>
+
+<form action="index.php" method="get">
+    <input type="text" name="num1" placeholder="Number 1">
+    <input type="text" name="num1" placeholder="Number 2">
+    <select name="operator">
+        <option>None</option>
+        <option>Add</option>
+        <option>Subtract</option>
+        <option>Multiply</option>
+        <option>Divide</option>
+    </select>
+    <br>
+    <button name="submit" value="submit" type="submit">Calculate</button>
+</form>
+<br>
+<p>The answer is: </p>
+
+
+</body>
+</html>

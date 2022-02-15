@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Feb  3 08:37:14 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/xml/_full_tcp_nmap.xml&quot; 192.168.94.54 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/xml/_full_tcp_nmap.xml&quot; 192.168.94.54" start="1643895434" startstr="Thu Feb  3 08:37:14 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1643895441"/>
+<taskend task="NSE" time="1643895441"/>
+<taskbegin task="NSE" time="1643895441"/>
+<taskend task="NSE" time="1643895441"/>
+<taskbegin task="NSE" time="1643895441"/>
+<taskend task="NSE" time="1643895441"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1643895441"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1643895441"/>
+<taskbegin task="SYN Stealth Scan" time="1643895442"/>
+<taskprogress task="SYN Stealth Scan" time="1643895473" percent="4.94" remaining="597" etc="1643896070"/>
+<taskprogress task="SYN Stealth Scan" time="1643895503" percent="6.48" remaining="881" etc="1643896384"/>
+<taskprogress task="SYN Stealth Scan" time="1643895533" percent="12.98" remaining="611" etc="1643896143"/>
+<taskprogress task="SYN Stealth Scan" time="1643895569" percent="18.55" remaining="558" etc="1643896127"/>
+<taskprogress task="SYN Stealth Scan" time="1643895599" percent="25.58" remaining="457" etc="1643896056"/>
+<taskprogress task="SYN Stealth Scan" time="1643895629" percent="33.32" remaining="375" etc="1643896003"/>
+<taskprogress task="SYN Stealth Scan" time="1643895659" percent="41.72" remaining="304" etc="1643895962"/>
+<taskprogress task="SYN Stealth Scan" time="1643895689" percent="52.05" remaining="228" etc="1643895917"/>
+<taskprogress task="SYN Stealth Scan" time="1643895719" percent="61.94" remaining="171" etc="1643895889"/>
+<taskprogress task="SYN Stealth Scan" time="1643895749" percent="68.02" remaining="145" etc="1643895893"/>
+<taskprogress task="SYN Stealth Scan" time="1643895800" percent="74.91" remaining="120" etc="1643895920"/>
+<taskprogress task="SYN Stealth Scan" time="1643895830" percent="82.85" remaining="81" etc="1643895910"/>
+<taskprogress task="SYN Stealth Scan" time="1643895860" percent="89.55" remaining="49" etc="1643895909"/>
+<taskend task="SYN Stealth Scan" time="1643895954" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1643895954"/>
+<taskend task="Service scan" time="1643896025" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1643896031"/>
+<taskend task="Traceroute" time="1643896032"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1643896032"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1643896032"/>
+<taskbegin task="NSE" time="1643896032"/>
+<taskend task="NSE" time="1643896043"/>
+<taskbegin task="NSE" time="1643896043"/>
+<taskprogress task="NSE" time="1643896074" percent="88.64" remaining="4" etc="1643896078"/>
+<taskprogress task="NSE" time="1643896104" percent="88.64" remaining="8" etc="1643896112"/>
+<taskend task="NSE" time="1643896119"/>
+<taskbegin task="NSE" time="1643896119"/>
+<taskend task="NSE" time="1643896119"/>
+<host starttime="1643895442" endtime="1643896119"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.94.54" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65529">
+<extrareasons reason="no-responses" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 cd:88:cb:33:78:9a:bf:f0:31:57:d9:2f:ae:13:ee:db (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC08YEo4oAM7Auedmh2D9jfQTXm2+aKWqg6zPodroXzyRf5WTPVlC+EWhW3MGNx82RGyuRRa45WqJlB6ddr8H/6ShiVvFoxuzuJNfirL19Jg9WOSlvYdJfc3VopSvyAWcqu5HJ4RVrfzcYRMdvstC2nMj6i3MpYHqNq9tVm5zi/NrMGXnN8Z2kiAgbrORMvPqKzHmz6u855dVWihTfRf1bgL3jy9yDVOEojOa4gSGC8bliOv7aF/QEUvf9boXPOWEMOsw9n1A6sLIL9GkDhcbxWBGHM0FenNBNT4wM9HR8QFyUTxcWTP+LxtToclhzeFMA4TknB0F2NthOUUfnrgif&#xa;  256 fb:54:3b:ba:f6:68:57:81:e4:65:6e:24:9c:db:6d:8a (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGJ9qwjPnRA6t0jYK4kMTRBM7yr6JrdB9HLfS/9eVOVsMAH7Kxb73HqmXUG9HhASBFypOQAd2fBSiPmBF4vytJo=&#xa;  256 be:6e:25:d1:88:09:7e:33:40:b3:56:6a:b4:ce:16:0d (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPsjY9kVWtNgYRyIhryIUQtthPBX1w0nYzPUIFMpzuI6"><table>
+<elem key="fingerprint">cd88cb33789abff03157d92fae13eedb</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDC08YEo4oAM7Auedmh2D9jfQTXm2+aKWqg6zPodroXzyRf5WTPVlC+EWhW3MGNx82RGyuRRa45WqJlB6ddr8H/6ShiVvFoxuzuJNfirL19Jg9WOSlvYdJfc3VopSvyAWcqu5HJ4RVrfzcYRMdvstC2nMj6i3MpYHqNq9tVm5zi/NrMGXnN8Z2kiAgbrORMvPqKzHmz6u855dVWihTfRf1bgL3jy9yDVOEojOa4gSGC8bliOv7aF/QEUvf9boXPOWEMOsw9n1A6sLIL9GkDhcbxWBGHM0FenNBNT4wM9HR8QFyUTxcWTP+LxtToclhzeFMA4TknB0F2NthOUUfnrgif</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="fingerprint">fb543bbaf6685781e4656e249cdb6d8a</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGJ9qwjPnRA6t0jYK4kMTRBM7yr6JrdB9HLfS/9eVOVsMAH7Kxb73HqmXUG9HhASBFypOQAd2fBSiPmBF4vytJo=</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="fingerprint">be6e25d188097e3340b3566ab4ce160d</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPsjY9kVWtNgYRyIhryIUQtthPBX1w0nYzPUIFMpzuI6</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script><script id="http-title" output="PHP Calculator"><elem key="title">PHP Calculator</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MariaDB" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb</cpe></service></port>
+<port protocol="tcp" portid="5601"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="esmagent" servicefp="SF-Port5601-TCP:V=7.91%I=9%D=2/3%Time=61FBDC9E%P=x86_64-pc-linux-gnu%r(GetRequest,D4,&quot;HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/app/kibana\r\nkbn-name:\x20kibana\r\nkbn-xpack-sig:\x2079b8a7336823018e37a1e121a9f3bb67\r\ncache-control:\x20no-cache\r\ncontent-length:\x200\r\nconnection:\x20close\r\nDate:\x20Thu,\x2003\x20Feb\x202022\x2013:46:05\x20GMT\r\n\r\n&quot;)%r(HTTPOptions,117,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nkbn-name:\x20kibana\r\nkbn-xpack-sig:\x2079b8a7336823018e37a1e121a9f3bb67\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20no-cache\r\ncontent-length:\x2038\r\nconnection:\x20close\r\nDate:\x20Thu,\x2003\x20Feb\x202022\x2013:46:06\x20GMT\r\n\r\n{\&quot;statusCode\&quot;:404,\&quot;error\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(RTSPRequest,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(RPCCheck,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSStatusRequestTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Hello,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Help,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SSLSessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(TerminalServerCookie,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(TLSSessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SSLv23SessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Kerberos,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SMBProgNeg,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(X11Probe,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(FourOhFourRequest,12D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nkbn-name:\x20kibana\r\nkbn-xpack-sig:\x2079b8a7336823018e37a1e121a9f3bb67\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20no-cache\r\ncontent-length:\x2060\r\nconnection:\x20close\r\nDate:\x20Thu,\x2003\x20Feb\x202022\x2013:46:13\x20GMT\r\n\r\n{\&quot;statusCode\&quot;:404,\&quot;error\&quot;:\&quot;Not\x20Found\&quot;,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(LPDString,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(LDAPSearchReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: &#xa;    HTTP/1.1 400 Bad Request&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: no-cache&#xa;    content-length: 60&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:13 GMT&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}&#xa;  GetRequest: &#xa;    HTTP/1.1 302 Found&#xa;    location: /app/kibana&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    cache-control: no-cache&#xa;    content-length: 0&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:05 GMT&#xa;  HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: no-cache&#xa;    content-length: 38&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:06 GMT&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;}"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe">&#xa;    HTTP/1.1 400 Bad Request</elem>
+<elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: no-cache&#xa;    content-length: 60&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:13 GMT&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 302 Found&#xa;    location: /app/kibana&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    cache-control: no-cache&#xa;    content-length: 0&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:05 GMT</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    kbn-name: kibana&#xa;    kbn-xpack-sig: 79b8a7336823018e37a1e121a9f3bb67&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: no-cache&#xa;    content-length: 38&#xa;    connection: close&#xa;    Date: Thu, 03 Feb 2022 13:46:06 GMT&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;}</elem>
+</script></port>
+<port protocol="tcp" portid="24007"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="53"/>
+<osmatch name="Linux 3.11 - 4.1" accuracy="93" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="92" line="64337">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="92" line="67787">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="90" line="63783">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 3.8" accuracy="88" line="65245">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="88" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="88"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="IPFire 2.11 firewall (Linux 2.6.32)" accuracy="87" line="47417">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="firewall" vendor="IPFire" osfamily="IPFire" osgen="2.X" accuracy="87"><cpe>cpe:/o:ipfire:ipfire:2.11</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="87" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="87" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="87" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/3%OT=22%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=61FBDD37%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FE%GCD=1%ISR=109%TI=Z%II=I%TS=8)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M506NNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="627" lastboot="Thu Feb  3 08:38:12 2022"/>
+<distance value="2"/>
+<tcpsequence index="254" difficulty="Good luck!" values="1E59E884,EAEA0A18,3F2B9B6F,D1F9BAA,2926382F,E636E7CE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="208C9,208DE,208F6,20917,2092B,20945"/>
+<trace port="53" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="319.57"/>
+<hop ttl="2" ipaddr="192.168.94.54" rtt="319.56"/>
+</trace>
+<times srtt="305136" rttvar="20641" to="387700"/>
+</host>
+<taskbegin task="NSE" time="1643896119"/>
+<taskend task="NSE" time="1643896119"/>
+<taskbegin task="NSE" time="1643896119"/>
+<taskend task="NSE" time="1643896119"/>
+<taskbegin task="NSE" time="1643896119"/>
+<taskend task="NSE" time="1643896119"/>
+<runstats><finished time="1643896119" timestr="Thu Feb  3 08:48:39 2022" summary="Nmap done at Thu Feb  3 08:48:39 2022; 1 IP address (1 host up) scanned in 687.19 seconds" elapsed="687.19" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

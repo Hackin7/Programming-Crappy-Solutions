@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Feb 14 08:35:48 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Roquefort/results/192.168.90.67/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Roquefort/results/192.168.90.67/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.67 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Roquefort/results/192.168.90.67/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Roquefort/results/192.168.90.67/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.67" start="1644845748" startstr="Mon Feb 14 08:35:48 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644845749"/>
+<taskend task="NSE" time="1644845749"/>
+<taskbegin task="NSE" time="1644845749"/>
+<taskend task="NSE" time="1644845749"/>
+<taskbegin task="NSE" time="1644845749"/>
+<taskend task="NSE" time="1644845749"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644845749"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644845749"/>
+<taskbegin task="SYN Stealth Scan" time="1644845749"/>
+<taskprogress task="SYN Stealth Scan" time="1644845780" percent="6.46" remaining="450" etc="1644846229"/>
+<taskprogress task="SYN Stealth Scan" time="1644845810" percent="19.60" remaining="251" etc="1644846060"/>
+<taskprogress task="SYN Stealth Scan" time="1644845840" percent="31.52" remaining="198" etc="1644846038"/>
+<taskprogress task="SYN Stealth Scan" time="1644845870" percent="45.27" remaining="147" etc="1644846016"/>
+<taskprogress task="SYN Stealth Scan" time="1644845900" percent="61.12" remaining="97" etc="1644845996"/>
+<taskprogress task="SYN Stealth Scan" time="1644845930" percent="74.07" remaining="64" etc="1644845993"/>
+<taskend task="SYN Stealth Scan" time="1644845976" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1644845977"/>
+<taskend task="Service scan" time="1644846268" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1644846272"/>
+<taskend task="Traceroute" time="1644846273"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1644846273"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1644846273"/>
+<taskbegin task="NSE" time="1644846273"/>
+<taskprogress task="NSE" time="1644846304" percent="99.82" remaining="1" etc="1644846304"/>
+<taskprogress task="NSE" time="1644846334" percent="99.82" remaining="1" etc="1644846334"/>
+<taskprogress task="NSE" time="1644846364" percent="99.82" remaining="1" etc="1644846364"/>
+<taskend task="NSE" time="1644846367"/>
+<taskbegin task="NSE" time="1644846367"/>
+<taskend task="NSE" time="1644846397"/>
+<taskbegin task="NSE" time="1644846397"/>
+<taskend task="NSE" time="1644846397"/>
+<host starttime="1644845749" endtime="1644846397"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.90.67" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65530"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="ProFTPD" version="1.3.5b" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.3.5b</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 aa:77:6f:b1:ed:65:b5:ad:14:64:40:d2:24:d3:9c:0d (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9yKoYquj+03HzzDt10Vye2nDsQQYflZqSXlNi4CWbk9++xu69PJEgsm0GMczWto1hEV8SG2hLMvP/2EGg7WU+6Dru695SYZhUHAJfJErXptgw3tbkM4id+civEPOYAqatj0HxF29hRV7DU3UYw6koNhpAmgf+B1zlXS4It3iZR7xOdOcSylKKCd0zJDE8VS8udSddyhugxArCMCbiiZD5y7AJ9/IeQ0Jl+t4n0JxF5tELOifQ4seAGtEi3A8gpYav6E81DG9rIwuZdpOVnh3/nZgkwtcaVymXYUTAMPzwLr1cwK5Jd+OMFy6grAZvhjbDxdnHI7WCXo5HXEhVZVG5&#xa;  256 a9:b4:4f:61:2e:2d:9d:4c:48:15:fe:70:8e:fa:af:b3 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNKcVXu5Q1QIJE/D7O8GWuavg4Thfp3NQsFXiEnrgjgluRdw0ZQ0bi1raXmVymLKiSSzdO4LTVixBiU+hYvMm4g=&#xa;  256 92:56:eb:af:c9:34:af:ea:a1:cf:9f:e1:90:dd:2f:61 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOTR8UgPY9T6exsIAXVoAiNxWupn0Daf+/Hf6gOUv4zv"><table>
+<elem key="fingerprint">aa776fb1ed65b5ad146440d224d39c0d</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC9yKoYquj+03HzzDt10Vye2nDsQQYflZqSXlNi4CWbk9++xu69PJEgsm0GMczWto1hEV8SG2hLMvP/2EGg7WU+6Dru695SYZhUHAJfJErXptgw3tbkM4id+civEPOYAqatj0HxF29hRV7DU3UYw6koNhpAmgf+B1zlXS4It3iZR7xOdOcSylKKCd0zJDE8VS8udSddyhugxArCMCbiiZD5y7AJ9/IeQ0Jl+t4n0JxF5tELOifQ4seAGtEi3A8gpYav6E81DG9rIwuZdpOVnh3/nZgkwtcaVymXYUTAMPzwLr1cwK5Jd+OMFy6grAZvhjbDxdnHI7WCXo5HXEhVZVG5</elem>
+</table>
+<table>
+<elem key="fingerprint">a9b44f612e2d9d4c4815fe708efaafb3</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNKcVXu5Q1QIJE/D7O8GWuavg4Thfp3NQsFXiEnrgjgluRdw0ZQ0bi1raXmVymLKiSSzdO4LTVixBiU+hYvMm4g=</elem>
+</table>
+<table>
+<elem key="fingerprint">9256ebafc934afeaa1cf9fe190dd2f61</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOTR8UgPY9T6exsIAXVoAiNxWupn0Daf+/Hf6gOUv4zv</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2222"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="Dropbear sshd" version="2016.74" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:matt_johnston:dropbear_ssh_server:2016.74</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ppp" servicefp="SF-Port3000-TCP:V=7.91%I=9%D=2/14%Time=620A5B9F%P=x86_64-pc-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,1000,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\x20Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gitea=35affbe664de4288;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=PUihvW0U572DUYMB6aIMUMkoVWY6MTY0NDg0NTg4MzMwNDAyNTQwMA%3D%3D;\x20Path=/;\x20Expires=Tue,\x2015\x20Feb\x202022\x2013:38:03\x20GMT;\x20HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Mon,\x2014\x20Feb\x202022\x2013:38:03\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head\x20data-suburl=\&quot;\&quot;&gt;\n\t&lt;meta\x20charset=\&quot;utf-8\&quot;&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;&gt;\n\t&lt;meta\x20http-equiv=\&quot;x-ua-compatible\&quot;\x20content=\&quot;ie=edge\&quot;&gt;\n\t&lt;title&gt;Gitea:\x20Git\x20with\x20a\x20cup\x20of\x20tea&lt;/title&gt;\n\t&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20crossorigin=\&quot;use-credentials\&quot;&gt;\n\t\n\t&lt;script&gt;\n\t\tif\x20\(&apos;serviceWorker&apos;\x20in\x20navigator\)\x20{\n\x20\x20\t\t\twindow\.addEventListener\(&apos;load&apos;,\x20function\(\)\x20{\n\x20\x20\x20\x20\t\t\tnavigator\.serviceWorker\.register\(&apos;/serviceworker\.js&apos;\)\.then\(function\(registration\)\x20{\n\x20\x20\x20\x20\x20\x20\t\t\t\t\n\x20\x20\x20\x20\x20\x20\t\t\t&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(HTTPOptions,1FE2,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\x20Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gitea=3293f2ef9608b726;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=ePbemUwytfuZoVHcNtkFxzrcF586MTY0NDg0NTg5MTQ2MDEyMDUyMg%3D%3D;\x20Path=/;\x20Expires=Tue,\x2015\x20Feb\x202022\x2013:38:11\x20GMT;\x20HttpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Mon,\x2014\x20Feb\x202022\x2013:38:11\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head\x20data-suburl=\&quot;\&quot;&gt;\n\t&lt;meta\x20charset=\&quot;utf-8\&quot;&gt;\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;&gt;\n\t&lt;meta\x20http-equiv=\&quot;x-ua-compatible\&quot;\x20content=\&quot;ie=edge\&quot;&gt;\n\t&lt;title&gt;Page\x20Not\x20Found\x20-\x20Gitea:\x20Git\x20with\x20a\x20cup\x20of\x20tea&lt;/title&gt;\n\t&lt;link\x20rel=\&quot;manifest\&quot;\x20href=\&quot;/manifest\.json\&quot;\x20crossorigin=\&quot;use-credentials\&quot;&gt;\n\t\n\t&lt;script&gt;\n\t\tif\x20\(&apos;serviceWorker&apos;\x20in\x20navigator\)\x20{\n\x20\x20\t\t\twindow\.addEventListener\(&apos;load&apos;,\x20function\(\)\x20{\n\x20\x20\x20\x20\t\t\tnavigator\.serviceWorker\.register\(&apos;/serviceworker\.js&apos;\)\.then\(function\(registration&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, Help: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request&#xa;  GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gitea=35affbe664de4288; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=PUihvW0U572DUYMB6aIMUMkoVWY6MTY0NDg0NTg4MzMwNDAyNTQwMA%3D%3D; Path=/; Expires=Tue, 15 Feb 2022 13:38:03 GMT; HttpOnly&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Date: Mon, 14 Feb 2022 13:38:03 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;&#xa;    &lt;title&gt;Gitea: Git with a cup of tea&lt;/title&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; crossorigin=&quot;use-credentials&quot;&gt;&#xa;    &lt;script&gt;&#xa;    (&apos;serviceWorker&apos; in navigator) {&#xa;    window.addEventListener(&apos;load&apos;, function() {&#xa;    navigator.serviceWorker.register(&apos;/serviceworker.js&apos;).then(function(registration) {&#xa;  HTTPOptions: &#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gitea=3293f2ef9608b726; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=ePbemUwytfuZoVHcNtkFxzrcF586MTY0NDg0NTg5MTQ2MDEyMDUyMg%3D%3D; Path=/; Expires=Tue, 15 Feb 2022 13:38:11 GMT; HttpOnly&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Date: Mon, 14 Feb 2022 13:38:11 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;&#xa;    &lt;title&gt;Page Not Found - Gitea: Git with a cup of tea&lt;/title&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; crossorigin=&quot;use-credentials&quot;&gt;&#xa;    &lt;script&gt;&#xa;    (&apos;serviceWorker&apos; in navigator) {&#xa;    window.addEventListener(&apos;load&apos;, function() {&#xa;    navigator.serviceWorker.register(&apos;/serviceworker.js&apos;).then(function(registration"><elem key="GenericLines, Help">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gitea=35affbe664de4288; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=PUihvW0U572DUYMB6aIMUMkoVWY6MTY0NDg0NTg4MzMwNDAyNTQwMA%3D%3D; Path=/; Expires=Tue, 15 Feb 2022 13:38:03 GMT; HttpOnly&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Date: Mon, 14 Feb 2022 13:38:03 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;&#xa;    &lt;title&gt;Gitea: Git with a cup of tea&lt;/title&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; crossorigin=&quot;use-credentials&quot;&gt;&#xa;    &lt;script&gt;&#xa;    (&apos;serviceWorker&apos; in navigator) {&#xa;    window.addEventListener(&apos;load&apos;, function() {&#xa;    navigator.serviceWorker.register(&apos;/serviceworker.js&apos;).then(function(registration) {</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gitea=3293f2ef9608b726; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=ePbemUwytfuZoVHcNtkFxzrcF586MTY0NDg0NTg5MTQ2MDEyMDUyMg%3D%3D; Path=/; Expires=Tue, 15 Feb 2022 13:38:11 GMT; HttpOnly&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Date: Mon, 14 Feb 2022 13:38:11 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;&#xa;    &lt;title&gt;Page Not Found - Gitea: Git with a cup of tea&lt;/title&gt;&#xa;    &lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot; crossorigin=&quot;use-credentials&quot;&gt;&#xa;    &lt;script&gt;&#xa;    (&apos;serviceWorker&apos; in navigator) {&#xa;    window.addEventListener(&apos;load&apos;, function() {&#xa;    navigator.serviceWorker.register(&apos;/serviceworker.js&apos;).then(function(registration</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="53"/>
+<osmatch name="Linux 3.11 - 4.1" accuracy="93" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="93" line="67787">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="92" line="64337">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="89" line="63783">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="88" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 3.8" accuracy="88" line="65245">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8" accuracy="88" line="66180">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.8</cpe></osclass>
+</osmatch>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="87" line="42259">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="87"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osmatch name="IPFire 2.11 firewall (Linux 2.6.32)" accuracy="87" line="47417">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="firewall" vendor="IPFire" osfamily="IPFire" osgen="2.X" accuracy="87"><cpe>cpe:/o:ipfire:ipfire:2.11</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="87" line="55051">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/14%OT=21%CT=53%CU=%PV=Y%DS=2%DC=T%G=N%TM=620A5D3D%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=107%TI=Z%II=I%TS=8)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="997" lastboot="Mon Feb 14 08:30:00 2022"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="62C426F7,253FB11F,28620622,54D4CAE0,4780ED9E,C2DF13D0"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="3519F,351B9,351D1,351EA,35203,3521F"/>
+<trace port="53" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="178.84"/>
+<hop ttl="2" ipaddr="192.168.90.67" rtt="178.80"/>
+</trace>
+<times srtt="179942" rttvar="2221" to="188826"/>
+</host>
+<taskbegin task="NSE" time="1644846397"/>
+<taskend task="NSE" time="1644846397"/>
+<taskbegin task="NSE" time="1644846397"/>
+<taskend task="NSE" time="1644846397"/>
+<taskbegin task="NSE" time="1644846397"/>
+<taskend task="NSE" time="1644846397"/>
+<runstats><finished time="1644846397" timestr="Mon Feb 14 08:46:37 2022" summary="Nmap done at Mon Feb 14 08:46:37 2022; 1 IP address (1 host up) scanned in 649.90 seconds" elapsed="649.90" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

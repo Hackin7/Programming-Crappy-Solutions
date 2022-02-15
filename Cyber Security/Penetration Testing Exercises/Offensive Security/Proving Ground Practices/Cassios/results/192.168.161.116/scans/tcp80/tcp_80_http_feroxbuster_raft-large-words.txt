@@ -1,0 +1,9 @@
+301        7l       20w      238c http://192.168.161.116/images
+403        8l       22w      207c http://192.168.161.116/.html
+403        8l       22w      211c http://192.168.161.116/.html.txt
+403        8l       22w      212c http://192.168.161.116/.html.html
+403        8l       22w      211c http://192.168.161.116/.html.php
+403        8l       22w      211c http://192.168.161.116/.html.asp
+403        8l       22w      212c http://192.168.161.116/.html.aspx
+403        8l       22w      211c http://192.168.161.116/.html.jsp
+200      217l      796w     9088c http://192.168.161.116/index.html

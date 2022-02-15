@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sun Feb 13 00:25:37 2022 as: nmap -vv --reason -Pn -T4 -sV -p 443 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp443/tcp_443_https_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp443/xml/tcp_443_https_nmap.xml" 192.168.161.161
+Nmap scan report for 192.168.161.161
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-13 00:25:41 EST for 1s
+
+PORT    STATE  SERVICE REASON       VERSION
+443/tcp closed https   reset ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 13 00:25:43 2022 -- 1 IP address (1 host up) scanned in 6.24 seconds

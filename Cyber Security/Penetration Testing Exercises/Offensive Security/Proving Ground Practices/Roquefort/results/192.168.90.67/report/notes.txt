@@ -1,0 +1,16 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] ssh found on tcp/2222.
+
+
+
+[*] ppp found on tcp/3000.
+
+
+

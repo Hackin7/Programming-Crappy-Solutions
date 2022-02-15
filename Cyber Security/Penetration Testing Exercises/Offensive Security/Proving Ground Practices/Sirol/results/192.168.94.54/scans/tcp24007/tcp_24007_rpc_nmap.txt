@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Thu Feb  3 08:48:40 2022 as: nmap -vv --reason -Pn -T4 -sV -p 24007 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/tcp24007/tcp_24007_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/results/192.168.94.54/scans/tcp24007/xml/tcp_24007_rpc_nmap.xml" 192.168.94.54
+Nmap scan report for 192.168.94.54
+Host is up, received user-set (0.35s latency).
+Scanned at 2022-02-03 08:48:42 EST for 34s
+
+PORT      STATE SERVICE REASON         VERSION
+24007/tcp open  rpcbind syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb  3 08:49:16 2022 -- 1 IP address (1 host up) scanned in 35.72 seconds

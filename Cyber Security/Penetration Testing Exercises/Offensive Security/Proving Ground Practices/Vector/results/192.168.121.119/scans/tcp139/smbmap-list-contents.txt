@@ -1,0 +1,3 @@
+[!] RPC Authentication error occurred
+[!] Authentication error on 192.168.121.119
+

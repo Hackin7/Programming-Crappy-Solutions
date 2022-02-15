@@ -1,0 +1,29 @@
+# Nmap 7.91 scan initiated Mon Feb 14 10:33:01 2022 as: nmap -vv --reason -Pn -T4 -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp21/tcp_21_ftp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp21/xml/tcp_21_ftp_nmap.xml" 192.168.90.114
+Nmap scan report for 192.168.90.114
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-14 10:33:04 EST for 4s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 63 vsftpd 3.0.3
+|_banner: 220 (vsFTPd 3.0.3)
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x   14 14       11           4096 Nov 06  2020 forum
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.49.90
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+|_sslv2-drown: 
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 10:33:08 2022 -- 1 IP address (1 host up) scanned in 6.68 seconds

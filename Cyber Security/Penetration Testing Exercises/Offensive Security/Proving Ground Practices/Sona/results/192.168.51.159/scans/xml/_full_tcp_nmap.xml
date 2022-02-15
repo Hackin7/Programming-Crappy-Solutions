@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb  5 20:12:30 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/xml/_full_tcp_nmap.xml&quot; 192.168.51.159 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/xml/_full_tcp_nmap.xml&quot; 192.168.51.159" start="1644109950" startstr="Sat Feb  5 20:12:30 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644109951"/>
+<taskend task="NSE" time="1644109951"/>
+<taskbegin task="NSE" time="1644109951"/>
+<taskend task="NSE" time="1644109951"/>
+<taskbegin task="NSE" time="1644109951"/>
+<taskend task="NSE" time="1644109951"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644109951"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644109951"/>
+<taskbegin task="SYN Stealth Scan" time="1644109951"/>
+<taskprogress task="SYN Stealth Scan" time="1644109982" percent="5.55" remaining="528" etc="1644110509"/>
+<taskprogress task="SYN Stealth Scan" time="1644110012" percent="14.91" remaining="349" etc="1644110360"/>
+<taskprogress task="SYN Stealth Scan" time="1644110042" percent="23.82" remaining="292" etc="1644110333"/>
+<taskprogress task="SYN Stealth Scan" time="1644110072" percent="38.23" remaining="196" etc="1644110268"/>
+<taskprogress task="SYN Stealth Scan" time="1644110102" percent="53.13" remaining="134" etc="1644110235"/>
+<taskprogress task="SYN Stealth Scan" time="1644110132" percent="64.28" remaining="101" etc="1644110233"/>
+<taskprogress task="SYN Stealth Scan" time="1644110162" percent="77.73" remaining="61" etc="1644110222"/>
+<taskend task="SYN Stealth Scan" time="1644110220" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1644110220"/>
+<taskend task="Service scan" time="1644110287" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1644110307"/>
+<taskend task="Traceroute" time="1644110308"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1644110308"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1644110308"/>
+<taskbegin task="NSE" time="1644110308"/>
+<taskend task="NSE" time="1644110312"/>
+<taskbegin task="NSE" time="1644110312"/>
+<taskend task="NSE" time="1644110313"/>
+<taskbegin task="NSE" time="1644110313"/>
+<taskend task="NSE" time="1644110313"/>
+<host starttime="1644109951" endtime="1644110313"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.51.159" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="telnet" servicefp="SF-Port23-TCP:V=7.91%I=9%D=2/5%Time=61FF2192%P=x86_64-pc-linux-gnu%r(NULL,F0,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\n&quot;)%r(GenericLines,FA,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n&quot;)%r(tn3270,F0,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\n&quot;)%r(GetRequest,FA,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n&quot;)%r(HTTPOptions,FA,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n&quot;)%r(RTSPRequest,FA,&quot;====================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, GetRequest, HTTPOptions, RTSPRequest: &#xa;    ====================&#xa;    NEXUS BACKUP MANAGER&#xa;    ====================&#xa;    ANSONE Answer question one&#xa;    ANSTWO Answer question two&#xa;    BACKUP Perform backup&#xa;    EXIT Exit&#xa;    HELP Show help&#xa;    HINT Show hints&#xa;    RECOVER Recover admin password&#xa;    RESTORE Restore backup&#xa;    Incorrect&#xa;  NULL, tn3270: &#xa;    ====================&#xa;    NEXUS BACKUP MANAGER&#xa;    ====================&#xa;    ANSONE Answer question one&#xa;    ANSTWO Answer question two&#xa;    BACKUP Perform backup&#xa;    EXIT Exit&#xa;    HELP Show help&#xa;    HINT Show hints&#xa;    RECOVER Recover admin password&#xa;    RESTORE Restore backup"><elem key="GenericLines, GetRequest, HTTPOptions, RTSPRequest">&#xa;    ====================&#xa;    NEXUS BACKUP MANAGER&#xa;    ====================&#xa;    ANSONE Answer question one&#xa;    ANSTWO Answer question two&#xa;    BACKUP Perform backup&#xa;    EXIT Exit&#xa;    HELP Show help&#xa;    HINT Show hints&#xa;    RECOVER Recover admin password&#xa;    RESTORE Restore backup&#xa;    Incorrect</elem>
+<elem key="NULL, tn3270">&#xa;    ====================&#xa;    NEXUS BACKUP MANAGER&#xa;    ====================&#xa;    ANSONE Answer question one&#xa;    ANSTWO Answer question two&#xa;    BACKUP Perform backup&#xa;    EXIT Exit&#xa;    HELP Show help&#xa;    HINT Show hints&#xa;    RECOVER Recover admin password&#xa;    RESTORE Restore backup</elem>
+</script></port>
+<port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Jetty" version="9.4.18.v20190429" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.18.v20190429</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 9A008BECDE9C5F250EDAD4F00E567721"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-robots.txt" output="2 disallowed entries &#xa;/repository/ /service/"/><script id="http-server-header" output="Nexus/3.21.1-01 (OSS)"><elem>Nexus/3.21.1-01 (OSS)</elem>
+</script><script id="http-title" output="Nexus Repository Manager"><elem key="title">Nexus Repository Manager</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="23"/>
+<osmatch name="Linux 3.2.0" accuracy="89" line="65337">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.2.0</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 6.15 (Linux 3.3.5)" accuracy="88" line="85787">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="6.X" accuracy="88"><cpe>cpe:/o:mikrotik:routeros:6.15</cpe></osclass>
+</osmatch>
+<osmatch name="Tomato 1.27 - 1.28 (Linux 2.4.20)" accuracy="88" line="46893">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+</osmatch>
+<osmatch name="Crestron XPanel control system" accuracy="86" line="19546">
+<osclass type="specialized" vendor="Crestron" osfamily="2-Series" accuracy="86"><cpe>cpe:/o:crestron:2_series</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/5%OT=23%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61FF21E9%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)&#xa;OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)&#xa;ECN(R=N)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="590901" lastboot="Sun Jan 30 00:10:12 2022"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="D28BC14D,CCF8C911,5256DBA,7A76F59E,F0A29A48,4A1B092E"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="68A2FA7F,68A2FAE9,68A2FC6A,68A2FCD1,68A30DEF,68A30DEF"/>
+<trace port="23" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="253.12"/>
+<hop ttl="2" ipaddr="192.168.51.159" rtt="253.80"/>
+</trace>
+<times srtt="242933" rttvar="20987" to="326881"/>
+</host>
+<taskbegin task="NSE" time="1644110313"/>
+<taskend task="NSE" time="1644110313"/>
+<taskbegin task="NSE" time="1644110313"/>
+<taskend task="NSE" time="1644110313"/>
+<taskbegin task="NSE" time="1644110313"/>
+<taskend task="NSE" time="1644110313"/>
+<runstats><finished time="1644110313" timestr="Sat Feb  5 20:18:33 2022" summary="Nmap done at Sat Feb  5 20:18:33 2022; 1 IP address (1 host up) scanned in 363.84 seconds" elapsed="363.84" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,40 @@
+[*] ms-wbt-server found on tcp/3389.
+
+
+
+[*] appserv-http found on tcp/4848.
+
+
+
+[*] imqbrokerd found on tcp/7676.
+
+
+
+[*] http-proxy found on tcp/8080.
+
+
+
+[*] intermapper found on tcp/8181.
+
+
+
+[*] lrs-paging found on tcp/3700.
+
+
+
+[*] x11 found on tcp/6060.
+
+
+
+[*] pando-pub found on tcp/7680.
+
+
+
+[*] sun-as-jmxrmi found on tcp/8686.
+
+
+
+[*] unknown found on tcp/49694.
+
+
+

@@ -1,0 +1,16 @@
+403        9l       28w      278c http://192.168.94.54/.htaccess
+403        9l       28w      278c http://192.168.94.54/.htpasswd
+403        9l       28w      278c http://192.168.94.54/.htpasswd.txt
+403        9l       28w      278c http://192.168.94.54/.htaccess.txt
+403        9l       28w      278c http://192.168.94.54/.htaccess.html
+403        9l       28w      278c http://192.168.94.54/.htpasswd.html
+403        9l       28w      278c http://192.168.94.54/.htaccess.php
+403        9l       28w      278c http://192.168.94.54/.htpasswd.php
+403        9l       28w      278c http://192.168.94.54/.htaccess.asp
+403        9l       28w      278c http://192.168.94.54/.htpasswd.asp
+403        9l       28w      278c http://192.168.94.54/.htaccess.aspx
+403        9l       28w      278c http://192.168.94.54/.htpasswd.aspx
+403        9l       28w      278c http://192.168.94.54/.htaccess.jsp
+403        9l       28w      278c http://192.168.94.54/.htpasswd.jsp
+200       27l       44w      595c http://192.168.94.54/index.php
+403        9l       28w      278c http://192.168.94.54/server-status

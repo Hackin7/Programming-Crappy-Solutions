@@ -1,0 +1,92 @@
+# Nmap 7.91 scan initiated Sun Feb 13 00:25:35 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Muddy/results/192.168.161.161/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.161.161
+Nmap scan report for 192.168.161.161
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-02-13 00:25:40 EST for 55s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.38 ((Debian))
+|_http-chrono: Request times for /; avg: 43.32ms; min: 35.49ms; max: 55.99ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sun, 13 Feb 2022 05:33:44 GMT; +7m43s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /readme.html: Wordpress version: 2 
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: Interesting, a readme.
+|_  /webdav/: Potentially interesting folder (401 Unauthorized)
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Sun, 13 Feb 2022 05:33:49 GMT
+|   Server: Apache/2.4.38 (Debian)
+|   X-Redirect-By: WordPress
+|   Location: http://muddy.ugc/
+|   Content-Length: 0
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 93e03ff5d1a153c01769f6a0c40ef5cb
+|_Credits query returned unknown hash c77e7abac1747df317fa82b71584ad02
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Did not follow redirect to http://muddy.ugc/
+| http-useragent-tester: 
+|   Status for browser useragent: false
+|   Redirected To: http://muddy.ugc/
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 127 names had status 301
+|_ns2
+| http-waf-detect: IDS/IPS/WAF detected:
+|_192.168.161.161:80/?p4yl04d3=<script>alert(document.cookie)</script>
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   plugins
+|     akismet 4.1.9
+|_    jetpack 9.4
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 13 00:26:36 2022 -- 1 IP address (1 host up) scanned in 60.42 seconds

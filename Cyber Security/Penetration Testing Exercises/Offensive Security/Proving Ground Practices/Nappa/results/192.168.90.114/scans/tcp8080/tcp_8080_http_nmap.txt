@@ -1,0 +1,140 @@
+# Nmap 7.91 scan initiated Mon Feb 14 10:33:02 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.90.114
+Nmap scan report for 192.168.90.114
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-02-14 10:33:05 EST for 264s
+
+PORT     STATE SERVICE    REASON         VERSION
+8080/tcp open  http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 3102
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8" />
+|     <title>Action Controller: Exception caught</title>
+|     <style>
+|     body {
+|     background-color: #FAFAFA;
+|     color: #333;
+|     margin: 0px;
+|     body, p, ol, ul, td {
+|     font-family: helvetica, verdana, arial, sans-serif;
+|     font-size: 13px;
+|     line-height: 18px;
+|     font-size: 11px;
+|     white-space: pre-wrap;
+|     pre.box {
+|     border: 1px solid #EEE;
+|     padding: 10px;
+|     margin: 0px;
+|     width: 958px;
+|     header {
+|     color: #F0F0F0;
+|     background: #C52F24;
+|     padding: 0.5em 1.5em;
+|     margin: 0.2em 0;
+|     line-height: 1.1em;
+|     font-size: 2em;
+|     color: #C52F24;
+|     line-height: 25px;
+|     .details {
+|_    bord
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.114
+|   url                               method
+|_  http://192.168.90.114:8080/login  FORM
+|_http-chrono: Request times for /; avg: 4053.83ms; min: 513.00ms; max: 9647.02ms
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   X-Frame-Options: SAMEORIGIN
+|   X-XSS-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   X-Download-Options: noopen
+|   X-Permitted-Cross-Domain-Policies: none
+|   Referrer-Policy: strict-origin-when-cross-origin
+|   Content-Type: text/html; charset=utf-8
+|   ETag: W/"be388284797c64d8670d05eb20813e72"
+|   Cache-Control: max-age=0, private, must-revalidate
+|   Set-Cookie: _forum_on_rails_session=6xNz33LCOTGCSGXQ3fTrbWZJ6xlIeNqP%2Fy%2FSg9p4jUlhDSfhgDPN2edEbbjmEeZ25tfPQF6mhz5Ji4cmfcaBkKPM9DeOlwW3fRFRJiXpyDVMnQlccZ%2FL4JDn7cr8WDVdUk5DQ2uqcsJU%2Bj6ih6mAPQA%2Flo1ic2e9tFmC2N48j%2BaI%2FNmQzNn8oU5bWIP%2BZJWoCncxvDc0yv3clHkH4tcLQaIqI4j7FazwYDRp%2F9Zc2EtYwt%2Ftc7pRrWqB1zFO1yqnx3Oyk5CZi99aSr4gkxZJYA5cYEWMnf8bFsUlWMe3DQ%3D%3D--ePVdlU5sNTlFUqGG--wKfAT%2FvLw4K36KdPmBPTXg%3D%3D; path=/; HttpOnly
+|   X-Request-Id: 85b85620-2c41-47f0-b4f7-0432846316c3
+|   X-Runtime: 0.061446
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-php-version: Logo query returned unknown hash fedaa79b6b647c13c8928a647b68753f
+|_http-title: ForumOnRails
+| http-vhosts: 
+| 124 names had status 403
+| helpdesk
+| test
+| monitor
+|_http
+| http-waf-detect: IDS/IPS/WAF detected:
+|_192.168.90.114:8080/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=7%D=2/14%Time=620A7638%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,C76,"HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n<!DOCTYPE\x20htm
+SF:l>\n<html\x20lang=\"en\">\n<head>\n\x20\x20<meta\x20charset=\"utf-8\"\x
+SF:20/>\n\x20\x20<title>Action\x20Controller:\x20Exception\x20caught</titl
+SF:e>\n\x20\x20<style>\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x2
+SF:0background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;
+SF:\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x2
+SF:0\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20
+SF:font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x
+SF:20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20
+SF:line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\
+SF:x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20whi
+SF:te-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x
+SF:20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20
+SF:\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200
+SF:px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x2
+SF:0\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\
+SF:x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x2
+SF:0padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1
+SF:\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x2
+SF:0\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x2
+SF:02em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x
+SF:20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;
+SF:\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20
+SF:\x20\x20bord")%r(HTTPOptions,C76,"HTTP/1\.0\x20403\x20Forbidden\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n
+SF:\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\">\n<head>\n\x20\x20<meta\x2
+SF:0charset=\"utf-8\"\x20/>\n\x20\x20<title>Action\x20Controller:\x20Excep
+SF:tion\x20caught</title>\n\x20\x20<style>\n\x20\x20\x20\x20body\x20{\n\x2
+SF:0\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x2
+SF:0\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20
+SF:\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20
+SF:\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x2
+SF:0sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20
+SF:\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x2
+SF:0\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x2
+SF:0\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x
+SF:20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20soli
+SF:d\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20
+SF:\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20
+SF:\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20c
+SF:olor:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x2
+SF:0\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n
+SF:\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x2
+SF:00;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\
+SF:x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{
+SF:\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20l
+SF:ine-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x2
+SF:0{\n\x20\x20\x20\x20\x20\x20bord");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 10:37:29 2022 -- 1 IP address (1 host up) scanned in 267.13 seconds

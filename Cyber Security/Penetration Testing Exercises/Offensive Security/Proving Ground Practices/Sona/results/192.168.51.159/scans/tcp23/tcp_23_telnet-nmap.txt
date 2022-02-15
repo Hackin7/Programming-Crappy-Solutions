@@ -1,0 +1,74 @@
+# Nmap 7.91 scan initiated Sat Feb  5 20:14:09 2022 as: nmap -vv --reason -Pn -T4 -sV -p 23 --script=banner,telnet-encryption,telnet-ntlm-info -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/tcp23/tcp_23_telnet-nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/tcp23/xml/tcp_23_telnet_nmap.xml" 192.168.51.159
+Nmap scan report for 192.168.51.159
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-02-05 20:14:10 EST for 30s
+
+PORT   STATE SERVICE REASON         VERSION
+23/tcp open  telnet? syn-ack ttl 63
+| banner: ====================\x0ANEXUS BACKUP MANAGER\x0A===============
+| =====\x0AANSONE \x09Answer question one\x0AANSTWO \x09Answer question t
+| wo\x0ABACKUP \x09Perform backup\x0AEXIT \x09Exit\x0AHELP \x09Show help\
+|_x0AHINT \x09Show hints\x0ARECOVER\x09Recover admin password\x0ARESTO...
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, RTSPRequest: 
+|     ====================
+|     NEXUS BACKUP MANAGER
+|     ====================
+|     ANSONE Answer question one
+|     ANSTWO Answer question two
+|     BACKUP Perform backup
+|     EXIT Exit
+|     HELP Show help
+|     HINT Show hints
+|     RECOVER Recover admin password
+|     RESTORE Restore backup
+|     Incorrect
+|   NULL, tn3270: 
+|     ====================
+|     NEXUS BACKUP MANAGER
+|     ====================
+|     ANSONE Answer question one
+|     ANSTWO Answer question two
+|     BACKUP Perform backup
+|     EXIT Exit
+|     HELP Show help
+|     HINT Show hints
+|     RECOVER Recover admin password
+|_    RESTORE Restore backup
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port23-TCP:V=7.91%I=7%D=2/5%Time=61FF20E9%P=x86_64-pc-linux-gnu%r(NULL,
+SF:F0,"====================\nNEXUS\x20BACKUP\x20MANAGER\n=================
+SF:===\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20quest
+SF:ion\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tSh
+SF:ow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20passw
+SF:ord\nRESTORE\tRestore\x20backup\n")%r(GenericLines,FA,"================
+SF:====\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAns
+SF:wer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x
+SF:20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20
+SF:\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestor
+SF:e\x20backup\nIncorrect\n")%r(tn3270,F0,"====================\nNEXUS\x20
+SF:BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question
+SF:\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20
+SF:backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints
+SF:\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\n")
+SF:%r(GetRequest,FA,"====================\nNEXUS\x20BACKUP\x20MANAGER\n===
+SF:=================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tA
+SF:nswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit
+SF:\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20
+SF:admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n")%r(HTTPOpti
+SF:ons,FA,"====================\nNEXUS\x20BACKUP\x20MANAGER\n=============
+SF:=======\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20q
+SF:uestion\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20
+SF:\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20p
+SF:assword\nRESTORE\tRestore\x20backup\nIncorrect\n")%r(RTSPRequest,FA,"==
+SF:==================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nA
+SF:NSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x2
+SF:0two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20
+SF:help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nR
+SF:ESTORE\tRestore\x20backup\nIncorrect\n");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  5 20:14:40 2022 -- 1 IP address (1 host up) scanned in 30.79 seconds

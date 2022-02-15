@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Last-Modified: Tue, 27 Oct 2020 17:45:14 GMT
+Content-Type: text/plain
+Content-Length: 99
+
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file

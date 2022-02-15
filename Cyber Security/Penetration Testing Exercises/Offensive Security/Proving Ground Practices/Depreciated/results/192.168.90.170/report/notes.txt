@@ -1,0 +1,16 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] unknown found on tcp/5132.
+
+
+
+[*] http found on tcp/8433.
+
+
+

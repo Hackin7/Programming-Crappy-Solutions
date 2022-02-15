@@ -1,0 +1,103 @@
+# Nmap 7.91 scan initiated Sat Feb  5 03:29:32 2022 as: nmap -vv --reason -Pn -T4 -sV -p 2290 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp2290/tcp_2290_http_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vector/results/192.168.121.119/scans/tcp2290/xml/tcp_2290_http_nmap.xml" 192.168.121.119
+Nmap scan report for 192.168.121.119
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-05 03:29:38 EST for 511s
+
+PORT     STATE SERVICE REASON          VERSION
+2290/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-chrono: Request times for /; avg: 406.62ms; min: 405.52ms; max: 407.46ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.121.119
+|     
+|     Path: http://192.168.121.119:2290/
+|     Line number: 11
+|     Comment: 
+|         
+|         
+|         
+|         
+|_        	-->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.121.119
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.121.119:2290/
+|     Form id: myform
+|_    Form action: ./
+|_http-date: Sat, 05 Feb 2022 08:36:21 GMT; +6m27s from local time.
+|_http-devframework: ASP.NET detected. Found related header.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Cache-Control: private
+|   Content-Length: 677
+|   Content-Type: text/html; charset=utf-8
+|   Server: Microsoft-IIS/10.0
+|   X-AspNet-Version: 4.0.30319
+|   X-Powered-By: ASP.NET
+|   Date: Sat, 05 Feb 2022 08:36:26 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 60ed95b9da149cacb14ebcb4f9f1c54b
+|_Credits query returned unknown hash cb023d120bcf3a9bb31d43e3f7fddb70
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: private
+|_http-server-header: Microsoft-IIS/10.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| alpha
+| direct
+| apache
+| mail
+|_124 names had status 200
+| http-waf-detect: IDS/IPS/WAF detected:
+|_192.168.121.119:2290/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  5 03:38:09 2022 -- 1 IP address (1 host up) scanned in 517.58 seconds

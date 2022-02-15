@@ -1,0 +1,186 @@
+# Nmap 7.91 scan initiated Mon Feb 14 06:32:52 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Depreciated/results/192.168.90.170/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.90.170
+Nmap scan report for 192.168.90.170
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-14 06:32:53 EST for 433s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+|_http-chrono: Request times for /; avg: 477.77ms; min: 447.70ms; max: 507.27ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.170
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 41
+|     Comment: 
+|         <!--<label for="uname">Username</label>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 39
+|     Comment: 
+|         <!--<form method="post" action="http://127.0.0.1:8433/graphql?query={login(username:$uname, password:$pswd)}" enctype="multipart/form-data">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 40
+|     Comment: 
+|         <!--<div class="form-group">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 38
+|     Comment: 
+|         <!--<div class="col-md-6">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 46
+|     Comment: 
+|         <!--</div>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 42
+|     Comment: 
+|         <!--<input type="text" placeholder="username" name="uname" class="form-control"><br>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 52
+|     Comment: 
+|         <!--<p style="font-size:2em;color: black">    </p>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 50
+|     Comment: 
+|         <!--<div class="panel-footer">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 45
+|     Comment: 
+|         <!--<button class="btn btn-primary" type="submit">Submit</button>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 43
+|     Comment: 
+|         <!--<label for="pswd">Password</label>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 34
+|     Comment: 
+|         <!--<div class="col-lg-4 col-sm-offset-2">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 37
+|     Comment: 
+|         <!--<div class="panel-body">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 51
+|     Comment: 
+|         <!--<center>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 35
+|     Comment: 
+|         <!--<div class="panel panel-primary">-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 36
+|     Comment: 
+|         <!--<div class="panel-heading">Login</div>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 44
+|     Comment: 
+|         <!--<input type="text" placeholder="password" name="pswd" class="form-control"><br>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 53
+|     Comment: 
+|         <!--</center>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 47
+|     Comment: 
+|         <!--</form>-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 32
+|     Comment: 
+|         <!--commenting the code until we fix the whole application-->
+|     
+|     Path: http://192.168.90.170:80/
+|     Line number: 33
+|     Comment: 
+|_        <!--<div class="row">-->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.90.170
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.90.170:80/
+|     Form id: 
+|_    Form action: http://127.0.0.1:8433/graphql?query={login(username:$uname, password:$pswd)}
+|_http-date: Mon, 14 Feb 2022 11:31:21 GMT; -1m42s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: nginx/1.18.0 (Ubuntu)
+|   Date: Mon, 14 Feb 2022 11:31:20 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 2287
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: HEAD GET OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 32a5176ca955716c3f59e3515e751977
+|_Credits query returned unknown hash 32a5176ca955716c3f59e3515e751977
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|   http://maxcdn.bootstrapcdn.com:80/bootstrap/4.1.1/js/bootstrap.min.js
+|_  http://cdnjs.cloudflare.com:80/ajax/libs/jquery/3.2.1/jquery.min.js
+|_http-security-headers: 
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Under Maintainence
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 06:40:06 2022 -- 1 IP address (1 host up) scanned in 434.20 seconds

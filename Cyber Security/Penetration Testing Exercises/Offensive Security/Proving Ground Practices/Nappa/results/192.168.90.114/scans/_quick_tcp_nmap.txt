@@ -1,0 +1,153 @@
+# Nmap 7.91 scan initiated Mon Feb 14 10:22:48 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/xml/_quick_tcp_nmap.xml" 192.168.90.114
+adjust_timeouts2: packet supposedly had rtt of -56359 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -56359 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -71742 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -71742 microseconds.  Ignoring time.
+Nmap scan report for 192.168.90.114
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-14 10:22:51 EST for 610s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE SERVICE    REASON         VERSION
+21/tcp   open  ftp        syn-ack ttl 63 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x   14 14       11           4096 Nov 06  2020 forum
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.49.90
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+3306/tcp open  mysql?     syn-ack ttl 63
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.90' is not allowed to connect to this MariaDB server
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+8080/tcp open  http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 3102
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8" />
+|     <title>Action Controller: Exception caught</title>
+|     <style>
+|     body {
+|     background-color: #FAFAFA;
+|     color: #333;
+|     margin: 0px;
+|     body, p, ol, ul, td {
+|     font-family: helvetica, verdana, arial, sans-serif;
+|     font-size: 13px;
+|     line-height: 18px;
+|     font-size: 11px;
+|     white-space: pre-wrap;
+|     pre.box {
+|     border: 1px solid #EEE;
+|     padding: 10px;
+|     margin: 0px;
+|     width: 958px;
+|     header {
+|     color: #F0F0F0;
+|     background: #C52F24;
+|     padding: 0.5em 1.5em;
+|     margin: 0.2em 0;
+|     line-height: 1.1em;
+|     font-size: 2em;
+|     color: #C52F24;
+|     line-height: 25px;
+|     .details {
+|_    bord
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: ForumOnRails
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=9%D=2/14%Time=620A73DB%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,C76,"HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n<!DOCTYPE\x20htm
+SF:l>\n<html\x20lang=\"en\">\n<head>\n\x20\x20<meta\x20charset=\"utf-8\"\x
+SF:20/>\n\x20\x20<title>Action\x20Controller:\x20Exception\x20caught</titl
+SF:e>\n\x20\x20<style>\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x2
+SF:0background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;
+SF:\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x2
+SF:0\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20
+SF:font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x
+SF:20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20
+SF:line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\
+SF:x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20whi
+SF:te-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x
+SF:20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20
+SF:\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200
+SF:px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x2
+SF:0\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\
+SF:x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x2
+SF:0padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1
+SF:\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x2
+SF:0\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x2
+SF:02em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x
+SF:20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;
+SF:\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20
+SF:\x20\x20bord")%r(HTTPOptions,C76,"HTTP/1\.0\x20403\x20Forbidden\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n
+SF:\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\">\n<head>\n\x20\x20<meta\x2
+SF:0charset=\"utf-8\"\x20/>\n\x20\x20<title>Action\x20Controller:\x20Excep
+SF:tion\x20caught</title>\n\x20\x20<style>\n\x20\x20\x20\x20body\x20{\n\x2
+SF:0\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x2
+SF:0\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20
+SF:\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20
+SF:\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x2
+SF:0sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20
+SF:\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x2
+SF:0\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x2
+SF:0\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x
+SF:20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20soli
+SF:d\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20
+SF:\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20
+SF:\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20c
+SF:olor:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x2
+SF:0\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n
+SF:\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x2
+SF:00;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\
+SF:x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{
+SF:\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20l
+SF:ine-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x2
+SF:0{\n\x20\x20\x20\x20\x20\x20bord");
+Aggressive OS guesses: Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.4 (91%), Linux 3.5 (91%), Linux 4.2 (91%), Linux 4.4 (91%), Synology DiskStation Manager 5.1 (91%), WatchGuard Fireware 11.8 (91%), Linux 2.6.35 (90%), Linux 3.10 (90%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=2/14%OT=21%CT=1%CU=39581%PV=Y%DS=2%DC=T%G=Y%TM=620A762
+OS:D%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=108%TI=Z%TS=A)SEQ(SP=104%GC
+OS:D=1%ISR=108%TI=Z%II=I%TS=A)OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT1
+OS:1NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)WIN(W1=FE88%W2=FE88%W3=FE
+OS:88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=
+OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y
+OS:%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=16
+OS:4%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 6.064 days (since Tue Feb  8 09:00:14 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   178.62 ms 192.168.49.1
+2   178.65 ms 192.168.90.114
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 14 10:33:01 2022 -- 1 IP address (1 host up) scanned in 613.72 seconds

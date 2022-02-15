@@ -1,0 +1,2 @@
+WLD        0l        0w        0c Got 302 for http://192.168.161.116:8080/efc29682d43543f3a20ddfe8d3afbd93 (url length: 32)
+WLD         -         -         - http://192.168.161.116:8080/efc29682d43543f3a20ddfe8d3afbd93 redirects to => http://192.168.161.116:8080/login

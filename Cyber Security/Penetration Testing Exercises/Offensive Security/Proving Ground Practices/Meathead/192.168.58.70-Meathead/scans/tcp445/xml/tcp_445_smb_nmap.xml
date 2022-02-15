@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Wed Jan 19 18:46:12 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.58.70/scans/tcp445/tcp_445_smb_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp445/xml/tcp_445_smb_nmap.xml 192.168.58.70 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.58.70/scans/tcp445/tcp_445_smb_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp445/xml/tcp_445_smb_nmap.xml 192.168.58.70" start="1642589172" startstr="Wed Jan 19 18:46:12 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642589173"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642589181"/>
+<taskbegin task="SYN Stealth Scan" time="1642589181"/>
+<taskend task="SYN Stealth Scan" time="1642589181" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642589181"/>
+<taskend task="Service scan" time="1642589188" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642589188"/>
+<taskprogress task="NSE" time="1642589219" percent="92.86" remaining="3" etc="1642589221"/>
+<taskend task="NSE" time="1642589231"/>
+<taskbegin task="NSE" time="1642589231"/>
+<taskend task="NSE" time="1642589232"/>
+<taskbegin task="NSE" time="1642589232"/>
+<taskend task="NSE" time="1642589232"/>
+<host starttime="1642589181" endtime="1642589232"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.58.70" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-vuln-ms10-061" output="No accounts left to try">false</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: No accounts left to try"/><script id="smb2-time" output="&#xa;  date: 2022-01-19T10:45:39&#xa;  start_date: N/A"><elem key="date">2022-01-19T10:45:39</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-capabilities" output="&#xa;  2.0.2: &#xa;    Distributed File System&#xa;  2.1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.0: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.0.2: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.1.1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.0.2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0.2">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.1.1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.0.2&#xa;    2.1&#xa;    3.0&#xa;    3.0.2&#xa;    3.1.1"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.0.2</elem>
+<elem>2.1</elem>
+<elem>3.0</elem>
+<elem>3.0.2</elem>
+<elem>3.1.1</elem>
+</table>
+</script></hostscript><times srtt="168925" rttvar="168925" to="844625"/>
+</host>
+<taskbegin task="NSE" time="1642589232"/>
+<taskend task="NSE" time="1642589232"/>
+<taskbegin task="NSE" time="1642589232"/>
+<taskend task="NSE" time="1642589232"/>
+<taskbegin task="NSE" time="1642589232"/>
+<taskend task="NSE" time="1642589232"/>
+<runstats><finished time="1642589232" timestr="Wed Jan 19 18:47:12 2022" summary="Nmap done at Wed Jan 19 18:47:12 2022; 1 IP address (1 host up) scanned in 60.16 seconds" elapsed="60.16" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,24 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+
+[*] http-proxy found on tcp/8080.
+
+
+
+[*] http found on tcp/28080.
+
+
+
+[*] tcpwrapped found on tcp/48120.
+
+
+
+[*] ssh found on tcp/60022.
+
+
+

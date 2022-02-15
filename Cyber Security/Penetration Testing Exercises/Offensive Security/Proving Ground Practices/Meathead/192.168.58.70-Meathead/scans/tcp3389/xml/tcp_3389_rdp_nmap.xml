@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Wed Jan 19 18:46:12 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.58.70/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 192.168.58.70 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/autorecon/results/192.168.58.70/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /root/autorecon/results/192.168.58.70/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 192.168.58.70" start="1642589172" startstr="Wed Jan 19 18:46:12 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="NSE" time="1642589173"/>
+<taskend task="NSE" time="1642589173"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642589173"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642589177"/>
+<taskbegin task="SYN Stealth Scan" time="1642589177"/>
+<taskend task="SYN Stealth Scan" time="1642589177" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1642589177"/>
+<taskend task="Service scan" time="1642589184" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1642589184"/>
+<taskend task="NSE" time="1642589204"/>
+<taskbegin task="NSE" time="1642589204"/>
+<taskend task="NSE" time="1642589219"/>
+<taskbegin task="NSE" time="1642589219"/>
+<taskend task="NSE" time="1642589220"/>
+<host starttime="1642589177" endtime="1642589220"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.58.70" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=Meathead&#xa;Issuer: commonName=Meathead&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-01-18T10:41:20&#xa;Not valid after:  2022-07-20T10:41:20&#xa;MD5:   668e 8b8b f3e7 32ef 93ca f885 ddd7 5fa6&#xa;SHA-1: b035 d5e7 f280 e1d4 12ef 901f d103 86ee 2c1f e22b&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQYdkV95O98ZNF04ZHA9xQBDANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhNZWF0aGVhZDAeFw0yMjAxMTgxMDQxMjBaFw0yMjA3MjAxMDQx&#xa;MjBaMBMxETAPBgNVBAMTCE1lYXRoZWFkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAuot5cOZhIKcWnMHD0cpDNB21ZzfeHYHewEjhNztYGQKexLL3fS6K&#xa;qmX/kzQLfCkDUrO6kdYAbAR2l05VK/crE2l7wtgbJkjs1GBrKBddBnqd5Iar8gfH&#xa;380GMf02XiuAjlzUVIK43QHqKfgfBwSRx71CqkOe/JxiLB8rsJHBmqS3Ql+yJH1C&#xa;QE9p+Z+d80iteK4mGVGtBtY6qr8T82gM+LbF2vFyldihBALLFjyWcrCloc/f0JDj&#xa;lG6s6IETB1a3oWWn7W6uCwszTDmhJzkrlnTuoWJPzZqZJVCGVsCzLyLIdZQD67Qm&#xa;4KH34TTGcHYN075FD2KBGSAVo4g6q8DxUQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBADH6No8r1JEZ&#xa;0/c9D0Qyz2z0M83KWAymCczlYQa1nnu9P8JuCxa1J7cSGx5pnfCy8+N2A0BdK+6d&#xa;qoOsvXhLZmIftpb+1PfAskBb7SXfmvu3xdACzOAIhnO9WAKGegUpz1YPx85/6urb&#xa;ZtxHprqH5G+qa7nXbZ2YRHheop+V3m+v4YwimcRikpAi/19V7kV1d8YRbn378/zB&#xa;Iq3rhlSnvQkeIGFgBJ3XxCTlj9cgC8BJgC48gfZZ3GaZ+DrZgBFPQNxEFZxB3Z0t&#xa;IrBlu5oydIbXZYTaVEWBgup/uCecctlfmLyYXanChKPtf58F/PXDLkv+IHmUcGiV&#xa;h3Ir03Pl8oQ=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">Meathead</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Meathead</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BA8B7970E66120A7169CC1C3D1CA43341DB56737DE1D81DEC048E1373B5819029EC4B2F77D2E8AAA65FF93340B7C290352B3BA91D6006C0476974E552BF72B13697BC2D81B2648ECD4606B28175D067A9DE486ABF207C7DFCD0631FD365E2B808E5CD45482B8DD01EA29F81F070491C7BD42AA439EFC9C622C1F2BB091C19AA4B7425FB2247D42404F69F99F9DF348AD78AE261951AD06D63AAABF13F3680CF8B6C5DAF17295D8A10402CB163C9672B0A5A1CFDFD090E3946EACE881130756B7A165A7ED6EAE0B0B334C39A127392B9674EEA1624FCD9A9925508656C0B32F22C8759403EBB426E0A1F7E134C670760DD3BE450F6281192015A3883AABC0F151</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-01-18T10:41:20</elem>
+<elem key="notAfter">2022-07-20T10:41:20</elem>
+</table>
+<elem key="md5">668e8b8bf3e732ef93caf885ddd75fa6</elem>
+<elem key="sha1">b035d5e7f280e1d412ef901fd10386ee2c1fe22b</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQYdkV95O98ZNF04ZHA9xQBDANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhNZWF0aGVhZDAeFw0yMjAxMTgxMDQxMjBaFw0yMjA3MjAxMDQx&#xa;MjBaMBMxETAPBgNVBAMTCE1lYXRoZWFkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAuot5cOZhIKcWnMHD0cpDNB21ZzfeHYHewEjhNztYGQKexLL3fS6K&#xa;qmX/kzQLfCkDUrO6kdYAbAR2l05VK/crE2l7wtgbJkjs1GBrKBddBnqd5Iar8gfH&#xa;380GMf02XiuAjlzUVIK43QHqKfgfBwSRx71CqkOe/JxiLB8rsJHBmqS3Ql+yJH1C&#xa;QE9p+Z+d80iteK4mGVGtBtY6qr8T82gM+LbF2vFyldihBALLFjyWcrCloc/f0JDj&#xa;lG6s6IETB1a3oWWn7W6uCwszTDmhJzkrlnTuoWJPzZqZJVCGVsCzLyLIdZQD67Qm&#xa;4KH34TTGcHYN075FD2KBGSAVo4g6q8DxUQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBADH6No8r1JEZ&#xa;0/c9D0Qyz2z0M83KWAymCczlYQa1nnu9P8JuCxa1J7cSGx5pnfCy8+N2A0BdK+6d&#xa;qoOsvXhLZmIftpb+1PfAskBb7SXfmvu3xdACzOAIhnO9WAKGegUpz1YPx85/6urb&#xa;ZtxHprqH5G+qa7nXbZ2YRHheop+V3m+v4YwimcRikpAi/19V7kV1d8YRbn378/zB&#xa;Iq3rhlSnvQkeIGFgBJ3XxCTlj9cgC8BJgC48gfZZ3GaZ+DrZgBFPQNxEFZxB3Z0t&#xa;IrBlu5oydIbXZYTaVEWBgup/uCecctlfmLyYXanChKPtf58F/PXDLkv+IHmUcGiV&#xa;h3Ir03Pl8oQ=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-01-19T10:45:45+00:00; -1m00s from scanner time."><elem key="delta">-60.0</elem>
+<elem key="date">2022-01-19T10:45:45+00:00</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;  least strength: C"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp384r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp384r1</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">C</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+</table>
+</table>
+<elem key="least strength">C</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: MEATHEAD&#xa;  NetBIOS_Domain_Name: MEATHEAD&#xa;  NetBIOS_Computer_Name: MEATHEAD&#xa;  DNS_Domain_Name: Meathead&#xa;  DNS_Computer_Name: Meathead&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-01-19T10:45:25+00:00"><elem key="Target_Name">MEATHEAD</elem>
+<elem key="NetBIOS_Domain_Name">MEATHEAD</elem>
+<elem key="NetBIOS_Computer_Name">MEATHEAD</elem>
+<elem key="DNS_Domain_Name">Meathead</elem>
+<elem key="DNS_Computer_Name">Meathead</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-01-19T10:45:25+00:00</elem>
+</script><script id="rdp-enum-encryption" output="&#xa;  Security layer&#xa;    CredSSP (NLA): SUCCESS&#xa;    CredSSP with Early User Auth: SUCCESS&#xa;    RDSTLS: SUCCESS&#xa;    SSL: SUCCESS&#xa;  RDP Protocol Version:  RDP 10.6 server&#xa;"/></port>
+</ports>
+<times srtt="171269" rttvar="171269" to="856345"/>
+</host>
+<taskbegin task="NSE" time="1642589220"/>
+<taskend task="NSE" time="1642589220"/>
+<taskbegin task="NSE" time="1642589220"/>
+<taskend task="NSE" time="1642589220"/>
+<taskbegin task="NSE" time="1642589220"/>
+<taskend task="NSE" time="1642589220"/>
+<runstats><finished time="1642589220" timestr="Wed Jan 19 18:47:00 2022" summary="Nmap done at Wed Jan 19 18:47:00 2022; 1 IP address (1 host up) scanned in 48.44 seconds" elapsed="48.44" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

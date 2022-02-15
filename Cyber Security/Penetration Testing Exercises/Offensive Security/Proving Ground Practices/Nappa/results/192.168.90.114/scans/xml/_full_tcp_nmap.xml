@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Feb 14 10:22:48 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.114 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/results/192.168.90.114/scans/xml/_full_tcp_nmap.xml&quot; 192.168.90.114" start="1644852168" startstr="Mon Feb 14 10:22:48 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1644852170"/>
+<taskend task="NSE" time="1644852170"/>
+<taskbegin task="NSE" time="1644852170"/>
+<taskend task="NSE" time="1644852170"/>
+<taskbegin task="NSE" time="1644852170"/>
+<taskend task="NSE" time="1644852170"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1644852170"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1644852170"/>
+<taskbegin task="SYN Stealth Scan" time="1644852170"/>
+<taskprogress task="SYN Stealth Scan" time="1644852201" percent="4.37" remaining="678" etc="1644852879"/>
+<taskprogress task="SYN Stealth Scan" time="1644852261" percent="12.43" remaining="641" etc="1644852902"/>
+<taskprogress task="SYN Stealth Scan" time="1644852291" percent="16.98" remaining="592" etc="1644852883"/>
+<taskprogress task="SYN Stealth Scan" time="1644852321" percent="21.46" remaining="553" etc="1644852874"/>
+<taskprogress task="SYN Stealth Scan" time="1644852351" percent="26.05" remaining="514" etc="1644852865"/>
+<taskprogress task="SYN Stealth Scan" time="1644852384" percent="30.91" remaining="479" etc="1644852862"/>
+<taskprogress task="SYN Stealth Scan" time="1644852567" percent="47.33" remaining="442" etc="1644853009"/>
+<taskprogress task="SYN Stealth Scan" time="1644852669" percent="55.58" remaining="399" etc="1644853068"/>
+<taskprogress task="SYN Stealth Scan" time="1644852723" percent="61.13" remaining="352" etc="1644853075"/>
+<taskprogress task="SYN Stealth Scan" time="1644852771" percent="66.29" remaining="306" etc="1644853077"/>
+<taskprogress task="SYN Stealth Scan" time="1644852822" percent="71.60" remaining="259" etc="1644853081"/>
+<taskprogress task="SYN Stealth Scan" time="1644852876" percent="76.81" remaining="214" etc="1644853089"/>
+<taskprogress task="SYN Stealth Scan" time="1644852930" percent="82.15" remaining="166" etc="1644853095"/>
+<taskprogress task="SYN Stealth Scan" time="1644852981" percent="87.34" remaining="118" etc="1644853099"/>
+<taskprogress task="SYN Stealth Scan" time="1644853035" percent="92.55" remaining="70" etc="1644853105"/>
+<taskend task="SYN Stealth Scan" time="1644853121" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1644853121"/>
+<taskend task="Service scan" time="1644853658" extrainfo="6 services on 1 host"/>
+<taskbegin task="Traceroute" time="1644853680"/>
+<taskend task="Traceroute" time="1644853681"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1644853681"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1644853681"/>
+<taskbegin task="NSE" time="1644853681"/>
+<taskend task="NSE" time="1644853705"/>
+<taskbegin task="NSE" time="1644853705"/>
+<taskend task="NSE" time="1644853726"/>
+<taskbegin task="NSE" time="1644853726"/>
+<taskend task="NSE" time="1644853726"/>
+<host starttime="1644852170" endtime="1644853726"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.90.114" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65486">
+<extrareasons reason="resets" count="65486"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x   14 14       11           4096 Nov 06  2020 forum"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.90&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.90&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="615"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sco-inetmgr" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" method="table" conf="3"/><script id="mysql-info" output="&#xa;  MySQL Error: Host &apos;192.168.49.90&apos; is not allowed to connect to this MariaDB server"><elem key="MySQL Error">Host &apos;192.168.49.90&apos; is not allowed to connect to this MariaDB server</elem>
+</script><script id="ssl-cert" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-date" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-alpn" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-nextprotoneg" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="3555"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="razor" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5984"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="couchdb" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7612"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="7943"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" servicefp="SF-Port8080-TCP:V=7.91%I=9%D=2/14%Time=620A7788%P=x86_64-pc-linux-gnu%r(GetRequest,C76,&quot;HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20&lt;title&gt;Action\x20Controller:\x20Exception\x20caught&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20\x20\x20bord&quot;)%r(HTTPOptions,C76,&quot;HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20&lt;title&gt;Action\x20Controller:\x20Exception\x20caught&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20\x20\x20bord&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 3102&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;title&gt;Action Controller: Exception caught&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    background-color: #FAFAFA;&#xa;    color: #333;&#xa;    margin: 0px;&#xa;    body, p, ol, ul, td {&#xa;    font-family: helvetica, verdana, arial, sans-serif;&#xa;    font-size: 13px;&#xa;    line-height: 18px;&#xa;    font-size: 11px;&#xa;    white-space: pre-wrap;&#xa;    pre.box {&#xa;    border: 1px solid #EEE;&#xa;    padding: 10px;&#xa;    margin: 0px;&#xa;    width: 958px;&#xa;    header {&#xa;    color: #F0F0F0;&#xa;    background: #C52F24;&#xa;    padding: 0.5em 1.5em;&#xa;    margin: 0.2em 0;&#xa;    line-height: 1.1em;&#xa;    font-size: 2em;&#xa;    color: #C52F24;&#xa;    line-height: 25px;&#xa;    .details {&#xa;    bord"><elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 3102&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;title&gt;Action Controller: Exception caught&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    background-color: #FAFAFA;&#xa;    color: #333;&#xa;    margin: 0px;&#xa;    body, p, ol, ul, td {&#xa;    font-family: helvetica, verdana, arial, sans-serif;&#xa;    font-size: 13px;&#xa;    line-height: 18px;&#xa;    font-size: 11px;&#xa;    white-space: pre-wrap;&#xa;    pre.box {&#xa;    border: 1px solid #EEE;&#xa;    padding: 10px;&#xa;    margin: 0px;&#xa;    width: 958px;&#xa;    header {&#xa;    color: #F0F0F0;&#xa;    background: #C52F24;&#xa;    padding: 0.5em 1.5em;&#xa;    margin: 0.2em 0;&#xa;    line-height: 1.1em;&#xa;    font-size: 2em;&#xa;    color: #C52F24;&#xa;    line-height: 25px;&#xa;    .details {&#xa;    bord</elem>
+</script><script id="http-favicon" output="Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="ForumOnRails"><elem key="title">ForumOnRails</elem>
+</script></port>
+<port protocol="tcp" portid="15199"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="16650"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="16779"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="18591"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="18734"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="19382"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="19986"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="20210"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="20986"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22523"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="25220"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="25669"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="27979"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28030"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Unix)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="html5-goku-en-javascript"><elem key="title">html5-goku-en-javascript</elem>
+</script></port>
+<port protocol="tcp" portid="30747"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="32561"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="33422"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="34645"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="37150"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="39322"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="40273"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="41923"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42679"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="43114"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="43128"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="43819"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="44669"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46160"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46164"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="47002"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="48120"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="51489"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51594"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="53853"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="54428"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="54554"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="57583"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="58889"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="59402"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="60022"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 76:61:5c:e1:8c:ca:14:e8:7a:63:ba:a3:46:9f:09:b3 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6cIo6CEhEYExa2FRUK028g1BaUmyVNItWi7WjSEJC8gv8c18Y7WVSvau3OKXRERDqEJt+jwsbWjp7MIH9eIfVqfHtgwlQqla8nXy61SUviJThRsrfahizFnrTEpx0UncZ7EnSEfDbQnKCIly+0d4ObReUOv98lvvAI9a1oEsR5Y9Gkz3Bg5oF7HXW+FG06jRWh0Fg2QaerXhmXVEV7XODeS7GTqnOq7BU9utJnD1TUBxIaVtSi7v+U28A8+U2cXWZy6muwQvqQw4jgtW6fAJiui6Ogweop+oUP75f2EGydNu0t4NKO8ujre89eNoclmESUykQP4kjaMoty3Nn8GJ4GYdXiTLpzmGoxB2OS6JzvvwZyw1/M0k8Q1H0q4Gh5H1eTY1g4n7UpypbOtn99kRBvzBrh/u3mi7cf8nXnzV6OTqE9Ie6K4KWyCNFVNJqwRhzrXVbQ5vwO8KybEW7JBk0ZECCH/2zra8lYx7mtHs+E4f5pW2jQqu9mYUfK3eAyC8=&#xa;  256 e3:ed:fc:a8:10:d7:8e:b1:7c:de:a2:59:df:19:06:29 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGcKY1+Mje4h/PPSW0ZMQUL8eAV0DZ2OT1Zu1MoqVUlSds3CS8+OB8Vxa55NDxIXC6hMHrjNwjwtGknNjS+2nbg=&#xa;  256 e5:dd:dd:a7:e3:ac:5f:b9:2b:4b:d0:27:e3:3c:c2:43 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIITa8EuQPgZPpsKcj51YwcXmY9OflD/T3AmWKA0SQkEd"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">76615ce18cca14e87a63baa3469f09b3</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC6cIo6CEhEYExa2FRUK028g1BaUmyVNItWi7WjSEJC8gv8c18Y7WVSvau3OKXRERDqEJt+jwsbWjp7MIH9eIfVqfHtgwlQqla8nXy61SUviJThRsrfahizFnrTEpx0UncZ7EnSEfDbQnKCIly+0d4ObReUOv98lvvAI9a1oEsR5Y9Gkz3Bg5oF7HXW+FG06jRWh0Fg2QaerXhmXVEV7XODeS7GTqnOq7BU9utJnD1TUBxIaVtSi7v+U28A8+U2cXWZy6muwQvqQw4jgtW6fAJiui6Ogweop+oUP75f2EGydNu0t4NKO8ujre89eNoclmESUykQP4kjaMoty3Nn8GJ4GYdXiTLpzmGoxB2OS6JzvvwZyw1/M0k8Q1H0q4Gh5H1eTY1g4n7UpypbOtn99kRBvzBrh/u3mi7cf8nXnzV6OTqE9Ie6K4KWyCNFVNJqwRhzrXVbQ5vwO8KybEW7JBk0ZECCH/2zra8lYx7mtHs+E4f5pW2jQqu9mYUfK3eAyC8=</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">e3edfca810d78eb17cdea259df190629</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGcKY1+Mje4h/PPSW0ZMQUL8eAV0DZ2OT1Zu1MoqVUlSds3CS8+OB8Vxa55NDxIXC6hMHrjNwjwtGknNjS+2nbg=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">e5dddda7e3ac5fb92b4bd027e33cc243</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIITa8EuQPgZPpsKcj51YwcXmY9OflD/T3AmWKA0SQkEd</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41995"/>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="91" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="91" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="91" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="91" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="91"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="90" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="90" line="63140">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=2/14%OT=21%CT=1%CU=41995%PV=Y%DS=2%DC=T%G=Y%TM=620A79D&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10C%TI=Z%TS=A)OPS(O1=M54EST&#xa;OS:11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M5&#xa;OS:4EST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%&#xa;OS:T=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;OS:T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=&#xa;OS:N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G&#xa;OS:)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="524911" lastboot="Tue Feb  8 09:00:15 2022"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="470FF0E,16397C56,B4416773,232E7C2B,F5858025,9854AF4D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="1F48C210,1F48C275,1F48C2DB,1F48C33E,1F48C3A3,1F48C406"/>
+<trace port="256" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="177.79"/>
+<hop ttl="2" ipaddr="192.168.90.114" rtt="177.76"/>
+</trace>
+<times srtt="182053" rttvar="4297" to="199241"/>
+</host>
+<taskbegin task="NSE" time="1644853726"/>
+<taskend task="NSE" time="1644853726"/>
+<taskbegin task="NSE" time="1644853726"/>
+<taskend task="NSE" time="1644853726"/>
+<taskbegin task="NSE" time="1644853726"/>
+<taskend task="NSE" time="1644853726"/>
+<runstats><finished time="1644853726" timestr="Mon Feb 14 10:48:46 2022" summary="Nmap done at Mon Feb 14 10:48:46 2022; 1 IP address (1 host up) scanned in 1559.26 seconds" elapsed="1559.26" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,109 @@
+# Nmap 7.91 scan initiated Sat Feb  5 20:12:30 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/results/192.168.51.159/scans/xml/_full_tcp_nmap.xml" 192.168.51.159
+adjust_timeouts2: packet supposedly had rtt of -1555197 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1555197 microseconds.  Ignoring time.
+Nmap scan report for 192.168.51.159
+Host is up, received user-set (0.24s latency).
+Scanned at 2022-02-05 20:12:31 EST for 362s
+Not shown: 65533 filtered ports
+Reason: 65533 no-responses
+PORT     STATE SERVICE REASON         VERSION
+23/tcp   open  telnet? syn-ack ttl 63
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, RTSPRequest: 
+|     ====================
+|     NEXUS BACKUP MANAGER
+|     ====================
+|     ANSONE Answer question one
+|     ANSTWO Answer question two
+|     BACKUP Perform backup
+|     EXIT Exit
+|     HELP Show help
+|     HINT Show hints
+|     RECOVER Recover admin password
+|     RESTORE Restore backup
+|     Incorrect
+|   NULL, tn3270: 
+|     ====================
+|     NEXUS BACKUP MANAGER
+|     ====================
+|     ANSONE Answer question one
+|     ANSTWO Answer question two
+|     BACKUP Perform backup
+|     EXIT Exit
+|     HELP Show help
+|     HINT Show hints
+|     RECOVER Recover admin password
+|_    RESTORE Restore backup
+8081/tcp open  http    syn-ack ttl 63 Jetty 9.4.18.v20190429
+|_http-favicon: Unknown favicon MD5: 9A008BECDE9C5F250EDAD4F00E567721
+| http-methods: 
+|_  Supported Methods: GET HEAD
+| http-robots.txt: 2 disallowed entries 
+|_/repository/ /service/
+|_http-server-header: Nexus/3.21.1-01 (OSS)
+|_http-title: Nexus Repository Manager
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port23-TCP:V=7.91%I=9%D=2/5%Time=61FF2192%P=x86_64-pc-linux-gnu%r(NULL,
+SF:F0,"====================\nNEXUS\x20BACKUP\x20MANAGER\n=================
+SF:===\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20quest
+SF:ion\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tSh
+SF:ow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20passw
+SF:ord\nRESTORE\tRestore\x20backup\n")%r(GenericLines,FA,"================
+SF:====\nNEXUS\x20BACKUP\x20MANAGER\n====================\nANSONE\x20\tAns
+SF:wer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x
+SF:20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20
+SF:\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestor
+SF:e\x20backup\nIncorrect\n")%r(tn3270,F0,"====================\nNEXUS\x20
+SF:BACKUP\x20MANAGER\n====================\nANSONE\x20\tAnswer\x20question
+SF:\x20one\nANSTWO\x20\tAnswer\x20question\x20two\nBACKUP\x20\tPerform\x20
+SF:backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints
+SF:\nRECOVER\tRecover\x20admin\x20password\nRESTORE\tRestore\x20backup\n")
+SF:%r(GetRequest,FA,"====================\nNEXUS\x20BACKUP\x20MANAGER\n===
+SF:=================\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tA
+SF:nswer\x20question\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit
+SF:\nHELP\x20\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20
+SF:admin\x20password\nRESTORE\tRestore\x20backup\nIncorrect\n")%r(HTTPOpti
+SF:ons,FA,"====================\nNEXUS\x20BACKUP\x20MANAGER\n=============
+SF:=======\nANSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20q
+SF:uestion\x20two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20
+SF:\tShow\x20help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20p
+SF:assword\nRESTORE\tRestore\x20backup\nIncorrect\n")%r(RTSPRequest,FA,"==
+SF:==================\nNEXUS\x20BACKUP\x20MANAGER\n====================\nA
+SF:NSONE\x20\tAnswer\x20question\x20one\nANSTWO\x20\tAnswer\x20question\x2
+SF:0two\nBACKUP\x20\tPerform\x20backup\nEXIT\x20\tExit\nHELP\x20\tShow\x20
+SF:help\nHINT\x20\tShow\x20hints\nRECOVER\tRecover\x20admin\x20password\nR
+SF:ESTORE\tRestore\x20backup\nIncorrect\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|WAP|specialized
+Running (JUST GUESSING): Linux 3.X|2.4.X (89%), MikroTik RouterOS 6.X (88%), Crestron 2-Series (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3.2.0 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:crestron:2_series
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.2.0 (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (88%), Tomato 1.27 - 1.28 (Linux 2.4.20) (88%), Crestron XPanel control system (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=2/5%OT=23%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=61FF21E9%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)
+OPS(O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11NW7%O6=M506ST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)
+ECN(R=N)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 6.839 days (since Sun Jan 30 00:10:12 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+1   253.12 ms 192.168.49.1
+2   253.80 ms 192.168.51.159
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  5 20:18:33 2022 -- 1 IP address (1 host up) scanned in 363.84 seconds

@@ -1,0 +1,16 @@
+403        9l       28w      280c http://192.168.161.161/.php
+403        9l       28w      280c http://192.168.161.161/.html
+403        9l       28w      280c http://192.168.161.161/.html.txt
+403        9l       28w      280c http://192.168.161.161/.html.html
+403        9l       28w      280c http://192.168.161.161/.html.php
+403        9l       28w      280c http://192.168.161.161/.html.asp
+403        9l       28w      280c http://192.168.161.161/.html.aspx
+403        9l       28w      280c http://192.168.161.161/.html.jsp
+301        9l       28w      321c http://192.168.161.161/wp-admin
+301        9l       28w      324c http://192.168.161.161/wp-includes
+301        9l       28w      323c http://192.168.161.161/wp-content
+405        1l        6w       42c http://192.168.161.161/xmlrpc.php
+200      350l     1168w        0c http://192.168.161.161/index.php
+403        9l       28w      280c http://192.168.161.161/.htm
+403        9l       28w      280c http://192.168.161.161/.htm.txt
+403        9l       28w      280c http://192.168.161.161/.htm.html
