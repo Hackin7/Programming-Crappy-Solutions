@@ -1,0 +1,50 @@
+HTTP/1.1 200 OK
+Server: gunicorn/20.0.4
+Date: Thu, 17 Feb 2022 07:16:32 GMT
+Connection: close
+Content-Type: text/html; charset=utf-8
+Content-Length: 1583
+
+<html>
+    <head>
+        <title>Remote Software Management API</title>
+        <link rel="stylesheet" href="static/style.css"
+    </head>
+    <body>
+        <center><h1 style="color: #F0F0F0;">Remote Software Management API</h1></center>
+        <br>
+        <br>
+        <h2>Attention! This utility should not be exposed to external network. It is just for management on localhost. Contact system administrator(s) if you find this exposed on external network.</h2>
+        <br>
+        <br>
+        <div class="divmain">
+            <h3>Usage:</h3>
+            <div class="divmin">
+                <p>/</p>
+                <p>Methods: GET</p>
+                <p>Returns this page.</p>
+            </div>
+            <div class="divmin">
+                <p>/version</p>
+                <p>Methods: GET</p>
+                <p>Returns version of the app running.</p>
+            </div>
+            <div class="divmin">
+                <p>/update</p>
+                <p>Methods: POST</p>
+                <p>Updates the app using a linux executable. Content-Type: application/json
+                 {"user":"&lt;user requesting the update&gt;", "url":"&lt;url of the update to download&gt;"}
+                 </p>
+            </div>
+            <div class="divmin">
+                <p>/logs</p>
+                <p>Methods: GET</p>
+                <p>Read log files.</p>
+            </div>
+            <div class="divmin">
+                <p>/restart</p>
+                <p>Methods: GET</p>
+                <p>To request the restart of the app.</p>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+403       42l       96w        0c http://192.168.108.105/.htaccess
+403       42l       96w        0c http://192.168.108.105/.htpasswd
+403       42l       96w        0c http://192.168.108.105/.htaccess.txt
+403       42l       96w        0c http://192.168.108.105/.htpasswd.txt
+403       42l       96w        0c http://192.168.108.105/.htaccess.html
+403       42l       96w        0c http://192.168.108.105/.htpasswd.html
+403       42l       96w        0c http://192.168.108.105/.htaccess.php
+403       42l       96w        0c http://192.168.108.105/.htpasswd.php
+403       42l       96w        0c http://192.168.108.105/.htaccess.asp
+403       42l       96w        0c http://192.168.108.105/.htpasswd.asp
+403       42l       96w        0c http://192.168.108.105/.htaccess.aspx
+403       42l       96w        0c http://192.168.108.105/.htpasswd.aspx
+403       42l       96w        0c http://192.168.108.105/.htaccess.jsp
+403       42l       96w        0c http://192.168.108.105/.htpasswd.jsp

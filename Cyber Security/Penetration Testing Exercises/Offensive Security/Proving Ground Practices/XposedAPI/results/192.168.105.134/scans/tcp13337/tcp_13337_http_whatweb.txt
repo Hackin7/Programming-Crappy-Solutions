@@ -1,0 +1,24 @@
+WhatWeb report for http://192.168.105.134:13337
+Status    : 200 OK
+Title     : Remote Software Management API
+IP        : 192.168.105.134
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[gunicorn/20.0.4]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : gunicorn/20.0.4 (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: gunicorn/20.0.4
+	Date: Thu, 17 Feb 2022 07:16:39 GMT
+	Connection: close
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 1583
+
+

@@ -1,0 +1,14 @@
+# Nmap 7.91 scan initiated Thu Feb 17 03:50:42 2022 as: nmap -vv --reason -Pn -T4 -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp21/tcp_21_ftp_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp21/xml/tcp_21_ftp_nmap.xml" 192.168.105.37
+Nmap scan report for 192.168.105.37
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-02-17 03:50:45 EST for 291s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp?    syn-ack ttl 63
+|_banner: 425 Sorry, invalid address given
+|_ftp-libopie: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 17 03:55:36 2022 -- 1 IP address (1 host up) scanned in 293.65 seconds

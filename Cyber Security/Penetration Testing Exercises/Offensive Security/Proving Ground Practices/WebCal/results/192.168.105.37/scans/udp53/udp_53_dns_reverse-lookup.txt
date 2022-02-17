@@ -1,0 +1,19 @@
+
+; <<>> DiG 9.16.11-Debian <<>> -p 53 -x 192.168.105.37 @192.168.105.37
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 232
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;37.105.168.192.in-addr.arpa.	IN	PTR
+
+;; Query time: 232 msec
+;; SERVER: 192.168.105.37#53(192.168.105.37)
+;; WHEN: Thu Feb 17 03:42:11 EST 2022
+;; MSG SIZE  rcvd: 56
+
+

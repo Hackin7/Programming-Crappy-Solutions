@@ -1,0 +1,17 @@
+# Nmap 7.91 scan initiated Thu Feb 17 03:50:43 2022 as: nmap -vv --reason -Pn -T4 -sV -p 25 "--script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/tcp_25_smtp_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/xml/tcp_25_smtp_nmap.xml" 192.168.105.37
+Nmap scan report for 192.168.105.37
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-02-17 03:50:47 EST for 150s
+
+PORT   STATE SERVICE REASON         VERSION
+25/tcp open  smtp    syn-ack ttl 63 Postfix smtpd
+|_banner: 220 ucal.local ESMTP Postfix (Ubuntu)
+|_smtp-commands: ucal.local, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+Service Info: Host:  ucal.local
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 17 03:53:17 2022 -- 1 IP address (1 host up) scanned in 154.35 seconds

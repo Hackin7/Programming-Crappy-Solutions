@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Feb 17 03:50:43 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/tcp_25_smtp_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/xml/tcp_25_smtp_nmap.xml&quot; 192.168.105.37 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/tcp_25_smtp_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp25/xml/tcp_25_smtp_nmap.xml&quot; 192.168.105.37" start="1645087843" startstr="Thu Feb 17 03:50:43 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="25"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645087846"/>
+<taskend task="NSE" time="1645087846"/>
+<taskbegin task="NSE" time="1645087846"/>
+<taskend task="NSE" time="1645087846"/>
+<taskbegin task="NSE" time="1645087846"/>
+<taskend task="NSE" time="1645087846"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645087846"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645087846"/>
+<taskbegin task="SYN Stealth Scan" time="1645087846"/>
+<taskend task="SYN Stealth Scan" time="1645087847" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645087848"/>
+<taskend task="Service scan" time="1645087858" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645087858"/>
+<taskend task="NSE" time="1645087871"/>
+<taskbegin task="NSE" time="1645087871"/>
+<taskprogress task="NSE" time="1645087902" percent="46.67" remaining="36" etc="1645087937"/>
+<taskprogress task="NSE" time="1645087932" percent="66.67" remaining="31" etc="1645087962"/>
+<taskprogress task="NSE" time="1645087962" percent="93.33" remaining="7" etc="1645087969"/>
+<taskend task="NSE" time="1645087973"/>
+<taskbegin task="NSE" time="1645087973"/>
+<taskend task="NSE" time="1645087997"/>
+<host starttime="1645087847" endtime="1645087997"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.105.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="Postfix smtpd" hostname=" ucal.local" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="banner" output="220 ucal.local ESMTP Postfix (Ubuntu)"/><script id="smtp-commands" output="ucal.local, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, "/><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="276680" rttvar="276680" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1645087997"/>
+<taskend task="NSE" time="1645087997"/>
+<taskbegin task="NSE" time="1645087997"/>
+<taskend task="NSE" time="1645087997"/>
+<taskbegin task="NSE" time="1645087997"/>
+<taskend task="NSE" time="1645087997"/>
+<runstats><finished time="1645087997" timestr="Thu Feb 17 03:53:17 2022" summary="Nmap done at Thu Feb 17 03:53:17 2022; 1 IP address (1 host up) scanned in 154.35 seconds" elapsed="154.35" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

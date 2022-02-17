@@ -1,0 +1,38 @@
+WhatWeb report for http://192.168.108.105:5000
+Status    : 404 Not Found
+Title     : 404 Not Found
+IP        : 192.168.108.105
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Werkzeug/1.0.1 Python/3.8.5], Werkzeug[1.0.1], Python[3.8.5]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Werkzeug/1.0.1 Python/3.8.5 (from server string)
+
+[ Python ]
+	Python is a programming language that lets you work more
+	quickly and integrate your systems more effectively. You
+	can learn to use Python and see almost immediate gains in
+	productivity and lower maintenance costs.
+
+	Version      : 3.8.5
+	Website     : http://www.python.org/
+
+[ Werkzeug ]
+	Werkzeug is a WSGI utility library for Python.
+
+	Version      : 1.0.1
+	Website     : http://werkzeug.pocoo.org/
+
+HTTP Headers:
+	HTTP/1.0 404 NOT FOUND
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 232
+	Server: Werkzeug/1.0.1 Python/3.8.5
+	Date: Thu, 17 Feb 2022 12:24:32 GMT
+
+

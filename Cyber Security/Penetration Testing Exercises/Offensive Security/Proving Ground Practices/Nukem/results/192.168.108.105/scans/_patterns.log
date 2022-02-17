@@ -1,0 +1,16 @@
+Matched Pattern: Powered-By: PHP/7.4.10
+
+Identified HTTP Server: Apache/2.4.46 (Unix) PHP/7.4.10
+
+Identified HTTP Server: Apache/2.4.46 (Unix) PHP/7.4.10
+
+Identified HTTP Server: nginx/1.18.0
+
+Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+CVE Identified: CVE-2011-3192
+
+CVE Identified: CVE-2011-3192
+
+Identified HTTP Server: Werkzeug/1.0.1 Python/3.8.5
+

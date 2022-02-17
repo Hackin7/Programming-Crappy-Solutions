@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Feb 17 03:50:43 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp22/tcp_22_ssh_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp22/xml/tcp_22_ssh_nmap.xml&quot; 192.168.105.37 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 22 -&#45;script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp22/tcp_22_ssh_nmap.txt&quot; -oX &quot;/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp22/xml/tcp_22_ssh_nmap.xml&quot; 192.168.105.37" start="1645087843" startstr="Thu Feb 17 03:50:43 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="22"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645087845"/>
+<taskend task="NSE" time="1645087845"/>
+<taskbegin task="NSE" time="1645087845"/>
+<taskend task="NSE" time="1645087845"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645087845"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645087845"/>
+<taskbegin task="SYN Stealth Scan" time="1645087845"/>
+<taskend task="SYN Stealth Scan" time="1645087846" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645087846"/>
+<taskend task="Service scan" time="1645087847" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645087847"/>
+<taskend task="NSE" time="1645087859"/>
+<taskbegin task="NSE" time="1645087859"/>
+<taskend task="NSE" time="1645087859"/>
+<host starttime="1645087845" endtime="1645087859"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.105.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="5.8p1 Debian 7ubuntu1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.8p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_5.8p1 Debian-7ubuntu1"/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    password"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>password</elem>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  1024 5b:b4:3f:ad:ac:70:b3:6f:70:db:de:72:11:03:d7:1d (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAP6wWpAlaYKQ87IRMm6Iu+3P90qRxgJv2uROs7M2YY44MTnLdchXHqqe85Su4wFeGc5+P3xeEnxPvTLOH0N+gKyKUqteMQP4w1gJP4W2oEX2tzAfqY8OqAm8/R/PDx8uWFS7Ivrc5b818lMkMMNYj74TVjdB14X0+xULCg+z6cDFAAAAFQD6yo22iGSzk1uVAgUPAXWatTYWUQAAAIEAgQGQmf0qShFfvh8/1C0qoiZxThFjF3WZc1HXGuajdHqbYrDHiFd2db+7jtQ03WHTNv6sxFjrpPW1R0ZT0B9MJnzbSd7CAp//KYvc/ABQa3HhIIzDR24sx1tE/Jru49IsRfWMYobP3RLCpvu67XnqrNd3xEG6B6jMN1/wiITVBOQAAACBAMnnflla3oGLXF/H+wNn11JUgmfQvT/b3ln8Wei+PrRb6LcJ1rNGNOt4+t6nREcbqhtaHChvuEM8mraoMznE2m3iz8DvFpfiwUevwJ/xc1naP3W59mPaWleRXOGbCSz4+KDmTqzagrbiOuC5TDR3w0wzVK8kW8MR9mZ4kMdh6ltF&#xa;  2048 13:dc:ff:d4:03:51:a5:9f:0c:05:33:82:f0:4a:dd:21 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCn7TiVoPeGyiTCtABhso46YSM8fsReiPNhyN8ItBfnPtJFUPgDlN1mxnuOv1Z2acDDxdGJ/JyhpxkrwFcQ1FtRJmj5Be/vzCdcBh/n8Ef7xgswGUSrHkHLQSocLLroxjOeVX7ClBDfpE3fNRdLPG2gDJAPbI6Xg3gFw9drZkMgoLB8RiSS8PLsuINTKDwkJsn5TwbZY3Xtk9en/U43gC6el4CQU4EPAmqasudGwo+l4YopS21vxXl0zKxp4a7PPZ6SvTzCzwPh3Q90zCiRzYplBMzorvrc2+9hLVZmI3HsB2RElSspyJ5kfR/vlVH936Tq1odeTTOzuGxnwkmh7ncd&#xa;  256 fe:be:7f:91:5c:5e:64:78:0b:35:e4:73:1f:01:f5:a1 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOjqngQVBATu6P7QvVoh3hrHvJgBX+QpB9fVBk++sVvxstZXwnCkaBicePfYEDCwUZy6LyWZ8qACNmee6tCe9/A="><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAP6wWpAlaYKQ87IRMm6Iu+3P90qRxgJv2uROs7M2YY44MTnLdchXHqqe85Su4wFeGc5+P3xeEnxPvTLOH0N+gKyKUqteMQP4w1gJP4W2oEX2tzAfqY8OqAm8/R/PDx8uWFS7Ivrc5b818lMkMMNYj74TVjdB14X0+xULCg+z6cDFAAAAFQD6yo22iGSzk1uVAgUPAXWatTYWUQAAAIEAgQGQmf0qShFfvh8/1C0qoiZxThFjF3WZc1HXGuajdHqbYrDHiFd2db+7jtQ03WHTNv6sxFjrpPW1R0ZT0B9MJnzbSd7CAp//KYvc/ABQa3HhIIzDR24sx1tE/Jru49IsRfWMYobP3RLCpvu67XnqrNd3xEG6B6jMN1/wiITVBOQAAACBAMnnflla3oGLXF/H+wNn11JUgmfQvT/b3ln8Wei+PrRb6LcJ1rNGNOt4+t6nREcbqhtaHChvuEM8mraoMznE2m3iz8DvFpfiwUevwJ/xc1naP3W59mPaWleRXOGbCSz4+KDmTqzagrbiOuC5TDR3w0wzVK8kW8MR9mZ4kMdh6ltF</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">5bb43fadac70b36f70dbde721103d71d</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCn7TiVoPeGyiTCtABhso46YSM8fsReiPNhyN8ItBfnPtJFUPgDlN1mxnuOv1Z2acDDxdGJ/JyhpxkrwFcQ1FtRJmj5Be/vzCdcBh/n8Ef7xgswGUSrHkHLQSocLLroxjOeVX7ClBDfpE3fNRdLPG2gDJAPbI6Xg3gFw9drZkMgoLB8RiSS8PLsuINTKDwkJsn5TwbZY3Xtk9en/U43gC6el4CQU4EPAmqasudGwo+l4YopS21vxXl0zKxp4a7PPZ6SvTzCzwPh3Q90zCiRzYplBMzorvrc2+9hLVZmI3HsB2RElSspyJ5kfR/vlVH936Tq1odeTTOzuGxnwkmh7ncd</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">13dcffd40351a59f0c053382f04add21</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOjqngQVBATu6P7QvVoh3hrHvJgBX+QpB9fVBk++sVvxstZXwnCkaBicePfYEDCwUZy6LyWZ8qACNmee6tCe9/A=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">febe7f915c5e64780b35e4731f01f5a1</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (7)&#xa;      ecdh-sha2-nistp256&#xa;      ecdh-sha2-nistp384&#xa;      ecdh-sha2-nistp521&#xa;      diffie-hellman-group-exchange-sha256&#xa;      diffie-hellman-group-exchange-sha1&#xa;      diffie-hellman-group14-sha1&#xa;      diffie-hellman-group1-sha1&#xa;  server_host_key_algorithms: (3)&#xa;      ssh-rsa&#xa;      ssh-dss&#xa;      ecdsa-sha2-nistp256&#xa;  encryption_algorithms: (13)&#xa;      aes128-ctr&#xa;      aes192-ctr&#xa;      aes256-ctr&#xa;      arcfour256&#xa;      arcfour128&#xa;      aes128-cbc&#xa;      3des-cbc&#xa;      blowfish-cbc&#xa;      cast128-cbc&#xa;      aes192-cbc&#xa;      aes256-cbc&#xa;      arcfour&#xa;      rijndael-cbc@lysator.liu.se&#xa;  mac_algorithms: (7)&#xa;      hmac-md5&#xa;      hmac-sha1&#xa;      umac-64@openssh.com&#xa;      hmac-ripemd160&#xa;      hmac-ripemd160@openssh.com&#xa;      hmac-sha1-96&#xa;      hmac-md5-96&#xa;  compression_algorithms: (2)&#xa;      none&#xa;      zlib@openssh.com"><table key="kex_algorithms">
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group-exchange-sha1</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+<elem>diffie-hellman-group1-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>ssh-rsa</elem>
+<elem>ssh-dss</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>arcfour256</elem>
+<elem>arcfour128</elem>
+<elem>aes128-cbc</elem>
+<elem>3des-cbc</elem>
+<elem>blowfish-cbc</elem>
+<elem>cast128-cbc</elem>
+<elem>aes192-cbc</elem>
+<elem>aes256-cbc</elem>
+<elem>arcfour</elem>
+<elem>rijndael-cbc@lysator.liu.se</elem>
+</table>
+<table key="mac_algorithms">
+<elem>hmac-md5</elem>
+<elem>hmac-sha1</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>hmac-ripemd160</elem>
+<elem>hmac-ripemd160@openssh.com</elem>
+<elem>hmac-sha1-96</elem>
+<elem>hmac-md5-96</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="250592" rttvar="250592" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1645087859"/>
+<taskend task="NSE" time="1645087859"/>
+<taskbegin task="NSE" time="1645087859"/>
+<taskend task="NSE" time="1645087859"/>
+<runstats><finished time="1645087858" timestr="Thu Feb 17 03:50:58 2022" summary="Nmap done at Thu Feb 17 03:50:58 2022; 1 IP address (1 host up) scanned in 16.23 seconds" elapsed="16.23" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,63 @@
+WhatWeb report for http://192.168.108.105:13000
+Status    : 200 OK
+Title     : Login V14
+IP        : 192.168.108.105
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.18.0], Script, HTML5, JQuery[3.2.1], HTTPServer[nginx/1.18.0], Bootstrap, PasswordField[pass]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : nginx/1.18.0 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 3.2.1
+	Website     : http://jquery.com/
+
+[ PasswordField ]
+	find password fields
+
+	String       : pass (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.18.0
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.18.0
+	Date: Thu, 17 Feb 2022 12:34:03 GMT
+	Content-Type: text/html
+	Content-Length: 5057
+	Last-Modified: Mon, 18 Dec 2017 09:21:20 GMT
+	Connection: close
+	ETag: "5a378890-13c1"
+	Accept-Ranges: bytes
+
+

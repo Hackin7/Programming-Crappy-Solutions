@@ -1,0 +1,53 @@
+# Nmap 7.91 scan initiated Thu Feb 17 07:26:05 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nukem/results/192.168.108.105/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nukem/results/192.168.108.105/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 192.168.108.105
+Nmap scan report for 192.168.108.105
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-02-17 07:26:07 EST for 22s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql?  syn-ack ttl 63
+| banner: I\x00\x00\x01\xFFj\x04Host '192.168.49.108' is not allowed to c
+|_onnect to this MariaDB server
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, Kerberos, LDAPBindReq, LPDString, NULL, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|_    Host '192.168.49.108' is not allowed to connect to this MariaDB server
+|_mysql-empty-password: Host '192.168.49.108' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.108' is not allowed to connect to this MariaDB server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=2/17%Time=620E3EE0%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GetReques
+SF:t,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(HTTPOption
+SF:s,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RTSPReques
+SF:t,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RPCCheck,4
+SF:D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allowe
+SF:d\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSStatusRequ
+SF:estTCP,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x
+SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Help,
+SF:4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SSLSessionRe
+SF:q,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(TLSSession
+SF:Req,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20a
+SF:llowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Kerberos
+SF:,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allo
+SF:wed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SMBProgNeg,
+SF:4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(X11Probe,4D,
+SF:"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allowed\
+SF:x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LPDString,4D,"I
+SF:\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allowed\x2
+SF:0to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LDAPBindReq,4D,"I
+SF:\0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allowed\x2
+SF:0to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SIPOptions,4D,"I\
+SF:0\0\x01\xffj\x04Host\x20'192\.168\.49\.108'\x20is\x20not\x20allowed\x20
+SF:to\x20connect\x20to\x20this\x20MariaDB\x20server");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 17 07:26:29 2022 -- 1 IP address (1 host up) scanned in 24.31 seconds

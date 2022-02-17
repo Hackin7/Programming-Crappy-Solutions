@@ -1,0 +1,73 @@
+# Nmap 7.91 scan initiated Thu Feb 17 07:26:06 2022 as: nmap -vv --reason -Pn -T4 -sV -p 5000 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nukem/results/192.168.108.105/scans/tcp5000/tcp_5000_http_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nukem/results/192.168.108.105/scans/tcp5000/xml/tcp_5000_http_nmap.xml" 192.168.108.105
+Nmap scan report for 192.168.108.105
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-17 07:26:08 EST for 1081s
+
+PORT     STATE SERVICE REASON         VERSION
+5000/tcp open  http    syn-ack ttl 63 Werkzeug httpd 1.0.1 (Python 3.8.5)
+|_http-chrono: Request times for /; avg: 465.37ms; min: 452.51ms; max: 508.14ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Thu, 17 Feb 2022 12:24:38 GMT; -1m44s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.108.105
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://192.168.108.105:5000/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 232
+|   Server: Werkzeug/1.0.1 Python/3.8.5
+|   Date: Thu, 17 Feb 2022 12:24:41 GMT
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Page: /index.php was not found. Try with an existing file.
+|_http-malware-host: Host appears to be clean
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Werkzeug/1.0.1 Python/3.8.5
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: 404 Not Found
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 404
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 17 07:44:09 2022 -- 1 IP address (1 host up) scanned in 1083.25 seconds

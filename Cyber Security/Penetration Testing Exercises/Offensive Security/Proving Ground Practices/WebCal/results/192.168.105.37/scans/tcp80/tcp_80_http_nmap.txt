@@ -1,0 +1,221 @@
+# Nmap 7.91 scan initiated Thu Feb 17 03:50:45 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/WebCal/results/192.168.105.37/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.105.37
+Nmap scan report for 192.168.105.37
+Host is up, received user-set (0.25s latency).
+Scanned at 2022-02-17 03:50:49 EST for 83s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.2.20 ((Ubuntu))
+|_http-apache-negotiation: mod_negotiation enabled.
+|_http-chrono: Request times for /; avg: 797.84ms; min: 739.61ms; max: 953.44ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.105.37
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 25
+|     Comment: 
+|         <!-- start: countdownTimer -->
+|     
+|     Path: http://192.168.105.37:80/resources/css/main.css
+|     Line number: 57
+|     Comment: 
+|         /* close commented backslash hack */
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 23
+|     Comment: 
+|         <!-- start: bottomBar -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 52
+|     Comment: 
+|         <!-- start: progressBar -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 55
+|     Comment: 
+|         <!-- end: followUs -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 77
+|     Comment: 
+|         <!-- end: notifyMe -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 56
+|     Comment: 
+|         <!-- start: notifyMe -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 23
+|     Comment: 
+|         <!-- start: countdownTimerWrap -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 74
+|     Comment: 
+|         <!-- end: progressDescription -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 54
+|     Comment: 
+|         <!-- start: progressBarFill -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 25
+|     Comment: 
+|         <!-- start: followUs -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 81
+|     Comment: 
+|         <!-- end: container -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 21
+|     Comment: 
+|         <!-- end: content -->
+|     
+|     Path: http://192.168.105.37:80/resources/js/main.js
+|     Line number: 3
+|     Comment: 
+|         /* EDIT BELOW */
+|     
+|     Path: http://192.168.105.37:80/resources/css/main.css
+|     Line number: 54
+|     Comment: 
+|         /* start commented backslash hack \*/
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 47
+|     Comment: 
+|         <!-- end: countdownTimer -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 62
+|     Comment: 
+|         <!-- end: progressBar -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 79
+|     Comment: 
+|         <!-- end: bottomBar -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 49
+|     Comment: 
+|         <!-- end: countdownTimerWrap -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 64
+|     Comment: 
+|         <!-- start: progressDescription -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 17
+|     Comment: 
+|         <!-- start: content -->
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Line number: 13
+|     Comment: 
+|         <!-- start: container -->
+|     
+|     Path: http://192.168.105.37:80/
+|     Line number: 60
+|     Comment: 
+|         <!-- end: progressBarFill -->
+|     
+|     Path: http://192.168.105.37:80/resources/js/main.js
+|     Line number: 9
+|     Comment: 
+|_        /* DON'T EDIT BELOW */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.105.37
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.105.37:80/
+|     Form id: 
+|     Form action: send.php
+|     
+|     Path: http://192.168.105.37:80/send.php
+|     Form id: 
+|_    Form action: send.php
+|_http-date: Thu, 17 Feb 2022 13:59:50 GMT; +5h08m49s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /icons/: Potentially interesting folder w/ directory listing
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Thu, 17 Feb 2022 13:59:49 GMT
+|   Server: Apache/2.2.20 (Ubuntu)
+|   Last-Modified: Mon, 14 Jan 2013 13:39:30 GMT
+|   ETag: "24f13-13f1-4d33fc653f98d"
+|   Accept-Ranges: bytes
+|   Content-Length: 5105
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash bbf67afc9265eeff02ac266dfab30d64
+|_Credits query returned unknown hash bbf67afc9265eeff02ac266dfab30d64
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  http://ajax.googleapis.com:80/ajax/libs/jquery/1.4/jquery.min.js
+|_http-security-headers: 
+|_http-server-header: Apache/2.2.20 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 1
+|     /resources/css/
+|       css: 1
+|     /resources/img/
+|       png: 1
+|     /resources/img/follow_us_icons/
+|       png: 3
+|     /resources/js/
+|       js: 3
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /resources/img/follow_us_icons/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; js: 3; php: 1; png: 4
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Construction Page
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 17 03:52:12 2022 -- 1 IP address (1 host up) scanned in 88.19 seconds
