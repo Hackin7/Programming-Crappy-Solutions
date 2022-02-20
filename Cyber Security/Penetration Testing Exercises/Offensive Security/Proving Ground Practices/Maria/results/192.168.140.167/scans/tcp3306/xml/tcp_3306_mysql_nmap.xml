@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb 19 22:33:49 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.140.167 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/tcp_3306_mysql_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml&quot; 192.168.140.167" start="1645328029" startstr="Sat Feb 19 22:33:49 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3306"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645328031"/>
+<taskend task="NSE" time="1645328031"/>
+<taskbegin task="NSE" time="1645328031"/>
+<taskend task="NSE" time="1645328031"/>
+<taskbegin task="NSE" time="1645328031"/>
+<taskend task="NSE" time="1645328031"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645328032"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645328032"/>
+<taskbegin task="SYN Stealth Scan" time="1645328032"/>
+<taskend task="SYN Stealth Scan" time="1645328032" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645328032"/>
+<taskend task="Service scan" time="1645328033" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645328033"/>
+<taskprogress task="NSE" time="1645328064" percent="97.96" remaining="1" etc="1645328065"/>
+<taskprogress task="NSE" time="1645328094" percent="97.96" remaining="2" etc="1645328095"/>
+<taskprogress task="NSE" time="1645328124" percent="97.96" remaining="2" etc="1645328126"/>
+<taskprogress task="NSE" time="1645328154" percent="97.96" remaining="3" etc="1645328157"/>
+<taskprogress task="NSE" time="1645328184" percent="97.96" remaining="4" etc="1645328187"/>
+<taskprogress task="NSE" time="1645328214" percent="97.96" remaining="4" etc="1645328218"/>
+<taskprogress task="NSE" time="1645328244" percent="97.96" remaining="5" etc="1645328248"/>
+<taskprogress task="NSE" time="1645328274" percent="97.96" remaining="6" etc="1645328279"/>
+<taskprogress task="NSE" time="1645328304" percent="97.96" remaining="6" etc="1645328310"/>
+<taskprogress task="NSE" time="1645328334" percent="97.96" remaining="7" etc="1645328340"/>
+<taskprogress task="NSE" time="1645328364" percent="97.96" remaining="7" etc="1645328371"/>
+<taskprogress task="NSE" time="1645328394" percent="97.96" remaining="8" etc="1645328402"/>
+<taskprogress task="NSE" time="1645328424" percent="97.96" remaining="9" etc="1645328432"/>
+<taskprogress task="NSE" time="1645328454" percent="97.96" remaining="9" etc="1645328463"/>
+<taskprogress task="NSE" time="1645328484" percent="97.96" remaining="10" etc="1645328493"/>
+<taskprogress task="NSE" time="1645328514" percent="97.96" remaining="11" etc="1645328524"/>
+<taskprogress task="NSE" time="1645328544" percent="97.96" remaining="11" etc="1645328555"/>
+<taskprogress task="NSE" time="1645328574" percent="97.96" remaining="12" etc="1645328585"/>
+<taskprogress task="NSE" time="1645328604" percent="97.96" remaining="12" etc="1645328616"/>
+<taskprogress task="NSE" time="1645328634" percent="97.96" remaining="13" etc="1645328647"/>
+<taskprogress task="NSE" time="1645328664" percent="97.96" remaining="14" etc="1645328677"/>
+<taskprogress task="NSE" time="1645328694" percent="97.96" remaining="14" etc="1645328708"/>
+<taskprogress task="NSE" time="1645328724" percent="97.96" remaining="15" etc="1645328738"/>
+<taskprogress task="NSE" time="1645328754" percent="97.96" remaining="16" etc="1645328769"/>
+<taskprogress task="NSE" time="1645328784" percent="97.96" remaining="16" etc="1645328800"/>
+<taskprogress task="NSE" time="1645328814" percent="97.96" remaining="17" etc="1645328830"/>
+<taskend task="NSE" time="1645328837"/>
+<taskbegin task="NSE" time="1645328837"/>
+<taskend task="NSE" time="1645328842"/>
+<taskbegin task="NSE" time="1645328842"/>
+<taskend task="NSE" time="1645328843"/>
+<host starttime="1645328032" endtime="1645328843"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.140.167" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MySQL" version="5.5.5-10.3.27-MariaDB-0+deb10u1" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb:5.5.5-10.3.27-mariadb-0%2Bdeb10u1</cpe></service><script id="banner" output="c\x00\x00\x00\x0A5.5.5-10.3.27-MariaDB-0+deb10u1\x008\x00\x00\x&#xa;00dWh$xU|5\x00\xFE\xF7-\x02\x00\xBF\x81\x15\x00\x00\x00\x00\x00\x00\x07&#xa;\x00\x00\x0002GM0HVY&lt;_I0\x00mysql_native_password\x00"/><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 5.5.5-10.3.27-MariaDB-0+deb10u1&#xa;  Thread ID: 59&#xa;  Capabilities flags: 63486&#xa;  Some Capabilities: LongColumnFlag, DontAllowDatabaseTableColumn, IgnoreSpaceBeforeParenthesis, Support41Auth, FoundRows, ConnectWithDatabase, SupportsTransactions, Speaks41ProtocolNew, IgnoreSigpipes, SupportsLoadDataLocal, SupportsCompression, ODBCClient, InteractiveClient, Speaks41ProtocolOld, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins&#xa;  Status: Autocommit&#xa;  Salt: -e:0&quot;WqR)r&apos;dGs.)%yV$&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">5.5.5-10.3.27-MariaDB-0+deb10u1</elem>
+<elem key="Thread ID">59</elem>
+<elem key="Capabilities flags">63486</elem>
+<table key="Some Capabilities">
+<elem>LongColumnFlag</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>Support41Auth</elem>
+<elem>FoundRows</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>SupportsTransactions</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>SupportsCompression</elem>
+<elem>ODBCClient</elem>
+<elem>InteractiveClient</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+<elem>SupportsAuthPlugins</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">-e:0&quot;WqR)r&apos;dGs.)%yV$</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="174953" rttvar="174953" to="874765"/>
+</host>
+<taskbegin task="NSE" time="1645328843"/>
+<taskend task="NSE" time="1645328843"/>
+<taskbegin task="NSE" time="1645328843"/>
+<taskend task="NSE" time="1645328843"/>
+<taskbegin task="NSE" time="1645328843"/>
+<taskend task="NSE" time="1645328843"/>
+<runstats><finished time="1645328843" timestr="Sat Feb 19 22:47:23 2022" summary="Nmap done at Sat Feb 19 22:47:23 2022; 1 IP address (1 host up) scanned in 814.18 seconds" elapsed="814.18" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

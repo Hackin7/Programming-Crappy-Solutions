@@ -1,5 +1,45 @@
 # Sona
 
+# Methodology
+
+## 23 - Nexus Backup Manager
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+Custom ways of Exploitation
+- [ ] Hacktricks
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+Logging in
+Brute Force `I` 
+- [x] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] rockyou.txt
+- [ ] More
+
+
+## 8081 - Nexus Repo Manager
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+Custom ways of Exploitation
+- [ ] Hacktricks
+Search & Test for Vulnerabilities `(I)`
+- [x] Searchsploit
+	- [ ] RCE
+		- [ ] Sonatype Nexus 3.21.1 - Remote Code Execution (Authenticated)   java/webapps/49385.py
+		- [ ] Metasploit Java https://www.exploit-db.com/exploits/48343
+- [ ] Google
+- [ ] More
+Logging in
+Brute Force `I` 
+- [x] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] rockyou.txt
+- [ ] More
+
 # Enumeration
 
 ## nmap
@@ -179,7 +219,7 @@ Connection closed by foreign host.
 └─$
 ```
 
-## 8081 - Web
+## 8081 - Web - Sonatype Nexus Repository Manager 3.21.1-01
 
 ![](Pasted%20image%2020220206081659.png)
 
@@ -189,6 +229,11 @@ Failed
 ```
 admin:admin
 admin:password
+admin:sona
+sona:sona
+guest:guest
+backup:backup
+admin:admin123
 ```
 
 

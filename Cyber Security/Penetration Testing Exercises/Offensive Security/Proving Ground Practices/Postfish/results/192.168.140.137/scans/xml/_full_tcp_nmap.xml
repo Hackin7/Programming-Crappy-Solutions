@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb 19 21:31:04 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/xml/_full_tcp_nmap.xml&quot; 192.168.140.137 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/xml/_full_tcp_nmap.xml&quot; 192.168.140.137" start="1645324264" startstr="Sat Feb 19 21:31:04 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645324265"/>
+<taskend task="NSE" time="1645324265"/>
+<taskbegin task="NSE" time="1645324265"/>
+<taskend task="NSE" time="1645324265"/>
+<taskbegin task="NSE" time="1645324265"/>
+<taskend task="NSE" time="1645324265"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645324265"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645324265"/>
+<taskbegin task="SYN Stealth Scan" time="1645324265"/>
+<taskprogress task="SYN Stealth Scan" time="1645324296" percent="4.51" remaining="656" etc="1645324952"/>
+<taskprogress task="SYN Stealth Scan" time="1645324329" percent="9.36" remaining="620" etc="1645324949"/>
+<taskprogress task="SYN Stealth Scan" time="1645324359" percent="14.98" remaining="534" etc="1645324892"/>
+<taskprogress task="SYN Stealth Scan" time="1645324413" percent="22.92" remaining="498" etc="1645324911"/>
+<taskprogress task="SYN Stealth Scan" time="1645324464" percent="30.01" remaining="465" etc="1645324928"/>
+<taskprogress task="SYN Stealth Scan" time="1645324509" percent="36.25" remaining="430" etc="1645324938"/>
+<taskprogress task="SYN Stealth Scan" time="1645324539" percent="40.98" remaining="395" etc="1645324934"/>
+<taskprogress task="SYN Stealth Scan" time="1645324581" percent="46.78" remaining="360" etc="1645324941"/>
+<taskprogress task="SYN Stealth Scan" time="1645324614" percent="51.97" remaining="323" etc="1645324937"/>
+<taskprogress task="SYN Stealth Scan" time="1645324644" percent="57.09" remaining="285" etc="1645324929"/>
+<taskprogress task="SYN Stealth Scan" time="1645324680" percent="62.52" remaining="249" etc="1645324929"/>
+<taskprogress task="SYN Stealth Scan" time="1645324710" percent="67.42" remaining="216" etc="1645324925"/>
+<taskprogress task="SYN Stealth Scan" time="1645324743" percent="72.71" remaining="180" etc="1645324922"/>
+<taskprogress task="SYN Stealth Scan" time="1645324779" percent="77.93" remaining="146" etc="1645324925"/>
+<taskprogress task="SYN Stealth Scan" time="1645324818" percent="83.26" remaining="112" etc="1645324929"/>
+<taskprogress task="SYN Stealth Scan" time="1645324854" percent="88.41" remaining="78" etc="1645324931"/>
+<taskprogress task="SYN Stealth Scan" time="1645324893" percent="93.63" remaining="43" etc="1645324936"/>
+<taskend task="SYN Stealth Scan" time="1645324944" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645324944"/>
+<taskend task="Service scan" time="1645324957" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645324965"/>
+<taskend task="Traceroute" time="1645324965"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1645324965"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1645324965"/>
+<taskbegin task="NSE" time="1645324965"/>
+<taskend task="NSE" time="1645324971"/>
+<taskbegin task="NSE" time="1645324971"/>
+<taskend task="NSE" time="1645324974"/>
+<taskbegin task="NSE" time="1645324974"/>
+<taskend task="NSE" time="1645324974"/>
+<host starttime="1645324265" endtime="1645324974"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.140.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65528">
+<extrareasons reason="resets" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 c1:99:4b:95:22:25:ed:0f:85:20:d3:63:b4:48:bb:cf (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH6PH1/ST7TUJ4Mp/l4c7G+TM07YbX7YIsnHzq1TRpvtiBh8MQuFkL1SWW9+za+h6ZraqoZ0ewwkH+0la436t9Q+2H/Nh4CntJOrRbpLJKg4hChjgCHd5KiLCOKHhXPs/FA3mm0Zkzw1tVJLPR6RTbIkkbQiV2Zk3u8oamV5srWIJeYUY5O2XXmTnKENfrPXeHup1+3wBOkTO4Mu17wBSw6yvXyj+lleKjQ6Hnje7KozW5q4U6ijd3LmvHE34UHq/qUbCUbiwY06N2Mj0NQiZqWW8z48eTzGsuh6u1SfGIDnCCq3sWm37Y5LIUvqAFyIEJZVsC/UyrJDPBE+YIODNbN2QLD9JeBr8P4n1rkMaXbsHGywFtutdSrBZwYuRuB2W0GjIEWD/J7lxKIJ9UxRq0UxWWkZ8s3SNqUq2enfPwQt399nigtUerccskdyUD0oRKqVnhZCjEYfX3qOnlAqejr3Lpm8nA31pp6lrKNAmQEjdSO8Jxk04OR2JBxcfVNfs=&#xa;  256 0f:44:8b:ad:ad:95:b8:22:6a:f0:36:ac:19:d0:0e:f3 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI0EdIHR7NOReMM0G7C8zxbLgwB3ump+nb2D3Pe3tXqp/6jNJ/GbU2e4Ab44njMKHJbm/PzrtYzojMjGDuBlQCg=&#xa;  256 32:e1:2a:6c:cc:7c:e6:3e:23:f4:80:8d:33:ce:9b:3a (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDCc0saExmeDXtqm5FS+D5RnDke8aJEvFq3DJIr0KZML"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">c1994b952225ed0f8520d363b448bbcf</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDH6PH1/ST7TUJ4Mp/l4c7G+TM07YbX7YIsnHzq1TRpvtiBh8MQuFkL1SWW9+za+h6ZraqoZ0ewwkH+0la436t9Q+2H/Nh4CntJOrRbpLJKg4hChjgCHd5KiLCOKHhXPs/FA3mm0Zkzw1tVJLPR6RTbIkkbQiV2Zk3u8oamV5srWIJeYUY5O2XXmTnKENfrPXeHup1+3wBOkTO4Mu17wBSw6yvXyj+lleKjQ6Hnje7KozW5q4U6ijd3LmvHE34UHq/qUbCUbiwY06N2Mj0NQiZqWW8z48eTzGsuh6u1SfGIDnCCq3sWm37Y5LIUvqAFyIEJZVsC/UyrJDPBE+YIODNbN2QLD9JeBr8P4n1rkMaXbsHGywFtutdSrBZwYuRuB2W0GjIEWD/J7lxKIJ9UxRq0UxWWkZ8s3SNqUq2enfPwQt399nigtUerccskdyUD0oRKqVnhZCjEYfX3qOnlAqejr3Lpm8nA31pp6lrKNAmQEjdSO8Jxk04OR2JBxcfVNfs=</elem>
+<elem key="bits">3072</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">0f448badad95b8226af036ac19d00ef3</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBI0EdIHR7NOReMM0G7C8zxbLgwB3ump+nb2D3Pe3tXqp/6jNJ/GbU2e4Ab44njMKHJbm/PzrtYzojMjGDuBlQCg=</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">32e12a6ccc7ce63e23f4808d33ce9b3a</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIDCc0saExmeDXtqm5FS+D5RnDke8aJEvFq3DJIr0KZML</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="Postfix smtpd" hostname=" postfish.off" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="smtp-commands" output="postfish.off, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING, "/><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-01-26T10:26:37&#xa;Not valid after:  2031-01-24T10:26:37&#xa;MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2&#xa;SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C63E2BEF1EAE70D0F5EC6BFCC84F9F28E2CB7DE3C5C0BBF1B4C48649BFD52CF320678D86DCBE42A5917BF93F5F1A061330549E265D4EFFABD6F2A79BCBCFE29020986CEFDB5D176508F87644E41ED8EF997D8D3DECCC95E75DA25161FD3566ECF2523F4271FE008C72C0F8723AC1A64DCFA54E1B7611D7387CF25A0507630E24326A5CA9726D0AEC43ABDD0D552660285A27AD05FA1A3C9EC41172C935010EA2448FEAD9CEA12BD5E220B2553E516995EC00E8B86DBB51E3F1F265F2D8AAAB3A7CB96F957705177DB950A62751F48AAAB606C4165B63B46B360028A34AC0FCF7EB05FEC385943114DC94143348FF803272910AFEA0B79453BEACBE3A9F58591D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ubuntu</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-01-26T10:26:37</elem>
+<elem key="notAfter">2031-01-24T10:26:37</elem>
+</table>
+<elem key="md5">53760d7f8cb12db9fedd1809463e94c2</elem>
+<elem key="sha1">63aba07344fd01a2489fc9a08f50de80f33c6895</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="pop3-capabilities" output="RESP-CODES STLS PIPELINING TOP CAPA SASL(PLAIN) UIDL USER AUTH-RESP-CODE"/><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-01-26T10:26:37&#xa;Not valid after:  2031-01-24T10:26:37&#xa;MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2&#xa;SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C63E2BEF1EAE70D0F5EC6BFCC84F9F28E2CB7DE3C5C0BBF1B4C48649BFD52CF320678D86DCBE42A5917BF93F5F1A061330549E265D4EFFABD6F2A79BCBCFE29020986CEFDB5D176508F87644E41ED8EF997D8D3DECCC95E75DA25161FD3566ECF2523F4271FE008C72C0F8723AC1A64DCFA54E1B7611D7387CF25A0507630E24326A5CA9726D0AEC43ABDD0D552660285A27AD05FA1A3C9EC41172C935010EA2448FEAD9CEA12BD5E220B2553E516995EC00E8B86DBB51E3F1F265F2D8AAAB3A7CB96F957705177DB950A62751F48AAAB606C4165B63B46B360028A34AC0FCF7EB05FEC385943114DC94143348FF803272910AFEA0B79453BEACBE3A9F58591D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ubuntu</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-01-26T10:26:37</elem>
+<elem key="notAfter">2031-01-24T10:26:37</elem>
+</table>
+<elem key="md5">53760d7f8cb12db9fedd1809463e94c2</elem>
+<elem key="sha1">63aba07344fd01a2489fc9a08f50de80f33c6895</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="Dovecot imapd" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="imap-capabilities" output="more capabilities have LITERAL+ post-login ID listed IMAP4rev1 IDLE Pre-login ENABLE SASL-IR STARTTLS OK AUTH=PLAINA0001 LOGIN-REFERRALS"/><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-01-26T10:26:37&#xa;Not valid after:  2031-01-24T10:26:37&#xa;MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2&#xa;SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C63E2BEF1EAE70D0F5EC6BFCC84F9F28E2CB7DE3C5C0BBF1B4C48649BFD52CF320678D86DCBE42A5917BF93F5F1A061330549E265D4EFFABD6F2A79BCBCFE29020986CEFDB5D176508F87644E41ED8EF997D8D3DECCC95E75DA25161FD3566ECF2523F4271FE008C72C0F8723AC1A64DCFA54E1B7611D7387CF25A0507630E24326A5CA9726D0AEC43ABDD0D552660285A27AD05FA1A3C9EC41172C935010EA2448FEAD9CEA12BD5E220B2553E516995EC00E8B86DBB51E3F1F265F2D8AAAB3A7CB96F957705177DB950A62751F48AAAB606C4165B63B46B360028A34AC0FCF7EB05FEC385943114DC94143348FF803272910AFEA0B79453BEACBE3A9F58591D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ubuntu</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-01-26T10:26:37</elem>
+<elem key="notAfter">2031-01-24T10:26:37</elem>
+</table>
+<elem key="md5">53760d7f8cb12db9fedd1809463e94c2</elem>
+<elem key="sha1">63aba07344fd01a2489fc9a08f50de80f33c6895</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="Dovecot imapd" extrainfo="Ubuntu" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="imap-capabilities" output="capabilities more LITERAL+ have ID post-login IMAP4rev1 IDLE Pre-login ENABLE listed SASL-IR OK AUTH=PLAINA0001 LOGIN-REFERRALS"/><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-01-26T10:26:37&#xa;Not valid after:  2031-01-24T10:26:37&#xa;MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2&#xa;SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C63E2BEF1EAE70D0F5EC6BFCC84F9F28E2CB7DE3C5C0BBF1B4C48649BFD52CF320678D86DCBE42A5917BF93F5F1A061330549E265D4EFFABD6F2A79BCBCFE29020986CEFDB5D176508F87644E41ED8EF997D8D3DECCC95E75DA25161FD3566ECF2523F4271FE008C72C0F8723AC1A64DCFA54E1B7611D7387CF25A0507630E24326A5CA9726D0AEC43ABDD0D552660285A27AD05FA1A3C9EC41172C935010EA2448FEAD9CEA12BD5E220B2553E516995EC00E8B86DBB51E3F1F265F2D8AAAB3A7CB96F957705177DB950A62751F48AAAB606C4165B63B46B360028A34AC0FCF7EB05FEC385943114DC94143348FF803272910AFEA0B79453BEACBE3A9F58591D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ubuntu</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-01-26T10:26:37</elem>
+<elem key="notAfter">2031-01-24T10:26:37</elem>
+</table>
+<elem key="md5">53760d7f8cb12db9fedd1809463e94c2</elem>
+<elem key="sha1">63aba07344fd01a2489fc9a08f50de80f33c6895</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="pop3" product="Dovecot pop3d" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="pop3-capabilities" output="RESP-CODES UIDL AUTH-RESP-CODE CAPA SASL(PLAIN) TOP USER PIPELINING"/><script id="ssl-cert" output="Subject: commonName=ubuntu&#xa;Subject Alternative Name: DNS:ubuntu&#xa;Issuer: commonName=ubuntu&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-01-26T10:26:37&#xa;Not valid after:  2031-01-24T10:26:37&#xa;MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2&#xa;SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">ubuntu</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C63E2BEF1EAE70D0F5EC6BFCC84F9F28E2CB7DE3C5C0BBF1B4C48649BFD52CF320678D86DCBE42A5917BF93F5F1A061330549E265D4EFFABD6F2A79BCBCFE29020986CEFDB5D176508F87644E41ED8EF997D8D3DECCC95E75DA25161FD3566ECF2523F4271FE008C72C0F8723AC1A64DCFA54E1B7611D7387CF25A0507630E24326A5CA9726D0AEC43ABDD0D552660285A27AD05FA1A3C9EC41172C935010EA2448FEAD9CEA12BD5E220B2553E516995EC00E8B86DBB51E3F1F265F2D8AAAB3A7CB96F957705177DB950A62751F48AAAB606C4165B63B46B360028A34AC0FCF7EB05FEC385943114DC94143348FF803272910AFEA0B79453BEACBE3A9F58591D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:ubuntu</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-01-26T10:26:37</elem>
+<elem key="notAfter">2031-01-24T10:26:37</elem>
+</table>
+<elem key="md5">53760d7f8cb12db9fedd1809463e94c2</elem>
+<elem key="sha1">63aba07344fd01a2489fc9a08f50de80f33c6895</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL&#xa;BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw&#xa;MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C&#xa;pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV&#xa;512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K&#xa;7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR&#xa;4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx&#xa;FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG&#xa;A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM&#xa;qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu&#xa;bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9&#xa;i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL&#xa;PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX&#xa;b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS&#xa;lH7cyA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="38403"/>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="91" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="91" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="91" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="91" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="91" line="67261">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="91" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="91"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/19%OT=22%CT=1%CU=38403%PV=Y%DS=2%DC=T%G=N%TM=6211AAAE%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=10A%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%T=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2601289" lastboot="Thu Jan 20 19:08:05 2022"/>
+<distance value="2"/>
+<tcpsequence index="256" difficulty="Good luck!" values="DB5D3D0A,E96CDDFD,8DD68163,B3D8E735,10F9B7E6,BDE77A27"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="9B0C58C5,9B0C5970,9B0C5A1C,9B0C5A80,9B0C5B5F,9B0C5BC3"/>
+<trace port="3306" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="177.18"/>
+<hop ttl="2" ipaddr="192.168.140.137" rtt="177.33"/>
+</trace>
+<times srtt="165829" rttvar="21683" to="252561"/>
+</host>
+<taskbegin task="NSE" time="1645324974"/>
+<taskend task="NSE" time="1645324974"/>
+<taskbegin task="NSE" time="1645324974"/>
+<taskend task="NSE" time="1645324974"/>
+<taskbegin task="NSE" time="1645324974"/>
+<taskend task="NSE" time="1645324974"/>
+<runstats><finished time="1645324974" timestr="Sat Feb 19 21:42:54 2022" summary="Nmap done at Sat Feb 19 21:42:54 2022; 1 IP address (1 host up) scanned in 710.18 seconds" elapsed="710.18" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

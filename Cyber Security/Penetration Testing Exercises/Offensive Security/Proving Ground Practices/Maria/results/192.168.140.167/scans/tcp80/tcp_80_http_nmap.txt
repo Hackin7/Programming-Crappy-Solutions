@@ -1,0 +1,291 @@
+# Nmap 7.91 scan initiated Sat Feb 19 22:33:49 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.140.167
+Nmap scan report for 192.168.140.167
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-19 22:33:52 EST for 52s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.38 ((Debian))
+|_http-chrono: Request times for /; avg: 683.31ms; min: 634.60ms; max: 758.97ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.140.167
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 161
+|     Comment: 
+|         <!-- .ancestor-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 330
+|     Comment: 
+|         <!-- .footer-copyright -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 230
+|     Comment: 
+|         <!-- .entry-header-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 115
+|     Comment: 
+|         <!-- .header-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 65
+|     Comment: 
+|         <!-- .search-toggle -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 135
+|     Comment: 
+|         <!-- .section-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 71
+|     Comment: 
+|         <!-- .header-titles -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 312
+|     Comment: 
+|         <!-- .footer-widgets-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 196
+|     Comment: 
+|         <!-- .entry-categories -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 168
+|     Comment: 
+|         <!-- .menu-top -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 241
+|     Comment: 
+|         <!-- .entry-content -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 335
+|     Comment: 
+|         <!-- .powered-by-wordpress -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 94
+|     Comment: 
+|         <!-- .primary-menu-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 175
+|     Comment: 
+|         <!-- .menu-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 253
+|     Comment: 
+|         <!-- #site-content -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 348
+|     Comment: 
+|         <!-- #site-footer -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 195
+|     Comment: 
+|         <!-- .entry-categories-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 344
+|     Comment: 
+|         <!-- .to-the-top -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 343
+|     Comment: 
+|         <!-- .to-the-top-short -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 317
+|     Comment: 
+|         <!-- .footer-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 113
+|     Comment: 
+|         <!-- .header-navigation-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 337
+|     Comment: 
+|         <!-- .footer-credits -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 111
+|     Comment: 
+|         <!-- .header-toggles -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 227
+|     Comment: 
+|         <!-- .post-meta-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 341
+|     Comment: 
+|         <!-- .to-the-top-long -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 232
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 173
+|     Comment: 
+|         <!-- .menu-bottom -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 139
+|     Comment: 
+|         <!-- .menu-modal -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 79
+|     Comment: 
+|         <!-- .nav-toggle -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 177
+|     Comment: 
+|         <!-- .menu-modal-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 137
+|     Comment: 
+|         <!-- .search-modal-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 243
+|     Comment: 
+|         <!-- .post-inner -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 81
+|     Comment: 
+|         <!-- .header-titles-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 250
+|     Comment: 
+|         <!-- .post -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 141
+|     Comment: 
+|         <!-- #site-header -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 225
+|     Comment: 
+|         <!-- .post-meta -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 319
+|     Comment: 
+|         <!-- .footer-nav-widgets-wrapper -->
+|     
+|     Path: http://192.168.140.167:80/
+|     Line number: 314
+|     Comment: 
+|_        <!-- .footer-widgets-outer-wrapper -->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.140.167
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.140.167:80/
+|     Form id: search-form-1
+|     Form action: http:/
+|     
+|     Path: http://192.168.140.167:80/
+|     Form id: search-form-2
+|_    Form action: http:/
+|_http-date: Sun, 20 Feb 2022 03:34:08 GMT; +1s from local time.
+|_http-devframework: Wordpress detected. Found common traces on /
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wp-login.php: Possible admin folder
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 5.7.1
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|_  /readme.html: Interesting, a readme.
+|_http-errors: Couldn't find any error pages.
+|_http-feed: ERROR: Script execution failed (use -d to debug)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: WordPress 5.7.1
+| http-headers: 
+|   Date: Sun, 20 Feb 2022 03:34:09 GMT
+|   Server: Apache/2.4.38 (Debian)
+|   Link: <http:/index.php?rest_route=/>; rel="https://api.w.org/"
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash c6f7664340dc2f06859392160ccf68ca
+|_Credits query returned unknown hash c6f7664340dc2f06859392160ccf68ca
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Maria
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   plugins
+|     akismet
+|_    duplicator 1.3.26
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 19 22:34:44 2022 -- 1 IP address (1 host up) scanned in 55.38 seconds

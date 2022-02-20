@@ -1,0 +1,10 @@
+Matched Pattern: powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+
+Matched Pattern: powered-by-wordpress">
+
+Matched Pattern: Powered by WordPress							</a>
+
+Matched Pattern: powered-by-wordpress -->
+
+Identified HTTP Server: Apache/2.4.38 (Debian)
+

@@ -1,0 +1,79 @@
+WhatWeb report for http://192.168.140.167:80
+Status    : 200 OK
+Title     : Maria
+IP        : 192.168.140.167
+Country   : RESERVED, ZZ
+
+Summary   : Script, MetaGenerator[WordPress 5.7.1], HTML5, HTTPServer[Debian Linux][Apache/2.4.38 (Debian)], UncommonHeaders[link], WordPress[5.7.1], PoweredBy[-wordpress,-wordpress,,WordPress], Apache[2.4.38]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and
+	maintain an open-source HTTP server for modern operating
+	systems including UNIX and Windows NT. The goal of this
+	project is to provide a secure, efficient and extensible
+	server that provides HTTP services in sync with the current
+	HTTP standards.
+
+	Version      : 2.4.38 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	OS           : Debian Linux
+	String       : Apache/2.4.38 (Debian) (from server string)
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its
+	value.
+
+	String       : WordPress 5.7.1
+
+[ PoweredBy ]
+	This plugin identifies instances of 'Powered by x' text and
+	attempts to extract the value for x.
+
+	String       : -wordpress,-wordpress,,WordPress
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : link (from headers)
+
+[ WordPress ]
+	WordPress is an opensource blogging system commonly used as
+	a CMS.
+
+	Version      : 5.7.1
+	Aggressive function available (check plugin file or details).
+	Google Dorks: (1)
+	Website     : http://www.wordpress.org/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Sun, 20 Feb 2022 03:33:56 GMT
+	Server: Apache/2.4.38 (Debian)
+	Link: <http:/index.php?rest_route=/>; rel="https://api.w.org/"
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 6970
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+
+

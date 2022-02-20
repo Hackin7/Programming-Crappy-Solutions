@@ -1,0 +1,147 @@
+WARNING: Nokogiri was built against libxml version 2.9.10, but has dynamically loaded 2.9.12
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.14
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://192.168.108.105/ [192.168.108.105]
+[+] Started: Thu Feb 17 22:09:17 2022
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entries:
+ |  - Server: Apache/2.4.46 (Unix) PHP/7.4.10
+ |  - X-Powered-By: PHP/7.4.10
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://192.168.108.105/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[+] WordPress readme found: http://192.168.108.105/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://192.168.108.105/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://192.168.108.105/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.5.1 identified (Insecure, released on 2020-09-01).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://192.168.108.105/index.php/feed/, <generator>https://wordpress.org/?v=5.5.1</generator>
+ |  - http://192.168.108.105/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.5.1</generator>
+
+[+] WordPress theme in use: news-vibrant
+ | Location: http://192.168.108.105/wp-content/themes/news-vibrant/
+ | Last Updated: 2021-02-27T00:00:00.000Z
+ | Readme: http://192.168.108.105/wp-content/themes/news-vibrant/readme.txt
+ | [!] The version is out of date, the latest version is 1.0.13
+ | Style URL: http://192.168.108.105/wp-content/themes/news-vibrant/style.css?ver=1.0.1
+ | Style Name: News Vibrant
+ | Style URI: https://codevibrant.com/wpthemes/news-vibrant
+ | Description: News Vibrant is a modern magazine theme with creative design and powerful features that lets you wri...
+ | Author: CodeVibrant
+ | Author URI: https://codevibrant.com
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0.12 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://192.168.108.105/wp-content/themes/news-vibrant/style.css?ver=1.0.1, Match: 'Version:            1.0.12'
+
+[+] Enumerating Vulnerable Plugins (via Aggressive Methods)
+
+ Checking Known Locations -: |=========================================================================================================================================|
+[+] Checking Plugin Versions (via Aggressive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Vulnerable Themes (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |=========================================================================================================================================|
+[+] Checking Theme Versions (via Passive and Aggressive Methods)
+
+[i] No themes Found.
+
+[+] Enumerating Timthumbs (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |=========================================================================================================================================|
+
+[i] No Timthumbs Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |==========================================================================================================================================|
+
+[i] No Config Backups Found.
+
+[+] Enumerating DB Exports (via Passive and Aggressive Methods)
+
+ Checking DB Exports -: |==============================================================================================================================================|
+
+[i] No DB Exports Found.
+
+[+] Enumerating Medias (via Passive and Aggressive Methods) (Permalink setting must be set to "Plain" for those to be detected)
+
+ Brute Forcing Attachment IDs -: |=====================================================================================================================================|
+
+[i] Medias(s) Identified:
+
+[+] http://192.168.108.105/?attachment_id=14
+ | Found By: Attachment Brute Forcing (Aggressive Detection)
+
+[+] http://192.168.108.105/?attachment_id=18
+ | Found By: Attachment Brute Forcing (Aggressive Detection)
+
+[+] http://192.168.108.105/?attachment_id=19
+ | Found By: Attachment Brute Forcing (Aggressive Detection)
+
+[+] Enumerating Users (via Passive and Aggressive Methods)
+
+ Brute Forcing Author IDs -: |=========================================================================================================================================|
+
+[i] User(s) Identified:
+
+[+] admin
+ | Found By: Author Posts - Author Pattern (Passive Detection)
+ | Confirmed By:
+ |  Rss Generator (Passive Detection)
+ |  Wp Json Api (Aggressive Detection)
+ |   - http://192.168.108.105/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 50 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Thu Feb 17 22:14:25 2022
+[+] Requests Done: 6547
+[+] Cached Requests: 10
+[+] Data Sent: 1.816 MB
+[+] Data Received: 1.718 MB
+[+] Memory used: 262.129 MB
+[+] Elapsed time: 00:05:07

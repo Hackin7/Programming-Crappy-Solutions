@@ -1,0 +1,28 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] smtp found on tcp/25.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] pop3 found on tcp/110.
+
+
+
+[*] imap found on tcp/143.
+
+
+
+[*] imap found on tcp/993.
+
+
+
+[*] pop3 found on tcp/995.
+
+
+

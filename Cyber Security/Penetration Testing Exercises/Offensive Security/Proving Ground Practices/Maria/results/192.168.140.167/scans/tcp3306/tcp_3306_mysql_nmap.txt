@@ -1,0 +1,24 @@
+# Nmap 7.91 scan initiated Sat Feb 19 22:33:49 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/tcp_3306_mysql_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/tcp3306/xml/tcp_3306_mysql_nmap.xml" 192.168.140.167
+Nmap scan report for 192.168.140.167
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-02-19 22:33:52 EST for 811s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql   syn-ack ttl 63 MySQL 5.5.5-10.3.27-MariaDB-0+deb10u1
+| banner: c\x00\x00\x00\x0A5.5.5-10.3.27-MariaDB-0+deb10u1\x008\x00\x00\x
+| 00dWh$xU|5\x00\xFE\xF7-\x02\x00\xBF\x81\x15\x00\x00\x00\x00\x00\x00\x07
+|_\x00\x00\x0002GM0HVY<_I0\x00mysql_native_password\x00
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.3.27-MariaDB-0+deb10u1
+|   Thread ID: 59
+|   Capabilities flags: 63486
+|   Some Capabilities: LongColumnFlag, DontAllowDatabaseTableColumn, IgnoreSpaceBeforeParenthesis, Support41Auth, FoundRows, ConnectWithDatabase, SupportsTransactions, Speaks41ProtocolNew, IgnoreSigpipes, SupportsLoadDataLocal, SupportsCompression, ODBCClient, InteractiveClient, Speaks41ProtocolOld, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: -e:0"WqR)r'dGs.)%yV$
+|_  Auth Plugin Name: mysql_native_password
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 19 22:47:23 2022 -- 1 IP address (1 host up) scanned in 814.18 seconds

@@ -1,0 +1,78 @@
+# Nmap 7.91 scan initiated Sat Feb 19 21:31:40 2022 as: nmap -vv --reason -Pn -T4 -sV -p 110 "--script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/tcp110/tcp_110_pop3_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/results/192.168.140.137/scans/tcp110/xml/tcp_110_pop3_nmap.xml" 192.168.140.137
+Nmap scan report for 192.168.140.137
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-02-19 21:31:44 EST for 40s
+
+PORT    STATE SERVICE REASON         VERSION
+110/tcp open  pop3    syn-ack ttl 63 Dovecot pop3d
+|_banner: +OK Dovecot (Ubuntu) ready.
+|_pop3-capabilities: USER AUTH-RESP-CODE RESP-CODES CAPA PIPELINING TOP SASL(PLAIN) STLS UIDL
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-26T10:26:37
+| Not valid after:  2031-01-24T10:26:37
+| MD5:   5376 0d7f 8cb1 2db9 fedd 1809 463e 94c2
+| SHA-1: 63ab a073 44fd 01a2 489f c9a0 8f50 de80 f33c 6895
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIUGEC4bDhH06jafLyt+oBBOT7SWm0wDQYJKoZIhvcNAQEL
+| BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIxMDEyNjEwMjYzN1oXDTMxMDEyNDEw
+| MjYzN1owETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAxj4r7x6ucND17Gv8yE+fKOLLfePFwLvxtMSGSb/VLPMgZ42G3L5C
+| pZF7+T9fGgYTMFSeJl1O/6vW8qeby8/ikCCYbO/bXRdlCPh2ROQe2O+ZfY097MyV
+| 512iUWH9NWbs8lI/QnH+AIxywPhyOsGmTc+lTht2Edc4fPJaBQdjDiQyalypcm0K
+| 7EOr3Q1VJmAoWietBfoaPJ7EEXLJNQEOokSP6tnOoSvV4iCyVT5RaZXsAOi4bbtR
+| 4/HyZfLYqqs6fLlvlXcFF325UKYnUfSKqrYGxBZbY7RrNgAoo0rA/PfrBf7DhZQx
+| FNyUFDNI/4AycpEK/qC3lFO+rL46n1hZHQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG
+| A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAskRHHDOoKAUHl4AM
+| qANWP0c9kqC73Gw2hxUVRtqpyl0LR3mbNfBw48G+VssMtqjP4sy35ZbhSPL7tUYu
+| bcr7fe/tkewwuaxEkJ/7D8xGMFADC56vxKG4f52aMjjeT69mu0Y46arsFKQKhUe9
+| i4WZ7PE6tE6N39K3TnbjsXTwRfrCCxx6cNYBNZ9fiVmDCRg+gZGCc4YKWZtu8yZL
+| PHlBkmp23p9zgSOyU0+UIsA22icofHY9/U5KeSgUMwiVsfUSTVd6ZxkBdo8GE6IX
+| b8FMFX+BiAUtmFYxqpGMWkq8JAiXK0f302nUorXrrOrLHJfUQ9efbOMMvsUuGrrS
+| lH7cyA==
+|_-----END CERTIFICATE-----
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 4096) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 4096) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (secp256r1) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|_  least strength: A
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 19 21:32:24 2022 -- 1 IP address (1 host up) scanned in 44.65 seconds

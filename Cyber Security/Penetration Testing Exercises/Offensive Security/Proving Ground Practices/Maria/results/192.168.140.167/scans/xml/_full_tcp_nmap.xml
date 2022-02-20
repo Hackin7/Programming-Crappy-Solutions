@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb 19 22:33:08 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/xml/_full_tcp_nmap.xml&quot; 192.168.140.167 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/results/192.168.140.167/scans/xml/_full_tcp_nmap.xml&quot; 192.168.140.167" start="1645327988" startstr="Sat Feb 19 22:33:08 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645327989"/>
+<taskend task="NSE" time="1645327989"/>
+<taskbegin task="NSE" time="1645327989"/>
+<taskend task="NSE" time="1645327989"/>
+<taskbegin task="NSE" time="1645327989"/>
+<taskend task="NSE" time="1645327989"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645327989"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645327990"/>
+<taskbegin task="SYN Stealth Scan" time="1645327990"/>
+<taskprogress task="SYN Stealth Scan" time="1645328021" percent="8.31" remaining="342" etc="1645328363"/>
+<taskprogress task="SYN Stealth Scan" time="1645328051" percent="21.21" remaining="227" etc="1645328278"/>
+<taskprogress task="SYN Stealth Scan" time="1645328081" percent="32.96" remaining="186" etc="1645328266"/>
+<taskprogress task="SYN Stealth Scan" time="1645328111" percent="50.25" remaining="120" etc="1645328231"/>
+<taskprogress task="SYN Stealth Scan" time="1645328141" percent="71.61" remaining="60" etc="1645328201"/>
+<taskprogress task="SYN Stealth Scan" time="1645328171" percent="84.60" remaining="33" etc="1645328204"/>
+<taskend task="SYN Stealth Scan" time="1645328192" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645328192"/>
+<taskend task="Service scan" time="1645328199" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645328204"/>
+<taskend task="Traceroute" time="1645328204"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1645328204"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1645328204"/>
+<taskbegin task="NSE" time="1645328204"/>
+<taskend task="NSE" time="1645328211"/>
+<taskbegin task="NSE" time="1645328211"/>
+<taskend task="NSE" time="1645328213"/>
+<taskbegin task="NSE" time="1645328213"/>
+<taskend task="NSE" time="1645328213"/>
+<host starttime="1645327990" endtime="1645328213"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.140.167" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65520">
+<extrareasons reason="no-responses" count="65520"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    5 0        0            4096 Sep 21  2018 automysqlbackup"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.140&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.140&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 74:ba:20:23:89:92:62:02:9f:e7:3d:3b:83:d4:d9:6c (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGGcX/x/M6J7Y0V8EeUt0FqceuxieEOe2fUH2RsY3XiSxByQWNQi+XSrFElrfjdR2sgnauIWWhWibfD+kTmSP5gkFcaoSsLtgfMP/2G8yuxPSev+9o1N18gZchJneakItNTaz1ltG1W//qJPZDHmkDneyv798f9ZdXBzidtR5/+2ArZd64bldUxx0irH0lNcf+ICuVlhOZyXGvSx/ceMCRozZrW2JQU+WLvs49gC78zZgvN+wrAZ/3s8gKPOIPobN3ObVSkZ+zngt0Xg/Zl11LLAbyWX7TupAt6lTYOvCSwNVZURyB1dDdjlMAXqT/Ncr4LbP+tvsiI1BKlqxx4I2r&#xa;  256 54:8f:79:55:5a:b0:3a:69:5a:d5:72:39:64:fd:07:4e (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCpAb2jUKovAahxmPX9l95Pq9YWgXfIgDJw0obIpOjOkdP3b0ukm/mrTNgX2lg1mQBMlS3lzmQmxeyHGg9+xuJA=&#xa;  256 7f:5d:10:27:62:ba:75:e9:bc:c8:4f:e2:72:87:d4:e2 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE0omUJRIaMtPNYa4CKBC+XUzVyZsJ1QwsksjpA/6Ml+"><table>
+<elem key="fingerprint">74ba2023899262029fe73d3b83d4d96c</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDGGcX/x/M6J7Y0V8EeUt0FqceuxieEOe2fUH2RsY3XiSxByQWNQi+XSrFElrfjdR2sgnauIWWhWibfD+kTmSP5gkFcaoSsLtgfMP/2G8yuxPSev+9o1N18gZchJneakItNTaz1ltG1W//qJPZDHmkDneyv798f9ZdXBzidtR5/+2ArZd64bldUxx0irH0lNcf+ICuVlhOZyXGvSx/ceMCRozZrW2JQU+WLvs49gC78zZgvN+wrAZ/3s8gKPOIPobN3ObVSkZ+zngt0Xg/Zl11LLAbyWX7TupAt6lTYOvCSwNVZURyB1dDdjlMAXqT/Ncr4LbP+tvsiI1BKlqxx4I2r</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">548f79555ab03a695ad5723964fd074e</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCpAb2jUKovAahxmPX9l95Pq9YWgXfIgDJw0obIpOjOkdP3b0ukm/mrTNgX2lg1mQBMlS3lzmQmxeyHGg9+xuJA=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">7f5d102762ba75e9bcc84fe27287d4e2</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIE0omUJRIaMtPNYa4CKBC+XUzVyZsJ1QwsksjpA/6Ml+</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.38" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.38</cpe></service><script id="http-generator" output="WordPress 5.7.1"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.38 (Debian)"><elem>Apache/2.4.38 (Debian)</elem>
+</script><script id="http-title" output="Maria"><elem key="title">Maria</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MySQL" version="5.5.5-10.3.27-MariaDB-0+deb10u1" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb:5.5.5-10.3.27-mariadb-0%2Bdeb10u1</cpe></service><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 5.5.5-10.3.27-MariaDB-0+deb10u1&#xa;  Thread ID: 663&#xa;  Capabilities flags: 63486&#xa;  Some Capabilities: InteractiveClient, Support41Auth, Speaks41ProtocolNew, Speaks41ProtocolOld, SupportsTransactions, FoundRows, IgnoreSigpipes, LongColumnFlag, SupportsCompression, IgnoreSpaceBeforeParenthesis, ODBCClient, ConnectWithDatabase, SupportsLoadDataLocal, DontAllowDatabaseTableColumn, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: 4w|+[i}Z)]yi&quot;inkP,+0&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">5.5.5-10.3.27-MariaDB-0+deb10u1</elem>
+<elem key="Thread ID">663</elem>
+<elem key="Capabilities flags">63486</elem>
+<table key="Some Capabilities">
+<elem>InteractiveClient</elem>
+<elem>Support41Auth</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>SupportsTransactions</elem>
+<elem>FoundRows</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>LongColumnFlag</elem>
+<elem>SupportsCompression</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>ODBCClient</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">4w|+[i}Z)]yi&quot;inkP,+0</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script></port>
+<port protocol="tcp" portid="10090"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10091"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10092"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10093"><state state="closed" reason="reset" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="10094"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10095"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10096"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10097"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10098"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10099"><state state="closed" reason="reset" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10100"><state state="closed" reason="reset" reason_ttl="63"/><service name="itap-ddtp" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="10090"/>
+<osmatch name="Linux 2.6.32" accuracy="88" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="88" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="88" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="88" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="88" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="88" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="88"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="88"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="88" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="88"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="87" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="87" line="63140">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="87" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/19%OT=21%CT=10090%CU=%PV=Y%DS=2%DC=T%G=N%TM=6211B755%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=106%GCD=1%ISR=10D%TI=Z%TS=A)&#xa;SEQ(SP=106%GCD=1%ISR=10D%TI=Z%II=I%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="3291201" lastboot="Wed Jan 12 20:23:32 2022"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="320E84D,A09D1515,18044982,1A8C0C7,D35E006B,433C2085"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="C42B958B,C42B95EF,C42B9653,C42B96B7,C42B971B,C42B977F"/>
+<trace port="10099" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="177.39"/>
+<hop ttl="2" ipaddr="192.168.140.167" rtt="177.46"/>
+</trace>
+<times srtt="177205" rttvar="495" to="179185"/>
+</host>
+<taskbegin task="NSE" time="1645328213"/>
+<taskend task="NSE" time="1645328213"/>
+<taskbegin task="NSE" time="1645328213"/>
+<taskend task="NSE" time="1645328213"/>
+<taskbegin task="NSE" time="1645328213"/>
+<taskend task="NSE" time="1645328213"/>
+<runstats><finished time="1645328213" timestr="Sat Feb 19 22:36:53 2022" summary="Nmap done at Sat Feb 19 22:36:53 2022; 1 IP address (1 host up) scanned in 226.24 seconds" elapsed="226.24" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
