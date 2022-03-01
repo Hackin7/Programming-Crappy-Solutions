@@ -1,0 +1,3 @@
+500       80l      276w     3420c http://192.168.234.122/Index.aspx
+301        2l       10w      160c http://192.168.234.122/aspnet_client
+500       80l      276w     3420c http://192.168.234.122/index.aspx

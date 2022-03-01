@@ -1,0 +1,28 @@
+[*] ftp found on tcp/21.
+
+
+
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] netbios-ssn found on tcp/445.
+
+
+
+[*] http found on tcp/50000.
+
+
+
+[*] biimenu found on tcp/18000.
+
+
+

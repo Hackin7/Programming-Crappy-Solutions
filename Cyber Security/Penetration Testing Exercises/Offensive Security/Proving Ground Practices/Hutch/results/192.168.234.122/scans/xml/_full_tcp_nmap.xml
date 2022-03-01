@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb 26 03:30:43 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/xml/_full_tcp_nmap.xml&quot; 192.168.234.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/xml/_full_tcp_nmap.xml&quot; 192.168.234.122" start="1645864243" startstr="Sat Feb 26 03:30:43 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645864245"/>
+<taskend task="NSE" time="1645864245"/>
+<taskbegin task="NSE" time="1645864245"/>
+<taskend task="NSE" time="1645864245"/>
+<taskbegin task="NSE" time="1645864245"/>
+<taskend task="NSE" time="1645864245"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645864245"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645864245"/>
+<taskbegin task="SYN Stealth Scan" time="1645864245"/>
+<taskprogress task="SYN Stealth Scan" time="1645864276" percent="10.25" remaining="272" etc="1645864547"/>
+<taskprogress task="SYN Stealth Scan" time="1645864306" percent="29.29" remaining="148" etc="1645864453"/>
+<taskprogress task="SYN Stealth Scan" time="1645864336" percent="42.27" remaining="125" etc="1645864460"/>
+<taskprogress task="SYN Stealth Scan" time="1645864384" percent="57.01" remaining="105" etc="1645864489"/>
+<taskprogress task="SYN Stealth Scan" time="1645864417" percent="66.06" remaining="89" etc="1645864505"/>
+<taskend task="SYN Stealth Scan" time="1645864466" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645864466"/>
+<taskend task="Service scan" time="1645864525" extrainfo="21 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645864534"/>
+<taskend task="Traceroute" time="1645864543"/>
+<taskbegin task="NSE" time="1645864544"/>
+<taskprogress task="NSE" time="1645864575" percent="99.93" remaining="1" etc="1645864575"/>
+<taskend task="NSE" time="1645864584"/>
+<taskbegin task="NSE" time="1645864584"/>
+<taskend task="NSE" time="1645864589"/>
+<taskbegin task="NSE" time="1645864589"/>
+<taskend task="NSE" time="1645864589"/>
+<host starttime="1645864245" endtime="1645864589"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.234.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65514">
+<extrareasons reason="no-responses" count="65514"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2022-02-26 08:34:34Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: hutch.offsec0., Site: Default-First-Site-Name" hostname="HUTCHDC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: hutch.offsec0., Site: Default-First-Site-Name" hostname="HUTCHDC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49676"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="49678"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49694"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="49743"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="53"/>
+<osmatch name="Microsoft Windows Server 2012" accuracy="96" line="75542">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="96" line="75675">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="96" line="75713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2016" accuracy="96" line="76198">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1607" accuracy="88" line="69697">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="88"><cpe>cpe:/o:microsoft:windows_10:1607</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional" accuracy="88" line="76976">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="88"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="87" line="71331">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="87"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="87" line="47047">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Minix 2.0.4" accuracy="87" line="86188">
+<osclass type="general purpose" vendor="Minix" osfamily="Minix" osgen="2.X" accuracy="87"><cpe>cpe:/o:minix:minix:2.0.4</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="86" line="77943">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="86"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/26%OT=53%CT=%CU=%PV=Y%G=N%TM=6219E68D%P=x86_64-pc-linux-gnu)&#xa;SEQ(TS=U)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M54ENW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;IE(R=N)&#xa;"/>
+</os>
+<hostscript><script id="clock-skew" output="1s"><elem key="stddev">0</elem>
+<elem key="count">1</elem>
+<elem key="median">1</elem>
+<elem key="mean">1</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 40847/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 44057/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 8820/udp): CLEAN (Timeout)&#xa;  Check 4 (port 27055/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-02-26T08:36:20&#xa;  start_date: N/A"><elem key="date">2022-02-26T08:36:20</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="53" proto="tcp">
+</trace>
+<times srtt="173393" rttvar="2026" to="181497"/>
+</host>
+<taskbegin task="NSE" time="1645864589"/>
+<taskend task="NSE" time="1645864589"/>
+<taskbegin task="NSE" time="1645864589"/>
+<taskend task="NSE" time="1645864589"/>
+<taskbegin task="NSE" time="1645864589"/>
+<taskend task="NSE" time="1645864589"/>
+<runstats><finished time="1645864589" timestr="Sat Feb 26 03:36:29 2022" summary="Nmap done at Sat Feb 26 03:36:29 2022; 1 IP address (1 host up) scanned in 347.77 seconds" elapsed="347.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

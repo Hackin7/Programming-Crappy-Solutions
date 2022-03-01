@@ -168,6 +168,8 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ## 80 - Web
 
+![](Pasted%20image%2020220301232023.png)
+
 ## 1221 - FTP
 
 ```
@@ -189,6 +191,30 @@ ftp> exit
 ```
 
 ![](Pasted%20image%2020220202091236.png)
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ pftp 192.168.88.70 1221
+
+Connected to 192.168.88.70.
+220 Microsoft FTP Service
+Name (192.168.88.70:kali): anonymous
+331 Anonymous access allowed, send identity (e-mail name) as password.
+Password:
+230 User logged in.
+Remote system type is Windows_NT.
+ftp> ls
+227 Entering Passive Mode (192,168,88,70,194,16).
+150 Opening ASCII mode data connection.
+04-27-20  07:02PM                18866 Elementum Supremum.docx
+04-27-20  07:02PM               764176 file_example_MP3_700KB.mp3
+04-27-20  07:02PM                15690 img.jpg
+04-27-20  07:02PM                  302 MSSQL_BAK.rar
+04-27-20  07:02PM                  548 palindromes.txt
+04-27-20  07:02PM                45369 server.jpg
+226 Transfer complete.
+ftp> 
+```
 
 ### Reading Files
 

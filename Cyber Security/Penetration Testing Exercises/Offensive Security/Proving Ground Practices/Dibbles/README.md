@@ -294,7 +294,7 @@ ftp>
 ```
 
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ ftp 192.168.196.110
 Connected to 192.168.196.110.
@@ -322,9 +322,262 @@ ftp> exit
 
 ```
 
+```bash
+ftp> ls
+ftp: setsockopt (ignored): Permission denied
+---> PORT 192,168,49,234,184,13
+200 PORT command successful. Consider using PASV.
+---> LIST
+425 Failed to establish connection.
+ftp> 
+```
+
 ## 22 - SSH
 
-## 80 - Web
+## 80 - Web - Drupal
+
+### Dir enum
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ dirb http://192.168.234.110                                                                                                                                   130 ⨯
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sat Feb 26 12:28:45 2022
+URL_BASE: http://192.168.234.110/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.234.110/ ----
++ http://192.168.234.110/admin (CODE:403|SIZE:4306)                                                                                                                    
++ http://192.168.234.110/Admin (CODE:403|SIZE:4306)                                                                                                                    
++ http://192.168.234.110/ADMIN (CODE:403|SIZE:4306)                                                                                                                    
++ http://192.168.234.110/batch (CODE:403|SIZE:4306)                                                                                                                    
++ http://192.168.234.110/cgi-bin/ (CODE:403|SIZE:199)                                                                                                                  
++ http://192.168.234.110/contact (CODE:200|SIZE:8187)                                                                                                                  
++ http://192.168.234.110/Contact (CODE:200|SIZE:8187)                                                                                                                  
+==> DIRECTORY: http://192.168.234.110/core/                                                                                                                            
++ http://192.168.234.110/index.php (CODE:200|SIZE:13708)                                                                                                               
+==> DIRECTORY: http://192.168.234.110/modules/                                                                                                                         
++ http://192.168.234.110/node (CODE:200|SIZE:13655)                                                                                                                    
+==> DIRECTORY: http://192.168.234.110/profiles/                                                                                                                        
++ http://192.168.234.110/robots.txt (CODE:200|SIZE:1594)                                                                                                               
++ http://192.168.234.110/search (CODE:302|SIZE:382)                                                                                                                    
++ http://192.168.234.110/Search (CODE:302|SIZE:382)                                                                                                                    
+==> DIRECTORY: http://192.168.234.110/sites/                                                                                                                           
+==> DIRECTORY: http://192.168.234.110/themes/                                                                                                                          
++ http://192.168.234.110/user (CODE:302|SIZE:378)                                                                                                                      
++ http://192.168.234.110/vendor (CODE:403|SIZE:199)                                                                                                                    
++ http://192.168.234.110/web.config (CODE:200|SIZE:4566)                                                                                                               
+                                                                                                                                                                       
+---- Entering directory: http://192.168.234.110/core/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.234.110/modules/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.234.110/profiles/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.234.110/sites/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.234.110/themes/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                               
+-----------------
+END_TIME: Sat Feb 26 12:44:31 2022
+DOWNLOADED: 4612 - FOUND: 15
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ curl http://192.168.234.110/web.config
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <!-- Don't show directory listings for URLs which map to a directory. -->
+    <directoryBrowse enabled="false" />
+
+    <!--
+       Caching configuration was not delegated by default. Some hosters may not
+       delegate the caching configuration to site owners by default and that
+       may cause errors when users install. Uncomment this if you want to and
+       are allowed to enable caching.
+     -->
+    <!--
+    <caching>
+      <profiles>
+        <add extension=".php" policy="DisableCache" kernelCachePolicy="DisableCache" />
+        <add extension=".html" policy="CacheForTimePeriod" kernelCachePolicy="CacheForTimePeriod" duration="14:00:00" />
+      </profiles>
+    </caching>
+     -->
+
+    <rewrite>
+      <rules>
+        <rule name="Protect files and directories from prying eyes" stopProcessing="true">
+          <match url="\.(engine|inc|install|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml|svn-base)$|^(code-style\.pl|Entries.*|Repository|Root|Tag|Template|all-wcprops|entries|format|composer\.(json|lock)|\.htaccess)$" />
+          <action type="CustomResponse" statusCode="403" subStatusCode="0" statusReason="Forbidden" statusDescription="Access is forbidden." />
+        </rule>
+
+        <rule name="Force simple error message for requests for non-existent favicon.ico" stopProcessing="true">
+          <match url="favicon\.ico" />
+          <action type="CustomResponse" statusCode="404" subStatusCode="1" statusReason="File Not Found" statusDescription="The requested file favicon.ico was not found" />
+          <conditions>
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+          </conditions>
+        </rule>
+     <!-- If running on a PHP version affected by httpoxy vulnerability
+      uncomment the following rule to mitigate it's impact. To make this
+      rule work, you will also need to add HTTP_PROXY to the allowed server
+      variables manually in IIS. See https://www.drupal.org/node/2783079.
+        <rule name="Erase HTTP_PROXY" patternSyntax="Wildcard">
+          <match url="*.*" />
+          <serverVariables>
+            <set name="HTTP_PROXY" value="" />
+          </serverVariables>
+          <action type="None" />
+        </rule>
+    -->
+    <!-- To redirect all users to access the site WITH the 'www.' prefix,
+     http://example.com/foo will be redirected to http://www.example.com/foo)
+     adapt and uncomment the following:   -->
+    <!--
+        <rule name="Redirect to add www" stopProcessing="true">
+          <match url="^(.*)$" ignoreCase="false" />
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^example\.com$" />
+          </conditions>
+          <action type="Redirect" redirectType="Permanent" url="http://www.example.com/{R:1}" />
+        </rule>
+    -->
+
+    <!-- To redirect all users to access the site WITHOUT the 'www.' prefix,
+     http://www.example.com/foo will be redirected to http://example.com/foo)
+     adapt and uncomment the following:   -->
+    <!--
+        <rule name="Redirect to remove www" stopProcessing="true">
+          <match url="^(.*)$" ignoreCase="false" />
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^www\.example\.com$" />
+          </conditions>
+          <action type="Redirect" redirectType="Permanent" url="http://example.com/{R:1}" />
+        </rule>
+    -->
+
+        <!-- Pass all requests not referring directly to files in the filesystem
+         to index.php. -->
+        <rule name="Short URLS" stopProcessing="true">
+          <match url="^(.*)$" ignoreCase="false" />
+          <conditions>
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" />
+            <add input="{URL}" pattern="^/favicon.ico$" ignoreCase="false" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="index.php" />
+        </rule>
+      </rules>
+    </rewrite>
+
+  <!-- If running Windows Server 2008 R2 this can be commented out -->
+    <!-- httpErrors>
+      <remove statusCode="404" subStatusCode="-1" />
+      <error statusCode="404" prefixLanguageFilePath="" path="/index.php" responseMode="ExecuteURL" />
+    </httpErrors -->
+
+    <defaultDocument>
+     <!-- Set the default document -->
+      <files>
+         <clear />
+        <add value="index.php" />
+      </files>
+    </defaultDocument>
+
+  </system.webServer>
+</configuration>
+
+																																						   ┌──(kali㉿kali)-[~]
+└─$ curl http://192.168.234.110/robots.txt
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+# CSS, JS, Images
+Allow: /core/*.css$
+Allow: /core/*.css?
+Allow: /core/*.js$
+Allow: /core/*.js?
+Allow: /core/*.gif
+Allow: /core/*.jpg
+Allow: /core/*.jpeg
+Allow: /core/*.png
+Allow: /core/*.svg
+Allow: /profiles/*.css$
+Allow: /profiles/*.css?
+Allow: /profiles/*.js$
+Allow: /profiles/*.js?
+Allow: /profiles/*.gif
+Allow: /profiles/*.jpg
+Allow: /profiles/*.jpeg
+Allow: /profiles/*.png
+Allow: /profiles/*.svg
+# Directories
+Disallow: /core/
+Disallow: /profiles/
+# Files
+Disallow: /README.txt
+Disallow: /web.config
+# Paths (clean URLs)
+Disallow: /admin/
+Disallow: /comment/reply/
+Disallow: /filter/tips
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /user/logout/
+# Paths (no clean URLs)
+Disallow: /index.php/admin/
+Disallow: /index.php/comment/reply/
+Disallow: /index.php/filter/tips
+Disallow: /index.php/node/add/
+Disallow: /index.php/search/
+Disallow: /index.php/user/password/
+Disallow: /index.php/user/register/
+Disallow: /index.php/user/login/
+Disallow: /index.php/user/logout/
+
+┌──(kali㉿kali)-[~]
+└─$ 
+```
+
+### Drupal Enum
+
+https://github.com/drupal/drupal
 
 ![](Pasted%20image%2020220121174853.png)
 
@@ -359,7 +612,7 @@ No hidden, 1-4
 
 ### Data Dump
 
-```
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ mongo 192.168.196.110:27017                                                                                                                                     1 ⨯
 MongoDB shell version v5.0.5
@@ -448,6 +701,12 @@ startup_log
 
 ```
 
+Google Translate Messages
+
+![](Pasted%20image%2020220227014845.png)
+
+### Database after adding user
+
 `admin`:`ab6edb97f0c7a6455c57f94b7df73263e57113c85f38cd9b9470c8be8d6dd8ac`
 
 `admin`:`36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80`
@@ -470,7 +729,7 @@ users
 
 ### Hash Cracking
 
-```
+```bash
 ┌──(kali㉿kali)-[/tmp]
 └─$ hash-identifier                                                         
    #########################################################################
@@ -526,11 +785,11 @@ Least Possible Hashs:
                                                                                                                                                                         
 ┌──(kali㉿kali)-[/tmp]
 └─$ 
-
 ```
 
+NOT SHA256 Hash
 
-## Update user
+### Update user
 
 ```
 > db.users.find({"username":"administrator"})

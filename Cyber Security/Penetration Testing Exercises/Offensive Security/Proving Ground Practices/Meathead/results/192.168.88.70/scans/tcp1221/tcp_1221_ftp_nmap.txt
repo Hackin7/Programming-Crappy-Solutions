@@ -1,0 +1,23 @@
+# Nmap 7.91 scan initiated Tue Mar  1 10:19:30 2022 as: nmap -vv --reason -Pn -T4 -sV -p 1221 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/tcp_1221_ftp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/xml/tcp_1221_ftp_nmap.xml" 192.168.88.70
+Nmap scan report for 192.168.88.70
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-03-01 10:19:31 EST for 3s
+
+PORT     STATE SERVICE REASON          VERSION
+1221/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 04-27-20  07:02PM                18866 Elementum Supremum.docx
+| 04-27-20  07:02PM               764176 file_example_MP3_700KB.mp3
+| 04-27-20  07:02PM                15690 img.jpg
+| 04-27-20  07:02PM                  302 MSSQL_BAK.rar
+| 04-27-20  07:02PM                  548 palindromes.txt
+|_04-27-20  07:02PM                45369 server.jpg
+| ftp-syst: 
+|_  SYST: Windows_NT
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  1 10:19:34 2022 -- 1 IP address (1 host up) scanned in 4.31 seconds

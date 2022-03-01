@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 11:49:39 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Walla/results/192.168.71.97/scans/tcp23/tcp_23_telnet-nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Walla/results/192.168.71.97/scans/tcp23/xml/tcp_23_telnet_nmap.xml&quot; 192.168.71.97 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Walla/results/192.168.71.97/scans/tcp23/tcp_23_telnet-nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Walla/results/192.168.71.97/scans/tcp23/xml/tcp_23_telnet_nmap.xml&quot; 192.168.71.97" start="1645980579" startstr="Sun Feb 27 11:49:39 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="23"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645980581"/>
+<taskend task="NSE" time="1645980581"/>
+<taskbegin task="NSE" time="1645980581"/>
+<taskend task="NSE" time="1645980581"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645980581"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645980581"/>
+<taskbegin task="SYN Stealth Scan" time="1645980582"/>
+<taskend task="SYN Stealth Scan" time="1645980582" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645980582"/>
+<taskend task="Service scan" time="1645980583" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645980583"/>
+<taskend task="NSE" time="1645980583"/>
+<taskbegin task="NSE" time="1645980583"/>
+<taskend task="NSE" time="1645980583"/>
+<host starttime="1645980582" endtime="1645980583"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="telnet" product="Linux telnetd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="Linux Telnetd 0.17"/><script id="telnet-encryption" output="&#xa;  Telnet server does not support encryption"/></port>
+</ports>
+<times srtt="174011" rttvar="174011" to="870055"/>
+</host>
+<taskbegin task="NSE" time="1645980583"/>
+<taskend task="NSE" time="1645980583"/>
+<taskbegin task="NSE" time="1645980583"/>
+<taskend task="NSE" time="1645980583"/>
+<runstats><finished time="1645980583" timestr="Sun Feb 27 11:49:43 2022" summary="Nmap done at Sun Feb 27 11:49:43 2022; 1 IP address (1 host up) scanned in 4.48 seconds" elapsed="4.48" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

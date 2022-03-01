@@ -1,0 +1,99 @@
+# Nmap 7.91 scan initiated Tue Mar  1 10:15:13 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp80/tcp_80_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp80/xml/tcp_80_http_nmap.xml" 192.168.88.70
+Nmap scan report for 192.168.88.70
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-03-01 10:15:15 EST for 538s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.88.70
+|   url                       method
+|_  http://192.168.88.70:80/  FORM
+|_http-chrono: Request times for /; avg: 441.97ms; min: 413.25ms; max: 474.99ms
+|_http-comments-displayer: Couldn't find any comments.
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.88.70
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.88.70:80/
+|     Form id: myform
+|_    Form action: ./
+|_http-date: Tue, 01 Mar 2022 15:15:24 GMT; +1s from local time.
+|_http-devframework: ASP.NET detected. Found related header.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-favicon: Unknown favicon MD5: 90D5B70E85D458B702B52546F1847EAA
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Cache-Control: private
+|   Content-Length: 1845
+|   Content-Type: text/html; charset=utf-8
+|   Server: Microsoft-IIS/10.0
+|   X-AspNet-Version: 4.0.30319
+|   X-Powered-By: ASP.NET
+|   Date: Tue, 01 Mar 2022 15:15:29 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 73cfd87282613aa2f69165b70f2eb95e
+|_Credits query returned unknown hash d21439548e49a229418e75382a37f0c5
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: private
+|_http-server-header: Microsoft-IIS/10.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /css/
+|       css: 1
+|     /images/
+|       png: 2
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /images/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; png: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Plantronics
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-waf-detect: IDS/IPS/WAF detected:
+|_192.168.88.70:80/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  1 10:24:13 2022 -- 1 IP address (1 host up) scanned in 539.99 seconds

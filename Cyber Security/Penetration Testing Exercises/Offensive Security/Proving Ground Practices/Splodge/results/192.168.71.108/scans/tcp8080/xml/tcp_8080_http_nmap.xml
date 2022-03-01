@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 08:36:37 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.71.108 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.71.108" start="1645968997" startstr="Sun Feb 27 08:36:37 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8080"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645968998"/>
+<taskend task="NSE" time="1645968998"/>
+<taskbegin task="NSE" time="1645968998"/>
+<taskend task="NSE" time="1645968998"/>
+<taskbegin task="NSE" time="1645968998"/>
+<taskend task="NSE" time="1645968998"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645968998"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645968998"/>
+<taskbegin task="SYN Stealth Scan" time="1645968998"/>
+<taskend task="SYN Stealth Scan" time="1645968998" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645968999"/>
+<taskend task="Service scan" time="1645969005" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645969005"/>
+<taskprogress task="NSE" time="1645969036" percent="84.21" remaining="6" etc="1645969042"/>
+<taskprogress task="NSE" time="1645969066" percent="96.74" remaining="3" etc="1645969068"/>
+<taskprogress task="NSE" time="1645969096" percent="98.37" remaining="2" etc="1645969098"/>
+<taskprogress task="NSE" time="1645969126" percent="99.02" remaining="2" etc="1645969127"/>
+<taskprogress task="NSE" time="1645969156" percent="99.67" remaining="1" etc="1645969156"/>
+<taskprogress task="NSE" time="1645969186" percent="99.67" remaining="1" etc="1645969187"/>
+<taskprogress task="NSE" time="1645969216" percent="99.67" remaining="1" etc="1645969217"/>
+<taskprogress task="NSE" time="1645969246" percent="99.67" remaining="1" etc="1645969247"/>
+<taskprogress task="NSE" time="1645969276" percent="99.67" remaining="1" etc="1645969277"/>
+<taskprogress task="NSE" time="1645969306" percent="99.67" remaining="1" etc="1645969307"/>
+<taskprogress task="NSE" time="1645969336" percent="99.67" remaining="2" etc="1645969337"/>
+<taskprogress task="NSE" time="1645969366" percent="99.67" remaining="2" etc="1645969367"/>
+<taskprogress task="NSE" time="1645969396" percent="99.67" remaining="2" etc="1645969397"/>
+<taskprogress task="NSE" time="1645969426" percent="99.67" remaining="2" etc="1645969427"/>
+<taskprogress task="NSE" time="1645969456" percent="99.67" remaining="2" etc="1645969457"/>
+<taskprogress task="NSE" time="1645969486" percent="99.67" remaining="2" etc="1645969488"/>
+<taskprogress task="NSE" time="1645969516" percent="99.67" remaining="2" etc="1645969518"/>
+<taskprogress task="NSE" time="1645969546" percent="99.67" remaining="2" etc="1645969548"/>
+<taskprogress task="NSE" time="1645969576" percent="99.67" remaining="2" etc="1645969578"/>
+<taskprogress task="NSE" time="1645969606" percent="99.67" remaining="2" etc="1645969608"/>
+<taskprogress task="NSE" time="1645969636" percent="99.67" remaining="3" etc="1645969638"/>
+<taskprogress task="NSE" time="1645969666" percent="99.67" remaining="3" etc="1645969668"/>
+<taskprogress task="NSE" time="1645969696" percent="99.67" remaining="3" etc="1645969698"/>
+<taskprogress task="NSE" time="1645969726" percent="99.67" remaining="3" etc="1645969728"/>
+<taskprogress task="NSE" time="1645969756" percent="99.67" remaining="3" etc="1645969758"/>
+<taskprogress task="NSE" time="1645969786" percent="99.67" remaining="3" etc="1645969789"/>
+<taskprogress task="NSE" time="1645969816" percent="99.67" remaining="3" etc="1645969819"/>
+<taskprogress task="NSE" time="1645969846" percent="99.67" remaining="3" etc="1645969849"/>
+<taskprogress task="NSE" time="1645969876" percent="99.67" remaining="3" etc="1645969879"/>
+<taskprogress task="NSE" time="1645969906" percent="99.67" remaining="3" etc="1645969909"/>
+<taskprogress task="NSE" time="1645969936" percent="99.67" remaining="4" etc="1645969939"/>
+<taskprogress task="NSE" time="1645969966" percent="99.67" remaining="4" etc="1645969969"/>
+<taskprogress task="NSE" time="1645969996" percent="99.67" remaining="4" etc="1645969999"/>
+<taskend task="NSE" time="1645969997"/>
+<taskbegin task="NSE" time="1645969997"/>
+<taskend task="NSE" time="1645969999"/>
+<taskbegin task="NSE" time="1645969999"/>
+<taskend task="NSE" time="1645969999"/>
+<host starttime="1645968998" endtime="1645969999"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.108" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.16.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.16.1</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.71.108&#xa;  url                               method&#xa;  http://192.168.71.108:8080/login  FORM&#xa;"/><script id="http-chrono" output="Request times for /; avg: 2015.33ms; min: 1551.18ms; max: 2715.49ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.71.108&#xa;    &#xa;    Path: http://192.168.71.108:8080/&#xa;    Line number: 442&#xa;    Comment: &#xa;        &lt;!-&#45; Main Content -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/posts/2&#xa;    Line number: 442&#xa;    Comment: &#xa;        &lt;!-&#45; Post Content -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/css/cleanblog.min.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Start Bootstrap - Clean Blog v5.0.9 (https://startbootstrap.com/themes/clean-blog)&#xa;         * Copyright 2013-2020 Start Bootstrap&#xa;         * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)&#xa;         */&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 449&#xa;    Comment: &#xa;        &lt;!-&#45; Footer -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/css/bootstrap.min.css&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*# sourceMappingURL=bootstrap.min.css.map */&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 16&#xa;    Comment: &#xa;        &lt;!-&#45; Styles -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/css/bootstrap.min.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Bootstrap v4.5.0 (https://getbootstrap.com/)&#xa;         * Copyright 2011-2020 The Bootstrap Authors&#xa;         * Copyright 2011-2020 Twitter, Inc.&#xa;         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)&#xa;         */&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 18&#xa;    Comment: &#xa;        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 406&#xa;    Comment: &#xa;        &lt;!-&#45; Navigation -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 486&#xa;    Comment: &#xa;        &lt;!-&#45; Bootstrap core JavaScript -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/posts/2&#xa;    Line number: 427&#xa;    Comment: &#xa;        &lt;!-&#45; Page Header -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 10&#xa;    Comment: &#xa;        &lt;!-&#45; Fonts -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.71.108:8080/login&#xa;    Line number: 490&#xa;    Comment: &#xa;        &lt;!-&#45; Custom scripts for this template -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sun, 27 Feb 2022 13:36:49 GMT; +2s from local time."><elem key="date">2022-02-27T13:36:49+00:00</elem>
+<elem key="delta">2.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /login/: Login page&#xa;  /robots.txt: Robots file&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.71.108&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/js/clean-blog.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/posts/vendor/jquery/jquery.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/posts/vendor/bootstrap/js/bootstrap.bundle.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/posts/css/cleanblog.min.css&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/posts/js/clean-blog.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/vendor/bootstrap/js/bootstrap.bundle.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/vendor/jquery/jquery.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.71.108:8080/posts/&#xa;"/><script id="http-favicon" output="Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-fileupload-exploiter" output="&#xa;  &#xa;    Couldn&apos;t find a file-type field.&#xa;  &#xa;    Couldn&apos;t find a file-type field.&#xa;  &#xa;    Couldn&apos;t find a file-type field."><table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+<table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+<table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.71.108:8080/: &#xa;    (1) ip: &#xa;      + 192.168.71.108"><table key="(1) http://192.168.71.108:8080/">
+<table key="(1) ip">
+<elem>+ 192.168.71.108</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Server: nginx/1.16.1&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Connection: close&#xa;  X-Powered-By: PHP/5.6.40&#xa;  Cache-Control: no-cache, private&#xa;  Date: Sun, 27 Feb 2022 13:36:57 GMT&#xa;  Set-Cookie: XSRF-TOKEN=eyJpdiI6IndkY2tSdUZCUmJ2SHVNKzBtMWxxdnc9PSIsInZhbHVlIjoiUzNpUTRkRW1USHdmeCsxWU1cL0c2d3lOVnk0aGFhM1dyeDNGZ1hCZ0NieFZLNU5jbmZ0aG5DbTY3WmhCOWo1bTA0dkp1RWVZMlJmUytDTTRROFJsNm9RPT0iLCJtYWMiOiI5ZTZlN2M5ZjFjYmUwZmJjYWUxYTBlNzcyNjVkMTQ4MTBkNTYyMGYwYzlhOTc1Y2JiNzMyOTRmOTJkMGQ0MzI3In0%3D; expires=Sun, 27-Feb-2022 15:36:57 GMT; Max-Age=7200; path=/&#xa;  Set-Cookie: laravel_session=eyJpdiI6IlRGa3pHRXZTbFwvSzdkT2pDS3k0Z1wvZz09IiwidmFsdWUiOiJuRVJHekk5a2czZm5iZHFOdFJsdFhjVW9XNDhnWHdXSHZUT2llZm90dWt3K0IwMGJ1SGdRM1VpcUY1WUpIUzZiMXg4bktCVlF3SnZuVERpQVdwOGFWQT09IiwibWFjIjoiY2RiMDUwYWYyMWJjNDU4YzgyY2E3YjE5MzRkYWJlMmU2MjAzNjcyNjZhMGM2ZTk2MWE4ODg5ZjE0NTlhYjE3YSJ9; expires=Sun, 27-Feb-2022 15:36:57 GMT; Max-Age=7200; path=/; httponly&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 533a0ed4c2c75e2d12327cfd8ff6aae7&#xa;Credits query returned unknown hash 533a0ed4c2c75e2d12327cfd8ff6aae7&#xa;Version from header x-powered-by: PHP/5.6.40"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-cache, private"><table key="Cache_Control">
+<elem>Header: Cache-Control: no-cache, private</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.16.1"><elem>nginx/1.16.1</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 2&#xa;    /css/&#xa;      css: 2&#xa;    /posts/&#xa;      Other: 2&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /css/&#xa;  Total files found (by extension):&#xa;    Other: 4; css: 2&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Splodge | Home"><elem key="title">Splodge | Home</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="179444" rttvar="179444" to="897220"/>
+</host>
+<taskbegin task="NSE" time="1645969999"/>
+<taskend task="NSE" time="1645969999"/>
+<taskbegin task="NSE" time="1645969999"/>
+<taskend task="NSE" time="1645969999"/>
+<taskbegin task="NSE" time="1645969999"/>
+<taskend task="NSE" time="1645969999"/>
+<runstats><finished time="1645969999" timestr="Sun Feb 27 08:53:19 2022" summary="Nmap done at Sun Feb 27 08:53:19 2022; 1 IP address (1 host up) scanned in 1001.97 seconds" elapsed="1001.97" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

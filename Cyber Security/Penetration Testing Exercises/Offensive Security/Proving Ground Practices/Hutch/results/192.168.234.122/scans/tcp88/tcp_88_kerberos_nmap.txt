@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sat Feb 26 03:33:03 2022 as: nmap -vv --reason -Pn -T4 -sV -p 88 --script=banner,krb5-enum-users -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp88/tcp_88_kerberos_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp88/xml/tcp_88_kerberos_nmap.xml" 192.168.234.122
+Nmap scan report for 192.168.234.122
+Host is up, received user-set.
+Scanned at 2022-02-26 03:33:08 EST for 1s
+
+PORT   STATE    SERVICE      REASON      VERSION
+88/tcp filtered kerberos-sec no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 26 03:33:12 2022 -- 1 IP address (1 host up) scanned in 9.23 seconds

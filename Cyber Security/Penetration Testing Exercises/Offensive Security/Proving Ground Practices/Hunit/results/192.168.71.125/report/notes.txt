@@ -1,0 +1,16 @@
+[*] http-proxy found on tcp/8080.
+
+
+
+[*] netbios-ssn found on tcp/12445.
+
+
+
+[*] http found on tcp/18030.
+
+
+
+[*] ssh found on tcp/43022.
+
+
+

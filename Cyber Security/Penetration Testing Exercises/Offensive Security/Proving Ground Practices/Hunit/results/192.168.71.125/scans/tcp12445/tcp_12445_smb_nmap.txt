@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sun Feb 27 11:05:44 2022 as: nmap -vv --reason -Pn -T4 -sV -p 12445 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp12445/tcp_12445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp12445/xml/tcp_12445_smb_nmap.xml" 192.168.71.125
+Nmap scan report for 192.168.71.125
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-02-27 11:05:47 EST for 73s
+
+PORT      STATE SERVICE     REASON         VERSION
+12445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 4.6.2
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 27 11:07:00 2022 -- 1 IP address (1 host up) scanned in 76.29 seconds

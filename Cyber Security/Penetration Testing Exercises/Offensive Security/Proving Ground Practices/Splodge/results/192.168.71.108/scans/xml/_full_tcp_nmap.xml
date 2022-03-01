@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 08:34:35 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.108 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Splodge/results/192.168.71.108/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.108" start="1645968875" startstr="Sun Feb 27 08:34:35 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645968875"/>
+<taskend task="NSE" time="1645968875"/>
+<taskbegin task="NSE" time="1645968875"/>
+<taskend task="NSE" time="1645968875"/>
+<taskbegin task="NSE" time="1645968875"/>
+<taskend task="NSE" time="1645968875"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645968875"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645968875"/>
+<taskbegin task="SYN Stealth Scan" time="1645968875"/>
+<taskprogress task="SYN Stealth Scan" time="1645968906" percent="2.97" remaining="1014" etc="1645969919"/>
+<taskprogress task="SYN Stealth Scan" time="1645968936" percent="15.34" remaining="337" etc="1645969273"/>
+<taskprogress task="SYN Stealth Scan" time="1645968966" percent="31.70" remaining="197" etc="1645969162"/>
+<taskprogress task="SYN Stealth Scan" time="1645968996" percent="51.99" remaining="112" etc="1645969108"/>
+<taskprogress task="SYN Stealth Scan" time="1645969026" percent="70.87" remaining="63" etc="1645969088"/>
+<taskend task="SYN Stealth Scan" time="1645969066" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645969066"/>
+<taskend task="Service scan" time="1645969155" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645969163"/>
+<taskend task="Traceroute" time="1645969163"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1645969163"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1645969163"/>
+<taskbegin task="NSE" time="1645969163"/>
+<taskend task="NSE" time="1645969171"/>
+<taskbegin task="NSE" time="1645969171"/>
+<taskend task="NSE" time="1645969173"/>
+<taskbegin task="NSE" time="1645969173"/>
+<taskend task="NSE" time="1645969173"/>
+<host starttime="1645968875" endtime="1645969173"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.108" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65530"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 43:77:53:46:f8:78:c6:cb:c4:c6:b5:f2:61:2a:64:13 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPwvufh9SVq1esIL7otDp06DD4IT3lXLNsiufWRGWZwSq8BB+29e4wiJnBQfAiQFF/dNt5p27eJzYa+OYewPk7Zit35SAICkvHV3NA/zI4pax4JRd5AHM+zroHUcV6SqwX+rd531CPzaAb8Xaak//bMLeNKq2c1JZQeoaYmfbn+Td7ta84bxvT8espah5VcbAem7pave8aO9tPiUbwyv7XcuRQjvka6rpP5PEtsfjV9lZpUySf+aBqCo+pLsiSwKo5TvfZgPWKdy1t+22AxBN9RRdOjL+sUuebhpeFVIJvSdbUZHzadBHKGP3UrBJiJTt4f6ZAPZ0K8u2DVYayc82j&#xa;  256 a5:b4:45:1f:eb:10:ac:1d:fc:64:de:4b:87:ed:7d:ca (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLLwdPpjO1Ei905tBE6MjbWXmZ184WFpsIrIoICi912YeOtl1bIhE4MKxi9XmFXsiHUfzF+XGVju5DJn6PedwXc=&#xa;  256 44:7c:68:45:db:3d:45:9b:ec:7c:0d:94:6b:9e:31:f5 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEu69xrp39qFb1fQ53wr0mHcTOIZlr2Lvez7PabGgwdS"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDPwvufh9SVq1esIL7otDp06DD4IT3lXLNsiufWRGWZwSq8BB+29e4wiJnBQfAiQFF/dNt5p27eJzYa+OYewPk7Zit35SAICkvHV3NA/zI4pax4JRd5AHM+zroHUcV6SqwX+rd531CPzaAb8Xaak//bMLeNKq2c1JZQeoaYmfbn+Td7ta84bxvT8espah5VcbAem7pave8aO9tPiUbwyv7XcuRQjvka6rpP5PEtsfjV9lZpUySf+aBqCo+pLsiSwKo5TvfZgPWKdy1t+22AxBN9RRdOjL+sUuebhpeFVIJvSdbUZHzadBHKGP3UrBJiJTt4f6ZAPZ0K8u2DVYayc82j</elem>
+<elem key="fingerprint">43775346f878c6cbc4c6b5f2612a6413</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLLwdPpjO1Ei905tBE6MjbWXmZ184WFpsIrIoICi912YeOtl1bIhE4MKxi9XmFXsiHUfzF+XGVju5DJn6PedwXc=</elem>
+<elem key="fingerprint">a5b4451feb10ac1dfc64de4b87ed7dca</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIEu69xrp39qFb1fQ53wr0mHcTOIZlr2Lvez7PabGgwdS</elem>
+<elem key="fingerprint">447c6845db3d459bec7c0d946b9e31f5</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.16.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.16.1</cpe></service><script id="http-git" output="&#xa;  192.168.71.108:80/.git/&#xa;    Git repository found!&#xa;    .gitignore matched patterns &apos;bug&apos; &apos;key&apos;&#xa;    .git/config matched patterns &apos;user&apos;&#xa;    Repository description: Unnamed repository; edit this file &apos;description&apos; to name the...&#xa;    Last commit message: initial commit &#xa;    Project type: node.js application (guessed from .gitignore)&#xa;"><table key="192.168.71.108:80/.git/">
+<table key="interesting-matches">
+<table key=".gitignore">
+<elem>bug</elem>
+<elem>key</elem>
+</table>
+<table key=".git/config">
+<elem>user</elem>
+</table>
+</table>
+<elem key="repository-description">Unnamed repository; edit this file &apos;description&apos; to name the repository.&#xa;</elem>
+<table key="project-type">
+<table key=".gitignore">
+<elem>node.js application</elem>
+</table>
+</table>
+<table key="files-found">
+<elem key=".git/COMMIT_EDITMSG">true</elem>
+<elem key=".git/info/exclude">true</elem>
+<elem key=".gitignore">true</elem>
+<elem key=".git/description">true</elem>
+<elem key=".git/config">true</elem>
+</table>
+<elem key="last-commit-message">initial commit&#xa;</elem>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.16.1"><elem>nginx/1.16.1</elem>
+</script><script id="http-title" output="403 Forbidden"><elem key="title">403 Forbidden</elem>
+</script></port>
+<port protocol="tcp" portid="1337"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.16.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.16.1</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.16.1"><elem>nginx/1.16.1</elem>
+</script><script id="http-title" output="Commando"><elem key="title">Commando</elem>
+</script></port>
+<port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" servicefp="SF-Port5432-TCP:V=7.91%I=9%D=2/27%Time=621B7EB2%P=x86_64-pc-linux-gnu%r(SMBProgNeg,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2065363\.19778:\x20server\x20supports\x202\.0\x20to\x203\.0\0Fpostmaster\.c\0L2071\0RProcessStartupPacket\0\0&quot;)%r(Kerberos,8C,&quot;E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20frontend\x20protocol\x2027265\.28208:\x20server\x20supports\x202\.0\x20to\x203\.0\0Fpostmaster\.c\0L2071\0RProcessStartupPacket\0\0&quot;)%r(ZendJavaBridge,48,&quot;EFATAL:\x20\x20unsupported\x20frontend\x20protocol\x200\.0:\x20server\x20supports\x202\.0\x20to\x203\.0\n\0&quot;);" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service><script id="fingerprint-strings" output="&#xa;  Kerberos: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 2.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2071&#xa;    RProcessStartupPacket&#xa;  SMBProgNeg: &#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 2.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2071&#xa;    RProcessStartupPacket&#xa;  ZendJavaBridge: &#xa;    EFATAL: unsupported frontend protocol 0.0: server supports 2.0 to 3.0"><elem key="Kerberos">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 27265.28208: server supports 2.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2071&#xa;    RProcessStartupPacket</elem>
+<elem key="SMBProgNeg">&#xa;    SFATAL&#xa;    VFATAL&#xa;    C0A000&#xa;    Munsupported frontend protocol 65363.19778: server supports 2.0 to 3.0&#xa;    Fpostmaster.c&#xa;    L2071&#xa;    RProcessStartupPacket</elem>
+<elem key="ZendJavaBridge">&#xa;    EFATAL: unsupported frontend protocol 0.0: server supports 2.0 to 3.0</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.16.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.16.1</cpe></service><script id="http-favicon" output="Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.16.1"><elem>nginx/1.16.1</elem>
+</script><script id="http-title" output="Splodge | Home"><elem key="title">Splodge | Home</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="90" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="90" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="89" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="86" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/27%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=621B7F15%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10B%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="469" lastboot="Sun Feb 27 08:31:44 2022"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="3958848E,5AE8ABD1,CF518ABD,FB44AB0A,DB8FC2E,91504DD7"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="6F689,6F6ED,6F754,6F7B8,6F81D,6F885"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="179.84"/>
+<hop ttl="2" ipaddr="192.168.71.108" rtt="179.82"/>
+</trace>
+<times srtt="178944" rttvar="1633" to="185476"/>
+</host>
+<taskbegin task="NSE" time="1645969173"/>
+<taskend task="NSE" time="1645969173"/>
+<taskbegin task="NSE" time="1645969173"/>
+<taskend task="NSE" time="1645969173"/>
+<taskbegin task="NSE" time="1645969173"/>
+<taskend task="NSE" time="1645969173"/>
+<runstats><finished time="1645969173" timestr="Sun Feb 27 08:39:33 2022" summary="Nmap done at Sun Feb 27 08:39:33 2022; 1 IP address (1 host up) scanned in 298.77 seconds" elapsed="298.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

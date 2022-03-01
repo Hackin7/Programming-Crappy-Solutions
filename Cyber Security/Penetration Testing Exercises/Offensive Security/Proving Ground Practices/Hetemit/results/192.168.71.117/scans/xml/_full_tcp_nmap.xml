@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 12:32:06 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.117 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.117" start="1645983126" startstr="Sun Feb 27 12:32:06 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645983128"/>
+<taskend task="NSE" time="1645983128"/>
+<taskbegin task="NSE" time="1645983128"/>
+<taskend task="NSE" time="1645983128"/>
+<taskbegin task="NSE" time="1645983128"/>
+<taskend task="NSE" time="1645983128"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645983128"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645983128"/>
+<taskbegin task="SYN Stealth Scan" time="1645983128"/>
+<taskprogress task="SYN Stealth Scan" time="1645983159" percent="8.68" remaining="327" etc="1645983485"/>
+<taskprogress task="SYN Stealth Scan" time="1645983189" percent="23.25" remaining="202" etc="1645983390"/>
+<taskprogress task="SYN Stealth Scan" time="1645983219" percent="34.92" remaining="170" etc="1645983389"/>
+<taskprogress task="SYN Stealth Scan" time="1645983249" percent="52.96" remaining="108" etc="1645983356"/>
+<taskprogress task="SYN Stealth Scan" time="1645983279" percent="71.31" remaining="61" etc="1645983340"/>
+<taskend task="SYN Stealth Scan" time="1645983320" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645983321"/>
+<taskend task="Service scan" time="1645983387" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645983394"/>
+<taskend task="Traceroute" time="1645983394"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1645983394"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1645983394"/>
+<taskbegin task="NSE" time="1645983394"/>
+<taskprogress task="NSE" time="1645983425" percent="99.68" remaining="1" etc="1645983425"/>
+<taskend task="NSE" time="1645983435"/>
+<taskbegin task="NSE" time="1645983435"/>
+<taskend task="NSE" time="1645983436"/>
+<taskbegin task="NSE" time="1645983436"/>
+<taskend task="NSE" time="1645983436"/>
+<host starttime="1645983128" endtime="1645983436"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.117" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-responses" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: TIMEOUT"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.71&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.71&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 2&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.0</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 b1:e2:9d:f1:f8:10:db:a5:aa:5a:22:94:e8:92:61:65 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH2Cap49zuKy70lHzXsOn9iOap0h1Dnwk14D6PNKugueOqGpYoffwCGCA0wF4cI3+MRjuHz4xGznmtTIP3vOBZINZvT5PsNcvu6ef0SDfDOMFbzsEirhpQuoBYvgmEuJ4u1VMiwNaYQ0jw9t+nsR2MAIym/wdKt+ghYm4qlB3WvLMV41uCu0F7OQadRX8GWrLWLucjSQ1f80tkV7mc7ZfuTm8YdsAOkNQufHkVE+Alk0NpHdqLh/6FHxmEqYwP0jX6HS/lg+MfczIbIQ91v7+ljvo3qgdSZPqqulUtQuj/Rb/gmIfItzFZIxTzLQ6FuKKmoTMXaR/tXf93+91z+kBdDaZe/5eu6fLCdGuFyioB97LdZGJq8uFbM0BpNeBYc0i/DOFwxWBhO8/zzv1uaTUKuS1B+bny1iUTiQoJj6GVRQmvgk/2Km5SanF3Cp4PSSJMQ112Umjg1T61ah/i//KXAyZ25xOznolBw/aoCc9cremrkycUp7dmuATBNCgHFS0=&#xa;  256 74:dd:fa:f2:51:dd:74:38:2b:b2:ec:82:e5:91:82:28 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPTMpDGmoKZ96W+Ivvw7sQmnD1U41OY34oAzJ5Z1/AP/iVj+TpKO6lCKPxDq+9nbJJU4dtQx8X+KjQqUtpYIUhw=&#xa;  256 48:bc:9d:eb:bd:4d:ac:b3:0b:5d:67:da:56:54:2b:a0 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEUnTSrfkvL2AJJsozjPtXIWf/6Z7UB9WptTiOOX93m4"><table>
+<elem key="fingerprint">b1e29df1f810dba5aa5a2294e8926165</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDH2Cap49zuKy70lHzXsOn9iOap0h1Dnwk14D6PNKugueOqGpYoffwCGCA0wF4cI3+MRjuHz4xGznmtTIP3vOBZINZvT5PsNcvu6ef0SDfDOMFbzsEirhpQuoBYvgmEuJ4u1VMiwNaYQ0jw9t+nsR2MAIym/wdKt+ghYm4qlB3WvLMV41uCu0F7OQadRX8GWrLWLucjSQ1f80tkV7mc7ZfuTm8YdsAOkNQufHkVE+Alk0NpHdqLh/6FHxmEqYwP0jX6HS/lg+MfczIbIQ91v7+ljvo3qgdSZPqqulUtQuj/Rb/gmIfItzFZIxTzLQ6FuKKmoTMXaR/tXf93+91z+kBdDaZe/5eu6fLCdGuFyioB97LdZGJq8uFbM0BpNeBYc0i/DOFwxWBhO8/zzv1uaTUKuS1B+bny1iUTiQoJj6GVRQmvgk/2Km5SanF3Cp4PSSJMQ112Umjg1T61ah/i//KXAyZ25xOznolBw/aoCc9cremrkycUp7dmuATBNCgHFS0=</elem>
+</table>
+<table>
+<elem key="fingerprint">74ddfaf251dd74382bb2ec82e5918228</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPTMpDGmoKZ96W+Ivvw7sQmnD1U41OY34oAzJ5Z1/AP/iVj+TpKO6lCKPxDq+9nbJJU4dtQx8X+KjQqUtpYIUhw=</elem>
+</table>
+<table>
+<elem key="fingerprint">48bc9debbd4dacb30b5d67da56542ba0</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIEUnTSrfkvL2AJJsozjPtXIWf/6Z7UB9WptTiOOX93m4</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(centos)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.37 (centos)"><elem>Apache/2.4.37 (centos)</elem>
+</script><script id="http-title" output="CentOS \xE6\x8F\x90\xE4\xBE\x9B\xE7\x9A\x84 Apache HTTP \xE6\x9C\x8D\xE5\x8A\xA1\xE5\x99\xA8\xE6\xB5\x8B\xE8\xAF\x95\xE9\xA1\xB5"><elem key="title">CentOS \xE6\x8F\x90\xE4\xBE\x9B\xE7\x9A\x84 Apache HTTP \xE6\x9C\x8D\xE5\x8A\xA1\xE5\x99\xA8\xE6\xB5\x8B\xE8\xAF\x95\xE9\xA1\xB5</elem>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.6.2" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4.6.2</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.6.2" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4.6.2</cpe></service></port>
+<port protocol="tcp" portid="18000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="biimenu" servicefp="SF-Port18000-TCP:V=7.91%I=9%D=2/27%Time=621BB65F%P=x86_64-pc-linux-gnu%r(GenericLines,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(GetRequest,C76,&quot;HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20&lt;title&gt;Action\x20Controller:\x20Exception\x20caught&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20\x20\x20bord&quot;)%r(HTTPOptions,C76,&quot;HTTP/1\.0\x20403\x20Forbidden\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x203102\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20&lt;title&gt;Action\x20Controller:\x20Exception\x20caught&lt;/title&gt;\n\x20\x20&lt;style&gt;\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20background-color:\x20#FAFAFA;\n\x20\x20\x20\x20\x20\x20color:\x20#333;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20body,\x20p,\x20ol,\x20ul,\x20td\x20{\n\x20\x20\x20\x20\x20\x20font-family:\x20helvetica,\x20verdana,\x20arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20font-size:\x20\x20\x2013px;\n\x20\x20\x20\x20\x20\x20line-height:\x2018px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\x20{\n\x20\x20\x20\x20\x20\x20font-size:\x2011px;\n\x20\x20\x20\x20\x20\x20white-space:\x20pre-wrap;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20pre\.box\x20{\n\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#EEE;\n\x20\x20\x20\x20\x20\x20padding:\x2010px;\n\x20\x20\x20\x20\x20\x20margin:\x200px;\n\x20\x20\x20\x20\x20\x20width:\x20958px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20header\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#F0F0F0;\n\x20\x20\x20\x20\x20\x20background:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20padding:\x200\.5em\x201\.5em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20margin:\x200\.2em\x200;\n\x20\x20\x20\x20\x20\x20line-height:\x201\.1em;\n\x20\x20\x20\x20\x20\x20font-size:\x202em;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20h2\x20{\n\x20\x20\x20\x20\x20\x20color:\x20#C52F24;\n\x20\x20\x20\x20\x20\x20line-height:\x2025px;\n\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\.details\x20{\n\x20\x20\x20\x20\x20\x20bord&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    HTTP/1.1 400 Bad Request&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 3102&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;title&gt;Action Controller: Exception caught&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    background-color: #FAFAFA;&#xa;    color: #333;&#xa;    margin: 0px;&#xa;    body, p, ol, ul, td {&#xa;    font-family: helvetica, verdana, arial, sans-serif;&#xa;    font-size: 13px;&#xa;    line-height: 18px;&#xa;    font-size: 11px;&#xa;    white-space: pre-wrap;&#xa;    pre.box {&#xa;    border: 1px solid #EEE;&#xa;    padding: 10px;&#xa;    margin: 0px;&#xa;    width: 958px;&#xa;    header {&#xa;    color: #F0F0F0;&#xa;    background: #C52F24;&#xa;    padding: 0.5em 1.5em;&#xa;    margin: 0.2em 0;&#xa;    line-height: 1.1em;&#xa;    font-size: 2em;&#xa;    color: #C52F24;&#xa;    line-height: 25px;&#xa;    .details {&#xa;    bord"><elem key="GenericLines">&#xa;    HTTP/1.1 400 Bad Request</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.0 403 Forbidden&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 3102&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html lang=&quot;en&quot;&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;title&gt;Action Controller: Exception caught&lt;/title&gt;&#xa;    &lt;style&gt;&#xa;    body {&#xa;    background-color: #FAFAFA;&#xa;    color: #333;&#xa;    margin: 0px;&#xa;    body, p, ol, ul, td {&#xa;    font-family: helvetica, verdana, arial, sans-serif;&#xa;    font-size: 13px;&#xa;    line-height: 18px;&#xa;    font-size: 11px;&#xa;    white-space: pre-wrap;&#xa;    pre.box {&#xa;    border: 1px solid #EEE;&#xa;    padding: 10px;&#xa;    margin: 0px;&#xa;    width: 958px;&#xa;    header {&#xa;    color: #F0F0F0;&#xa;    background: #C52F24;&#xa;    padding: 0.5em 1.5em;&#xa;    margin: 0.2em 0;&#xa;    line-height: 1.1em;&#xa;    font-size: 2em;&#xa;    color: #C52F24;&#xa;    line-height: 25px;&#xa;    .details {&#xa;    bord</elem>
+</script></port>
+<port protocol="tcp" portid="50000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Werkzeug httpd" version="1.0.1" extrainfo="Python 3.6.8" method="probed" conf="10"><cpe>cpe:/a:python:python:3.6.8</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS GET HEAD"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="Werkzeug/1.0.1 Python/3.6.8"><elem>Werkzeug/1.0.1 Python/3.6.8</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="90" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="90" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="90" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="86" line="63251">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/27%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=621BB6CC%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FF%GCD=1%ISR=10B%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="3151360" lastboot="Sat Jan 22 01:14:36 2022"/>
+<distance value="2"/>
+<tcpsequence index="255" difficulty="Good luck!" values="6E63F46F,CAD47777,83161669,57C08C24,FD8D112B,1F69B69F"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="BBD54115,BBD54183,BBD541F0,BBD54259,BBD542C4,BBD5432B"/>
+<hostscript><script id="clock-skew" output="1s"><elem key="mean">1</elem>
+<elem key="stddev">0</elem>
+<elem key="median">1</elem>
+<elem key="count">1</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 45909/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 50171/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 30371/udp): CLEAN (Timeout)&#xa;  Check 4 (port 29061/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-02-27T17:36:38&#xa;  start_date: N/A"><elem key="date">2022-02-27T17:36:38</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="139" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="171.94"/>
+<hop ttl="2" ipaddr="192.168.71.117" rtt="171.91"/>
+</trace>
+<times srtt="171886" rttvar="249" to="172882"/>
+</host>
+<taskbegin task="NSE" time="1645983436"/>
+<taskend task="NSE" time="1645983436"/>
+<taskbegin task="NSE" time="1645983436"/>
+<taskend task="NSE" time="1645983436"/>
+<taskbegin task="NSE" time="1645983436"/>
+<taskend task="NSE" time="1645983436"/>
+<runstats><finished time="1645983436" timestr="Sun Feb 27 12:37:16 2022" summary="Nmap done at Sun Feb 27 12:37:16 2022; 1 IP address (1 host up) scanned in 311.67 seconds" elapsed="311.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

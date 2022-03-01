@@ -1,0 +1,14 @@
+403        9l       24w      218c http://192.168.71.117/.htpasswd
+403        9l       24w      218c http://192.168.71.117/.htaccess
+403        9l       24w      222c http://192.168.71.117/.htaccess.txt
+403        9l       24w      222c http://192.168.71.117/.htpasswd.txt
+403        9l       24w      223c http://192.168.71.117/.htpasswd.html
+403        9l       24w      223c http://192.168.71.117/.htaccess.html
+403        9l       24w      222c http://192.168.71.117/.htaccess.php
+403        9l       24w      222c http://192.168.71.117/.htpasswd.php
+403        9l       24w      222c http://192.168.71.117/.htaccess.asp
+403        9l       24w      222c http://192.168.71.117/.htpasswd.asp
+403        9l       24w      223c http://192.168.71.117/.htaccess.aspx
+403        9l       24w      223c http://192.168.71.117/.htpasswd.aspx
+403        9l       24w      222c http://192.168.71.117/.htaccess.jsp
+403        9l       24w      222c http://192.168.71.117/.htpasswd.jsp

@@ -1,0 +1,127 @@
+# Nmap 7.91 scan initiated Tue Mar  1 10:19:30 2022 as: nmap -vv --reason -Pn -T4 -sV -p 1435 "--script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=mssql.instance-port=1435,mssql.username=sa,mssql.password=sa -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1435/tcp_1435_mssql_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1435/xml/tcp_1435_mssql_nmap.xml" 192.168.88.70
+Nmap scan report for 192.168.88.70
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-03-01 10:19:31 EST for 87s
+
+PORT     STATE SERVICE  REASON          VERSION
+1435/tcp open  ms-sql-s syn-ack ttl 127 Microsoft SQL Server 2017 14.00.1000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: MEATHEAD
+|   NetBIOS_Domain_Name: MEATHEAD
+|   NetBIOS_Computer_Name: MEATHEAD
+|   DNS_Domain_Name: Meathead
+|   DNS_Computer_Name: Meathead
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-02-15T10:16:34
+| Not valid after:  2052-02-15T10:16:34
+| MD5:   cf3e 8efb 0016 ed5a 514e ced0 ced5 889b
+| SHA-1: 2d09 2ac6 2d2e 7fd2 683e 37e7 4129 72ad e425 1c7a
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQJwzaaPVSuKlABGpiRsNcKDANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjIwMjE1MTAxNjM0WhgPMjA1MjAyMTUxMDE2MzRaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsVjKPK
+| TygYzvKeMNWgh7CxHe7dTq97IVgt2MZfwDhRggw249CCh/H17OxG53xPDlIF352F
+| ZcoukNuaFc2wEvVtUxrvrTJIX+CbhIuaPDz/16wNJ9frO1T0bh3Kh+mH1ym9Jclv
+| i+ZArkH4J1u70zSLcwZ141zP9Xh0jnLsOJ5NE95/sIAbHpty8vZZUrjpChOzB8nk
+| N11hSbGfl74fK8jwyBp09wMGu6sesbxW/Hh236Iuvm6jXl3h12+2eNXmZt3hE3/8
+| KIgH3crAYXmwzvVEsLEBaWt2r7G/eJ3yOe5ztDR2vGVALyOf7ENR3u08ywD1fLZ3
+| lQ7l1fh9v8XC6CECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAGcGT+oIe1iiYjF6p
+| J/pXduTQLaYmk9Qa00OlCus0IQ9RhmvvBze4q8otkDak7QyP7jNpHTu/h+2mqCK3
+| n+skFnt1ZOrtZh5VRxdUynZkZIUTTMkWNAwyt6V01zaQ+IufqlMi9+fZITk9mGbq
+| S05lgdi3de40vCAIrxLtoFv99OrFjGqeSJE7/388YUcJrYT9BQjqoZWALrNPzHsj
+| u4iYpCNOYypTlxuLyfX1LRiTJ+048GOyhaYmTDpVb31H7XobE39UY3qsZ18dudC6
+| 5F3kBlLmK5Xmb1/54prKs/zARM/63/LA5vzhRns50W3palRWIxP07y/PgjJ+bqag
+| zNeqVQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-03-01T15:20:36+00:00; +2s from scanner time.
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp384r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|_  least strength: C
+|_sslv2-drown: 
+
+Host script results:
+| ms-sql-config: 
+|   [192.168.88.70:1435]
+|_    ERROR: Bad username or password
+| ms-sql-dump-hashes: 
+| [192.168.88.70:1435]
+|_  ERROR: Bad username or password
+| ms-sql-empty-password: 
+|   [192.168.88.70:1435]
+|_    'sa' account password is not blank.
+| ms-sql-hasdbaccess: 
+|_  [192.168.88.70:1435]
+| ms-sql-info: 
+|   192.168.88.70:1435: 
+|     Version: 
+|       name: Microsoft SQL Server 2017 RTM
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 2017
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1435
+| ms-sql-query: 
+|   (Use --script-args=ms-sql-query.query='<QUERY>' to change query.)
+|   [192.168.88.70:1435]
+|_    ERROR: Bad username or password
+| ms-sql-tables: 
+|_  [192.168.88.70:1435]
+| ms-sql-xp-cmdshell: 
+|   (Use --script-args=ms-sql-xp-cmdshell.cmd='<CMD>' to change command.)
+|_  [192.168.88.70:1435]
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  1 10:20:58 2022 -- 1 IP address (1 host up) scanned in 88.27 seconds

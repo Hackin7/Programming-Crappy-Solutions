@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Feb 26 03:36:30 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 5985 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp5985/tcp_5985_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp5985/xml/tcp_5985_http_nmap.xml&quot; 192.168.234.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 5985 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp5985/tcp_5985_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hutch/results/192.168.234.122/scans/tcp5985/xml/tcp_5985_http_nmap.xml&quot; 192.168.234.122" start="1645864590" startstr="Sat Feb 26 03:36:30 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="5985"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645864590"/>
+<taskend task="NSE" time="1645864590"/>
+<taskbegin task="NSE" time="1645864590"/>
+<taskend task="NSE" time="1645864590"/>
+<taskbegin task="NSE" time="1645864590"/>
+<taskend task="NSE" time="1645864590"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645864590"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645864590"/>
+<taskbegin task="SYN Stealth Scan" time="1645864590"/>
+<taskend task="SYN Stealth Scan" time="1645864590" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645864591"/>
+<taskend task="Service scan" time="1645864597" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645864597"/>
+<taskprogress task="NSE" time="1645864628" percent="98.70" remaining="1" etc="1645864628"/>
+<taskprogress task="NSE" time="1645864658" percent="99.02" remaining="1" etc="1645864659"/>
+<taskprogress task="NSE" time="1645864688" percent="99.02" remaining="1" etc="1645864689"/>
+<taskprogress task="NSE" time="1645864718" percent="99.67" remaining="1" etc="1645864718"/>
+<taskprogress task="NSE" time="1645864748" percent="99.67" remaining="1" etc="1645864748"/>
+<taskprogress task="NSE" time="1645864778" percent="99.67" remaining="1" etc="1645864779"/>
+<taskprogress task="NSE" time="1645864808" percent="99.67" remaining="1" etc="1645864809"/>
+<taskprogress task="NSE" time="1645864838" percent="99.67" remaining="1" etc="1645864839"/>
+<taskprogress task="NSE" time="1645864868" percent="99.67" remaining="1" etc="1645864869"/>
+<taskprogress task="NSE" time="1645864898" percent="99.67" remaining="1" etc="1645864899"/>
+<taskprogress task="NSE" time="1645864928" percent="99.67" remaining="2" etc="1645864929"/>
+<taskprogress task="NSE" time="1645864958" percent="99.67" remaining="2" etc="1645864959"/>
+<taskprogress task="NSE" time="1645864988" percent="99.67" remaining="2" etc="1645864989"/>
+<taskprogress task="NSE" time="1645865018" percent="99.67" remaining="2" etc="1645865019"/>
+<taskprogress task="NSE" time="1645865048" percent="99.67" remaining="2" etc="1645865049"/>
+<taskprogress task="NSE" time="1645865078" percent="99.67" remaining="2" etc="1645865080"/>
+<taskprogress task="NSE" time="1645865108" percent="99.67" remaining="2" etc="1645865110"/>
+<taskprogress task="NSE" time="1645865138" percent="99.67" remaining="2" etc="1645865140"/>
+<taskprogress task="NSE" time="1645865168" percent="99.67" remaining="2" etc="1645865170"/>
+<taskprogress task="NSE" time="1645865198" percent="99.67" remaining="2" etc="1645865200"/>
+<taskprogress task="NSE" time="1645865228" percent="99.67" remaining="3" etc="1645865230"/>
+<taskprogress task="NSE" time="1645865258" percent="99.67" remaining="3" etc="1645865260"/>
+<taskprogress task="NSE" time="1645865288" percent="99.67" remaining="3" etc="1645865290"/>
+<taskprogress task="NSE" time="1645865318" percent="99.67" remaining="3" etc="1645865320"/>
+<taskprogress task="NSE" time="1645865348" percent="99.67" remaining="3" etc="1645865350"/>
+<taskprogress task="NSE" time="1645865378" percent="99.67" remaining="3" etc="1645865381"/>
+<taskprogress task="NSE" time="1645865408" percent="99.67" remaining="3" etc="1645865411"/>
+<taskprogress task="NSE" time="1645865438" percent="99.67" remaining="3" etc="1645865441"/>
+<taskprogress task="NSE" time="1645865468" percent="99.67" remaining="3" etc="1645865471"/>
+<taskprogress task="NSE" time="1645865498" percent="99.67" remaining="3" etc="1645865501"/>
+<taskprogress task="NSE" time="1645865528" percent="99.67" remaining="4" etc="1645865531"/>
+<taskprogress task="NSE" time="1645865558" percent="99.67" remaining="4" etc="1645865561"/>
+<taskend task="NSE" time="1645865567"/>
+<taskbegin task="NSE" time="1645865567"/>
+<taskend task="NSE" time="1645865568"/>
+<taskbegin task="NSE" time="1645865568"/>
+<taskend task="NSE" time="1645865568"/>
+<host starttime="1645864590" endtime="1645865568"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.234.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-chrono" output="Request times for /; avg: 470.85ms; min: 415.80ms; max: 589.35ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sat, 26 Feb 2022 08:36:45 GMT; +1s from local time."><elem key="date">2022-02-26T08:36:45+00:00</elem>
+<elem key="delta">1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.234.122&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.234.122:5985/&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html; charset=us-ascii&#xa;  Server: Microsoft-HTTPAPI/2.0&#xa;  Date: Sat, 26 Feb 2022 08:36:47 GMT&#xa;  Connection: close&#xa;  Content-Length: 315&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 404&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">404</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 404"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="169884" rttvar="169884" to="849420"/>
+</host>
+<taskbegin task="NSE" time="1645865568"/>
+<taskend task="NSE" time="1645865568"/>
+<taskbegin task="NSE" time="1645865568"/>
+<taskend task="NSE" time="1645865568"/>
+<taskbegin task="NSE" time="1645865568"/>
+<taskend task="NSE" time="1645865568"/>
+<runstats><finished time="1645865568" timestr="Sat Feb 26 03:52:48 2022" summary="Nmap done at Sat Feb 26 03:52:48 2022; 1 IP address (1 host up) scanned in 978.18 seconds" elapsed="978.18" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -217,6 +217,9 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Sun Feb 13 11:10:57 2022 -- 1 IP address (1 host up) scanned in 1203.95 seconds
 ```
 
+## 80 - Web
+
+![](Pasted%20image%2020220227212213.png)
 
 ## 139,445 - Samba
 ```

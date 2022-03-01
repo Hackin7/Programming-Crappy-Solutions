@@ -1,0 +1,152 @@
+# Nmap 7.91 scan initiated Tue Mar  1 10:14:07 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/xml/_full_tcp_nmap.xml" 192.168.88.70
+adjust_timeouts2: packet supposedly had rtt of -73973 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -73973 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -71653 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -71653 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -70239 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -70239 microseconds.  Ignoring time.
+Nmap scan report for 192.168.88.70
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-03-01 10:14:07 EST for 323s
+Not shown: 65527 filtered ports
+Reason: 65527 no-responses
+PORT     STATE SERVICE       REASON          VERSION
+80/tcp   open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-favicon: Unknown favicon MD5: 90D5B70E85D458B702B52546F1847EAA
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Plantronics
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1221/tcp open  ftp           syn-ack ttl 127 Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+1435/tcp open  ms-sql-s      syn-ack ttl 127 Microsoft SQL Server 2017 14.00.1000
+| ms-sql-ntlm-info: 
+|   Target_Name: MEATHEAD
+|   NetBIOS_Domain_Name: MEATHEAD
+|   NetBIOS_Computer_Name: MEATHEAD
+|   DNS_Domain_Name: Meathead
+|   DNS_Computer_Name: Meathead
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-02-15T10:16:34
+| Not valid after:  2052-02-15T10:16:34
+| MD5:   cf3e 8efb 0016 ed5a 514e ced0 ced5 889b
+| SHA-1: 2d09 2ac6 2d2e 7fd2 683e 37e7 4129 72ad e425 1c7a
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQJwzaaPVSuKlABGpiRsNcKDANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjIwMjE1MTAxNjM0WhgPMjA1MjAyMTUxMDE2MzRaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsVjKPK
+| TygYzvKeMNWgh7CxHe7dTq97IVgt2MZfwDhRggw249CCh/H17OxG53xPDlIF352F
+| ZcoukNuaFc2wEvVtUxrvrTJIX+CbhIuaPDz/16wNJ9frO1T0bh3Kh+mH1ym9Jclv
+| i+ZArkH4J1u70zSLcwZ141zP9Xh0jnLsOJ5NE95/sIAbHpty8vZZUrjpChOzB8nk
+| N11hSbGfl74fK8jwyBp09wMGu6sesbxW/Hh236Iuvm6jXl3h12+2eNXmZt3hE3/8
+| KIgH3crAYXmwzvVEsLEBaWt2r7G/eJ3yOe5ztDR2vGVALyOf7ENR3u08ywD1fLZ3
+| lQ7l1fh9v8XC6CECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAGcGT+oIe1iiYjF6p
+| J/pXduTQLaYmk9Qa00OlCus0IQ9RhmvvBze4q8otkDak7QyP7jNpHTu/h+2mqCK3
+| n+skFnt1ZOrtZh5VRxdUynZkZIUTTMkWNAwyt6V01zaQ+IufqlMi9+fZITk9mGbq
+| S05lgdi3de40vCAIrxLtoFv99OrFjGqeSJE7/388YUcJrYT9BQjqoZWALrNPzHsj
+| u4iYpCNOYypTlxuLyfX1LRiTJ+048GOyhaYmTDpVb31H7XobE39UY3qsZ18dudC6
+| 5F3kBlLmK5Xmb1/54prKs/zARM/63/LA5vzhRns50W3palRWIxP07y/PgjJ+bqag
+| zNeqVQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-03-01T15:19:29+00:00; +1s from scanner time.
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: MEATHEAD
+|   NetBIOS_Domain_Name: MEATHEAD
+|   NetBIOS_Computer_Name: MEATHEAD
+|   DNS_Domain_Name: Meathead
+|   DNS_Computer_Name: Meathead
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-03-01T15:18:54+00:00
+| ssl-cert: Subject: commonName=Meathead
+| Issuer: commonName=Meathead
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-02-14T10:16:28
+| Not valid after:  2022-08-16T10:16:28
+| MD5:   e370 db8f 255f 4ce1 4477 a96d 23e5 a706
+| SHA-1: 5b71 ca86 f9cd 9b3f 415e e3e2 1016 35ff 8502 4ff5
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQWwU8cP8JbLVHHWEob8hePzANBgkqhkiG9w0BAQsFADAT
+| MREwDwYDVQQDEwhNZWF0aGVhZDAeFw0yMjAyMTQxMDE2MjhaFw0yMjA4MTYxMDE2
+| MjhaMBMxETAPBgNVBAMTCE1lYXRoZWFkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAnTgkhZMJsfSTt4nv8lAJyL9+IeLCIrPP8sPo9LIUMLeLQtrsZZQ5
+| Gc7tq4m/qQkWuUbpbiMrKZk1OXQbjNFC2yQyNqUuO0cZf4ul0kCurbbimQx5as4W
+| tctLZxshu914h4IynxLA6+Bp1E1NNxqM6APEenlR26uR8hvCT9YSfM63xO0DT3vq
+| Jm4CzhFrDKmrQx7vjnNgCl6NWl2xiiOqNFOyHGEjepFVngMfp2CfkTFjHr1d6ktJ
+| vT8RQEEO3V8iXP+dK6TawEw93dpoG+eTsJ+zPoBS2tr4nb0Qoj5VN/trf+KvQctz
+| YUsB9wNZeepzrS+LoswzyxkBfmAep4U2bQIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBACVXohf1k2u5
+| 7FLaCOFs7jPyKGBBm4615S4pEJ4xN/294CrZzT/lPEmKaLwp24AdiOfwnlJkGfUq
+| L8pGkvA2WP/uxp5qhtyIZx92SHQaxck7APzSFqJ52CB/P2rXSH8XyKSMmLhuK5XR
+| sUNrInt32gCw8zn4yhvG4E9icjV63ftPTKNnIDBZC88BVgdyw5FlQ75py2drgQ0E
+| gcc3DwBnV2esyliu3HsyTrj8JmpIZTwj7HgN6fj4Cde9YuqTJ5CzqljImtGtjni1
+| N3wLUjJGffagupUPhSeuBZHb+SwhVQ0IfIEyjg4R4az3ViiN9/itPG3DRHZPyyE6
+| V+vsRss7Xn0=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-03-01T15:19:29+00:00; +1s from scanner time.
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=3/1%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=621E3982%P=x86_64-pc-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=102%TS=U)
+OPS(O1=M54ENW8NNS%O2=M54ENW8NNS%O3=M54ENW8%O4=M54ENW8NNS%O5=M54ENW8NNS%O6=M54ENNS)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)
+ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M54ENW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 13812/tcp): CLEAN (Timeout)
+|   Check 2 (port 25167/tcp): CLEAN (Timeout)
+|   Check 3 (port 47261/udp): CLEAN (Timeout)
+|   Check 4 (port 10685/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-03-01T15:18:53
+|_  start_date: N/A
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   181.99 ms 192.168.49.1
+2   181.97 ms 192.168.88.70
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  1 10:19:30 2022 -- 1 IP address (1 host up) scanned in 323.58 seconds

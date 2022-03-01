@@ -1,0 +1,52 @@
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_quick_tcp_nmap.xml" 192.168.71.125
+
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_full_tcp_nmap.xml" 192.168.71.125
+
+nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_top_100_udp_nmap.xml" 192.168.71.125
+
+feroxbuster -u http://192.168.71.125:8080/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/tcp_8080_http_feroxbuster_common.txt"
+
+curl -sSik http://192.168.71.125:8080/
+
+curl -sSikf http://192.168.71.125:8080/robots.txt
+
+nmap -vv --reason -Pn -T4 -sV -p 8080 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.71.125
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.71.125:8080 2>&1
+
+wkhtmltoimage --format png http://192.168.71.125:8080/ /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/tcp_8080_http_screenshot.png
+
+nbtscan -rvh 192.168.71.125 2>&1
+
+nmap -vv --reason -Pn -T4 -sV -p 12445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp12445/tcp_12445_smb_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp12445/xml/tcp_12445_smb_nmap.xml" 192.168.71.125
+
+smbmap -H 192.168.71.125 -P 12445 2>&1
+
+feroxbuster -u http://192.168.71.125:18030/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp18030/tcp_18030_http_feroxbuster_common.txt"
+
+curl -sSik http://192.168.71.125:18030/
+
+curl -sSikf http://192.168.71.125:18030/robots.txt
+
+nmap -vv --reason -Pn -T4 -sV -p 18030 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp18030/tcp_18030_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp18030/xml/tcp_18030_http_nmap.xml" 192.168.71.125
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.71.125:18030 2>&1
+
+wkhtmltoimage --format png http://192.168.71.125:18030/ /media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp18030/tcp_18030_http_screenshot.png
+
+nmap -vv --reason -Pn -T4 -sV -p 43022 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp43022/tcp_43022_ssh_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp43022/xml/tcp_43022_ssh_nmap.xml" 192.168.71.125
+
+smbmap -u null -p "" -H 192.168.71.125 -P 12445 2>&1
+
+smbmap -H 192.168.71.125 -P 12445 -R 2>&1
+
+smbmap -u null -p "" -H 192.168.71.125 -P 12445 -R 2>&1
+
+smbmap -H 192.168.71.125 -P 12445 -x "ipconfig /all" 2>&1
+
+smbmap -u null -p "" -H 192.168.71.125 -P 12445 -x "ipconfig /all" 2>&1
+
+feroxbuster -u http://192.168.71.125:8080/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/tcp_8080_http_feroxbuster_big.txt"
+
+feroxbuster -u http://192.168.71.125:18030/ -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -q -o "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp18030/tcp_18030_http_feroxbuster_big.txt"
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 10:56:08 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.125 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_full_tcp_nmap.xml&quot; 192.168.71.125" start="1645977368" startstr="Sun Feb 27 10:56:08 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645977369"/>
+<taskend task="NSE" time="1645977369"/>
+<taskbegin task="NSE" time="1645977369"/>
+<taskend task="NSE" time="1645977369"/>
+<taskbegin task="NSE" time="1645977369"/>
+<taskend task="NSE" time="1645977369"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645977369"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645977369"/>
+<taskbegin task="SYN Stealth Scan" time="1645977369"/>
+<taskprogress task="SYN Stealth Scan" time="1645977400" percent="3.55" remaining="842" etc="1645978241"/>
+<taskprogress task="SYN Stealth Scan" time="1645977439" percent="8.19" remaining="785" etc="1645978223"/>
+<taskprogress task="SYN Stealth Scan" time="1645977469" percent="18.04" remaining="455" etc="1645977923"/>
+<taskprogress task="SYN Stealth Scan" time="1645977499" percent="23.46" remaining="425" etc="1645977923"/>
+<taskprogress task="SYN Stealth Scan" time="1645977532" percent="29.57" remaining="389" etc="1645977920"/>
+<taskprogress task="SYN Stealth Scan" time="1645977571" percent="35.97" remaining="360" etc="1645977931"/>
+<taskprogress task="SYN Stealth Scan" time="1645977601" percent="45.90" remaining="274" etc="1645977874"/>
+<taskprogress task="SYN Stealth Scan" time="1645977631" percent="54.07" remaining="223" etc="1645977854"/>
+<taskprogress task="SYN Stealth Scan" time="1645977673" percent="61.23" remaining="193" etc="1645977866"/>
+<taskprogress task="SYN Stealth Scan" time="1645977703" percent="73.95" remaining="118" etc="1645977821"/>
+<taskprogress task="SYN Stealth Scan" time="1645977733" percent="83.67" remaining="72" etc="1645977804"/>
+<taskprogress task="SYN Stealth Scan" time="1645977788" percent="89.73" remaining="48" etc="1645977836"/>
+<taskend task="SYN Stealth Scan" time="1645977842" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1645977842"/>
+<taskend task="Service scan" time="1645977929" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1645977936"/>
+<taskend task="Traceroute" time="1645977936"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1645977936"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1645977936"/>
+<taskbegin task="NSE" time="1645977936"/>
+<taskend task="NSE" time="1645977942"/>
+<taskbegin task="NSE" time="1645977942"/>
+<taskend task="NSE" time="1645977942"/>
+<taskbegin task="NSE" time="1645977942"/>
+<taskend task="NSE" time="1645977942"/>
+<host starttime="1645977370" endtime="1645977942"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.125" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" servicefp="SF-Port8080-TCP:V=7.91%I=9%D=2/27%Time=621BA0F9%P=x86_64-pc-linux-gnu%r(GetRequest,F51,&quot;HTTP/1\.1\x20200\x20\r\nContent-Type:\x20text/html;charset=UTF-8\r\nContent-Language:\x20en-US\r\nContent-Length:\x203762\r\nDate:\x20Sun,\x2027\x20Feb\x202022\x2016:04:10\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20HTML&gt;\n&lt;!-&#45;\n\tMinimaxing\x20by\x20HTML5\x20UP\n\thtml5up\.net\x20\|\x20@ajlkn\n\tFree\x20for\x20personal\x20and\x20commercial\x20use\x20under\x20the\x20CCA\x203\.0\x20license\x20\(html5up\.net/license\)\n-&#45;&gt;\n&lt;html&gt;\n\t&lt;head&gt;\n\t\t&lt;title&gt;My\x20Haikus&lt;/title&gt;\n\t\t&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\t\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1,\x20user-scalable=no\&quot;\x20/&gt;\n\t\t&lt;link\x20rel=\&quot;stylesheet\&quot;\x20href=\&quot;/css/main\.css\&quot;\x20/&gt;\n\t&lt;/head&gt;\n\t&lt;body&gt;\n\t\t&lt;div\x20id=\&quot;page-wrapper\&quot;&gt;\n\n\t\t\t&lt;!-&#45;\x20Header\x20-&#45;&gt;\n\t\t\t\n\t\t\t\t&lt;div\x20id=\&quot;header-wrapper\&quot;&gt;\n\t\t\t\t\t&lt;div\x20class=\&quot;container\&quot;&gt;\n\t\t\t\t\t\t&lt;div\x20class=\&quot;row\&quot;&gt;\n\t\t\t\t\t\t\t&lt;div\x20class=\&quot;col-12\&quot;&gt;\n\n\t\t\t\t\t\t\t\t&lt;header\x20id=\&quot;header\&quot;&gt;\n\t\t\t\t\t\t\t\t\t&lt;h1&gt;&lt;a\x20href=\&quot;/\&quot;\x20id=\&quot;logo\&quot;&gt;My\x20Haikus&lt;/a&gt;&lt;/h1&gt;\n\t\t\t\t\t\t\t\t&lt;/header&gt;\n\n\t\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t\t&lt;/div&gt;\n\t\t\t\t&lt;/div&gt;\n\t\t\t\t\n\n\t\t\t\n\t\t\t\t&lt;div\x20id=\&quot;main\&quot;&gt;\n\t\t\t\t\t&lt;div\x20clas&quot;)%r(HTTPOptions,75,&quot;HTTP/1\.1\x20200\x20\r\nAllow:\x20GET,HEAD,OPTIONS\r\nContent-Length:\x200\r\nDate:\x20Sun,\x2027\x20Feb\x202022\x2016:04:10\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,259,&quot;HTTP/1\.1\x20505\x20\r\nContent-Type:\x20text/html;charset=utf-8\r\nContent-Language:\x20en\r\nContent-Length:\x20465\r\nDate:\x20Sun,\x2027\x20Feb\x202022\x2016:04:10\x20GMT\r\n\r\n&lt;!doctype\x20html&gt;&lt;html\x20lang=\&quot;en\&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP\x20Status\x20505\x20\xe2\x80\x93\x20HTTP\x20Version\x20Not\x20Supported&lt;/title&gt;&lt;style\x20type=\&quot;text/css\&quot;&gt;body\x20{font-family:Tahoma,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;background-color:#525D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-size:16px;}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{color:black;}\x20\.line\x20{height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP\x20Status\x20505\x20\xe2\x80\x93\x20HTTP\x20Version\x20Not\x20Supported&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 200 &#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Content-Language: en-US&#xa;    Content-Length: 3762&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE HTML&gt;&#xa;    &lt;!-&#45;&#xa;    Minimaxing by HTML5 UP&#xa;    html5up.net | @ajlkn&#xa;    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;My Haikus&lt;/title&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/main.css&quot; /&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;div id=&quot;page-wrapper&quot;&gt;&#xa;    &lt;!-&#45; Header -&#45;&gt;&#xa;    &lt;div id=&quot;header-wrapper&quot;&gt;&#xa;    &lt;div class=&quot;container&quot;&gt;&#xa;    &lt;div class=&quot;row&quot;&gt;&#xa;    &lt;div class=&quot;col-12&quot;&gt;&#xa;    &lt;header id=&quot;header&quot;&gt;&#xa;    &lt;h1&gt;&lt;a href=&quot;/&quot; id=&quot;logo&quot;&gt;My Haikus&lt;/a&gt;&lt;/h1&gt;&#xa;    &lt;/header&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;div id=&quot;main&quot;&gt;&#xa;    &lt;div clas&#xa;  HTTPOptions: &#xa;    HTTP/1.1 200 &#xa;    Allow: GET,HEAD,OPTIONS&#xa;    Content-Length: 0&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    Connection: close&#xa;  RTSPRequest: &#xa;    HTTP/1.1 505 &#xa;    Content-Type: text/html;charset=utf-8&#xa;    Content-Language: en&#xa;    Content-Length: 465&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    &lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 505 &#xa;    HTTP Version Not Supported&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 505 &#xa;    HTTP Version Not Supported&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;"><elem key="GetRequest">&#xa;    HTTP/1.1 200 &#xa;    Content-Type: text/html;charset=UTF-8&#xa;    Content-Language: en-US&#xa;    Content-Length: 3762&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    Connection: close&#xa;    &lt;!DOCTYPE HTML&gt;&#xa;    &lt;!-&#45;&#xa;    Minimaxing by HTML5 UP&#xa;    html5up.net | @ajlkn&#xa;    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;My Haikus&lt;/title&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot; /&gt;&#xa;    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/main.css&quot; /&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;div id=&quot;page-wrapper&quot;&gt;&#xa;    &lt;!-&#45; Header -&#45;&gt;&#xa;    &lt;div id=&quot;header-wrapper&quot;&gt;&#xa;    &lt;div class=&quot;container&quot;&gt;&#xa;    &lt;div class=&quot;row&quot;&gt;&#xa;    &lt;div class=&quot;col-12&quot;&gt;&#xa;    &lt;header id=&quot;header&quot;&gt;&#xa;    &lt;h1&gt;&lt;a href=&quot;/&quot; id=&quot;logo&quot;&gt;My Haikus&lt;/a&gt;&lt;/h1&gt;&#xa;    &lt;/header&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;/div&gt;&#xa;    &lt;div id=&quot;main&quot;&gt;&#xa;    &lt;div clas</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 200 &#xa;    Allow: GET,HEAD,OPTIONS&#xa;    Content-Length: 0&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    Connection: close</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 505 &#xa;    Content-Type: text/html;charset=utf-8&#xa;    Content-Language: en&#xa;    Content-Length: 465&#xa;    Date: Sun, 27 Feb 2022 16:04:10 GMT&#xa;    &lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 505 &#xa;    HTTP Version Not Supported&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 505 &#xa;    HTTP Version Not Supported&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="My Haikus"><elem key="title">My Haikus</elem>
+</script></port>
+<port protocol="tcp" portid="12445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.6.2" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4.6.2</cpe></service></port>
+<port protocol="tcp" portid="18030"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Unix)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: POST OPTIONS HEAD GET TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.46 (Unix)"><elem>Apache/2.4.46 (Unix)</elem>
+</script><script id="http-title" output="Whack A Mole!"><elem key="title">Whack A Mole!</elem>
+</script></port>
+<port protocol="tcp" portid="43022"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 7b:fc:37:b4:da:6e:c5:8e:a9:8b:b7:80:f5:cd:09:cb (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdtyB+UZiCMunw9Cjpg1M5yda6gJvY9DgsuFuuTfMwpe1gRp6xnQparU4u+5h+KPkCvG1h2WCj9skJ4guDNY7KgidPsfxrbKBxE0815hkntRU+xZVZneSvX20yxSU8JGZgFJPSfTaTRiRvXgDY1ljJ4c+wq9QiAg0mpXyJzHLsJGZ9z9V+5Mm4+EC8yF3xla+TAFVZtykbTFSWjf/1nZS0famFh/TMSJ333s630q6VqLKBwJ0mc75Ui6Hk+9VlGNI29NejkQufCeYSebgGZHqIT+fcjjHIZWLJIBL/KIArcgHBTUbeXKBrEoNFsA+fFGewHYNxt7Ux+w7kYF0bEAel/TcwUN4b0ZbDY1iC/dPyfWk/gXtsnaQe8oYC+JkUZwz8wSgNhWecmJjS9P/C983M7IoyRaWR9yRqEN+h/yR10heEoAD/UOW6LnpoJNQQenev2B+z9XlW0rXUB8yLUZNiJm59bjJhYMTvEZLLaeoCd1IXbtfPfjWp7EO+3zfs2xc=&#xa;  256 89:cd:ea:47:25:d9:8f:f8:94:c3:d6:5c:d4:05:ba:d0 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL68h2Z2xFUEzj7sURecPLgl8HJIdhZlhl0fOycHpBBiStKmKVTpDVLoOMPCspSWGHO2APE0Pd+dloHVc6lfVCc=&#xa;  256 c0:7c:6f:47:7e:94:cc:8b:f8:3d:a0:a6:1f:a9:27:11 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJWx+j72EVaL4qf6GJyePnJCG+SbfHaHB3st9je9n8oR"><table>
+<elem key="fingerprint">7bfc37b4da6ec58ea98bb780f5cd09cb</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDdtyB+UZiCMunw9Cjpg1M5yda6gJvY9DgsuFuuTfMwpe1gRp6xnQparU4u+5h+KPkCvG1h2WCj9skJ4guDNY7KgidPsfxrbKBxE0815hkntRU+xZVZneSvX20yxSU8JGZgFJPSfTaTRiRvXgDY1ljJ4c+wq9QiAg0mpXyJzHLsJGZ9z9V+5Mm4+EC8yF3xla+TAFVZtykbTFSWjf/1nZS0famFh/TMSJ333s630q6VqLKBwJ0mc75Ui6Hk+9VlGNI29NejkQufCeYSebgGZHqIT+fcjjHIZWLJIBL/KIArcgHBTUbeXKBrEoNFsA+fFGewHYNxt7Ux+w7kYF0bEAel/TcwUN4b0ZbDY1iC/dPyfWk/gXtsnaQe8oYC+JkUZwz8wSgNhWecmJjS9P/C983M7IoyRaWR9yRqEN+h/yR10heEoAD/UOW6LnpoJNQQenev2B+z9XlW0rXUB8yLUZNiJm59bjJhYMTvEZLLaeoCd1IXbtfPfjWp7EO+3zfs2xc=</elem>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">89cdea4725d98ff894c3d65cd405bad0</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL68h2Z2xFUEzj7sURecPLgl8HJIdhZlhl0fOycHpBBiStKmKVTpDVLoOMPCspSWGHO2APE0Pd+dloHVc6lfVCc=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">c07c6f477e94cc8bf83da0a61fa92711</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJWx+j72EVaL4qf6GJyePnJCG+SbfHaHB3st9je9n8oR</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="8080"/>
+<osmatch name="Linux 5.4" accuracy="85" line="68197">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="85"><cpe>cpe:/o:linux:linux_kernel:5.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=2/27%OT=8080%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=621BA156%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=103%GCD=1%ISR=10C%TI=Z%TS=A)&#xa;SEQ(SP=103%GCD=1%ISR=10C%TI=Z%II=I%TS=C)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="451027" lastboot="Tue Feb 22 05:48:35 2022"/>
+<distance value="2"/>
+<tcpsequence index="259" difficulty="Good luck!" values="CB7FFF20,3B6B656C,F8A1BFE9,13CAE9A7,CC963469,6B0BFB60"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="514B290A,514B2971,514B29D3,514B2A37,514B2A9B,514B2EF5"/>
+<trace port="8080" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="177.23"/>
+<hop ttl="2" ipaddr="192.168.71.125" rtt="177.30"/>
+</trace>
+<times srtt="176830" rttvar="1155" to="181450"/>
+</host>
+<taskbegin task="NSE" time="1645977942"/>
+<taskend task="NSE" time="1645977942"/>
+<taskbegin task="NSE" time="1645977942"/>
+<taskend task="NSE" time="1645977942"/>
+<taskbegin task="NSE" time="1645977942"/>
+<taskend task="NSE" time="1645977942"/>
+<runstats><finished time="1645977942" timestr="Sun Feb 27 11:05:42 2022" summary="Nmap done at Sun Feb 27 11:05:42 2022; 1 IP address (1 host up) scanned in 575.59 seconds" elapsed="575.59" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

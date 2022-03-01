@@ -1,0 +1,60 @@
+HTTP/1.1 200 OK
+Server: nginx/1.16.1
+Date: Sun, 27 Feb 2022 13:39:36 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.6.40
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Commando</title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Commando</span>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <h1>Welcome to Commando</h1>
+        <p>Run some of your favourite linux commands right here in the browser!</p>
+        <p>Here are some good candidates to try.</p>
+        <ul>
+          <li><code>id</code></li>
+          <li><code>pwd</code></li>
+          <li><code>ls</code></li>
+          <li><code>ping -c 4 127.0.0.1</code></li>
+        </ul>
+        <small>I promise you this is s3cur3 &lt;3</small>       </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <form method="get">
+          <div class="form-group">
+            <label>Command</label>
+            <input type="text" class="form-control" placeholder="Enter command" name="cmd" value=""/>
+          </div>
+          <button type="submit" class="btn btn-primary">Run</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <h2>Output</h2>
+        <pre style="background-color: #f8f9fa; padding: 1rem;"><code>
+</code></pre>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+

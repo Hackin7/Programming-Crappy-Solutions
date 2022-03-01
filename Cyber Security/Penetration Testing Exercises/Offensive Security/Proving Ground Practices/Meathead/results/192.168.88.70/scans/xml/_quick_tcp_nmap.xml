@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Mar  1 10:14:07 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/_quick_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/xml/_quick_tcp_nmap.xml&quot; 192.168.88.70 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/_quick_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/xml/_quick_tcp_nmap.xml&quot; 192.168.88.70" start="1646147647" startstr="Tue Mar  1 10:14:07 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106,109-111,113,119,125,135,139,143-144,146,161,163,179,199,211-212,222,254-256,259,264,280,301,306,311,340,366,389,406-407,416-417,425,427,443-445,458,464-465,481,497,500,512-515,524,541,543-545,548,554-555,563,587,593,616-617,625,631,636,646,648,666-668,683,687,691,700,705,711,714,720,722,726,749,765,777,783,787,800-801,808,843,873,880,888,898,900-903,911-912,981,987,990,992-993,995,999-1002,1007,1009-1011,1021-1100,1102,1104-1108,1110-1114,1117,1119,1121-1124,1126,1130-1132,1137-1138,1141,1145,1147-1149,1151-1152,1154,1163-1166,1169,1174-1175,1183,1185-1187,1192,1198-1199,1201,1213,1216-1218,1233-1234,1236,1244,1247-1248,1259,1271-1272,1277,1287,1296,1300-1301,1309-1311,1322,1328,1334,1352,1417,1433-1434,1443,1455,1461,1494,1500-1501,1503,1521,1524,1533,1556,1580,1583,1594,1600,1641,1658,1666,1687-1688,1700,1717-1721,1723,1755,1761,1782-1783,1801,1805,1812,1839-1840,1862-1864,1875,1900,1914,1935,1947,1971-1972,1974,1984,1998-2010,2013,2020-2022,2030,2033-2035,2038,2040-2043,2045-2049,2065,2068,2099-2100,2103,2105-2107,2111,2119,2121,2126,2135,2144,2160-2161,2170,2179,2190-2191,2196,2200,2222,2251,2260,2288,2301,2323,2366,2381-2383,2393-2394,2399,2401,2492,2500,2522,2525,2557,2601-2602,2604-2605,2607-2608,2638,2701-2702,2710,2717-2718,2725,2800,2809,2811,2869,2875,2909-2910,2920,2967-2968,2998,3000-3001,3003,3005-3007,3011,3013,3017,3030-3031,3052,3071,3077,3128,3168,3211,3221,3260-3261,3268-3269,3283,3300-3301,3306,3322-3325,3333,3351,3367,3369-3372,3389-3390,3404,3476,3493,3517,3527,3546,3551,3580,3659,3689-3690,3703,3737,3766,3784,3800-3801,3809,3814,3826-3828,3851,3869,3871,3878,3880,3889,3905,3914,3918,3920,3945,3971,3986,3995,3998,4000-4006,4045,4111,4125-4126,4129,4224,4242,4279,4321,4343,4443-4446,4449,4550,4567,4662,4848,4899-4900,4998,5000-5004,5009,5030,5033,5050-5051,5054,5060-5061,5080,5087,5100-5102,5120,5190,5200,5214,5221-5222,5225-5226,5269,5280,5298,5357,5405,5414,5431-5432,5440,5500,5510,5544,5550,5555,5560,5566,5631,5633,5666,5678-5679,5718,5730,5800-5802,5810-5811,5815,5822,5825,5850,5859,5862,5877,5900-5904,5906-5907,5910-5911,5915,5922,5925,5950,5952,5959-5963,5987-5989,5998-6007,6009,6025,6059,6100-6101,6106,6112,6123,6129,6156,6346,6389,6502,6510,6543,6547,6565-6567,6580,6646,6666-6669,6689,6692,6699,6779,6788-6789,6792,6839,6881,6901,6969,7000-7002,7004,7007,7019,7025,7070,7100,7103,7106,7200-7201,7402,7435,7443,7496,7512,7625,7627,7676,7741,7777-7778,7800,7911,7920-7921,7937-7938,7999-8002,8007-8011,8021-8022,8031,8042,8045,8080-8090,8093,8099-8100,8180-8181,8192-8194,8200,8222,8254,8290-8292,8300,8333,8383,8400,8402,8443,8500,8600,8649,8651-8652,8654,8701,8800,8873,8888,8899,8994,9000-9003,9009-9011,9040,9050,9071,9080-9081,9090-9091,9099-9103,9110-9111,9200,9207,9220,9290,9415,9418,9485,9500,9502-9503,9535,9575,9593-9595,9618,9666,9876-9878,9898,9900,9917,9929,9943-9944,9968,9998-10004,10009-10010,10012,10024-10025,10082,10180,10215,10243,10566,10616-10617,10621,10626,10628-10629,10778,11110-11111,11967,12000,12174,12265,12345,13456,13722,13782-13783,14000,14238,14441-14442,15000,15002-15004,15660,15742,16000-16001,16012,16016,16018,16080,16113,16992-16993,17877,17988,18040,18101,18988,19101,19283,19315,19350,19780,19801,19842,20000,20005,20031,20221-20222,20828,21571,22939,23502,24444,24800,25734-25735,26214,27000,27352-27353,27355-27356,27715,28201,30000,30718,30951,31038,31337,32768-32785,33354,33899,34571-34573,35500,38292,40193,40911,41511,42510,44176,44442-44443,44501,45100,48080,49152-49161,49163,49165,49167,49175-49176,49400,49999-50003,50006,50300,50389,50500,50636,50800,51103,51493,52673,52822,52848,52869,54045,54328,55055-55056,55555,55600,56737-56738,57294,57797,58080,60020,60443,61532,61900,62078,63331,64623,64680,65000,65129,65389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646147647"/>
+<taskend task="NSE" time="1646147647"/>
+<taskbegin task="NSE" time="1646147647"/>
+<taskend task="NSE" time="1646147647"/>
+<taskbegin task="NSE" time="1646147647"/>
+<taskend task="NSE" time="1646147647"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646147647"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646147647"/>
+<taskbegin task="SYN Stealth Scan" time="1646147647"/>
+<taskend task="SYN Stealth Scan" time="1646147658" extrainfo="1000 total ports"/>
+<taskbegin task="Service scan" time="1646147658"/>
+<taskend task="Service scan" time="1646147667" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1646147671"/>
+<taskend task="Traceroute" time="1646147671"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1646147671"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1646147672"/>
+<taskbegin task="NSE" time="1646147672"/>
+<taskprogress task="NSE" time="1646147703" percent="99.85" remaining="1" etc="1646147703"/>
+<taskend task="NSE" time="1646147712"/>
+<taskbegin task="NSE" time="1646147712"/>
+<taskend task="NSE" time="1646147712"/>
+<taskbegin task="NSE" time="1646147712"/>
+<taskend task="NSE" time="1646147712"/>
+<host starttime="1646147647" endtime="1646147712"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.88.70" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="995">
+<extrareasons reason="no-responses" count="995"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 90D5B70E85D458B702B52546F1847EAA"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Plantronics"><elem key="title">&#xd;&#xa;&#x9;Plantronics&#xd;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: MEATHEAD&#xa;  NetBIOS_Domain_Name: MEATHEAD&#xa;  NetBIOS_Computer_Name: MEATHEAD&#xa;  DNS_Domain_Name: Meathead&#xa;  DNS_Computer_Name: Meathead&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-03-01T15:14:34+00:00"><elem key="Target_Name">MEATHEAD</elem>
+<elem key="NetBIOS_Domain_Name">MEATHEAD</elem>
+<elem key="NetBIOS_Computer_Name">MEATHEAD</elem>
+<elem key="DNS_Domain_Name">Meathead</elem>
+<elem key="DNS_Computer_Name">Meathead</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-03-01T15:14:34+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=Meathead&#xa;Issuer: commonName=Meathead&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-02-14T10:16:28&#xa;Not valid after:  2022-08-16T10:16:28&#xa;MD5:   e370 db8f 255f 4ce1 4477 a96d 23e5 a706&#xa;SHA-1: 5b71 ca86 f9cd 9b3f 415e e3e2 1016 35ff 8502 4ff5&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQWwU8cP8JbLVHHWEob8hePzANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhNZWF0aGVhZDAeFw0yMjAyMTQxMDE2MjhaFw0yMjA4MTYxMDE2&#xa;MjhaMBMxETAPBgNVBAMTCE1lYXRoZWFkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAnTgkhZMJsfSTt4nv8lAJyL9+IeLCIrPP8sPo9LIUMLeLQtrsZZQ5&#xa;Gc7tq4m/qQkWuUbpbiMrKZk1OXQbjNFC2yQyNqUuO0cZf4ul0kCurbbimQx5as4W&#xa;tctLZxshu914h4IynxLA6+Bp1E1NNxqM6APEenlR26uR8hvCT9YSfM63xO0DT3vq&#xa;Jm4CzhFrDKmrQx7vjnNgCl6NWl2xiiOqNFOyHGEjepFVngMfp2CfkTFjHr1d6ktJ&#xa;vT8RQEEO3V8iXP+dK6TawEw93dpoG+eTsJ+zPoBS2tr4nb0Qoj5VN/trf+KvQctz&#xa;YUsB9wNZeepzrS+LoswzyxkBfmAep4U2bQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBACVXohf1k2u5&#xa;7FLaCOFs7jPyKGBBm4615S4pEJ4xN/294CrZzT/lPEmKaLwp24AdiOfwnlJkGfUq&#xa;L8pGkvA2WP/uxp5qhtyIZx92SHQaxck7APzSFqJ52CB/P2rXSH8XyKSMmLhuK5XR&#xa;sUNrInt32gCw8zn4yhvG4E9icjV63ftPTKNnIDBZC88BVgdyw5FlQ75py2drgQ0E&#xa;gcc3DwBnV2esyliu3HsyTrj8JmpIZTwj7HgN6fj4Cde9YuqTJ5CzqljImtGtjni1&#xa;N3wLUjJGffagupUPhSeuBZHb+SwhVQ0IfIEyjg4R4az3ViiN9/itPG3DRHZPyyE6&#xa;V+vsRss7Xn0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">Meathead</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Meathead</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">9D3824859309B1F493B789EFF25009C8BF7E21E2C222B3CFF2C3E8F4B21430B78B42DAEC65943919CEEDAB89BFA90916B946E96E232B29993539741B8CD142DB243236A52E3B47197F8BA5D240AEADB6E2990C796ACE16B5CB4B671B21BBDD788782329F12C0EBE069D44D4D371A8CE803C47A7951DBAB91F21BC24FD6127CCEB7C4ED034F7BEA266E02CE116B0CA9AB431EEF8E73600A5E8D5A5DB18A23AA3453B21C61237A91559E031FA7609F9131631EBD5DEA4B49BD3F1140410EDD5F225CFF9D2BA4DAC04C3DDDDA681BE793B09FB33E8052DADAF89DBD10A23E5537FB6B7FE2AF41CB73614B01F7035979EA73AD2F8BA2CC33CB19017E601EA785366D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-02-14T10:16:28</elem>
+<elem key="notAfter">2022-08-16T10:16:28</elem>
+</table>
+<elem key="md5">e370db8f255f4ce14477a96d23e5a706</elem>
+<elem key="sha1">5b71ca86f9cd9b3f415ee3e2101635ff85024ff5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQWwU8cP8JbLVHHWEob8hePzANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhNZWF0aGVhZDAeFw0yMjAyMTQxMDE2MjhaFw0yMjA4MTYxMDE2&#xa;MjhaMBMxETAPBgNVBAMTCE1lYXRoZWFkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAnTgkhZMJsfSTt4nv8lAJyL9+IeLCIrPP8sPo9LIUMLeLQtrsZZQ5&#xa;Gc7tq4m/qQkWuUbpbiMrKZk1OXQbjNFC2yQyNqUuO0cZf4ul0kCurbbimQx5as4W&#xa;tctLZxshu914h4IynxLA6+Bp1E1NNxqM6APEenlR26uR8hvCT9YSfM63xO0DT3vq&#xa;Jm4CzhFrDKmrQx7vjnNgCl6NWl2xiiOqNFOyHGEjepFVngMfp2CfkTFjHr1d6ktJ&#xa;vT8RQEEO3V8iXP+dK6TawEw93dpoG+eTsJ+zPoBS2tr4nb0Qoj5VN/trf+KvQctz&#xa;YUsB9wNZeepzrS+LoswzyxkBfmAep4U2bQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBACVXohf1k2u5&#xa;7FLaCOFs7jPyKGBBm4615S4pEJ4xN/294CrZzT/lPEmKaLwp24AdiOfwnlJkGfUq&#xa;L8pGkvA2WP/uxp5qhtyIZx92SHQaxck7APzSFqJ52CB/P2rXSH8XyKSMmLhuK5XR&#xa;sUNrInt32gCw8zn4yhvG4E9icjV63ftPTKNnIDBZC88BVgdyw5FlQ75py2drgQ0E&#xa;gcc3DwBnV2esyliu3HsyTrj8JmpIZTwj7HgN6fj4Cde9YuqTJ5CzqljImtGtjni1&#xa;N3wLUjJGffagupUPhSeuBZHb+SwhVQ0IfIEyjg4R4az3ViiN9/itPG3DRHZPyyE6&#xa;V+vsRss7Xn0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-03-01T15:15:14+00:00; +2s from scanner time."><elem key="delta">2.0</elem>
+<elem key="date">2022-03-01T15:15:14+00:00</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=3/1%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=621E3880%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=109%TI=I%II=I%SS=S%TS=U)&#xa;OPS(O1=M54ENW8NNS%O2=M54ENW8NNS%O3=M54ENW8%O4=M54ENW8NNS%O5=M54ENW8NNS%O6=M54ENNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M54ENW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="5150DFD8,BDCF4A68,B0E77520,EB2A09B3,D0B2B043,81A8F497"/>
+<ipidsequence class="Incremental" values="63E5,63E6,63E7,63E8,63E9,63EA"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="mean: 1s, deviation: 0s, median: 0s"><elem key="median">0</elem>
+<elem key="stddev">0</elem>
+<elem key="mean">1</elem>
+<elem key="count">4</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 13812/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 25167/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 47261/udp): CLEAN (Timeout)&#xa;  Check 4 (port 10685/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-03-01T15:14:35&#xa;  start_date: N/A"><elem key="date">2022-03-01T15:14:35</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="445" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="180.12"/>
+<hop ttl="2" ipaddr="192.168.88.70" rtt="180.00"/>
+</trace>
+<times srtt="179842" rttvar="353" to="181254"/>
+</host>
+<taskbegin task="NSE" time="1646147712"/>
+<taskend task="NSE" time="1646147712"/>
+<taskbegin task="NSE" time="1646147712"/>
+<taskend task="NSE" time="1646147712"/>
+<taskbegin task="NSE" time="1646147712"/>
+<taskend task="NSE" time="1646147712"/>
+<runstats><finished time="1646147712" timestr="Tue Mar  1 10:15:12 2022" summary="Nmap done at Tue Mar  1 10:15:12 2022; 1 IP address (1 host up) scanned in 66.22 seconds" elapsed="66.22" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

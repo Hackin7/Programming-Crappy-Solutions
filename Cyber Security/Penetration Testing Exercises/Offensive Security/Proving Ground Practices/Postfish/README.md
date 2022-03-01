@@ -1,5 +1,51 @@
 # Postfish
 
+## 22 - SSH
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+Custom ways of Exploitation
+- [ ] Hacktricks
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+Logging in
+Brute Force `I` 
+- [ ] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
+- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] rockyou.txt
+- [ ] More
+
+## 80 - Web
+Understand how it works & Interact  [ ] `(I)`
+- [ ] Find the Official Documentation
+- [ ] Google
+Custom ways of Exploitation
+- [ ] Hacktricks
+Search & Test for Vulnerabilities `(I)`
+- [ ] Searchsploit
+- [ ] Google
+- [ ] More
+**Basic**
+Source Code `E`
+- [x] Find all the files, hidden or not (if possible)
+- [x] Look through the source code of ALL the files
+ - [ ] Find all Input Fields `-> Input Fields`
+ - [ ] File Uploads `-> File upload`
+Directory Enumeration (dirb) `I -> Custom page/ CMS`
+- [x] Sitemap (robots.txt)
+- [x] Common wordlist
+- [x] big wordlist
+- [ ] More
+Virtual Hosts Testing `I`
+- [x] Given hostname - postfish.off
+- [x] Hostname derived from box name - *banzai.pg* - No Diff
+- [ ] More
+Vulnerability Scanning `I`
+- [x] Nikto Vulnerability Scanner
+- [ ] More
+
 # Enumeration
 
 ## nmap
@@ -218,6 +264,8 @@ Use virtual host `postfish.off`
 
 ![](Pasted%20image%2020220220113319.png)
 
+![](Pasted%20image%2020220301223134.png)
+
 ## 25 - SMTP
 
 ## 110 - POP3
@@ -226,6 +274,41 @@ Use virtual host `postfish.off`
 
 https://book.hacktricks.xyz/pentesting/pentesting-imap
 
+(Hinted)
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ telnet postfish.off 143
+Trying 192.168.88.137...
+Connected to postfish.off.
+Escape character is '^]'.
+* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN] Dovecot (Ubuntu) ready.
+A1 LOGIN mike mike
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN ross ross
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN claire claire
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN madison madison
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN brian brian
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+* BYE Disconnected for inactivity.
+Connection closed by foreign host.
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ telnet postfish.off 143                                                                                                                                         1 ⨯
+Trying 192.168.88.137...
+Connected to postfish.off.
+Escape character is '^]'.
+* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN] Dovecot (Ubuntu) ready.
+A1 LOGIN moore moore
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN sarah sarah
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+A1 LOGIN lorem lorem
+A1 NO [AUTHENTICATIONFAILED] Authentication failed.
+```
 
 # Exploitation
 

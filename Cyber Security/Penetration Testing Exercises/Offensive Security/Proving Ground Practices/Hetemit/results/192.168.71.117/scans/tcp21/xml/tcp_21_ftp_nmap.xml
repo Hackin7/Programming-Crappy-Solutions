@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 12:33:17 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp21/tcp_21_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp21/xml/tcp_21_ftp_nmap.xml&quot; 192.168.71.117 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp21/tcp_21_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp21/xml/tcp_21_ftp_nmap.xml&quot; 192.168.71.117" start="1645983197" startstr="Sun Feb 27 12:33:17 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645983203"/>
+<taskend task="NSE" time="1645983203"/>
+<taskbegin task="NSE" time="1645983203"/>
+<taskend task="NSE" time="1645983203"/>
+<taskbegin task="NSE" time="1645983203"/>
+<taskend task="NSE" time="1645983203"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645983203"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645983203"/>
+<taskbegin task="SYN Stealth Scan" time="1645983203"/>
+<taskend task="SYN Stealth Scan" time="1645983204" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645983205"/>
+<taskend task="Service scan" time="1645983205" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645983205"/>
+<taskprogress task="NSE" time="1645983236" percent="98.08" remaining="1" etc="1645983237"/>
+<taskend task="NSE" time="1645983236"/>
+<taskbegin task="NSE" time="1645983236"/>
+<taskend task="NSE" time="1645983238"/>
+<taskbegin task="NSE" time="1645983238"/>
+<taskend task="NSE" time="1645983238"/>
+<host starttime="1645983204" endtime="1645983238"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.117" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="banner" output="220 (vsFTPd 3.0.3)"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: TIMEOUT"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.49.71&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.49.71&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 1&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="169827" rttvar="169827" to="849135"/>
+</host>
+<taskbegin task="NSE" time="1645983238"/>
+<taskend task="NSE" time="1645983238"/>
+<taskbegin task="NSE" time="1645983238"/>
+<taskend task="NSE" time="1645983238"/>
+<taskbegin task="NSE" time="1645983238"/>
+<taskend task="NSE" time="1645983238"/>
+<runstats><finished time="1645983238" timestr="Sun Feb 27 12:33:58 2022" summary="Nmap done at Sun Feb 27 12:33:58 2022; 1 IP address (1 host up) scanned in 40.94 seconds" elapsed="40.94" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

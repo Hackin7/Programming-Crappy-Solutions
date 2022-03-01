@@ -1,0 +1,6 @@
+200       37l      100w     1781c http://192.168.88.70/Default.aspx
+301        2l       10w      151c http://192.168.88.70/Images
+301        2l       10w      148c http://192.168.88.70/css
+200       37l      100w     1781c http://192.168.88.70/default.aspx
+301        2l       10w      151c http://192.168.88.70/images
+301        2l       10w      151c http://192.168.88.70/master

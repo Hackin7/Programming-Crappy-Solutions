@@ -1,0 +1,107 @@
+# Nmap 7.91 scan initiated Sun Feb 27 10:56:08 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/xml/_quick_tcp_nmap.xml" 192.168.71.125
+Nmap scan report for 192.168.71.125
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-02-27 10:56:10 EST for 58s
+Not shown: 999 filtered ports
+Reason: 999 no-responses
+PORT     STATE SERVICE    REASON         VERSION
+8080/tcp open  http-proxy syn-ack ttl 63
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Language: en-US
+|     Content-Length: 3762
+|     Date: Sun, 27 Feb 2022 15:56:42 GMT
+|     Connection: close
+|     <!DOCTYPE HTML>
+|     <!--
+|     Minimaxing by HTML5 UP
+|     html5up.net | @ajlkn
+|     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+|     <html>
+|     <head>
+|     <title>My Haikus</title>
+|     <meta charset="utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+|     <link rel="stylesheet" href="/css/main.css" />
+|     </head>
+|     <body>
+|     <div id="page-wrapper">
+|     <!-- Header -->
+|     <div id="header-wrapper">
+|     <div class="container">
+|     <div class="row">
+|     <div class="col-12">
+|     <header id="header">
+|     <h1><a href="/" id="logo">My Haikus</a></h1>
+|     </header>
+|     </div>
+|     </div>
+|     </div>
+|     </div>
+|     <div id="main">
+|     <div clas
+|   HTTPOptions: 
+|     HTTP/1.1 200 
+|     Allow: GET,HEAD,OPTIONS
+|     Content-Length: 0
+|     Date: Sun, 27 Feb 2022 15:56:42 GMT
+|_    Connection: close
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-title: My Haikus
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=9%D=2/27%Time=621B9F38%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,F51,"HTTP/1\.1\x20200\x20\r\nContent-Type:\x20text/html;charse
+SF:t=UTF-8\r\nContent-Language:\x20en-US\r\nContent-Length:\x203762\r\nDat
+SF:e:\x20Sun,\x2027\x20Feb\x202022\x2015:56:42\x20GMT\r\nConnection:\x20cl
+SF:ose\r\n\r\n<!DOCTYPE\x20HTML>\n<!--\n\tMinimaxing\x20by\x20HTML5\x20UP\
+SF:n\thtml5up\.net\x20\|\x20@ajlkn\n\tFree\x20for\x20personal\x20and\x20co
+SF:mmercial\x20use\x20under\x20the\x20CCA\x203\.0\x20license\x20\(html5up\
+SF:.net/license\)\n-->\n<html>\n\t<head>\n\t\t<title>My\x20Haikus</title>\
+SF:n\t\t<meta\x20charset=\"utf-8\"\x20/>\n\t\t<meta\x20name=\"viewport\"\x
+SF:20content=\"width=device-width,\x20initial-scale=1,\x20user-scalable=no
+SF:\"\x20/>\n\t\t<link\x20rel=\"stylesheet\"\x20href=\"/css/main\.css\"\x2
+SF:0/>\n\t</head>\n\t<body>\n\t\t<div\x20id=\"page-wrapper\">\n\n\t\t\t<!-
+SF:-\x20Header\x20-->\n\t\t\t\n\t\t\t\t<div\x20id=\"header-wrapper\">\n\t\
+SF:t\t\t\t<div\x20class=\"container\">\n\t\t\t\t\t\t<div\x20class=\"row\">
+SF:\n\t\t\t\t\t\t\t<div\x20class=\"col-12\">\n\n\t\t\t\t\t\t\t\t<header\x2
+SF:0id=\"header\">\n\t\t\t\t\t\t\t\t\t<h1><a\x20href=\"/\"\x20id=\"logo\">
+SF:My\x20Haikus</a></h1>\n\t\t\t\t\t\t\t\t</header>\n\n\t\t\t\t\t\t\t</div
+SF:>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\n\t
+SF:\t\t\n\t\t\t\t<div\x20id=\"main\">\n\t\t\t\t\t<div\x20clas")%r(HTTPOpti
+SF:ons,75,"HTTP/1\.1\x20200\x20\r\nAllow:\x20GET,HEAD,OPTIONS\r\nContent-L
+SF:ength:\x200\r\nDate:\x20Sun,\x2027\x20Feb\x202022\x2015:56:42\x20GMT\r\
+SF:nConnection:\x20close\r\n\r\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose|router|storage-misc
+Running (JUST GUESSING): Linux 2.4.X|3.X (86%), MikroTik RouterOS 6.X (86%), FreeBSD 6.X (86%), HP embedded (85%), OpenBSD 4.X (85%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:3.2.0 cpe:/o:mikrotik:routeros:6.15 cpe:/o:freebsd:freebsd:6.2 cpe:/h:hp:p2000_g3 cpe:/o:openbsd:openbsd:4.0
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Tomato 1.27 - 1.28 (Linux 2.4.20) (86%), Linux 3.2.0 (86%), MikroTik RouterOS 6.15 (Linux 3.3.5) (86%), FreeBSD 6.2-RELEASE (86%), HP P2000 G3 NAS device (85%), OpenBSD 4.0 (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=2/27%OT=8080%CT=%CU=%PV=Y%G=N%TM=621B9F54%P=x86_64-pc-linux-gnu)
+SEQ(TI=Z%TS=A)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+IE(R=N)
+
+Uptime guess: 15.780 days (since Fri Feb 11 16:14:14 2022)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 27 10:57:08 2022 -- 1 IP address (1 host up) scanned in 60.95 seconds

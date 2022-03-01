@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Feb 27 12:33:19 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp445/tcp_445_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp445/xml/tcp_445_smb_nmap.xml&quot; 192.168.71.117 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp445/tcp_445_smb_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/results/192.168.71.117/scans/tcp445/xml/tcp_445_smb_nmap.xml&quot; 192.168.71.117" start="1645983199" startstr="Sun Feb 27 12:33:19 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1645983205"/>
+<taskend task="NSE" time="1645983205"/>
+<taskbegin task="NSE" time="1645983205"/>
+<taskend task="NSE" time="1645983205"/>
+<taskbegin task="NSE" time="1645983205"/>
+<taskend task="NSE" time="1645983205"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1645983206"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1645983206"/>
+<taskbegin task="SYN Stealth Scan" time="1645983206"/>
+<taskend task="SYN Stealth Scan" time="1645983206" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1645983207"/>
+<taskend task="Service scan" time="1645983215" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1645983215"/>
+<taskprogress task="NSE" time="1645983246" percent="94.29" remaining="2" etc="1645983248"/>
+<taskend task="NSE" time="1645983257"/>
+<taskbegin task="NSE" time="1645983257"/>
+<taskend task="NSE" time="1645983262"/>
+<taskbegin task="NSE" time="1645983262"/>
+<taskend task="NSE" time="1645983262"/>
+<host starttime="1645983206" endtime="1645983262"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.71.117" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.6.2" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4.6.2</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [9]"/><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [9]">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-02-27T17:33:44&#xa;  start_date: N/A"><elem key="date">2022-02-27T17:33:44</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="171155" rttvar="171155" to="855775"/>
+</host>
+<taskbegin task="NSE" time="1645983262"/>
+<taskend task="NSE" time="1645983262"/>
+<taskbegin task="NSE" time="1645983262"/>
+<taskend task="NSE" time="1645983262"/>
+<taskbegin task="NSE" time="1645983262"/>
+<taskend task="NSE" time="1645983262"/>
+<runstats><finished time="1645983262" timestr="Sun Feb 27 12:34:22 2022" summary="Nmap done at Sun Feb 27 12:34:22 2022; 1 IP address (1 host up) scanned in 63.74 seconds" elapsed="63.74" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

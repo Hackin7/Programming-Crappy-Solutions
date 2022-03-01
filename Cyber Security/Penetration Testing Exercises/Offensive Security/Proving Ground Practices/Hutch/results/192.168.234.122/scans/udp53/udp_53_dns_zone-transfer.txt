@@ -1,0 +1,10 @@
+
+; <<>> DiG 9.16.11-Debian <<>> AXFR -p 53 @192.168.234.122
+; (1 server found)
+;; global options: +cmd
+;; Query time: 4722 msec
+;; SERVER: 192.168.234.122#53(192.168.234.122)
+;; WHEN: Sat Feb 26 04:00:47 EST 2022
+;; MSG SIZE  rcvd: 28
+
+

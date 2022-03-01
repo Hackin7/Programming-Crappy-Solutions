@@ -1,0 +1,28 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] telnet found on tcp/23.
+
+
+
+[*] smtp found on tcp/25.
+
+
+
+[*] tcpwrapped found on tcp/53.
+
+
+
+[*] ssh found on tcp/422.
+
+
+
+[*] http found on tcp/8091.
+
+
+
+[*] ssh found on tcp/42042.
+
+
+

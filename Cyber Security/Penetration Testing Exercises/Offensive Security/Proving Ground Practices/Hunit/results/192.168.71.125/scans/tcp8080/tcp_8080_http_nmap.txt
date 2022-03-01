@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sun Feb 27 10:57:09 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hunit/results/192.168.71.125/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.71.125
+Nmap scan report for 192.168.71.125
+Host is up, received user-set.
+Scanned at 2022-02-27 10:57:11 EST for 1s
+
+PORT     STATE    SERVICE    REASON      VERSION
+8080/tcp filtered http-proxy no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 27 10:57:12 2022 -- 1 IP address (1 host up) scanned in 3.64 seconds

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Mar  1 10:19:30 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 1221 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/tcp_1221_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/xml/tcp_1221_ftp_nmap.xml&quot; 192.168.88.70 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 1221 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/tcp_1221_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Meathead/results/192.168.88.70/scans/tcp1221/xml/tcp_1221_ftp_nmap.xml&quot; 192.168.88.70" start="1646147970" startstr="Tue Mar  1 10:19:30 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="1221"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646147971"/>
+<taskend task="NSE" time="1646147971"/>
+<taskbegin task="NSE" time="1646147971"/>
+<taskend task="NSE" time="1646147971"/>
+<taskbegin task="NSE" time="1646147971"/>
+<taskend task="NSE" time="1646147971"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646147971"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646147971"/>
+<taskbegin task="SYN Stealth Scan" time="1646147971"/>
+<taskend task="SYN Stealth Scan" time="1646147971" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646147972"/>
+<taskend task="Service scan" time="1646147972" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646147972"/>
+<taskend task="NSE" time="1646147973"/>
+<taskbegin task="NSE" time="1646147973"/>
+<taskend task="NSE" time="1646147974"/>
+<taskbegin task="NSE" time="1646147974"/>
+<taskend task="NSE" time="1646147974"/>
+<host starttime="1646147971" endtime="1646147974"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.88.70" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="1221"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;04-27-20  07:02PM                18866 Elementum Supremum.docx&#xa;04-27-20  07:02PM               764176 file_example_MP3_700KB.mp3&#xa;04-27-20  07:02PM                15690 img.jpg&#xa;04-27-20  07:02PM                  302 MSSQL_BAK.rar&#xa;04-27-20  07:02PM                  548 palindromes.txt&#xa;04-27-20  07:02PM                45369 server.jpg"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="174825" rttvar="174825" to="874125"/>
+</host>
+<taskbegin task="NSE" time="1646147974"/>
+<taskend task="NSE" time="1646147974"/>
+<taskbegin task="NSE" time="1646147974"/>
+<taskend task="NSE" time="1646147974"/>
+<taskbegin task="NSE" time="1646147974"/>
+<taskend task="NSE" time="1646147974"/>
+<runstats><finished time="1646147974" timestr="Tue Mar  1 10:19:34 2022" summary="Nmap done at Tue Mar  1 10:19:34 2022; 1 IP address (1 host up) scanned in 4.31 seconds" elapsed="4.31" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

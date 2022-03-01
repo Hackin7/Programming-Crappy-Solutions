@@ -1,0 +1,14 @@
+lpcfg_do_global_parameter: WARNING: The "client use spnego" option is deprecated
+lpcfg_do_global_parameter: WARNING: The "client ntlmv2 auth" option is deprecated
+smbXcli_negprot_smb1_done: No compatible protocol selected by server.
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	Cmeeks          Disk      cmeeks Files
+	IPC$            IPC       IPC Service (Samba 4.11.2)
+Reconnecting with SMB1 for workgroup listing.
+protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+Unable to connect with SMB1 -- no workgroup available
+
