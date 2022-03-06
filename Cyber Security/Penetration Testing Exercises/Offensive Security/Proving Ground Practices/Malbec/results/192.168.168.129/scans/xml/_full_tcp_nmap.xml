@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 09:00:30 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Malbec/results/192.168.168.129/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Malbec/results/192.168.168.129/scans/xml/_full_tcp_nmap.xml&quot; 192.168.168.129 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Malbec/results/192.168.168.129/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Malbec/results/192.168.168.129/scans/xml/_full_tcp_nmap.xml&quot; 192.168.168.129" start="1646488830" startstr="Sat Mar  5 09:00:30 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646488830"/>
+<taskend task="NSE" time="1646488830"/>
+<taskbegin task="NSE" time="1646488830"/>
+<taskend task="NSE" time="1646488830"/>
+<taskbegin task="NSE" time="1646488830"/>
+<taskend task="NSE" time="1646488830"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646488830"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646488830"/>
+<taskbegin task="SYN Stealth Scan" time="1646488830"/>
+<taskprogress task="SYN Stealth Scan" time="1646488861" percent="5.49" remaining="534" etc="1646489395"/>
+<taskprogress task="SYN Stealth Scan" time="1646488891" percent="8.92" remaining="623" etc="1646489514"/>
+<taskprogress task="SYN Stealth Scan" time="1646488954" percent="17.42" remaining="588" etc="1646489542"/>
+<taskprogress task="SYN Stealth Scan" time="1646489029" percent="26.57" remaining="550" etc="1646489579"/>
+<taskprogress task="SYN Stealth Scan" time="1646489059" percent="32.02" remaining="487" etc="1646489545"/>
+<taskprogress task="SYN Stealth Scan" time="1646489170" percent="43.21" remaining="447" etc="1646489617"/>
+<taskprogress task="SYN Stealth Scan" time="1646489209" percent="48.28" remaining="406" etc="1646489615"/>
+<taskprogress task="SYN Stealth Scan" time="1646489245" percent="53.09" remaining="367" etc="1646489612"/>
+<taskprogress task="SYN Stealth Scan" time="1646489287" percent="58.34" remaining="327" etc="1646489613"/>
+<taskprogress task="SYN Stealth Scan" time="1646489332" percent="63.78" remaining="286" etc="1646489617"/>
+<taskprogress task="SYN Stealth Scan" time="1646489377" percent="69.24" remaining="244" etc="1646489620"/>
+<taskprogress task="SYN Stealth Scan" time="1646489416" percent="74.36" remaining="203" etc="1646489618"/>
+<taskprogress task="SYN Stealth Scan" time="1646489455" percent="79.50" remaining="162" etc="1646489616"/>
+<taskprogress task="SYN Stealth Scan" time="1646489497" percent="84.80" remaining="120" etc="1646489617"/>
+<taskprogress task="SYN Stealth Scan" time="1646489560" percent="90.35" remaining="78" etc="1646489638"/>
+<taskprogress task="SYN Stealth Scan" time="1646489614" percent="95.44" remaining="38" etc="1646489651"/>
+<taskend task="SYN Stealth Scan" time="1646489681" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1646489682"/>
+<taskend task="Service scan" time="1646489693" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1646489707"/>
+<taskend task="Traceroute" time="1646489708"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1646489708"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1646489708"/>
+<taskbegin task="NSE" time="1646489708"/>
+<taskend task="NSE" time="1646489713"/>
+<taskbegin task="NSE" time="1646489713"/>
+<taskend task="NSE" time="1646489714"/>
+<taskbegin task="NSE" time="1646489714"/>
+<taskend task="NSE" time="1646489714"/>
+<host starttime="1646488830" endtime="1646489714"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.129" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65498">
+<extrareasons reason="resets" count="65498"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 74:ba:20:23:89:92:62:02:9f:e7:3d:3b:83:d4:d9:6c (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGGcX/x/M6J7Y0V8EeUt0FqceuxieEOe2fUH2RsY3XiSxByQWNQi+XSrFElrfjdR2sgnauIWWhWibfD+kTmSP5gkFcaoSsLtgfMP/2G8yuxPSev+9o1N18gZchJneakItNTaz1ltG1W//qJPZDHmkDneyv798f9ZdXBzidtR5/+2ArZd64bldUxx0irH0lNcf+ICuVlhOZyXGvSx/ceMCRozZrW2JQU+WLvs49gC78zZgvN+wrAZ/3s8gKPOIPobN3ObVSkZ+zngt0Xg/Zl11LLAbyWX7TupAt6lTYOvCSwNVZURyB1dDdjlMAXqT/Ncr4LbP+tvsiI1BKlqxx4I2r&#xa;  256 54:8f:79:55:5a:b0:3a:69:5a:d5:72:39:64:fd:07:4e (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCpAb2jUKovAahxmPX9l95Pq9YWgXfIgDJw0obIpOjOkdP3b0ukm/mrTNgX2lg1mQBMlS3lzmQmxeyHGg9+xuJA=&#xa;  256 7f:5d:10:27:62:ba:75:e9:bc:c8:4f:e2:72:87:d4:e2 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE0omUJRIaMtPNYa4CKBC+XUzVyZsJ1QwsksjpA/6Ml+"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDGGcX/x/M6J7Y0V8EeUt0FqceuxieEOe2fUH2RsY3XiSxByQWNQi+XSrFElrfjdR2sgnauIWWhWibfD+kTmSP5gkFcaoSsLtgfMP/2G8yuxPSev+9o1N18gZchJneakItNTaz1ltG1W//qJPZDHmkDneyv798f9ZdXBzidtR5/+2ArZd64bldUxx0irH0lNcf+ICuVlhOZyXGvSx/ceMCRozZrW2JQU+WLvs49gC78zZgvN+wrAZ/3s8gKPOIPobN3ObVSkZ+zngt0Xg/Zl11LLAbyWX7TupAt6lTYOvCSwNVZURyB1dDdjlMAXqT/Ncr4LbP+tvsiI1BKlqxx4I2r</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">74ba2023899262029fe73d3b83d4d96c</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCpAb2jUKovAahxmPX9l95Pq9YWgXfIgDJw0obIpOjOkdP3b0ukm/mrTNgX2lg1mQBMlS3lzmQmxeyHGg9+xuJA=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">548f79555ab03a695ad5723964fd074e</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIE0omUJRIaMtPNYa4CKBC+XUzVyZsJ1QwsksjpA/6Ml+</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">7f5d102762ba75e9bcc84fe27287d4e2</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="2121"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="pyftpdlib" version="1.5.6" method="probed" conf="10"><cpe>cpe:/a:giampaolo_rodola:pyftpdlib</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;-rwxrwxrwx   1 carlos   carlos     108304 Jan 25  2021 malbec.exe [NSE: writeable]"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa; Connected to: 192.168.168.129:2121&#xa; Waiting for username.&#xa; TYPE: ASCII; STRUcture: File; MODE: Stream&#xa; Data connection closed.&#xa;End of status."><elem key="STAT">&#xa;FTP server status:&#xa; Connected to: 192.168.168.129:2121&#xa; Waiting for username.&#xa; TYPE: ASCII; STRUcture: File; MODE: Stream&#xa; Data connection closed.&#xa;End of status.</elem>
+</script></port>
+<port protocol="tcp" portid="3398"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sapcomm" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3484"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="gbs-stp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6379"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="redis" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7138"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port7138-TCP:V=7.91%I=9%D=3/5%Time=6223705D%P=x86_64-pc-linux-gnu%r(GenericLines,4,&quot;\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8527"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="9237"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="10951"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="14256"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="20518"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="23215"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="24503"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="25583"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="25620"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28454"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28455"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28947"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="29616"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="29803"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="29885"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="32399"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="33294"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="33702"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="35424"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="36204"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42427"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42733"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="44773"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="45027"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49335"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51348"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="52652"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="53940"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="57977"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="61959"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="62937"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="37152"/>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="91" line="56843">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="91" line="65596">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="91" line="68527">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="91"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="91" line="104852">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="91"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.35" accuracy="90" line="57208">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.35</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="90" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="90" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="90" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=3/5%OT=22%CT=1%CU=37152%PV=Y%DS=2%DC=T%G=Y%TM=62237072&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=108%TI=Z%II=I%TS=A)SEQ(SP=10&#xa;OS:0%GCD=1%ISR=108%TI=Z%TS=A)OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11&#xa;OS:NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)WIN(W1=FE88%W2=FE88%W3=FE8&#xa;OS:8%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M54ENNSNW7%CC=Y%Q=)&#xa;OS:T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%&#xa;OS:T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164&#xa;OS:%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="792042" lastboot="Thu Feb 24 05:14:32 2022"/>
+<distance value="2"/>
+<tcpsequence index="256" difficulty="Good luck!" values="BB62A98,530E1B4E,97A24DBD,8CB0E48E,BB09F967,78467F64"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="2F357E6C,2F357ED0,2F357F34,2F357F98,2F357FFF,2F358064"/>
+<trace port="143" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="172.50"/>
+<hop ttl="2" ipaddr="192.168.168.129" rtt="172.66"/>
+</trace>
+<times srtt="173728" rttvar="2306" to="182952"/>
+</host>
+<taskbegin task="NSE" time="1646489714"/>
+<taskend task="NSE" time="1646489714"/>
+<taskbegin task="NSE" time="1646489714"/>
+<taskend task="NSE" time="1646489714"/>
+<taskbegin task="NSE" time="1646489714"/>
+<taskend task="NSE" time="1646489714"/>
+<runstats><finished time="1646489714" timestr="Sat Mar  5 09:15:14 2022" summary="Nmap done at Sat Mar  5 09:15:14 2022; 1 IP address (1 host up) scanned in 885.27 seconds" elapsed="885.27" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Thu Mar  3 07:08:21 2022 as: nmap -vv --reason -Pn -T4 -sV -p 49668 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp49668/tcp_49668_rpc_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp49668/xml/tcp_49668_rpc_nmap.xml" 192.168.128.172
+Nmap scan report for 192.168.128.172
+Host is up, received user-set.
+Scanned at 2022-03-03 07:08:34 EST for 19s
+
+PORT      STATE    SERVICE REASON      VERSION
+49668/tcp filtered unknown no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar  3 07:08:53 2022 -- 1 IP address (1 host up) scanned in 33.29 seconds

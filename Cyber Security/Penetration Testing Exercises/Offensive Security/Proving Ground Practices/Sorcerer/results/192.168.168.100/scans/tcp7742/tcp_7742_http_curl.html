@@ -1,0 +1,75 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 05 Mar 2022 16:19:32 GMT
+Content-Type: text/html
+Content-Length: 1219
+Last-Modified: Thu, 24 Sep 2020 19:27:39 GMT
+Connection: keep-alive
+ETag: "5f6cf32b-4c3"
+Accept-Ranges: bytes
+
+<!DOCTYPE html>
+<html>
+<title>SORCERER</title>
+<head>
+<style>
+
+form {
+  border: 3px solid #f1f1f1;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #8B0000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  height: 4px;
+  width: 444px;
+  padding: 10px;
+}
+
+span.password {
+  float: right;
+  padding-top: 16px;
+}
+
+</style>
+</head>
+
+<script>
+function ifLoginAdminFalse() {
+    alert("Invalid Logon");
+}
+</script>
+
+<h1 style="font-family:verdana;">Control Panel</h1>
+
+<div class="container">
+    <label for="username" style="font-family:verdana;"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <label for="password" style="font-family:verdana;"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <button onclick="ifLoginAdminFalse()" type="submit">Login</button>
+</div>
+</center>
+</html>

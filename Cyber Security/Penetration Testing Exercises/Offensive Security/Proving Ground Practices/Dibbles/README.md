@@ -45,7 +45,7 @@ Search & Test for Vulnerabilities `(I)`
 Logging in
 Brute Force `I` 
 - [ ] `admin` : `admin`, `admin`:`password`, `guest`:`guest`, `backup`:`backup`
-- [ ] Same as username (eg. `mario` : `mario`)
+- [ ] Same as username (eg. `benjamin` : `benjamin`)
 - [ ] rockyou.txt
 - [ ] More
 
@@ -59,9 +59,9 @@ Custom ways of Exploitation
 - [ ] Hacktricks
 
 Search & Test for Vulnerabilities `(I)`
-- [ ] Searchsploit
-- [ ] Google
-- [ ] More
+- [x] Searchsploit
+- [x] Google
+- [x] More
 
 ### Drupal
 Understand how it works & Interact  [ ] `(I)`
@@ -129,10 +129,10 @@ Search & Test for Vulnerabilities `(I)`
 **Basic**
 
 Source Code `E`
-- [ ] Find all the files, hidden or not (if possible)
-- [ ] Look through the source code of ALL the files
+- [x] Find all the files, hidden or not (if possible)
+- [x] Look through the source code of ALL the files
     - [ ] Find all Input Fields `-> Input Fields`
-    - [ ] File Uploads `-> File upload`
+    - [x] File Uploads  - None
 
 Directory Enumeration (dirb) `I -> Custom page/ CMS`
 - [x] Sitemap (robots.txt)
@@ -813,6 +813,18 @@ No Updates
 ![](Pasted%20image%2020220121185158.png)
 
 # Exploitation
+
+**Enumeration**
+
+**-5**
+
+That application lets you register! Inspect the traffic carefully.
+
+**Foothold**
+
+**-10**
+
+Hopefully you noticed what kind of application this is... And it literally asks for RCE!
 
 # Privilege Escalation
 

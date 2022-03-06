@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Mar  2 04:56:23 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bunyip/results/192.168.128.153/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bunyip/results/192.168.128.153/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.128.153 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bunyip/results/192.168.128.153/scans/tcp80/tcp_80_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Bunyip/results/192.168.128.153/scans/tcp80/xml/tcp_80_http_nmap.xml&quot; 192.168.128.153" start="1646214983" startstr="Wed Mar  2 04:56:23 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646214984"/>
+<taskend task="NSE" time="1646214984"/>
+<taskbegin task="NSE" time="1646214984"/>
+<taskend task="NSE" time="1646214984"/>
+<taskbegin task="NSE" time="1646214984"/>
+<taskend task="NSE" time="1646214984"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646214984"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646214984"/>
+<taskbegin task="SYN Stealth Scan" time="1646214984"/>
+<taskend task="SYN Stealth Scan" time="1646214984" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646214985"/>
+<taskend task="Service scan" time="1646214991" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646214991"/>
+<taskprogress task="NSE" time="1646215022" percent="98.05" remaining="1" etc="1646215023"/>
+<taskprogress task="NSE" time="1646215052" percent="99.35" remaining="1" etc="1646215052"/>
+<taskprogress task="NSE" time="1646215082" percent="99.67" remaining="1" etc="1646215082"/>
+<taskprogress task="NSE" time="1646215112" percent="99.67" remaining="1" etc="1646215112"/>
+<taskprogress task="NSE" time="1646215142" percent="99.67" remaining="1" etc="1646215142"/>
+<taskprogress task="NSE" time="1646215172" percent="99.67" remaining="1" etc="1646215173"/>
+<taskprogress task="NSE" time="1646215202" percent="99.67" remaining="1" etc="1646215203"/>
+<taskprogress task="NSE" time="1646215232" percent="99.67" remaining="1" etc="1646215233"/>
+<taskprogress task="NSE" time="1646215262" percent="99.67" remaining="1" etc="1646215263"/>
+<taskprogress task="NSE" time="1646215292" percent="99.67" remaining="1" etc="1646215293"/>
+<taskprogress task="NSE" time="1646215322" percent="99.67" remaining="2" etc="1646215323"/>
+<taskprogress task="NSE" time="1646215352" percent="99.67" remaining="2" etc="1646215353"/>
+<taskprogress task="NSE" time="1646215382" percent="99.67" remaining="2" etc="1646215383"/>
+<taskprogress task="NSE" time="1646215412" percent="99.67" remaining="2" etc="1646215413"/>
+<taskprogress task="NSE" time="1646215442" percent="99.67" remaining="2" etc="1646215443"/>
+<taskend task="NSE" time="1646215463"/>
+<taskbegin task="NSE" time="1646215463"/>
+<taskend task="NSE" time="1646215464"/>
+<taskbegin task="NSE" time="1646215464"/>
+<taskend task="NSE" time="1646215464"/>
+<host starttime="1646214984" endtime="1646215464"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.128.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-chrono" output="Request times for /; avg: 737.13ms; min: 558.56ms; max: 940.54ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.128.153&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 36&#xa;    Comment: &#xa;         // if an element is already active, then current element is not active&#xa;    &#xa;    Path: http://192.168.128.153:80/js/codetabs.js&#xa;    Line number: 11&#xa;    Comment: &#xa;         // add event listener for all tab&#xa;    &#xa;    Path: http://192.168.128.153:80/js/codetabs.js&#xa;    Line number: 7&#xa;    Comment: &#xa;        &#xa;        // Turn off ESLint for this file because it&apos;s sent down to users as-is.&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 29&#xa;    Comment: &#xa;        /**&#xa;               * On every call, try to find header right after  &lt;-&#45; next header&#xa;               * the one whose content is on the current screen &lt;-&#45; highlight this&#xa;               */&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 39&#xa;    Comment: &#xa;        /**&#xa;                 * Enter the following check up only when an active nav header is not yet found&#xa;                 * Then, check the bounding rectangle of the next header&#xa;                 * The headers that are scrolled passed will have negative bounding rect top&#xa;                 * So the first one with positive bounding rect top will be the nearest next header&#xa;                 */&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 8&#xa;    Comment: &#xa;        /* eslint-disable */&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 79&#xa;    Comment: &#xa;         // Cache the headings once the page has fully loaded.&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 37&#xa;    Comment: &#xa;         // if no element is already active, then current element is active&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 35&#xa;    Comment: &#xa;         // headings[i] is current element&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 27&#xa;    Comment: &#xa;         // toc nav anchors&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 61&#xa;    Comment: &#xa;        /**&#xa;                 * Stop searching once a first such header is found,&#xa;                 * this makes sure the highlighted header is the most current one&#xa;                 */&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 20&#xa;    Comment: &#xa;         // throttle&#xa;    &#xa;    Path: http://192.168.128.153:80/js/scrollSpy.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /**&#xa;         * Copyright (c) Facebook, Inc. and its affiliates.&#xa;         *&#xa;         * This source code is licensed under the MIT license found in the&#xa;         * LICENSE file in the root directory of this source tree.&#xa;         */&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Wed, 02 Mar 2022 09:56:33 GMT; +1s from local time."><elem key="date">2022-03-02T09:56:33+00:00</elem>
+<elem key="delta">1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /blog/: Blog&#xa;  /help/: Potentially interesting folder&#xa;  /users/: Potentially interesting folder&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.128.153&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.128.153:80/docs/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.128.153:80/facebook/docusaurus/stargazers&#xa;"/><script id="http-favicon" output="Unknown favicon MD5: 338ABBB5EA8D80B9869555ECA253D49D"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-generator" output="Docusaurus"/><script id="http-headers" output="&#xa;  Server: nginx/1.18.0 (Ubuntu)&#xa;  Date: Wed, 02 Mar 2022 09:56:35 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 6984&#xa;  Last-Modified: Mon, 01 Feb 2021 16:49:19 GMT&#xa;  Connection: close&#xa;  ETag: &quot;6018310f-1b48&quot;&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash ce66b4193d7beaccb20da9df73de6444&#xa;Credits query returned unknown hash ce66b4193d7beaccb20da9df73de6444"/><script id="http-referer-checker" output="&#xa;Spidering limited to: maxpagecount=30&#xa;  https://buttons.github.io:443/buttons.js&#xa;"/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; html: 1&#xa;    /css/&#xa;      css: 1&#xa;    /docs/&#xa;      html: 2&#xa;    /docs/doc1/&#xa;      Other: 1&#xa;    /docs/doc4/&#xa;      Other: 1&#xa;    /help/&#xa;      Other: 1&#xa;    /img/&#xa;      ico: 1; png: 1; svg: 6&#xa;    /js/&#xa;      js: 2&#xa;    /users/&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /docs/doc1/&#xa;  Total files found (by extension):&#xa;    Other: 5; css: 1; html: 3; ico: 1; js: 2; png: 1; svg: 6&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Test Site \xC2\xB7 A website for testing"><elem key="title">Test Site \xC2\xB7 A website for testing</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-vuln-cve2011-3192" output="&#xa;  VULNERABLE:&#xa;  Apache byterange filter DoS&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2011-3192  BID:49303&#xa;      The Apache web server is vulnerable to a denial of service attack when numerous&#xa;      overlapping byte ranges are requested.&#xa;    Disclosure date: 2011-08-19&#xa;    References:&#xa;      https://www.tenable.com/plugins/nessus/55976&#xa;      https://www.securityfocus.com/bid/49303&#xa;      https://seclists.org/fulldisclosure/2011/Aug/175&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192&#xa;"><table key="CVE-2011-3192">
+<elem key="title">Apache byterange filter DoS</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2011-3192</elem>
+<elem>BID:49303</elem>
+</table>
+<table key="description">
+<elem>The Apache web server is vulnerable to a denial of service attack when numerous&#xa;overlapping byte ranges are requested.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">08</elem>
+<elem key="year">2011</elem>
+<elem key="day">19</elem>
+</table>
+</table>
+<elem key="disclosure">2011-08-19</elem>
+<table key="refs">
+<elem>https://www.tenable.com/plugins/nessus/55976</elem>
+<elem>https://www.securityfocus.com/bid/49303</elem>
+<elem>https://seclists.org/fulldisclosure/2011/Aug/175</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192</elem>
+</table>
+</table>
+</script><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="195460" rttvar="195460" to="977300"/>
+</host>
+<taskbegin task="NSE" time="1646215464"/>
+<taskend task="NSE" time="1646215464"/>
+<taskbegin task="NSE" time="1646215464"/>
+<taskend task="NSE" time="1646215464"/>
+<taskbegin task="NSE" time="1646215464"/>
+<taskend task="NSE" time="1646215464"/>
+<runstats><finished time="1646215464" timestr="Wed Mar  2 05:04:24 2022" summary="Nmap done at Wed Mar  2 05:04:24 2022; 1 IP address (1 host up) scanned in 481.48 seconds" elapsed="481.48" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,175 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:34:36 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/_full_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/xml/_full_tcp_nmap.xml" 192.168.128.139
+Warning: 192.168.128.139 giving up on port because retransmission cap hit (6).
+adjust_timeouts2: packet supposedly had rtt of -60915 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -60915 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -256994 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -256994 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -171335 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -171335 microseconds.  Ignoring time.
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-03-02 07:34:39 EST for 1026s
+Not shown: 65472 closed ports
+Reason: 65472 resets
+PORT      STATE    SERVICE        REASON         VERSION
+2319/tcp  filtered infolibria     no-response
+2330/tcp  filtered tscchat        no-response
+4771/tcp  filtered unknown        no-response
+5042/tcp  filtered asnaacceler8db no-response
+5093/tcp  filtered sentinel-lm    no-response
+5670/tcp  filtered filemq         no-response
+5712/tcp  filtered unknown        no-response
+5730/tcp  filtered unieng         no-response
+6426/tcp  filtered unknown        no-response
+8080/tcp  open     http           syn-ack ttl 63 nginx 1.14.1
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.1
+|_http-title: Identity by HTML5 UP
+10277/tcp filtered unknown        no-response
+10592/tcp filtered unknown        no-response
+11467/tcp filtered unknown        no-response
+12842/tcp filtered unknown        no-response
+13878/tcp filtered unknown        no-response
+14552/tcp filtered unknown        no-response
+15659/tcp filtered unknown        no-response
+16449/tcp filtered unknown        no-response
+17204/tcp filtered unknown        no-response
+17567/tcp filtered unknown        no-response
+17748/tcp filtered unknown        no-response
+18080/tcp open     http           syn-ack ttl 63 Apache httpd 2.4.37 ((centos))
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.37 (centos)
+|_http-title: CentOS \xE6\x8F\x90\xE4\xBE\x9B\xE7\x9A\x84 Apache HTTP \xE6\x9C\x8D\xE5\x8A\xA1\xE5\x99\xA8\xE6\xB5\x8B\xE8\xAF\x95\xE9\xA1\xB5
+18276/tcp filtered unknown        no-response
+18336/tcp filtered unknown        no-response
+18898/tcp filtered unknown        no-response
+22289/tcp filtered wnn6_Cn        no-response
+22510/tcp filtered unknown        no-response
+26745/tcp filtered unknown        no-response
+26748/tcp filtered unknown        no-response
+28453/tcp filtered unknown        no-response
+29351/tcp filtered unknown        no-response
+30330/tcp open     http           syn-ack ttl 63 Node.js Express framework
+|_http-cors: HEAD GET POST PUT PATCH
+|_http-favicon: Unknown favicon MD5: BC550ED3CF565EB8D826B8A5840A6527
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+31943/tcp filtered unknown        no-response
+33047/tcp open     http           syn-ack ttl 63 Node.js Express framework
+|_http-cors: GET POST PUT DELETE PATCH
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+33659/tcp filtered unknown        no-response
+34494/tcp filtered unknown        no-response
+35045/tcp open     unknown        syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, DistCCD, Hello, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, Radmin, SIPOptions, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+35932/tcp filtered unknown        no-response
+38636/tcp filtered unknown        no-response
+42022/tcp open     ssh            syn-ack ttl 63 OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 cc:21:51:f2:c6:2a:ad:d6:ca:07:04:de:70:5f:fa:13 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4sO3kdviVPNeuwbrKWi5q+4eElUHgjIPPgbtcbGXSx1FIM3ptYjJPpGSP1wVEcZL1iKrMx+we3j0u+UX1f1Rg9o0KsUt/XcqgFmEAwEoixwmZ/RIN9zNYQ/GZsmrOgMFz4EqQjB4k7XRKljaKbZoMDvWxfGOPMdyWjYZWGJmXoiykxELLE76ZefH03ZakIKLNhAfDoiAaK8vy1FlG9ubiZFQDmu8oEkeZuXolDWivfO9dEMILdBw0V6+azll+TRVRK35cvsh9J9u8XE9d1ZKu5iPutur2+F2bMXP3xSXP8mVcv+ILpccmxrnMog6LePRil6XS5/07XpW3igtH2BRljCrnIus0GNZ+sHH7yQ/uFy8YB+PEHYFgKqJnV3Ef6x7qLj+yh/YodL509roXup+DNpyB6UW1txnH3oShyK2ueiZ1YKPqzugxGCLOTovDBiGNtKfXxu1zFabLtUsAc+zlqzSLWcfqh/rYw6tHHZSWrx5rGMNeFJ+rx1gTiuuUSEE=
+|   256 05:e4:90:d2:00:2b:9d:14:e3:9f:44:68:d2:8e:bc:dc (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKs+nIUzvQSjDApNdFM1xkn0nIvh1G2k9p7O2yk0N3I+4VqsHwlbG8a+jM50Ep2WfccT6l1PmM6LxUuwzarQs1w=
+|   256 ca:80:49:73:f0:c8:05:ae:bd:2b:42:37:1d:13:e0:71 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOLjHYcabXSVangls2dlfJbJlCemLtrImilhDAOOXQYl
+42526/tcp filtered unknown        no-response
+43043/tcp filtered unknown        no-response
+46791/tcp filtered unknown        no-response
+47511/tcp filtered unknown        no-response
+49230/tcp filtered unknown        no-response
+49296/tcp filtered unknown        no-response
+49710/tcp filtered unknown        no-response
+50400/tcp open     http           syn-ack ttl 63 Node.js Express framework
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Error
+50473/tcp filtered unknown        no-response
+50975/tcp filtered unknown        no-response
+51574/tcp filtered unknown        no-response
+51671/tcp filtered unknown        no-response
+53472/tcp filtered unknown        no-response
+53585/tcp filtered unknown        no-response
+55440/tcp filtered unknown        no-response
+55515/tcp filtered unknown        no-response
+56224/tcp filtered unknown        no-response
+56832/tcp filtered unknown        no-response
+57093/tcp filtered unknown        no-response
+58753/tcp filtered unknown        no-response
+63658/tcp filtered unknown        no-response
+63838/tcp filtered unknown        no-response
+64049/tcp filtered unknown        no-response
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port35045-TCP:V=7.91%I=9%D=3/2%Time=621F67F7%P=x86_64-pc-linux-gnu%r(RT
+SF:SPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clos
+SF:e\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSStatusRequestTCP
+SF:,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n
+SF:")%r(Hello,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnectio
+SF:n:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCookie,2F,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TLSS
+SF:essionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clos
+SF:e\r\n\r\n")%r(SSLv23SessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nConnection:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Probe
+SF:,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n
+SF:")%r(LPDString,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x2
+SF:0close\r\n\r\n")%r(LDAPSearchReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(LDAPBindReq,2F,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SIPOptions,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(LAN
+SF:Desk-RC,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\
+SF:r\n\r\n")%r(TerminalServer,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:nnection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nConnection:\x20close\r\n\r\n")%r(NotesRPC,2F,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DistCCD,2F,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(JavaRMI
+SF:,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n
+SF:")%r(Radmin,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20cl
+SF:ose\r\n\r\n");
+OS fingerprint not ideal because: maxTimingRatio (1.468000e+00) is greater than 1.4
+Aggressive OS guesses: Linux 3.10 - 3.12 (94%), Linux 4.4 (94%), Linux 4.9 (93%), Linux 3.10 - 3.16 (92%), Linux 4.0 (91%), Linux 3.11 - 4.1 (91%), Linux 3.10 (91%), Linux 2.6.32 (91%), Linux 2.6.39 (91%), Linux 3.4 (91%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=3/2%OT=8080%CT=1%CU=41556%PV=Y%DS=2%DC=T%G=N%TM=621F6861%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%T=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T5(R=N)
+T6(R=N)
+T7(R=N)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 35.248 days (since Wed Jan 26 01:55:02 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT       ADDRESS
+1   201.85 ms 192.168.49.1
+2   201.89 ms 192.168.128.139
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:51:46 2022 -- 1 IP address (1 host up) scanned in 1030.23 seconds

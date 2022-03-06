@@ -1,0 +1,44 @@
+WhatWeb report for http://192.168.128.139:8080
+Status    : 200 OK
+Title     : Identity by HTML5 UP
+IP        : 192.168.128.139
+Country   : RESERVED, ZZ
+
+Summary   : nginx[1.14.1], Script, HTML5, HTTPServer[nginx/1.14.1]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : nginx/1.14.1 (from server string)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.14.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.14.1
+	Date: Wed, 02 Mar 2022 12:35:25 GMT
+	Content-Type: text/html
+	Content-Length: 3032
+	Last-Modified: Tue, 01 Dec 2020 00:22:51 GMT
+	Connection: close
+	ETag: "5fc58cdb-bd8"
+	Accept-Ranges: bytes
+
+

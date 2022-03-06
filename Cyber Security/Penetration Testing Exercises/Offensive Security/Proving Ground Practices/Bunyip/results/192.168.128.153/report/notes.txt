@@ -1,0 +1,16 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] mysql found on tcp/3306.
+
+
+
+[*] http found on tcp/8000.
+
+
+

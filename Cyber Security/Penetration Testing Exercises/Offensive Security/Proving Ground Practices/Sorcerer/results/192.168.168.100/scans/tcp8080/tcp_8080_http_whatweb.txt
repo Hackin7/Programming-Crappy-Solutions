@@ -1,0 +1,21 @@
+WhatWeb report for http://192.168.168.100:8080
+Status    : 200 OK
+Title     : Apache Tomcat/7.0.4
+IP        : 192.168.168.100
+Country   : RESERVED, ZZ
+
+Summary   : HTML5
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+HTTP Headers:
+	HTTP/1.1 200
+	Content-Type: text/html;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 05 Mar 2022 16:05:33 GMT
+	Connection: close
+
+

@@ -1,0 +1,28 @@
+[*] http found on tcp/8080.
+
+
+
+[*] http found on tcp/18080.
+
+
+
+[*] http found on tcp/30330.
+
+
+
+[*] http found on tcp/33047.
+
+
+
+[*] unknown found on tcp/35045.
+
+
+
+[*] ssh found on tcp/42022.
+
+
+
+[*] http found on tcp/50400.
+
+
+

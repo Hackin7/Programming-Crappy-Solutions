@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Mar  2 07:34:36 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/xml/_full_tcp_nmap.xml&quot; 192.168.128.139 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/xml/_full_tcp_nmap.xml&quot; 192.168.128.139" start="1646224476" startstr="Wed Mar  2 07:34:36 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646224478"/>
+<taskend task="NSE" time="1646224478"/>
+<taskbegin task="NSE" time="1646224478"/>
+<taskend task="NSE" time="1646224478"/>
+<taskbegin task="NSE" time="1646224478"/>
+<taskend task="NSE" time="1646224478"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646224478"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646224479"/>
+<taskbegin task="SYN Stealth Scan" time="1646224479"/>
+<taskprogress task="SYN Stealth Scan" time="1646224510" percent="4.91" remaining="601" etc="1646225111"/>
+<taskprogress task="SYN Stealth Scan" time="1646224540" percent="9.88" remaining="557" etc="1646225096"/>
+<taskprogress task="SYN Stealth Scan" time="1646224570" percent="14.79" remaining="525" etc="1646225094"/>
+<taskprogress task="SYN Stealth Scan" time="1646224624" percent="20.69" remaining="556" etc="1646225180"/>
+<taskprogress task="SYN Stealth Scan" time="1646224657" percent="25.47" remaining="521" etc="1646225178"/>
+<taskprogress task="SYN Stealth Scan" time="1646224690" percent="30.38" remaining="484" etc="1646225174"/>
+<taskprogress task="SYN Stealth Scan" time="1646224723" percent="35.36" remaining="447" etc="1646225169"/>
+<taskprogress task="SYN Stealth Scan" time="1646224840" percent="46.85" remaining="410" etc="1646225249"/>
+<taskprogress task="SYN Stealth Scan" time="1646224897" percent="53.06" remaining="370" etc="1646225267"/>
+<taskprogress task="SYN Stealth Scan" time="1646224954" percent="59.13" remaining="329" etc="1646225282"/>
+<taskprogress task="SYN Stealth Scan" time="1646225008" percent="64.81" remaining="288" etc="1646225295"/>
+<taskprogress task="SYN Stealth Scan" time="1646225071" percent="70.75" remaining="245" etc="1646225316"/>
+<taskprogress task="SYN Stealth Scan" time="1646225134" percent="76.48" remaining="202" etc="1646225335"/>
+<taskprogress task="SYN Stealth Scan" time="1646225182" percent="81.73" remaining="158" etc="1646225339"/>
+<taskprogress task="SYN Stealth Scan" time="1646225230" percent="86.87" remaining="114" etc="1646225343"/>
+<taskprogress task="SYN Stealth Scan" time="1646225284" percent="92.33" remaining="67" etc="1646225351"/>
+<taskend task="SYN Stealth Scan" time="1646225377" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1646225377"/>
+<taskend task="Service scan" time="1646225464" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1646225495"/>
+<taskend task="Traceroute" time="1646225495"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1646225495"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1646225496"/>
+<taskbegin task="NSE" time="1646225496"/>
+<taskend task="NSE" time="1646225504"/>
+<taskbegin task="NSE" time="1646225504"/>
+<taskend task="NSE" time="1646225505"/>
+<taskbegin task="NSE" time="1646225505"/>
+<taskend task="NSE" time="1646225505"/>
+<host starttime="1646224479" endtime="1646225505"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.128.139" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65472">
+<extrareasons reason="resets" count="65472"/>
+</extraports>
+<port protocol="tcp" portid="2319"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="infolibria" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2330"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="tscchat" method="table" conf="3"/></port>
+<port protocol="tcp" portid="4771"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5042"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="asnaacceler8db" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5093"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sentinel-lm" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5670"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="filemq" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5712"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="5730"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unieng" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6426"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.1</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.14.1"><elem>nginx/1.14.1</elem>
+</script><script id="http-title" output="Identity by HTML5 UP"><elem key="title">Identity by HTML5 UP</elem>
+</script></port>
+<port protocol="tcp" portid="10277"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="10592"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="11467"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="12842"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="13878"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="14552"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="15659"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="16449"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="17204"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="17567"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="17748"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="18080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(centos)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.37 (centos)"><elem>Apache/2.4.37 (centos)</elem>
+</script><script id="http-title" output="CentOS \xE6\x8F\x90\xE4\xBE\x9B\xE7\x9A\x84 Apache HTTP \xE6\x9C\x8D\xE5\x8A\xA1\xE5\x99\xA8\xE6\xB5\x8B\xE8\xAF\x95\xE9\xA1\xB5"><elem key="title">CentOS \xE6\x8F\x90\xE4\xBE\x9B\xE7\x9A\x84 Apache HTTP \xE6\x9C\x8D\xE5\x8A\xA1\xE5\x99\xA8\xE6\xB5\x8B\xE8\xAF\x95\xE9\xA1\xB5</elem>
+</script></port>
+<port protocol="tcp" portid="18276"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="18336"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="18898"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22289"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="wnn6_Cn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22510"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="26745"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="26748"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28453"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="29351"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="30330"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-cors" output="HEAD GET POST PUT PATCH"/><script id="http-favicon" output="Unknown favicon MD5: BC550ED3CF565EB8D826B8A5840A6527"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."><elem key="title"></elem>
+</script></port>
+<port protocol="tcp" portid="31943"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="33047"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-cors" output="GET POST PUT DELETE PATCH"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+<port protocol="tcp" portid="33659"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="34494"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="35045"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port35045-TCP:V=7.91%I=9%D=3/2%Time=621F67F7%P=x86_64-pc-linux-gnu%r(RTSPRequest,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(RPCCheck,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSStatusRequestTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Hello,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Help,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SSLSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TerminalServerCookie,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TLSSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SSLv23SessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Kerberos,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SMBProgNeg,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(X11Probe,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LPDString,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LDAPSearchReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LDAPBindReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SIPOptions,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(LANDesk-RC,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TerminalServer,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(NCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(NotesRPC,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DistCCD,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(JavaRMI,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Radmin,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, DistCCD, Hello, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, Radmin, SIPOptions, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, X11Probe: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, DistCCD, Hello, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, Radmin, SIPOptions, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, X11Probe">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close</elem>
+</script></port>
+<port protocol="tcp" portid="35932"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="38636"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="42022"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.0</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 cc:21:51:f2:c6:2a:ad:d6:ca:07:04:de:70:5f:fa:13 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4sO3kdviVPNeuwbrKWi5q+4eElUHgjIPPgbtcbGXSx1FIM3ptYjJPpGSP1wVEcZL1iKrMx+we3j0u+UX1f1Rg9o0KsUt/XcqgFmEAwEoixwmZ/RIN9zNYQ/GZsmrOgMFz4EqQjB4k7XRKljaKbZoMDvWxfGOPMdyWjYZWGJmXoiykxELLE76ZefH03ZakIKLNhAfDoiAaK8vy1FlG9ubiZFQDmu8oEkeZuXolDWivfO9dEMILdBw0V6+azll+TRVRK35cvsh9J9u8XE9d1ZKu5iPutur2+F2bMXP3xSXP8mVcv+ILpccmxrnMog6LePRil6XS5/07XpW3igtH2BRljCrnIus0GNZ+sHH7yQ/uFy8YB+PEHYFgKqJnV3Ef6x7qLj+yh/YodL509roXup+DNpyB6UW1txnH3oShyK2ueiZ1YKPqzugxGCLOTovDBiGNtKfXxu1zFabLtUsAc+zlqzSLWcfqh/rYw6tHHZSWrx5rGMNeFJ+rx1gTiuuUSEE=&#xa;  256 05:e4:90:d2:00:2b:9d:14:e3:9f:44:68:d2:8e:bc:dc (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKs+nIUzvQSjDApNdFM1xkn0nIvh1G2k9p7O2yk0N3I+4VqsHwlbG8a+jM50Ep2WfccT6l1PmM6LxUuwzarQs1w=&#xa;  256 ca:80:49:73:f0:c8:05:ae:bd:2b:42:37:1d:13:e0:71 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOLjHYcabXSVangls2dlfJbJlCemLtrImilhDAOOXQYl"><table>
+<elem key="fingerprint">cc2151f2c62aadd6ca0704de705ffa13</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC4sO3kdviVPNeuwbrKWi5q+4eElUHgjIPPgbtcbGXSx1FIM3ptYjJPpGSP1wVEcZL1iKrMx+we3j0u+UX1f1Rg9o0KsUt/XcqgFmEAwEoixwmZ/RIN9zNYQ/GZsmrOgMFz4EqQjB4k7XRKljaKbZoMDvWxfGOPMdyWjYZWGJmXoiykxELLE76ZefH03ZakIKLNhAfDoiAaK8vy1FlG9ubiZFQDmu8oEkeZuXolDWivfO9dEMILdBw0V6+azll+TRVRK35cvsh9J9u8XE9d1ZKu5iPutur2+F2bMXP3xSXP8mVcv+ILpccmxrnMog6LePRil6XS5/07XpW3igtH2BRljCrnIus0GNZ+sHH7yQ/uFy8YB+PEHYFgKqJnV3Ef6x7qLj+yh/YodL509roXup+DNpyB6UW1txnH3oShyK2ueiZ1YKPqzugxGCLOTovDBiGNtKfXxu1zFabLtUsAc+zlqzSLWcfqh/rYw6tHHZSWrx5rGMNeFJ+rx1gTiuuUSEE=</elem>
+</table>
+<table>
+<elem key="fingerprint">05e490d2002b9d14e39f4468d28ebcdc</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKs+nIUzvQSjDApNdFM1xkn0nIvh1G2k9p7O2yk0N3I+4VqsHwlbG8a+jM50Ep2WfccT6l1PmM6LxUuwzarQs1w=</elem>
+</table>
+<table>
+<elem key="fingerprint">ca804973f0c805aebd2b42371d13e071</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOLjHYcabXSVangls2dlfJbJlCemLtrImilhDAOOXQYl</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="42526"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="43043"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="46791"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="47511"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49230"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49296"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49710"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="50400"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-cors" output="HEAD GET POST PUT DELETE PATCH"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Error"><elem key="title">Error</elem>
+</script></port>
+<port protocol="tcp" portid="50473"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="50975"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51574"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="51671"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="53472"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="53585"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="55440"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="55515"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="56224"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="56832"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="57093"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="58753"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="63658"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="63838"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="64049"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="8080"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41556"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="94" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="94" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="93" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="92" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.0" accuracy="91" line="67026">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.11 - 4.1" accuracy="91" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="91" line="63251">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54319">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58229">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="91" line="65500">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=3/2%OT=8080%CT=1%CU=41556%PV=Y%DS=2%DC=T%G=N%TM=621F6861%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%T=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T5(R=N)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="3045403" lastboot="Wed Jan 26 01:55:02 2022"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="59AFAEB9,8C11CCF,8E6CB8C0,24C5F9D6,F58BB930,F39C0C2C"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="B584F919,B584F97A,B584FA4B,B584FAC3,B584FB96,B584FBEF"/>
+<trace port="587" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="201.85"/>
+<hop ttl="2" ipaddr="192.168.128.139" rtt="201.89"/>
+</trace>
+<times srtt="189315" rttvar="23017" to="281383"/>
+</host>
+<taskbegin task="NSE" time="1646225506"/>
+<taskend task="NSE" time="1646225506"/>
+<taskbegin task="NSE" time="1646225506"/>
+<taskend task="NSE" time="1646225506"/>
+<taskbegin task="NSE" time="1646225506"/>
+<taskend task="NSE" time="1646225506"/>
+<runstats><finished time="1646225506" timestr="Wed Mar  2 07:51:46 2022" summary="Nmap done at Wed Mar  2 07:51:46 2022; 1 IP address (1 host up) scanned in 1030.23 seconds" elapsed="1030.23" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

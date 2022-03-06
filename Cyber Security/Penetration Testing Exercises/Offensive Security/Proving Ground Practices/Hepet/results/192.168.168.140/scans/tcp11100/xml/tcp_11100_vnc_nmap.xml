@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 12:22:04 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 11100 &quot;-&#45;script=banner,(vnc* or realvnc* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp11100/tcp_11100_vnc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp11100/xml/tcp_11100_vnc_nmap.xml&quot; 192.168.168.140 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 11100 &quot;-&#45;script=banner,(vnc* or realvnc* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp11100/tcp_11100_vnc_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp11100/xml/tcp_11100_vnc_nmap.xml&quot; 192.168.168.140" start="1646500924" startstr="Sat Mar  5 12:22:04 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="11100"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646500926"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646500926"/>
+<taskbegin task="SYN Stealth Scan" time="1646500926"/>
+<taskend task="SYN Stealth Scan" time="1646500926" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646500927"/>
+<taskend task="Service scan" time="1646500927" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646500927"/>
+<taskend task="NSE" time="1646500928"/>
+<taskbegin task="NSE" time="1646500928"/>
+<taskend task="NSE" time="1646500929"/>
+<taskbegin task="NSE" time="1646500929"/>
+<taskend task="NSE" time="1646500929"/>
+<host starttime="1646500926" endtime="1646500929"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="11100"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="banner" output="RFB 003.008"/><script id="sslv2-drown" output="&#xa;"></script><script id="vnc-info" output="&#xa;  Protocol version: 3.8&#xa;  Security types: &#xa;    Unknown security type (40)"><elem key="Protocol version">3.8</elem>
+<table key="Security types">
+<table>
+<elem key="name">Unknown security type</elem>
+<elem key="type">40</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="170911" rttvar="170911" to="854555"/>
+</host>
+<taskbegin task="NSE" time="1646500929"/>
+<taskend task="NSE" time="1646500929"/>
+<taskbegin task="NSE" time="1646500929"/>
+<taskend task="NSE" time="1646500929"/>
+<taskbegin task="NSE" time="1646500929"/>
+<taskend task="NSE" time="1646500929"/>
+<runstats><finished time="1646500929" timestr="Sat Mar  5 12:22:09 2022" summary="Nmap done at Sat Mar  5 12:22:09 2022; 1 IP address (1 host up) scanned in 5.94 seconds" elapsed="5.94" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

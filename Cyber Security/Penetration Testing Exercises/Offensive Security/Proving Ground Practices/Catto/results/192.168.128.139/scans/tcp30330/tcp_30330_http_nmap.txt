@@ -1,0 +1,555 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:51:47 2022 as: nmap -vv --reason -Pn -T4 -sV -p 30330 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp30330/tcp_30330_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp30330/xml/tcp_30330_http_nmap.xml" 192.168.128.139
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-03-02 07:51:52 EST for 233s
+
+PORT      STATE SERVICE REASON         VERSION
+30330/tcp open  http    syn-ack ttl 63 Node.js Express framework
+|_http-chrono: Request times for /; avg: 907.49ms; min: 487.59ms; max: 1638.06ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.128.139
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1228
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 866
+|     Comment: 
+|         /*! no exports provided */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1080
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 892
+|     Comment: 
+|         
+|         
+|         
+|         
+|          */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1960
+|     Comment: 
+|         
+|         // This works in non-strict mode
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1271
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1125
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1952
+|     Comment: 
+|         /*!***********************************!*\
+|           !*** (webpack)/buildin/global.js ***!
+|           \***********************************/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1273
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1070
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/socket.io/socket.io.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Socket.IO v2.3.0
+|          * (c) 2014-2019 Guillermo Rauch
+|          * Released under the MIT License.
+|          */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1199
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1907
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1945
+|     Comment: 
+|         /* WEBPACK VAR INJECTION */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1142
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 880
+|     Comment: 
+|         /*! event-source-polyfill */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1947
+|     Comment: 
+|         /*! ./../../webpack/buildin/global.js */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 466
+|     Comment: 
+|         /** @type {TODO} */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1158
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 919
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1856
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1185
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1124
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1290
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1256
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1348
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 947
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 863
+|     Comment: 
+|         /*!**********************************!*\
+|           !*** ./.cache/polyfill-entry.js ***!
+|           \**********************************/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 946
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 889
+|     Comment: 
+|         /*! no static exports found */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1462
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1432
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 948
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 871
+|     Comment: 
+|         /*! gatsby-legacy-polyfills */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 886
+|     Comment: 
+|         /*!***************************************************************!*\
+|           !*** ./node_modules/event-source-polyfill/src/eventsource.js ***!
+|           \***************************************************************/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 871
+|     Comment: 
+|         /* harmony import */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1364
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1152
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1911
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1309
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1313
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1975
+|     Comment: 
+|         
+|         // easier to handle this case. if(!global) { ...}
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1973
+|     Comment: 
+|         
+|         // g can still be undefined, but nothing to do about it...
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1227
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1274
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 949
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1912
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/socket.io/socket.io.js
+|     Line number: 7
+|     Comment: 
+|         /*")}catch(o){}"withCredentials"in e&&(e.withCredentials=this.withCredentials),this.requestTimeout&&(e.timeout=this.requestTimeout),this.hasXDR()?(e.onload=function(){n.onLoad()},e.onerror=function(){n.onError(e.responseText)}):e.onreadystatechange=function(){if(2===e.readyState)try{var t=e.getResponseHeader("Content-Type");(n.supportsBinary&&"application/octet-stream"===t||"application/octet-stream; charset=UTF-8"===t)&&(e.responseType="arraybuffer")}catch(r){}4===e.readyState&&(200===e.status||1223===e.status?n.onLoad():setTimeout(function(){n.onError("number"==typeof e.status?e.status:0)},0))},h("xhr data %s",this.data),e.send(this.data)}catch(o){return void setTimeout(function(){n.onError(o)},0)}"undefined"!=typeof document&&(this.index=i.requestsCount++,i.requests[this.index]=this)},i.prototype.onSuccess=function(){this.emit("success"),this.cleanup()},i.prototype.onData=function(t){this.emit("data",t),this.onSuccess()},i.prototype.onError=function(t){this.emit("error",t),this.cleanup(!0)},i.prototype.cleanup=function(t){if("undefined"!=typeof this.xhr&&null!==this.xhr){if(this.hasXDR()?this.xhr.onload=this.xhr.onerror=r:this.xhr.onreadystatechange=r,t)try{this.xhr.abort()}catch(e){}"undefined"!=typeof document&&delete i.requests[this.index],this.xhr=null}},i.prototype.onLoad=function(){var t;try{var e;try{e=this.xhr.getResponseHeader("Content-Type")}catch(n){}t="application/octet-stream"===e||"application/octet-stream; charset=UTF-8"===e?this.xhr.response||this.xhr.responseText:this.xhr.responseText}catch(n){this.onError(n)}null!=t&&this.onData(t)},i.prototype.hasXDR=function(){return"undefined"!=typeof XDomainRequest&&!this.xs&&this.enablesXDR},i.prototype.abort=function(){this.cleanup()},i.requestsCount=0,i.requests={},"undefined"!=typeof document)if("function"==typeof attachEvent)attachEvent("onunload",s);else if("function"==typeof addEventListener){var f="onpagehide"in self?"pagehide":"unload";addEventListener(f,s,!1)}},function(t,e,n){function r(t){var e=t&&t.forceBase64;p&&!e||(this.supportsBinary=!1),o.call(this,t)}var o=n(23),i=n(32),s=n(24),a=n(33),c=n(34),u=n(3)("engine.io-client:polling");t.exports=r;var p=function(){var t=n(19),e=new t({xdomain:!1});return null!=e.responseType}();a(r,o),r.prototype.name="polling",r.prototype.doOpen=function(){this.poll()},r.prototype.pause=function(t){function e(){u("paused"),n.readyState="paused",t()}var n=this;if(this.readyState="pausing",this.polling||!this.writable){var r=0;this.polling&&(u("we are currently polling - waiting to pause"),r++,this.once("pollComplete",function(){u("pre-pause polling complete"),--r||e()})),this.writable||(u("we are currently writing - waiting to pause"),r++,this.once("drain",function(){u("pre-pause writing complete"),--r||e()}))}else e()},r.prototype.poll=function(){u("polling"),this.polling=!0,this.doPoll(),this.emit("poll")},r.prototype.onData=function(t){var e=this;u("polling got data %s",t);var n=function(t,n,r){return"opening"===e.readyState&&e.onOpen(),"close"===t.type?(e.onClose(),!1):void e.onPacket(t)};s.decodePayload(t,this.socket.binaryType,n),"closed"!==this.readyState&&(this.polling=!1,this.emit("pollComplete"),"open"===this.readyState?this.poll():u('ignoring poll - transport state "%s"',this.readyState))},r.prototype.doClose=function(){function t(){u("writing close packet"),e.write([{type:"close"}])}var e=this;"open"===this.readyState?(u("transport open - closing"),t()):(u("transport not open - deferring close"),this.once("open",t))},r.prototype.write=function(t){var e=this;this.writable=!1;var n=function(){e.writable=!0,e.emit("drain")};s.encodePayload(t,this.supportsBinary,function(t){e.doWrite(t,n)})},r.prototype.uri=function(){var t=this.query||{},e=this.secure?"https":"http",n="";!1!==this.timestampRequests&&(t[this.timestampParam]=c()),this.supportsBinary||t.sid||(t.b64=1),t=i.encode(t),this.port&&("https"===e&&443!==Number(this.port)||"http"===e&&80!==Number(this.port))&&(n=":"+this.port),t.length&&(t="?"+t);var r=this.hostname.indexOf(":")!==-1;return e+"://"+(r?"["+this.hostname+"]":this.hostname)+n+this.path+t}},function(t,e,n){function r(t){this.path=t.path,this.hostname=t.hostname,this.port=t.port,this.secure=t.secure,this.query=t.query,this.timestampParam=t.timestampParam,this.timestampRequests=t.timestampRequests,this.readyState="",this.agent=t.agent||!1,this.socket=t.socket,this.enablesXDR=t.enablesXDR,this.withCredentials=t.withCredentials,this.pfx=t.pfx,this.key=t.key,this.passphrase=t.passphrase,this.cert=t.cert,this.ca=t.ca,this.ciphers=t.ciphers,this.rejectUnauthorized=t.rejectUnauthorized,this.forceNode=t.forceNode,this.isReactNative=t.isReactNative,this.extraHeaders=t.extraHeaders,this.localAddress=t.localAddress}var o=n(24),i=n(11);t.exports=r,i(r.prototype),r.prototype.onError=function(t,e){var n=new Error(t);return n.type="TransportError",n.description=e,this.emit("error",n),this},r.prototype.open=function(){return"closed"!==this.readyState&&""!==this.readyState||(this.readyState="opening",this.doOpen()),this},r.prototype.close=function(){return"opening"!==this.readyState&&"open"!==this.readyState||(this.doClose(),this.onClose()),this},r.prototype.send=function(t){if("open"!==this.readyState)throw new Error("Transport not open");this.write(t)},r.prototype.onOpen=function(){this.readyState="open",this.writable=!0,this.emit("open")},r.prototype.onData=function(t){var e=o.decodePacket(t,this.socket.binaryType);this.onPacket(e)},r.prototype.onPacket=function(t){this.emit("packet",t)},r.prototype.onClose=function(){this.readyState="closed",this.emit("close")}},function(t,e,n){function r(t,n){var r="b"+e.packets[t.type]+t.data.data;return n(r)}function o(t,n,r){if(!n)return e.encodeBase64Packet(t,r);var o=t.data,i=new Uint8Array(o),s=new Uint8Array(1+o.byteLength);s[0]=v[t.type];for(var a=0;a<i.length;a++)s[a+1]=i[a];return r(s.buffer)}function i(t,n,r){if(!n)return e.encodeBase64Packet(t,r);var o=new FileReader;return o.onload=function(){e.encodePacket({type:t.type,data:o.result},n,!0,r)},o.readAsArrayBuffer(t.data)}function s(t,n,r){if(!n)return e.encodeBase64Packet(t,r);if(g)return i(t,n,r);var o=new Uint8Array(1);o[0]=v[t.type];var s=new w([o.buffer,t.data]);return r(s)}function a(t){try{t=d.decode(t,{strict:!1})}catch(e){return!1}return t}function c(t,e,n){for(var r=new Array(t.length),o=l(t.length,n),i=function(t,n,o){e(n,function(e,n){r[t]=n,o(e,r)})},s=0;s<t.length;s++)i(s,t[s],o)}var u,p=n(25),h=n(26),f=n(27),l=n(28),d=n(29);"undefined"!=typeof ArrayBuffer&&(u=n(30));var y="undefined"!=typeof navigator&&/Android/i.test(navigator.userAgent),m="undefined"!=typeof navigator&&/PhantomJS/i.test(navigator.userAgent),g=y||m;e.protocol=3;var v=e.packets={open:0,close:1,ping:2,pong:3,message:4,upgrade:5,noop:6},b=p(v),C={type:"error",data:"parser error"},w=n(31);e.encodePacket=function(t,e,n,i){"function"==typeof e&&(i=e,e=!1),"function"==typeof n&&(i=n,n=null);var a=void 0===t.data?void 0:t.data.buffer||t.data;if("undefined"!=typeof ArrayBuffer&&a instanceof ArrayBuffer)return o(t,e,i);if("undefined"!=typeof w&&a instanceof w)return s(t,e,i);if(a&&a.base64)return r(t,i);var c=v[t.type];return void 0!==t.data&&(c+=n?d.encode(String(t.data),{strict:!1}):String(t.data)),i(""+c)},e.encodeBase64Packet=function(t,n){var r="b"+e.packets[t.type];if("undefined"!=typeof w&&t.data instanceof w){var o=new FileReader;return o.onload=function(){var t=o.result.split(",")[1];n(r+t)},o.readAsDataURL(t.data)}var i;try{i=String.fromCharCode.apply(null,new Uint8Array(t.data))}catch(s){for(var a=new Uint8Array(t.data),c=new Array(a.length),u=0;u<a.length;u++)c[u]=a[u];i=String.fromCharCode.apply(null,c)}return r+=btoa(i),n(r)},e.decodePacket=function(t,n,r){if(void 0===t)return C;if("string"==typeof t){if("b"===t.charAt(0))return e.decodeBase64Packet(t.substr(1),n);if(r&&(t=a(t),t===!1))return C;var o=t.charAt(0);return Number(o)==o&&b[o]?t.length>1?{type:b[o],data:t.substring(1)}:{type:b[o]}:C}var i=new Uint8Array(t),o=i[0],s=f(t,1);return w&&"blob"===n&&(s=new w([s])),{type:b[o],data:s}},e.decodeBase64Packet=function(t,e){var n=b[t.charAt(0)];if(!u)return{type:n,data:{base64:!0,data:t.substr(1)}};var r=u.decode(t.substr(1));return"blob"===e&&w&&(r=new w([r])),{type:n,data:r}},e.encodePayload=function(t,n,r){function o(t){return t.length+":"+t}function i(t,r){e.encodePacket(t,!!s&&n,!1,function(t){r(null,o(t))})}"function"==typeof n&&(r=n,n=null);var s=h(t);return n&&s?w&&!g?e.encodePayloadAsBlob(t,r):e.encodePayloadAsArrayBuffer(t,r):t.length?void c(t,i,function(t,e){return r(e.join(""))}):r("0:")},e.decodePayload=function(t,n,r){if("string"!=typeof t)return e.decodePayloadAsBinary(t,n,r);"function"==typeof n&&(r=n,n=null);var o;if(""===t)return r(C,0,1);for(var i,s,a="",c=0,u=t.length;c<u;c++){var p=t.charAt(c);if(":"===p){if(""===a||a!=(i=Number(a)))return r(C,0,1);if(s=t.substr(c+1,i),a!=s.length)return r(C,0,1);if(s.length){if(o=e.decodePacket(s,n,!1),C.type===o.type&&C.data===o.data)return r(C,0,1);var h=r(o,c+i,u);if(!1===h)return}c+=i,a=""}else a+=p}return""!==a?r(C,0,1):void 0},e.encodePayloadAsArrayBuffer=function(t,n){function r(t,n){e.encodePacket(t,!0,!0,function(t){return n(null,t)})}return t.length?void c(t,r,function(t,e){var r=e.reduce(function(t,e){var n;return n="string"==typeof e?e.length:e.byteLength,t+n.toString().length+n+2},0),o=new Uint8Array(r),i=0;return e.forEach(function(t){var e="string"==typeof t,n=t;if(e){for(var r=new Uint8Array(t.length),s=0;s<t.length;s++)r[s]=t.charCodeAt(s);n=r.buffer}e?o[i++]=0:o[i++]=1;for(var a=n.byteLength.toString(),s=0;s<a.length;s++)o[i++]=parseInt(a[s]);o[i++]=255;for(var r=new Uint8Array(n),s=0;s<r.length;s++)o[i++]=r[s]}),n(o.buffer)}):n(new ArrayBuffer(0))},e.encodePayloadAsBlob=function(t,n){function r(t,n){e.encodePacket(t,!0,!0,function(t){var e=new Uint8Array(1);if(e[0]=1,"string"==typeof t){for(var r=new Uint8Array(t.length),o=0;o<t.length;o++)r[o]=t.charCodeAt(o);t=r.buffer,e[0]=0}for(var i=t instanceof ArrayBuffer?t.byteLength:t.size,s=i.toString(),a=new Uint8Array(s.length+1),o=0;o<s.length;o++)a[o]=parseInt(s[o]);if(a[s.length]=255,w){var c=new w([e.buffer,a.buffer,t]);n(null,c)}})}c(t,r,function(t,e){return n(new w(e))})},e.decodePayloadAsBinary=function(t,n,r){"function"==typeof n&&(r=n,n=null);for(var o=t,i=[];o.byteLength>0;){for(var s=new Uint8Array(o),a=0===s[0],c="",u=1;255!==s[u];u++){if(c.length>310)return r(C,0,1);c+=s[u]}o=f(o,2+c.length),c=parseInt(c);var p=f(o,0,c);if(a)try{p=String.fromCharCode.apply(null,new Uint8Array(p))}catch(h){var l=new Uint8Array(p);p="";for(var u=0;u<l.length;u++)p+=String.fromCharCode(l[u])}i.push(p),o=f(o,c)}var d=i.length;i.forEach(function(t,o){r(e.decodePacket(t,n,!0),o,d)})}},function(t,e){t.exports=Object.keys||function(t){var e=[],n=Object.prototype.hasOwnProperty;for(var r in t)n.call(t,r)&&e.push(r);return e}},function(t,e,n){function r(t){if(!t||"object"!=typeof t)return!1;if(o(t)){for(var e=0,n=t.length;e<n;e++)if(r(t[e]))return!0;return!1}if("function"==typeof Buffer&&Buffer.isBuffer&&Buffer.isBuffer(t)||"function"==typeof ArrayBuffer&&t instanceof ArrayBuffer||s&&t instanceof Blob||a&&t instanceof File)return!0;if(t.toJSON&&"function"==typeof t.toJSON&&1===arguments.length)return r(t.toJSON(),!0);for(var i in t)if(Object.prototype.hasOwnProperty.call(t,i)&&r(t[i]))return!0;return!1}var o=n(13),i=Object.prototype.toString,s="function"==typeof Blob||"undefined"!=typeof Blob&&"[object BlobConstructor]"===i.call(Blob),a="function"==typeof File||"undefined"!=typeof File&&"[object FileConstructor]"===i.call(File);t.exports=r},function(t,e){t.exports=function(t,e,n){var r=t.byteLength;if(e=e||0,n=n||r,t.slice)return t.slice(e,n);if(e<0&&(e+=r),n<0&&(n+=r),n>r&&(n=r),e>=r||e>=n||0===r)return new ArrayBuffer(0);for(var o=new Uint8Array(t),i=new Uint8Array(n-e),s=e,a=0;s<n;s++,a++)i[a]=o[s];return i.buffer}},function(t,e){function n(t,e,n){function o(t,r){if(o.count<=0)throw new Error("after called too many times");--o.count,t?(i=!0,e(t),e=n):0!==o.count||i||e(null,r)}var i=!1;return n=n||r,o.count=t,0===t?e():o}function r(){}t.exports=n},function(t,e){function n(t){for(var e,n,r=[],o=0,i=t.length;o<i;)e=t.charCodeAt(o++),e>=55296&&e<=56319&&o<i?(n=t.charCodeAt(o++),56320==(64512&n)?r.push(((1023&e)<<10)+(1023&n)+65536):(r.push(e),o--)):r.push(e);return r}function r(t){for(var e,n=t.length,r=-1,o="";++r<n;)e=t[r],e>65535&&(e-=65536,o+=d(e>>>10&1023|55296),e=56320|1023&e),o+=d(e);return o}function o(t,e){if(t>=55296&&t<=57343){if(e)throw Error("Lone surrogate U+"+t.toString(16).toUpperCase()+" is not a scalar value");return!1}return!0}function i(t,e){return d(t>>e&63|128)}function s(t,e){if(0==(4294967168&t))return d(t);var n="";return 0==(4294965248&t)?n=d(t>>6&31|192):0==(4294901760&t)?(o(t,e)||(t=65533),n=d(t>>12&15|224),n+=i(t,6)):0==(4292870144&t)&&(n=d(t>>18&7|240),n+=i(t,12),n+=i(t,6)),n+=d(63&t|128)}function a(t,e){e=e||{};for(var r,o=!1!==e.strict,i=n(t),a=i.length,c=-1,u="";++c<a;)r=i[c],u+=s(r,o);return u}function c(){if(l>=f)throw Error("Invalid byte index");var t=255&h[l];if(l++,128==(192&t))return 63&t;throw Error("Invalid continuation byte")}function u(t){var e,n,r,i,s;if(l>f)throw Error("Invalid byte index");if(l==f)return!1;if(e=255&h[l],l++,0==(128&e))return e;if(192==(224&e)){if(n=c(),s=(31&e)<<6|n,s>=128)return s;throw Error("Invalid continuation byte")}if(224==(240&e)){if(n=c(),r=c(),s=(15&e)<<12|n<<6|r,s>=2048)return o(s,t)?s:65533;throw Error("Invalid continuation byte")}if(240==(248&e)&&(n=c(),r=c(),i=c(),s=(7&e)<<18|n<<12|r<<6|i,s>=65536&&s<=1114111))return s;throw Error("Invalid UTF-8 detected")}function p(t,e){e=e||{};var o=!1!==e.strict;h=n(t),f=h.length,l=0;for(var i,s=[];(i=u(o))!==!1;)s.push(i);return r(s)}/*! https://mths.be/utf8js v2.1.2 by @mathias */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 476
+|     Comment: 
+|         /** @type {Error|false} */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1910
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1909
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 859
+|     Comment: 
+|         /************************************************************************/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1908
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1857
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1437
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1336
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1159
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1198
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1333
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1328
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 6
+|     Comment: 
+|          // eslint-disable-next-line no-unused-vars
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1259
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1
+|     Comment: 
+|         /******/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1314
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1272
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1160
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1289
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1153
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1276
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 926
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1939
+|     Comment: 
+|         /*!****************************************************************!*\
+|           !*** ./node_modules/gatsby-legacy-polyfills/dist/polyfills.js ***!
+|           \****************************************************************/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 899
+|     Comment: 
+|         /*global setTimeout, clearTimeout */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1221
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 898
+|     Comment: 
+|         /*jslint indent: 2, vars: true, plusplus: true */
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 862
+|     Comment: 
+|         /***/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1260
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1245
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1258
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1257
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1154
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 950
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 872
+|     Comment: 
+|         /*#__PURE__*/
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1275
+|     Comment: 
+|         
+|     
+|     Path: http://192.168.128.139:30330/polyfill.js
+|     Line number: 1
+|     Comment: 
+|_         // webpackBootstrap
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 02 Mar 2022 12:52:10 GMT; +2s from local time.
+|_http-devframework: Express detected. Found Express in X-Powered-By Header
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-favicon: Unknown favicon MD5: BC550ED3CF565EB8D826B8A5840A6527
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   X-Powered-By: Express
+|   Access-Control-Allow-Origin: *
+|   Accept-Ranges: bytes
+|   Cache-Control: public, max-age=0
+|   Last-Modified: Tue, 15 Feb 2022 13:41:53 GMT
+|   ETag: W/"61e-17efd9e4074"
+|   Content-Type: text/html; charset=UTF-8
+|   Content-Length: 1566
+|   Vary: Accept-Encoding
+|   Date: Wed, 02 Mar 2022 12:52:09 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-majordomo2-dir-traversal: ERROR: Script execution failed (use -d to debug)
+|_http-malware-host: false
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash bc550ed3cf565eb8d826b8a5840a6527
+|_Credits query returned unknown hash bc550ed3cf565eb8d826b8a5840a6527
+| http-phpmyadmin-dir-traversal: 
+|   VULNERABLE:
+|   phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion
+|     State: UNKNOWN (unable to test)
+|     IDs:  CVE:CVE-2005-3299
+|       PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.
+|       
+|     Disclosure date: 2005-10-nil
+|     Extra information:
+|       ../../../../../etc/passwd :
+|   <!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="note" content="environment=development"/><title data-react-helmet="true"></title><link rel="icon" href="/favicon-32x32.png?v=4a9773549091c227cd2eb82ccd9c5e3a" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><script src="/socket.io/socket.io.js"></script></head><body><div id="___gatsby"></div><script src="/polyfill.js" nomodule=""></script><script src="/commons.js"></script></body></html>
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299
+|_      http://www.exploit-db.com/exploits/1244/
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: public, max-age=0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; js: 1; png: 1; webmanifest: 1
+|     /icons/
+|       png: 8
+|     /socket.io/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /icons/
+|   Total files found (by extension):
+|_    Other: 1; js: 2; png: 9; webmanifest: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|       https://www.tenable.com/plugins/nessus/55976
+|_      https://www.securityfocus.com/bid/49303
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:55:45 2022 -- 1 IP address (1 host up) scanned in 238.33 seconds

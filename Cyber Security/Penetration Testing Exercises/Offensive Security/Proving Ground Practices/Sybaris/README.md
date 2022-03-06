@@ -125,6 +125,60 @@ ftp> exit
 
 ```
 
+```bash
+┌──(kali㉿kali)-[~/Desktop]
+└─$ pftp 192.168.95.93     
+Connected to 192.168.95.93.
+220 (vsFTPd 3.0.2)
+Name (192.168.95.93:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+227 Entering Passive Mode (192,168,95,93,39,113).
+150 Here comes the directory listing.
+drwxrwxrwx    2 0        0               6 Apr 01  2020 pub
+226 Directory send OK.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,95,93,39,111).
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> lcd /tmp
+Local directory now /tmp
+ftp> put t
+local: t remote: t
+227 Entering Passive Mode (192,168,95,93,39,111).
+150 Ok to send data.
+226 Transfer complete.
+ftp> del t
+550 Permission denied.
+ftp> ls
+227 Entering Passive Mode (192,168,95,93,39,113).
+150 Here comes the directory listing.
+-rw-rw-rw-    1 14       50              0 Mar 02 08:14 t
+226 Directory send OK.
+ftp> cd ..
+250 Directory successfully changed.
+ftp> put t
+local: t remote: t
+227 Entering Passive Mode (192,168,95,93,39,110).
+553 Could not create file.
+ftp> ls
+227 Entering Passive Mode (192,168,95,93,39,109).
+150 Here comes the directory listing.
+drwxrwxrwx    2 0        0              15 Mar 02 08:14 pub
+226 Directory send OK.
+ftp> exit
+221 Goodbye.
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~/Desktop]
+└─$ 
+```
+
 ## 80 - Web
 
 ![](Pasted%20image%2020220123203320.png)

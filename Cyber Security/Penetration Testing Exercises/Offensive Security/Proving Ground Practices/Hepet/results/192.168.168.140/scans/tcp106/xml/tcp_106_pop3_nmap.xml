@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 12:15:28 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 106 &quot;-&#45;script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp106/tcp_106_pop3_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp106/xml/tcp_106_pop3_nmap.xml&quot; 192.168.168.140 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 106 &quot;-&#45;script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp106/tcp_106_pop3_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp106/xml/tcp_106_pop3_nmap.xml&quot; 192.168.168.140" start="1646500528" startstr="Sat Mar  5 12:15:28 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="106"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646500531"/>
+<taskend task="NSE" time="1646500531"/>
+<taskbegin task="NSE" time="1646500531"/>
+<taskend task="NSE" time="1646500531"/>
+<taskbegin task="NSE" time="1646500531"/>
+<taskend task="NSE" time="1646500531"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646500532"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646500532"/>
+<taskbegin task="SYN Stealth Scan" time="1646500532"/>
+<taskend task="SYN Stealth Scan" time="1646500532" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646500533"/>
+<taskend task="Service scan" time="1646500534" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<host starttime="1646500532" endtime="1646500534"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="106"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pop3pw" product="Mercury/32 poppass service" hostname="localhost" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="200 localhost MercuryW PopPass server ready."/></port>
+</ports>
+<times srtt="170505" rttvar="170505" to="852525"/>
+</host>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<taskbegin task="NSE" time="1646500534"/>
+<taskend task="NSE" time="1646500534"/>
+<runstats><finished time="1646500534" timestr="Sat Mar  5 12:15:34 2022" summary="Nmap done at Sat Mar  5 12:15:34 2022; 1 IP address (1 host up) scanned in 7.05 seconds" elapsed="7.05" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

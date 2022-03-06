@@ -1,0 +1,80 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 3112
+ETag: W/"c28-OAyJFYlPD6pBXBZmeZ0QPx6hht4"
+Date: Wed, 02 Mar 2022 09:56:25 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <title>s3cur3 r3pl</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CPT+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/md5.min.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">s3cur3 r3pl</h1>
+            <p>
+                Welcome to s3cur3 r3pl, a cryptographically secured node.js REPL. s3cur3 r3pl enables its users to
+                execute code as well as allow third parties to execute approved code blocks on their behalf.
+            </p>
+            <p>
+                To run code it must first be signed with the user's API key. The signature and the code are then
+                submitted to the server for execution. To sign the code it is appended to the your API key and then
+                hashed using MD5 as follows:
+            <pre>signature = md5(&lt;API-KEY&gt;|CODE)</pre>
+            </p>
+            <p>
+                We've prefilled the REPL with code signed with our own key to demonstrate just how secure our REPL is!
+            </p>
+            <form>
+                <div class="form-group">
+                    <label>API Key</label>
+                    <input id="api-key-input" type="text" class="form-control" placeholder="e.g. d0fd6398-2254-440a-8405-ebaf7cb7cb5d">
+                </div>
+                <div class="form-group">
+                    <label>Signature</label>
+                    <div class="input-group">
+                        <input id="sig-input" type="text" class="form-control" placeholder="e.g. ea9bfcf0fa6da28e568a3046dcc93df0" value="aaa8111b4871b48dc6c0ac4c33ef9e1b">
+                        <div class="input-group-append">
+                            <button id="sign-btn" class="btn btn-outline-primary" type="button">Sign</button>
+                        </div>
+                    </div>
+                    <small id="sig-error" class="text-danger"></small>
+                </div>
+                <div class="form-group">
+                    <label>Code</label>
+                    <textarea id="code-input" class="form-control" rows="5">function hello(name) {
+  return &#39;Hello &#39; + name + &#39;!&#39;;
+}
+
+hello(&#39;World&#39;); &#x2F;&#x2F; should print &#39;Hello World&#39;</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Result</label>
+                    <textarea id="result-text" class="form-control" rows="5"></textarea>
+                </div>
+                <button id="run-btn" class="btn btn-primary">Run</button>
+            </form>
+            <br />
+            <br />
+            <br />
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

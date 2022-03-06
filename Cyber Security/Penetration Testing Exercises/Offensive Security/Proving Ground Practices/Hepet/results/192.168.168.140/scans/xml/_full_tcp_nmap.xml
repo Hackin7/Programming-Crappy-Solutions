@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 12:14:37 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/xml/_full_tcp_nmap.xml&quot; 192.168.168.140 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/_full_tcp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/xml/_full_tcp_nmap.xml&quot; 192.168.168.140" start="1646500477" startstr="Sat Mar  5 12:14:37 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646500479"/>
+<taskend task="NSE" time="1646500479"/>
+<taskbegin task="NSE" time="1646500479"/>
+<taskend task="NSE" time="1646500479"/>
+<taskbegin task="NSE" time="1646500479"/>
+<taskend task="NSE" time="1646500479"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646500479"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646500480"/>
+<taskbegin task="SYN Stealth Scan" time="1646500480"/>
+<taskprogress task="SYN Stealth Scan" time="1646500511" percent="9.97" remaining="280" etc="1646500791"/>
+<taskprogress task="SYN Stealth Scan" time="1646500541" percent="25.92" remaining="175" etc="1646500715"/>
+<taskprogress task="SYN Stealth Scan" time="1646500571" percent="45.09" remaining="111" etc="1646500682"/>
+<taskprogress task="SYN Stealth Scan" time="1646500601" percent="64.83" remaining="66" etc="1646500667"/>
+<taskprogress task="SYN Stealth Scan" time="1646500631" percent="82.70" remaining="32" etc="1646500663"/>
+<taskprogress task="SYN Stealth Scan" time="1646500661" percent="68.50" remaining="84" etc="1646500744"/>
+<taskprogress task="SYN Stealth Scan" time="1646500691" percent="75.83" remaining="68" etc="1646500758"/>
+<taskprogress task="SYN Stealth Scan" time="1646500721" percent="84.57" remaining="44" etc="1646500765"/>
+<taskend task="SYN Stealth Scan" time="1646500763" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1646500764"/>
+<taskend task="Service scan" time="1646500896" extrainfo="13 services on 1 host"/>
+<taskbegin task="Traceroute" time="1646500902"/>
+<taskend task="Traceroute" time="1646500903"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1646500903"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1646500903"/>
+<taskbegin task="NSE" time="1646500903"/>
+<taskend task="NSE" time="1646500916"/>
+<taskbegin task="NSE" time="1646500916"/>
+<taskend task="NSE" time="1646500922"/>
+<taskbegin task="NSE" time="1646500922"/>
+<taskend task="NSE" time="1646500922"/>
+<host starttime="1646500480" endtime="1646500922"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65522">
+<extrareasons reason="no-responses" count="65522"/>
+</extraports>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="smtp" product="Mercury/32 smtpd" extrainfo="Mail server account Maiser" hostname="localhost" method="probed" conf="10"/><script id="smtp-commands" output="localhost Hello nmap.scanme.org; ESMTPs are:, TIME, "/></port>
+<port protocol="tcp" portid="79"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="finger" product="Mercury/32 fingerd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="finger" output="Login: Admin         Name: Mail System Administrator&#xd;&#xa;&#xd;&#xa;[No profile information]&#xd;&#xa;"/></port>
+<port protocol="tcp" portid="105"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ph-addressbook" product="Mercury/32 PH addressbook server" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="106"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pop3pw" product="Mercury/32 poppass service" hostname="localhost" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pop3" product="Mercury/32 pop3d" hostname="localhost" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="pop3-capabilities" output="APOP TOP UIDL USER EXPIRE(NEVER)"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="imap" product="Mercury/32 imapd" version="4.62" hostname="localhost" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="imap-capabilities" output="OK IMAP4rev1 complete CAPABILITY AUTH=PLAIN X-MERCURY-1A0001"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.3.23" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.3.23"><elem>Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.3.23</elem>
+</script><script id="http-title" output="400 Bad Request"><elem key="title">400 Bad Request</elem>
+</script><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0&#xa;SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C125D327E3ECAD0D836A6DE75F9A751023E2909DA063958F1D419A58D59C638C5B73869079CCC3D6A389B875BC1E947C7C6EE3ADE8275C0BC60C6AF90F32FEB3C47A1023042B2928D4AAF9B32F6610F8A7C1CD60C46B2857E3673BF79ECD4822DC38EA4813803A4097570C4735463D71629AEE539D630E677A28C9A434FF19ED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="2224"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Mercury/32 httpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-title" output="Mercury HTTP Services"><elem key="title">Mercury HTTP Services</elem>
+</script></port>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.3.23" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.3.23"><elem>Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.3.23</elem>
+</script><script id="http-title" output="Time Travel Company Page"><elem key="title">Time Travel Company Page</elem>
+</script></port>
+<port protocol="tcp" portid="11100"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="vnc-info" output="&#xa;  Protocol version: 3.8&#xa;  Security types: &#xa;    Unknown security type (40)"><elem key="Protocol version">3.8</elem>
+<table key="Security types">
+<table>
+<elem key="type">40</elem>
+<elem key="name">Unknown security type</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="20001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" version="0.9.41 beta" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server:0.9.41_beta</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            312 Oct 20  2020 .babelrc&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            147 Oct 20  2020 .editorconfig&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp             23 Oct 20  2020 .eslintignore&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            779 Oct 20  2020 .eslintrc.js&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            167 Oct 20  2020 .gitignore&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            228 Oct 20  2020 .postcssrc.js&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            346 Oct 20  2020 .tern-project&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 build&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 config&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           1376 Oct 20  2020 index.html&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp         425010 Oct 20  2020 package-lock.json&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           2454 Oct 20  2020 package.json&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           1100 Oct 20  2020 README.md&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 src&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 static&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            127 Oct 20  2020 _redirects"/><script id="ftp-bounce" output="bounce working!"/><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="33006"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unknown" servicefp="SF-Port33006-TCP:V=7.91%I=9%D=3/5%Time=62239B9C%P=x86_64-pc-linux-gnu%r(NULL,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.168&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(iperf3,4D,&quot;I\0\0\x01\xffj\x04Host\x20&apos;192\.168\.49\.168&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  NULL, iperf3: &#xa;    Host &apos;192.168.49.168&apos; is not allowed to connect to this MariaDB server"><elem key="NULL, iperf3">&#xa;    Host &apos;192.168.49.168&apos; is not allowed to connect to this MariaDB server</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="25"/>
+<osmatch name="Microsoft Windows 98 SE" accuracy="85" line="78713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="98" accuracy="85"><cpe>cpe:/o:microsoft:windows_98</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=3/5%OT=25%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62239C3A%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10B%TS=U)&#xa;OPS(O1=M54ENW0NNS%O2=M54ENW0NNS%O3=M54ENW0%O4=M54ENW0NNS%O5=M54ENW0NNS%O6=M54ENNS)&#xa;WIN(W1=4000%W2=4000%W3=4000%W4=4000%W5=4000%W6=4000)&#xa;ECN(R=Y%DF=Y%TG=80%W=4000%O=M54ENW0NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="BC2C20C0,34B9C0F2,5E185A6A,62120A01,9E089F44,438947"/>
+<ipidsequence class="Busy server or unknown class" values="26DC,26F1,26F2,2707,2708,271D"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="110" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="171.64"/>
+<hop ttl="2" ipaddr="192.168.168.140" rtt="171.63"/>
+</trace>
+<times srtt="171546" rttvar="180" to="172266"/>
+</host>
+<taskbegin task="NSE" time="1646500922"/>
+<taskend task="NSE" time="1646500922"/>
+<taskbegin task="NSE" time="1646500922"/>
+<taskend task="NSE" time="1646500922"/>
+<taskbegin task="NSE" time="1646500922"/>
+<taskend task="NSE" time="1646500922"/>
+<runstats><finished time="1646500922" timestr="Sat Mar  5 12:22:02 2022" summary="Nmap done at Sat Mar  5 12:22:02 2022; 1 IP address (1 host up) scanned in 445.68 seconds" elapsed="445.68" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 12:22:04 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 20001 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp20001/tcp_20001_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp20001/xml/tcp_20001_ftp_nmap.xml&quot; 192.168.168.140 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 20001 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp20001/tcp_20001_ftp_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp20001/xml/tcp_20001_ftp_nmap.xml&quot; 192.168.168.140" start="1646500924" startstr="Sat Mar  5 12:22:04 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="20001"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="NSE" time="1646500926"/>
+<taskend task="NSE" time="1646500926"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646500926"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646500926"/>
+<taskbegin task="SYN Stealth Scan" time="1646500926"/>
+<taskend task="SYN Stealth Scan" time="1646500926" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646500927"/>
+<taskend task="Service scan" time="1646500927" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646500927"/>
+<taskend task="NSE" time="1646500928"/>
+<taskbegin task="NSE" time="1646500928"/>
+<taskend task="NSE" time="1646500930"/>
+<taskbegin task="NSE" time="1646500930"/>
+<taskend task="NSE" time="1646500930"/>
+<host starttime="1646500926" endtime="1646500930"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="20001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" version="0.9.41 beta" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server:0.9.41_beta</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220-FileZilla Server version 0.9.41 beta"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            312 Oct 20  2020 .babelrc&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            147 Oct 20  2020 .editorconfig&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp             23 Oct 20  2020 .eslintignore&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            779 Oct 20  2020 .eslintrc.js&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            167 Oct 20  2020 .gitignore&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            228 Oct 20  2020 .postcssrc.js&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            346 Oct 20  2020 .tern-project&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 build&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 config&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           1376 Oct 20  2020 index.html&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp         425010 Oct 20  2020 package-lock.json&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           2454 Oct 20  2020 package.json&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp           1100 Oct 20  2020 README.md&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 src&#xa;drwxr-xr-x 1 ftp ftp              0 Oct 20  2020 static&#xa;-r-&#45;r-&#45;r-&#45; 1 ftp ftp            127 Oct 20  2020 _redirects"/><script id="ftp-bounce" output="bounce working!"/><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="170744" rttvar="170744" to="853720"/>
+</host>
+<taskbegin task="NSE" time="1646500930"/>
+<taskend task="NSE" time="1646500930"/>
+<taskbegin task="NSE" time="1646500930"/>
+<taskend task="NSE" time="1646500930"/>
+<taskbegin task="NSE" time="1646500930"/>
+<taskend task="NSE" time="1646500930"/>
+<runstats><finished time="1646500930" timestr="Sat Mar  5 12:22:10 2022" summary="Nmap done at Sat Mar  5 12:22:10 2022; 1 IP address (1 host up) scanned in 6.35 seconds" elapsed="6.35" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,39 @@
+WhatWeb report for http://192.168.128.139:50400
+Status    : 404 Not Found
+Title     : Error
+IP        : 192.168.128.139
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[Express], HTML5, UncommonHeaders[access-control-allow-origin,content-security-policy,x-content-type-options]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : access-control-allow-origin,content-security-policy,x-content-type-options (from headers)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : Express (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Access-Control-Allow-Origin: *
+	Content-Security-Policy: default-src 'none'
+	X-Content-Type-Options: nosniff
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 139
+	Date: Wed, 02 Mar 2022 12:52:00 GMT
+	Connection: close
+
+

@@ -251,6 +251,17 @@ ftp>
 
 ```
 
+Failed Credentials
+```
+admin:admin
+admin:password
+guest:guest
+backup:backup
+admin:FeltHeadwallWight357
+postmaster:postmaster
+postmaster:FeltHeadwallWight357
+```
+
 ## 80 - Web
 
 ```
@@ -332,6 +343,244 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 └─$             
 ```
 
+![](Pasted%20image%2020220306141054.png)
+
+![](Pasted%20image%2020220306134835.png)
+ ![](Pasted%20image%2020220306135104.png)
+
+ ![](Pasted%20image%2020220306135633.png)
+ ![](Pasted%20image%2020220306135647.png)
+
+### Nikto
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ nikto -h http://192.168.168.55/
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.168.55
++ Target Hostname:    192.168.168.55
++ Target Port:        80
++ Start Time:         2022-03-05 23:04:35 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
++ Retrieved x-powered-by header: PHP/7.4.6
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Root page / redirects to: http://192.168.168.55/dashboard/
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-3268: /img/: Directory indexing found.
++ OSVDB-3092: /img/: This might be interesting...
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 8698 requests: 0 error(s) and 10 item(s) reported on remote host
++ End Time:           2022-03-05 23:32:54 (GMT-5) (1699 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+      *********************************************************************
+      Portions of the server's headers (PHP/7.4.6 Apache/2.4.43) are not in
+      the Nikto 2.1.6 database or are newer than the known string. Would you like
+      to submit this information (*no server specific data*) to CIRT.net
+      for a Nikto update (or you may email to sullo@cirt.net) (y/n)? 
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ 
+
+```
+
+### Dir enum
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ dirb http://192.168.168.55                                        
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sat Mar  5 22:49:47 2022
+URL_BASE: http://192.168.168.55/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.168.55/ ----
++ http://192.168.168.55/aux (CODE:403|SIZE:1046)                                                                                                                       
++ http://192.168.168.55/cgi-bin/ (CODE:403|SIZE:1060)                                                                                                                  
++ http://192.168.168.55/com1 (CODE:403|SIZE:1046)                                                                                                                      
++ http://192.168.168.55/com2 (CODE:403|SIZE:1046)                                                                                                                      
++ http://192.168.168.55/com3 (CODE:403|SIZE:1046)                                                                                                                      
++ http://192.168.168.55/con (CODE:403|SIZE:1046)                                                                                                                       
+==> DIRECTORY: http://192.168.168.55/dashboard/                                                                                                                        
++ http://192.168.168.55/examples (CODE:503|SIZE:1060)                                                                                                                  
++ http://192.168.168.55/favicon.ico (CODE:200|SIZE:30894)                                                                                                              
+==> DIRECTORY: http://192.168.168.55/img/                                                                                                                              
++ http://192.168.168.55/index.php (CODE:302|SIZE:0)                                                                                                                    
++ http://192.168.168.55/licenses (CODE:403|SIZE:1205)                                                                                                                  
++ http://192.168.168.55/lpt1 (CODE:403|SIZE:1046)                                                                                                                      
++ http://192.168.168.55/lpt2 (CODE:403|SIZE:1046)                                                                                                                      
++ http://192.168.168.55/nul (CODE:403|SIZE:1046)                                                                                                                       
++ http://192.168.168.55/phpmyadmin (CODE:403|SIZE:1205)                                                                                                                
++ http://192.168.168.55/prn (CODE:403|SIZE:1046)                                                                                                                       
++ http://192.168.168.55/server-info (CODE:403|SIZE:1205)                                                                                                               
++ http://192.168.168.55/server-status (CODE:403|SIZE:1205)                                                                                                             
++ http://192.168.168.55/webalizer (CODE:403|SIZE:1046)                                                                                                                 
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/ ----
++ http://192.168.168.55/dashboard/aux (CODE:403|SIZE:1046)                                                                                                             
++ http://192.168.168.55/dashboard/com1 (CODE:403|SIZE:1046)                                                                                                            
++ http://192.168.168.55/dashboard/com2 (CODE:403|SIZE:1046)                                                                                                            
++ http://192.168.168.55/dashboard/com3 (CODE:403|SIZE:1046)                                                                                                            
++ http://192.168.168.55/dashboard/con (CODE:403|SIZE:1046)                                                                                                             
+==> DIRECTORY: http://192.168.168.55/dashboard/de/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/docs/                                                                                                                   
+==> DIRECTORY: http://192.168.168.55/dashboard/es/                                                                                                                     
++ http://192.168.168.55/dashboard/favicon.ico (CODE:200|SIZE:1150)                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/fr/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/hu/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/images/                                                                                                                 
+==> DIRECTORY: http://192.168.168.55/dashboard/Images/                                                                                                                 
++ http://192.168.168.55/dashboard/index.html (CODE:200|SIZE:7576)                                                                                                      
+==> DIRECTORY: http://192.168.168.55/dashboard/it/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/javascripts/                                                                                                            
+==> DIRECTORY: http://192.168.168.55/dashboard/jp/                                                                                                                     
++ http://192.168.168.55/dashboard/lpt1 (CODE:403|SIZE:1046)                                                                                                            
++ http://192.168.168.55/dashboard/lpt2 (CODE:403|SIZE:1046)                                                                                                            
++ http://192.168.168.55/dashboard/nul (CODE:403|SIZE:1046)                                                                                                             
++ http://192.168.168.55/dashboard/phpinfo.php (CODE:200|SIZE:78665)                                                                                                    
+==> DIRECTORY: http://192.168.168.55/dashboard/pl/                                                                                                                     
++ http://192.168.168.55/dashboard/prn (CODE:403|SIZE:1046)                                                                                                             
+==> DIRECTORY: http://192.168.168.55/dashboard/pt_BR/                                                                                                                  
+==> DIRECTORY: http://192.168.168.55/dashboard/ro/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/ru/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/stylesheets/                                                                                                            
+==> DIRECTORY: http://192.168.168.55/dashboard/tr/                                                                                                                     
+==> DIRECTORY: http://192.168.168.55/dashboard/zh_CN/                                                                                                                  
+==> DIRECTORY: http://192.168.168.55/dashboard/zh_TW/                                                                                                                  
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/img/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/de/ ----
++ http://192.168.168.55/dashboard/de/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/de/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/de/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/de/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/de/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/de/index.html (CODE:200|SIZE:7797)                                                                                                   
++ http://192.168.168.55/dashboard/de/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/de/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/de/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/de/prn (CODE:403|SIZE:1046)                                                                                                          
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/docs/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/es/ ----
++ http://192.168.168.55/dashboard/es/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/es/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/es/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/es/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/es/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/es/index.html (CODE:200|SIZE:7681)                                                                                                   
++ http://192.168.168.55/dashboard/es/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/es/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/es/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/es/prn (CODE:403|SIZE:1046)                                                                                                          
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/fr/ ----
++ http://192.168.168.55/dashboard/fr/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/fr/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/fr/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/fr/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/fr/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/fr/index.html (CODE:200|SIZE:7772)                                                                                                   
++ http://192.168.168.55/dashboard/fr/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/fr/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/fr/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/fr/prn (CODE:403|SIZE:1046)                                                                                                          
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/hu/ ----
++ http://192.168.168.55/dashboard/hu/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/hu/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/hu/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/hu/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/hu/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/hu/index.html (CODE:200|SIZE:7824)                                                                                                   
++ http://192.168.168.55/dashboard/hu/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/hu/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/hu/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/hu/prn (CODE:403|SIZE:1046)                                                                                                          
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/Images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/it/ ----
++ http://192.168.168.55/dashboard/it/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/it/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/it/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/it/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/it/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/it/index.html (CODE:200|SIZE:7702)                                                                                                   
++ http://192.168.168.55/dashboard/it/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/it/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/it/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/it/prn (CODE:403|SIZE:1046)                                                                                                          
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/javascripts/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                                                       
+---- Entering directory: http://192.168.168.55/dashboard/jp/ ----
++ http://192.168.168.55/dashboard/jp/aux (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/jp/com1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/jp/com2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/jp/com3 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/jp/con (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/jp/index.html (CODE:200|SIZE:7953)                                                                                                   
++ http://192.168.168.55/dashboard/jp/lpt1 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/jp/lpt2 (CODE:403|SIZE:1046)                                                                                                         
++ http://192.168.168.55/dashboard/jp/nul (CODE:403|SIZE:1046)                                                                                                          
++ http://192.168.168.55/dashboard/jp/prn (CODE:403|SIZE:1046)                                                                                                          
+^C> Testing: http://192.168.168.55/dashboard/jp/typo3conf                                                                                                              
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$
+```
+
+### DAVTest Fail
+
+```bash
+┌──(kali㉿kali)-[/var/lib/php/sessions]
+└─$ davtest -url http://192.168.168.55                                                                                                                            127 ⨯
+********************************************************
+ Testing DAV connection
+OPEN            FAIL:   http://192.168.168.55   Server response: 405 Method Not Allowed
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/var/lib/php/sessions]
+└─$ davtest -url http://192.168.168.55/dashboard
+********************************************************
+ Testing DAV connection
+OPEN            FAIL:   http://192.168.168.55/dashboard Server response: 405 Method Not Allowed
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/var/lib/php/sessions]
+└─$
+```
 
 ## 443 - Web
 Looks the same as port 80
@@ -388,6 +637,26 @@ Looks the same as port 80
 ```
 
 ### Reading Files
+
+Download all files
+
+```bash
+┌──(kali㉿kali)-[/media/…/Offensive Security/Proving Ground Practices/Shenzi/smbfiles]
+└─$ smbclient //192.168.168.55/Shenzi -N                                                              
+lpcfg_do_global_parameter: WARNING: The "client use spnego" option is deprecated
+lpcfg_do_global_parameter: WARNING: The "client ntlmv2 auth" option is deprecated
+Try "help" to get a list of possible commands.
+smb: \> prompt
+smb: \> recurse
+smb: \> mget *
+getting file \passwords.txt of size 894 as passwords.txt (1.2 KiloBytes/sec) (average 1.2 KiloBytes/sec)
+getting file \readme_en.txt of size 7367 as readme_en.txt (10.5 KiloBytes/sec) (average 5.8 KiloBytes/sec)
+getting file \sess_klk75u2q4rpgfjs3785h6hpipp of size 3879 as sess_klk75u2q4rpgfjs3785h6hpipp (5.5 KiloBytes/sec) (average 5.7 KiloBytes/sec)
+getting file \why.tmp of size 213 as why.tmp (0.3 KiloBytes/sec) (average 4.4 KiloBytes/sec)
+getting file \xampp-control.ini of size 178 as xampp-control.ini (0.3 KiloBytes/sec) (average 3.5 KiloBytes/sec)
+smb: \> 
+
+```
 
 ```
 ┌──(kali㉿kali)-[/tmp]
@@ -678,6 +947,15 @@ sess_klk75u2q4rpgfjs3785h6hpipp: ASCII text, with very long lines
 
 ## 3306 - MySQL
 Cannot Access
+
+```bash
+┌──(kali㉿kali)-[/media/…/Offensive Security/Proving Ground Practices/Shenzi/smbfiles]
+└─$ mysql -h 192.168.168.55 -u root                                                
+ERROR 1130 (HY000): Host '192.168.49.168' is not allowed to connect to this MariaDB server
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/media/…/Offensive Security/Proving Ground Practices/Shenzi/smbfiles]
+└─$  
+```
 
 # Exploitation
 

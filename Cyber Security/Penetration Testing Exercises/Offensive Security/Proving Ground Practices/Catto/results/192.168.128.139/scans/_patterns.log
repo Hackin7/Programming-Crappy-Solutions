@@ -1,0 +1,36 @@
+Identified HTTP Server: nginx/1.14.1
+
+Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+CVE Identified: CVE-2011-3192
+
+CVE Identified: CVE-2011-3192
+
+Matched Pattern: Powered by Apache ]"/>
+
+Matched Pattern: Powered by CentOS Linux ]"/>
+
+Matched Pattern: Powered-By: Express
+
+Matched Pattern: Powered-By: Express
+
+Matched Pattern: Powered-By: Express
+
+Identified HTTP Server: Apache/2.4.37 (centos)
+
+Identified HTTP Server: Apache/2.4.37 (centos)
+
+Matched Pattern: Unauthorized
+
+Matched Pattern: Unauthorized
+
+CVE Identified: CVE-2005-3299
+
+CVE Identified: CVE-2005-3299
+
+Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+CVE Identified: CVE-2011-3192
+
+CVE Identified: CVE-2011-3192
+

@@ -1,0 +1,38 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:34:36 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/xml/_top_100_udp_nmap.xml" 192.168.128.139
+Increasing send delay for 192.168.128.139 from 0 to 50 due to 11 out of 17 dropped probes since last increase.
+Warning: 192.168.128.139 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.128.139 from 200 to 400 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 192.168.128.139 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-03-02 07:34:39 EST for 191s
+Not shown: 91 closed ports
+Reason: 91 port-unreaches
+PORT      STATE         SERVICE        REASON      VERSION
+9/udp     open|filtered discard        no-response
+53/udp    open|filtered domain         no-response
+68/udp    open|filtered dhcpc          no-response
+500/udp   open|filtered isakmp         no-response
+593/udp   open|filtered http-rpc-epmap no-response
+1030/udp  open|filtered iad1           no-response
+4444/udp  open|filtered krb524         no-response
+10000/udp open|filtered ndmp           no-response
+49201/udp open|filtered unknown        no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=3/2%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=621F651E%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 4500/udp)
+HOP RTT       ADDRESS
+1   204.72 ms 192.168.49.1
+2   195.45 ms 192.168.128.139
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:37:50 2022 -- 1 IP address (1 host up) scanned in 194.95 seconds

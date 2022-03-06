@@ -1,0 +1,37 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:34:36 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/_quick_tcp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/xml/_quick_tcp_nmap.xml" 192.168.128.139
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-03-02 07:34:39 EST for 38s
+Not shown: 999 closed ports
+Reason: 999 resets
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 63 nginx 1.14.1
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.1
+|_http-title: Identity by HTML5 UP
+Aggressive OS guesses: Linux 4.4 (94%), Linux 3.10 - 3.12 (94%), Linux 4.9 (93%), Linux 4.0 (92%), Linux 3.10 - 3.16 (92%), Linux 3.11 - 4.1 (91%), Linux 3.10 (91%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.5 (91%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=3/2%OT=8080%CT=1%CU=35705%PV=Y%DS=2%DC=T%G=Y%TM=621F64
+OS:85%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=107%TI=Z%TS=A)SEQ(SP=105%G
+OS:CD=1%ISR=107%TI=Z%II=I%TS=A)OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT
+OS:11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)WIN(W1=7120%W2=7120%W3=7
+OS:120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54ENNSNW7%CC=Y%Q
+OS:=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=1
+OS:64%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 35.236 days (since Wed Jan 26 01:55:01 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 143/tcp)
+HOP RTT       ADDRESS
+1   210.09 ms 192.168.49.1
+2   210.15 ms 192.168.128.139
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:35:17 2022 -- 1 IP address (1 host up) scanned in 41.36 seconds

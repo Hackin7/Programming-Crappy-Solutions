@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 11:05:32 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.168.100 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp8080/tcp_8080_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp8080/xml/tcp_8080_http_nmap.xml&quot; 192.168.168.100" start="1646496332" startstr="Sat Mar  5 11:05:32 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8080"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646496333"/>
+<taskend task="NSE" time="1646496333"/>
+<taskbegin task="NSE" time="1646496333"/>
+<taskend task="NSE" time="1646496333"/>
+<taskbegin task="NSE" time="1646496333"/>
+<taskend task="NSE" time="1646496333"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646496333"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646496333"/>
+<taskbegin task="SYN Stealth Scan" time="1646496333"/>
+<taskend task="SYN Stealth Scan" time="1646496334" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646496334"/>
+<taskend task="Service scan" time="1646496340" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646496340"/>
+<taskprogress task="NSE" time="1646496371" percent="98.70" remaining="1" etc="1646496371"/>
+<taskprogress task="NSE" time="1646496401" percent="99.67" remaining="1" etc="1646496401"/>
+<taskprogress task="NSE" time="1646496431" percent="99.67" remaining="1" etc="1646496431"/>
+<taskprogress task="NSE" time="1646496461" percent="99.67" remaining="1" etc="1646496461"/>
+<taskprogress task="NSE" time="1646496491" percent="99.67" remaining="1" etc="1646496491"/>
+<taskprogress task="NSE" time="1646496521" percent="99.67" remaining="1" etc="1646496522"/>
+<taskprogress task="NSE" time="1646496551" percent="99.67" remaining="1" etc="1646496552"/>
+<taskprogress task="NSE" time="1646496581" percent="99.67" remaining="1" etc="1646496582"/>
+<taskprogress task="NSE" time="1646496611" percent="99.67" remaining="1" etc="1646496612"/>
+<taskprogress task="NSE" time="1646496641" percent="99.67" remaining="1" etc="1646496642"/>
+<taskprogress task="NSE" time="1646496671" percent="99.67" remaining="2" etc="1646496672"/>
+<taskprogress task="NSE" time="1646496701" percent="99.67" remaining="2" etc="1646496702"/>
+<taskprogress task="NSE" time="1646496731" percent="99.67" remaining="2" etc="1646496732"/>
+<taskend task="NSE" time="1646496756"/>
+<taskbegin task="NSE" time="1646496756"/>
+<taskend task="NSE" time="1646496757"/>
+<taskbegin task="NSE" time="1646496757"/>
+<taskend task="NSE" time="1646496757"/>
+<host starttime="1646496333" endtime="1646496757"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.100" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache Tomcat" version="7.0.4" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:7.0.4</cpe></service><script id="http-chrono" output="Request times for /; avg: 514.64ms; min: 434.01ms; max: 650.64ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.168.100&#xa;    &#xa;    Path: http://192.168.168.100:8080/manager/html&#xa;    Line number: 6&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;font-size:12px;}&#xa;            H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}&#xa;            PRE, TT {border: 1px dotted #525D76}&#xa;            A {color : black;}A.name {color : black;}&#xa;            -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.168.100:8080/tomcat.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;          Licensed to the Apache Software Foundation (ASF) under one or more&#xa;          contributor license agreements.  See the NOTICE file distributed with&#xa;          this work for additional information regarding copyright ownership.&#xa;          The ASF licenses this file to You under the Apache License, Version 2.0&#xa;          (the &quot;License&quot;); you may not use this file except in compliance with&#xa;          the License.  You may obtain a copy of the License at&#xa;        &#xa;              http://www.apache.org/licenses/LICENSE-2.0&#xa;        &#xa;          Unless required by applicable law or agreed to in writing, software&#xa;          distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xa;          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xa;          See the License for the specific language governing permissions and&#xa;          limitations under the License.&#xa;        */&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sat, 05 Mar 2022 16:05:47 GMT; -1s from local time."><elem key="date">2022-03-05T16:05:47+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.168.100&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.168.100:8080/host-manager/html&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.168.100:8080/manager/html&#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.168.100:8080/manager/status&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/manager-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/api/index.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/config/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/cluster-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/examples/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/appdev/&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/security-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/RELEASE-NOTES.txt&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/changelog.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/realm-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/deployer-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/jndi-datasource-examples-howto.html&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.168.100:8080/docs/setup.html&#xa;"/><script id="http-favicon" output="Apache Tomcat"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html;charset=UTF-8&#xa;  Transfer-Encoding: chunked&#xa;  Date: Sat, 05 Mar 2022 16:05:46 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 8ff5c6bd76ca174600bf64497901458e&#xa;Credits query returned unknown hash 8ff5c6bd76ca174600bf64497901458e"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; css: 1; png: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 1; png: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Apache Tomcat/7.0.4"><elem key="title">Apache Tomcat/7.0.4</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;192.168.168.100:8080/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="170944" rttvar="170944" to="854720"/>
+</host>
+<taskbegin task="NSE" time="1646496757"/>
+<taskend task="NSE" time="1646496757"/>
+<taskbegin task="NSE" time="1646496757"/>
+<taskend task="NSE" time="1646496757"/>
+<taskbegin task="NSE" time="1646496757"/>
+<taskend task="NSE" time="1646496757"/>
+<runstats><finished time="1646496757" timestr="Sat Mar  5 11:12:37 2022" summary="Nmap done at Sat Mar  5 11:12:37 2022; 1 IP address (1 host up) scanned in 425.56 seconds" elapsed="425.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

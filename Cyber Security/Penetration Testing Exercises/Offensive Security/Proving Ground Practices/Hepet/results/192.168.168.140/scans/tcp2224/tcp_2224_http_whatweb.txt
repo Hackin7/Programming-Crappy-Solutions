@@ -1,0 +1,15 @@
+WhatWeb report for http://192.168.168.140:2224
+Status    : 200 OK
+Title     : Mercury HTTP Services
+IP        : 192.168.168.140
+Country   : RESERVED, ZZ
+
+Summary   :
+
+Detected Plugins:
+HTTP Headers:
+	HTTP/1.0 200 OK
+	Content-type: text/html
+	Content-Length: 2841
+
+

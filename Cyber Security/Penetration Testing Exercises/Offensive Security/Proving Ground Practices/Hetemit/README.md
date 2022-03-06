@@ -259,6 +259,57 @@ Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sun Feb 27 12:37:16 2022 -- 1 IP address (1 host up) scanned in 311.67 seconds
 ```
+
+## 21 - FTP
+
+```bash
+┌──(kali㉿kali)-[/tmp]
+└─$ pftp 192.168.128.117                                                                                                                                          130 ⨯
+Connected to 192.168.128.117.
+220 (vsFTPd 3.0.3)
+Name (192.168.128.117:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+227 Entering Passive Mode (192,168,128,117,208,88).
+ftp: connect: Connection timed out
+ftp>
+```
+
+```bash
+┌──(kali㉿kali)-[/tmp]
+└─$ ftp 192.168.128.117
+Connected to 192.168.128.117.
+220 (vsFTPd 3.0.3)
+Name (192.168.128.117:kali): admin
+530 This FTP server is anonymous only.
+Login failed.
+ftp> exit
+221 Goodbye.
+```
+
+```bash                                                    
+┌──(kali㉿kali)-[/tmp]
+└─$ ftp 192.168.128.117
+Connected to 192.168.128.117.
+220 (vsFTPd 3.0.3)
+Name (192.168.128.117:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put t
+local: t remote: t
+200 PORT command successful. Consider using PASV.
+553 Could not create file.
+ftp> 
+```
+
+## 22 - SSH
 ## 80 - Web
 
 ![](Pasted%20image%2020220228013356.png)
@@ -279,7 +330,44 @@ OS and Service detection performed. Please report any incorrect results at https
 └─$ 
 ```
 
-#
+## 18000 - Web
+
+![](Pasted%20image%2020220302190755.png)
+
+![](Pasted%20image%2020220302190903.png)
+
+![](Pasted%20image%2020220302190921.png)
+
+![](Pasted%20image%2020220302192006.png)
+
+![](Pasted%20image%2020220302195747.png)
+![](Pasted%20image%2020220302195757.png)
+
+## 50000 - Web API
+
+```bash
+┌──(kali㉿kali)-[/tmp]
+└─$ curl 192.168.128.117:50000
+{'/generate', '/verify'}                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl 192.168.128.117:50000/generate
+{'email@domain'}                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl 192.168.128.117:50000/verify  
+{'code'}                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl 192.168.128.117:50000/verify/code
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ curl 192.168.128.117:50000/verify     
+{'code'}                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+```
 
 # Exploitation
 

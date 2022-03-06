@@ -1,0 +1,16 @@
+Matched Pattern: unauthorized
+
+Matched Pattern: Powered-By: Express
+
+Matched Pattern: unauthorized
+
+Matched Pattern: unauthorized
+
+Identified HTTP Server: nginx/1.18.0 (Ubuntu)
+
+Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+CVE Identified: CVE-2011-3192
+
+CVE Identified: CVE-2011-3192
+

@@ -1,0 +1,52 @@
+[*] smtp found on tcp/25.
+
+
+
+[*] finger found on tcp/79.
+
+
+
+[*] pop3pw found on tcp/106.
+
+
+
+[*] pop3 found on tcp/110.
+
+
+
+[*] imap found on tcp/143.
+
+
+
+[*] http found on tcp/443.
+
+
+
+[*] http found on tcp/8000.
+
+
+
+[*] ph-addressbook found on tcp/105.
+
+
+
+[*] http found on tcp/2224.
+
+
+
+[*] pando-pub found on tcp/7680.
+
+
+
+[*] vnc found on tcp/11100.
+
+
+
+[*] ftp found on tcp/20001.
+
+
+
+[*] unknown found on tcp/33006.
+
+
+

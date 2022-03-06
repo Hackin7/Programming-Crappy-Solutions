@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Sat Mar  5 11:19:32 2022 as: nmap -vv --reason -Pn -T4 -sV -p 39509 "--script=banner,nfs* and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp39509/tcp_39509_mountd_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/results/192.168.168.100/scans/tcp39509/xml/tcp_39509_mountd_nmap.xml" 192.168.168.100
+Nmap scan report for 192.168.168.100
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-03-05 11:19:33 EST for 20s
+
+PORT      STATE SERVICE REASON         VERSION
+39509/tcp open  mountd  syn-ack ttl 63 1-3 (RPC #100005)
+|_nfs-showmount: No NFS mounts available
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar  5 11:19:53 2022 -- 1 IP address (1 host up) scanned in 20.70 seconds

@@ -1,0 +1,40 @@
+WhatWeb report for http://192.168.128.153:8000
+Status    : 200 OK
+Title     : s3cur3 r3pl
+IP        : 192.168.128.153
+Country   : RESERVED, ZZ
+
+Summary   : Script, X-Powered-By[Express], HTML5, Bootstrap[4.0.0]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Version      : 4.0.0
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : Express (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 3112
+	ETag: W/"c28-OAyJFYlPD6pBXBZmeZ0QPx6hht4"
+	Date: Wed, 02 Mar 2022 09:56:29 GMT
+	Connection: close
+
+

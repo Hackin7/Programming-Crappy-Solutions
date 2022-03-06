@@ -1,0 +1,17 @@
+# Nmap 7.91 scan initiated Thu Mar  3 07:08:16 2022 as: nmap -vv --reason -Pn -T4 -sV -p 53 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp53/tcp_53_dns_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp53/xml/tcp_53_dns_nmap.xml" 192.168.128.172
+Nmap scan report for 192.168.128.172
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-03-03 07:08:23 EST for 32s
+
+PORT   STATE SERVICE REASON          VERSION
+53/tcp open  domain  syn-ack ttl 127 Simple DNS Plus
+|_dns-nsec-enum: Can't determine domain for host 192.168.128.172; use dns-nsec-enum.domains script arg.
+|_dns-nsec3-enum: Can't determine domain for host 192.168.128.172; use dns-nsec3-enum.domains script arg.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_dns-brute: Can't guess domain of "192.168.128.172"; use dns-brute.domain script argument.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar  3 07:08:55 2022 -- 1 IP address (1 host up) scanned in 40.02 seconds

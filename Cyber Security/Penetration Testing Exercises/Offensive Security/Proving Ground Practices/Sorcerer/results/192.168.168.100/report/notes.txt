@@ -1,0 +1,48 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] rpcbind found on tcp/111.
+
+
+
+[*] nfs_acl found on tcp/2049.
+
+
+
+[*] http found on tcp/8080.
+
+
+
+[*] rpcbind found on udp/111.
+
+
+
+[*] nfs_acl found on udp/2049.
+
+
+
+[*] http found on tcp/7742.
+
+
+
+[*] mountd found on tcp/37117.
+
+
+
+[*] mountd found on tcp/39509.
+
+
+
+[*] mountd found on tcp/41785.
+
+
+
+[*] nlockmgr found on tcp/44723.
+
+
+

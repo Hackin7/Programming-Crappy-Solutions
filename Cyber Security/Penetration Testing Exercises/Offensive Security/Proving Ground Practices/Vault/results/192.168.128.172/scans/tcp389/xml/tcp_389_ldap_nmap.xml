@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Mar  3 07:08:17 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 389 &quot;-&#45;script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp389/tcp_389_ldap_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp389/xml/tcp_389_ldap_nmap.xml&quot; 192.168.128.172 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 389 &quot;-&#45;script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp389/tcp_389_ldap_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp389/xml/tcp_389_ldap_nmap.xml&quot; 192.168.128.172" start="1646309297" startstr="Thu Mar  3 07:08:17 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646309305"/>
+<taskend task="NSE" time="1646309305"/>
+<taskbegin task="NSE" time="1646309305"/>
+<taskend task="NSE" time="1646309305"/>
+<taskbegin task="NSE" time="1646309305"/>
+<taskend task="NSE" time="1646309305"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646309306"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646309306"/>
+<taskbegin task="SYN Stealth Scan" time="1646309306"/>
+<taskend task="SYN Stealth Scan" time="1646309307" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646309311"/>
+<taskend task="Service scan" time="1646309329" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646309329"/>
+<taskend task="NSE" time="1646309341"/>
+<taskbegin task="NSE" time="1646309341"/>
+<taskend task="NSE" time="1646309342"/>
+<taskbegin task="NSE" time="1646309342"/>
+<taskend task="NSE" time="1646309342"/>
+<host starttime="1646309307" endtime="1646309342"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.128.172" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: vault.offsec, Site: Default-First-Site-Name" hostname="DC" ostype="Windows" method="probed" conf="10"/><script id="ldap-rootdse" output="&#xa;LDAP Results&#xa;  &lt;ROOT&gt;&#xa;      domainFunctionality: 7&#xa;      forestFunctionality: 7&#xa;      domainControllerFunctionality: 7&#xa;      rootDomainNamingContext: DC=vault,DC=offsec&#xa;      ldapServiceName: vault.offsec:dc$@VAULT.OFFSEC&#xa;      isGlobalCatalogReady: TRUE&#xa;      supportedSASLMechanisms: GSSAPI&#xa;      supportedSASLMechanisms: GSS-SPNEGO&#xa;      supportedSASLMechanisms: EXTERNAL&#xa;      supportedSASLMechanisms: DIGEST-MD5&#xa;      supportedLDAPVersion: 3&#xa;      supportedLDAPVersion: 2&#xa;      supportedLDAPPolicies: MaxPoolThreads&#xa;      supportedLDAPPolicies: MaxPercentDirSyncRequests&#xa;      supportedLDAPPolicies: MaxDatagramRecv&#xa;      supportedLDAPPolicies: MaxReceiveBuffer&#xa;      supportedLDAPPolicies: InitRecvTimeout&#xa;      supportedLDAPPolicies: MaxConnections&#xa;      supportedLDAPPolicies: MaxConnIdleTime&#xa;      supportedLDAPPolicies: MaxPageSize&#xa;      supportedLDAPPolicies: MaxBatchReturnMessages&#xa;      supportedLDAPPolicies: MaxQueryDuration&#xa;      supportedLDAPPolicies: MaxDirSyncDuration&#xa;      supportedLDAPPolicies: MaxTempTableSize&#xa;      supportedLDAPPolicies: MaxResultSetSize&#xa;      supportedLDAPPolicies: MinResultSets&#xa;      supportedLDAPPolicies: MaxResultSetsPerConn&#xa;      supportedLDAPPolicies: MaxNotificationPerConn&#xa;      supportedLDAPPolicies: MaxValRange&#xa;      supportedLDAPPolicies: MaxValRangeTransitive&#xa;      supportedLDAPPolicies: ThreadMemoryLimit&#xa;      supportedLDAPPolicies: SystemMemoryLimitPercent&#xa;      supportedControl: 1.2.840.113556.1.4.319&#xa;      supportedControl: 1.2.840.113556.1.4.801&#xa;      supportedControl: 1.2.840.113556.1.4.473&#xa;      supportedControl: 1.2.840.113556.1.4.528&#xa;      supportedControl: 1.2.840.113556.1.4.417&#xa;      supportedControl: 1.2.840.113556.1.4.619&#xa;      supportedControl: 1.2.840.113556.1.4.841&#xa;      supportedControl: 1.2.840.113556.1.4.529&#xa;      supportedControl: 1.2.840.113556.1.4.805&#xa;      supportedControl: 1.2.840.113556.1.4.521&#xa;      supportedControl: 1.2.840.113556.1.4.970&#xa;      supportedControl: 1.2.840.113556.1.4.1338&#xa;      supportedControl: 1.2.840.113556.1.4.474&#xa;      supportedControl: 1.2.840.113556.1.4.1339&#xa;      supportedControl: 1.2.840.113556.1.4.1340&#xa;      supportedControl: 1.2.840.113556.1.4.1413&#xa;      supportedControl: 2.16.840.1.113730.3.4.9&#xa;      supportedControl: 2.16.840.1.113730.3.4.10&#xa;      supportedControl: 1.2.840.113556.1.4.1504&#xa;      supportedControl: 1.2.840.113556.1.4.1852&#xa;      supportedControl: 1.2.840.113556.1.4.802&#xa;      supportedControl: 1.2.840.113556.1.4.1907&#xa;      supportedControl: 1.2.840.113556.1.4.1948&#xa;      supportedControl: 1.2.840.113556.1.4.1974&#xa;      supportedControl: 1.2.840.113556.1.4.1341&#xa;      supportedControl: 1.2.840.113556.1.4.2026&#xa;      supportedControl: 1.2.840.113556.1.4.2064&#xa;      supportedControl: 1.2.840.113556.1.4.2065&#xa;      supportedControl: 1.2.840.113556.1.4.2066&#xa;      supportedControl: 1.2.840.113556.1.4.2090&#xa;      supportedControl: 1.2.840.113556.1.4.2205&#xa;      supportedControl: 1.2.840.113556.1.4.2204&#xa;      supportedControl: 1.2.840.113556.1.4.2206&#xa;      supportedControl: 1.2.840.113556.1.4.2211&#xa;      supportedControl: 1.2.840.113556.1.4.2239&#xa;      supportedControl: 1.2.840.113556.1.4.2255&#xa;      supportedControl: 1.2.840.113556.1.4.2256&#xa;      supportedControl: 1.2.840.113556.1.4.2309&#xa;      supportedControl: 1.2.840.113556.1.4.2330&#xa;      supportedControl: 1.2.840.113556.1.4.2354&#xa;      supportedCapabilities: 1.2.840.113556.1.4.800&#xa;      supportedCapabilities: 1.2.840.113556.1.4.1670&#xa;      supportedCapabilities: 1.2.840.113556.1.4.1791&#xa;      supportedCapabilities: 1.2.840.113556.1.4.1935&#xa;      supportedCapabilities: 1.2.840.113556.1.4.2080&#xa;      supportedCapabilities: 1.2.840.113556.1.4.2237&#xa;      subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=vault,DC=offsec&#xa;      serverName: CN=DC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=vault,DC=offsec&#xa;      schemaNamingContext: CN=Schema,CN=Configuration,DC=vault,DC=offsec&#xa;      namingContexts: DC=vault,DC=offsec&#xa;      namingContexts: CN=Configuration,DC=vault,DC=offsec&#xa;      namingContexts: CN=Schema,CN=Configuration,DC=vault,DC=offsec&#xa;      namingContexts: DC=DomainDnsZones,DC=vault,DC=offsec&#xa;      namingContexts: DC=ForestDnsZones,DC=vault,DC=offsec&#xa;      isSynchronized: TRUE&#xa;      highestCommittedUSN: 61506&#xa;      dsServiceName: CN=NTDS Settings,CN=DC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=vault,DC=offsec&#xa;      dnsHostName: DC.vault.offsec&#xa;      defaultNamingContext: DC=vault,DC=offsec&#xa;      currentTime: 20220303120853.0Z&#xa;      configurationNamingContext: CN=Configuration,DC=vault,DC=offsec&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="192991" rttvar="192991" to="964955"/>
+</host>
+<taskbegin task="NSE" time="1646309342"/>
+<taskend task="NSE" time="1646309342"/>
+<taskbegin task="NSE" time="1646309342"/>
+<taskend task="NSE" time="1646309342"/>
+<taskbegin task="NSE" time="1646309342"/>
+<taskend task="NSE" time="1646309342"/>
+<runstats><finished time="1646309342" timestr="Thu Mar  3 07:09:02 2022" summary="Nmap done at Thu Mar  3 07:09:02 2022; 1 IP address (1 host up) scanned in 45.75 seconds" elapsed="45.75" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

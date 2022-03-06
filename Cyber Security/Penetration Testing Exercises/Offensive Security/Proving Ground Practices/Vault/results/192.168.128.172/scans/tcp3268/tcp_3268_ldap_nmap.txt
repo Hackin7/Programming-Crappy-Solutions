@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Thu Mar  3 07:08:18 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3268 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp3268/tcp_3268_ldap_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Vault/results/192.168.128.172/scans/tcp3268/xml/tcp_3268_ldap_nmap.xml" 192.168.128.172
+Nmap scan report for 192.168.128.172
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-03-03 07:08:28 EST for 34s
+
+PORT     STATE SERVICE    REASON          VERSION
+3268/tcp open  tcpwrapped syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar  3 07:09:02 2022 -- 1 IP address (1 host up) scanned in 45.13 seconds

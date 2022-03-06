@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Mar  5 12:15:28 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 79 -&#45;script=banner,finger -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp79/tcp_79_finger_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp79/xml/tcp_79_finger_nmap.xml&quot; 192.168.168.140 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 79 -&#45;script=banner,finger -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp79/tcp_79_finger_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/results/192.168.168.140/scans/tcp79/xml/tcp_79_finger_nmap.xml&quot; 192.168.168.140" start="1646500528" startstr="Sat Mar  5 12:15:28 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="79"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1646500532"/>
+<taskend task="NSE" time="1646500532"/>
+<taskbegin task="NSE" time="1646500532"/>
+<taskend task="NSE" time="1646500532"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1646500532"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1646500532"/>
+<taskbegin task="SYN Stealth Scan" time="1646500532"/>
+<taskend task="SYN Stealth Scan" time="1646500532" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1646500533"/>
+<taskend task="Service scan" time="1646500540" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1646500540"/>
+<taskend task="NSE" time="1646500551"/>
+<taskbegin task="NSE" time="1646500551"/>
+<taskend task="NSE" time="1646500551"/>
+<host starttime="1646500532" endtime="1646500551"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.168.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="79"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="finger" product="Mercury/32 fingerd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="finger" output="Login: Admin         Name: Mail System Administrator&#xd;&#xa;&#xd;&#xa;[No profile information]&#xd;&#xa;"/></port>
+</ports>
+<times srtt="170766" rttvar="170766" to="853830"/>
+</host>
+<taskbegin task="NSE" time="1646500551"/>
+<taskend task="NSE" time="1646500551"/>
+<taskbegin task="NSE" time="1646500551"/>
+<taskend task="NSE" time="1646500551"/>
+<runstats><finished time="1646500551" timestr="Sat Mar  5 12:15:51 2022" summary="Nmap done at Sat Mar  5 12:15:51 2022; 1 IP address (1 host up) scanned in 23.46 seconds" elapsed="23.46" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

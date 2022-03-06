@@ -1,0 +1,85 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:51:48 2022 as: nmap -vv --reason -Pn -T4 -sV -p 33047 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp33047/tcp_33047_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp33047/xml/tcp_33047_http_nmap.xml" 192.168.128.139
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-03-02 07:51:54 EST for 85s
+
+PORT      STATE SERVICE REASON         VERSION
+33047/tcp open  http    syn-ack ttl 63 Node.js Express framework
+|_http-chrono: Request times for /; avg: 500.88ms; min: 470.70ms; max: 524.07ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 02 Mar 2022 12:52:17 GMT; +2s from local time.
+|_http-devframework: Express detected. Found Express in X-Powered-By Header
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.128.139
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://192.168.128.139:33047/trackEvent
+|   
+|   Error Code: 404
+|_  	http://192.168.128.139:33047/trackError
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   X-Powered-By: Express
+|   Access-Control-Allow-Origin: *
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 114
+|   ETag: W/"72-B4s8jAmkCTi2Cvzqj0g69ZP9joc"
+|   Date: Wed, 02 Mar 2022 12:52:18 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 79c9d482a184f8a1e9814c0bd72cb93b
+|_Credits query returned unknown hash 79c9d482a184f8a1e9814c0bd72cb93b
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:53:19 2022 -- 1 IP address (1 host up) scanned in 91.11 seconds

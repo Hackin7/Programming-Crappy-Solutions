@@ -1,0 +1,12 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] ftp found on tcp/2121.
+
+
+
+[*] unknown found on tcp/7138.
+
+
+

@@ -1,0 +1,244 @@
+# Nmap 7.91 scan initiated Wed Mar  2 07:35:18 2022 as: nmap -vv --reason -Pn -T4 -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp8080/tcp_8080_http_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Catto/results/192.168.128.139/scans/tcp8080/xml/tcp_8080_http_nmap.xml" 192.168.128.139
+Nmap scan report for 192.168.128.139
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-03-02 07:35:20 EST for 549s
+
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 63 nginx 1.14.1
+|_http-chrono: Request times for /; avg: 466.91ms; min: 421.31ms; max: 517.70ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.128.139
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 735
+|     Comment: 
+|         /* Icons */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 974
+|     Comment: 
+|         /* Footer */
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 27
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         						-->
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 20
+|     Comment: 
+|         <!-- Main -->
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 277
+|     Comment: 
+|         /* Form */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 810
+|     Comment: 
+|         /* Button */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 526
+|     Comment: 
+|         /* Icon */
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 17
+|     Comment: 
+|         <!-- Wrapper -->
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 79
+|     Comment: 
+|         /* Basic */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 153
+|     Comment: 
+|         /* Type */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 10
+|     Comment: 
+|         /* Icon (alt) */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 901
+|     Comment: 
+|         /* Main */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 613
+|     Comment: 
+|         /* Actions */
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 73
+|     Comment: 
+|         <!-- Footer -->
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 4
+|     Comment: 
+|         
+|         
+|         
+|         
+|         */
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 2
+|     Comment: 
+|         
+|         
+|         
+|         
+|         -->
+|     
+|     Path: http://192.168.128.139:8080/
+|     Line number: 82
+|     Comment: 
+|         <!-- Scripts -->
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 563
+|     Comment: 
+|         /* List */
+|     
+|     Path: http://192.168.128.139:8080/assets/css/main.css
+|     Line number: 1007
+|     Comment: 
+|_        /* Wrapper */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.128.139
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.128.139:8080/
+|     Form id: name
+|_    Form action: #
+|_http-date: Wed, 02 Mar 2022 12:35:33 GMT; +1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /README.txt: Interesting, a readme.
+|_http-errors: Couldn't find any error pages.
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: nginx/1.14.1
+|   Date: Wed, 02 Mar 2022 12:35:32 GMT
+|   Content-Type: text/html
+|   Content-Length: 3032
+|   Last-Modified: Tue, 01 Dec 2020 00:22:51 GMT
+|   Connection: close
+|   ETag: "5fc58cdb-bd8"
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash a30182c26628620ab0cec6b91e6858b5
+|_Credits query returned unknown hash a30182c26628620ab0cec6b91e6858b5
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: nginx/1.14.1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /assets/css/
+|       css: 2
+|     /images/
+|       jpg: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /assets/css/
+|   Total files found (by extension):
+|_    Other: 1; css: 2; jpg: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Identity by HTML5 UP
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2011-3192  BID:49303
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|       https://www.securityfocus.com/bid/49303
+|_      https://www.tenable.com/plugins/nessus/55976
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 07:44:29 2022 -- 1 IP address (1 host up) scanned in 551.56 seconds
