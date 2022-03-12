@@ -123,6 +123,17 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ## 21 - FTP
 
+```bash
+┌──(kali㉿kali)-[/media/…/Offensive Security/Proving Ground Practices/Clyde/autorecon]
+└─$ pftp 192.168.172.68
+Connected to 192.168.172.68.
+220 (vsFTPd 3.0.3)
+Name (192.168.172.68:kali): 
+530 This FTP server is anonymous only.
+Login failed.
+ftp> 
+```
+
 ```
 | ftp-anon: Anonymous FTP login allowed (FTP code 230)
 | drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 PackageKit
@@ -151,9 +162,206 @@ OS and Service detection performed. Please report any incorrect results at https
 Service Info: OS: Unix
 ```
 
+### Root Directory
+
+```bash
+┌──(kali㉿kali)-[/media/…/Offensive Security/Proving Ground Practices/Clyde/autorecon]
+└─$ pftp 192.168.172.68
+Connected to 192.168.172.68.
+220 (vsFTPd 3.0.3)
+Name (192.168.172.68:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,74).
+p150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 PackageKit
+drwxr-xr-x    5 ftp      ftp          4096 Apr 24  2020 apache2
+drwxr-xr-x    5 ftp      ftp          4096 Sep 21  2020 apt
+drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 dbus
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 dhcp
+drwxr-xr-x    7 ftp      ftp          4096 Sep 21  2020 dpkg
+drwxr-xr-x    2 ftp      ftp          4096 Apr 20  2020 git
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 initramfs-tools
+drwxr-xr-x    2 ftp      ftp          4096 May 07  2020 logrotate
+drwxr-xr-x    2 ftp      ftp          4096 Sep 08  2019 misc
+drwxr-xr-x    5 ftp      ftp          4096 Feb 15 10:01 mysql
+drwxr-xr-x    2 ftp      ftp          4096 Jul 13  2017 os-prober
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 pam
+drwxr-xr-x    4 ftp      ftp          4096 Apr 24  2020 php
+drwx------    3 ftp      ftp          4096 Apr 24  2020 polkit-1
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 python
+drwxr-xr-x    3 ftp      ftp          4096 May 08  2020 rabbitmq
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 sgml-base
+drwxr-xr-x    6 ftp      ftp          4096 Apr 22  2020 systemd
+drwxr-xr-x    3 ftp      ftp          4096 Apr 30  2020 ucf
+drwxr-xr-x    3 ftp      ftp          4096 Apr 22  2020 vim
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 vmware
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 xml-core
+226 Directory send OK.
+ftp> pwd
+257 "/var/lib" is the current directory
+ftp> cd /
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,70).
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 bin
+drwxr-xr-x    3 ftp      ftp          4096 Sep 21  2020 boot
+drwxr-xr-x   16 ftp      ftp          3020 Feb 15 10:01 dev
+drwxr-xr-x   79 ftp      ftp          4096 Sep 21  2020 etc
+drwxr-xr-x    3 ftp      ftp          4096 Apr 22  2020 home
+lrwxrwxrwx    1 ftp      ftp            30 Apr 24  2020 initrd.img -> boot/initrd.img-4.9.0-12-amd64
+lrwxrwxrwx    1 ftp      ftp            30 Apr 22  2020 initrd.img.old -> boot/initrd.img-4.9.0-11-amd64
+drwxr-xr-x   14 ftp      ftp          4096 Apr 24  2020 lib
+drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 lib64
+drwx------    2 ftp      ftp         16384 Apr 22  2020 lost+found
+drwxr-xr-x    3 ftp      ftp          4096 Apr 22  2020 media
+drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 mnt
+drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 opt
+dr-xr-xr-x   84 ftp      ftp             0 Feb 15 10:01 proc
+drwx------    3 ftp      ftp          4096 Mar 09 00:41 root
+drwxr-xr-x   19 ftp      ftp           540 Mar 09 00:41 run
+drwxr-xr-x    2 ftp      ftp          4096 Sep 21  2020 sbin
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 srv
+dr-xr-xr-x   13 ftp      ftp             0 Feb 15 10:01 sys
+drwxrwxrwt   10 ftp      ftp          4096 Mar 09 00:41 tmp
+drwxr-xr-x   10 ftp      ftp          4096 Apr 22  2020 usr
+drwxr-xr-x   12 ftp      ftp          4096 Apr 24  2020 var
+lrwxrwxrwx    1 ftp      ftp            27 Apr 24  2020 vmlinuz -> boot/vmlinuz-4.9.0-12-amd64
+lrwxrwxrwx    1 ftp      ftp            27 Apr 22  2020 vmlinuz.old -> boot/vmlinuz-4.9.0-11-amd64
+226 Directory send OK.
+ftp> cd home
+550 Permission denied.
+ftp> cd var
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,74).
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp          4096 May 07  2020 backups
+drwxr-xr-x    7 ftp      ftp          4096 Apr 24  2020 cache
+drwxr-xr-x   25 ftp      ftp          4096 Apr 24  2020 lib
+drwxrwsr-x    2 ftp      ftp          4096 Sep 08  2019 local
+lrwxrwxrwx    1 ftp      ftp             9 Apr 22  2020 lock -> /run/lock
+drwxr-xr-x    8 ftp      ftp          4096 Feb 15 10:01 log
+drwxrwsr-x    2 ftp      ftp          4096 Apr 22  2020 mail
+drwxr-xr-x    2 ftp      ftp          4096 Apr 22  2020 opt
+lrwxrwxrwx    1 ftp      ftp             4 Apr 22  2020 run -> /run
+drwxr-xr-x    4 ftp      ftp          4096 Apr 22  2020 spool
+drwxrwxrwt    6 ftp      ftp          4096 Mar 09 00:41 tmp
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 www
+226 Directory send OK.
+ftp> cd www
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,64).
+150 Here comes the directory listing.
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 html
+226 Directory send OK.
+ftp> cd html
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,74).
+150 Here comes the directory listing.
+-rw-r--r--    1 ftp      ftp         10701 Apr 24  2020 index.html
+drwxr-xr-x   12 ftp      ftp          4096 Apr 24  2020 php4dvd
+226 Directory send OK.
+ftp> cd php4dvd
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,73).
+150 Here comes the directory listing.
+-rw-r--r--    1 ftp      ftp         14748 Apr 24  2020 CHANGELOG.md
+-rw-r--r--    1 ftp      ftp         35147 Apr 24  2020 LICENSE.md
+-rw-r--r--    1 ftp      ftp          9573 Apr 24  2020 README.md
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 cache
+-rw-r--r--    1 ftp      ftp          4270 Apr 24  2020 common.inc.php
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 compiled
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 config
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 docs
+-rw-r--r--    1 ftp      ftp         15086 Apr 24  2020 favicon.ico
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 includes
+-rw-r--r--    1 ftp      ftp          7555 Apr 24  2020 index.php
+drwxr-xr-x    2 ftp      ftp          4096 Apr 24  2020 lang
+drwxr-xr-x    9 ftp      ftp          4096 Apr 24  2020 lib
+drwxr-xr-x    3 ftp      ftp          4096 Apr 24  2020 movies
+drwxr-xr-x    4 ftp      ftp          4096 Apr 24  2020 tpl
+226 Directory send OK.
+ftp> cd config
+250 Directory successfully changed.
+ftp> ls
+227 Entering Passive Mode (192,168,172,68,156,73).
+150 Here comes the directory listing.
+-rw-r--r--    1 ftp      ftp          6881 Apr 24  2020 config.default.php
+-rw-r--r--    1 ftp      ftp           444 Apr 24  2020 config.php
+-rw-r--r--    1 ftp      ftp          2997 Apr 24  2020 foreign.chars.php
+-rw-r--r--    1 ftp      ftp          8445 Apr 24  2020 parental.guidance.php
+-rw-r--r--    1 ftp      ftp            71 Apr 24  2020 version.default.inc.php
+-rw-r--r--    1 ftp      ftp            68 Apr 24  2020 version.inc.php
+226 Directory send OK.
+ftp> lcd /tmp
+Local directory now /tmp
+ftp> get config.php
+local: config.php remote: config.php
+227 Entering Passive Mode (192,168,172,68,156,71).
+150 Opening BINARY mode data connection for config.php (444 bytes).
+226 Transfer complete.
+444 bytes received in 0.00 secs (97.7663 kB/s)
+ftp> get /etc/passwd
+local: ./etc/passwd remote: /etc/passwd
+local: ./etc/passwd: No such file or directory
+ftp> cd /etc
+550 Permission denied.
+ftp> get version.inc.php
+local: version.inc.php remote: version.inc.php
+227 Entering Passive Mode (192,168,172,68,156,64).
+150 Opening BINARY mode data connection for version.inc.php (68 bytes).
+226 Transfer complete.
+68 bytes received in 0.00 secs (379.4643 kB/s)
+ftp> 
+```
+
+### Files
+
+```bash
+┌──(kali㉿kali)-[/tmp]
+└─$ cat config.php      
+<?php
+defined('DIRECTACCESS') OR exit('No direct script access allowed');
+$settings["defaultlanguage"] = "en";
+$settings["url"]["base"] = "php4dvd";
+$settings["db"]["host"] = "localhost";
+$settings["db"]["port"] = 3306;
+$settings["db"]["name"] = "php4dvd";
+$settings["db"]["user"] = "php4dvd";
+$settings["db"]["pass"] = "ef811d218ed9e3391ebf4f04915dd215";
+$settings["user"]["guestview"] = false;
+$settings["template"] = "default";
+?>                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ cat version.inc.php 
+<?php
+define('VERSION', '3.9.0');
+define('DB_VERSION', '3.7');
+?>                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp]
+└─$ 
+```
+
+https://packetstormsecurity.com/files/121835/PHP4DVD-2.0-Code-Injection.html
+
 ## 80 - Apache Web
 
 Apache default page
+
+### php4dvd
+
+`admin:admin`
+
+![](Pasted%20image%2020220309090552.png)
 
 ## 4369 - Erlang Port Mapper Daemon
 https://book.hacktricks.xyz/pentesting/4369-pentesting-erlang-port-mapper-daemon-epmd
@@ -170,6 +378,10 @@ name rabbit at port 65000
 
 ## 15672 - RabbitMQ
 ![](Pasted%20image%2020220131144422.png)
+
+```
+guest:guest
+```
 
 ![](Pasted%20image%2020220131144438.png)
 

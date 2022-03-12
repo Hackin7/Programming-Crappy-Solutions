@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md",
+            "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
             "mode": "source",
             "source": false
           }
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md"
+            "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md"
           }
         }
       }
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346
+    "width": 346,
+    "collapsed": true
   },
   "right": {
     "id": "97fc30474c035c4a",
@@ -81,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md",
+                "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md"
+                "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md"
               }
             }
           }
@@ -111,15 +112,15 @@
   },
   "active": "96124f4b524c90d3",
   "lastOpenFiles": [
+    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/Don't Touch My Flag/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/Wildest Dreams Part 2/README.md",
+    "Cyber Security/Capture the Flag Competitions/Writeup Template.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/README.md",
+    "Oh My Webserver/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/README.md",
     "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Maria/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Postfish/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Payday/payday.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Nappa/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Kevin/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Malbec/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hepet/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sorcerer/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/README.md"
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Quackerjack/README.md",
+    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/README.md"
   ]
 }

