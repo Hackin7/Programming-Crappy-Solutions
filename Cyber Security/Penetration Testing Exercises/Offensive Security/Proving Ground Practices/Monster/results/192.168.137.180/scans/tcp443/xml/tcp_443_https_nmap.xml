@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Mar 21 09:37:59 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/tcp_443_https_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/xml/tcp_443_https_nmap.xml&quot; 192.168.137.180 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/tcp_443_https_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/xml/tcp_443_https_nmap.xml&quot; 192.168.137.180" start="1647869879" startstr="Mon Mar 21 09:37:59 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1647869880"/>
+<taskend task="NSE" time="1647869880"/>
+<taskbegin task="NSE" time="1647869880"/>
+<taskend task="NSE" time="1647869880"/>
+<taskbegin task="NSE" time="1647869880"/>
+<taskend task="NSE" time="1647869880"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1647869880"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1647869880"/>
+<taskbegin task="SYN Stealth Scan" time="1647869880"/>
+<taskend task="SYN Stealth Scan" time="1647869880" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1647869880"/>
+<taskend task="Service scan" time="1647869894" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1647869894"/>
+<taskprogress task="NSE" time="1647869925" percent="86.89" remaining="5" etc="1647869930"/>
+<taskprogress task="NSE" time="1647869955" percent="98.05" remaining="2" etc="1647869956"/>
+<taskprogress task="NSE" time="1647869985" percent="98.70" remaining="2" etc="1647869986"/>
+<taskprogress task="NSE" time="1647870015" percent="99.35" remaining="1" etc="1647870016"/>
+<taskend task="NSE" time="1647870029"/>
+<taskbegin task="NSE" time="1647870029"/>
+<taskprogress task="NSE" time="1647870060" percent="87.50" remaining="5" etc="1647870064"/>
+<taskend task="NSE" time="1647870070"/>
+<taskbegin task="NSE" time="1647870070"/>
+<taskend task="NSE" time="1647870072"/>
+<host starttime="1647869880" endtime="1647870072"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.137.180" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Win64) OpenSSL/1.1.1c PHP/7.3.10" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-chrono" output="Request times for /; avg: 967.58ms; min: 919.55ms; max: 1030.90ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.137.180&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 40&#xa;    Comment: &#xa;         // is generally empty as we don&apos;t want to alter the default options for&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 124&#xa;    Comment: &#xa;         // if a list item has a nested menu&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 60&#xa;    Comment: &#xa;         //remove ids from clone to prevent css issues&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 99&#xa;    Comment: &#xa;        /* Effects&#xa;         **********************************************/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 116&#xa;    Comment: &#xa;         // iterate over structure adding additional structure&#xa;    &#xa;    Path: https://192.168.137.180:443/wazowski@offsec.pg&#xa;    Line number: 8&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        /*]]&gt;*/-&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 323&#xa;    Comment: &#xa;         //Fire beforeOpen callback&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 332&#xa;    Comment: &#xa;        /*@cc_on!@*/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 191&#xa;    Comment: &#xa;         //Emulate menu close&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 485&#xa;    Comment: &#xa;        &lt;!-&#45; Footer Section Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 36&#xa;    Comment: &#xa;        &lt;!-&#45; Navbar Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 39&#xa;    Comment: &#xa;        &lt;!-&#45; Brand and toggle get grouped for better mobile display -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 437&#xa;    Comment: &#xa;         // Is the first parameter an object (options), or was omitted, instantiate a new instance&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 63&#xa;    Comment: &#xa;         // Left&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 55&#xa;    Comment: &#xa;        &#xa;            ========================================================*/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/bootstrap.min.css&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*# sourceMappingURL=bootstrap.min.css.map */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 49&#xa;    Comment: &#xa;        &#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 409&#xa;    Comment: &#xa;        &lt;!-&#45; Counter Area End-&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 521&#xa;    Comment: &#xa;        &lt;!-&#45; jQuery first, then Popper.js, then Bootstrap JS -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 233&#xa;    Comment: &#xa;         // AJAX&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * SlickNav Responsive Mobile Menu v1.0.4&#xa;         * (c) 2015 Josh Cope&#xa;         * licensed under MIT&#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 140&#xa;    Comment: &#xa;        &lt;!-&#45; Header Area wrapper End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 352&#xa;    Comment: &#xa;         //jQuery 1.7 bug fix&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 176&#xa;    Comment: &#xa;        &lt;!-&#45; Services Section Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 39&#xa;    Comment: &#xa;         // more objects, storing the result in the first object. The first object&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/responsive.css&#xa;    Line number: 25&#xa;    Comment: &#xa;        /* only small tablets */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 381&#xa;    Comment: &#xa;         // Remove click handlers&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 374&#xa;    Comment: &#xa;        &lt;!-&#45; Counter Item -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 367&#xa;    Comment: &#xa;         // set attributes of element and children based on visibility&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 179&#xa;    Comment: &#xa;         // accessibility for links&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;         * Nivo Lightbox v1.3.1&#xa;         * http://dev7studios.com/nivo-lightbox&#xa;         *&#xa;         * Copyright 2013, Dev7studios&#xa;         * Free to use and abuse under the MIT license.&#xa;         * http://www.opensource.org/licenses/mit-license.php&#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 26&#xa;    Comment: &#xa;        &lt;!-&#45; Main Style -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 483&#xa;    Comment: &#xa;        &lt;!-&#45; Contact Section End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 28&#xa;    Comment: &#xa;        &lt;!-&#45; Responsive Style -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 16&#xa;    Comment: &#xa;        &lt;!-&#45; Slicknav -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 8&#xa;    Comment: &#xa;         // default settings object.&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 312&#xa;    Comment: &#xa;         // Set the title&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 368&#xa;    Comment: &#xa;        &lt;!-&#45; Portfolio Section Ends -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 232&#xa;    Comment: &#xa;        &lt;!-&#45; Services Section End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 371&#xa;    Comment: &#xa;         // select all parents that aren&apos;t hidden&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 83&#xa;    Comment: &#xa;         // styling class for the button&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 514&#xa;    Comment: &#xa;        &lt;!-&#45; Footer Section End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 127&#xa;    Comment: &#xa;         // select all text before the child menu&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 134&#xa;    Comment: &#xa;        /* slideLeft / slideRight / slideUp / slideDown */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/fonts/simple-line-icons.css&#xa;    Line number: 211&#xa;    Comment: &#xa;        /* Better Font Rendering =========== */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/responsive.css&#xa;    Line number: 42&#xa;    Comment: &#xa;        /* mobile or only mobile */&#xa;    &#xa;    Path: https://192.168.137.180:443/wazowski@offsec.pg&#xa;    Line number: 8&#xa;    Comment: &#xa;        &lt;!-&#45;/*-&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/animate.css&#xa;    Line number: 96&#xa;    Comment: &#xa;        /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 198&#xa;    Comment: &#xa;         // Video (Youtube/Vimeo)&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 262&#xa;    Comment: &#xa;         //toggle menu&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 22&#xa;    Comment: &#xa;        &lt;!-&#45; Nivo Lightbox -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 267&#xa;    Comment: &#xa;         // Inline HTML&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 216&#xa;    Comment: &#xa;         // outline prevention when using mouse&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 12&#xa;    Comment: &#xa;        &#xa;        &#xa;           ========================================================================== */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/responsive.css&#xa;    Line number: 11&#xa;    Comment: &#xa;        /* tablets */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 181&#xa;    Comment: &#xa;        &lt;!-&#45; Services item -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 94&#xa;    Comment: &#xa;         // create menu bar&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 467&#xa;    Comment: &#xa;         // If the earlier cached method gives a value back return the value, otherwise return this to preserve chainability.&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 65&#xa;    Comment: &#xa;         // Right&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/popper.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 18&#xa;    Comment: &#xa;        &lt;!-&#45; Menu CSS -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 444&#xa;    Comment: &#xa;         // if it has no instance, create a new one, pass options to our plugin constructor,&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.nav.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;         * jQuery One Page Nav Plugin&#xa;         * http://github.com/davist11/jQuery-One-Page-Nav&#xa;         *&#xa;         * Copyright (c) 2010 Trevor Davis (http://trevordavis.net)&#xa;         * Dual licensed under the MIT and GPL licenses.&#xa;         * Uses the same license as jQuery, see:&#xa;         * http://jquery.org/license&#xa;         *&#xa;         * @version 3.0.0&#xa;         *&#xa;         * Example usage:&#xa;         * $(&apos;#nav&apos;).onePageNav({&#xa;         *   currentClass: &apos;current&apos;,&#xa;         *   changeHash: false,&#xa;         *   scrollSpeed: 750&#xa;         * });&#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 370&#xa;    Comment: &#xa;        &lt;!-&#45; Counter Area Start-&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 127&#xa;    Comment: &#xa;         // For CSS transitions&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 374&#xa;    Comment: &#xa;         // iterate over all items setting appropriate tags&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 102&#xa;    Comment: &#xa;        &lt;!-&#45; Hero Area Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 274&#xa;    Comment: &#xa;         // Vertically center html&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/animate.css&#xa;    Line number: 4&#xa;    Comment: &#xa;        /*!&#xa;        Animate.css - http://daneden.me/animate&#xa;        Licensed under the MIT license&#xa;        &#xa;        Copyright (c) 2013 Daniel Eden&#xa;        &#xa;        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&#xa;        &#xa;        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&#xa;        &#xa;        THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&#xa;        */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 26&#xa;    Comment: &#xa;        &#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 150&#xa;    Comment: &#xa;         // wrap item text with tag and add classes unless we are separating parent links&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 181&#xa;    Comment: &#xa;         //Ensure that it&apos;s not a parent&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 46&#xa;    Comment: &#xa;        &#xa;            ========================================================*/&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 34&#xa;    Comment: &#xa;        &lt;!-&#45; Header Area wrapper Starts -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/waypoints.min.js&#xa;    Line number: 2&#xa;    Comment: &#xa;        /*&#xa;        jQuery Waypoints - v2.0.3&#xa;        Copyright (c) 2011-2013 Caleb Troughton&#xa;        Dual licensed under the MIT license and GPL license.&#xa;        https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt&#xa;        */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 394&#xa;    Comment: &#xa;         // get all 1st level items that are clickable&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 75&#xa;    Comment: &#xa;         // remove classes if set&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 289&#xa;    Comment: &#xa;         //Separated parent link structure&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 357&#xa;    Comment: &#xa;         //Fire init or afterClose callback&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 57&#xa;    Comment: &#xa;         // clone menu if needed&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 462&#xa;    Comment: &#xa;         // Call the method of our plugin instance, and pass it the supplied arguments.&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 459&#xa;    Comment: &#xa;         // Tests that there&apos;s already a plugin-instance and checks that the requested public method exists&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 385&#xa;    Comment: &#xa;         // Empty content (for videos)&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 450&#xa;    Comment: &#xa;         // If is a string and doesn&apos;t start with an underscore or &apos;init&apos; function, treat this as a call to a public method.&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 453&#xa;    Comment: &#xa;         // Cache the method call to make it possible to return a value&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 7&#xa;    Comment: &#xa;        &#xa;        &#xa;           ========================================================================== */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 445&#xa;    Comment: &#xa;         // and store the plugin instance in the elements jQuery data object.&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 441&#xa;    Comment: &#xa;         // Only allow the plugin to be instantiated once due to methods&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 241&#xa;    Comment: &#xa;        &lt;!-&#45; Portfolio Controller/Buttons -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 213&#xa;    Comment: &#xa;         // accessibility for menu button&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 332&#xa;    Comment: &#xa;         //Fire afterOpen callback&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 14&#xa;    Comment: &#xa;        &lt;!-&#45; Icon -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 311&#xa;    Comment: &#xa;         // toggle actual visibility and accessibility tags&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 208&#xa;    Comment: &#xa;         //https://www.youtube-nocookie.com/embed/...&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 236&#xa;    Comment: &#xa;        &lt;!-&#45; Container Starts -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.counterup.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 279&#xa;    Comment: &#xa;         // toggle clicked items&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/responsive.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* only small desktops */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 170&#xa;    Comment: &#xa;         // Image&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 254&#xa;    Comment: &#xa;         // allow links clickable within parent tags if set&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 237&#xa;    Comment: &#xa;         // check for enter key on menu button and menu parents&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 231&#xa;    Comment: &#xa;         // click on menu parent&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/bootstrap.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;          * Bootstrap v4.0.0 (https://getbootstrap.com)&#xa;          * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)&#xa;          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)&#xa;          */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 225&#xa;    Comment: &#xa;         // menu button click&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 115&#xa;    Comment: &#xa;        /* fadeScale */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 10&#xa;    Comment: &#xa;        &lt;!-&#45; Bootstrap CSS -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 128&#xa;    Comment: &#xa;         // check for anchors&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 210&#xa;    Comment: &#xa;         // finally toggle entire menu&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/fonts/simple-line-icons.css&#xa;    Line number: 11&#xa;    Comment: &#xa;        /*&#xa;         Use the following CSS code if you want to have a class per icon.&#xa;         Instead of a list of all class selectors, you can use the generic [class*=&quot;icon-&quot;] selector, but it&apos;s slower:&#xa;        */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 24&#xa;    Comment: &#xa;        &lt;!-&#45; Animate -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 142&#xa;    Comment: &#xa;        &lt;!-&#45; About Section Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 259&#xa;    Comment: &#xa;        &lt;!-&#45; Portfolio Recent Projects -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 296&#xa;    Comment: &#xa;         // iFrame (default)&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 202&#xa;    Comment: &#xa;         // structure is in place, now hide appropriate items&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 70&#xa;    Comment: &#xa;        &#xa;            ========================================================*/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 188&#xa;    Comment: &#xa;         //also close on click if parent links are set&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 111&#xa;    Comment: &#xa;         // Next&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 183&#xa;    Comment: &#xa;         //Emulate menu close if set&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 61&#xa;    Comment: &#xa;         // Escape&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 57&#xa;    Comment: &#xa;         // keyboardNav&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Nivo Lightbox v1.3.1&#xa;         * http://dev7studios.com/nivo-lightbox&#xa;         *&#xa;         * Copyright 2013, Dev7studios&#xa;         * Free to use and abuse under the MIT license.&#xa;         * http://www.opensource.org/licenses/mit-license.php&#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 62&#xa;    Comment: &#xa;        &#xa;            ========================================================*/&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 80&#xa;    Comment: &#xa;        &lt;!-&#45; Mobile Menu Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 35&#xa;    Comment: &#xa;        /* slicknav mobile menu active  */&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 184&#xa;    Comment: &#xa;        /* fall */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 100&#xa;    Comment: &#xa;        &lt;!-&#45; Navbar End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/main.js&#xa;    Line number: 22&#xa;    Comment: &#xa;        &#xa;            ========================================================*/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 171&#xa;    Comment: &#xa;         //append arrow&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 165&#xa;    Comment: &#xa;         // create parent arrow. wrap with link if parent links and separating&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 137&#xa;    Comment: &#xa;        &lt;!-&#45; Hero Area End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 12&#xa;    Comment: &#xa;        &lt;!-&#45; Fonts -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 366&#xa;    Comment: &#xa;        &lt;!-&#45; Container Ends -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 181&#xa;    Comment: &#xa;         // For Firefox&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 68&#xa;    Comment: &#xa;         // remove ids if set&#xa;    &#xa;    Path: https://192.168.137.180:443/wazowski@offsec.pg&#xa;    Line number: 13&#xa;    Comment: &#xa;        /*]]&gt;*/&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 41&#xa;    Comment: &#xa;         // future instances of the plugin&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 38&#xa;    Comment: &#xa;         // jQuery has an extend method which merges the contents of two or&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 256&#xa;    Comment: &#xa;        &lt;!-&#45; Portfolio Controller/Buttons Ends-&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery-min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */&#xa;    &#xa;    Path: https://192.168.137.180:443/wazowski@offsec.pg&#xa;    Line number: 8&#xa;    Comment: &#xa;        /*-&#45;&gt;&lt;![CDATA[/*&gt;&lt;!-&#45;*/&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 234&#xa;    Comment: &#xa;        &lt;!-&#45; Portfolio Section -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js&#xa;    Line number: 343&#xa;    Comment: &#xa;         //Fire init or beforeClose callback&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/popper.min.js&#xa;    Line number: 5&#xa;    Comment: &#xa;        &#xa;        &#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/bootstrap.min.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Bootstrap v4.0.0 (https://getbootstrap.com)&#xa;         * Copyright 2011-2018 The Bootstrap Authors&#xa;         * Copyright 2011-2018 Twitter, Inc.&#xa;         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)&#xa;         */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 516&#xa;    Comment: &#xa;        &lt;!-&#45; Go to Top Link -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 411&#xa;    Comment: &#xa;        &lt;!-&#45; Contact Section Start -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 93&#xa;    Comment: &#xa;         // Nav&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 4&#xa;    Comment: &#xa;        &lt;!-&#45; Required meta tags -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 165&#xa;    Comment: &#xa;         // Is HiDPI?&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css&#xa;    Line number: 84&#xa;    Comment: &#xa;        /* https://bugzilla.mozilla.org/show_bug.cgi?id=308801 */&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 174&#xa;    Comment: &#xa;        &lt;!-&#45; About Section End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 98&#xa;    Comment: &#xa;        &lt;!-&#45; Mobile Menu End -&#45;&gt;&#xa;    &#xa;    Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js&#xa;    Line number: 374&#xa;    Comment: &#xa;         // For IE&#xa;    &#xa;    Path: https://192.168.137.180:443/index.html&#xa;    Line number: 20&#xa;    Comment: &#xa;        &lt;!-&#45; Slider CSS -&#45;&gt;&#xa;"/><script id="http-cookie-flags" output="&#xa;  /blog/: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/blog/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 21 Mar 2022 13:38:24 GMT; -1s from local time."><elem key="date">2022-03-21T13:38:24+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /blog/: Blog&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.137.180&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/assets/js/map.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/assets/css/menu_sideslide.css&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/assets/css/slide-style.css&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/wazowski@offsec.pg&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/assets/js/form-validator.min.js&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://192.168.137.180:443/assets/js/contact-form-script.min.js&#xa;"/><script id="http-exif-spider" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-fileupload-exploiter" output="&#xa;  &#xa;    Couldn&apos;t find a file-type field.&#xa;  &#xa;    Couldn&apos;t find a file-type field."><table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+<table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+</script><script id="http-grep" output="&#xa;  (1) https://192.168.137.180:443/: &#xa;    (1) email: &#xa;      + wazowski@offsec.pg&#xa;  (2) https://192.168.137.180:443/assets/js/map.js: &#xa;    (1) ip: &#xa;      + 192.168.137.180&#xa;    (1) email: &#xa;      + admin@example.com"><table key="(1) https://192.168.137.180:443/">
+<table key="(1) email">
+<elem>+ wazowski@offsec.pg</elem>
+</table>
+</table>
+<table key="(2) https://192.168.137.180:443/assets/js/map.js">
+<table key="(1) ip">
+<elem>+ 192.168.137.180</elem>
+</table>
+<table key="(1) email">
+<elem>+ admin@example.com</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Mon, 21 Mar 2022 13:38:21 GMT&#xa;  Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10&#xa;  Last-Modified: Tue, 24 Aug 2021 18:26:08 GMT&#xa;  ETag: &quot;5984-5ca524471f000&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 22916&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: POST OPTIONS HEAD GET TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 04807253cdb07f6ae44923137e5b9f29&#xa;Credits query returned unknown hash 04807253cdb07f6ae44923137e5b9f29"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10"><elem>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; html: 1&#xa;    /assets/css/&#xa;      css: 4&#xa;    /assets/fonts/&#xa;      css: 2&#xa;    /assets/img/gallery/&#xa;      jpg: 2&#xa;    /assets/js/&#xa;      js: 8&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /assets/img/gallery/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 6; html: 1; jpg: 2; js: 8&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Mike Wazowski"><elem key="title">Mike Wazowski</elem>
+</script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Mon, 21 Mar 2022 13:38:14 GMT&#xa;Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-traceroute" output="&#xa;  HTML title&#xa;    Hop #1: Mike Wazowski&#xa;    Hop #2: Bad request!&#xa;    Hop #3: Mike Wazowski&#xa;  Status Code&#xa;    Hop #1: 200&#xa;    Hop #2: 400&#xa;    Hop #3: 200&#xa;  content-type&#xa;    Hop #1: text/html&#xa;    Hop #2: text/html; charset=utf-8&#xa;    Hop #3: text/html&#xa;  content-length&#xa;    Hop #1: 22916&#xa;    Hop #2&#xa;    Hop #3: 22916&#xa;  last-modified&#xa;    Hop #1: Tue, 24 Aug 2021 18:26:08 GMT&#xa;    Hop #2&#xa;    Hop #3: Tue, 24 Aug 2021 18:26:08 GMT&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0&#xa;SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C125D327E3ECAD0D836A6DE75F9A751023E2909DA063958F1D419A58D59C638C5B73869079CCC3D6A389B875BC1E947C7C6EE3ADE8275C0BC60C6AF90F32FEB3C47A1023042B2928D4AAF9B32F6610F8A7C1CD60C46B2857E3673BF79ECD4822DC38EA4813803A4097570C4735463D71629AEE539D630E677A28C9A434FF19ED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: RFC2409/Oakley Group 2&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-9">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: RFC2409/Oakley Group 2&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher IDEA vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher IDEA vulnerable to SWEET32 attack&#xa;      Weak certificate signature: SHA1&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CCM (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CCM (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CCM_8 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CCM (rsa 1024) - A&#xa;      TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CCM_8 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CCM (rsa 1024) - A&#xa;      TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Weak certificate signature: SHA1&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_IDEA_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher IDEA vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_IDEA_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher IDEA vulnerable to SWEET32 attack</elem>
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CCM_8</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CCM</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CCM_8</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CCM</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CCM_8</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CCM</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CCM_8</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CCM</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_ARIA_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">dh 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 1024</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Weak certificate signature: SHA1</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="171311" rttvar="171311" to="856555"/>
+</host>
+<taskbegin task="NSE" time="1647870072"/>
+<taskend task="NSE" time="1647870072"/>
+<taskbegin task="NSE" time="1647870072"/>
+<taskend task="NSE" time="1647870072"/>
+<taskbegin task="NSE" time="1647870072"/>
+<taskend task="NSE" time="1647870072"/>
+<runstats><finished time="1647870072" timestr="Mon Mar 21 09:41:12 2022" summary="Nmap done at Mon Mar 21 09:41:12 2022; 1 IP address (1 host up) scanned in 193.07 seconds" elapsed="193.07" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

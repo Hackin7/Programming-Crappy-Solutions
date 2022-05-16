@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
+            "file": "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Vault-breaker/README.md",
             "mode": "source",
             "source": false
           }
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md"
+            "file": "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Vault-breaker/README.md"
           }
         }
       }
@@ -65,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346,
-    "collapsed": true
+    "width": 346
   },
   "right": {
     "id": "97fc30474c035c4a",
@@ -82,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
+                "file": "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Vault-breaker/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md"
+                "file": "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Vault-breaker/README.md"
               }
             }
           }
@@ -112,15 +111,15 @@
   },
   "active": "96124f4b524c90d3",
   "lastOpenFiles": [
-    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/We know this all too well/README.md",
-    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/Don't Touch My Flag/README.md",
-    "Cyber Security/Capture the Flag Competitions/2022/CTF.SG/Web/Wildest Dreams Part 2/README.md",
-    "Cyber Security/Capture the Flag Competitions/Writeup Template.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Hetemit/README.md",
-    "Oh My Webserver/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sona/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Shenzi/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Quackerjack/README.md",
-    "Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Sirol/README.md"
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Vault-breaker/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Reversing/WIDE/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Pwn/Space Pirate - Retribution/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Hardware/Space Pulses/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Web/Intergalatic Post/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Reversing/Omega One/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Web/Acnologia Portal/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Web/BlinkerFluids/README.md",
+    "Cyber Security/Capture the Flag Competitions/2022/Cyber Apocalypse CTF 2022 - Intergalactic Chase/Web/Amidst Us/README.md",
+    "().md"
   ]
 }

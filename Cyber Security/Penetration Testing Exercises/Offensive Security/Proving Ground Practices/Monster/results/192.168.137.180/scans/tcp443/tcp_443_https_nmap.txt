@@ -1,0 +1,1155 @@
+# Nmap 7.91 scan initiated Mon Mar 21 09:37:59 2022 as: nmap -vv --reason -Pn -T4 -sV -p 443 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/tcp_443_https_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Monster/results/192.168.137.180/scans/tcp443/xml/tcp_443_https_nmap.xml" 192.168.137.180
+Nmap scan report for 192.168.137.180
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-03-21 09:38:00 EDT for 192s
+
+PORT    STATE SERVICE  REASON          VERSION
+443/tcp open  ssl/http syn-ack ttl 127 Apache httpd 2.4.41 ((Win64) OpenSSL/1.1.1c PHP/7.3.10)
+|_http-chrono: Request times for /; avg: 967.58ms; min: 919.55ms; max: 1030.90ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.137.180
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 40
+|     Comment: 
+|          // is generally empty as we don't want to alter the default options for
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 124
+|     Comment: 
+|          // if a list item has a nested menu
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 60
+|     Comment: 
+|          //remove ids from clone to prevent css issues
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 99
+|     Comment: 
+|         /* Effects
+|          **********************************************/
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 116
+|     Comment: 
+|          // iterate over structure adding additional structure
+|     
+|     Path: https://192.168.137.180:443/wazowski@offsec.pg
+|     Line number: 8
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         /*]]>*/-->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 323
+|     Comment: 
+|          //Fire beforeOpen callback
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 332
+|     Comment: 
+|         /*@cc_on!@*/
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 191
+|     Comment: 
+|          //Emulate menu close
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 485
+|     Comment: 
+|         <!-- Footer Section Start -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 36
+|     Comment: 
+|         <!-- Navbar Start -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 39
+|     Comment: 
+|         <!-- Brand and toggle get grouped for better mobile display -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 437
+|     Comment: 
+|          // Is the first parameter an object (options), or was omitted, instantiate a new instance
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 63
+|     Comment: 
+|          // Left
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 55
+|     Comment: 
+|         
+|             ========================================================*/
+|     
+|     Path: https://192.168.137.180:443/assets/css/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.min.css.map */
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 49
+|     Comment: 
+|         
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 409
+|     Comment: 
+|         <!-- Counter Area End-->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 521
+|     Comment: 
+|         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 233
+|     Comment: 
+|          // AJAX
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * SlickNav Responsive Mobile Menu v1.0.4
+|          * (c) 2015 Josh Cope
+|          * licensed under MIT
+|          */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 140
+|     Comment: 
+|         <!-- Header Area wrapper End -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 352
+|     Comment: 
+|          //jQuery 1.7 bug fix
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 176
+|     Comment: 
+|         <!-- Services Section Start -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 39
+|     Comment: 
+|          // more objects, storing the result in the first object. The first object
+|     
+|     Path: https://192.168.137.180:443/assets/css/responsive.css
+|     Line number: 25
+|     Comment: 
+|         /* only small tablets */
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 381
+|     Comment: 
+|          // Remove click handlers
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 374
+|     Comment: 
+|         <!-- Counter Item -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 367
+|     Comment: 
+|          // set attributes of element and children based on visibility
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 179
+|     Comment: 
+|          // accessibility for links
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * Nivo Lightbox v1.3.1
+|          * http://dev7studios.com/nivo-lightbox
+|          *
+|          * Copyright 2013, Dev7studios
+|          * Free to use and abuse under the MIT license.
+|          * http://www.opensource.org/licenses/mit-license.php
+|          */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 26
+|     Comment: 
+|         <!-- Main Style -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 483
+|     Comment: 
+|         <!-- Contact Section End -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 28
+|     Comment: 
+|         <!-- Responsive Style -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 16
+|     Comment: 
+|         <!-- Slicknav -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 8
+|     Comment: 
+|          // default settings object.
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 312
+|     Comment: 
+|          // Set the title
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 368
+|     Comment: 
+|         <!-- Portfolio Section Ends -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 232
+|     Comment: 
+|         <!-- Services Section End -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 371
+|     Comment: 
+|          // select all parents that aren't hidden
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 83
+|     Comment: 
+|          // styling class for the button
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 514
+|     Comment: 
+|         <!-- Footer Section End -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 127
+|     Comment: 
+|          // select all text before the child menu
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 134
+|     Comment: 
+|         /* slideLeft / slideRight / slideUp / slideDown */
+|     
+|     Path: https://192.168.137.180:443/assets/fonts/simple-line-icons.css
+|     Line number: 211
+|     Comment: 
+|         /* Better Font Rendering =========== */
+|     
+|     Path: https://192.168.137.180:443/assets/css/responsive.css
+|     Line number: 42
+|     Comment: 
+|         /* mobile or only mobile */
+|     
+|     Path: https://192.168.137.180:443/wazowski@offsec.pg
+|     Line number: 8
+|     Comment: 
+|         <!--/*-->
+|     
+|     Path: https://192.168.137.180:443/assets/css/animate.css
+|     Line number: 96
+|     Comment: 
+|         /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 198
+|     Comment: 
+|          // Video (Youtube/Vimeo)
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 262
+|     Comment: 
+|          //toggle menu
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 22
+|     Comment: 
+|         <!-- Nivo Lightbox -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 267
+|     Comment: 
+|          // Inline HTML
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 216
+|     Comment: 
+|          // outline prevention when using mouse
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 12
+|     Comment: 
+|         
+|         
+|            ========================================================================== */
+|     
+|     Path: https://192.168.137.180:443/assets/css/responsive.css
+|     Line number: 11
+|     Comment: 
+|         /* tablets */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 181
+|     Comment: 
+|         <!-- Services item -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 94
+|     Comment: 
+|          // create menu bar
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 467
+|     Comment: 
+|          // If the earlier cached method gives a value back return the value, otherwise return this to preserve chainability.
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 65
+|     Comment: 
+|          // Right
+|     
+|     Path: https://192.168.137.180:443/assets/js/popper.min.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|          */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 18
+|     Comment: 
+|         <!-- Menu CSS -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 444
+|     Comment: 
+|          // if it has no instance, create a new one, pass options to our plugin constructor,
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.nav.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * jQuery One Page Nav Plugin
+|          * http://github.com/davist11/jQuery-One-Page-Nav
+|          *
+|          * Copyright (c) 2010 Trevor Davis (http://trevordavis.net)
+|          * Dual licensed under the MIT and GPL licenses.
+|          * Uses the same license as jQuery, see:
+|          * http://jquery.org/license
+|          *
+|          * @version 3.0.0
+|          *
+|          * Example usage:
+|          * $('#nav').onePageNav({
+|          *   currentClass: 'current',
+|          *   changeHash: false,
+|          *   scrollSpeed: 750
+|          * });
+|          */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 370
+|     Comment: 
+|         <!-- Counter Area Start-->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 127
+|     Comment: 
+|          // For CSS transitions
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 374
+|     Comment: 
+|          // iterate over all items setting appropriate tags
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 102
+|     Comment: 
+|         <!-- Hero Area Start -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 274
+|     Comment: 
+|          // Vertically center html
+|     
+|     Path: https://192.168.137.180:443/assets/css/animate.css
+|     Line number: 4
+|     Comment: 
+|         /*!
+|         Animate.css - http://daneden.me/animate
+|         Licensed under the MIT license
+|         
+|         Copyright (c) 2013 Daniel Eden
+|         
+|         Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+|         
+|         The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+|         
+|         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+|         */
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 26
+|     Comment: 
+|         
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 150
+|     Comment: 
+|          // wrap item text with tag and add classes unless we are separating parent links
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 181
+|     Comment: 
+|          //Ensure that it's not a parent
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 46
+|     Comment: 
+|         
+|             ========================================================*/
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 34
+|     Comment: 
+|         <!-- Header Area wrapper Starts -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/waypoints.min.js
+|     Line number: 2
+|     Comment: 
+|         /*
+|         jQuery Waypoints - v2.0.3
+|         Copyright (c) 2011-2013 Caleb Troughton
+|         Dual licensed under the MIT license and GPL license.
+|         https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
+|         */
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 394
+|     Comment: 
+|          // get all 1st level items that are clickable
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 75
+|     Comment: 
+|          // remove classes if set
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 289
+|     Comment: 
+|          //Separated parent link structure
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 357
+|     Comment: 
+|          //Fire init or afterClose callback
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 57
+|     Comment: 
+|          // clone menu if needed
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 462
+|     Comment: 
+|          // Call the method of our plugin instance, and pass it the supplied arguments.
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 459
+|     Comment: 
+|          // Tests that there's already a plugin-instance and checks that the requested public method exists
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 385
+|     Comment: 
+|          // Empty content (for videos)
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 450
+|     Comment: 
+|          // If is a string and doesn't start with an underscore or 'init' function, treat this as a call to a public method.
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 453
+|     Comment: 
+|          // Cache the method call to make it possible to return a value
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 7
+|     Comment: 
+|         
+|         
+|            ========================================================================== */
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 445
+|     Comment: 
+|          // and store the plugin instance in the elements jQuery data object.
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 441
+|     Comment: 
+|          // Only allow the plugin to be instantiated once due to methods
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 241
+|     Comment: 
+|         <!-- Portfolio Controller/Buttons -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 213
+|     Comment: 
+|          // accessibility for menu button
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 332
+|     Comment: 
+|          //Fire afterOpen callback
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 14
+|     Comment: 
+|         <!-- Icon -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 311
+|     Comment: 
+|          // toggle actual visibility and accessibility tags
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 208
+|     Comment: 
+|          //https://www.youtube-nocookie.com/embed/...
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 236
+|     Comment: 
+|         <!-- Container Starts -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.counterup.min.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         */
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 279
+|     Comment: 
+|          // toggle clicked items
+|     
+|     Path: https://192.168.137.180:443/assets/css/responsive.css
+|     Line number: 1
+|     Comment: 
+|         /* only small desktops */
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 170
+|     Comment: 
+|          // Image
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 254
+|     Comment: 
+|          // allow links clickable within parent tags if set
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 237
+|     Comment: 
+|          // check for enter key on menu button and menu parents
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 231
+|     Comment: 
+|          // click on menu parent
+|     
+|     Path: https://192.168.137.180:443/assets/js/bootstrap.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|           * Bootstrap v4.0.0 (https://getbootstrap.com)
+|           * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+|           * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|           */
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 225
+|     Comment: 
+|          // menu button click
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 115
+|     Comment: 
+|         /* fadeScale */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 10
+|     Comment: 
+|         <!-- Bootstrap CSS -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 128
+|     Comment: 
+|          // check for anchors
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 210
+|     Comment: 
+|          // finally toggle entire menu
+|     
+|     Path: https://192.168.137.180:443/assets/fonts/simple-line-icons.css
+|     Line number: 11
+|     Comment: 
+|         /*
+|          Use the following CSS code if you want to have a class per icon.
+|          Instead of a list of all class selectors, you can use the generic [class*="icon-"] selector, but it's slower:
+|         */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 24
+|     Comment: 
+|         <!-- Animate -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 142
+|     Comment: 
+|         <!-- About Section Start -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 259
+|     Comment: 
+|         <!-- Portfolio Recent Projects -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 296
+|     Comment: 
+|          // iFrame (default)
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 202
+|     Comment: 
+|          // structure is in place, now hide appropriate items
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 70
+|     Comment: 
+|         
+|             ========================================================*/
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 188
+|     Comment: 
+|          //also close on click if parent links are set
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 111
+|     Comment: 
+|          // Next
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 183
+|     Comment: 
+|          //Emulate menu close if set
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 61
+|     Comment: 
+|          // Escape
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 57
+|     Comment: 
+|          // keyboardNav
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Nivo Lightbox v1.3.1
+|          * http://dev7studios.com/nivo-lightbox
+|          *
+|          * Copyright 2013, Dev7studios
+|          * Free to use and abuse under the MIT license.
+|          * http://www.opensource.org/licenses/mit-license.php
+|          */
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 62
+|     Comment: 
+|         
+|             ========================================================*/
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 80
+|     Comment: 
+|         <!-- Mobile Menu Start -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 35
+|     Comment: 
+|         /* slicknav mobile menu active  */
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 184
+|     Comment: 
+|         /* fall */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 100
+|     Comment: 
+|         <!-- Navbar End -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/main.js
+|     Line number: 22
+|     Comment: 
+|         
+|             ========================================================*/
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 171
+|     Comment: 
+|          //append arrow
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 165
+|     Comment: 
+|          // create parent arrow. wrap with link if parent links and separating
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 137
+|     Comment: 
+|         <!-- Hero Area End -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 12
+|     Comment: 
+|         <!-- Fonts -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 366
+|     Comment: 
+|         <!-- Container Ends -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 181
+|     Comment: 
+|          // For Firefox
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 68
+|     Comment: 
+|          // remove ids if set
+|     
+|     Path: https://192.168.137.180:443/wazowski@offsec.pg
+|     Line number: 13
+|     Comment: 
+|         /*]]>*/
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 41
+|     Comment: 
+|          // future instances of the plugin
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 38
+|     Comment: 
+|          // jQuery has an extend method which merges the contents of two or
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 256
+|     Comment: 
+|         <!-- Portfolio Controller/Buttons Ends-->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery-min.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
+|     
+|     Path: https://192.168.137.180:443/wazowski@offsec.pg
+|     Line number: 8
+|     Comment: 
+|         /*--><![CDATA[/*><!--*/
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 234
+|     Comment: 
+|         <!-- Portfolio Section -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/jquery.slicknav.js
+|     Line number: 343
+|     Comment: 
+|          //Fire init or beforeClose callback
+|     
+|     Path: https://192.168.137.180:443/assets/js/popper.min.js
+|     Line number: 5
+|     Comment: 
+|         
+|         
+|     
+|     Path: https://192.168.137.180:443/assets/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.0.0 (https://getbootstrap.com)
+|          * Copyright 2011-2018 The Bootstrap Authors
+|          * Copyright 2011-2018 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 516
+|     Comment: 
+|         <!-- Go to Top Link -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 411
+|     Comment: 
+|         <!-- Contact Section Start -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 93
+|     Comment: 
+|          // Nav
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 4
+|     Comment: 
+|         <!-- Required meta tags -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 165
+|     Comment: 
+|          // Is HiDPI?
+|     
+|     Path: https://192.168.137.180:443/assets/css/nivo-lightbox.css
+|     Line number: 84
+|     Comment: 
+|         /* https://bugzilla.mozilla.org/show_bug.cgi?id=308801 */
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 174
+|     Comment: 
+|         <!-- About Section End -->
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 98
+|     Comment: 
+|         <!-- Mobile Menu End -->
+|     
+|     Path: https://192.168.137.180:443/assets/js/nivo-lightbox.js
+|     Line number: 374
+|     Comment: 
+|          // For IE
+|     
+|     Path: https://192.168.137.180:443/index.html
+|     Line number: 20
+|     Comment: 
+|_        <!-- Slider CSS -->
+| http-cookie-flags: 
+|   /blog/: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 21 Mar 2022 13:38:24 GMT; -1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /blog/: Blog
+|_  /icons/: Potentially interesting folder w/ directory listing
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.137.180
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	https://192.168.137.180:443/assets/js/map.js
+|   
+|   Error Code: 404
+|   	https://192.168.137.180:443/assets/css/menu_sideslide.css
+|   
+|   Error Code: 404
+|   	https://192.168.137.180:443/assets/css/slide-style.css
+|   
+|   Error Code: 404
+|   	https://192.168.137.180:443/wazowski@offsec.pg
+|   
+|   Error Code: 404
+|   	https://192.168.137.180:443/assets/js/form-validator.min.js
+|   
+|   Error Code: 404
+|_  	https://192.168.137.180:443/assets/js/contact-form-script.min.js
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+| http-grep: 
+|   (1) https://192.168.137.180:443/: 
+|     (1) email: 
+|       + wazowski@offsec.pg
+|   (2) https://192.168.137.180:443/assets/js/map.js: 
+|     (1) ip: 
+|       + 192.168.137.180
+|     (1) email: 
+|_      + admin@example.com
+| http-headers: 
+|   Date: Mon, 21 Mar 2022 13:38:21 GMT
+|   Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10
+|   Last-Modified: Tue, 24 Aug 2021 18:26:08 GMT
+|   ETag: "5984-5ca524471f000"
+|   Accept-Ranges: bytes
+|   Content-Length: 22916
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: POST OPTIONS HEAD GET TRACE
+|_  Potentially risky methods: TRACE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 04807253cdb07f6ae44923137e5b9f29
+|_Credits query returned unknown hash 04807253cdb07f6ae44923137e5b9f29
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|_    HSTS not configured in HTTPS Server
+|_http-server-header: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; html: 1
+|     /assets/css/
+|       css: 4
+|     /assets/fonts/
+|       css: 2
+|     /assets/img/gallery/
+|       jpg: 2
+|     /assets/js/
+|       js: 8
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /assets/img/gallery/
+|   Total files found (by extension):
+|_    Other: 1; css: 6; html: 1; jpg: 2; js: 8
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Mike Wazowski
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Mon, 21 Mar 2022 13:38:14 GMT
+| Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.10
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-traceroute: 
+|   HTML title
+|     Hop #1: Mike Wazowski
+|     Hop #2: Bad request!
+|     Hop #3: Mike Wazowski
+|   Status Code
+|     Hop #1: 200
+|     Hop #2: 400
+|     Hop #3: 200
+|   content-type
+|     Hop #1: text/html
+|     Hop #2: text/html; charset=utf-8
+|     Hop #3: text/html
+|   content-length
+|     Hop #1: 22916
+|     Hop #2
+|     Hop #3: 22916
+|   last-modified
+|     Hop #1: Tue, 24 Aug 2021 18:26:08 GMT
+|     Hop #2
+|_    Hop #3: Tue, 24 Aug 2021 18:26:08 GMT
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+| SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 8
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CCM_8 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 1024) - A
+|       TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CCM_8 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 1024) - A
+|       TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Weak certificate signature: SHA1
+|_  least strength: A
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 21 09:41:12 2022 -- 1 IP address (1 host up) scanned in 193.07 seconds

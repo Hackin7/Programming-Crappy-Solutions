@@ -1,0 +1,49 @@
+WhatWeb report for http://192.168.137.181:9090
+Status    : 302 Found
+Title     : <None>
+IP        : 192.168.137.181
+Country   : RESERVED, ZZ
+
+Summary   : RedirectLocation[/graph]
+
+Detected Plugins:
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and
+	302
+
+	String       : /graph (from location)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Content-Type: text/html; charset=utf-8
+	Location: /graph
+	Date: Mon, 21 Mar 2022 16:57:46 GMT
+	Content-Length: 29
+	Connection: close
+
+WhatWeb report for http://192.168.137.181:9090/graph
+Status    : 200 OK
+Title     : Prometheus Time Series Collection and Processing Server
+IP        : 192.168.137.181
+Country   : RESERVED, ZZ
+
+Summary   : Script, HTML5
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Mon, 21 Mar 2022 16:57:47 GMT
+	Content-Type: text/html; charset=utf-8
+	Connection: close
+	Transfer-Encoding: chunked
+
+

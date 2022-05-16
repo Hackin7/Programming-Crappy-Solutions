@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Mar 21 12:57:41 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 9090 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/tcp9090/tcp_9090_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/tcp9090/xml/tcp_9090_http_nmap.xml&quot; 192.168.137.181 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 9090 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/tcp9090/tcp_9090_http_nmap.txt&quot; -oX &quot;/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/tcp9090/xml/tcp_9090_http_nmap.xml&quot; 192.168.137.181" start="1647881861" startstr="Mon Mar 21 12:57:41 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="9090"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1647881863"/>
+<taskend task="NSE" time="1647881863"/>
+<taskbegin task="NSE" time="1647881863"/>
+<taskend task="NSE" time="1647881863"/>
+<taskbegin task="NSE" time="1647881863"/>
+<taskend task="NSE" time="1647881863"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1647881863"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1647881864"/>
+<taskbegin task="SYN Stealth Scan" time="1647881864"/>
+<taskend task="SYN Stealth Scan" time="1647881864" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1647881864"/>
+<taskend task="Service scan" time="1647881926" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1647881926"/>
+<taskprogress task="NSE" time="1647881957" percent="99.02" remaining="1" etc="1647881957"/>
+<taskprogress task="NSE" time="1647881987" percent="99.67" remaining="1" etc="1647881987"/>
+<taskprogress task="NSE" time="1647882017" percent="99.67" remaining="1" etc="1647882017"/>
+<taskprogress task="NSE" time="1647882047" percent="99.67" remaining="1" etc="1647882047"/>
+<taskprogress task="NSE" time="1647882077" percent="99.67" remaining="1" etc="1647882077"/>
+<taskprogress task="NSE" time="1647882107" percent="99.67" remaining="1" etc="1647882108"/>
+<taskprogress task="NSE" time="1647882137" percent="99.67" remaining="1" etc="1647882138"/>
+<taskprogress task="NSE" time="1647882167" percent="99.67" remaining="1" etc="1647882168"/>
+<taskprogress task="NSE" time="1647882197" percent="99.67" remaining="1" etc="1647882198"/>
+<taskprogress task="NSE" time="1647882227" percent="99.67" remaining="1" etc="1647882228"/>
+<taskprogress task="NSE" time="1647882257" percent="99.67" remaining="2" etc="1647882258"/>
+<taskprogress task="NSE" time="1647882287" percent="99.67" remaining="2" etc="1647882288"/>
+<taskprogress task="NSE" time="1647882317" percent="99.67" remaining="2" etc="1647882318"/>
+<taskend task="NSE" time="1647882343"/>
+<taskbegin task="NSE" time="1647882343"/>
+<taskend task="NSE" time="1647882343"/>
+<taskbegin task="NSE" time="1647882343"/>
+<taskend task="NSE" time="1647882343"/>
+<host starttime="1647881864" endtime="1647882343"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.137.181" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="9090"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Golang net/http server" extrainfo="Go-IPFS json-rpc or InfluxDB API" method="probed" conf="10"><cpe>cpe:/a:protocol_labs:go-ipfs</cpe></service><script id="http-chrono" output="Request times for /; avg: 900.59ms; min: 483.19ms; max: 1230.23ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 21 Mar 2022 16:58:47 GMT; -1s from local time."><elem key="date">2022-03-21T16:58:47+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-favicon" output="Unknown favicon MD5: 5EE43B38986A144D6B5022EA8C8F748F"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Mon, 21 Mar 2022 16:58:53 GMT&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Connection: close&#xa;  Transfer-Encoding: chunked&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash e909a83801b67f2763ac7c88a05f9e50&#xa;Credits query returned unknown hash e909a83801b67f2763ac7c88a05f9e50"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. "><table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; json: 1&#xa;    /static/css/&#xa;      css: 2&#xa;    /static/js/&#xa;      js: 2&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /static/css/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 2; js: 2; json: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Prometheus Time Series Collection and Processing Server&#xa;Requested resource was /graph"><elem key="title">Prometheus Time Series Collection and Processing Server</elem>
+<elem key="redirect_url">/graph</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: /graph&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">/graph</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 405"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;192.168.137.181:9090/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="171102" rttvar="171102" to="855510"/>
+</host>
+<taskbegin task="NSE" time="1647882343"/>
+<taskend task="NSE" time="1647882343"/>
+<taskbegin task="NSE" time="1647882343"/>
+<taskend task="NSE" time="1647882343"/>
+<taskbegin task="NSE" time="1647882343"/>
+<taskend task="NSE" time="1647882343"/>
+<runstats><finished time="1647882343" timestr="Mon Mar 21 13:05:43 2022" summary="Nmap done at Mon Mar 21 13:05:43 2022; 1 IP address (1 host up) scanned in 482.32 seconds" elapsed="482.32" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

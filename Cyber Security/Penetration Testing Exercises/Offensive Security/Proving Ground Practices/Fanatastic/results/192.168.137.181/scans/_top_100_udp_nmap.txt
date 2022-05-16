@@ -1,0 +1,56 @@
+# Nmap 7.91 scan initiated Mon Mar 21 12:51:52 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/_top_100_udp_nmap.txt" -oX "/media/sf_Stuff1/Github/Solutions/Cyber Security/Penetration Testing Exercises/Offensive Security/Proving Ground Practices/Fantastic/results/192.168.137.181/scans/xml/_top_100_udp_nmap.xml" 192.168.137.181
+Increasing send delay for 192.168.137.181 from 50 to 100 due to 11 out of 15 dropped probes since last increase.
+Warning: 192.168.137.181 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.137.181 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 192.168.137.181 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+WARNING: RST from 192.168.137.181 port -1 -- is this port really open?
+Nmap scan report for 192.168.137.181
+Host is up, received user-set (0.17s latency).
+Scanned at 2022-03-21 12:51:54 EDT for 218s
+Not shown: 79 closed ports
+Reason: 79 port-unreaches
+PORT      STATE         SERVICE       REASON      VERSION
+7/udp     open|filtered echo          no-response
+19/udp    open|filtered chargen       no-response
+53/udp    open|filtered domain        no-response
+120/udp   open|filtered cfdptkt       no-response
+162/udp   open|filtered snmptrap      no-response
+177/udp   open|filtered xdmcp         no-response
+515/udp   open|filtered printer       no-response
+520/udp   open|filtered route         no-response
+631/udp   open|filtered ipp           no-response
+1028/udp  open|filtered ms-lsa        no-response
+1434/udp  open|filtered ms-sql-m      no-response
+2049/udp  open|filtered nfs           no-response
+2223/udp  open|filtered rockwell-csp2 no-response
+3283/udp  open|filtered netassistant  no-response
+4444/udp  open|filtered krb524        no-response
+4500/udp  open|filtered nat-t-ike     no-response
+49156/udp open|filtered unknown       no-response
+49182/udp open|filtered unknown       no-response
+49186/udp open|filtered unknown       no-response
+49200/udp open|filtered unknown       no-response
+49201/udp open|filtered unknown       no-response
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing an open TCP port so results incomplete
+Aggressive OS guesses: FreeBSD 6.2-RELEASE-p2 (pf with scrub enabled) (92%), FreeBSD 7.0-RELEASE (92%), FreeBSD 8.0-CURRENT (92%), D-Link DI-524 wireless broadband router (89%), FreeBSD 7.0-BETA4 (87%), OpenBSD 4.0 (87%), OpenBSD 4.6 (87%), Lantronix ETS32Pr or LRS16 terminal server (87%), OpenBSD 4.9 (86%), Apple Mac OS X 10.7.4 (Lion) (Darwin 11.4.0) (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=3/21%OT=%CT=%CU=9%PV=Y%DS=2%DC=T%G=N%TM=6238AE04%P=x86_64-pc-linux-gnu)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+U1(R=N)
+IE(R=Y%DFI=N%T=40%CD=S)
+IE(R=N)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 1023/udp)
+HOP RTT       ADDRESS
+1   175.69 ms 192.168.49.1
+2   175.77 ms 192.168.137.181
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 21 12:55:32 2022 -- 1 IP address (1 host up) scanned in 221.85 seconds

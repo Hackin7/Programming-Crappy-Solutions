@@ -1,0 +1,12 @@
+[*] ssh found on tcp/22.
+
+
+
+[*] ppp found on tcp/3000.
+
+
+
+[*] http found on tcp/9090.
+
+
+
