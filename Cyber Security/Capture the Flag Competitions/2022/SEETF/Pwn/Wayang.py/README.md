@@ -3,7 +3,9 @@
 ![](Pasted%20image%2020220605212919.png)
 ## Solution
 
-Contents of `wayang.py`
+This is a simple command injection challenge that was satisfying to work through.
+
+These are the contents of wayang.py that were given
 
 ```python
 #!/usr/local/bin/python
@@ -86,13 +88,23 @@ if __name__ == '__main__':
         print("NOT READY YET. MAYBE AFTER CTF????")
 ```
 
-This line in particular looks like injection can be done, eiither through `eval` or command line injection
+This line in option 4 in particular looks like injection can be done, eiither through `eval` or command line injection.
+- `eval` is a python function that evaluates its argument as python code. In other words, we could potentially custom inject some python code.
+- `eval(filename)` is injected into the command through an f-string. This means that I could do a command injection to run Linux Commands.
 
 ```
 os.system(f"cat {eval(filename)}")
 ```
 
-Trying Command line injection
+
+The variable `filename` just needs to contain characters which are not in the variable `not_allowed`. They are `FLAG`. As such, we are free to use characters like `;`, to chain togther linux commands.
+
+My eventual payload decided on was `"1+1;cat *"`. 
+- The quotes are to denote that the input parsed by `eval` is a python string. 
+- `1+1` is just some padding for the `cat` in `f"cat {eval(filename)}"` to parse. `cat 1+1` would actually result in an error in the linux terminal, but I don't really care if other useless systems crash and burn :)
+- `;` is a command delimiter. This means that
+- `cat *` displays all the contents of all the files in the directory, where `cat` shows the contents of file, and `*` refers to all files in the directory. This would most likely include the flag file.
+
 
 ```bash
 (base) [hacker@hackerbook ~]$ nc fun.chall.seetf.sg 50008
@@ -228,4 +240,5 @@ if __name__ == '__main__':
 ```
 
 ## Flag
+
 `SEE{wayyang_as_a_service_621331e420c46e29cfde50f66ad184cc}`
