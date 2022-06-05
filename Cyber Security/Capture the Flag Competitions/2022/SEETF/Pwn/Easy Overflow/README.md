@@ -89,19 +89,11 @@ I will let you  overflow me.
 AAAAAAAAAAAAAAAA
 ```
 
-![](Pasted%20image%2020220604095734.png)
-
-
-![](Pasted%20image%2020220604100034.png)
-
 ```
 (base) [hacker@hackerbook ~]$ (python -c 'import time;time.sleep(10);print("A"+"\nFail\n")') | /tmp/easy_overflow 
 I will let you  overflow me.
 ```
 
-![](Pasted%20image%2020220604101247.png)
-
-![](Pasted%20image%2020220604101442.png)
 
 ## Flag
 ``

