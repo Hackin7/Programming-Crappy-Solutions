@@ -1,4 +1,6 @@
 # "as" "df"
+
+![](Pasted%20image%2020220605212940.png)
 ## Solution
 
 Firstly I tried finding all the global variables, and there is an interesting variable named `blacklist` 

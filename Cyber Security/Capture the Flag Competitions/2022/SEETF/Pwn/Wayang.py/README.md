@@ -1,9 +1,6 @@
 # Wayang.py
 
-### Description
-
-![](Pasted%20image%2020220604090854.png)
-
+![](Pasted%20image%2020220605212919.png)
 ## Solution
 
 Contents of `wayang.py`
