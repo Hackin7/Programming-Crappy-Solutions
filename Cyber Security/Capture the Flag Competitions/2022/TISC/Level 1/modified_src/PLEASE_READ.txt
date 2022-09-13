@@ -1,0 +1,12 @@
+1. Make sure you're running Python 3.10.x
+2. You have two options:
+
+Use poetry (recommended)
+3a. pip install poetry
+4a. python -m poetry install
+5a. python -m poetry shell
+6b. python main.py
+
+Use requirements.txt
+3a. pip install -r requirements.txt
+4a. python main.py
