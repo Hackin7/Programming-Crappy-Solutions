@@ -1,21 +1,16 @@
-# CTF Name
+# The InfoSecurity Challenge 2022
 
-Official Description of the CTF
 
 ## Event Details
 
-Give my information on
-1. When I participated in it
-1. Who I participated it with
-1. What I did and how I felt
-1. Final Results and Accomplishments (if any)
+Didn't spend too much time on it, but happy that I at least got 4 challenges down and the badge. The challenges were interesting & solvable enough for me to have a great experience.
+
+
+![](Pasted%20image%2020220913224937.png)
 
 ## Challenges
 
-List the challenges I have completed. Example:
-
-Here are the main challenges I did (or helped out with in order). Just traverse the directories to find them
-1. `Web/Logged In` , `Web/Unlock Me` 
+I completed Level 1 to 4 
 
 ## Others' Writeups
 
