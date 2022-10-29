@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "df4847b08d11b76e",
+    "type": "split",
+    "children": [
+      {
+        "id": "f53a614d8f08eea7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de4aa8fa8eb6f564",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Insecure Deserialisation/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf4b3fc06c5bedef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Authentication/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c8f538b8bfa0526c",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cc079005d4d3b32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ea71ec9f6755893",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fe9a50eef5aa0d6e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ce334d10e6059876",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fe0c8bd0dd507d7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b02f42da4668e863",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ddbdeec0a66013c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Insecure Deserialisation/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3a0f884da4d7752e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Insecure Deserialisation/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ef8dfdcad05b088b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "00faa54a5048939d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Insecure Deserialisation/README.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "de4aa8fa8eb6f564",
+  "lastOpenFiles": [
+    "Cross Site Scripting (XSS)/README.md",
+    "Authentication/README.md",
+    "Clickjacking/README.md",
+    "SQL Injection/README.md"
+  ]
+}
