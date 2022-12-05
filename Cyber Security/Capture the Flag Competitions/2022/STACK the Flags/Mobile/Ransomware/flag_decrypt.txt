@@ -1,0 +1,37 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String args[]) {
+      String pt = "??????????????????????????????";
+      String ct = "yu1gpulonjtqxn3ct6gkjxph";
+      String ring1 = "abcdefghijklmnopqrstuvwxyz{}1234567890";
+      String ring2 = "qw1234567890ertyuiopasdf{}ghjklzxcvbnm";
+      int initial_shift = 3;
+      int periodic_increment = 7;
+      int periodic_length = 4;
+      
+      char[] ch = ring1.toCharArray();
+      char[] ch_pt = pt.toCharArray();
+
+      ring2 = shift(ring2, initial_shift);
+
+      int temp_period = periodic_length;
+      for (int i = 0; i < pt.length(); i++) {
+          temp_period--;
+          
+          int index = new String(ch).indexOf(ch_pt[i]);
+          ct = ct + ring2.charAt(index);
+          if (temp_period == 0) {
+              ring2 = shift(ring2, periodic_increment);
+              temp_period = periodic_length;
+          }
+      }
+    }
+    
+    public static String shift(String text, int shift) {
+        for (int i = 0; i < shift; i++) {
+            text = text.charAt(text.length() - 1) + text.substring(0, text.length() - 1);
+        }
+        return text;
+    }
+}

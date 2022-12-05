@@ -1,0 +1,132 @@
+[*] domain found on tcp/53.
+
+
+
+[*] http found on tcp/80.
+
+
+
+[*] kerberos-sec found on tcp/88.
+
+
+
+[*] msrpc found on tcp/135.
+
+
+
+[*] netbios-ssn found on tcp/139.
+
+
+
+[*] ldap found on tcp/389.
+
+
+
+[*] microsoft-ds found on tcp/445.
+
+
+
+[*] kpasswd5 found on tcp/464.
+
+
+
+[*] ncacn_http found on tcp/593.
+
+
+
+[*] tcpwrapped found on tcp/636.
+
+
+
+[*] ldap found on tcp/3268.
+
+
+
+[*] tcpwrapped found on tcp/3269.
+
+
+
+[*] domain found on udp/53.
+
+
+
+[*] ntp found on udp/123.
+
+
+
+[*] netbios-ns found on udp/137.
+
+
+
+[*] netbios-dgm found on udp/138.
+
+
+
+[*] isakmp found on udp/500.
+
+
+
+[*] nat-t-ike found on udp/4500.
+
+
+
+[*] zeroconf found on udp/5353.
+
+
+
+[*] http found on tcp/5985.
+
+
+
+[*] mc-nmf found on tcp/9389.
+
+
+
+[*] http found on tcp/47001.
+
+
+
+[*] msrpc found on tcp/49664.
+
+
+
+[*] msrpc found on tcp/49665.
+
+
+
+[*] msrpc found on tcp/49666.
+
+
+
+[*] msrpc found on tcp/49667.
+
+
+
+[*] msrpc found on tcp/49671.
+
+
+
+[*] ncacn_http found on tcp/49674.
+
+
+
+[*] msrpc found on tcp/49675.
+
+
+
+[*] msrpc found on tcp/49682.
+
+
+
+[*] msrpc found on tcp/49691.
+
+
+
+[*] msrpc found on tcp/49696.
+
+
+
+[*] msrpc found on tcp/60152.
+
+
+

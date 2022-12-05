@@ -1,0 +1,92 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /results/10.129.255.123/scans/_full_tcp_nmap.txt -oX /results/10.129.255.123/scans/xml/_full_tcp_nmap.xml 10.129.255.123
+Nmap scan report for 10.129.255.123
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-12-03 08:56:31 UTC for 675s
+Not shown: 65534 closed ports
+Reason: 65534 resets
+PORT     STATE SERVICE     REASON         VERSION
+9000/tcp open  cslistener? syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: application/json; charset=utf-8
+|     Content-Length: 32
+|     Date: Sat, 03 Dec 2022 09:06:33 GMT
+|     Connection: close
+|     {"message":"404 page not found"}
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: application/json; charset=utf-8
+|     Content-Length: 32
+|     Date: Sat, 03 Dec 2022 09:06:26 GMT
+|     Connection: close
+|     {"message":"404 page not found"}
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: application/json; charset=utf-8
+|     Content-Length: 32
+|     Date: Sat, 03 Dec 2022 09:06:27 GMT
+|     Connection: close
+|_    {"message":"404 page not found"}
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9000-TCP:V=7.91%I=9%D=12/3%Time=638B1192%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,B5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20appli
+SF:cation/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,
+SF:\x2003\x20Dec\x202022\x2009:06:26\x20GMT\r\nConnection:\x20close\r\n\r\
+SF:n{\"message\":\"404\x20page\x20not\x20found\"}")%r(HTTPOptions,B5,"HTTP
+SF:/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20c
+SF:harset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x20
+SF:2022\x2009:06:27\x20GMT\r\nConnection:\x20close\r\n\r\n{\"message\":\"4
+SF:04\x20page\x20not\x20found\"}")%r(RTSPRequest,B5,"HTTP/1\.1\x20404\x20N
+SF:ot\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nC
+SF:ontent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:27\
+SF:x20GMT\r\nConnection:\x20close\r\n\r\n{\"message\":\"404\x20page\x20not
+SF:\x20found\"}")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:nection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSStatusRequest
+SF:TCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\
+SF:r\n")%r(Hello,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20
+SF:close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCookie,2F,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(T
+SF:LSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20c
+SF:lose\r\n\r\n")%r(SSLv23SessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Pr
+SF:obe,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\
+SF:r\n")%r(FourOhFourRequest,B5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConte
+SF:nt-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032
+SF:\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:33\x20GMT\r\nConnection
+SF::\x20close\r\n\r\n{\"message\":\"404\x20page\x20not\x20found\"}");
+Aggressive OS guesses: Linux 4.15 - 5.6 (95%), Linux 5.3 - 5.4 (95%), Linux 2.6.32 (95%), Linux 5.0 - 5.3 (95%), Linux 3.1 (95%), Linux 3.2 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 5.0 (93%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/3%OT=9000%CT=1%CU=34485%PV=Y%DS=2%DC=T%G=Y%TM=638B1
+OS:1E3%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)S
+OS:EQ(SP=108%GCD=1%ISR=10A%TI=Z%CI=Z%TS=A)OPS(O1=M539ST11NW7%O2=M539ST11NW7
+OS:%O3=M539NNT11NW7%O4=M539ST11NW7%O5=M539ST11NW7%O6=M539ST11)WIN(W1=FE88%W
+OS:2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M539NN
+OS:SNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y
+OS:%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR
+OS:%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40
+OS:%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G
+OS:%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 7.079 days (since Sat Nov 26 07:13:23 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT       ADDRESS
+1   226.25 ms 10.10.14.1
+2   226.50 ms 10.129.255.123
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:07:47 2022 -- 1 IP address (1 host up) scanned in 675.96 seconds

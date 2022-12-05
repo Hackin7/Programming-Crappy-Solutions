@@ -1,0 +1,106 @@
+# Nmap 7.91 scan initiated Sat Dec  3 00:22:31 2022 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args=banner.timeout=30s -oN /results/10.129.255.84/scans/tcp_80_http_nmap.txt -oX /results/10.129.255.84/scans/xml/tcp_80_http_nmap.xml 10.129.255.84
+Nmap scan report for 10.129.255.84
+Host is up, received user-set (0.40s latency).
+Scanned at 2022-12-03 00:22:31 UTC for 879s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+|_http-chrono: Request times for /; avg: 944.73ms; min: 923.74ms; max: 966.98ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.129.255.84
+|     
+|     Path: http://10.129.255.84:80/static/css/bootstrap.css
+|     Line number: 7
+|     Comment: 
+|         /*!
+|          * Bootstrap  v5.2.2 (https://getbootstrap.com/)
+|          * Copyright 2011-2022 The Bootstrap Authors
+|          * Copyright 2011-2022 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+|          */
+|     
+|     Path: http://10.129.255.84:80/static/css/bootstrap.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootswatch v5.2.2 (https://bootswatch.com)
+|          * Theme: lux
+|          * Copyright 2012-2022 Thomas Park
+|          * Licensed under MIT
+|          * Based on Bootstrap
+|_        */
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sat, 03 Dec 2022 00:22:51 GMT; 0s from local time.
+|_http-devframework: Express detected. Found Express in X-Powered-By Header
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /admin/: Possible admin folder
+|_http-errors: Couldn't find any error pages.
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: nginx/1.18.0 (Ubuntu)
+|   Date: Sat, 03 Dec 2022 00:22:43 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 6844
+|   Connection: close
+|   X-Powered-By: Express
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 2e1e463d54a48c8da423050ca3f8d262
+|_Credits query returned unknown hash 2e1e463d54a48c8da423050ca3f8d262
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /static/css/
+|       css: 2
+|     /static/images/
+|       jpg: 3; png: 8
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /static/images/
+|   Total files found (by extension):
+|_    Other: 1; css: 2; jpg: 3; png: 8
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: El BeautyCare
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 00:37:10 2022 -- 1 IP address (1 host up) scanned in 878.98 seconds

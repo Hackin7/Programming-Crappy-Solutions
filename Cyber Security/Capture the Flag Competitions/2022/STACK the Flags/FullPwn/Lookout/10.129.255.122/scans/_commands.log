@@ -1,0 +1,170 @@
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/results/10.129.255.122/scans/_quick_tcp_nmap.txt" -oX "/results/10.129.255.122/scans/xml/_quick_tcp_nmap.xml" 10.129.255.122
+
+nmap -vv --reason -Pn -sU -A --top-ports=50 --version-all -oN "/results/10.129.255.122/scans/_top_50_udp_nmap.txt" -oX "/results/10.129.255.122/scans/xml/_top_50_udp_nmap.xml" 10.129.255.122
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/results/10.129.255.122/scans/_full_tcp_nmap.txt" -oX "/results/10.129.255.122/scans/xml/_full_tcp_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:53 2>&1 | tee "/results/10.129.255.122/scans/tcp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_53_dns_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_53_dns_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:80 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_80_http_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_80_http_nmap.xml" 10.129.255.122
+
+curl -sSik http://10.129.255.122:80/ -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.129.255.122:80/robots.txt -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.122:80/ /results/10.129.255.122/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.129.255.122:80 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://10.129.255.122:80 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_http_nikto.txt"
+
+wpscan --url http://10.129.255.122:80 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_80_http_wpscan.txt
+
+droopescan scan drupal -u http://10.129.255.122:80 -t 20 2>&1 | tee "/results/10.129.255.122/scans/tcp_80_http_droopescan.txt"
+
+gobuster dir -u http://10.129.255.122:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_80_http_gobuster_webcommon.txt"
+
+gobuster dir -u http://10.129.255.122:80/ -w /usr/share/dirb/wordlists/big.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_80_http_gobuster_dirb_big.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:88 2>&1 | tee "/results/10.129.255.122/scans/tcp_88_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 88 --script="banner,krb5-enum-users" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_88_kerberos_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_88_kerberos_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:135 2>&1 | tee "/results/10.129.255.122/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_135_rpc_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_135_rpc_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:139 2>&1 | tee "/results/10.129.255.122/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s,unsafe=1" -oN "/results/10.129.255.122/scans/tcp_139_smb_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_139_smb_nmap.xml" 10.129.255.122
+
+enum4linux -a -M -l -d 10.129.255.122 2>&1 | tee "/results/10.129.255.122/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.129.255.122 2>&1 | tee "/results/10.129.255.122/scans/smbclient.txt"
+
+smbmap -H 10.129.255.122 -P 139 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 139 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-share-permissions.txt"
+
+timeout -v 10m smbmap -H 10.129.255.122 -P 139 -R >> "/results/10.129.255.122/scans/tcp_139_smbmap-list-contents-recursive.txt" 2>&1; timeout -v 10m smbmap -u null -p "" -H 10.129.255.122 -P 139 -R >> "/results/10.129.255.122/scans/tcp_139_smbmap-list-contents-recursive.txt" 2>&1
+
+smbmap -H 10.129.255.122 -P 139 -r 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-list-contents-topdir.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 139 -r 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-list-contents-topdir.txt"
+
+smbmap -H 10.129.255.122 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_139_smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:389 2>&1 | tee "/results/10.129.255.122/scans/tcp_389_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 389 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_389_ldap_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_389_ldap_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:445 2>&1 | tee "/results/10.129.255.122/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s,unsafe=1" -oN "/results/10.129.255.122/scans/tcp_445_smb_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_445_smb_nmap.xml" 10.129.255.122
+
+smbmap -H 10.129.255.122 -P 445 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 445 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-share-permissions.txt"
+
+timeout -v 10m smbmap -H 10.129.255.122 -P 445 -R >> "/results/10.129.255.122/scans/tcp_445_smbmap-list-contents-recursive.txt" 2>&1; timeout -v 10m smbmap -u null -p "" -H 10.129.255.122 -P 445 -R >> "/results/10.129.255.122/scans/tcp_445_smbmap-list-contents-recursive.txt" 2>&1
+
+smbmap -H 10.129.255.122 -P 445 -r 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-list-contents-topdir.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 445 -r 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-list-contents-topdir.txt"
+
+smbmap -H 10.129.255.122 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/tcp_445_smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:464 2>&1 | tee "/results/10.129.255.122/scans/tcp_464_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 464 --script="banner,krb5-enum-users" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_464_kerberos_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_464_kerberos_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:593 2>&1 | tee "/results/10.129.255.122/scans/tcp_593_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:636 2>&1 | tee "/results/10.129.255.122/scans/tcp_636_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:3268 2>&1 | tee "/results/10.129.255.122/scans/tcp_3268_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3268 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_3268_ldap_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_3268_ldap_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:3269 2>&1 | tee "/results/10.129.255.122/scans/tcp_3269_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:53 2>&1 | tee "/results/10.129.255.122/scans/udp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/udp_53_dns_nmap.txt" -oX "/results/10.129.255.122/scans/xml/udp_53_dns_nmap.xml" 10.129.255.122
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:123 2>&1 | tee "/results/10.129.255.122/scans/udp_123_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:137 2>&1 | tee "/results/10.129.255.122/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s,unsafe=1" -oN "/results/10.129.255.122/scans/udp_137_smb_nmap.txt" -oX "/results/10.129.255.122/scans/xml/udp_137_smb_nmap.xml" 10.129.255.122
+
+nbtscan -rvh 10.129.255.122 2>&1 | tee "/results/10.129.255.122/scans/nbtscan.txt"
+
+smbmap -H 10.129.255.122 -P 137 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 137 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-share-permissions.txt"
+
+timeout -v 10m smbmap -H 10.129.255.122 -P 137 -R >> "/results/10.129.255.122/scans/udp_137_smbmap-list-contents-recursive.txt" 2>&1; timeout -v 10m smbmap -u null -p "" -H 10.129.255.122 -P 137 -R >> "/results/10.129.255.122/scans/udp_137_smbmap-list-contents-recursive.txt" 2>&1
+
+smbmap -H 10.129.255.122 -P 137 -r 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-list-contents-topdir.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 137 -r 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-list-contents-topdir.txt"
+
+smbmap -H 10.129.255.122 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/udp_137_smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:138 2>&1 | tee "/results/10.129.255.122/scans/udp_138_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 138 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="banner.timeout=30s,unsafe=1" -oN "/results/10.129.255.122/scans/udp_138_smb_nmap.txt" -oX "/results/10.129.255.122/scans/xml/udp_138_smb_nmap.xml" 10.129.255.122
+
+smbmap -H 10.129.255.122 -P 138 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 138 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-share-permissions.txt"
+
+timeout -v 10m smbmap -H 10.129.255.122 -P 138 -R >> "/results/10.129.255.122/scans/udp_138_smbmap-list-contents-recursive.txt" 2>&1; timeout -v 10m smbmap -u null -p "" -H 10.129.255.122 -P 138 -R >> "/results/10.129.255.122/scans/udp_138_smbmap-list-contents-recursive.txt" 2>&1
+
+smbmap -H 10.129.255.122 -P 138 -r 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-list-contents-topdir.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 138 -r 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-list-contents-topdir.txt"
+
+smbmap -H 10.129.255.122 -P 138 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.129.255.122 -P 138 -x "ipconfig /all" 2>&1 | tee -a "/results/10.129.255.122/scans/udp_138_smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:500 2>&1 | tee "/results/10.129.255.122/scans/udp_500_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:4500 2>&1 | tee "/results/10.129.255.122/scans/udp_4500_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:5353 2>&1 | tee "/results/10.129.255.122/scans/udp_5353_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:5985 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_5985_http_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_5985_http_nmap.xml" 10.129.255.122
+
+curl -sSik http://10.129.255.122:5985/ -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_http_index.html"
+
+curl -sSik http://10.129.255.122:5985/robots.txt -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.122:5985/ /results/10.129.255.122/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.129.255.122:5985 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://10.129.255.122:5985 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_http_nikto.txt"
+
+wpscan --url http://10.129.255.122:5985 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_5985_http_wpscan.txt
+
+droopescan scan drupal -u http://10.129.255.122:5985 -t 20 2>&1 | tee "/results/10.129.255.122/scans/tcp_5985_http_droopescan.txt"
+
+gobuster dir -u http://10.129.255.122:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_5985_http_gobuster_webcommon.txt"
+
+gobuster dir -u http://10.129.255.122:5985/ -w /usr/share/dirb/wordlists/big.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_5985_http_gobuster_dirb_big.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:9389 2>&1 | tee "/results/10.129.255.122/scans/tcp_9389_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.122:47001 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 47001 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.122/scans/tcp_47001_http_nmap.txt" -oX "/results/10.129.255.122/scans/xml/tcp_47001_http_nmap.xml" 10.129.255.122
+
+curl -sSik http://10.129.255.122:47001/ -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_http_index.html"
+
+curl -sSik http://10.129.255.122:47001/robots.txt -m 10 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.122:47001/ /results/10.129.255.122/scans/tcp_47001_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.129.255.122:47001 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_http_whatweb.txt"
+
+nikto -ask=no -h http://10.129.255.122:47001 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_http_nikto.txt"
+
+wpscan --url http://10.129.255.122:47001 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_47001_http_wpscan.txt
+
+droopescan scan drupal -u http://10.129.255.122:47001 -t 20 2>&1 | tee "/results/10.129.255.122/scans/tcp_47001_http_droopescan.txt"
+
+gobuster dir -u http://10.129.255.122:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_47001_http_gobuster_webcommon.txt"
+
+gobuster dir -u http://10.129.255.122:47001/ -w /usr/share/dirb/wordlists/big.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.122/scans/tcp_47001_http_gobuster_dirb_big.txt"
+

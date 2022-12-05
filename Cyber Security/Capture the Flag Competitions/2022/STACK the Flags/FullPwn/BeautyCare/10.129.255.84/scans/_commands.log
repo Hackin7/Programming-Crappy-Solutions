@@ -1,0 +1,34 @@
+nmap -vv --reason -Pn -sU -A --top-ports=50 --version-all -oN "/results/10.129.255.84/scans/_top_50_udp_nmap.txt" -oX "/results/10.129.255.84/scans/xml/_top_50_udp_nmap.xml" 10.129.255.84
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/results/10.129.255.84/scans/_quick_tcp_nmap.txt" -oX "/results/10.129.255.84/scans/xml/_quick_tcp_nmap.xml" 10.129.255.84
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/results/10.129.255.84/scans/_full_tcp_nmap.txt" -oX "/results/10.129.255.84/scans/xml/_full_tcp_nmap.xml" 10.129.255.84
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.84:22 2>&1 | tee "/results/10.129.255.84/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" --script-args="banner.timeout=30s" -oN "/results/10.129.255.84/scans/tcp_22_ssh_nmap.txt" -oX "/results/10.129.255.84/scans/xml/tcp_22_ssh_nmap.xml" 10.129.255.84
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.84:80 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args="banner.timeout=30s" -oN "/results/10.129.255.84/scans/tcp_80_http_nmap.txt" -oX "/results/10.129.255.84/scans/xml/tcp_80_http_nmap.xml" 10.129.255.84
+
+curl -sSik http://10.129.255.84:80/ -m 10 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.129.255.84:80/robots.txt -m 10 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.84:80/ /results/10.129.255.84/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.129.255.84:80 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://10.129.255.84:80 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_http_nikto.txt"
+
+wpscan --url http://10.129.255.84:80 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.84/scans/tcp_80_http_wpscan.txt
+
+droopescan scan drupal -u http://10.129.255.84:80 -t 20 2>&1 | tee "/results/10.129.255.84/scans/tcp_80_http_droopescan.txt"
+
+gobuster dir -u http://10.129.255.84:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.84/scans/tcp_80_http_gobuster_webcommon.txt"
+
+gobuster dir -u http://10.129.255.84:80/ -w /usr/share/dirb/wordlists/big.txt -z -t 20 -k -l -x "txt,html,htm,php,asp,aspx,jsp" -o "/results/10.129.255.84/scans/tcp_80_http_gobuster_dirb_big.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.129.255.84:68 2>&1 | tee "/results/10.129.255.84/scans/udp_68_sslscan.txt"; fi
+

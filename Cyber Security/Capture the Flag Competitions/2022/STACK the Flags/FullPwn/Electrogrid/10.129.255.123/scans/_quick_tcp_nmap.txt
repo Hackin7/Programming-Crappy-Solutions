@@ -1,0 +1,62 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /results/10.129.255.123/scans/_quick_tcp_nmap.txt -oX /results/10.129.255.123/scans/xml/_quick_tcp_nmap.xml 10.129.255.123
+Nmap scan report for 10.129.255.123
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-12-03 08:56:31 UTC for 79s
+Not shown: 999 closed ports
+Reason: 999 resets
+PORT     STATE SERVICE     REASON         VERSION
+9000/tcp open  cslistener? syn-ack ttl 63
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: application/json; charset=utf-8
+|     Content-Length: 32
+|     Date: Sat, 03 Dec 2022 08:56:53 GMT
+|     Connection: close
+|     {"message":"404 page not found"}
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: application/json; charset=utf-8
+|     Content-Length: 32
+|     Date: Sat, 03 Dec 2022 08:56:47 GMT
+|     Connection: close
+|_    {"message":"404 page not found"}
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9000-TCP:V=7.91%I=9%D=12/3%Time=638B0F4E%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,B5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20appli
+SF:cation/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,
+SF:\x2003\x20Dec\x202022\x2008:56:47\x20GMT\r\nConnection:\x20close\r\n\r\
+SF:n{\"message\":\"404\x20page\x20not\x20found\"}")%r(HTTPOptions,B5,"HTTP
+SF:/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20c
+SF:harset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x20
+SF:2022\x2008:56:47\x20GMT\r\nConnection:\x20close\r\n\r\n{\"message\":\"4
+SF:04\x20page\x20not\x20found\"}")%r(RTSPRequest,B5,"HTTP/1\.1\x20404\x20N
+SF:ot\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nC
+SF:ontent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2008:56:47\
+SF:x20GMT\r\nConnection:\x20close\r\n\r\n{\"message\":\"404\x20page\x20not
+SF:\x20found\"}")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:nection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSStatusRequest
+SF:TCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\
+SF:r\n")%r(Hello,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20
+SF:close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCookie,2F,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(T
+SF:LSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20c
+SF:lose\r\n\r\n")%r(SSLv23SessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11Pr
+SF:obe,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\
+SF:r\n")%r(FourOhFourRequest,B5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConte
+SF:nt-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032
+SF:\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2008:56:53\x20GMT\r\nConnection
+SF::\x20close\r\n\r\n{\"message\":\"404\x20page\x20not\x20found\"}");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 08:57:50 2022 -- 1 IP address (1 host up) scanned in 79.51 seconds

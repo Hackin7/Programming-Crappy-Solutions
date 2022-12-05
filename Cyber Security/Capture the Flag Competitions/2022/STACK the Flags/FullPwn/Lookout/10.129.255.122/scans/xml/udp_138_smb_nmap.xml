@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec  3 09:03:41 2022 as: nmap -vv -&#45;reason -Pn -sU -sV -p 138 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=banner.timeout=30s,unsafe=1 -oN /results/10.129.255.122/scans/udp_138_smb_nmap.txt -oX /results/10.129.255.122/scans/xml/udp_138_smb_nmap.xml 10.129.255.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 138 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=banner.timeout=30s,unsafe=1 -oN /results/10.129.255.122/scans/udp_138_smb_nmap.txt -oX /results/10.129.255.122/scans/xml/udp_138_smb_nmap.xml 10.129.255.122" start="1670058221" startstr="Sat Dec  3 09:03:41 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="138"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1670058221"/>
+<taskend task="NSE" time="1670058221"/>
+<taskbegin task="NSE" time="1670058221"/>
+<taskend task="NSE" time="1670058221"/>
+<taskbegin task="NSE" time="1670058221"/>
+<taskend task="NSE" time="1670058221"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1670058221"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1670058221"/>
+<taskbegin task="UDP Scan" time="1670058221"/>
+<taskend task="UDP Scan" time="1670058224" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1670058224"/>
+<taskend task="Service scan" time="1670058321" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1670058321"/>
+<taskend task="NSE" time="1670058337"/>
+<taskbegin task="NSE" time="1670058337"/>
+<taskend task="NSE" time="1670058340"/>
+<taskbegin task="NSE" time="1670058340"/>
+<taskend task="NSE" time="1670058340"/>
+<host starttime="1670058222" endtime="1670058340"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.255.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+</ports>
+</host>
+<taskbegin task="NSE" time="1670058340"/>
+<taskend task="NSE" time="1670058340"/>
+<taskbegin task="NSE" time="1670058340"/>
+<taskend task="NSE" time="1670058340"/>
+<taskbegin task="NSE" time="1670058340"/>
+<taskend task="NSE" time="1670058340"/>
+<runstats><finished time="1670058340" timestr="Sat Dec  3 09:05:40 2022" summary="Nmap done at Sat Dec  3 09:05:40 2022; 1 IP address (1 host up) scanned in 118.46 seconds" elapsed="118.46" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

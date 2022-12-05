@@ -1,0 +1,16 @@
+[*] cslistener found on tcp/9000.
+
+
+
+[*] dhcpc found on udp/68.
+
+
+
+[*] ipp found on udp/631.
+
+
+
+[*] zeroconf found on udp/5353.
+
+
+

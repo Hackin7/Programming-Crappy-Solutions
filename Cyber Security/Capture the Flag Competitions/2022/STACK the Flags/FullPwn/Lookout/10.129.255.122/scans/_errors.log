@@ -1,0 +1,5 @@
+[*] Task tcp/80/wpscan returned non-zero exit code: 4. Command: wpscan --url http://10.129.255.122:80 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_80_http_wpscan.txt
+[*] Task tcp/5985/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.122:5985/ /results/10.129.255.122/scans/tcp_5985_http_screenshot.png; fi
+[*] Task tcp/5985/wpscan returned non-zero exit code: 4. Command: wpscan --url http://10.129.255.122:5985 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_5985_http_wpscan.txt
+[*] Task tcp/47001/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.129.255.122:47001/ /results/10.129.255.122/scans/tcp_47001_http_screenshot.png; fi
+[*] Task tcp/47001/wpscan returned non-zero exit code: 4. Command: wpscan --url http://10.129.255.122:47001 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.122/scans/tcp_47001_http_wpscan.txt

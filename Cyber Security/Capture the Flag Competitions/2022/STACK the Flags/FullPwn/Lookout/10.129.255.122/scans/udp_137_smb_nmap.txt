@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sat Dec  3 09:03:39 2022 as: nmap -vv --reason -Pn -sU -sV -p 137 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=banner.timeout=30s,unsafe=1 -oN /results/10.129.255.122/scans/udp_137_smb_nmap.txt -oX /results/10.129.255.122/scans/xml/udp_137_smb_nmap.xml 10.129.255.122
+Nmap scan report for 10.129.255.122
+Host is up, received user-set.
+Scanned at 2022-12-03 09:03:39 UTC for 118s
+
+PORT    STATE         SERVICE    REASON      VERSION
+137/udp open|filtered netbios-ns no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:05:37 2022 -- 1 IP address (1 host up) scanned in 118.54 seconds

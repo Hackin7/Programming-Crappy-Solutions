@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=50 -&#45;version-all -oN /results/10.129.255.122/scans/_top_50_udp_nmap.txt -oX /results/10.129.255.122/scans/xml/_top_50_udp_nmap.xml 10.129.255.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=50 -&#45;version-all -oN /results/10.129.255.122/scans/_top_50_udp_nmap.txt -oX /results/10.129.255.122/scans/xml/_top_50_udp_nmap.xml 10.129.255.122" start="1670057791" startstr="Sat Dec  3 08:56:31 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="50" services="7,53,67-69,80,111,123,135-139,161-162,445,500,514,518,520,593,626,631,996-999,1025-1027,1433-1434,1645-1646,1701,1812,1900,2048-2049,2222,3283,3456,4500,5060,5353,20031,32768,49152-49154"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1670057791"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1670057791"/>
+<taskbegin task="UDP Scan" time="1670057791"/>
+<taskend task="UDP Scan" time="1670057901" extrainfo="50 total ports"/>
+<taskbegin task="Service scan" time="1670057901"/>
+<taskprogress task="Service scan" time="1670058143" percent="28.57" remaining="606" etc="1670058748"/>
+<taskend task="Service scan" time="1670058143" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1670058145"/>
+<taskend task="Traceroute" time="1670058147"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1670058147"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1670058147"/>
+<taskbegin task="NSE" time="1670058148"/>
+<taskprogress task="NSE" time="1670058179" percent="99.16" remaining="1" etc="1670058179"/>
+<taskprogress task="NSE" time="1670058209" percent="99.58" remaining="1" etc="1670058209"/>
+<taskend task="NSE" time="1670058218"/>
+<taskbegin task="NSE" time="1670058218"/>
+<taskend task="NSE" time="1670058219"/>
+<taskbegin task="NSE" time="1670058219"/>
+<taskend task="NSE" time="1670058219"/>
+<host starttime="1670057791" endtime="1670058219"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.255.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="7"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="echo" method="table" conf="3"/></port>
+<port protocol="udp" portid="53"><state state="open" reason="udp-response" reason_ttl="0"/><service name="domain" extrainfo="generic dns response: SERVFAIL" servicefp="SF-Port53-UDP:V=7.91%I=9%D=12/3%Time=638B0FC1%P=x86_64-pc-linux-gnu%r(NBTStat,32,&quot;\x80\xf0\x80\x82\0\x01\0\0\0\0\0\0\x20CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\0\0!\0\x01&quot;)%r(NTPRequest,30,&quot;\xe3\0\x84\x81\0\x01\0\0\0\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\xc5O#Kq\xb1R\xf3&quot;)%r(DNS-SD,2E,&quot;\0\0\x80\x82\0\x01\0\0\0\0\0\0\t_services\x07_dns-sd\x04_udp\x05local\0\0\x0c\0\x01&quot;)%r(serialnumberd,1E,&quot;SN\xd1\x04ERY:\x20127\.0\.0\.1:AAAAAA:xsvr&quot;)%r(ASE,1,&quot;s&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNS-SD: &#xa;    _services&#xa;    _dns-sd&#xa;    _udp&#xa;    local&#xa;  NBTStat: &#xa;    CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#xa;  NTPRequest: &#xa;    O#Kq&#xa;  serialnumberd: &#xa;    ERY: 127.0.0.1:AAAAAA:xsvr"><elem key="DNS-SD">&#xa;    _services&#xa;    _dns-sd&#xa;    _udp&#xa;    local</elem>
+<elem key="NBTStat">&#xa;    CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</elem>
+<elem key="NTPRequest">&#xa;    O#Kq</elem>
+<elem key="serialnumberd">&#xa;    ERY: 127.0.0.1:AAAAAA:xsvr</elem>
+</script></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="80"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="http" method="table" conf="3"/></port>
+<port protocol="udp" portid="111"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="open" reason="udp-response" reason_ttl="0"/><service name="ntp" product="NTP" version="v3" method="probed" conf="10"/><script id="ntp-info" output="&#xa;  receive time stamp: 2022-12-03T10:01:27"><elem key="receive time stamp">2022-12-03T10:01:27</elem>
+</script></port>
+<port protocol="udp" portid="135"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="136"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="profile" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="518"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="ntalk" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="593"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="http-rpc-epmap" method="table" conf="3"/></port>
+<port protocol="udp" portid="626"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="serialnumberd" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="996"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="vsinet" method="table" conf="3"/></port>
+<port protocol="udp" portid="997"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="maitrd" method="table" conf="3"/></port>
+<port protocol="udp" portid="998"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="puparp" method="table" conf="3"/></port>
+<port protocol="udp" portid="999"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="applix" method="table" conf="3"/></port>
+<port protocol="udp" portid="1025"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="blackjack" method="table" conf="3"/></port>
+<port protocol="udp" portid="1026"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="win-rpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="1027"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="1433"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="ms-sql-s" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1645"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="radius" method="table" conf="3"/></port>
+<port protocol="udp" portid="1646"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="radacct" method="table" conf="3"/></port>
+<port protocol="udp" portid="1701"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="L2TP" method="table" conf="3"/></port>
+<port protocol="udp" portid="1812"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="radius" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="2048"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="dls-monitor" method="table" conf="3"/></port>
+<port protocol="udp" portid="2049"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="nfs" method="table" conf="3"/></port>
+<port protocol="udp" portid="2222"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="msantipiracy" method="table" conf="3"/></port>
+<port protocol="udp" portid="3283"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="netassistant" method="table" conf="3"/></port>
+<port protocol="udp" portid="3456"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="IISrpc-or-vat" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="5060"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="udp" portid="5353"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="zeroconf" method="table" conf="3"/></port>
+<port protocol="udp" portid="20031"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="bakbonenetvault" method="table" conf="3"/></port>
+<port protocol="udp" portid="32768"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="omad" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49153"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49154"><state state="closed" reason="port-unreach" reason_ttl="127"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="7"/>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=12/3%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=638B10EB%P=x86_64-pc-linux-gnu)&#xa;SEQ(II=I)&#xa;SEQ(CI=I%II=I)&#xa;T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<hostscript><script id="clock-skew" output="58m58s"><elem key="mean">3538</elem>
+<elem key="count">1</elem>
+<elem key="stddev">0</elem>
+<elem key="median">3538</elem>
+</script></hostscript><trace port="49152" proto="udp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="221.54"/>
+<hop ttl="2" ipaddr="10.129.255.122" rtt="221.88"/>
+</trace>
+<times srtt="223346" rttvar="2483" to="233278"/>
+</host>
+<taskbegin task="NSE" time="1670058219"/>
+<taskend task="NSE" time="1670058219"/>
+<taskbegin task="NSE" time="1670058219"/>
+<taskend task="NSE" time="1670058219"/>
+<taskbegin task="NSE" time="1670058219"/>
+<taskend task="NSE" time="1670058219"/>
+<runstats><finished time="1670058219" timestr="Sat Dec  3 09:03:39 2022" summary="Nmap done at Sat Dec  3 09:03:39 2022; 1 IP address (1 host up) scanned in 428.26 seconds" elapsed="428.26" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

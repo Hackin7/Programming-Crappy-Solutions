@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Sat Dec  3 09:17:43 2022 as: nmap -vv --reason -Pn -sV -p 5985 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" --script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_5985_http_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_5985_http_nmap.xml 10.129.255.122

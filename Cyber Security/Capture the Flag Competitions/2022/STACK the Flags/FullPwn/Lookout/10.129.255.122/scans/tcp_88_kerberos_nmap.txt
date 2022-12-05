@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:58:21 2022 as: nmap -vv --reason -Pn -sV -p 88 --script=banner,krb5-enum-users --script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_88_kerberos_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_88_kerberos_nmap.xml 10.129.255.122
+Nmap scan report for 10.129.255.122
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-12-03 08:58:21 UTC for 68s
+
+PORT   STATE SERVICE      REASON          VERSION
+88/tcp open  kerberos-sec syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-12-03 09:57:23Z)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 08:59:29 2022 -- 1 IP address (1 host up) scanned in 68.65 seconds

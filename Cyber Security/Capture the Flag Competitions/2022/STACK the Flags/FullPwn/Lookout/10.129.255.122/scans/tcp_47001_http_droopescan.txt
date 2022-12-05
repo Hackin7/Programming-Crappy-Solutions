@@ -1,0 +1,2 @@
+[93m[+] Expected folder returned status '404', expected file returned not found status.[0m
+[91m[+] It is possible that http://10.129.255.122:47001/ is not running drupal. If you disagree, please specify a --method.[0m

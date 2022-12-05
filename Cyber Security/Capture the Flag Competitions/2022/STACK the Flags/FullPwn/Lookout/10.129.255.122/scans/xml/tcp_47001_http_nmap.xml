@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec  3 09:17:43 2022 as: nmap -vv -&#45;reason -Pn -sV -p 47001 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -&#45;script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_47001_http_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_47001_http_nmap.xml 10.129.255.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 47001 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -&#45;script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_47001_http_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_47001_http_nmap.xml 10.129.255.122" start="1670059063" startstr="Sat Dec  3 09:17:43 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="47001"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1670059064"/>
+<taskend task="NSE" time="1670059064"/>
+<taskbegin task="NSE" time="1670059064"/>
+<taskend task="NSE" time="1670059064"/>
+<taskbegin task="NSE" time="1670059064"/>
+<taskend task="NSE" time="1670059064"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1670059064"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1670059064"/>
+<taskbegin task="SYN Stealth Scan" time="1670059064"/>
+<taskend task="SYN Stealth Scan" time="1670059064" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1670059064"/>
+<taskend task="Service scan" time="1670059076" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1670059076"/>
+<taskprogress task="NSE" time="1670059107" percent="98.37" remaining="1" etc="1670059108"/>
+<taskprogress task="NSE" time="1670059137" percent="98.70" remaining="1" etc="1670059138"/>
+<taskprogress task="NSE" time="1670059167" percent="99.02" remaining="1" etc="1670059168"/>
+<taskprogress task="NSE" time="1670059197" percent="99.35" remaining="1" etc="1670059198"/>
+<taskprogress task="NSE" time="1670059227" percent="99.67" remaining="1" etc="1670059227"/>
+<taskprogress task="NSE" time="1670059257" percent="99.67" remaining="1" etc="1670059258"/>
+<taskprogress task="NSE" time="1670059287" percent="99.67" remaining="1" etc="1670059288"/>
+<taskprogress task="NSE" time="1670059317" percent="99.67" remaining="1" etc="1670059318"/>
+<taskprogress task="NSE" time="1670059347" percent="99.67" remaining="1" etc="1670059348"/>
+<taskprogress task="NSE" time="1670059377" percent="99.67" remaining="1" etc="1670059378"/>
+<taskprogress task="NSE" time="1670059407" percent="99.67" remaining="2" etc="1670059408"/>
+<taskprogress task="NSE" time="1670059437" percent="99.67" remaining="2" etc="1670059438"/>
+<taskprogress task="NSE" time="1670059467" percent="99.67" remaining="2" etc="1670059468"/>
+<taskprogress task="NSE" time="1670059497" percent="99.67" remaining="2" etc="1670059498"/>
+<taskprogress task="NSE" time="1670059527" percent="99.67" remaining="2" etc="1670059528"/>

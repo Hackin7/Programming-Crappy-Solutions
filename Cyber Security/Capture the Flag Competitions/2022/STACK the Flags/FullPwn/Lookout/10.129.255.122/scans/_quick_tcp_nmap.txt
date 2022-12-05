@@ -1,0 +1,46 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /results/10.129.255.122/scans/_quick_tcp_nmap.txt -oX /results/10.129.255.122/scans/xml/_quick_tcp_nmap.xml 10.129.255.122
+Nmap scan report for 10.129.255.122
+Host is up, received user-set (0.23s latency).
+Scanned at 2022-12-03 08:56:31 UTC for 106s
+Not shown: 988 closed ports
+Reason: 988 resets
+PORT     STATE SERVICE       REASON          VERSION
+53/tcp   open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp   open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-favicon: Unknown favicon MD5: 9CE2D3AAD2098317CDEB8738000F1B65
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Scan
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-12-03 09:55:39Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: LOOKOUT.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+464/tcp  open  kpasswd5?     syn-ack ttl 127
+593/tcp  open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped    syn-ack ttl 127
+3268/tcp open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: LOOKOUT.local0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped    syn-ack ttl 127
+Service Info: Host: LOOKOUT-DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 58m53s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 54786/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 34431/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 12488/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 23660/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2022-12-03T09:57:01
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 08:58:17 2022 -- 1 IP address (1 host up) scanned in 106.78 seconds

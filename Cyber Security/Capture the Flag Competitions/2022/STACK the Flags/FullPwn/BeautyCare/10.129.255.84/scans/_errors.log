@@ -1,0 +1,1 @@
+[*] Task tcp/80/wpscan returned non-zero exit code: 4. Command: wpscan --url http://10.129.255.84:80 -e --plugins-detection=mixed -t 20 -o /results/10.129.255.84/scans/tcp_80_http_wpscan.txt

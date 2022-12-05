@@ -1,0 +1,83 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=r0aucxd3samq4zklhivorlke; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Sat, 03 Dec 2022 09:57:13 GMT
+Content-Length: 2522
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan</title>
+    <link href="/Content/css?v=5e_B1OjZHYOQPYledt-xOCi2DplIZPb9d0IzxuwdxwY1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="position:fixed;top:0;width:100%">
+        <div class="container-fluid">
+            <img src="/logo.png" style="height: 50px;margin-right: 10px;" />
+            <a class="navbar-brand" href="/">Lookout Utility</a>
+
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" style="color:white;text-decoration:none;">Home</a></li>
+                    <li><a href="/Home/PastScans" style="color:white;text-decoration:none;margin-left:15px;">Past Scans</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        
+
+
+<br />
+<br />
+<br />
+<div class="text-center">
+    <h3>Lookout Utility</h3>
+    <p>Internal looking glass utility to check health of application</p>
+</div>
+
+
+<div style="margin-top:60px;">
+    <table class="table">
+        <thead class="table-primary table-bordered">
+            <tr>
+                <th scope="col">Scan Type</th>
+                <th scope="col">Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+<form action="/Home/Scan" method="post">                    <td style="max-width:100px;">
+                        <select class="form-select" id="ScanType" name="ScanType"><option value="ping">ping</option>
+<option value="tracert">tracert</option>
+<option value="nslookup">nslookup</option>
+</select>
+                    </td>
+                    <td style="display:flex;justify-content: space-between;">
+                        <input class="form-control" id="Host" name="Host" placeholder="http://example.com" style="max-width:1000px;width:90%;" type="text" value="" />
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </td>
+</form>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    </div>
+
+    <script src="/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    
+</body>
+</html>

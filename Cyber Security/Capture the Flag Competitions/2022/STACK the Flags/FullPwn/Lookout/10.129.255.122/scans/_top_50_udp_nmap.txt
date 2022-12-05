@@ -1,0 +1,103 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv --reason -Pn -sU -A --top-ports=50 --version-all -oN /results/10.129.255.122/scans/_top_50_udp_nmap.txt -oX /results/10.129.255.122/scans/xml/_top_50_udp_nmap.xml 10.129.255.122
+Increasing send delay for 10.129.255.122 from 800 to 1000 due to 11 out of 23 dropped probes since last increase.
+Nmap scan report for 10.129.255.122
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-12-03 08:56:31 UTC for 428s
+
+PORT      STATE         SERVICE         REASON               VERSION
+7/udp     closed        echo            port-unreach ttl 127
+53/udp    open          domain          udp-response         (generic dns response: SERVFAIL)
+| fingerprint-strings: 
+|   DNS-SD: 
+|     _services
+|     _dns-sd
+|     _udp
+|     local
+|   NBTStat: 
+|     CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+|   NTPRequest: 
+|     O#Kq
+|   serialnumberd: 
+|_    ERY: 127.0.0.1:AAAAAA:xsvr
+67/udp    closed        dhcps           port-unreach ttl 127
+68/udp    closed        dhcpc           port-unreach ttl 127
+69/udp    closed        tftp            port-unreach ttl 127
+80/udp    closed        http            port-unreach ttl 127
+111/udp   closed        rpcbind         port-unreach ttl 127
+123/udp   open          ntp             udp-response         NTP v3
+| ntp-info: 
+|_  receive time stamp: 2022-12-03T10:01:27
+135/udp   closed        msrpc           port-unreach ttl 127
+136/udp   closed        profile         port-unreach ttl 127
+137/udp   open|filtered netbios-ns      no-response
+138/udp   open|filtered netbios-dgm     no-response
+139/udp   closed        netbios-ssn     port-unreach ttl 127
+161/udp   closed        snmp            port-unreach ttl 127
+162/udp   closed        snmptrap        port-unreach ttl 127
+445/udp   closed        microsoft-ds    port-unreach ttl 127
+500/udp   open|filtered isakmp          no-response
+514/udp   closed        syslog          port-unreach ttl 127
+518/udp   closed        ntalk           port-unreach ttl 127
+520/udp   closed        route           port-unreach ttl 127
+593/udp   closed        http-rpc-epmap  port-unreach ttl 127
+626/udp   closed        serialnumberd   port-unreach ttl 127
+631/udp   closed        ipp             port-unreach ttl 127
+996/udp   closed        vsinet          port-unreach ttl 127
+997/udp   closed        maitrd          port-unreach ttl 127
+998/udp   closed        puparp          port-unreach ttl 127
+999/udp   closed        applix          port-unreach ttl 127
+1025/udp  closed        blackjack       port-unreach ttl 127
+1026/udp  closed        win-rpc         port-unreach ttl 127
+1027/udp  closed        unknown         port-unreach ttl 127
+1433/udp  closed        ms-sql-s        port-unreach ttl 127
+1434/udp  closed        ms-sql-m        port-unreach ttl 127
+1645/udp  closed        radius          port-unreach ttl 127
+1646/udp  closed        radacct         port-unreach ttl 127
+1701/udp  closed        L2TP            port-unreach ttl 127
+1812/udp  closed        radius          port-unreach ttl 127
+1900/udp  closed        upnp            port-unreach ttl 127
+2048/udp  closed        dls-monitor     port-unreach ttl 127
+2049/udp  closed        nfs             port-unreach ttl 127
+2222/udp  closed        msantipiracy    port-unreach ttl 127
+3283/udp  closed        netassistant    port-unreach ttl 127
+3456/udp  closed        IISrpc-or-vat   port-unreach ttl 127
+4500/udp  open|filtered nat-t-ike       no-response
+5060/udp  closed        sip             port-unreach ttl 127
+5353/udp  open|filtered zeroconf        no-response
+20031/udp closed        bakbonenetvault port-unreach ttl 127
+32768/udp closed        omad            port-unreach ttl 127
+49152/udp closed        unknown         port-unreach ttl 127
+49153/udp closed        unknown         port-unreach ttl 127
+49154/udp closed        unknown         port-unreach ttl 127
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-UDP:V=7.91%I=9%D=12/3%Time=638B0FC1%P=x86_64-pc-linux-gnu%r(NBTS
+SF:tat,32,"\x80\xf0\x80\x82\0\x01\0\0\0\0\0\0\x20CKAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAA\0\0!\0\x01")%r(NTPRequest,30,"\xe3\0\x84\x81\0\x01\0\0\0\x01\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\xc5O#Kq\xb1R\
+SF:xf3")%r(DNS-SD,2E,"\0\0\x80\x82\0\x01\0\0\0\0\0\0\t_services\x07_dns-sd
+SF:\x04_udp\x05local\0\0\x0c\0\x01")%r(serialnumberd,1E,"SN\xd1\x04ERY:\x2
+SF:0127\.0\.0\.1:AAAAAA:xsvr")%r(ASE,1,"s");
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/3%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=638B10EB%P=x86_64-pc-linux-gnu)
+SEQ(II=I)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+
+Host script results:
+|_clock-skew: 58m58s
+
+TRACEROUTE (using port 49152/udp)
+HOP RTT       ADDRESS
+1   221.54 ms 10.10.14.1
+2   221.88 ms 10.129.255.122
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:03:39 2022 -- 1 IP address (1 host up) scanned in 428.26 seconds

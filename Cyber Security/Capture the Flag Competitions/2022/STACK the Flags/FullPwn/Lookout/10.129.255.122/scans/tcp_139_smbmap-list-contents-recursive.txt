@@ -1,0 +1,4 @@
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.129.255.122
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.129.255.122

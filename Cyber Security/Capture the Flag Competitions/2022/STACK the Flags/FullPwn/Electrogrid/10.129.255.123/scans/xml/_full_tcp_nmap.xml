@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /results/10.129.255.123/scans/_full_tcp_nmap.txt -oX /results/10.129.255.123/scans/xml/_full_tcp_nmap.xml 10.129.255.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /results/10.129.255.123/scans/_full_tcp_nmap.txt -oX /results/10.129.255.123/scans/xml/_full_tcp_nmap.xml 10.129.255.123" start="1670057791" startstr="Sat Dec  3 08:56:31 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="NSE" time="1670057791"/>
+<taskend task="NSE" time="1670057791"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1670057791"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1670057791"/>
+<taskbegin task="SYN Stealth Scan" time="1670057791"/>
+<taskprogress task="SYN Stealth Scan" time="1670057822" percent="10.25" remaining="272" etc="1670058093"/>
+<taskprogress task="SYN Stealth Scan" time="1670057852" percent="20.87" remaining="232" etc="1670058083"/>
+<taskprogress task="SYN Stealth Scan" time="1670057882" percent="31.27" remaining="201" etc="1670058082"/>
+<taskprogress task="SYN Stealth Scan" time="1670057912" percent="39.94" remaining="182" etc="1670058094"/>
+<taskprogress task="SYN Stealth Scan" time="1670057942" percent="40.53" remaining="222" etc="1670058164"/>
+<taskprogress task="SYN Stealth Scan" time="1670057972" percent="41.15" remaining="259" etc="1670058231"/>
+<taskprogress task="SYN Stealth Scan" time="1670058002" percent="41.75" remaining="295" etc="1670058296"/>
+<taskprogress task="SYN Stealth Scan" time="1670058032" percent="42.37" remaining="328" etc="1670058360"/>
+<taskprogress task="SYN Stealth Scan" time="1670058062" percent="42.97" remaining="360" etc="1670058422"/>
+<taskprogress task="SYN Stealth Scan" time="1670058095" percent="43.63" remaining="393" etc="1670058488"/>
+<taskprogress task="SYN Stealth Scan" time="1670058128" percent="43.94" remaining="430" etc="1670058558"/>
+<taskprogress task="SYN Stealth Scan" time="1670058173" percent="44.84" remaining="470" etc="1670058643"/>
+<taskprogress task="SYN Stealth Scan" time="1670058203" percent="49.43" remaining="422" etc="1670058624"/>
+<taskprogress task="SYN Stealth Scan" time="1670058233" percent="54.43" remaining="371" etc="1670058603"/>
+<taskprogress task="SYN Stealth Scan" time="1670058263" percent="61.84" remaining="292" etc="1670058554"/>
+<taskprogress task="SYN Stealth Scan" time="1670058293" percent="71.01" remaining="205" etc="1670058498"/>
+<taskprogress task="SYN Stealth Scan" time="1670058323" percent="80.76" remaining="127" etc="1670058450"/>
+<taskprogress task="SYN Stealth Scan" time="1670058353" percent="93.72" remaining="38" etc="1670058391"/>
+<taskend task="SYN Stealth Scan" time="1670058374" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1670058374"/>
+<taskend task="Service scan" time="1670058449" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1670058465"/>
+<taskend task="Traceroute" time="1670058465"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1670058465"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1670058465"/>
+<taskbegin task="NSE" time="1670058466"/>
+<taskend task="NSE" time="1670058466"/>
+<taskbegin task="NSE" time="1670058466"/>
+<taskend task="NSE" time="1670058466"/>
+<taskbegin task="NSE" time="1670058466"/>
+<taskend task="NSE" time="1670058466"/>
+<host starttime="1670057791" endtime="1670058466"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.255.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="resets" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cslistener" servicefp="SF-Port9000-TCP:V=7.91%I=9%D=12/3%Time=638B1192%P=x86_64-pc-linux-gnu%r(GetRequest,B5,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:26\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;message\&quot;:\&quot;404\x20page\x20not\x20found\&quot;}&quot;)%r(HTTPOptions,B5,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:27\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;message\&quot;:\&quot;404\x20page\x20not\x20found\&quot;}&quot;)%r(RTSPRequest,B5,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:27\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;message\&quot;:\&quot;404\x20page\x20not\x20found\&quot;}&quot;)%r(RPCCheck,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(DNSStatusRequestTCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Hello,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Help,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SSLSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TerminalServerCookie,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(TLSSessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SSLv23SessionReq,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(Kerberos,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(SMBProgNeg,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(X11Probe,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(FourOhFourRequest,B5,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json;\x20charset=utf-8\r\nContent-Length:\x2032\r\nDate:\x20Sat,\x2003\x20Dec\x202022\x2009:06:33\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;message\&quot;:\&quot;404\x20page\x20not\x20found\&quot;}&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:33 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}&#xa;  GetRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:26 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}&#xa;  HTTPOptions, RTSPRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:27 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Hello, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, TerminalServerCookie, X11Probe">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close</elem>
+<elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:33 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:26 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}</elem>
+<elem key="HTTPOptions, RTSPRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Type: application/json; charset=utf-8&#xa;    Content-Length: 32&#xa;    Date: Sat, 03 Dec 2022 09:06:27 GMT&#xa;    Connection: close&#xa;    {&quot;message&quot;:&quot;404 page not found&quot;}</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="9000"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="34485"/>
+<osmatch name="Linux 4.15 - 5.6" accuracy="95" line="67241">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.3 - 5.4" accuracy="95" line="68143">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="95" line="55656">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.3" accuracy="95" line="68085">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="95" line="62920">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="95" line="64667">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61818">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8401">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="93" line="64174">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0" accuracy="93" line="68045">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:5.0</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.91%E=4%D=12/3%OT=9000%CT=1%CU=34485%PV=Y%DS=2%DC=T%G=Y%TM=638B1&#xa;OS:1E3%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)S&#xa;OS:EQ(SP=108%GCD=1%ISR=10A%TI=Z%CI=Z%TS=A)OPS(O1=M539ST11NW7%O2=M539ST11NW7&#xa;OS:%O3=M539NNT11NW7%O4=M539ST11NW7%O5=M539ST11NW7%O6=M539ST11)WIN(W1=FE88%W&#xa;OS:2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M539NN&#xa;OS:SNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y&#xa;OS:%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR&#xa;OS:%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40&#xa;OS:%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G&#xa;OS:%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="611664" lastboot="Sat Nov 26 07:13:23 2022"/>
+<distance value="2"/>
+<tcpsequence index="264" difficulty="Good luck!" values="297AE178,2FACD911,A4723327,15AF5A7D,D0B26297,C4459735"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="247533E7,2475344B,247534AF,24753513,24753577,247535DB"/>
+<trace port="8888" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="226.25"/>
+<hop ttl="2" ipaddr="10.129.255.123" rtt="226.50"/>
+</trace>
+<times srtt="226800" rttvar="609" to="229236"/>
+</host>
+<taskbegin task="NSE" time="1670058467"/>
+<taskend task="NSE" time="1670058467"/>
+<taskbegin task="NSE" time="1670058467"/>
+<taskend task="NSE" time="1670058467"/>
+<taskbegin task="NSE" time="1670058467"/>
+<taskend task="NSE" time="1670058467"/>
+<runstats><finished time="1670058467" timestr="Sat Dec  3 09:07:47 2022" summary="Nmap done at Sat Dec  3 09:07:47 2022; 1 IP address (1 host up) scanned in 675.96 seconds" elapsed="675.96" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

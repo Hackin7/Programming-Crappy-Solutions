@@ -1,0 +1,124 @@
+# Nmap 7.91 scan initiated Sat Dec  3 08:56:31 2022 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /results/10.129.255.122/scans/_full_tcp_nmap.txt -oX /results/10.129.255.122/scans/xml/_full_tcp_nmap.xml 10.129.255.122
+Increasing send delay for 10.129.255.122 from 0 to 5 due to 1002 out of 3339 dropped probes since last increase.
+Increasing send delay for 10.129.255.122 from 5 to 10 due to 1099 out of 3663 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -169554 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -169554 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -169508 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -169508 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -170411 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -170411 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -169866 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -169866 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -244789 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -244789 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -244822 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -244822 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -356837 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -356837 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -359087 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -359087 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -359016 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -359016 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220387 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220387 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -327248 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -327248 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -326896 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -326896 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1148507 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1148507 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1149121 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1149121 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1346966 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1346966 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1721928 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1721928 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1920274 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1920274 microseconds.  Ignoring time.
+Nmap scan report for 10.129.255.122
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-12-03 08:56:31 UTC for 1271s
+Not shown: 65509 closed ports
+Reason: 65509 resets
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp    open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+|_http-favicon: Unknown favicon MD5: 9CE2D3AAD2098317CDEB8738000F1B65
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Scan
+88/tcp    open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-12-03 10:14:49Z)
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: LOOKOUT.local0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+464/tcp   open  kpasswd5?     syn-ack ttl 127
+593/tcp   open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 127
+3268/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: LOOKOUT.local0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack ttl 127 .NET Message Framing
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49671/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49674/tcp open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49675/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49682/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49691/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49696/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+60152/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Aggressive OS guesses: Microsoft Windows Server 2012 (92%), Microsoft Windows Vista SP1 (92%), Microsoft Windows 10 1709 - 1909 (92%), Microsoft Windows Server 2016 (92%), Microsoft Windows Longhorn (91%), Microsoft Windows Server 2012 R2 (90%), Microsoft Windows Server 2012 R2 Update 1 (90%), Microsoft Windows Server 2016 build 10586 - 14393 (90%), Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1 (90%), Microsoft Windows 10 1703 (90%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/3%OT=53%CT=1%CU=37529%PV=Y%DS=2%DC=T%G=Y%TM=638B143
+OS:6%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=10A%CI=I%TS=U)SEQ(SP=FE%GCD=
+OS:1%ISR=10A%II=I%TS=U)SEQ(SP=FE%GCD=1%ISR=10A%TS=U)SEQ(SP=FE%GCD=1%ISR=109
+OS:%CI=I%II=I%TS=U)OPS(O1=M539NW8NNS%O2=M539NW8NNS%O3=M539NW8%O4=M539NW8NNS
+OS:%O5=M539NW8NNS%O6=M539NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6
+OS:=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M539NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O
+OS:%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%D
+OS:F=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=
+OS:%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%
+OS:W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+OS:)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%
+OS:DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: Host: LOOKOUT-DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 58m54s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 54786/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 34431/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 12488/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 23660/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2022-12-03T10:16:24
+|_  start_date: N/A
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT       ADDRESS
+1   222.80 ms 10.10.14.1
+2   223.09 ms 10.129.255.122
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:17:42 2022 -- 1 IP address (1 host up) scanned in 1271.87 seconds

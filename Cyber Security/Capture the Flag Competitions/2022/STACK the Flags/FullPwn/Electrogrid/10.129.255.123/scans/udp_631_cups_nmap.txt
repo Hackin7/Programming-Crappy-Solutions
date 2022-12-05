@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sat Dec  3 09:02:12 2022 as: nmap -vv --reason -Pn -sU -sV -p 631 "--script=banner,(cups* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=banner.timeout=30s -oN /results/10.129.255.123/scans/udp_631_cups_nmap.txt -oX /results/10.129.255.123/scans/xml/udp_631_cups_nmap.xml 10.129.255.123
+Nmap scan report for 10.129.255.123
+Host is up, received user-set.
+Scanned at 2022-12-03 09:02:12 UTC for 118s
+
+PORT    STATE         SERVICE REASON      VERSION
+631/udp open|filtered ipp     no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:04:10 2022 -- 1 IP address (1 host up) scanned in 118.40 seconds

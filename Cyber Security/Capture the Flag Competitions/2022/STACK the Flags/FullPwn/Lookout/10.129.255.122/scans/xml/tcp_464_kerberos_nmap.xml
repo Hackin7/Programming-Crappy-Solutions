@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Dec  3 09:00:43 2022 as: nmap -vv -&#45;reason -Pn -sV -p 464 -&#45;script=banner,krb5-enum-users -&#45;script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_464_kerberos_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_464_kerberos_nmap.xml 10.129.255.122 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 464 -&#45;script=banner,krb5-enum-users -&#45;script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_464_kerberos_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_464_kerberos_nmap.xml 10.129.255.122" start="1670058043" startstr="Sat Dec  3 09:00:43 2022" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="464"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1670058043"/>
+<taskend task="NSE" time="1670058043"/>
+<taskbegin task="NSE" time="1670058043"/>
+<taskend task="NSE" time="1670058043"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1670058043"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1670058043"/>
+<taskbegin task="SYN Stealth Scan" time="1670058043"/>
+<taskend task="SYN Stealth Scan" time="1670058043" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1670058043"/>
+<taskend task="Service scan" time="1670058062" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1670058062"/>
+<taskprogress task="NSE" time="1670058093" percent="97.78" remaining="1" etc="1670058094"/>
+<taskprogress task="NSE" time="1670058123" percent="97.78" remaining="2" etc="1670058124"/>
+<taskend task="NSE" time="1670058123"/>
+<taskbegin task="NSE" time="1670058123"/>
+<taskend task="NSE" time="1670058124"/>
+<host starttime="1670058043" endtime="1670058124"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.255.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+</ports>
+<times srtt="222338" rttvar="222338" to="1111690"/>
+</host>
+<taskbegin task="NSE" time="1670058124"/>
+<taskend task="NSE" time="1670058124"/>
+<taskbegin task="NSE" time="1670058124"/>
+<taskend task="NSE" time="1670058124"/>
+<runstats><finished time="1670058124" timestr="Sat Dec  3 09:02:04 2022" summary="Nmap done at Sat Dec  3 09:02:04 2022; 1 IP address (1 host up) scanned in 80.97 seconds" elapsed="80.97" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

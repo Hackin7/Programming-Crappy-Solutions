@@ -1,0 +1,45 @@
+WhatWeb report for http://10.129.255.84:80
+Status    : 200 OK
+Title     : El BeautyCare
+IP        : 10.129.255.84
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Ubuntu Linux][nginx/1.18.0 (Ubuntu)], Bootstrap, X-Powered-By[Express], nginx[1.18.0]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : nginx/1.18.0 (Ubuntu) (from server string)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : Express (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.18.0
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.18.0 (Ubuntu)
+	Date: Sat, 03 Dec 2022 00:22:33 GMT
+	Content-Type: text/html; charset=utf-8
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Powered-By: Express
+	Content-Encoding: gzip
+	

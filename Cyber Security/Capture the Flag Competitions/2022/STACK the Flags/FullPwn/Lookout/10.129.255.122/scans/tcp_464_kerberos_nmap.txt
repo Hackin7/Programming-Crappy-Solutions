@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sat Dec  3 09:00:43 2022 as: nmap -vv --reason -Pn -sV -p 464 --script=banner,krb5-enum-users --script-args=banner.timeout=30s -oN /results/10.129.255.122/scans/tcp_464_kerberos_nmap.txt -oX /results/10.129.255.122/scans/xml/tcp_464_kerberos_nmap.xml 10.129.255.122
+Nmap scan report for 10.129.255.122
+Host is up, received user-set (0.22s latency).
+Scanned at 2022-12-03 09:00:43 UTC for 81s
+
+PORT    STATE SERVICE   REASON          VERSION
+464/tcp open  kpasswd5? syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  3 09:02:04 2022 -- 1 IP address (1 host up) scanned in 80.97 seconds
