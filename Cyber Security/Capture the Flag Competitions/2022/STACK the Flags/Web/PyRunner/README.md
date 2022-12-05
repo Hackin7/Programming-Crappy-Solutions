@@ -112,7 +112,7 @@ START" + open("/root/flag").read() + "END
 ![](3.png)
 
 
-### 4. Where this wont work
+## 4. Where this wont work
 
 **Injection**
 
@@ -172,7 +172,9 @@ This wont work if the `/root/flag` text file has its permissions properly set to
 RUN chmod 700 /root/flag # Read, Run Execute by owner
 ```
 
-The Docker container user should also have their permissions set properly (eg. setting something to not root, something I didn't see in the docker file). We could add something like this to the Dockerfile [\*](https://docs.docker.com/engine/reference/builder/#user)
+More importantly, the Docker container user should also have their permissions set properly (eg. setting something to not root, something I didn't see in the docker file). 
+
+As the Docker container user wasn't set, the code probably ran as root, which means it probably could read any file. We could add something like this to the Dockerfile to prevent this from happening [\*](https://docs.docker.com/engine/reference/builder/#user)
 
 ```dockerfile
 ...
@@ -182,6 +184,10 @@ CMD ["python3", "app.py"]
 ```
 
 However, in this case, the file read worked, so alls good
+
+## Intended Solution
+
+The intended solution, looking at the flag, is indeed Remote Command Execution (RCE). There's a good writeup about using the Python MRO to retrieve a function and allow for RCE [here](https://jh123x.com/blog/2022/stf2022-pyrunner/)
 
 # Flag
 

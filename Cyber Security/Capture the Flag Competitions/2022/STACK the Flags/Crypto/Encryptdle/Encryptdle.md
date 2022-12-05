@@ -43,9 +43,6 @@ import string
 URL = 'http://157.245.52.169:31981'
 charset = string.printable
 
-
-guess = "000000000000000STF22{iNS3CuR3!_S"
-
 def getData(guess):
   response = requests.post(f"{URL}/api/compare?guess={urllib.parse.quote_plus(guess)}", data={})
   hashObj = json.loads(response.text)
@@ -54,8 +51,8 @@ def getData(guess):
     output += obj["letter"]
   return output, hashObj
 
-output, _ = getData(guess)
-print(output)
+#output, _ = getData(guess)
+#print(output)
 
 ### Enumerating through Guesses
 
@@ -74,16 +71,13 @@ def guessEnumerateChar(currProgress, charset=charset):
   return ''
   
   
-currProgress = "STF22{iNS3CuR3!_S"
+currProgress = ""
 for i in range(32 - len(currProgress)): # Loop for remaining characters
   print(f"\nCharacter {i} : {currProgress}")
   newchar = guessEnumerateChar(currProgress, charset)
   currProgress += newchar
   
 print(currProgress)
-### Encryption #########################################################
-from cryptography.hazmat.primitives import padding
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 ```
 
 ![[Pasted image 20221204090610.png]]

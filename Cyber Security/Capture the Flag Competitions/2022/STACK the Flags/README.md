@@ -1,14 +1,33 @@
 # STACK the Flags 2022
 
-Official Description of the CTF
+STACK the Flags is a 48-hour, online jeopardy style Capture-the-Flag competition organised by GovTech’s Cyber Security Group.
+
+Participants will get to compete and test their cybersecurity skills in challenges across 11 different cybersecurity domains.
+
+The categories are:
+
+-   Binary Exploitation
+-   Cloud
+-   Cryptography
+-   Forensics
+-   Internet of things (IoT)
+-   Miscellaneous
+-   Mobile
+-   Open Source Intelligence (OSINT)
+-   Reverse Engineering (RE)
+-   Fullpwn
+-   Web
 
 ## Event Details
 
-Give my information on
-1. When I participated in it
-1. Who I participated it with
-1. What I did and how I felt
-1. Final Results and Accomplishments (if any)
+I participated it on 2-4 Dec with undefined-func and Codekrodile. Overall my 1st CTF in a long time, and good that I easily finished 4 Web challenges in the first 6 hours, and the remaining 3 challenges took 4 hours or so. However, I was stuck on the other challenges.
+
+Overall I think our performance is ok. PortSwigger labs really helped with the Web Challenges. However, there's room to improve my methodology, as some of the challenges I felt I could have done. Time to grind!
+
+Now that I think about it probably should have went Category 2 to aim for a higher rank lmao.
+
+![final_score.png](final_score.png)
+
 
 ## Challenges
 
@@ -39,11 +58,7 @@ Name | Concept
 
 Solved After the CTF
 
-
-
 ## Others' Writeups
 
-List writeups from others if any
+1. https://jh123x.com/
 
-
-![final_score.png](final_score.png)
